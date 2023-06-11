@@ -1,0 +1,107 @@
+.character-details {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.character-statistiques {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.character-statistiques  h1 {
+    font-family: "Beaufort for LOL", serif;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.stats-table-row {
+    color: #f0eff4 !important;
+    display: flex;
+    flex-direction: row;
+}
+
+.skills-table-row > div {
+    display: flex;
+}
+
+.character-banniere {
+    display: flex;
+    flex-direction: row;
+    background-color: #1A1825;
+    align-items: center;
+    gap: 5%;
+    padding-left: 50px;
+    border-bottom: solid 1px #f0eff4;
+}
+
+.character-banniere  img {
+    height: 100px;
+}
+
+.character-banniere > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.character-banniere > div > select {
+    background-color: #1A1825;
+    color: #f0eff4;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.character-banniere > div > select > option {
+    background-color: #1A1825;
+    color: #f0eff4;
+}
+
+.stats-table {
+    padding: 2%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stats-table > div:first-child {
+    background-color: #1A1825;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #f0eff4;
+}
+
+.stats-table-row {
+    width: 100%;
+    border: solid 1px ;
+    box-shadow: 1px 4px 15px 9px #403c5b;
+}
+
+.stats-table-row > table {
+    width: 100%;
+}
+.stats-table-row td {
+    text-align: center;
+    padding: 2px;
+}
+.stats-table-row tr {
+    border-radius: 20%;
+}
+
+.stats-table-row tr:nth-child(n) {
+    background-color: #403c5b;
+}
+
+.stats-table-row tr:nth-child(2n) {
+    background-color: #1A1825;
+}
