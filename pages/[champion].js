@@ -19,6 +19,7 @@ export default function ChampionPage({championDetails, champion}){
         <CharacterDetails
           mainData={championDetails}
           data={championDetails[objDetails]}
+          nameChampForLink={objDetails}
         />
       )}
     </>

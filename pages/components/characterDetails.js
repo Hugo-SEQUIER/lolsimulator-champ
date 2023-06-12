@@ -3,7 +3,7 @@ import StatsTable from './statsTable'
 import SkillsTable from './skillsTable'
 import Link from 'next/link'
 
-export default function CharacterDetails({mainData, data}){
+export default function CharacterDetails({mainData, data, nameChampForLink}){
 
     let options = [];
     for (let i = 1; i <= 18; i++) {
@@ -41,20 +41,6 @@ export default function CharacterDetails({mainData, data}){
                 setImgSplash(`../../images/centered/${data.mCharacterName}_0.jpg`)
     },[data])
     
-    if (data != undefined)
-        if (data.spellNames.length !== 5){
-            let array = []
-            array.push(data.spellNames[data.spellNames.length - 1])
-            array.push(data.spellNames[0])
-            array.push(data.spellNames[1])
-            array.push(data.spellNames[2])
-            data.spellNames = array
-            for (let i = 0; i < data.spellNames.length; i++){
-                console.log(i)
-                data.spellNames[i] = `Characters/${data.mCharacterName}/Spells/` + data.spellNames[i]
-            }
-            data.spellNames.push(data.mCharacterPassiveSpell)
-    }
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
             <div className='character-banniere'>
@@ -104,8 +90,11 @@ export default function CharacterDetails({mainData, data}){
                         />
                         <SkillsTable 
                             mainData={mainData} 
-                            statsName={data.mAbilities !== undefined ? data.mAbilities : data.spellNames} champName={data.passive1IconName}
+                            spellName={data.spellNames} 
+                            spellData={data.mAbilities != undefined ? data.mAbilities : data.spellNames} 
                             passiveName={data.passive1IconName.split('/')[data.passive1IconName.split('/').length - 1].split('.')[0]}
+                            passiveData={data.mCharacterPassiveSpell}
+                            baseNameData={nameChampForLink.split('/')[0] + '/' + nameChampForLink.split('/')[1]  + '/'}
                         />
                     </>
                 )}
