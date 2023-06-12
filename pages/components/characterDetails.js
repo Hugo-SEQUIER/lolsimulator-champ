@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 export default function CharacterDetails({mainData, data}){
 
-    console.log(data)
     const img_splash = `../../images/centered/${data.mCharacterName}_0.jpg`
 
     const [level, setLevel] = useState(1)
@@ -20,21 +19,23 @@ export default function CharacterDetails({mainData, data}){
     };
     const [mana, setMana]= useState(0)
     const [manaRegen, setManaRegen]= useState(0)
+    const [textMana, setTextMana] = useState('Mana')
 
     useEffect(()=> {
-        console.log('oufqhfqhfowj')
-        console.log(data)
         if (data.primaryAbilityResource.arType === 0){
             setMana(data.primaryAbilityResource.arBase + data.primaryAbilityResource.arPerLevel * (level - 1))
             setManaRegen((data.primaryAbilityResource.arBaseStaticRegen + data.primaryAbilityResource.arRegenPerLevel * (level - 1))*5)
+            setTextMana('Mana')
         }
         else if (data.primaryAbilityResource.arType === 1) {
             setMana(data.primaryAbilityResource.arBase) 
-             setManaRegen((data.primaryAbilityResource.arBaseStaticRegen)*5) 
+            setManaRegen((data.primaryAbilityResource.arBaseStaticRegen)*5)
+            setTextMana('Energy') 
         }
         else {
             setMana(0)
             setManaRegen(0)
+            setTextMana('Mana') 
         }
        
     },[])
@@ -46,16 +47,12 @@ export default function CharacterDetails({mainData, data}){
         array.push(data.spellNames[1])
         array.push(data.spellNames[2])
         data.spellNames = array
-        console.log('TA GARIEFJWFJ')
-        console.log(data.spellNames.length)
         for (let i = 0; i < data.spellNames.length; i++){
             console.log(i)
             data.spellNames[i] = `Characters/${data.mCharacterName}/Spells/` + data.spellNames[i]
         }
         data.spellNames.push(data.mCharacterPassiveSpell)
     }
-    console.log('OKKK')
-    console.log(data.spellNames)
     return (
         <div className="character-details" style={{backgroundImage: `url(${img_splash})`}}>
             <div className='character-banniere'>
@@ -87,7 +84,7 @@ export default function CharacterDetails({mainData, data}){
                     "Critical %":  0, //data.stats.crit + data.stats.critperlevel * (level - 1),
                     "Hp Regen": Number(data.baseStaticHPRegen.toFixed(3) + data.hpRegenPerLevel * (level - 1))*5,
 
-                    'Mana / Energy' : mana,
+                    [textMana] : mana,
                     "Ability Power": 0,
                     "Range": data.attackRange,
                     "Armor Penetration": 0,
@@ -95,7 +92,7 @@ export default function CharacterDetails({mainData, data}){
                     "Ability Haste": 0,
                     "Spellvamp %": 0,
                     "Tenacity %": 0,
-                    ["Mana / Energy Regen"]: manaRegen,
+                    [textMana + " / Regen"]: manaRegen,
                 }} />
                 <SkillsTable mainData={mainData} statsName={data.mAbilities !== undefined ? data.mAbilities : data.spellNames} champName={data.passive1IconName}/>
             </div>
