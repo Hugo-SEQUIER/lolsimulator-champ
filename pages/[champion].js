@@ -1,20 +1,27 @@
 import { useRouter } from 'next/router';
 import CharacterDetails from './components/characterDetails';
+import React, { useEffect, useState } from 'react';
 
 export default function ChampionPage({championDetails, champion}){
-
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
   }
+  const [objDetails, setObjDetails] = useState('')
 
-  let obj_Details = `Characters/${capitalizeFirstLetter(champion)}/CharacterRecords/Root`
-
+  useEffect(() => {
+    setObjDetails(`Characters/${capitalizeFirstLetter(champion)}/CharacterRecords/Root`)
+  },[])
+ 
   console.log(championDetails)
   return (
-    <CharacterDetails
-      mainData={championDetails}
-      data={championDetails[obj_Details]}
-    />
+    <>
+      {objDetails != '' && (
+        <CharacterDetails
+          mainData={championDetails}
+          data={championDetails[objDetails]}
+        />
+      )}
+    </>
   );
 };
 
