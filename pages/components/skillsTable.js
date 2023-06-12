@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
-function SkillsTable({ mainData, statsName, champName }) {
+function SkillsTable({ mainData, statsName, champName, passiveName }) {
     
     const [listSkillsPoint, setListSkillsPoint] = useState([1,1,1,1,1])
     console.log("AHHHHHHHHHHH")
     console.log(mainData)
     console.log(statsName)
+    console.log(passiveName)
     const listSpells = [
         {
             name : 'Passive',
             data : mainData[statsName[4]].mSpell,
-            img : '../../images/passive/' + champName.split('/')[champName.split('/').length -1].split('.')[0] + '.png' 
+            img : '../../images/passive/' + passiveName + '.png' 
         },
         {
             name : 'Q',

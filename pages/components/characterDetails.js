@@ -79,7 +79,8 @@ export default function CharacterDetails({mainData, data}){
             <div className='character-statistiques'>
                 {data != undefined && (
                     <>
-                        <StatsTable stats={{
+                        <StatsTable 
+                            stats={{
                                 "Hp": data.baseHP + data.hpPerLevel * (level - 1),
                                 "Attack Damage": data.baseDamage + data.damagePerLevel * (level - 1),
                                 "Attack Speed %": Number(data.attackSpeed * (1 + (data.attackSpeedRatio* (level - 1))/100)),
@@ -101,7 +102,11 @@ export default function CharacterDetails({mainData, data}){
                                 [textMana + " / Regen"]: manaRegen,
                             }} 
                         />
-                        <SkillsTable mainData={mainData} statsName={data.mAbilities !== undefined ? data.mAbilities : data.spellNames} champName={data.passive1IconName}/>
+                        <SkillsTable 
+                            mainData={mainData} 
+                            statsName={data.mAbilities !== undefined ? data.mAbilities : data.spellNames} champName={data.passive1IconName}
+                            passiveName={data.passive1IconName.split('/')[data.passive1IconName.split('/').length - 1].split('.')[0]}
+                        />
                     </>
                 )}
             </div>
