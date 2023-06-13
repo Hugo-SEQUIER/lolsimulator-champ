@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 104,
+    "AD": 58,
+    "ADLvl": 2.799999952316284,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 26,
+    "ArmorLvl": 4.449999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.6499999761581421,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 340,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Sivir_0",
+    "passive": "Sivir_Passive",
+    "QSpell": "SivirQ",
+    "WSpell": "SivirW",
+    "ESpell": "SivirE",
+    "RSpell": "SivirR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Sivir_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SivirQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SivirW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SivirE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SivirR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

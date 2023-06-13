@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 690,
+    "hpLvl": 98,
+    "AD": 69,
+    "ADLvl": 4.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 38,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 1.5499999523162842,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 0,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Garen_0",
+    "passive": "Garen_Passive",
+    "QSpell": "GarenQ",
+    "WSpell": "GarenW",
+    "ESpell": "GarenE",
+    "RSpell": "GarenR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Garen_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "GarenQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "GarenW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GarenE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "GarenR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

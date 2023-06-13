@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 670,
+    "hpLvl": 92,
+    "AD": 50,
+    "ADLvl": 2.5,
+    "AS": 0.625,
+    "ASRatio": 0.6669999957084656,
+    "Armor": 26,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 22,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 330,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Kayle_0",
+    "passive": "Kayle_P",
+    "QSpell": "KayleQ",
+    "WSpell": "KayleW",
+    "ESpell": "KayleE",
+    "RSpell": "KayleR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Kayle_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "KayleQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "KayleW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "KayleE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "KayleR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

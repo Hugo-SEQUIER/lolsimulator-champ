@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 650,
+    "hpLvl": 104,
+    "AD": 60,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.699999988079071,
+    "Armor": 31,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 350,
+    "ManaLvl": 70,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.25,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Volibear_0",
+    "passive": "Volibear_Icon_P",
+    "QSpell": "VolibearQ",
+    "WSpell": "VolibearW",
+    "ESpell": "VolibearE",
+    "RSpell": "VolibearR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Volibear_Icon_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "VolibearQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "VolibearW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "VolibearE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "VolibearR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

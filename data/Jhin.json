@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 655,
+    "hpLvl": 107,
+    "AD": 59,
+    "ADLvl": 4.699999809265137,
+    "AS": 0.625,
+    "ASRatio": 0,
+    "Armor": 24,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.75,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 300,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Jhin_0",
+    "passive": "Jhin_P",
+    "QSpell": "JhinQ",
+    "WSpell": "JhinW",
+    "ESpell": "JhinE",
+    "RSpell": "JhinR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Jhin_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "JhinQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "JhinW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "JhinE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "JhinR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 643,
+    "hpLvl": 99,
+    "AD": 63,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.6679999828338623,
+    "ASRatio": 0.6679999828338623,
+    "Armor": 36,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 350,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 327,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5180000066757202,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "KhaZix_0",
+    "passive": "Khazix_P",
+    "QSpell": "KhazixQ",
+    "WSpell": "KhazixW",
+    "ESpell": "KhazixE",
+    "RSpell": "KhazixR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Khazix_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "KhazixQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "KhazixW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "KhazixE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "KhazixR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 675,
+    "hpLvl": 94,
+    "AD": 55,
+    "ADLvl": 2.75,
+    "AS": 0.656000018119812,
+    "ASRatio": 0.625,
+    "Armor": 40,
+    "ArmorLvl": 5.5,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 310,
+    "ManaLvl": 33,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5700000524520874,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Rammus_0",
+    "passive": "Armordillo_ScavengeArmor",
+    "QSpell": "PowerBall",
+    "WSpell": "DefensiveBallCurl",
+    "ESpell": "PuncturingTaunt",
+    "RSpell": "Tremors2"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Armordillo_ScavengeArmor",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "PowerBall",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "DefensiveBallCurl",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "PuncturingTaunt",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "Tremors2",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

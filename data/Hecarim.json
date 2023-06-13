@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 625,
+    "hpLvl": 99,
+    "AD": 66,
+    "ADLvl": 3.200000047683716,
+    "AS": 0.6700000166893005,
+    "ASRatio": 0.6700000166893005,
+    "Armor": 32,
+    "ArmorLvl": 5.449999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 277,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2999999523162842,
+    "ManaRegenLvl": 0.11999999731779099
+  },
+  "img": {
+    "centered": "Hecarim_0",
+    "passive": "Hecarim_Passive",
+    "QSpell": "HecarimRapidSlash",
+    "WSpell": "HecarimW",
+    "ESpell": "HecarimRamp",
+    "RSpell": "HecarimUlt"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Hecarim_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "HecarimRapidSlash",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "HecarimW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "HecarimRamp",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "HecarimUlt",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

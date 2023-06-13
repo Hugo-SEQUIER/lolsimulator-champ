@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 625,
+    "hpLvl": 106,
+    "AD": 68,
+    "ADLvl": 4,
+    "AS": 0.4749999940395355,
+    "ASRatio": 0.49000000953674316,
+    "Armor": 33,
+    "ArmorLvl": 4.599999904632568,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.14000000059604645,
+    "Mana": 325,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 425,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Graves_0",
+    "passive": "GravesTrueGrit",
+    "QSpell": "GravesQLineSpell",
+    "WSpell": "GravesSmokeGrenade",
+    "ESpell": "GravesMove",
+    "RSpell": "GravesChargeShot"
+  },
+  "spell": {
+    "Passive": {
+      "img": "GravesTrueGrit",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "GravesQLineSpell",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "GravesSmokeGrenade",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GravesMove",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "GravesChargeShot",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

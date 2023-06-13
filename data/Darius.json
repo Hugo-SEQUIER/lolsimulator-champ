@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 652,
+    "hpLvl": 114,
+    "AD": 64,
+    "ADLvl": 5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 39,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 2,
+    "HpRegenLvl": 0.1899999976158142,
+    "Mana": 263,
+    "ManaLvl": 58,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.3200000524520874,
+    "ManaRegenLvl": 0.07000000029802322
+  },
+  "img": {
+    "centered": "Darius_0",
+    "passive": "Darius_Icon_Hemorrhage",
+    "QSpell": "DariusCleave",
+    "WSpell": "DariusNoxianTacticsONH",
+    "ESpell": "DariusAxeGrabCone",
+    "RSpell": "DariusExecute"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Darius_Icon_Hemorrhage",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "DariusCleave",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "DariusNoxianTacticsONH",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "DariusAxeGrabCone",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "DariusExecute",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

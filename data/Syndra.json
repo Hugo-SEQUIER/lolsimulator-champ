@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 563,
+    "hpLvl": 104,
+    "AD": 54,
+    "ADLvl": 2.9000000953674316,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 25,
+    "ArmorLvl": 4.599999904632568,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2999999523162842,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 480,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Syndra_0",
+    "passive": "SyndraPassive",
+    "QSpell": "SyndraQ",
+    "WSpell": "SyndraW",
+    "ESpell": "SyndraE",
+    "RSpell": "SyndraR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "SyndraPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SyndraQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SyndraW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SyndraE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SyndraR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

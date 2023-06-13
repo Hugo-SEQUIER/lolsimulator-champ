@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 650,
+    "hpLvl": 99,
+    "AD": 65,
+    "ADLvl": 4.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 38,
+    "ArmorLvl": 5,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 320,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.440000057220459,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Skarner_0",
+    "passive": "Skarner_Passive",
+    "QSpell": "SkarnerVirulentSlash",
+    "WSpell": "SkarnerExoskeleton",
+    "ESpell": "SkarnerFracture",
+    "RSpell": "SkarnerImpale"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Skarner_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SkarnerVirulentSlash",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SkarnerExoskeleton",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SkarnerFracture",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SkarnerImpale",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

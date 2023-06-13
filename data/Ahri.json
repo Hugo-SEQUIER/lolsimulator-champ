@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 590,
+    "hpLvl": 96,
+    "AD": 53,
+    "ADLvl": 3,
+    "AS": 0.6679999828338623,
+    "ASRatio": 0.6679999828338623,
+    "Armor": 21,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.5,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 418,
+    "ManaLvl": 25,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Ahri_0",
+    "passive": "Ahri_SoulEater2",
+    "QSpell": "AhriQ",
+    "WSpell": "AhriW",
+    "ESpell": "AhriE",
+    "RSpell": "AhriR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Ahri_SoulEater2",
+      "cd": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "AhriQ",
+      "cd": [55,65,75,85,95],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "AhriW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "AhriE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "AhriR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

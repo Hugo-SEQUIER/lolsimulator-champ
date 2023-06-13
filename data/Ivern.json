@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 655,
+    "hpLvl": 99,
+    "AD": 50,
+    "ADLvl": 3,
+    "AS": 0.6439999938011169,
+    "ASRatio": 0.6439999938011169,
+    "Armor": 27,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 450,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 475,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.15000000596046448
+  },
+  "img": {
+    "centered": "Ivern_0",
+    "passive": "IvernP",
+    "QSpell": "IvernQ",
+    "WSpell": "IvernW",
+    "ESpell": "IvernE",
+    "RSpell": "IvernR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "IvernP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "IvernQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "IvernW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "IvernE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "IvernR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

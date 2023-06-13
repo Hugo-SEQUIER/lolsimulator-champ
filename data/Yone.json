@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 620,
+    "hpLvl": 105,
+    "AD": 60,
+    "ADLvl": 2,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 30,
+    "ArmorLvl": 4.599999904632568,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 500,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Yone_0",
+    "passive": "YonePassive",
+    "QSpell": "YoneQ",
+    "WSpell": "YoneW",
+    "ESpell": "YoneE",
+    "RSpell": "YoneR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "YonePassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "YoneQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "YoneW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "YoneE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "YoneR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

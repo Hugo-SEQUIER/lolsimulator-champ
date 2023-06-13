@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 550,
+    "hpLvl": 119,
+    "AD": 52,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.6940000057220459,
+    "Armor": 22,
+    "ArmorLvl": 5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 320,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Azir_0",
+    "passive": "Azir_Passive",
+    "QSpell": "AzirQWrapper",
+    "WSpell": "AzirW",
+    "ESpell": "AzirEWrapper",
+    "RSpell": "AzirR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Azir_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "AzirQWrapper",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "AzirW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "AzirEWrapper",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "AzirR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 580,
+    "hpLvl": 107,
+    "AD": 60,
+    "ADLvl": 3.799999952316284,
+    "AS": 0.6809999942779541,
+    "ASRatio": 0.5680000185966492,
+    "Armor": 27,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.699999988079071,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 315,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 650,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4800000190734863,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Caitlyn_0",
+    "passive": "Caitlyn_Headshot",
+    "QSpell": "CaitlynQ",
+    "WSpell": "CaitlynW",
+    "ESpell": "CaitlynE",
+    "RSpell": "CaitlynR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Caitlyn_Headshot",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "CaitlynQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "CaitlynW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "CaitlynE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "CaitlynR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

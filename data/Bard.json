@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 630,
+    "hpLvl": 103,
+    "AD": 52,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 34,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 350,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Bard_0",
+    "passive": "Bard_Passive",
+    "QSpell": "BardQ",
+    "WSpell": "BardW",
+    "ESpell": "BardE",
+    "RSpell": "BardR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Bard_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "BardQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "BardW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "BardE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "BardR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

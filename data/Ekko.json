@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 655,
+    "hpLvl": 99,
+    "AD": 58,
+    "ADLvl": 3,
+    "AS": 0.6880000233650208,
+    "ASRatio": 0.625,
+    "Armor": 32,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 280,
+    "ManaLvl": 70,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Ekko_0",
+    "passive": "Ekko_P",
+    "QSpell": "EkkoQ",
+    "WSpell": "EkkoW",
+    "ESpell": "EkkoE",
+    "RSpell": "EkkoR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Ekko_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "EkkoQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "EkkoW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "EkkoE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "EkkoR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

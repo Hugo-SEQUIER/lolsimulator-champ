@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 640,
+    "hpLvl": 101,
+    "AD": 59,
+    "ADLvl": 2.950000047683716,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 26,
+    "ArmorLvl": 4.599999904632568,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.699999988079071,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 280,
+    "ManaLvl": 35,
+    "AP": 0,
+    "Range": 600,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.12999999523162842
+  },
+  "img": {
+    "centered": "Ashe_0",
+    "passive": "Ashe_P",
+    "QSpell": "AsheQ",
+    "WSpell": "Volley",
+    "ESpell": "AsheSpiritOfTheHawk",
+    "RSpell": "EnchantedCrystalArrow"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Ashe_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "AsheQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "Volley",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "AsheSpiritOfTheHawk",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "EnchantedCrystalArrow",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

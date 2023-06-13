@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 655,
+    "hpLvl": 99,
+    "AD": 63,
+    "ADLvl": 3,
+    "AS": 0.6439999938011169,
+    "ASRatio": 0.6439999938011169,
+    "Armor": 30,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 2,
+    "HpRegenLvl": 0.20000000298023224,
+    "Mana": 295,
+    "ManaLvl": 65,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.12999999523162842
+  },
+  "img": {
+    "centered": "Vi_0",
+    "passive": "ViPassive",
+    "QSpell": "ViQ",
+    "WSpell": "ViW",
+    "ESpell": "ViE",
+    "RSpell": "ViR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "ViPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ViQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ViW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ViE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ViR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

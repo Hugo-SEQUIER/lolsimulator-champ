@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 644,
+    "hpLvl": 104,
+    "AD": 62,
+    "ADLvl": 4,
+    "AS": 0.7360000014305115,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 37,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 28,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 280,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4600000381469727,
+    "ManaRegenLvl": 0.10999999940395355
+  },
+  "img": {
+    "centered": "Malphite_0",
+    "passive": "Malphite_GraniteShield",
+    "QSpell": "SeismicShard",
+    "WSpell": "Obduracy",
+    "ESpell": "Landslide",
+    "RSpell": "UFSlash"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Malphite_GraniteShield",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SeismicShard",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "Obduracy",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "Landslide",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "UFSlash",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 670,
+    "hpLvl": 104,
+    "AD": 62,
+    "ADLvl": 2,
+    "AS": 0.6669999957084656,
+    "ASRatio": 0.6669999957084656,
+    "Armor": 45,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 415,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.20000000298023224
+  },
+  "img": {
+    "centered": "Pyke_0",
+    "passive": "PykePassive",
+    "QSpell": "PykeQ",
+    "WSpell": "PykeW",
+    "ESpell": "PykeE",
+    "RSpell": "PykeR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "PykePassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "PykeQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "PykeW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "PykeE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "PykeR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

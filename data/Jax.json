@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 665,
+    "hpLvl": 100,
+    "AD": 68,
+    "ADLvl": 4.25,
+    "AS": 0.6380000114440918,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 36,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 350,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 339,
+    "ManaLvl": 52,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5199999809265137,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Jax_0",
+    "passive": "Armsmaster_MasterOfArms",
+    "QSpell": "JaxLeapStrike",
+    "WSpell": "JaxEmpowerTwo",
+    "ESpell": "JaxCounterStrike",
+    "RSpell": "JaxRApexForm"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Armsmaster_MasterOfArms",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "JaxLeapStrike",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "JaxEmpowerTwo",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "JaxCounterStrike",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "JaxRApexForm",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

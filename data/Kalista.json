@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 114,
+    "AD": 61,
+    "ADLvl": 3.25,
+    "AS": 0.6940000057220459,
+    "ASRatio": 0.6940000057220459,
+    "Armor": 24,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.800000011920929,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 300,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2599999904632568,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Kalista_0",
+    "passive": "Kalista_Passive",
+    "QSpell": "KalistaMysticShot",
+    "WSpell": "KalistaW",
+    "ESpell": "KalistaExpungeWrapper",
+    "RSpell": "KalistaRx"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Kalista_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "KalistaMysticShot",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "KalistaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "KalistaExpungeWrapper",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "KalistaRx",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

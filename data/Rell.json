@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 104,
+    "AD": 55,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 39,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 350,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.07000000029802322
+  },
+  "img": {
+    "centered": "Rell_0",
+    "passive": "RellP",
+    "QSpell": "RellQ",
+    "WSpell": "RellW_Dismount",
+    "ESpell": "RellE",
+    "RSpell": "RellR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "RellP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "RellQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "RellW_Dismount",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "RellE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "RellR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

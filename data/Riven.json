@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 630,
+    "hpLvl": 100,
+    "AD": 64,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 33,
+    "ArmorLvl": 4.400000095367432,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 0,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Riven_0",
+    "passive": "RivenRunicBlades",
+    "QSpell": "RivenTriCleave",
+    "WSpell": "RivenMartyr",
+    "ESpell": "RivenFeint",
+    "RSpell": "RivenFengShuiEngine"
+  },
+  "spell": {
+    "Passive": {
+      "img": "RivenRunicBlades",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "RivenTriCleave",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "RivenMartyr",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "RivenFeint",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "RivenFengShuiEngine",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

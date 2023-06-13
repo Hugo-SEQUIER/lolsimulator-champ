@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 545,
+    "hpLvl": 94,
+    "AD": 49,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 27,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 350,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.299999952316284,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Renata_0",
+    "passive": "Renata_P",
+    "QSpell": "RenataQ",
+    "WSpell": "RenataW",
+    "ESpell": "RenataE",
+    "RSpell": "RenataR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Renata_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "RenataQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "RenataW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "RenataE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "RenataR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

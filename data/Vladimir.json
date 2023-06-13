@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 607,
+    "hpLvl": 110,
+    "AD": 55,
+    "ADLvl": 3,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 27,
+    "ArmorLvl": 4.5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 2,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 450,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Vladimir_0",
+    "passive": "VladimirP",
+    "QSpell": "VladimirQ",
+    "WSpell": "VladimirSanguinePool",
+    "ESpell": "VladimirE",
+    "RSpell": "VladimirHemoplague"
+  },
+  "spell": {
+    "Passive": {
+      "img": "VladimirP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "VladimirQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "VladimirSanguinePool",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "VladimirE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "VladimirHemoplague",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

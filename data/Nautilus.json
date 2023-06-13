@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 646,
+    "hpLvl": 100,
+    "AD": 61,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.7059999704360962,
+    "ASRatio": 0.6119999885559082,
+    "Armor": 39,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 400,
+    "ManaLvl": 47,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.7300000190734863,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Nautilus_0",
+    "passive": "Nautilus_StaggeringBlow",
+    "QSpell": "NautilusAnchorDrag",
+    "WSpell": "NautilusPiercingGaze",
+    "ESpell": "NautilusSplashZone",
+    "RSpell": "NautilusGrandLine"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Nautilus_StaggeringBlow",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "NautilusAnchorDrag",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "NautilusPiercingGaze",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "NautilusSplashZone",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "NautilusGrandLine",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

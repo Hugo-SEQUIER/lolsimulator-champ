@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 605,
+    "hpLvl": 88,
+    "AD": 50,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 32,
+    "ArmorLvl": 5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.5,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 425,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.299999952316284,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Soraka_0",
+    "passive": "Soraka_Passive",
+    "QSpell": "SorakaQ",
+    "WSpell": "SorakaW",
+    "ESpell": "SorakaE",
+    "RSpell": "SorakaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Soraka_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SorakaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SorakaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SorakaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SorakaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

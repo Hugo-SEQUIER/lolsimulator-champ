@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 660,
+    "hpLvl": 109,
+    "AD": 69,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 33,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 341,
+    "ManaLvl": 65,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.11999999731779099
+  },
+  "img": {
+    "centered": "Ornn_0",
+    "passive": "OrnnP",
+    "QSpell": "OrnnQ",
+    "WSpell": "OrnnW",
+    "ESpell": "OrnnE",
+    "RSpell": "OrnnR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "OrnnP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "OrnnQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "OrnnW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "OrnnE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "OrnnR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 630,
+    "hpLvl": 104,
+    "AD": 53,
+    "ADLvl": 3,
+    "AS": 0.6470000147819519,
+    "ASRatio": 0.6470000147819519,
+    "Armor": 18,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 1.2999999523162842,
+    "MS": 328,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 350,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Cassiopeia_0",
+    "passive": "Cassiopeia_Passive",
+    "QSpell": "CassiopeiaQ",
+    "WSpell": "CassiopeiaW",
+    "ESpell": "CassiopeiaE",
+    "RSpell": "CassiopeiaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Cassiopeia_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "CassiopeiaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "CassiopeiaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "CassiopeiaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "CassiopeiaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

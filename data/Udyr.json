@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 664,
+    "hpLvl": 92,
+    "AD": 62,
+    "ADLvl": 4,
+    "AS": 0.6499999761581421,
+    "ASRatio": 0.6499999761581421,
+    "Armor": 31,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 350,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 271,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Udyr_0",
+    "passive": "Udyr_P",
+    "QSpell": "UdyrQ",
+    "WSpell": "UdyrW",
+    "ESpell": "UdyrE",
+    "RSpell": "UdyrR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Udyr_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "UdyrQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "UdyrW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "UdyrE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "UdyrR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

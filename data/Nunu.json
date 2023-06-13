@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 90,
+    "AD": 61,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 29,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegenLvl": 0.1599999964237213,
+    "Mana": 280,
+    "ManaLvl": 42,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Nunu_0",
+    "passive": "NunuPassive",
+    "QSpell": "NunuQ",
+    "WSpell": "NunuW",
+    "ESpell": "NunuE",
+    "RSpell": "NunuR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "NunuPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "NunuQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "NunuW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "NunuE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "NunuR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

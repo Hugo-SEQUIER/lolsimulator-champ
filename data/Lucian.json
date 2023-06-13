@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 641,
+    "hpLvl": 100,
+    "AD": 60,
+    "ADLvl": 2.9000000953674316,
+    "AS": 0.6380000114440918,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 28,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.75,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 320,
+    "ManaLvl": 43,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Lucian_0",
+    "passive": "Lucian_Passive",
+    "QSpell": "LucianQ",
+    "WSpell": "LucianW",
+    "ESpell": "LucianE",
+    "RSpell": "LucianR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Lucian_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "LucianQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "LucianW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "LucianE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "LucianR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

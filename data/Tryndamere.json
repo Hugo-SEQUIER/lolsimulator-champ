@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 696,
+    "hpLvl": 115,
+    "AD": 72,
+    "ADLvl": 4,
+    "AS": 0.6700000166893005,
+    "ASRatio": 0.6700000166893005,
+    "Armor": 33,
+    "ArmorLvl": 4.299999713897705,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.18000000715255737,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Tryndamere_0",
+    "passive": "Tryndamere_Passive",
+    "QSpell": "TryndamereQ",
+    "WSpell": "TryndamereW",
+    "ESpell": "TryndamereE",
+    "RSpell": "UndyingRage"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Tryndamere_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "TryndamereQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "TryndamereW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TryndamereE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "UndyingRage",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

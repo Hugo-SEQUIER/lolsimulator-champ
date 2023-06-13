@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 588,
+    "hpLvl": 105,
+    "AD": 55,
+    "ADLvl": 2.799999952316284,
+    "AS": 0.6380000114440918,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 28,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 350,
+    "ManaLvl": 54,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4800000190734863,
+    "ManaRegenLvl": 0.10999999940395355
+  },
+  "img": {
+    "centered": "Corki_0",
+    "passive": "Corki_RapidReload",
+    "QSpell": "PhosphorusBomb",
+    "WSpell": "CarpetBomb",
+    "ESpell": "GGun",
+    "RSpell": "MissileBarrage"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Corki_RapidReload",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "PhosphorusBomb",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "CarpetBomb",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GGun",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "MissileBarrage",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

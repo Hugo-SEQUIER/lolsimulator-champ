@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 550,
+    "hpLvl": 103,
+    "AD": 60,
+    "ADLvl": 2.3499999046325684,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 23,
+    "ArmorLvl": 4.599999904632568,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.699999988079071,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 232,
+    "ManaLvl": 35,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Vayne_0",
+    "passive": "Vayne_NightHunter",
+    "QSpell": "VayneTumble",
+    "WSpell": "VayneSilveredBolts",
+    "ESpell": "VayneCondemn",
+    "RSpell": "VayneInquisition"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Vayne_NightHunter",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "VayneTumble",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "VayneSilveredBolts",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "VayneCondemn",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "VayneInquisition",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

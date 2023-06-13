@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 99,
+    "AD": 60,
+    "ADLvl": 3,
+    "AS": 0.7509999871253967,
+    "ASRatio": 0.6510000228881836,
+    "Armor": 34,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 400,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 10,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Shen_0",
+    "passive": "Shen_Passive",
+    "QSpell": "ShenQ",
+    "WSpell": "ShenW",
+    "ESpell": "ShenE",
+    "RSpell": "ShenR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Shen_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ShenQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ShenW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ShenE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ShenR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

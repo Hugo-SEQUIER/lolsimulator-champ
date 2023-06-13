@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 646,
+    "hpLvl": 101,
+    "AD": 60,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 47,
+    "ArmorLvl": 4.799999713897705,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 302,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Leona_0",
+    "passive": "LeonaSunlight",
+    "QSpell": "LeonaShieldOfDaybreak",
+    "WSpell": "LeonaSolarBarrier",
+    "ESpell": "LeonaZenithBlade",
+    "RSpell": "LeonaSolarFlare"
+  },
+  "spell": {
+    "Passive": {
+      "img": "LeonaSunlight",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "LeonaShieldOfDaybreak",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "LeonaSolarBarrier",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "LeonaZenithBlade",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "LeonaSolarFlare",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

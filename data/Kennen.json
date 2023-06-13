@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 611,
+    "hpLvl": 98,
+    "AD": 48,
+    "ADLvl": 3.75,
+    "AS": 0.625,
+    "ASRatio": 0.6899999976158142,
+    "Armor": 29,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 200,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 10,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Kennen_0",
+    "passive": "Kennen_Passive",
+    "QSpell": "KennenShurikenHurlMissile1",
+    "WSpell": "KennenBringTheLight",
+    "ESpell": "KennenLightningRush",
+    "RSpell": "KennenShurikenStorm"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Kennen_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "KennenShurikenHurlMissile1",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "KennenBringTheLight",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "KennenLightningRush",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "KennenShurikenStorm",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

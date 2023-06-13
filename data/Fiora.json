@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 620,
+    "hpLvl": 99,
+    "AD": 68,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.6899999976158142,
+    "ASRatio": 0.6899999976158142,
+    "Armor": 33,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 300,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Fiora_0",
+    "passive": "Fiora_P",
+    "QSpell": "FioraQ",
+    "WSpell": "FioraW",
+    "ESpell": "FioraE",
+    "RSpell": "FioraR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Fiora_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "FioraQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "FioraW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "FioraE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "FioraR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

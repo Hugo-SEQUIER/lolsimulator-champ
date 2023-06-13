@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 590,
+    "hpLvl": 102,
+    "AD": 55,
+    "ADLvl": 3.1415927410125732,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 22,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 469,
+    "ManaLvl": 21,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "VelKoz_0",
+    "passive": "VelKoz_Passive",
+    "QSpell": "VelkozQ",
+    "WSpell": "VelkozW",
+    "ESpell": "VelkozE",
+    "RSpell": "VelkozR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "VelKoz_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "VelkozQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "VelkozW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "VelkozE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "VelkozR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 580,
+    "hpLvl": 102,
+    "AD": 55,
+    "ADLvl": 3,
+    "AS": 0.6399999856948853,
+    "ASRatio": 0.6399999856948853,
+    "Armor": 26,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.6499999761581421,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 348,
+    "ManaLvl": 42,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2999999523162842,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Aphelios_0",
+    "passive": "ApheliosP",
+    "QSpell": "ApheliosQ_ClientTooltipWrapper",
+    "WSpell": "ApheliosW",
+    "ESpell": "ApheliosE_ClientTooltipWrapper",
+    "RSpell": "ApheliosR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "ApheliosP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ApheliosQ_ClientTooltipWrapper",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ApheliosW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ApheliosE_ClientTooltipWrapper",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ApheliosR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

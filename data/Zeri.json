@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 630,
+    "hpLvl": 110,
+    "AD": 53,
+    "ADLvl": 1.2999999523162842,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.625,
+    "Armor": 24,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.6499999761581421,
+    "HpRegenLvl": 0.14000000059604645,
+    "Mana": 250,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Zeri_0",
+    "passive": "ZeriP",
+    "QSpell": "ZeriQ",
+    "WSpell": "ZeriW",
+    "ESpell": "ZeriE",
+    "RSpell": "ZeriR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "ZeriP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ZeriQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ZeriW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ZeriE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ZeriR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

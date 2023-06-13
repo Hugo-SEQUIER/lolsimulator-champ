@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 590,
+    "hpLvl": 124,
+    "AD": 66,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.6880000233650208,
+    "ASRatio": 0.625,
+    "Armor": 28,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 320,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Qiyana_0",
+    "passive": "Qiyana_Passive",
+    "QSpell": "QiyanaQ",
+    "WSpell": "QiyanaW",
+    "ESpell": "QiyanaE",
+    "RSpell": "QiyanaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Qiyana_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "QiyanaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "QiyanaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "QiyanaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "QiyanaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

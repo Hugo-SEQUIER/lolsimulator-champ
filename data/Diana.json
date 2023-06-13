@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 640,
+    "hpLvl": 109,
+    "AD": 57,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 31,
+    "ArmorLvl": 4.299999713897705,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2999999523162842,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 375,
+    "ManaLvl": 25,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Diana_0",
+    "passive": "Diana_Passive_LunarBlade",
+    "QSpell": "DianaQ",
+    "WSpell": "DianaOrbs",
+    "ESpell": "DianaTeleport",
+    "RSpell": "DianaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Diana_Passive_LunarBlade",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "DianaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "DianaOrbs",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "DianaTeleport",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "DianaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

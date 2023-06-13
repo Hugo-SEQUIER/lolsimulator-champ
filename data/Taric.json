@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 645,
+    "hpLvl": 99,
+    "AD": 55,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 40,
+    "ArmorLvl": 4.599999904632568,
+    "MR": 28,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 300,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.7000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Taric_0",
+    "passive": "Taric_Passive",
+    "QSpell": "TaricQ",
+    "WSpell": "TaricW",
+    "ESpell": "TaricE",
+    "RSpell": "TaricR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Taric_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "TaricQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "TaricW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TaricE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "TaricR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 630,
+    "hpLvl": 99,
+    "AD": 63,
+    "ADLvl": 3,
+    "AS": 0.6940000057220459,
+    "ASRatio": 0.6940000057220459,
+    "Armor": 30,
+    "ArmorLvl": 4,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 297,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4299999475479126,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Shaco_0",
+    "passive": "Jester_CarefulStrikes",
+    "QSpell": "Deceive",
+    "WSpell": "JackInTheBox",
+    "ESpell": "TwoShivPoison",
+    "RSpell": "HallucinateFull"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Jester_CarefulStrikes",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "Deceive",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "JackInTheBox",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TwoShivPoison",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "HallucinateFull",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

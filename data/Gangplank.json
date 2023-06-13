@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 114,
+    "AD": 64,
+    "ADLvl": 3.700000047683716,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6899999976158142,
+    "Armor": 31,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 280,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Gangplank_0",
+    "passive": "Gangplank_Passive",
+    "QSpell": "GangplankQWrapper",
+    "WSpell": "GangplankW",
+    "ESpell": "GangplankE",
+    "RSpell": "GangplankR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Gangplank_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "GangplankQWrapper",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "GangplankW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GangplankE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "GangplankR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

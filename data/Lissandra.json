@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 620,
+    "hpLvl": 110,
+    "AD": 55,
+    "ADLvl": 2.700000047683716,
+    "AS": 0.656000018119812,
+    "ASRatio": 0.625,
+    "Armor": 22,
+    "ArmorLvl": 4.900000095367432,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 475,
+    "ManaLvl": 30,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Lissandra_0",
+    "passive": "Lissandra_Passive",
+    "QSpell": "LissandraQ",
+    "WSpell": "LissandraW",
+    "ESpell": "LissandraE",
+    "RSpell": "LissandraR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Lissandra_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "LissandraQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "LissandraW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "LissandraE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "LissandraR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

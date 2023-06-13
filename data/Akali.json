@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 570,
+    "hpLvl": 119,
+    "AD": 62,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 23,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 37,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 200,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 10,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Akali_0",
+    "passive": "Akali_P",
+    "QSpell": "AkaliQ",
+    "WSpell": "AkaliW",
+    "ESpell": "AkaliE",
+    "RSpell": "AkaliR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Akali_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "AkaliQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "AkaliW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "AkaliE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "AkaliR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

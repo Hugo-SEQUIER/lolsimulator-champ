@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 570,
+    "hpLvl": 84,
+    "AD": 52,
+    "ADLvl": 3,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 28,
+    "ArmorLvl": 5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 350,
+    "ManaLvl": 64,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.299999952316284,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Janna_0",
+    "passive": "Janna_Tailwind",
+    "QSpell": "HowlingGale",
+    "WSpell": "SowTheWind",
+    "ESpell": "EyeOfTheStorm",
+    "RSpell": "ReapTheWhirlwind"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Janna_Tailwind",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "HowlingGale",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SowTheWind",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "EyeOfTheStorm",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ReapTheWhirlwind",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

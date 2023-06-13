@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 656,
+    "hpLvl": 109,
+    "AD": 68,
+    "ADLvl": 5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 35,
+    "ArmorLvl": 5,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 350,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.899999976158142,
+    "HpRegenLvl": 0.1599999964237213,
+    "Mana": 300,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.15000000596046448
+  },
+  "img": {
+    "centered": "Illaoi_0",
+    "passive": "Illaoi_P",
+    "QSpell": "IllaoiQ",
+    "WSpell": "IllaoiW",
+    "ESpell": "IllaoiE",
+    "RSpell": "IllaoiR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Illaoi_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "IllaoiQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "IllaoiW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "IllaoiE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "IllaoiR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 99,
+    "AD": 60,
+    "ADLvl": 1.5,
+    "AS": 0.8500000238418579,
+    "ASRatio": 0.8500000238418579,
+    "Armor": 32,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 60,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "BelVeth_0",
+    "passive": "Belveth_Passive",
+    "QSpell": "BelvethQ",
+    "WSpell": "BelvethW",
+    "ESpell": "BelvethE",
+    "RSpell": "BelvethR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Belveth_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "BelvethQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "BelvethW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "BelvethE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "BelvethR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

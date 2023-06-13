@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 655,
+    "hpLvl": 109,
+    "AD": 62,
+    "ADLvl": 2.5999999046325684,
+    "AS": 0.7210000157356262,
+    "ASRatio": 0.7210000157356262,
+    "Armor": 38,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 1.5499999523162842,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 275,
+    "ManaLvl": 35,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Nocturne_0",
+    "passive": "Nocturne_UmbraBlades",
+    "QSpell": "NocturneDuskbringer",
+    "WSpell": "NocturneShroudofDarkness",
+    "ESpell": "NocturneUnspeakableHorror",
+    "RSpell": "NocturneParanoia"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Nocturne_UmbraBlades",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "NocturneDuskbringer",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "NocturneShroudofDarkness",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "NocturneUnspeakableHorror",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "NocturneParanoia",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

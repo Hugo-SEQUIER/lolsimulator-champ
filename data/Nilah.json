@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 570,
+    "hpLvl": 101,
+    "AD": 58,
+    "ADLvl": 2,
+    "AS": 0.6970000267028809,
+    "ASRatio": 0.6700000166893005,
+    "Armor": 27,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.800000011920929,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 350,
+    "ManaLvl": 35,
+    "AP": 0,
+    "Range": 225,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.6399999856948853,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Nilah_0",
+    "passive": "NIlahP",
+    "QSpell": "NilahQ",
+    "WSpell": "NilahW",
+    "ESpell": "NilahE",
+    "RSpell": "NilahR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "NIlahP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "NilahQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "NilahW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "NilahE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "NilahR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

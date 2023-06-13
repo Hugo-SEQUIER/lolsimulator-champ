@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 682,
+    "hpLvl": 100,
+    "AD": 59,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.6790000200271606,
+    "ASRatio": 0.6790000200271606,
+    "Armor": 27,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.75,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 300,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4500000476837158,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Twitch_0",
+    "passive": "Twitch_Passive",
+    "QSpell": "TwitchHideInShadows",
+    "WSpell": "TwitchVenomCask",
+    "ESpell": "TwitchExpunge",
+    "RSpell": "TwitchFullAutomatic"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Twitch_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "TwitchHideInShadows",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "TwitchVenomCask",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TwitchExpunge",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "TwitchFullAutomatic",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

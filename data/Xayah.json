@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 660,
+    "hpLvl": 102,
+    "AD": 60,
+    "ADLvl": 3.5,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 25,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.6499999761581421,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 340,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.649999976158142,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Xayah_0",
+    "passive": "XayahPassive",
+    "QSpell": "XayahQ",
+    "WSpell": "XayahW",
+    "ESpell": "XayahE",
+    "RSpell": "XayahR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "XayahPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "XayahQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "XayahW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "XayahE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "XayahR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

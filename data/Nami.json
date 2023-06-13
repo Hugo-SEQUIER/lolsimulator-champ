@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 560,
+    "hpLvl": 88,
+    "AD": 51,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.6439999938011169,
+    "ASRatio": 0.6439999938011169,
+    "Armor": 29,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 365,
+    "ManaLvl": 43,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.299999952316284,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Nami_0",
+    "passive": "NamiPassive",
+    "QSpell": "NamiQ",
+    "WSpell": "NamiW",
+    "ESpell": "NamiE",
+    "RSpell": "NamiR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "NamiPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "NamiQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "NamiW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "NamiE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "NamiR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

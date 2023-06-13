@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 500,
+    "hpLvl": 69,
+    "AD": 49,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 25,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 25,
+    "MRLvl": 1.100000023841858,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 440,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 425,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Yuumi_0",
+    "passive": "YuumiP",
+    "QSpell": "YuumiQ",
+    "WSpell": "YuumiW",
+    "ESpell": "YuumiE",
+    "RSpell": "YuumiR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "YuumiP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "YuumiQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "YuumiW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "YuumiE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "YuumiR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

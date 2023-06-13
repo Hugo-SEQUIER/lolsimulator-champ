@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 670,
+    "hpLvl": 102,
+    "AD": 59,
+    "ADLvl": 2,
+    "AS": 0.6439999938011169,
+    "ASRatio": 0.6439999938011169,
+    "Armor": 28,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.699999988079071,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 345,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.6399999856948853,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "KaiSa_0",
+    "passive": "Kaisa_Passive",
+    "QSpell": "KaisaQ",
+    "WSpell": "KaisaW",
+    "ESpell": "KaisaE",
+    "RSpell": "KaisaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Kaisa_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "KaisaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "KaisaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "KaisaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "KaisaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

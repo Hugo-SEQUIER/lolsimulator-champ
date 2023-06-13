@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 530,
+    "hpLvl": 89,
+    "AD": 50,
+    "AS": 0.625,
+    "ASRatio": 0.4000000059604645,
+    "Armor": 28,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.699999988079071,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 350,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 600,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.299999952316284,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Senna_0",
+    "passive": "Senna_Passive",
+    "QSpell": "SennaQ",
+    "WSpell": "SennaW",
+    "ESpell": "SennaE",
+    "RSpell": "SennaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Senna_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SennaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SennaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SennaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SennaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

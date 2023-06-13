@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 658,
+    "hpLvl": 109,
+    "AD": 68,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 30,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 39,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 400,
+    "ManaLvl": 37,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5199999809265137,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Talon_0",
+    "passive": "TalonP",
+    "QSpell": "TalonQ",
+    "WSpell": "TalonW",
+    "ESpell": "TalonE",
+    "RSpell": "TalonR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "TalonP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "TalonQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "TalonW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TalonE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "TalonR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 120,
+    "AD": 56,
+    "ADLvl": 2.200000047683716,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 28,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 274,
+    "ManaLvl": 44,
+    "AP": 0,
+    "Range": 450,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Thresh_0",
+    "passive": "Thresh_Passive",
+    "QSpell": "ThreshQ",
+    "WSpell": "ThreshW",
+    "ESpell": "ThreshE",
+    "RSpell": "ThreshRPenta"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Thresh_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ThreshQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ThreshW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ThreshE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ThreshRPenta",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

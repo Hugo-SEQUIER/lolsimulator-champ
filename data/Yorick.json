@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 650,
+    "hpLvl": 114,
+    "AD": 62,
+    "ADLvl": 5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 39,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.1599999964237213,
+    "Mana": 300,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.15000000596046448
+  },
+  "img": {
+    "centered": "Yorick_0",
+    "passive": "Yorick_P",
+    "QSpell": "YorickQ",
+    "WSpell": "YorickW",
+    "ESpell": "YorickE",
+    "RSpell": "YorickR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Yorick_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "YorickQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "YorickW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "YorickE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "YorickR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

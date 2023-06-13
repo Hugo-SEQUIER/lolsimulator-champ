@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 574,
+    "hpLvl": 93,
+    "AD": 53,
+    "ADLvl": 3.200000047683716,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 29,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 418,
+    "ManaLvl": 25,
+    "AP": 0,
+    "Range": 575,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.5999999046325684,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Zyra_0",
+    "passive": "ZyraP",
+    "QSpell": "ZyraQ",
+    "WSpell": "ZyraW",
+    "ESpell": "ZyraE",
+    "RSpell": "ZyraR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "ZyraP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ZyraQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ZyraW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ZyraE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ZyraR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

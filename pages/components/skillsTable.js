@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData, baseNameData}) {
+function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData, baseNameData, actualData}) {
     
     const [listSkillsPoint, setListSkillsPoint] = useState([1,1,1,1,1])
     console.log("Main Data")
@@ -59,13 +59,13 @@ function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData,
     }, [mainData, spellData])
    
     function findBaseDamageData(data){
-        console.log("LAAAAAAAAAAAAAAAA")
-        console.log(data)
-        for (let i = 0; i < data.length; i++){
-            if (data[i].mName === 'BaseDamage' || data[i].mName === 'RBaseDamage' || data[i].mName === 'QBaseDamage'  || data[i].mName === 'WBaseDamage' || data[i].mName === 'EBaseDamage'){
-                console.log("LAAAAAAAAAAAAAAAA")
-                console.log(data[i])
-                return data[i]
+        if (data != undefined){
+            for (let i = 0; i < data.length; i++){
+                if (data[i].mName === 'BaseDamage' || data[i].mName === 'RBaseDamage' || data[i].mName === 'QBaseDamage'  || data[i].mName === 'WBaseDamage' || data[i].mName === 'EBaseDamage'){
+                    console.log("LAAAAAAAAAAAAAAAA")
+                    console.log(data[i])
+                    return data[i]
+                }
             }
         }
         return {
@@ -76,6 +76,7 @@ function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData,
 
     function selectItem(index){
         let options = [];
+
         if (index == 0) {
             return 1
         } 
@@ -88,6 +89,7 @@ function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData,
                 options.push(<option value={i} key={i}>{i}</option>);
             }
         }
+
         return (
              <select value={listSkillsPoint[index]} 
                 onChange={(e) => {
@@ -101,8 +103,44 @@ function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData,
                 {options}
             </select>
         )
-       
     }
+
+    function findCoeffMagicDamageCalculator(data){
+        const attributeNames = Object.keys(data);
+        for (let i = 0; i < attributeNames.length; i++) {
+            const attributeName = attributeNames[i];
+            if (data[attributeName].hasOwnProperty('mFormulaParts')) {
+                let arrayFormule = data[attributeName].mFormulaParts
+                for (let idxFormuleTab = 0 ; idxFormuleTab < arrayFormule.length; idxFormuleTab++){
+                    if (arrayFormule[idxFormuleTab].mCoefficient != undefined) return arrayFormule[idxFormuleTab].mCoefficient
+                }
+            }
+        }
+        return 0
+    }
+
+    function findCoeffAttackDamageCalculator(data){
+        for (let i = 0; i < data.length; i++){
+            if (data[i].mName.toLowerCase().includes("adratio")){
+                return data[i].mValues
+            }
+        }
+        return {
+            mValues : [0,0,0,0,0,0,0]
+        }
+        // for (let i = 0; i < attributeNames.length; i++) {
+        //     const attributeName = attributeNames[i];
+        //     if (data[attributeName].hasOwnProperty('mFormulaParts')) {
+        //         let arrayFormule = data[attributeName].mFormulaParts
+        //         for (let idxFormuleTab = 0 ; idxFormuleTab < arrayFormule.length; idxFormuleTab++){
+        //             if (arrayFormule[idxFormuleTab].mDataValue.toLowerCase().includes('adratio')){
+        //                 let nameOfAdRatio = arrayFormule[idxFormuleTab].mDataValue
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
     return (
         <div className="stats-table skills-table">
             <div>
@@ -116,7 +154,7 @@ function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData,
                         <td>Points</td>
                         <td>Damage</td>
                         <td>CD</td>
-                        <td>Damage / CD</td>
+                  {/**       <td>Damage / CD</td>*/}
                     </tr>                   
                     {listSpells != undefined && (listSpells.map((skill, index) => (
                         <tr key={index}>
@@ -131,9 +169,9 @@ function SkillsTable({ mainData, spellName, spellData, passiveName, passiveData,
                             <td>
                                 {selectItem(skill.index)}
                             </td>
-                            <td>{findBaseDamageData(skill.data.mDataValues).mValues[listSkillsPoint[skill.index]]}</td>
-                            <td>{0}</td>
-                            <td>{0}</td>
+                            <td>{findBaseDamageData(skill.data.mDataValues).mValues[listSkillsPoint[skill.index]] + findCoeffMagicDamageCalculator(skill.data) * actualData["Ability Power"] + findCoeffAttackDamageCalculator(skill.data.mDataValues)[listSkillsPoint[skill.index]] * actualData["Attack Damage"]}</td>
+                            <td>{Array.isArray(skill.data.cooldownTime) ? skill.data.cooldownTime[listSkillsPoint[skill.index]] : 0}</td>
+                            {/**       <td>{0}</td>*/}
                         </tr>
                     )))}
                 </table>

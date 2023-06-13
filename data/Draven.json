@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 675,
+    "hpLvl": 104,
+    "AD": 62,
+    "ADLvl": 3.5999999046325684,
+    "AS": 0.6790000200271606,
+    "ASRatio": 0.6790000200271606,
+    "Armor": 29,
+    "ArmorLvl": 4.5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.75,
+    "HpRegenLvl": 0.14000000059604645,
+    "Mana": 361,
+    "ManaLvl": 39,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.6100000143051147,
+    "ManaRegenLvl": 0.12999999523162842
+  },
+  "img": {
+    "centered": "Draven_0",
+    "passive": "Draven_passive",
+    "QSpell": "DravenSpinning",
+    "WSpell": "DravenFury",
+    "ESpell": "DravenDoubleShot",
+    "RSpell": "DravenRCast"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Draven_passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "DravenSpinning",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "DravenFury",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "DravenDoubleShot",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "DravenRCast",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 105,
+    "AD": 40,
+    "ADLvl": 2.5999999046325684,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 20,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 26,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 418,
+    "ManaLvl": 25,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Orianna_0",
+    "passive": "OriannaPassive",
+    "QSpell": "OrianaIzunaCommand",
+    "WSpell": "OrianaDissonanceCommand",
+    "ESpell": "OrianaRedactCommand",
+    "RSpell": "OrianaDetonateCommand"
+  },
+  "spell": {
+    "Passive": {
+      "img": "OriannaPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "OrianaIzunaCommand",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "OrianaDissonanceCommand",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "OrianaRedactCommand",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "OrianaDetonateCommand",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

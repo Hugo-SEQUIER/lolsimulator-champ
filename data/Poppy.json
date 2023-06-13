@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 104,
+    "AD": 64,
+    "ADLvl": 4,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 38,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.1599999964237213,
+    "Mana": 280,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Poppy_0",
+    "passive": "Poppy_Passive",
+    "QSpell": "PoppyQ",
+    "WSpell": "PoppyW",
+    "ESpell": "PoppyE",
+    "RSpell": "PoppyR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Poppy_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "PoppyQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "PoppyW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "PoppyE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "PoppyR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

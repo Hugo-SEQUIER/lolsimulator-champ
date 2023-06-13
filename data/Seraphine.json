@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 570,
+    "hpLvl": 104,
+    "AD": 55,
+    "ADLvl": 3,
+    "AS": 0.6690000295639038,
+    "ASRatio": 0.625,
+    "Armor": 19,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2999999523162842,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 440,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.20000000298023224
+  },
+  "img": {
+    "centered": "Seraphine_0",
+    "passive": "Seraphine_Passive",
+    "QSpell": "SeraphineQ",
+    "WSpell": "SeraphineW",
+    "ESpell": "SeraphineE",
+    "RSpell": "SeraphineR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Seraphine_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SeraphineQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SeraphineW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SeraphineE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SeraphineR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

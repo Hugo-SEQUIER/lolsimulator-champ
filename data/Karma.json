@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 604,
+    "hpLvl": 109,
+    "AD": 51,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 28,
+    "ArmorLvl": 5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 374,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.5999999046325684,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Karma_0",
+    "passive": "Karma_Passive",
+    "QSpell": "KarmaQ",
+    "WSpell": "KarmaSpiritBind",
+    "ESpell": "KarmaSolKimShield",
+    "RSpell": "KarmaMantra"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Karma_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "KarmaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "KarmaSpiritBind",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "KarmaSolKimShield",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "KarmaMantra",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

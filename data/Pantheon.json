@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 650,
+    "hpLvl": 109,
+    "AD": 64,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 40,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 28,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 317,
+    "ManaLvl": 31,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4700000286102295,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Pantheon_0",
+    "passive": "Pantheon_Passive",
+    "QSpell": "PantheonQ",
+    "WSpell": "PantheonW",
+    "ESpell": "PantheonE",
+    "RSpell": "PantheonR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Pantheon_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "PantheonQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "PantheonW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "PantheonE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "PantheonR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

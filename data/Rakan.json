@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 99,
+    "AD": 62,
+    "ADLvl": 3.5,
+    "AS": 0.6349999904632568,
+    "ASRatio": 0.6349999904632568,
+    "Armor": 30,
+    "ArmorLvl": 4.900000095367432,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 315,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 300,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.75,
+    "ManaRegenLvl": 0.10000000149011612
+  },
+  "img": {
+    "centered": "Rakan_0",
+    "passive": "Rakan_P",
+    "QSpell": "RakanQ",
+    "WSpell": "RakanW",
+    "ESpell": "RakanE",
+    "RSpell": "RakanR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Rakan_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "RakanQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "RakanW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "RakanE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "RakanR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

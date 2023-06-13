@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 575,
+    "hpLvl": 129,
+    "AD": 61,
+    "ADLvl": 3,
+    "AS": 0.6449999809265137,
+    "ASRatio": 0.6449999809265137,
+    "Armor": 27,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.549999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 310,
+    "ManaLvl": 70,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Sylas_0",
+    "passive": "SylasP",
+    "QSpell": "SylasQ",
+    "WSpell": "SylasW",
+    "ESpell": "SylasE",
+    "RSpell": "SylasR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "SylasP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SylasQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SylasW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SylasE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SylasR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

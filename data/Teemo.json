@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 598,
+    "hpLvl": 104,
+    "AD": 54,
+    "ADLvl": 3,
+    "AS": 0.6899999976158142,
+    "ASRatio": 0.6899999976158142,
+    "Armor": 24,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 334,
+    "ManaLvl": 25,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.9199999570846558,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Teemo_0",
+    "passive": "Teemo_P",
+    "QSpell": "BlindingDart",
+    "WSpell": "MoveQuick",
+    "ESpell": "ToxicShot",
+    "RSpell": "TeemoRCast"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Teemo_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "BlindingDart",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "MoveQuick",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ToxicShot",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "TeemoRCast",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

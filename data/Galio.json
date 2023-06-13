@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 632,
+    "hpLvl": 126,
+    "AD": 59,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 24,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.1599999964237213,
+    "Mana": 500,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.899999976158142,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Galio_0",
+    "passive": "Galio_Passive",
+    "QSpell": "GalioQ",
+    "WSpell": "GalioW",
+    "ESpell": "GalioE",
+    "RSpell": "GalioR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Galio_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "GalioQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "GalioW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GalioE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "GalioR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

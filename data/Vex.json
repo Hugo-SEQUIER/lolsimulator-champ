@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 590,
+    "hpLvl": 104,
+    "AD": 54,
+    "ADLvl": 2.75,
+    "AS": 0.6690000295639038,
+    "ASRatio": 0.625,
+    "Armor": 23,
+    "ArmorLvl": 4.449999809265137,
+    "MR": 28,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2999999523162842,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 490,
+    "ManaLvl": 32,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Vex_0",
+    "passive": "Icons_Vex_Passive",
+    "QSpell": "VexQ",
+    "WSpell": "VexW",
+    "ESpell": "VexE",
+    "RSpell": "VexR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Icons_Vex_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "VexQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "VexW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "VexE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "VexR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 595,
+    "hpLvl": 88,
+    "AD": 47,
+    "ADLvl": 2.5999999046325684,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 29,
+    "ArmorLvl": 4.900000095367432,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 350,
+    "ManaLvl": 55,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.200000047683716,
+    "ManaRegenLvl": 0.11999999731779099
+  },
+  "img": {
+    "centered": "Lulu_0",
+    "passive": "Lulu_PixFaerieCompanion",
+    "QSpell": "LuluQ",
+    "WSpell": "LuluW",
+    "ESpell": "LuluE",
+    "RSpell": "LuluR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Lulu_PixFaerieCompanion",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "LuluQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "LuluW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "LuluE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "LuluR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

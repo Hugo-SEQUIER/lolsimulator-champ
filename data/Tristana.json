@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 670,
+    "hpLvl": 102,
+    "AD": 59,
+    "ADLvl": 3.700000047683716,
+    "AS": 0.656000018119812,
+    "ASRatio": 0.6790000200271606,
+    "Armor": 26,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.800000011920929,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 250,
+    "ManaLvl": 32,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.440000057220459,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Tristana_0",
+    "passive": "Tristana_Passive",
+    "QSpell": "TristanaQ",
+    "WSpell": "TristanaW",
+    "ESpell": "TristanaE",
+    "RSpell": "TristanaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Tristana_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "TristanaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "TristanaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TristanaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "TristanaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

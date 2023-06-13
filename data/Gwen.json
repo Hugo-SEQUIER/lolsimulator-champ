@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 620,
+    "hpLvl": 109,
+    "AD": 63,
+    "ADLvl": 3,
+    "AS": 0.6899999976158142,
+    "ASRatio": 0.6899999976158142,
+    "Armor": 39,
+    "ArmorLvl": 5.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7000000476837158,
+    "HpRegenLvl": 0.18000000715255737,
+    "Mana": 330,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Gwen_0",
+    "passive": "Gwen_Passive",
+    "QSpell": "GwenQ",
+    "WSpell": "GwenW",
+    "ESpell": "GwenE",
+    "RSpell": "GwenR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Gwen_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "GwenQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "GwenW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GwenE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "GwenR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

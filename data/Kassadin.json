@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 646,
+    "hpLvl": 119,
+    "AD": 59,
+    "ADLvl": 3.9000000953674316,
+    "AS": 0.6399999856948853,
+    "ASRatio": 0.6399999856948853,
+    "Armor": 19,
+    "ArmorLvl": 4,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 400,
+    "ManaLvl": 87,
+    "AP": 0,
+    "Range": 150,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Kassadin_0",
+    "passive": "Kassadin_Passive",
+    "QSpell": "NullLance",
+    "WSpell": "NetherBlade",
+    "ESpell": "ForcePulse",
+    "RSpell": "RiftWalk"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Kassadin_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "NullLance",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "NetherBlade",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ForcePulse",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "RiftWalk",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

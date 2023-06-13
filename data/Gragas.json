@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 670,
+    "hpLvl": 109,
+    "AD": 64,
+    "ADLvl": 3.5,
+    "AS": 0.675000011920929,
+    "ASRatio": 0.625,
+    "Armor": 38,
+    "ArmorLvl": 4.799999713897705,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 330,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10000000149011612,
+    "Mana": 400,
+    "ManaLvl": 47,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Gragas_0",
+    "passive": "GragasPassiveHeal",
+    "QSpell": "GragasQ",
+    "WSpell": "GragasW",
+    "ESpell": "GragasE",
+    "RSpell": "GragasR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "GragasPassiveHeal",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "GragasQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "GragasW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "GragasE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "GragasR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

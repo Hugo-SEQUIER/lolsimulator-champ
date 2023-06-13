@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 558,
+    "hpLvl": 101,
+    "AD": 56,
+    "ADLvl": 2.700000047683716,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 19,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 340,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 385,
+    "ManaLvl": 20,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Heimerdinger_0",
+    "passive": "Heimerdinger_Passive",
+    "QSpell": "HeimerdingerQ",
+    "WSpell": "HeimerdingerW",
+    "ESpell": "HeimerdingerE",
+    "RSpell": "HeimerdingerR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Heimerdinger_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "HeimerdingerQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "HeimerdingerW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "HeimerdingerE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "HeimerdingerR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

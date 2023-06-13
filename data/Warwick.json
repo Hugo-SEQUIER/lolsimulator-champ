@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 620,
+    "hpLvl": 99,
+    "AD": 65,
+    "ADLvl": 3,
+    "AS": 0.6380000114440918,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 33,
+    "ArmorLvl": 4.400000095367432,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.800000011920929,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 280,
+    "ManaLvl": 35,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4900000095367432,
+    "ManaRegenLvl": 0.11999999731779099
+  },
+  "img": {
+    "centered": "Warwick_0",
+    "passive": "WarwickP",
+    "QSpell": "WarwickQ",
+    "WSpell": "WarwickW",
+    "ESpell": "WarwickE",
+    "RSpell": "WarwickR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "WarwickP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "WarwickQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "WarwickW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "WarwickE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "WarwickR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 610,
+    "hpLvl": 109,
+    "AD": 58,
+    "ADLvl": 3.5,
+    "AS": 0.6380000114440918,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 32,
+    "ArmorLvl": 5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 295,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 525,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Nidalee_0",
+    "passive": "Nidalee_Passive",
+    "QSpell": "JavelinToss",
+    "WSpell": "Bushwhack",
+    "ESpell": "PrimalSurge",
+    "RSpell": "AspectOfTheCougar"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Nidalee_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "JavelinToss",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "Bushwhack",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "PrimalSurge",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "AspectOfTheCougar",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

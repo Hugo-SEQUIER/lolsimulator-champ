@@ -1,0 +1,94 @@
+{
+  "basicStats": {
+    "Hp": 659,
+    "hpLvl": 99,
+    "AD": 61,
+    "ADLvl": 3.200000047683716,
+    "AS": 0.6439999938011169,
+    "ASRatio": 0.6439999938011169,
+    "Armor": 36,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 28,
+    "MRLvl": 1.5499999523162842,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.11999999731779099,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Rumble_0",
+    "passive": "Rumble_JunkyardTitan1",
+    "QSpell": "RumbleFlameThrower",
+    "WSpell": "RumbleShield",
+    "ESpell": "RumbleGrenade",
+    "RSpell": "RumbleCarpetBomb"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Rumble_JunkyardTitan1",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "RumbleFlameThrower",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "RumbleShield",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "RumbleGrenade",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "RumbleCarpetBomb",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

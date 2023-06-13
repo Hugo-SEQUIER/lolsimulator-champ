@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 630,
+    "hpLvl": 104,
+    "AD": 56,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 25,
+    "ArmorLvl": 5,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.07999999821186066,
+    "Mana": 340,
+    "ManaLvl": 60,
+    "AP": 0,
+    "Range": 450,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 2.200000047683716,
+    "ManaRegenLvl": 0.07999999821186066
+  },
+  "img": {
+    "centered": "Morgana_0",
+    "passive": "FallenAngel_Empathize",
+    "QSpell": "MorganaQ",
+    "WSpell": "MorganaW",
+    "ESpell": "MorganaE",
+    "RSpell": "MorganaR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "FallenAngel_Empathize",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "MorganaQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "MorganaW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "MorganaE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "MorganaR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

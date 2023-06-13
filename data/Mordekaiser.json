@@ -1,0 +1,93 @@
+{
+  "basicStats": {
+    "Hp": 645,
+    "hpLvl": 104,
+    "AD": 61,
+    "ADLvl": 4,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 37,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegenLvl": 0.15000000596046448,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Mordekaiser_0",
+    "passive": "MordekaiserPassive",
+    "QSpell": "MordekaiserQ",
+    "WSpell": "MordekaiserW",
+    "ESpell": "MordekaiserE",
+    "RSpell": "MordekaiserR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "MordekaiserPassive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "MordekaiserQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "MordekaiserW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "MordekaiserE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "MordekaiserR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

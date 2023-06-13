@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 633,
+    "hpLvl": 109,
+    "AD": 62,
+    "ADLvl": 3.5,
+    "AS": 0.6499999761581421,
+    "ASRatio": 0.699999988079071,
+    "Armor": 40,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 28,
+    "MRLvl": 2.049999952316284,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 267,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.7000000476837158,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Blitzcrank_0",
+    "passive": "Blitzcrank_ManaBarrier",
+    "QSpell": "RocketGrab",
+    "WSpell": "Overdrive",
+    "ESpell": "PowerFist",
+    "RSpell": "StaticField"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Blitzcrank_ManaBarrier",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "RocketGrab",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "Overdrive",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "PowerFist",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "StaticField",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

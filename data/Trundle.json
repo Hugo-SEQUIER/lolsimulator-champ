@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 686,
+    "hpLvl": 110,
+    "AD": 68,
+    "ADLvl": 3,
+    "AS": 0.6700000166893005,
+    "ASRatio": 0.6700000166893005,
+    "Armor": 37,
+    "ArmorLvl": 3.9000000953674316,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 350,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2000000476837158,
+    "HpRegenLvl": 0.15000000596046448,
+    "Mana": 340,
+    "ManaLvl": 45,
+    "AP": 0,
+    "Range": 175,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.11999999731779099
+  },
+  "img": {
+    "centered": "Trundle_0",
+    "passive": "Trundle_Passive",
+    "QSpell": "TrundleTrollSmash",
+    "WSpell": "trundledesecrate",
+    "ESpell": "TrundleCircle",
+    "RSpell": "TrundlePain"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Trundle_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "TrundleTrollSmash",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "trundledesecrate",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "TrundleCircle",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "TrundlePain",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

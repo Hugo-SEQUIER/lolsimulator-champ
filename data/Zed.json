@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 654,
+    "hpLvl": 99,
+    "AD": 63,
+    "ADLvl": 3.4000000953674316,
+    "AS": 0.6510000228881836,
+    "ASRatio": 0.6510000228881836,
+    "Armor": 32,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 29,
+    "MRLvl": 2.049999952316284,
+    "MS": 345,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.399999976158142,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 200,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 10,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Zed_0",
+    "passive": "shadowninja_P",
+    "QSpell": "ZedQ",
+    "WSpell": "ZedW",
+    "ESpell": "ZedE",
+    "RSpell": "ZedR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "shadowninja_P",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "ZedQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "ZedW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "ZedE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "ZedR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

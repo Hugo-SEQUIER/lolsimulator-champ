@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 108,
+    "AD": 57,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 26,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.6499999761581421,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 349,
+    "ManaLvl": 38,
+    "AP": 0,
+    "Range": 500,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.6399999856948853,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Samira_0",
+    "passive": "SamiraP",
+    "QSpell": "SamiraQ",
+    "WSpell": "SamiraW",
+    "ESpell": "SamiraE",
+    "RSpell": "SamiraR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "SamiraP",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "SamiraQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "SamiraW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "SamiraE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "SamiraR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

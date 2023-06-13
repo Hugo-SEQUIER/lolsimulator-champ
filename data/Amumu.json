@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 685,
+    "hpLvl": 94,
+    "AD": 53,
+    "ADLvl": 3.799999952316284,
+    "AS": 0.7360000014305115,
+    "ASRatio": 0.6380000114440918,
+    "Armor": 30,
+    "ArmorLvl": 4,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 335,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.7999999523162842,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 285,
+    "ManaLvl": 40,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4800000190734863,
+    "ManaRegenLvl": 0.10999999940395355
+  },
+  "img": {
+    "centered": "Amumu_0",
+    "passive": "Amumu_Passive",
+    "QSpell": "BandageToss",
+    "WSpell": "AuraofDespair",
+    "ESpell": "Tantrum",
+    "RSpell": "CurseoftheSadMummy"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Amumu_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "BandageToss",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "AuraofDespair",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "Tantrum",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "CurseoftheSadMummy",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

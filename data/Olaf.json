@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 645,
+    "hpLvl": 119,
+    "AD": 68,
+    "ADLvl": 4.699999809265137,
+    "AS": 0.6940000057220459,
+    "ASRatio": 0.6940000057220459,
+    "Armor": 35,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32,
+    "MRLvl": 2.049999952316284,
+    "MS": 350,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.2999999523162842,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 316,
+    "ManaLvl": 50,
+    "AP": 0,
+    "Range": 125,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.5,
+    "ManaRegenLvl": 0.11999999731779099
+  },
+  "img": {
+    "centered": "Olaf_0",
+    "passive": "Olaf_Passive",
+    "QSpell": "OlafAxeThrowCast",
+    "WSpell": "OlafFrenziedStrikes",
+    "ESpell": "OlafRecklessStrike",
+    "RSpell": "OlafRagnarok"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Olaf_Passive",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "OlafAxeThrowCast",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "OlafFrenziedStrikes",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "OlafRecklessStrike",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "OlafRagnarok",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

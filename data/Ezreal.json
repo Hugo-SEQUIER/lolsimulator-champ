@@ -1,0 +1,95 @@
+{
+  "basicStats": {
+    "Hp": 600,
+    "hpLvl": 102,
+    "AD": 62,
+    "ADLvl": 2.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 24,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.800000011920929,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 375,
+    "ManaLvl": 70,
+    "AP": 0,
+    "Range": 550,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.7000000476837158,
+    "ManaRegenLvl": 0.20000000298023224
+  },
+  "img": {
+    "centered": "Ezreal_0",
+    "passive": "Ezreal_RisingSpellForce",
+    "QSpell": "EzrealQ",
+    "WSpell": "EzrealW",
+    "ESpell": "EzrealE",
+    "RSpell": "EzrealR"
+  },
+  "spell": {
+    "Passive": {
+      "img": "Ezreal_RisingSpellForce",
+      "cd": [],
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "img": "EzrealQ",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "img": "EzrealW",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "img": "EzrealE",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "img": "EzrealR",
+      "cd": [],
+      "basicStats": [
+        {
+          "damage": [],
+          "ratioAd": [],
+          "ratioAp": []
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}
