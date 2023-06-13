@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 650,
-    "hpLvl": 114,
-    "AD": 60,
-    "ADLvl": 5,
+    "Hp": 650.0,
+    "hpLvl": 114.0,
+    "AD": 60.0,
+    "ADLvl": 5.0,
     "AS": 0.6510000228881836,
     "ASRatio": 0.6510000228881836,
-    "Armor": 38,
+    "Armor": 38.0,
     "ArmorLvl": 4.449999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.6000000238418579,
     "HpRegenLvl": 0.20000000298023224,
-    "Mana": 0,
+    "Mana": 0.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,78 +37,276 @@
   },
   "spell": {
     "Passive": {
-      "img": "Aatrox_Passive",
       "cd": [
-        24,23.29,22.59,21.88,21.18,20.47,19.76,19.06,18.35,17.65,16.94,16.24,15.53,14.82,14.12,13.41,12.71,12
+        "4 \u2212 12 (based on level)"
       ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "AatroxQ",
-      "cd": [14,12,10,8,6],
+      "cd": [
+        4,
+        12,
+        10,
+        8,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [10,30,50,70,90],
-          "ratioAd": [60,65,70,75,80],
-          "ratioAp": [0,0,0,0,0]
-        },
-        {
-          "damage": [12.5,37.5,62.5,87.5,112.5],
-          "ratioAd": [75,84.25,87.5,93.75,100],
-          "ratioAp": [0,0,0,0,0]
-        },
-        {
-          "damage": [15,45,75,105,135],
-          "ratioAd": [90,97.5,105,112.5,120],
-          "ratioAp": [0,0,0,0,0]
+          "damage": {
+            "First Cast Damage:": [
+              0,
+              30,
+              50,
+              70,
+              90
+            ],
+            "First Sweetspot Damage:": [
+              6,
+              48,
+              80,
+              112,
+              144
+            ],
+            "Second Cast Damage:": [
+              2.5,
+              37.5,
+              62.5,
+              87.5,
+              112.5
+            ],
+            "Second Sweetspot Damage:": [
+              0,
+              60,
+              100,
+              140,
+              180
+            ],
+            "Third Cast Damage:": [
+              5,
+              45,
+              75,
+              105,
+              135
+            ],
+            "Third Sweetspot Damage:": [
+              4,
+              72,
+              120,
+              168,
+              216
+            ],
+            "Maximum Non-Minion Damage:": [
+              0,
+              180,
+              300,
+              420,
+              540
+            ]
+          },
+          "ratioAd": {
+            "First Cast Damage:": [
+              60,
+              65,
+              70,
+              75,
+              80
+            ],
+            "First Sweetspot Damage:": [
+              96,
+              104,
+              112,
+              120,
+              128
+            ],
+            "Second Cast Damage:": [
+              75,
+              81.25,
+              87.5,
+              93.75,
+              100
+            ],
+            "Second Sweetspot Damage:": [
+              120,
+              130,
+              140,
+              150,
+              160
+            ],
+            "Third Cast Damage:": [
+              90,
+              97.5,
+              105,
+              112.5,
+              120
+            ],
+            "Third Sweetspot Damage:": [
+              144,
+              156,
+              168,
+              180,
+              192
+            ],
+            "Maximum Non-Minion Damage:": [
+              360,
+              390,
+              420,
+              450,
+              480
+            ]
+          },
+          "ratioAp": {
+            "First Cast Damage:": 0,
+            "First Sweetspot Damage:": 0,
+            "Second Cast Damage:": 0,
+            "Second Sweetspot Damage:": 0,
+            "Third Cast Damage:": 0,
+            "Third Sweetspot Damage:": 0,
+            "Maximum Non-Minion Damage:": 0
+          }
         }
       ],
-      "bonus": {
-        "damage" : 60
-      }
+      "bonus": {}
     },
     "W": {
-      "img": "AatroxW",
-      "cd": [20,18,16,14,12],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [60,80,100,120,140],
-          "ratioAd": [80,80,80,80,80],
-          "ratioAp": [0,0,0,0,0]
+          "damage": {
+            "Physical Damage:": [
+              0,
+              40,
+              50,
+              60,
+              70
+            ],
+            "Minion Damage:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ],
+            "Slow:": [
+              5,
+              27.5,
+              30,
+              32.5,
+              35
+            ],
+            "Total Damage:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              40
+            ],
+            "Minion Damage:": [
+              80
+            ],
+            "Slow:": 0,
+            "Total Damage:": [
+              80
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Minion Damage:": 0,
+            "Slow:": 0,
+            "Total Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AatroxE",
-      "cd": [9,8,7,6,5],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [0,0,0,0,0],
-          "healing": [18,19.5,21,22.5,24],
-          "ratioAd": [0,0,0,0,0],
-          "ratioAp": [0,0,0,0,0]
+          "damage": {
+            "Healing:": [
+              8,
+              19.5,
+              21,
+              22.5,
+              24
+            ],
+            " World Ender Increased Healing:": [
+              0,
+              24,
+              28,
+              32,
+              36
+            ]
+          },
+          "ratioAd": {
+            "Healing:": 0,
+            " World Ender Increased Healing:": 0
+          },
+          "ratioAp": {
+            "Healing:": 0,
+            " World Ender Increased Healing:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AatroxR",
-      "cd": [120,100,80],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [0,0,0,0,0],
-          "ratioAd": [0,0,0,0,0],
-          "ratioAp": [0,0,0,0,0]
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              80,
+              100
+            ],
+            "Bonus Attack Damage:": [
+              0,
+              32.5,
+              45
+            ],
+            "Increased Healing:": [
+              5,
+              35,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Bonus Attack Damage:": 0,
+            "Increased Healing:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0,
+            "Bonus Attack Damage:": 0,
+            "Increased Healing:": 0
+          }
         }
       ],
-      "bonus": {
-        "damage" : [20,32.5,45],
-        "MS" : [60,80,100],
-        "healing" : [25,35,45]
-      }
+      "bonus": {}
     }
   }
 }

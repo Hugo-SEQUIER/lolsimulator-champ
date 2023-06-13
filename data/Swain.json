@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 595,
-    "hpLvl": 99,
-    "AD": 58,
+    "Hp": 595.0,
+    "hpLvl": 99.0,
+    "AD": 58.0,
     "ADLvl": 2.700000047683716,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 468,
-    "ManaLvl": 29,
+    "Mana": 468.0,
+    "ManaLvl": 29.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,212 @@
   },
   "spell": {
     "Passive": {
-      "img": "Swain_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SwainQ",
-      "cd": [],
+      "cd": [
+        " ",
+        6,
+        5,
+        4,
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              85,
+              105,
+              125,
+              145
+            ],
+            "Bonus Damage Per Bolt:": [
+              5,
+              25,
+              35,
+              45,
+              55
+            ],
+            "Total Damage:": [
+              25,
+              185,
+              245,
+              305,
+              365
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Damage Per Bolt:": 0,
+            "Total Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Bonus Damage Per Bolt:": [
+              10
+            ],
+            "Total Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SwainW",
-      "cd": [],
+      "cd": [
+        2,
+        21,
+        20,
+        19,
+        18
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              115,
+              150,
+              185,
+              220
+            ],
+            "Minion Damage:": [
+              0,
+              57.5,
+              75,
+              92.5,
+              110
+            ],
+            "Slow:": [
+              5,
+              35,
+              45,
+              55,
+              65
+            ],
+            "Reveal Duration:": [
+              " ",
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Minion Damage:": 0,
+            "Slow:": 0,
+            "Reveal Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              55
+            ],
+            "Minion Damage:": [
+              27.5
+            ],
+            "Slow:": 0,
+            "Reveal Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SwainE",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              45,
+              55,
+              65,
+              75
+            ],
+            "Total Magic Damage:": [
+              0,
+              115,
+              160,
+              205,
+              250
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              25
+            ],
+            "Total Magic Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SwainR",
-      "cd": [],
+      "cd": [
+        0,
+        80,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage per Tick:": [
+              0,
+              40,
+              60
+            ],
+            "Heal per Tick:": [
+              5,
+              27.5,
+              40
+            ],
+            "Reduced Healing:": [
+              0.5,
+              2.75,
+              4
+            ],
+            "Magic Damage:": [
+              50,
+              225,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage per Tick:": 0,
+            "Heal per Tick:": 0,
+            "Reduced Healing:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage per Tick:": [
+              10
+            ],
+            "Heal per Tick:": [
+              18
+            ],
+            "Reduced Healing:": [
+              1.8
+            ],
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}

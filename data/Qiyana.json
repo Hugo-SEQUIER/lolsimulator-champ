@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 124,
-    "AD": 66,
+    "Hp": 590.0,
+    "hpLvl": 124.0,
+    "AD": 66.0,
     "ADLvl": 3.0999999046325684,
     "AS": 0.6880000233650208,
     "ASRatio": 0.625,
-    "Armor": 28,
+    "Armor": 28.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.18000000715255737,
-    "Mana": 320,
-    "ManaLvl": 50,
+    "Mana": 320.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,177 @@
   },
   "spell": {
     "Passive": {
-      "img": "Qiyana_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "QiyanaQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              85,
+              120,
+              155,
+              190
+            ],
+            "Reduced Damage:": [
+              7.5,
+              63.75,
+              90,
+              116.25,
+              142.5
+            ],
+            "Increased Damage:": [
+              0,
+              136,
+              192,
+              248,
+              304
+            ],
+            "Subsequent Increased Damage:": [
+              7.5,
+              114.75,
+              162,
+              209.25,
+              256.5
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              75
+            ],
+            "Reduced Damage:": [
+              56.25
+            ],
+            "Increased Damage:": [
+              120
+            ],
+            "Subsequent Increased Damage:": [
+              101.25
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Reduced Damage:": 0,
+            "Increased Damage:": 0,
+            "Subsequent Increased Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "QiyanaW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              " ",
+              10,
+              15,
+              20,
+              25
+            ],
+            "Bonus Magic Damage:": [
+              " ",
+              22,
+              36,
+              50,
+              64
+            ],
+            "Bonus Movement Speed:": [
+              " ",
+              5,
+              7,
+              9,
+              11
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Magic Damage:": [
+              10
+            ],
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Magic Damage:": [
+              10
+            ],
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "QiyanaE",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              90,
+              130,
+              170,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "QiyanaR",
-      "cd": [],
+      "cd": [
+        20
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              200,
+              300
+            ],
+            "Capped Monster Health Damage:": [
+              0,
+              750,
+              1000
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              170
+            ],
+            "Capped Monster Health Damage:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Capped Monster Health Damage:": 0
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 670,
-    "hpLvl": 104,
-    "AD": 62,
-    "ADLvl": 2,
+    "Hp": 670.0,
+    "hpLvl": 104.0,
+    "AD": 62.0,
+    "ADLvl": 2.0,
     "AS": 0.6669999957084656,
     "ASRatio": 0.6669999957084656,
-    "Armor": 45,
+    "Armor": 45.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 415,
-    "ManaLvl": 50,
+    "Mana": 415.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,101 @@
   },
   "spell": {
     "Passive": {
-      "img": "PykePassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "PykeQ",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              150,
+              200,
+              250,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              60
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "PykeW",
-      "cd": [],
+      "cd": [
+        2,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "PykeE",
-      "cd": [],
+      "cd": [
+        5,
+        14,
+        13,
+        12,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              145,
+              185,
+              225,
+              265
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "PykeR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

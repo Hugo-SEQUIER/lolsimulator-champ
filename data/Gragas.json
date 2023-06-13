@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 670,
-    "hpLvl": 109,
-    "AD": 64,
+    "Hp": 670.0,
+    "hpLvl": 109.0,
+    "AD": 64.0,
     "ADLvl": 3.5,
     "AS": 0.675000011920929,
     "ASRatio": 0.625,
-    "Armor": 38,
+    "Armor": 38.0,
     "ArmorLvl": 4.799999713897705,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 400,
-    "ManaLvl": 47,
+    "Mana": 400.0,
+    "ManaLvl": 47.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,198 @@
   },
   "spell": {
     "Passive": {
-      "img": "GragasPassiveHeal",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "GragasQ",
-      "cd": [],
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Maximum Magic Damage:": [
+              20,
+              180,
+              240,
+              300,
+              360
+            ],
+            "Minimum Minion Damage:": [
+              6,
+              84,
+              112,
+              140,
+              168
+            ],
+            "Maximum Minion Damage:": [
+              4,
+              126,
+              168,
+              210,
+              252
+            ],
+            "Minimum Slow:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ],
+            "Maximum Slow:": [
+              0,
+              67.5,
+              75,
+              82.5,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0,
+            "Minimum Minion Damage:": 0,
+            "Maximum Minion Damage:": 0,
+            "Minimum Slow:": 0,
+            "Maximum Slow:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              80
+            ],
+            "Maximum Magic Damage:": [
+              120
+            ],
+            "Minimum Minion Damage:": [
+              56
+            ],
+            "Maximum Minion Damage:": [
+              84
+            ],
+            "Minimum Slow:": 0,
+            "Maximum Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "GragasW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Damage Reduction:": [
+              0,
+              12,
+              14,
+              16,
+              18
+            ],
+            "Bonus Magic Damage:": [
+              0,
+              50,
+              80,
+              110,
+              140
+            ],
+            "Capped Monster Damage:": [
+              20,
+              350,
+              380,
+              410,
+              440
+            ]
+          },
+          "ratioAd": {
+            "Damage Reduction:": 0,
+            "Bonus Magic Damage:": 0,
+            "Capped Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Damage Reduction:": [
+              4
+            ],
+            "Bonus Magic Damage:": [
+              7
+            ],
+            "Capped Monster Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "GragasE",
-      "cd": [],
+      "cd": [
+        4,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "GragasR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              300,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}

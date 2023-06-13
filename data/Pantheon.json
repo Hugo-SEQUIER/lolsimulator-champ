@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 650,
-    "hpLvl": 109,
-    "AD": 64,
+    "Hp": 650.0,
+    "hpLvl": 109.0,
+    "AD": 64.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 40,
+    "Armor": 40.0,
     "ArmorLvl": 4.949999809265137,
-    "MR": 28,
+    "MR": 28.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 317,
-    "ManaLvl": 31,
+    "Mana": 317.0,
+    "ManaLvl": 31.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,176 @@
   },
   "spell": {
     "Passive": {
-      "img": "Pantheon_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "PantheonQ",
-      "cd": [],
+      "cd": [
+        1,
+        10.25,
+        9.5,
+        8.75,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              100,
+              130,
+              160,
+              190
+            ],
+            "Increased Damage:": [
+              55,
+              230,
+              305,
+              380,
+              455
+            ],
+            "Secondary Physical Damage:": [
+              5,
+              50,
+              65,
+              80,
+              95
+            ],
+            "Increased Secondary Damage:": [
+              7.5,
+              115,
+              152.5,
+              190,
+              227.5
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              115
+            ],
+            "Increased Damage:": [
+              230
+            ],
+            "Secondary Physical Damage:": [
+              57.5
+            ],
+            "Increased Secondary Damage:": [
+              115
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Increased Damage:": 0,
+            "Secondary Physical Damage:": 0,
+            "Increased Secondary Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "PantheonW",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "PantheonE",
-      "cd": [],
+      "cd": [
+        2,
+        21,
+        20,
+        19,
+        18
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              105,
+              155,
+              205,
+              255
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              150
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "PantheonR",
-      "cd": [],
+      "cd": [
+        80,
+        165,
+        150
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Armor Penetration:": [
+              0,
+              20,
+              30
+            ],
+            "Magic Damage:": [
+              0,
+              500,
+              700
+            ],
+            "Reduced Damage:": [
+              50,
+              250,
+              350
+            ]
+          },
+          "ratioAd": {
+            "Armor Penetration:": 0,
+            "Magic Damage:": 0,
+            "Reduced Damage:": 0
+          },
+          "ratioAp": {
+            "Armor Penetration:": 0,
+            "Magic Damage:": [
+              100
+            ],
+            "Reduced Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}

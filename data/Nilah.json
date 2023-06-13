@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 570,
-    "hpLvl": 101,
-    "AD": 58,
-    "ADLvl": 2,
+    "Hp": 570.0,
+    "hpLvl": 101.0,
+    "AD": 58.0,
+    "ADLvl": 2.0,
     "AS": 0.6970000267028809,
     "ASRatio": 0.6700000166893005,
-    "Armor": 27,
+    "Armor": 27.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.800000011920929,
     "HpRegenLvl": 0.18000000715255737,
-    "Mana": 350,
-    "ManaLvl": 35,
+    "Mana": 350.0,
+    "ManaLvl": 35.0,
     "AP": 0,
-    "Range": 225,
+    "Range": 225.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,163 @@
   },
   "spell": {
     "Passive": {
-      "img": "NIlahP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NilahQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              " ",
+              10,
+              15,
+              20,
+              25
+            ],
+            "Maximum Physical Damage:": [
+              1,
+              22,
+              33,
+              44,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              90,
+              97.5,
+              105,
+              112.5,
+              120
+            ],
+            "Maximum Physical Damage:": [
+              198,
+              214.5,
+              231,
+              247.5,
+              264
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NilahW",
-      "cd": [],
+      "cd": [
+        6,
+        25,
+        24,
+        23,
+        22
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              5,
+              17.5,
+              20,
+              22.5,
+              25
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NilahE",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              90,
+              115,
+              140,
+              165
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              20
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NilahR",
-      "cd": [],
+      "cd": [
+        10,
+        95,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage per Tick:": [
+              5,
+              30,
+              45
+            ],
+            "Total Physical Damage:": [
+              0,
+              120,
+              180
+            ],
+            "Physical Damage:": [
+              25,
+              225,
+              325
+            ],
+            "Maximum Total Physical Damage:": [
+              85,
+              345,
+              505
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage per Tick:": [
+              28
+            ],
+            "Total Physical Damage:": [
+              112
+            ],
+            "Physical Damage:": [
+              120
+            ],
+            "Maximum Total Physical Damage:": [
+              232
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage per Tick:": 0,
+            "Total Physical Damage:": 0,
+            "Physical Damage:": 0,
+            "Maximum Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

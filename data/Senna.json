@@ -1,24 +1,25 @@
 {
   "basicStats": {
-    "Hp": 530,
-    "hpLvl": 89,
-    "AD": 50,
+    "Hp": 530.0,
+    "hpLvl": 89.0,
+    "AD": 50.0,
+    "ADLvl": null,
     "AS": 0.625,
     "ASRatio": 0.4000000059604645,
-    "Armor": 28,
+    "Armor": 28.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.699999988079071,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 350,
-    "ManaLvl": 45,
+    "Mana": 350.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 600,
+    "Range": 600.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -36,56 +37,159 @@
   },
   "spell": {
     "Passive": {
-      "img": "Senna_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SennaQ",
-      "cd": [],
+      "cd": [
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Healing:": [
+              0,
+              55,
+              70,
+              85,
+              100
+            ],
+            "Physical Damage:": [
+              0,
+              65,
+              100,
+              135,
+              170
+            ],
+            "Slow Duration:": [
+              " ",
+              1.25,
+              1.5,
+              1.75,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Healing:": [
+              30
+            ],
+            "Physical Damage:": [
+              50
+            ],
+            "Slow Duration:": 0
+          },
+          "ratioAp": {
+            "Healing:": [
+              30
+            ],
+            "Physical Damage:": 0,
+            "Slow Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SennaW",
-      "cd": [],
+      "cd": [
+        1
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              115,
+              160,
+              205,
+              250
+            ],
+            "Root Duration:": [
+              " ",
+              1.25,
+              1.5,
+              1.75,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              70
+            ],
+            "Root Duration:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SennaE",
-      "cd": [],
+      "cd": [
+        6,
+        24.5,
+        23,
+        21.5,
+        20
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Effect Duration:": [
+              " ",
+              6.5,
+              7,
+              7.5,
+              8
+            ]
+          },
+          "ratioAd": {
+            "Effect Duration:": 0
+          },
+          "ratioAp": {
+            "Effect Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SennaR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              50,
+              400,
+              550
+            ],
+            "Shield Strength:": [
+              0,
+              150,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              115
+            ],
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              115
+            ],
+            "Shield Strength:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}

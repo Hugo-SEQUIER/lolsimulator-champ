@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 102,
-    "AD": 57,
-    "ADLvl": 3,
+    "Hp": 590.0,
+    "hpLvl": 102.0,
+    "AD": 57.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 22,
+    "Armor": 22.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 469,
-    "ManaLvl": 21,
+    "Mana": 469.0,
+    "ManaLvl": 21.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,147 @@
   },
   "spell": {
     "Passive": {
-      "img": "BrandP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "BrandQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              55
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "BrandW",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              120,
+              165,
+              210,
+              255
+            ],
+            "Increased Damage:": [
+              3.75,
+              150,
+              206.25,
+              262.5,
+              318.75
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Increased Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Increased Damage:": [
+              75
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "BrandE",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              95,
+              120,
+              145,
+              170
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "BrandR",
-      "cd": [],
+      "cd": [
+        5,
+        90,
+        75
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              200,
+              300
+            ],
+            "Total Single-Target Damage:": [
+              0,
+              600,
+              900
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Single-Target Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              25
+            ],
+            "Total Single-Target Damage:": [
+              75
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 640,
-    "hpLvl": 106,
-    "AD": 58,
-    "ADLvl": 3,
+    "Hp": 640.0,
+    "hpLvl": 106.0,
+    "AD": 58.0,
+    "ADLvl": 3.0,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 22,
+    "Armor": 22.0,
     "ArmorLvl": 4.599999904632568,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 317,
-    "ManaLvl": 52,
+    "Mana": 317.0,
+    "ManaLvl": 52.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,196 @@
   },
   "spell": {
     "Passive": {
-      "img": "Fizz_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "FizzQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              25,
+              40,
+              55,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              55
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "FizzW",
-      "cd": [],
+      "cd": [
+        " ",
+        6.5,
+        6,
+        5.5,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Magic Damage per Tick:": [
+              0.33,
+              5,
+              6.67,
+              8.33,
+              10
+            ],
+            "Bonus Magic Damage:": [
+              0,
+              70,
+              90,
+              110,
+              130
+            ],
+            "Mana Restored:": [
+              0,
+              40,
+              50,
+              60,
+              70
+            ],
+            "Bonus Magic Damage On-Hit:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": 0,
+            "Magic Damage per Tick:": 0,
+            "Bonus Magic Damage:": 0,
+            "Mana Restored:": 0,
+            "Bonus Magic Damage On-Hit:": 0
+          },
+          "ratioAp": {
+            "Total Magic Damage:": [
+              40
+            ],
+            "Magic Damage per Tick:": [
+              6.67
+            ],
+            "Bonus Magic Damage:": [
+              50
+            ],
+            "Mana Restored:": 0,
+            "Bonus Magic Damage On-Hit:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "FizzE",
-      "cd": [],
+      "cd": [
+        6,
+        14,
+        12,
+        10,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              130,
+              180,
+              230,
+              280
+            ],
+            "Slow:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "FizzR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Guppy Damage:": [
+              50,
+              250,
+              350
+            ],
+            "Chomper Damage:": [
+              25,
+              325,
+              425
+            ],
+            "Gigalodon Damage:": [
+              0,
+              400,
+              500
+            ]
+          },
+          "ratioAd": {
+            "Guppy Damage:": 0,
+            "Chomper Damage:": 0,
+            "Gigalodon Damage:": 0
+          },
+          "ratioAp": {
+            "Guppy Damage:": [
+              80
+            ],
+            "Chomper Damage:": [
+              100
+            ],
+            "Gigalodon Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}

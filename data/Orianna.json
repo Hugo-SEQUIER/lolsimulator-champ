@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 105,
-    "AD": 40,
+    "Hp": 600.0,
+    "hpLvl": 105.0,
+    "AD": 40.0,
     "ADLvl": 2.5999999046325684,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 20,
+    "Armor": 20.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 26,
+    "MR": 26.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 418,
-    "ManaLvl": 25,
+    "Mana": 418.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,159 @@
   },
   "spell": {
     "Passive": {
-      "img": "OriannaPassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "OrianaIzunaCommand",
-      "cd": [],
+      "cd": [
+        " ",
+        5.25,
+        4.5,
+        3.75,
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ],
+            "Reduced Damage:": [
+              2,
+              63,
+              84,
+              105,
+              126
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Reduced Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Reduced Damage:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "OrianaDissonanceCommand",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              150,
+              195,
+              240
+            ],
+            "Movement Speed Modifier:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Movement Speed Modifier:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Movement Speed Modifier:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "OrianaRedactCommand",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Resistances:": [
+              " ",
+              12,
+              18,
+              24,
+              30
+            ],
+            "Magic Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ],
+            "Shield Strength:": [
+              5,
+              90,
+              125,
+              160,
+              195
+            ]
+          },
+          "ratioAd": {
+            "Bonus Resistances:": 0,
+            "Magic Damage:": 0,
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Bonus Resistances:": 0,
+            "Magic Damage:": [
+              30
+            ],
+            "Shield Strength:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "OrianaDetonateCommand",
-      "cd": [],
+      "cd": [
+        10,
+        95,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              350,
+              450
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}

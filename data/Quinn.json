@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 603,
-    "hpLvl": 99,
-    "AD": 59,
+    "Hp": 603.0,
+    "hpLvl": 99.0,
+    "AD": 59.0,
     "ADLvl": 2.4000000953674316,
     "AS": 0.6679999828338623,
     "ASRatio": 0.6679999828338623,
-    "Armor": 28,
+    "Armor": 28.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 269,
-    "ManaLvl": 35,
+    "Mana": 269.0,
+    "ManaLvl": 35.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,140 @@
   },
   "spell": {
     "Passive": {
-      "img": "Quinn_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "QuinnQ",
-      "cd": [],
+      "cd": [
+        1,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              45,
+              70,
+              95,
+              120
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              80,
+              90,
+              100,
+              110,
+              120
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              80,
+              90,
+              100,
+              110,
+              120
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "QuinnW",
-      "cd": [],
+      "cd": [
+        0,
+        45,
+        40,
+        35,
+        30
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              8,
+              36,
+              44,
+              52,
+              60
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "QuinnE",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical damage:": [
+              0,
+              70,
+              100,
+              130,
+              160
+            ]
+          },
+          "ratioAd": {
+            "Physical damage:": [
+              20
+            ]
+          },
+          "ratioAp": {
+            "Physical damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "QuinnR",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Movement Speed Increase:": [
+              0,
+              100,
+              130
+            ]
+          },
+          "ratioAd": {
+            "Total Movement Speed Increase:": 0
+          },
+          "ratioAp": {
+            "Total Movement Speed Increase:": 0
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 646,
-    "hpLvl": 100,
-    "AD": 61,
+    "Hp": 646.0,
+    "hpLvl": 100.0,
+    "AD": 61.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.7059999704360962,
     "ASRatio": 0.6119999885559082,
-    "Armor": 39,
+    "Armor": 39.0,
     "ArmorLvl": 4.949999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 400,
-    "ManaLvl": 47,
+    "Mana": 400.0,
+    "ManaLvl": 47.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,219 @@
   },
   "spell": {
     "Passive": {
-      "img": "Nautilus_StaggeringBlow",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NautilusAnchorDrag",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              115,
+              160,
+              205,
+              250
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NautilusPiercingGaze",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              60,
+              70,
+              80,
+              90
+            ],
+            "Magic Damage:": [
+              0,
+              40,
+              50,
+              60,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": 0,
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NautilusSplashZone",
-      "cd": [],
+      "cd": [
+        " ",
+        6.5,
+        6,
+        5.5,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              90,
+              125,
+              160,
+              195
+            ],
+            "Reduced Damage:": [
+              7.5,
+              45,
+              62.5,
+              80,
+              97.5
+            ],
+            "Maximum Total Damage:": [
+              10,
+              180,
+              250,
+              320,
+              390
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Monster Damage:": [
+              2.5,
+              135,
+              187.5,
+              240,
+              292.5
+            ],
+            "Reduced Monster Damage:": [
+              1.25,
+              67.5,
+              93.75,
+              120,
+              146.25
+            ],
+            "Maximum Total Monster Damage:": [
+              65,
+              270,
+              375,
+              480,
+              585
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Reduced Damage:": 0,
+            "Maximum Total Damage:": 0,
+            "Slow:": 0,
+            "Monster Damage:": 0,
+            "Reduced Monster Damage:": 0,
+            "Maximum Total Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Reduced Damage:": [
+              25
+            ],
+            "Maximum Total Damage:": [
+              100
+            ],
+            "Slow:": 0,
+            "Monster Damage:": [
+              75
+            ],
+            "Reduced Monster Damage:": [
+              37.5
+            ],
+            "Maximum Total Monster Damage:": [
+              150
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NautilusGrandLine",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              25,
+              175,
+              225
+            ],
+            "Stun Duration:": [
+              " ",
+              1.5,
+              2
+            ],
+            "Increased Damage:": [
+              50,
+              275,
+              400
+            ],
+            "Knock Up Duration:": [
+              " ",
+              1.5,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Stun Duration:": 0,
+            "Increased Damage:": 0,
+            "Knock Up Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Stun Duration:": 0,
+            "Increased Damage:": [
+              80
+            ],
+            "Knock Up Duration:": 0
+          }
         }
       ],
       "bonus": {}

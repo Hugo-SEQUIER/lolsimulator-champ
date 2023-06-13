@@ -1,0 +1,189 @@
+{
+  "basicStats": {
+    "Hp": 640.0,
+    "hpLvl": 104.0,
+    "AD": 64.0,
+    "ADLvl": 3.0,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 36.0,
+    "ArmorLvl": 4.799999713897705,
+    "MR": 32.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 340.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.14000000059604645,
+    "Mana": 300.0,
+    "ManaLvl": 55.0,
+    "AP": 0,
+    "Range": 175.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.2999999523162842,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Jarvan_IV_0",
+    "passive": "JarvanIV_MartialCadence",
+    "QSpell": "JarvanIVDragonStrike",
+    "WSpell": "JarvanIVGoldenAegis",
+    "ESpell": "JarvanIVDemacianStandard",
+    "RSpell": "JarvanIVCataclysm"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Armor Reduction:": [
+              0,
+              14,
+              18,
+              22,
+              26
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              140
+            ],
+            "Armor Reduction:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Armor Reduction:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Slow:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Shield Strength:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ]
+          },
+          "ratioAd": {
+            "Slow:": 0,
+            "Shield Strength:": [
+              70
+            ]
+          },
+          "ratioAp": {
+            "Slow:": 0,
+            "Shield Strength:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        2,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              22.5,
+              25,
+              27.5,
+              30
+            ],
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Magic Damage:": [
+              80
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        20,
+        105,
+        90
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              0,
+              325,
+              450
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              180
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

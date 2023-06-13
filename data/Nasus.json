@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 631,
-    "hpLvl": 104,
-    "AD": 67,
+    "Hp": 631.0,
+    "hpLvl": 104.0,
+    "AD": 67.0,
     "ADLvl": 3.5,
     "AS": 0.6380000114440918,
     "ASRatio": 0.6380000114440918,
-    "Armor": 34,
+    "Armor": 34.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 350,
+    "MS": 350.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.18000000715255737,
-    "Mana": 326,
-    "ManaLvl": 62,
+    "Mana": 326.0,
+    "ManaLvl": 62.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,205 @@
   },
   "spell": {
     "Passive": {
-      "img": "Nasus_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NasusQ",
-      "cd": [],
+      "cd": [
+        0.5,
+        6.5,
+        5.5,
+        4.5,
+        3.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              50,
+              70,
+              90,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NasusW",
-      "cd": [],
+      "cd": [
+        5,
+        14,
+        13,
+        12,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Maximum Slow:": [
+              7,
+              59,
+              71,
+              83,
+              95
+            ],
+            "Additional Slow Per Second:": [
+              " ",
+              6,
+              9,
+              12,
+              15
+            ],
+            "Maximum Cripple:": [
+              5.25,
+              44.25,
+              53.25,
+              62.25,
+              71.25
+            ],
+            "Additional Cripple Per Second:": [
+              0.25,
+              4.5,
+              6.75,
+              9,
+              11.25
+            ]
+          },
+          "ratioAd": {
+            "Maximum Slow:": 0,
+            "Additional Slow Per Second:": 0,
+            "Maximum Cripple:": 0,
+            "Additional Cripple Per Second:": 0
+          },
+          "ratioAp": {
+            "Maximum Slow:": 0,
+            "Additional Slow Per Second:": 0,
+            "Maximum Cripple:": 0,
+            "Additional Cripple Per Second:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NasusE",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              95,
+              135,
+              175,
+              215
+            ],
+            "Magic Damage Per Tick:": [
+              1,
+              19,
+              27,
+              35,
+              43
+            ],
+            "Total Magic Damage:": [
+              10,
+              190,
+              270,
+              350,
+              430
+            ],
+            "Armor Reduction:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0,
+            "Armor Reduction:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Magic Damage Per Tick:": [
+              12
+            ],
+            "Total Magic Damage:": [
+              120
+            ],
+            "Armor Reduction:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NasusR",
-      "cd": [],
+      "cd": [
+        20
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Health:": [
+              0,
+              450,
+              600
+            ],
+            "Bonus Resistances:": [
+              0,
+              55,
+              70
+            ],
+            "Increased Size:": [
+              0,
+              35,
+              40
+            ],
+            "Magic Damage Per Tick:": [
+              0.5,
+              2,
+              2.5
+            ],
+            "Total Magic Damage:": [
+              5,
+              60,
+              75
+            ]
+          },
+          "ratioAd": {
+            "Bonus Health:": 0,
+            "Bonus Resistances:": 0,
+            "Increased Size:": 0,
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Health:": 0,
+            "Bonus Resistances:": 0,
+            "Increased Size:": 0,
+            "Magic Damage Per Tick:": [
+              0.5
+            ],
+            "Total Magic Damage:": [
+              15
+            ]
+          }
         }
       ],
       "bonus": {}

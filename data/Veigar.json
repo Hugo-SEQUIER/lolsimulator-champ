@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 550,
-    "hpLvl": 108,
-    "AD": 52,
+    "Hp": 550.0,
+    "hpLvl": 108.0,
+    "AD": 52.0,
     "ADLvl": 2.700000047683716,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 18,
+    "Armor": 18.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 490,
-    "ManaLvl": 26,
+    "Mana": 490.0,
+    "ManaLvl": 26.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,142 @@
   },
   "spell": {
     "Passive": {
-      "img": "VeigarEntropy",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "VeigarBalefulStrike",
-      "cd": [],
+      "cd": [
+        " ",
+        5.5,
+        5,
+        4.5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "VeigarDarkMatter",
-      "cd": [],
+      "cd": [
+        " \u2212 0 (based on  Phenomenal Evil stacks)"
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              140,
+              195,
+              250,
+              305
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70,
+              80,
+              90,
+              100,
+              110
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VeigarEventHorizon",
-      "cd": [],
+      "cd": [
+        0,
+        18.5,
+        17,
+        15.5,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Stun Duration:": [
+              0.5,
+              1.75,
+              2,
+              2.25,
+              2.5
+            ]
+          },
+          "ratioAd": {
+            "Stun Duration:": 0
+          },
+          "ratioAp": {
+            "Stun Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "VeigarR",
-      "cd": [],
+      "cd": [
+        20,
+        90,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              75,
+              250,
+              325
+            ],
+            "Maximum Magic Damage:": [
+              50,
+              500,
+              650
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              65,
+              70,
+              75
+            ],
+            "Maximum Magic Damage:": [
+              130,
+              140,
+              150
+            ]
+          }
         }
       ],
       "bonus": {}

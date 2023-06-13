@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 607,
-    "hpLvl": 110,
-    "AD": 55,
-    "ADLvl": 3,
+    "Hp": 607.0,
+    "hpLvl": 110.0,
+    "AD": 55.0,
+    "ADLvl": 3.0,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 27,
+    "Armor": 27.0,
     "ArmorLvl": 4.5,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 2,
+    "Mana": 2.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 450,
+    "Range": 450.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,201 @@
   },
   "spell": {
     "Passive": {
-      "img": "VladimirP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "VladimirQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.9,
+        6.8,
+        5.7,
+        4.6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              100,
+              120,
+              140,
+              160
+            ],
+            "Heal:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Increased Damage:": [
+              48,
+              185,
+              222,
+              259,
+              296
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Heal:": 0,
+            "Increased Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Heal:": [
+              35
+            ],
+            "Increased Damage:": [
+              111
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "VladimirSanguinePool",
-      "cd": [],
+      "cd": [
+        8,
+        25,
+        22,
+        19,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              0,
+              33.75,
+              47.5,
+              61.25,
+              75
+            ],
+            "Total Magic Damage:": [
+              0,
+              135,
+              190,
+              245,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VladimirE",
-      "cd": [],
+      "cd": [
+        3,
+        11,
+        9,
+        7,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ],
+            "Maximum Magic Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ],
+            "Slow:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              1.5
+            ],
+            "Maximum Magic Damage:": [
+              6
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "VladimirHemoplague",
-      "cd": [],
+      "cd": [
+        20
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic damage:": [
+              50,
+              250,
+              350
+            ],
+            "Heal:": [
+              50,
+              250,
+              350
+            ],
+            "Reduced Heal:": [
+              0,
+              100,
+              140
+            ],
+            "Maximum Total Heal:": [
+              90,
+              650,
+              910
+            ]
+          },
+          "ratioAd": {
+            "Magic damage:": 0,
+            "Heal:": 0,
+            "Reduced Heal:": 0,
+            "Maximum Total Heal:": 0
+          },
+          "ratioAp": {
+            "Magic damage:": [
+              70
+            ],
+            "Heal:": [
+              70
+            ],
+            "Reduced Heal:": [
+              28
+            ],
+            "Maximum Total Heal:": [
+              182
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 550,
-    "hpLvl": 119,
-    "AD": 52,
+    "Hp": 550.0,
+    "hpLvl": 119.0,
+    "AD": 52.0,
     "ADLvl": 3.5,
     "AS": 0.625,
     "ASRatio": 0.6940000057220459,
-    "Armor": 22,
-    "ArmorLvl": 5,
-    "MR": 30,
+    "Armor": 22.0,
+    "ArmorLvl": 5.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 320,
-    "ManaLvl": 40,
+    "Mana": 320.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,157 @@
   },
   "spell": {
     "Passive": {
-      "img": "Azir_Passive",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "AzirQWrapper",
-      "cd": [],
+      "cd": [
+        2,
+        10.5,
+        9,
+        7.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "AzirW",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              " \u2212 92 "
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              "ased on level) (+ 50 ",
+              67,
+              84,
+              101,
+              "118) (+\u00a060"
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AzirEWrapper",
-      "cd": [],
+      "cd": [
+        2,
+        20.5,
+        19,
+        17.5,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ],
+            "Magic Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              60
+            ],
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AzirR",
-      "cd": [],
+      "cd": [
+        20,
+        105,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Width:": [
+              " ",
+              7,
+              "8 soldiers"
+            ],
+            "Width (charge):": [
+              620,
+              720,
+              820
+            ],
+            "Width (impassable wall):": [
+              750,
+              850,
+              950
+            ],
+            "Magic Damage:": [
+              0,
+              400,
+              600
+            ]
+          },
+          "ratioAd": {
+            "Width:": 0,
+            "Width (charge):": 0,
+            "Width (impassable wall):": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Width:": 0,
+            "Width (charge):": 0,
+            "Width (impassable wall):": 0,
+            "Magic Damage:": [
+              75
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 102,
-    "AD": 55,
+    "Hp": 590.0,
+    "hpLvl": 102.0,
+    "AD": 55.0,
     "ADLvl": 3.1415927410125732,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 22,
+    "Armor": 22.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 469,
-    "ManaLvl": 21,
+    "Mana": 469.0,
+    "ManaLvl": 21.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -28,7 +28,7 @@
     "ManaRegenLvl": 0.1599999964237213
   },
   "img": {
-    "centered": "VelKoz_0",
+    "centered": "Velkoz_0",
     "passive": "VelKoz_Passive",
     "QSpell": "VelkozQ",
     "WSpell": "VelkozW",
@@ -37,56 +37,166 @@
   },
   "spell": {
     "Passive": {
-      "img": "VelKoz_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "VelkozQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Slow Duration:": [
+              " ",
+              1.4,
+              1.8,
+              2.2,
+              2.6
+            ],
+            "Mana Restored per Kill:": [
+              0,
+              22.5,
+              25,
+              27.5,
+              30
+            ],
+            "Maximum Mana Restored:": [
+              0,
+              67.5,
+              75,
+              82.5,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow Duration:": 0,
+            "Mana Restored per Kill:": 0,
+            "Maximum Mana Restored:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Slow Duration:": 0,
+            "Mana Restored per Kill:": 0,
+            "Maximum Mana Restored:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "VelkozW",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              75,
+              105,
+              135,
+              165
+            ],
+            "Total Magic Damage:": [
+              5,
+              125,
+              175,
+              225,
+              275
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              25
+            ],
+            "Total Magic Damage:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VelkozE",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              100,
+              130,
+              160,
+              190
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              30
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "VelkozR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Damage Per Tick:": [
+              4.62,
+              48.08,
+              61.54
+            ],
+            "Maximum Damage:": [
+              50,
+              625,
+              800
+            ]
+          },
+          "ratioAd": {
+            "Damage Per Tick:": 0,
+            "Maximum Damage:": 0
+          },
+          "ratioAp": {
+            "Damage Per Tick:": [
+              9.62
+            ],
+            "Maximum Damage:": [
+              125
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,0 +1,246 @@
+{
+  "basicStats": {
+    "Hp": 610.0,
+    "hpLvl": 108.0,
+    "AD": 64.0,
+    "ADLvl": 3.5,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 33.0,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 30.0,
+    "MRLvl": 2.0999999046325684,
+    "MS": 330.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.899999976158142,
+    "HpRegenLvl": 0.17000000178813934,
+    "Mana": 290.0,
+    "ManaLvl": 60.0,
+    "AP": 0,
+    "Range": 175.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.399999976158142,
+    "ManaRegenLvl": 0.20000000298023224
+  },
+  "img": {
+    "centered": "K%27Sante_0",
+    "passive": "Icons_KSante_P",
+    "QSpell": "KSanteQ",
+    "WSpell": "KSanteW",
+    "ESpell": "KSanteE",
+    "RSpell": "KSanteR"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        ".5 \u2212 1.75 (based on bonus resistances)"
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              40
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        4,
+        22,
+        20,
+        18,
+        16
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Minimum Physical Damage:": [
+              " ",
+              2.25,
+              2.5,
+              2.75,
+              3
+            ],
+            "Maximum Physical Damage:": [
+              10,
+              170,
+              230,
+              290,
+              350
+            ],
+            "Minimum Stun Duration:": [
+              0.3,
+              0.35,
+              0.4,
+              0.45,
+              0.5
+            ],
+            "Maximum Stun Duration:": [
+              0.85,
+              0.95,
+              1.05,
+              1.15,
+              1.25
+            ],
+            "Minimum Bonus Physical Damage:": [
+              5,
+              35,
+              45,
+              55,
+              65
+            ],
+            "Maximum Bonus Physical Damage:": [
+              10,
+              170,
+              230,
+              290,
+              350
+            ],
+            "Minimum Total Physical Damage:": [
+              5,
+              35,
+              45,
+              55,
+              65
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": [
+              50,
+              7.25,
+              7.5,
+              7.75,
+              8
+            ],
+            "Minimum Stun Duration:": 0,
+            "Maximum Stun Duration:": 0,
+            "Minimum Bonus Physical Damage:": [
+              50
+            ],
+            "Maximum Bonus Physical Damage:": [
+              50
+            ],
+            "Minimum Total Physical Damage:": [
+              50,
+              2.25,
+              2.5,
+              2.75,
+              3
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0,
+            "Minimum Stun Duration:": 0,
+            "Maximum Stun Duration:": 0,
+            "Minimum Bonus Physical Damage:": 0,
+            "Maximum Bonus Physical Damage:": 0,
+            "Minimum Total Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        " ",
+        8.5,
+        8,
+        7.5,
+        7
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Shield Strength:": [
+              5,
+              65,
+              85,
+              105,
+              125
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        20,
+        100,
+        80
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              5,
+              70,
+              105
+            ],
+            "Additional Damage:": [
+              50,
+              250,
+              350
+            ],
+            "Total Physical Damage:": [
+              85,
+              320,
+              455
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              20
+            ],
+            "Additional Damage:": [
+              20
+            ],
+            "Total Physical Damage:": [
+              40
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Additional Damage:": 0,
+            "Total Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

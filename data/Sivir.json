@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 104,
-    "AD": 58,
+    "Hp": 600.0,
+    "hpLvl": 104.0,
+    "AD": 58.0,
     "ADLvl": 2.799999952316284,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.449999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.6499999761581421,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 340,
-    "ManaLvl": 45,
+    "Mana": 340.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,198 @@
   },
   "spell": {
     "Passive": {
-      "img": "Sivir_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SivirQ",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              30,
+              45,
+              60,
+              75
+            ],
+            "Minimum Damage:": [
+              " ",
+              12,
+              18,
+              24,
+              30
+            ],
+            "Total Maximum Champion Damage:": [
+              0,
+              60,
+              90,
+              120,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "Minimum Damage:": [
+              32,
+              34,
+              36,
+              38,
+              40
+            ],
+            "Total Maximum Champion Damage:": [
+              160,
+              170,
+              180,
+              190,
+              200
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              80,
+              85,
+              90,
+              95,
+              100
+            ],
+            "Minimum Damage:": [
+              32,
+              34,
+              36,
+              38,
+              40
+            ],
+            "Total Maximum Champion Damage:": [
+              160,
+              170,
+              180,
+              190,
+              200
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SivirW",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Bounce Damage:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ],
+            "Minion Bounce Damage:": [
+              6.25,
+              19.5,
+              22.75,
+              26,
+              29.25
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bounce Damage:": 0,
+            "Minion Bounce Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bounce Damage:": 0,
+            "Minion Bounce Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SivirE",
-      "cd": [],
+      "cd": [
+        4,
+        22.5,
+        21,
+        19.5,
+        18
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              0,
+              65,
+              70,
+              75,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Heal:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "Heal:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SivirR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Buff Duration:": [
+              " ",
+              10,
+              12
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              25,
+              30
+            ]
+          },
+          "ratioAd": {
+            "Buff Duration:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Buff Duration:": 0,
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}

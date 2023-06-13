@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 690,
-    "hpLvl": 98,
-    "AD": 69,
+    "Hp": 690.0,
+    "hpLvl": 98.0,
+    "AD": 69.0,
     "ADLvl": 4.5,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 38,
+    "Armor": 38.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 1.5499999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 0,
+    "Mana": 0.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,152 @@
   },
   "spell": {
     "Passive": {
-      "img": "Garen_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "GarenQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Movement Speed Duration:": [
+              " ",
+              1.65,
+              2.3,
+              2.95,
+              3.6
+            ],
+            "Bonus Physical Damage:": [
+              0,
+              60,
+              90,
+              120,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Movement Speed Duration:": 0,
+            "Bonus Physical Damage:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "Movement Speed Duration:": 0,
+            "Bonus Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "GarenW",
-      "cd": [],
+      "cd": [
+        3,
+        21,
+        19,
+        17,
+        15
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Duration:": [
+              " ",
+              2.75,
+              3.5,
+              4.25,
+              5
+            ],
+            "Shield Strength:": [
+              5,
+              85,
+              105,
+              125,
+              145
+            ]
+          },
+          "ratioAd": {
+            "Duration:": 0,
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Duration:": 0,
+            "Shield Strength:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "GarenE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Spin:": [
+              " ",
+              8,
+              12,
+              16,
+              20
+            ],
+            "Increased Damage Per Spin:": [
+              " ",
+              10,
+              15,
+              20,
+              25
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Spin:": [
+              " 0 \u2212 8.2 (based on level)) (+\u00a032 ",
+              34,
+              36,
+              38,
+              40
+            ],
+            "Increased Damage Per Spin:": [
+              " 0 \u2212 10.25 (based on level)) (+\u00a040 ",
+              42.5,
+              45,
+              47.5,
+              50
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Spin:": 0,
+            "Increased Damage Per Spin:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "GarenR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "True Damage:": [
+              50,
+              300,
+              450
+            ]
+          },
+          "ratioAd": {
+            "True Damage:": 0
+          },
+          "ratioAp": {
+            "True Damage:": 0
+          }
         }
       ],
       "bonus": {}

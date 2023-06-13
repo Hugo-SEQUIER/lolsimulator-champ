@@ -1,28 +1,30 @@
 {
   "basicStats": {
-    "Hp": 645,
-    "hpLvl": 104,
-    "AD": 61,
-    "ADLvl": 4,
+    "Hp": 645.0,
+    "hpLvl": 104.0,
+    "AD": 61.0,
+    "ADLvl": 4.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 37,
+    "Armor": 37.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
+    "HpRegen": null,
     "HpRegenLvl": 0.15000000596046448,
+    "Mana": null,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -35,56 +37,131 @@
   },
   "spell": {
     "Passive": {
-      "img": "MordekaiserPassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "MordekaiserQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.75,
+        6.5,
+        5.25,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              " \u2212 139 "
+            ],
+            "Damage Increase:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Damage Increase:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              "ased on level) (+ 75 ",
+              95,
+              115,
+              135,
+              "155) (+\u00a060"
+            ],
+            "Damage Increase:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "MordekaiserW",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield to Healing:": [
+              5,
+              37.5,
+              40,
+              42.5,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Shield to Healing:": 0
+          },
+          "ratioAp": {
+            "Shield to Healing:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "MordekaiserE",
-      "cd": [],
+      "cd": [
+        8,
+        16,
+        14,
+        12,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Penetration:": [
+              " ",
+              7.5,
+              10,
+              12.5,
+              15
+            ],
+            "Magic Damage:": [
+              0,
+              95,
+              110,
+              125,
+              140
+            ]
+          },
+          "ratioAd": {
+            "Magic Penetration:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Penetration:": 0,
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "MordekaiserR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

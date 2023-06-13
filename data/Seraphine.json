@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 570,
-    "hpLvl": 104,
-    "AD": 55,
-    "ADLvl": 3,
+    "Hp": 570.0,
+    "hpLvl": 104.0,
+    "AD": 55.0,
+    "ADLvl": 3.0,
     "AS": 0.6690000295639038,
     "ASRatio": 0.625,
-    "Armor": 19,
+    "Armor": 19.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 440,
-    "ManaLvl": 40,
+    "Mana": 440.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,160 @@
   },
   "spell": {
     "Passive": {
-      "img": "Seraphine_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SeraphineQ",
-      "cd": [],
+      "cd": [
+        0,
+        8.75,
+        7.5,
+        6.25,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              70,
+              85,
+              100,
+              115
+            ],
+            "Increased Damage:": [
+              2.5,
+              105,
+              127.5,
+              150,
+              172.5
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Increased Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "Increased Damage:": [
+              67.5,
+              75,
+              82.5,
+              90,
+              97.5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SeraphineW",
-      "cd": [],
+      "cd": [
+        8,
+        26,
+        24,
+        22,
+        20
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              70,
+              90,
+              110,
+              130
+            ],
+            "Heal Per Ally:": [
+              " ",
+              5.5,
+              6,
+              6.5,
+              7
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Heal Per Ally:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              25
+            ],
+            "Heal Per Ally:": [
+              0.4
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SeraphineE",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SeraphineR",
-      "cd": [],
+      "cd": [
+        60,
+        130,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              200,
+              250
+            ],
+            "Disable Duration:": [
+              0.25,
+              1.5,
+              1.75
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Disable Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Disable Duration:": 0
+          }
         }
       ],
       "bonus": {}

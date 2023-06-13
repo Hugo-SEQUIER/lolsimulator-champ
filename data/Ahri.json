@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 96,
-    "AD": 53,
-    "ADLvl": 3,
+    "Hp": 590.0,
+    "hpLvl": 96.0,
+    "AD": 53.0,
+    "ADLvl": 3.0,
     "AS": 0.6679999828338623,
     "ASRatio": 0.6679999828338623,
-    "Armor": 21,
+    "Armor": 21.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.5,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 418,
-    "ManaLvl": 25,
+    "Mana": 418.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,172 @@
   },
   "spell": {
     "Passive": {
-      "img": "Ahri_SoulEater2",
-      "cd": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "AhriQ",
-      "cd": [55,65,75,85,95],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Damage Per Pass:": [
+              0,
+              65,
+              90,
+              115,
+              140
+            ],
+            "Total Mixed Damage:": [
+              0,
+              130,
+              180,
+              230,
+              280
+            ]
+          },
+          "ratioAd": {
+            "Damage Per Pass:": 0,
+            "Total Mixed Damage:": 0
+          },
+          "ratioAp": {
+            "Damage Per Pass:": [
+              45
+            ],
+            "Total Mixed Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "AhriW",
-      "cd": [],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ],
+            "Increased Minion Damage:": [
+              0,
+              150,
+              200,
+              250,
+              300
+            ],
+            "Additional Magic Damage:": [
+              5,
+              22.5,
+              30,
+              37.5,
+              45
+            ],
+            "Total Single Target Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Increased Minion Damage:": 0,
+            "Additional Magic Damage:": 0,
+            "Total Single Target Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              30
+            ],
+            "Increased Minion Damage:": [
+              60
+            ],
+            "Additional Magic Damage:": [
+              9
+            ],
+            "Total Single Target Damage:": [
+              48
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AhriE",
-      "cd": [],
+      "cd": [
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ],
+            "Disable Duration:": [
+              0.2,
+              1.4,
+              1.6,
+              1.8,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Disable Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Disable Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AhriR",
-      "cd": [],
+      "cd": [
+        30,
+        105,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              120
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 685,
-    "hpLvl": 94,
-    "AD": 53,
+    "Hp": 685.0,
+    "hpLvl": 94.0,
+    "AD": 53.0,
     "ADLvl": 3.799999952316284,
     "AS": 0.7360000014305115,
     "ASRatio": 0.6380000114440918,
-    "Armor": 30,
-    "ArmorLvl": 4,
-    "MR": 32,
+    "Armor": 30.0,
+    "ArmorLvl": 4.0,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 285,
-    "ManaLvl": 40,
+    "Mana": 285.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,128 @@
   },
   "spell": {
     "Passive": {
-      "img": "Amumu_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "BandageToss",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              95,
+              120,
+              145,
+              170
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              85
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "AuraofDespair",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              " "
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              0.5,
+              0.625,
+              0.75,
+              0.875,
+              1
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "Tantrum",
-      "cd": [],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Reduction:": [
+              " ",
+              7,
+              9,
+              11,
+              13
+            ],
+            "Magic Damage:": [
+              5,
+              100,
+              135,
+              170,
+              205
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Reduction:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Physical Damage Reduction:": 0,
+            "Magic Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "CurseoftheSadMummy",
-      "cd": [],
+      "cd": [
+        50,
+        125,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              300,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}

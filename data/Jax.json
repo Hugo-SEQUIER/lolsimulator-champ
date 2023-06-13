@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 665,
-    "hpLvl": 100,
-    "AD": 68,
+    "Hp": 665.0,
+    "hpLvl": 100.0,
+    "AD": 68.0,
     "ADLvl": 4.25,
     "AS": 0.6380000114440918,
     "ASRatio": 0.6380000114440918,
-    "Armor": 36,
+    "Armor": 36.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 350,
+    "MS": 350.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 339,
-    "ManaLvl": 52,
+    "Mana": 339.0,
+    "ManaLvl": 52.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,183 @@
   },
   "spell": {
     "Passive": {
-      "img": "Armsmaster_MasterOfArms",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "JaxLeapStrike",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              105,
+              145,
+              185,
+              225
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "JaxEmpowerTwo",
-      "cd": [],
+      "cd": [
+        " ",
+        6,
+        5,
+        4,
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              0,
+              85,
+              120,
+              155,
+              190
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "JaxCounterStrike",
-      "cd": [],
+      "cd": [
+        4,
+        12.5,
+        11,
+        9.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              5,
+              85,
+              115,
+              145,
+              175
+            ],
+            "Maximum Magic Damage:": [
+              10,
+              170,
+              230,
+              290,
+              350
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              70
+            ],
+            "Maximum Magic Damage:": [
+              140
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "JaxRApexForm",
-      "cd": [],
+      "cd": [
+        0,
+        90,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              0,
+              110,
+              160
+            ],
+            "Magic Damage:": [
+              50,
+              250,
+              350
+            ],
+            "Bonus Armor:": [
+              5,
+              40,
+              65
+            ],
+            "Bonus Magic Resistance:": [
+              " ",
+              24,
+              39
+            ],
+            "Bonus Armor per Champion Hit:": [
+              5,
+              20,
+              25
+            ],
+            "Bonus Magic Resistance per Champion Hit:": [
+              " ",
+              12,
+              15
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0,
+            "Magic Damage:": 0,
+            "Bonus Armor:": [
+              40
+            ],
+            "Bonus Magic Resistance:": [
+              24
+            ],
+            "Bonus Armor per Champion Hit:": [
+              10
+            ],
+            "Bonus Magic Resistance per Champion Hit:": [
+              6
+            ]
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              60
+            ],
+            "Magic Damage:": [
+              100
+            ],
+            "Bonus Armor:": 0,
+            "Bonus Magic Resistance:": 0,
+            "Bonus Armor per Champion Hit:": 0,
+            "Bonus Magic Resistance per Champion Hit:": 0
+          }
         }
       ],
       "bonus": {}

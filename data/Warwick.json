@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 620,
-    "hpLvl": 99,
-    "AD": 65,
-    "ADLvl": 3,
+    "Hp": 620.0,
+    "hpLvl": 99.0,
+    "AD": 65.0,
+    "ADLvl": 3.0,
     "AS": 0.6380000114440918,
     "ASRatio": 0.6380000114440918,
-    "Armor": 33,
+    "Armor": 33.0,
     "ArmorLvl": 4.400000095367432,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.800000011920929,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 280,
-    "ManaLvl": 35,
+    "Mana": 280.0,
+    "ManaLvl": 35.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,170 @@
   },
   "spell": {
     "Passive": {
-      "img": "WarwickP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "WarwickQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              " ",
+              7,
+              8,
+              9,
+              10
+            ],
+            "Maximum Monster Damage:": [
+              0,
+              125,
+              150,
+              175,
+              200
+            ],
+            "Healing Percentage:": [
+              5,
+              37.5,
+              50,
+              62.5,
+              75
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              120
+            ],
+            "Maximum Monster Damage:": [
+              120
+            ],
+            "Healing Percentage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              120
+            ],
+            "Maximum Monster Damage:": [
+              120
+            ],
+            "Healing Percentage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "WarwickW",
-      "cd": [],
+      "cd": [
+        20,
+        105,
+        90,
+        75,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              80,
+              90,
+              100,
+              110
+            ],
+            "Increased Attack Speed:": [
+              75,
+              200,
+              225,
+              250,
+              275
+            ],
+            "Bonus Movement Speed:": [
+              5,
+              40,
+              45,
+              50,
+              55
+            ],
+            "Increased Movement Speed:": [
+              7.5,
+              100,
+              112.5,
+              125,
+              137.5
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Increased Attack Speed:": 0,
+            "Bonus Movement Speed:": 0,
+            "Increased Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Increased Attack Speed:": 0,
+            "Bonus Movement Speed:": 0,
+            "Increased Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "WarwickE",
-      "cd": [],
+      "cd": [
+        5,
+        14,
+        13,
+        12,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Damage Reduction:": [
+              5,
+              40,
+              45,
+              50,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Damage Reduction:": 0
+          },
+          "ratioAp": {
+            "Damage Reduction:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "WarwickR",
-      "cd": [],
+      "cd": [
+        10,
+        90,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              75,
+              350,
+              525
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": [
+              167
+            ]
+          },
+          "ratioAp": {
+            "Total Magic Damage:": 0
+          }
         }
       ],
       "bonus": {}

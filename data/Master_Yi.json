@@ -1,0 +1,276 @@
+{
+  "basicStats": {
+    "Hp": 669.0,
+    "hpLvl": 100.0,
+    "AD": 65.0,
+    "ADLvl": 2.200000047683716,
+    "AS": 0.6790000200271606,
+    "ASRatio": 0.6790000200271606,
+    "Armor": 33.0,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 355.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 251.0,
+    "ManaLvl": 42.0,
+    "AP": 0,
+    "Range": 175.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.4500000476837158,
+    "ManaRegenLvl": 0.09000000357627869
+  },
+  "img": {
+    "centered": "Master_Yi_0",
+    "passive": "MasterYi_Passive1",
+    "QSpell": "AlphaStrike",
+    "WSpell": "Meditate",
+    "ESpell": "WujuStyle",
+    "RSpell": "Highlander"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        0,
+        19.5,
+        19,
+        18.5,
+        18
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              0,
+              60,
+              90,
+              120,
+              150
+            ],
+            "Reduced Damage per hit:": [
+              0.5,
+              15,
+              22.5,
+              30,
+              37.5
+            ],
+            "Maximum Single-Target Damage:": [
+              2.5,
+              105,
+              157.5,
+              210,
+              262.5
+            ],
+            "Monster Bonus Damage:": [
+              5,
+              100,
+              125,
+              150,
+              175
+            ],
+            "Monster Total Damage:": [
+              5,
+              160,
+              215,
+              270,
+              325
+            ],
+            "Reduced Monster Damage per hit:": [
+              6.25,
+              40,
+              53.75,
+              67.5,
+              81.25
+            ],
+            "Max Monster Single-Target Damage:": [
+              83.75,
+              280,
+              376.25,
+              472.5,
+              568.75
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ],
+            "Reduced Damage per hit:": [
+              12.5
+            ],
+            "Maximum Single-Target Damage:": [
+              87.5
+            ],
+            "Monster Bonus Damage:": 0,
+            "Monster Total Damage:": [
+              50
+            ],
+            "Reduced Monster Damage per hit:": [
+              12.5
+            ],
+            "Max Monster Single-Target Damage:": [
+              87.5
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Reduced Damage per hit:": 0,
+            "Maximum Single-Target Damage:": 0,
+            "Monster Bonus Damage:": 0,
+            "Monster Total Damage:": 0,
+            "Reduced Monster Damage per hit:": 0,
+            "Max Monster Single-Target Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Minimum Heal Per Tick:": [
+              5,
+              25,
+              35,
+              45,
+              55
+            ],
+            "Maximum Heal Per Tick:": [
+              0,
+              50,
+              70,
+              90,
+              110
+            ],
+            "Minimum Total Heal:": [
+              20,
+              200,
+              280,
+              360,
+              440
+            ],
+            "Maximum Total Heal:": [
+              40,
+              400,
+              560,
+              720,
+              880
+            ],
+            "Damage Reduction:": [
+              5,
+              47.5,
+              50,
+              52.5,
+              55
+            ],
+            "Turret Damage Reduction:": [
+              2.5,
+              23.75,
+              25,
+              26.25,
+              27.5
+            ]
+          },
+          "ratioAd": {
+            "Minimum Heal Per Tick:": 0,
+            "Maximum Heal Per Tick:": 0,
+            "Minimum Total Heal:": 0,
+            "Maximum Total Heal:": 0,
+            "Damage Reduction:": 0,
+            "Turret Damage Reduction:": 0
+          },
+          "ratioAp": {
+            "Minimum Heal Per Tick:": [
+              12.5
+            ],
+            "Maximum Heal Per Tick:": [
+              25
+            ],
+            "Minimum Total Heal:": [
+              100
+            ],
+            "Maximum Total Heal:": [
+              200
+            ],
+            "Damage Reduction:": 0,
+            "Turret Damage Reduction:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        8
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus True Damage:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Bonus True Damage:": [
+              30
+            ]
+          },
+          "ratioAp": {
+            "Bonus True Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        5
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Attack Speed:": [
+              5,
+              35,
+              45
+            ],
+            "Bonus Movement Speed:": [
+              5,
+              45,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

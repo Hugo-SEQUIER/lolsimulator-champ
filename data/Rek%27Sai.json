@@ -1,0 +1,168 @@
+{
+  "basicStats": {
+    "Hp": 640.0,
+    "hpLvl": 99.0,
+    "AD": 61.0,
+    "ADLvl": 3.0,
+    "AS": 0.6669999957084656,
+    "ASRatio": 0.6669999957084656,
+    "Armor": 36.0,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 32.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 335.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": null,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 175.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 0.0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Rek%27Sai_0",
+    "passive": "RekSai_Passive",
+    "QSpell": "RekSaiQ",
+    "WSpell": "RekSaiW",
+    "ESpell": "RekSaiE",
+    "RSpell": "RekSaiRWrapper"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        " ",
+        3.5,
+        3,
+        2.5,
+        2
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Physical Damage:": [
+              1,
+              27,
+              33,
+              39,
+              45
+            ],
+            "Total Bonus Physical Damage:": [
+              3,
+              81,
+              99,
+              117,
+              135
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              50
+            ],
+            "Total Bonus Physical Damage:": [
+              150
+            ]
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Total Bonus Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        2
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              5,
+              60,
+              65,
+              70,
+              75
+            ],
+            "True Damage:": [
+              10,
+              120,
+              130,
+              140,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              85
+            ],
+            "True Damage:": [
+              170
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "True Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        0,
+        90,
+        80
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              0,
+              250,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              175,
+              25,
+              30
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

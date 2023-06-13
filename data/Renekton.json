@@ -1,29 +1,30 @@
 {
   "basicStats": {
-    "Hp": 660,
-    "hpLvl": 111,
-    "AD": 69,
+    "Hp": 660.0,
+    "hpLvl": 111.0,
+    "AD": 69.0,
     "ADLvl": 4.150000095367432,
     "AS": 0.6650000214576721,
     "ASRatio": 0.6650000214576721,
-    "Armor": 35,
+    "Armor": 35.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.15000000596046448,
+    "Mana": null,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -36,56 +37,269 @@
   },
   "spell": {
     "Passive": {
-      "img": "Renekton_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RenektonCleave",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ],
+            "Enhanced Damage:": [
+              0,
+              135,
+              180,
+              225,
+              270
+            ],
+            "Healing Cap:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ],
+            "Enhanced Healing Cap:": [
+              0,
+              300,
+              400,
+              500,
+              600
+            ],
+            "Non-Champion Healing:": [
+              " ",
+              3,
+              4,
+              5,
+              6
+            ],
+            "Enhanced Non-Champion Healing:": [
+              " ",
+              9,
+              12,
+              15,
+              18
+            ],
+            "Champion Healing:": [
+              2,
+              18,
+              24,
+              30,
+              36
+            ],
+            "Enhanced Champion Healing:": [
+              6,
+              54,
+              72,
+              90,
+              108
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ],
+            "Enhanced Damage:": [
+              140
+            ],
+            "Healing Cap:": 0,
+            "Enhanced Healing Cap:": 0,
+            "Non-Champion Healing:": [
+              2
+            ],
+            "Enhanced Non-Champion Healing:": [
+              6
+            ],
+            "Champion Healing:": [
+              15
+            ],
+            "Enhanced Champion Healing:": [
+              45
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Enhanced Damage:": 0,
+            "Healing Cap:": 0,
+            "Enhanced Healing Cap:": 0,
+            "Non-Champion Healing:": 0,
+            "Enhanced Non-Champion Healing:": 0,
+            "Champion Healing:": 0,
+            "Enhanced Champion Healing:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RenektonPreExecute",
-      "cd": [],
+      "cd": [
+        6,
+        14,
+        12,
+        10,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Physical Damage:": [
+              5,
+              60,
+              105,
+              150,
+              195
+            ],
+            "Physical Damage Per Hit:": [
+              " ",
+              15,
+              25,
+              35,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Total Physical Damage:": [
+              225
+            ],
+            "Physical Damage Per Hit:": [
+              75
+            ]
+          },
+          "ratioAp": {
+            "Total Physical Damage:": 0,
+            "Physical Damage Per Hit:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RenektonSliceAndDice",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              70,
+              100,
+              130,
+              160
+            ],
+            "Total Physical Damage:": [
+              10,
+              185,
+              260,
+              335,
+              410
+            ],
+            "Bonus Physical Damage:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ],
+            "Total Bonus Damage:": [
+              0,
+              115,
+              160,
+              205,
+              250
+            ],
+            "Armor Reduction:": [
+              5,
+              27.5,
+              30,
+              32.5,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              90
+            ],
+            "Total Physical Damage:": [
+              225
+            ],
+            "Bonus Physical Damage:": [
+              45
+            ],
+            "Total Bonus Damage:": [
+              135
+            ],
+            "Armor Reduction:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0,
+            "Bonus Physical Damage:": 0,
+            "Total Bonus Damage:": 0,
+            "Armor Reduction:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RenektonReignOfTheTyrant",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Health:": [
+              50,
+              400,
+              550
+            ],
+            "Magic Damage Per Tick:": [
+              0,
+              60,
+              90
+            ],
+            "Total Magic Damage:": [
+              0,
+              1800,
+              2700
+            ]
+          },
+          "ratioAd": {
+            "Bonus Health:": 0,
+            "Magic Damage Per Tick:": [
+              5
+            ],
+            "Total Magic Damage:": [
+              150
+            ]
+          },
+          "ratioAp": {
+            "Bonus Health:": 0,
+            "Magic Damage Per Tick:": [
+              5
+            ],
+            "Total Magic Damage:": [
+              150
+            ]
+          }
         }
       ],
       "bonus": {}

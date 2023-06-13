@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 124,
-    "AD": 65,
-    "ADLvl": 4,
+    "Hp": 590.0,
+    "hpLvl": 124.0,
+    "AD": 65.0,
+    "ADLvl": 4.0,
     "AS": 0.656000018119812,
     "ASRatio": 0.656000018119812,
-    "Armor": 36,
+    "Armor": 36.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 350,
-    "ManaLvl": 50,
+    "Mana": 350.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 200,
+    "Range": 200.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,158 @@
   },
   "spell": {
     "Passive": {
-      "img": "Irelia_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "IreliaQ",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              25,
+              45,
+              65,
+              85
+            ],
+            "Heal:": [
+              " ",
+              10,
+              11,
+              12,
+              13
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              60
+            ],
+            "Heal:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Heal:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "IreliaW",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              0,
+              25,
+              40,
+              55,
+              70
+            ],
+            "Maximum Physical Damage:": [
+              0,
+              75,
+              120,
+              165,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              40
+            ],
+            "Maximum Physical Damage:": [
+              120
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": [
+              40
+            ],
+            "Maximum Physical Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "IreliaE",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "IreliaR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Flat Cooldown Reduction:": [
+              0.5,
+              1.5,
+              2.5
+            ],
+            "Magic Damage:": [
+              25,
+              250,
+              375
+            ]
+          },
+          "ratioAd": {
+            "Flat Cooldown Reduction:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Flat Cooldown Reduction:": 0,
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}

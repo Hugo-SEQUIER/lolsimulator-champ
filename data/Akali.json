@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 570,
-    "hpLvl": 119,
-    "AD": 62,
+    "Hp": 570.0,
+    "hpLvl": 119.0,
+    "AD": 62.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 23,
+    "Armor": 23.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 37,
+    "MR": 37.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.18000000715255737,
-    "Mana": 200,
+    "Mana": 200.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 10,
+    "ManaRegen": 10.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,163 @@
   },
   "spell": {
     "Passive": {
-      "img": "Akali_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "AkaliQ",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              65,
+              90,
+              115,
+              140
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              65
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              65
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "AkaliW",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Shroud Duration:": [
+              " ",
+              5.5,
+              6,
+              6.5,
+              7
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Shroud Duration:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0,
+            "Shroud Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AkaliE",
-      "cd": [],
+      "cd": [
+        6,
+        14.5,
+        13,
+        11.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              131.25,
+              192.5,
+              253.75,
+              315
+            ],
+            "Total Magic Damage:": [
+              0,
+              187.5,
+              275,
+              362.5,
+              450
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              59.5
+            ],
+            "Total Magic Damage:": [
+              85
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              59.5
+            ],
+            "Total Magic Damage:": [
+              85
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AkaliR",
-      "cd": [],
+      "cd": [
+        0,
+        80,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              220,
+              360
+            ],
+            "Minimum Magic Damage:": [
+              0,
+              130,
+              200
+            ],
+            "Maximum Magic Damage:": [
+              80,
+              390,
+              600
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              50
+            ],
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Minimum Magic Damage:": [
+              30
+            ],
+            "Maximum Magic Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}

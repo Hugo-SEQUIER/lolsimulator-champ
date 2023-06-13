@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 672,
-    "hpLvl": 108,
-    "AD": 58,
+    "Hp": 672.0,
+    "hpLvl": 108.0,
+    "AD": 58.0,
     "ADLvl": 3.200000047683716,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 28,
+    "Armor": 28.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.5,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 0,
+    "Mana": 0.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,157 @@
   },
   "spell": {
     "Passive": {
-      "img": "Katarina_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KatarinaQ",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KatarinaW",
-      "cd": [],
+      "cd": [
+        5,
+        14,
+        13,
+        12,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement speed:": [
+              0,
+              60,
+              70,
+              80,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KatarinaEWrapper",
-      "cd": [],
+      "cd": [
+        4,
+        12.5,
+        11,
+        9.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              35,
+              50,
+              65,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              40
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KatarinaR",
-      "cd": [],
+      "cd": [
+        0,
+        60,
+        45
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Dagger:": [
+              6
+            ],
+            "Maximum Physical Damage:": [
+              40
+            ],
+            "Magic Damage Per Dagger:": [
+              5,
+              37.5,
+              50
+            ],
+            "Maximum Magic Damage:": [
+              75,
+              562.5,
+              750
+            ],
+            "On-Attack/On-Hit Effectiveness:": [
+              0,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Dagger:": [
+              50
+            ],
+            "Maximum Physical Damage:": [
+              750
+            ],
+            "Magic Damage Per Dagger:": 0,
+            "Maximum Magic Damage:": 0,
+            "On-Attack/On-Hit Effectiveness:": 0
+          },
+          "ratioAp": {
+            "Physical Damage Per Dagger:": 0,
+            "Maximum Physical Damage:": 0,
+            "Magic Damage Per Dagger:": [
+              19
+            ],
+            "Maximum Magic Damage:": [
+              285
+            ],
+            "On-Attack/On-Hit Effectiveness:": 0
+          }
         }
       ],
       "bonus": {}

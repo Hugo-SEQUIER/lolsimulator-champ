@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 574,
-    "hpLvl": 93,
-    "AD": 53,
+    "Hp": 574.0,
+    "hpLvl": 93.0,
+    "AD": 53.0,
     "ADLvl": 3.200000047683716,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 418,
-    "ManaLvl": 25,
+    "Mana": 418.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 575,
+    "Range": 575.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,118 @@
   },
   "spell": {
     "Passive": {
-      "img": "ZyraP",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        "9 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ZyraQ",
-      "cd": [],
+      "cd": [
+        " ",
+        6.5,
+        6,
+        5.5,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              95,
+              130,
+              165,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ZyraW",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ZyraE",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              150,
+              195,
+              240
+            ],
+            "Root Duration:": [
+              " ",
+              1.25,
+              1.5,
+              1.75,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Root Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ZyraR",
-      "cd": [],
+      "cd": [
+        10,
+        100,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              80,
+              265,
+              350
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}

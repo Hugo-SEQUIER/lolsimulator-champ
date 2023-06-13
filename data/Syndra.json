@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 563,
-    "hpLvl": 104,
-    "AD": 54,
+    "Hp": 563.0,
+    "hpLvl": 104.0,
+    "AD": 54.0,
     "ADLvl": 2.9000000953674316,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 25,
+    "Armor": 25.0,
     "ArmorLvl": 4.599999904632568,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 480,
-    "ManaLvl": 40,
+    "Mana": 480.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,153 @@
   },
   "spell": {
     "Passive": {
-      "img": "SyndraPassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SyndraQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              140,
+              175,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SyndraW",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ],
+            "Slow:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SyndraE",
-      "cd": [],
+      "cd": [
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              115,
+              155,
+              195,
+              235
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SyndraR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Ability Haste:": [
+              0,
+              20,
+              30
+            ],
+            "Magic Damage per Sphere:": [
+              0,
+              130,
+              170
+            ],
+            "Minimum Magic Damage:": [
+              70,
+              390,
+              510
+            ],
+            "Maximum Magic Damage:": [
+              30,
+              910,
+              1190
+            ]
+          },
+          "ratioAd": {
+            "Ability Haste:": 0,
+            "Magic Damage per Sphere:": 0,
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Ability Haste:": 0,
+            "Magic Damage per Sphere:": [
+              17
+            ],
+            "Minimum Magic Damage:": [
+              51
+            ],
+            "Maximum Magic Damage:": [
+              119
+            ]
+          }
         }
       ],
       "bonus": {}

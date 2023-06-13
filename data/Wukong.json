@@ -1,0 +1,220 @@
+{
+  "basicStats": {
+    "Hp": 610.0,
+    "hpLvl": 99.0,
+    "AD": 66.0,
+    "ADLvl": 3.5,
+    "AS": 0.6899999976158142,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 31.0,
+    "ArmorLvl": 4.699999809265137,
+    "MR": 28.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 340.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.699999988079071,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 300.0,
+    "ManaLvl": 65.0,
+    "AP": 0,
+    "Range": 175.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.12999999523162842
+  },
+  "img": {
+    "centered": "Wukong_0",
+    "passive": "MonkeyKingStoneSkin",
+    "QSpell": "MonkeyKingDoubleAttack",
+    "WSpell": "MonkeyKingDecoy",
+    "ESpell": "MonkeyKingNimbus",
+    "RSpell": "MonkeyKingSpinToWin"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Range:": [
+              5,
+              100,
+              125,
+              150,
+              175
+            ],
+            "Bonus Physical Damage:": [
+              0,
+              45,
+              70,
+              95,
+              120
+            ],
+            "Armor Reduction:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "ratioAd": {
+            "Bonus Range:": 0,
+            "Bonus Physical Damage:": [
+              45
+            ],
+            "Armor Reduction:": 0
+          },
+          "ratioAp": {
+            "Bonus Range:": 0,
+            "Bonus Physical Damage:": 0,
+            "Armor Reduction:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        2,
+        20,
+        18,
+        16,
+        14
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Clone Outgoing Damage:": [
+              5,
+              40,
+              45,
+              50,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Clone Outgoing Damage:": 0
+          },
+          "ratioAp": {
+            "Clone Outgoing Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ],
+            "Monster Damage:": [
+              6,
+              132,
+              168,
+              204,
+              240
+            ],
+            "Bonus Attack Speed:": [
+              5,
+              40,
+              45,
+              50,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Monster Damage:": 0,
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ],
+            "Monster Damage:": [
+              120
+            ],
+            "Bonus Attack Speed:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        30,
+        110,
+        90
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage Per Tick:": [
+              " ",
+              1.5,
+              2
+            ],
+            "Total Physical Damage:": [
+              " ",
+              12,
+              16
+            ],
+            "Maximum Total Physical Damage:": [
+              6,
+              24,
+              32
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Tick:": [
+              34.375
+            ],
+            "Total Physical Damage:": [
+              275
+            ],
+            "Maximum Total Physical Damage:": [
+              550
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Tick:": 0,
+            "Total Physical Damage:": 0,
+            "Maximum Total Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

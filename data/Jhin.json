@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 655,
-    "hpLvl": 107,
-    "AD": 59,
+    "Hp": 655.0,
+    "hpLvl": 107.0,
+    "AD": 59.0,
     "ADLvl": 4.699999809265137,
     "AS": 0.625,
-    "ASRatio": 0,
-    "Armor": 24,
+    "ASRatio": 0.0,
+    "Armor": 24.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.75,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 300,
-    "ManaLvl": 50,
+    "Mana": 300.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,203 @@
   },
   "spell": {
     "Passive": {
-      "img": "Jhin_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "JhinQ",
-      "cd": [],
+      "cd": [
+        " ",
+        6.5,
+        6,
+        5.5,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              5,
+              70,
+              95,
+              120,
+              145
+            ],
+            "Maximum Physical Damage:": [
+              2.25,
+              143.5,
+              194.75,
+              246,
+              297.25
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              35,
+              42.5,
+              50,
+              57.5,
+              65
+            ],
+            "Maximum Physical Damage:": [
+              71.75,
+              87.125,
+              102.5,
+              117.875,
+              133.25
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": [
+              35,
+              42.5,
+              50,
+              57.5,
+              65
+            ],
+            "Maximum Physical Damage:": [
+              71.75,
+              87.125,
+              102.5,
+              117.875,
+              133.25
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "JhinW",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              95,
+              130,
+              165,
+              200
+            ],
+            "Minion Damage:": [
+              5,
+              71.25,
+              97.5,
+              123.75,
+              150
+            ],
+            "Root Duration:": [
+              0.25,
+              1.5,
+              1.75,
+              2,
+              2.25
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ],
+            "Minion Damage:": [
+              37.5
+            ],
+            "Root Duration:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Minion Damage:": 0,
+            "Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "JhinE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              80,
+              140,
+              200,
+              260
+            ],
+            "Reduced Damage:": [
+              3,
+              52,
+              91,
+              130,
+              169
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              120
+            ],
+            "Reduced Damage:": [
+              78
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              120
+            ],
+            "Reduced Damage:": [
+              78
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "JhinR",
-      "cd": [],
+      "cd": [
+        20,
+        105,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              0,
+              125,
+              200
+            ],
+            "Maximum Non-Fourth Shot Physical Damage:": [
+              0,
+              500,
+              800
+            ],
+            "Maximum Fourth Shot Physical Damage:": [
+              70,
+              1175,
+              1880
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              25
+            ],
+            "Maximum Non-Fourth Shot Physical Damage:": [
+              100
+            ],
+            "Maximum Fourth Shot Physical Damage:": [
+              235
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Non-Fourth Shot Physical Damage:": 0,
+            "Maximum Fourth Shot Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

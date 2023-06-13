@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 595,
-    "hpLvl": 88,
-    "AD": 47,
+    "Hp": 595.0,
+    "hpLvl": 88.0,
+    "AD": 47.0,
     "ADLvl": 2.5999999046325684,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 4.900000095367432,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 350,
-    "ManaLvl": 55,
+    "Mana": 350.0,
+    "ManaLvl": 55.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,208 @@
   },
   "spell": {
     "Passive": {
-      "img": "Lulu_PixFaerieCompanion",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "LuluQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              140,
+              175,
+              210
+            ],
+            "Minion Damage:": [
+              9,
+              73.5,
+              98,
+              122.5,
+              147
+            ],
+            "Reduced Damage:": [
+              7.5,
+              26.25,
+              35,
+              43.75,
+              52.5
+            ],
+            "Total Magic Damage:": [
+              7.5,
+              131.25,
+              175,
+              218.75,
+              262.5
+            ],
+            "Reduced Minion Damage:": [
+              2.25,
+              18.375,
+              24.5,
+              30.625,
+              36.75
+            ],
+            "Total Minion Damage:": [
+              1.25,
+              91.875,
+              122.5,
+              153.125,
+              183.75
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Minion Damage:": 0,
+            "Reduced Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Reduced Minion Damage:": 0,
+            "Total Minion Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Minion Damage:": [
+              28
+            ],
+            "Reduced Damage:": [
+              10
+            ],
+            "Total Magic Damage:": [
+              50
+            ],
+            "Reduced Minion Damage:": [
+              7
+            ],
+            "Total Minion Damage:": [
+              35
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "LuluW",
-      "cd": [],
+      "cd": [
+        7,
+        16.5,
+        16,
+        15.5,
+        15
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Disable Duration:": [
+              0.2,
+              1.4,
+              1.6,
+              1.8,
+              2
+            ],
+            "Bonus Attack Speed:": [
+              5,
+              27.5,
+              30,
+              32.5,
+              35
+            ],
+            "Duration:": [
+              " ",
+              3.25,
+              3.5,
+              3.75,
+              4
+            ]
+          },
+          "ratioAd": {
+            "Disable Duration:": 0,
+            "Bonus Attack Speed:": 0,
+            "Duration:": 0
+          },
+          "ratioAp": {
+            "Disable Duration:": 0,
+            "Bonus Attack Speed:": 0,
+            "Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "LuluE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Shield Strength:": [
+              5,
+              110,
+              145,
+              180,
+              215
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Shield Strength:": [
+              55
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "LuluR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Health:": [
+              75,
+              425,
+              575
+            ],
+            "Slow:": [
+              0,
+              45,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Bonus Health:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Bonus Health:": [
+              45
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}

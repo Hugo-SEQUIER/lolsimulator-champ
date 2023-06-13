@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 650,
-    "hpLvl": 99,
-    "AD": 65,
+    "Hp": 650.0,
+    "hpLvl": 99.0,
+    "AD": 65.0,
     "ADLvl": 4.5,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 38,
-    "ArmorLvl": 5,
-    "MR": 32,
+    "Armor": 38.0,
+    "ArmorLvl": 5.0,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 320,
-    "ManaLvl": 60,
+    "Mana": 320.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,187 @@
   },
   "spell": {
     "Passive": {
-      "img": "Skarner_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SkarnerVirulentSlash",
-      "cd": [],
+      "cd": [
+        0.5,
+        3.25,
+        3,
+        2.75,
+        2.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              1.5,
+              2,
+              2.5,
+              3
+            ],
+            "Bonus Magic Damage:": [
+              " ",
+              1.5,
+              2,
+              2.5,
+              3
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              20
+            ],
+            "Bonus Magic Damage:": [
+              20
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Bonus Magic Damage:": [
+              20
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SkarnerExoskeleton",
-      "cd": [],
+      "cd": [
+        3,
+        12.5,
+        12,
+        11.5,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              " ",
+              10,
+              11,
+              12,
+              13
+            ],
+            "Bonus Movement Speed:": [
+              " ",
+              10,
+              12,
+              14,
+              16
+            ],
+            "Increased Bonus Movement Speed:": [
+              6,
+              20,
+              24,
+              28,
+              32
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Bonus Movement Speed:": 0,
+            "Increased Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              80
+            ],
+            "Bonus Movement Speed:": 0,
+            "Increased Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SkarnerFracture",
-      "cd": [],
+      "cd": [
+        4,
+        13.5,
+        13,
+        12.5,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              65,
+              90,
+              115,
+              140
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Bonus Physical Damage:": [
+              0,
+              50,
+              70,
+              90,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0,
+            "Bonus Physical Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              20
+            ],
+            "Slow:": 0,
+            "Bonus Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SkarnerImpale",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              60,
+              100
+            ],
+            "Total Mixed Damage:": [
+              0,
+              120,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Mixed Damage:": [
+              120
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Total Mixed Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}

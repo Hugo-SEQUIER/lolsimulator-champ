@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 574,
-    "hpLvl": 96,
-    "AD": 52,
-    "ADLvl": 3,
+    "Hp": 574.0,
+    "hpLvl": 96.0,
+    "AD": 52.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 24,
-    "ArmorLvl": 5,
-    "MR": 30,
+    "Armor": 24.0,
+    "ArmorLvl": 5.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 452,
-    "ManaLvl": 50,
+    "Mana": 452.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,118 @@
   },
   "spell": {
     "Passive": {
-      "img": "Zilean_Passive",
-      "cd": [],
+      "cd": [
+        20
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ZileanQ",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              115,
+              165,
+              230,
+              300
+            ],
+            "Stun Duration:": [
+              0.1,
+              1.2,
+              1.3,
+              1.4,
+              1.5
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Stun Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Stun Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ZileanW",
-      "cd": [],
+      "cd": [
+        4,
+        12,
+        10,
+        8,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "TimeWarp",
-      "cd": [],
+      "cd": [
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Movement Speed Modifier:": [
+              0,
+              55,
+              70,
+              85,
+              99
+            ]
+          },
+          "ratioAd": {
+            "Movement Speed Modifier:": 0
+          },
+          "ratioAp": {
+            "Movement Speed Modifier:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ChronoShift",
-      "cd": [],
+      "cd": [
+        20,
+        90,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              0,
+              850,
+              1100
+            ]
+          },
+          "ratioAd": {
+            "Heal:": 0
+          },
+          "ratioAp": {
+            "Heal:": [
+              200
+            ]
+          }
         }
       ],
       "bonus": {}

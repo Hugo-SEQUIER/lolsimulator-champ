@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 106,
-    "AD": 58,
+    "Hp": 630.0,
+    "hpLvl": 106.0,
+    "AD": 58.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 21,
+    "Armor": 21.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 425,
-    "ManaLvl": 25,
+    "Mana": 425.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,191 @@
   },
   "spell": {
     "Passive": {
-      "img": "Zoe_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ZoeQ",
-      "cd": [],
+      "cd": [
+        0.5,
+        8,
+        7.5,
+        7,
+        6.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              " \u2212 50 "
+            ],
+            "Maximum Magic Damage:": [
+              "7.5 \u2212 125 "
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              "ased on level) (+ 50 ",
+              80,
+              110,
+              140,
+              "170) (+\u00a060"
+            ],
+            "Maximum Magic Damage:": [
+              "ased on level) (+ 125 ",
+              200,
+              275,
+              350,
+              "425) (+\u00a0150"
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ZoeW",
-      "cd": [],
+      "cd": [
+        0.25
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              40,
+              50,
+              60,
+              70
+            ],
+            "Bonus Movement Speed Duration:": [
+              " ",
+              2.25,
+              2.5,
+              2.75,
+              3
+            ],
+            "Magic Damage Per Bolt:": [
+              5,
+              35,
+              45,
+              55,
+              65
+            ],
+            "Total Magic Damage:": [
+              5,
+              105,
+              135,
+              165,
+              195
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Bonus Movement Speed Duration:": 0,
+            "Magic Damage Per Bolt:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0,
+            "Bonus Movement Speed Duration:": 0,
+            "Magic Damage Per Bolt:": [
+              13.3
+            ],
+            "Total Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ZoeE",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ],
+            "Maximum Slow:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ],
+            "Magic Resistance Reduction:": [
+              0,
+              22.5,
+              25,
+              27.5,
+              30
+            ],
+            "Bonus Damage Cap:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ],
+            "Maximum Mixed Damage:": [
+              40,
+              220,
+              300,
+              380,
+              460
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Maximum Slow:": 0,
+            "Magic Resistance Reduction:": 0,
+            "Bonus Damage Cap:": 0,
+            "Maximum Mixed Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45
+            ],
+            "Maximum Slow:": 0,
+            "Magic Resistance Reduction:": 0,
+            "Bonus Damage Cap:": [
+              45
+            ],
+            "Maximum Mixed Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ZoeR",
-      "cd": [],
+      "cd": [
+        1,
+        8,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

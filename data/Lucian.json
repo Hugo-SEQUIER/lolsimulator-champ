@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 641,
-    "hpLvl": 100,
-    "AD": 60,
+    "Hp": 641.0,
+    "hpLvl": 100.0,
+    "AD": 60.0,
     "ADLvl": 2.9000000953674316,
     "AS": 0.6380000114440918,
     "ASRatio": 0.6380000114440918,
-    "Armor": 28,
+    "Armor": 28.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.75,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 320,
-    "ManaLvl": 43,
+    "Mana": 320.0,
+    "ManaLvl": 43.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,191 @@
   },
   "spell": {
     "Passive": {
-      "img": "Lucian_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "LucianQ",
-      "cd": [],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              125,
+              155,
+              185,
+              215
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              60,
+              75,
+              90,
+              105,
+              120
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "LucianW",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              110,
+              145,
+              180,
+              215
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              65,
+              70,
+              75,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "LucianE",
-      "cd": [],
+      "cd": [
+        2,
+        20,
+        18,
+        16,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "LucianR",
-      "cd": [],
+      "cd": [
+        10,
+        100,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Shot:": [
+              5,
+              30,
+              45
+            ],
+            "Additional Damage per 20% Crit Chance:": [
+              5,
+              150,
+              225
+            ],
+            "Total Physical Damage:": [
+              30,
+              660,
+              990
+            ],
+            "Minion Damage Per Shot:": [
+              0,
+              60,
+              90
+            ],
+            "Additional Minion Damage per 20% Crit Chance:": [
+              50,
+              300,
+              450
+            ],
+            "Total Minion Damage:": [
+              60,
+              1320,
+              1980
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Shot:": [
+              25
+            ],
+            "Additional Damage per 20% Crit Chance:": [
+              125
+            ],
+            "Total Physical Damage:": [
+              550,
+              30,
+              "45 (+\u00a025"
+            ],
+            "Minion Damage Per Shot:": [
+              50
+            ],
+            "Additional Minion Damage per 20% Crit Chance:": [
+              250
+            ],
+            "Total Minion Damage:": [
+              1100,
+              60,
+              "90 (+\u00a050"
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Shot:": [
+              25
+            ],
+            "Additional Damage per 20% Crit Chance:": [
+              125
+            ],
+            "Total Physical Damage:": [
+              550,
+              30,
+              "45 (+\u00a025"
+            ],
+            "Minion Damage Per Shot:": [
+              50
+            ],
+            "Additional Minion Damage per 20% Crit Chance:": [
+              250
+            ],
+            "Total Minion Damage:": [
+              1100,
+              60,
+              "90 (+\u00a050"
+            ]
+          }
         }
       ],
       "bonus": {}

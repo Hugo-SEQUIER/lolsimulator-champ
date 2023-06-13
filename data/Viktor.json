@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 104,
-    "AD": 53,
-    "ADLvl": 3,
+    "Hp": 600.0,
+    "hpLvl": 104.0,
+    "AD": 53.0,
+    "ADLvl": 3.0,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 23,
+    "Armor": 23.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 405,
-    "ManaLvl": 45,
+    "Mana": 405.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,180 @@
   },
   "spell": {
     "Passive": {
-      "img": "Viktor_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ViktorPowerTransfer",
-      "cd": [],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              75,
+              90,
+              105,
+              120
+            ],
+            "Modified Magic Damage:": [
+              0,
+              45,
+              70,
+              95,
+              120
+            ],
+            "Total Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Modified Magic Damage:": [
+              100
+            ],
+            "Total Magic Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Modified Magic Damage:": [
+              100
+            ],
+            "Total Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ViktorGravitonField",
-      "cd": [],
+      "cd": [
+        7,
+        16,
+        15,
+        14,
+        13
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Slow:": [
+              0,
+              34,
+              38,
+              42,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ViktorDeathRay",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              50,
+              80,
+              110,
+              140
+            ],
+            "Total Magic Damage:": [
+              0,
+              160,
+              230,
+              300,
+              370
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ],
+            "Total Magic Damage:": [
+              130
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ViktorChaosStorm",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              175,
+              250
+            ],
+            "Magic Damage Per Tick:": [
+              5,
+              105,
+              145
+            ],
+            "Total Magic Damage:": [
+              90,
+              805,
+              1120
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Magic Damage Per Tick:": [
+              45
+            ],
+            "Total Magic Damage:": [
+              320
+            ]
+          }
         }
       ],
       "bonus": {}

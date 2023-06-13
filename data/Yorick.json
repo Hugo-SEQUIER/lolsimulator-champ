@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 650,
-    "hpLvl": 114,
-    "AD": 62,
-    "ADLvl": 5,
+    "Hp": 650.0,
+    "hpLvl": 114.0,
+    "AD": 62.0,
+    "ADLvl": 5.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 39,
+    "Armor": 39.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.1599999964237213,
-    "Mana": 300,
-    "ManaLvl": 60,
+    "Mana": 300.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,123 @@
   },
   "spell": {
     "Passive": {
-      "img": "Yorick_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "YorickQ",
-      "cd": [],
+      "cd": [
+        " ",
+        6.25,
+        5.5,
+        4.75,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              55,
+              80,
+              105,
+              130
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              40
+            ]
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "YorickW",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Wall Health:": [
+              " ",
+              2,
+              3,
+              3,
+              4
+            ]
+          },
+          "ratioAd": {
+            "Wall Health:": 0
+          },
+          "ratioAp": {
+            "Wall Health:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "YorickE",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              0,
+              105,
+              140,
+              175,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "YorickR",
-      "cd": [],
+      "cd": [
+        60,
+        130,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Mist Walkers:": [
+              " ",
+              3,
+              4
+            ]
+          },
+          "ratioAd": {
+            "Mist Walkers:": 0
+          },
+          "ratioAp": {
+            "Mist Walkers:": 0
+          }
         }
       ],
       "bonus": {}

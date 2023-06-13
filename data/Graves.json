@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 625,
-    "hpLvl": 106,
-    "AD": 68,
-    "ADLvl": 4,
+    "Hp": 625.0,
+    "hpLvl": 106.0,
+    "AD": 68.0,
+    "ADLvl": 4.0,
     "AS": 0.4749999940395355,
     "ASRatio": 0.49000000953674316,
-    "Armor": 33,
+    "Armor": 33.0,
     "ArmorLvl": 4.599999904632568,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 325,
-    "ManaLvl": 40,
+    "Mana": 325.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 425,
+    "Range": 425.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,162 @@
   },
   "spell": {
     "Passive": {
-      "img": "GravesTrueGrit",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "GravesQLineSpell",
-      "cd": [],
+      "cd": [
+        3,
+        11.5,
+        10,
+        8.5,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              120,
+              155,
+              190,
+              225
+            ],
+            "Total Physical Damage:": [
+              30,
+              180,
+              230,
+              280,
+              330
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              40,
+              70,
+              100,
+              130,
+              160
+            ],
+            "Total Physical Damage:": [
+              120,
+              150,
+              180,
+              210,
+              240
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "GravesSmokeGrenade",
-      "cd": [],
+      "cd": [
+        6,
+        24,
+        22,
+        20,
+        18
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              160,
+              210,
+              260
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "GravesMove",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Armor:": [
+              " ",
+              7,
+              10,
+              13,
+              16
+            ],
+            "Maximum Bonus Armor:": [
+              2,
+              56,
+              80,
+              104,
+              128
+            ]
+          },
+          "ratioAd": {
+            "Bonus Armor:": 0,
+            "Maximum Bonus Armor:": 0
+          },
+          "ratioAp": {
+            "Bonus Armor:": 0,
+            "Maximum Bonus Armor:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "GravesChargeShot",
-      "cd": [],
+      "cd": [
+        0,
+        80,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              75,
+              425,
+              575
+            ],
+            "Reduced Damage:": [
+              20,
+              340,
+              460
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              150
+            ],
+            "Reduced Damage:": [
+              120
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Reduced Damage:": 0
+          }
         }
       ],
       "bonus": {}

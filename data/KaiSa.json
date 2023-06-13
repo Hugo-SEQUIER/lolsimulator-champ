@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 670,
-    "hpLvl": 102,
-    "AD": 59,
-    "ADLvl": 2,
+    "Hp": 670.0,
+    "hpLvl": 102.0,
+    "AD": 59.0,
+    "ADLvl": 2.0,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 28,
+    "Armor": 28.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.699999988079071,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 345,
-    "ManaLvl": 40,
+    "Mana": 345.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -28,7 +28,7 @@
     "ManaRegenLvl": 0.14000000059604645
   },
   "img": {
-    "centered": "KaiSa_0",
+    "centered": "Kaisa_0",
     "passive": "Kaisa_Passive",
     "QSpell": "KaisaQ",
     "WSpell": "KaisaW",
@@ -37,56 +37,192 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kaisa_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KaisaQ",
-      "cd": [],
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Missile:": [
+              0,
+              55,
+              70,
+              85,
+              100
+            ],
+            "Reduced Damage Per Missile:": [
+              0,
+              13.75,
+              17.5,
+              21.25,
+              25
+            ],
+            "Total Single-Target Damage:": [
+              0,
+              123.75,
+              157.5,
+              191.25,
+              225
+            ],
+            "Total Evolved Single-Target Damage:": [
+              50,
+              206.25,
+              262.5,
+              318.75,
+              375
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Missile:": [
+              50
+            ],
+            "Reduced Damage Per Missile:": [
+              12.5
+            ],
+            "Total Single-Target Damage:": [
+              112.5
+            ],
+            "Total Evolved Single-Target Damage:": [
+              187.5
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Missile:": [
+              50
+            ],
+            "Reduced Damage Per Missile:": [
+              12.5
+            ],
+            "Total Single-Target Damage:": [
+              112.5
+            ],
+            "Total Evolved Single-Target Damage:": [
+              187.5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KaisaW",
-      "cd": [],
+      "cd": [
+        2,
+        20,
+        18,
+        16,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              55,
+              80,
+              105,
+              130
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              130
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              130
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KaisaE",
-      "cd": [],
+      "cd": [
+        6,
+        14.5,
+        13,
+        11.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Movement Speed:": [
+              5,
+              60,
+              65,
+              70,
+              75
+            ],
+            "Maximum Movement Speed:": [
+              10,
+              120,
+              130,
+              140,
+              150
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              50,
+              60,
+              70,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Minimum Movement Speed:": 0,
+            "Maximum Movement Speed:": 0,
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Minimum Movement Speed:": 0,
+            "Maximum Movement Speed:": 0,
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KaisaR",
-      "cd": [],
+      "cd": [
+        30,
+        100,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              90,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": [
+              90,
+              135,
+              180
+            ]
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              90,
+              135,
+              180
+            ]
+          }
         }
       ],
       "bonus": {}

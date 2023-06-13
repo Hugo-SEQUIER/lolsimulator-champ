@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 550,
-    "hpLvl": 91,
-    "AD": 49,
-    "ADLvl": 3,
+    "Hp": 550.0,
+    "hpLvl": 91.0,
+    "AD": 49.0,
+    "ADLvl": 3.0,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 340,
-    "ManaLvl": 45,
+    "Mana": 340.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,146 @@
   },
   "spell": {
     "Passive": {
-      "img": "Sona_Passive_Charged",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SonaQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              80,
+              110,
+              140,
+              170
+            ],
+            "Bonus Magic Damage:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Bonus Magic Damage:": [
+              20
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SonaW",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ],
+            "Shield Strength:": [
+              5,
+              45,
+              65,
+              85,
+              105
+            ],
+            "Minimum Damage Mitigated:": [
+              5,
+              45,
+              65,
+              85,
+              105
+            ]
+          },
+          "ratioAd": {
+            "Heal:": 0,
+            "Shield Strength:": 0,
+            "Minimum Damage Mitigated:": 0
+          },
+          "ratioAp": {
+            "Heal:": [
+              15
+            ],
+            "Shield Strength:": [
+              25
+            ],
+            "Minimum Damage Mitigated:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SonaE",
-      "cd": [],
+      "cd": [
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": [
+              2
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SonaR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              250,
+              350
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}

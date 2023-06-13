@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 655,
-    "hpLvl": 99,
-    "AD": 58,
-    "ADLvl": 3,
+    "Hp": 655.0,
+    "hpLvl": 99.0,
+    "AD": 58.0,
+    "ADLvl": 3.0,
     "AS": 0.6880000233650208,
     "ASRatio": 0.625,
-    "Armor": 32,
+    "Armor": 32.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.18000000715255737,
-    "Mana": 280,
-    "ManaLvl": 70,
+    "Mana": 280.0,
+    "ManaLvl": 70.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,156 @@
   },
   "spell": {
     "Passive": {
-      "img": "Ekko_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "EkkoQ",
-      "cd": [],
+      "cd": [
+        " ",
+        8.5,
+        8,
+        7.5,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              65,
+              90,
+              115,
+              140
+            ],
+            "Slow:": [
+              2,
+              39,
+              46,
+              53,
+              60
+            ],
+            "Total Magic Damage:": [
+              0,
+              140,
+              180,
+              220,
+              260
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Slow:": 0,
+            "Total Magic Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "EkkoW",
-      "cd": [],
+      "cd": [
+        2,
+        20,
+        18,
+        16,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              90,
+              110,
+              130,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              150
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "EkkoE",
-      "cd": [],
+      "cd": [
+        " ",
+        8.5,
+        8,
+        7.5,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "EkkoR",
-      "cd": [],
+      "cd": [
+        10,
+        80,
+        50
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              350,
+              500
+            ],
+            "Heal:": [
+              0,
+              150,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Heal:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              175
+            ],
+            "Heal:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,29 +1,30 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 110,
-    "AD": 60,
-    "ADLvl": 3,
+    "Hp": 590.0,
+    "hpLvl": 110.0,
+    "AD": 60.0,
+    "ADLvl": 3.0,
     "AS": 0.6970000267028809,
     "ASRatio": 0.6700000166893005,
-    "Armor": 30,
+    "Armor": 30.0,
     "ArmorLvl": 4.599999904632568,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.18000000715255737,
+    "Mana": null,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -36,56 +37,123 @@
   },
   "spell": {
     "Passive": {
-      "img": "Yasuo_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "YasuoQ1Wrapper",
-      "cd": [],
+      "cd": [
+        " \u2212 1.33 (based on bonus attack speed)"
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              45,
+              70,
+              95,
+              120
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              105
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "YasuoW",
-      "cd": [],
+      "cd": [
+        5,
+        23,
+        21,
+        19,
+        17
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Wall Width:": [
+              20,
+              390,
+              460,
+              530,
+              600
+            ]
+          },
+          "ratioAd": {
+            "Wall Width:": 0
+          },
+          "ratioAp": {
+            "Wall Width:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "YasuoE",
-      "cd": [],
+      "cd": [
+        0.5,
+        0.4,
+        0.3,
+        0.2,
+        0.1
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              70,
+              80,
+              90,
+              100
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              20
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              20
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "YasuoR",
-      "cd": [],
+      "cd": [
+        0,
+        50,
+        30
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              350,
+              500
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              150
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

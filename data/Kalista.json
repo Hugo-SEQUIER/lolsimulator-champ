@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 114,
-    "AD": 61,
+    "Hp": 600.0,
+    "hpLvl": 114.0,
+    "AD": 61.0,
     "ADLvl": 3.25,
     "AS": 0.6940000057220459,
     "ASRatio": 0.6940000057220459,
-    "Armor": 24,
+    "Armor": 24.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.800000011920929,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 300,
-    "ManaLvl": 45,
+    "Mana": 300.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,167 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kalista_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KalistaMysticShot",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              85,
+              150,
+              215,
+              280
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              105
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KalistaW",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              4,
+              15,
+              16,
+              17,
+              18
+            ],
+            "Maximum Non-Champion Damage:": [
+              0,
+              125,
+              150,
+              175,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0,
+            "Maximum Non-Champion Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": 0,
+            "Maximum Non-Champion Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KalistaExpungeWrapper",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Damage per Additional Stack:": [
+              " ",
+              12,
+              16,
+              20,
+              24
+            ],
+            "Slow:": [
+              0,
+              18,
+              26,
+              34,
+              42
+            ],
+            "Mana Restored:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              70
+            ],
+            "Damage per Additional Stack:": [
+              25,
+              30,
+              35,
+              40,
+              45
+            ],
+            "Slow:": 0,
+            "Mana Restored:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              70
+            ],
+            "Damage per Additional Stack:": [
+              25,
+              30,
+              35,
+              40,
+              45
+            ],
+            "Slow:": [
+              5
+            ],
+            "Mana Restored:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KalistaRx",
-      "cd": [],
+      "cd": [
+        50,
+        120,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Knockup Duration:": [
+              " ",
+              1.5,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Knockup Duration:": 0
+          },
+          "ratioAp": {
+            "Knockup Duration:": 0
+          }
         }
       ],
       "bonus": {}

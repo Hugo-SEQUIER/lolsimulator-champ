@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 611,
-    "hpLvl": 98,
-    "AD": 48,
+    "Hp": 611.0,
+    "hpLvl": 98.0,
+    "AD": 48.0,
     "ADLvl": 3.75,
     "AS": 0.625,
     "ASRatio": 0.6899999976158142,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 4.949999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 200,
+    "Mana": 200.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 10,
+    "ManaRegen": 10.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,182 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kennen_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KennenShurikenHurlMissile1",
-      "cd": [],
+      "cd": [
+        " ",
+        6.25,
+        5.5,
+        4.75,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              125,
+              175,
+              225,
+              275
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              85
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KennenBringTheLight",
-      "cd": [],
+      "cd": [
+        3,
+        11.25,
+        9.5,
+        7.75,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              5,
+              45,
+              55,
+              65,
+              75
+            ],
+            "Magic Damage:": [
+              0,
+              95,
+              120,
+              145,
+              170
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": [
+              80,
+              90,
+              100,
+              110,
+              120
+            ],
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              80,
+              90,
+              100,
+              110,
+              120
+            ],
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KennenLightningRush",
-      "cd": [],
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Non-Champion Damage:": [
+              2,
+              78,
+              104,
+              130,
+              156
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              50,
+              60,
+              70,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Non-Champion Damage:": 0,
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ],
+            "Non-Champion Damage:": [
+              52
+            ],
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KennenShurikenStorm",
-      "cd": [],
+      "cd": [
+        20
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Resistances:": [
+              0,
+              40,
+              60
+            ],
+            "Magic Damage Per Bolt:": [
+              0,
+              75,
+              110
+            ],
+            "Total Single-Target Damage:": [
+              0,
+              562.5,
+              825
+            ]
+          },
+          "ratioAd": {
+            "Bonus Resistances:": 0,
+            "Magic Damage Per Bolt:": 0,
+            "Total Single-Target Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Resistances:": 0,
+            "Magic Damage Per Bolt:": [
+              22.5
+            ],
+            "Total Single-Target Damage:": [
+              168.75
+            ]
+          }
         }
       ],
       "bonus": {}

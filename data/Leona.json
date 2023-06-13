@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 646,
-    "hpLvl": 101,
-    "AD": 60,
-    "ADLvl": 3,
+    "Hp": 646.0,
+    "hpLvl": 101.0,
+    "AD": 60.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 47,
+    "Armor": 47.0,
     "ArmorLvl": 4.799999713897705,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 302,
-    "ManaLvl": 40,
+    "Mana": 302.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,150 @@
   },
   "spell": {
     "Passive": {
-      "img": "LeonaSunlight",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "LeonaShieldOfDaybreak",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              0,
+              35,
+              60,
+              85,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              30
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "LeonaSolarBarrier",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Flat Damage Reduction:": [
+              " ",
+              12,
+              16,
+              20,
+              24
+            ],
+            "Bonus Armor:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Bonus Magic Resistance:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Magic Damage:": [
+              5,
+              90,
+              125,
+              160,
+              195
+            ]
+          },
+          "ratioAd": {
+            "Flat Damage Reduction:": 0,
+            "Bonus Armor:": 0,
+            "Bonus Magic Resistance:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Flat Damage Reduction:": 0,
+            "Bonus Armor:": 0,
+            "Bonus Magic Resistance:": 0,
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "LeonaZenithBlade",
-      "cd": [],
+      "cd": [
+        2,
+        10.5,
+        9,
+        7.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              130,
+              170,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "LeonaSolarFlare",
-      "cd": [],
+      "cd": [
+        0,
+        75,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              175,
+              250
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}

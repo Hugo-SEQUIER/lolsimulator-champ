@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 664,
-    "hpLvl": 92,
-    "AD": 62,
-    "ADLvl": 4,
+    "Hp": 664.0,
+    "hpLvl": 92.0,
+    "AD": 62.0,
+    "ADLvl": 4.0,
     "AS": 0.6499999761581421,
     "ASRatio": 0.6499999761581421,
-    "Armor": 31,
+    "Armor": 31.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 350,
+    "MS": 350.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 271,
-    "ManaLvl": 50,
+    "Mana": 271.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,259 @@
   },
   "spell": {
     "Passive": {
-      "img": "Udyr_P",
-      "cd": [],
+      "cd": [
+        0,
+        40,
+        30,
+        "20 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "UdyrQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              " ",
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "Total Physical Damage:": [
+              " ",
+              8,
+              10,
+              12,
+              14,
+              16
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              32,
+              44,
+              56,
+              68,
+              80
+            ],
+            "Bonus Physical Damage On-Hit:": [
+              " ",
+              11,
+              17,
+              23,
+              29,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              4
+            ],
+            "Total Physical Damage:": [
+              8
+            ],
+            "Bonus Attack Speed:": 0,
+            "Bonus Physical Damage On-Hit:": [
+              25
+            ]
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Total Physical Damage:": 0,
+            "Bonus Attack Speed:": 0,
+            "Bonus Physical Damage On-Hit:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "UdyrW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Life Steal:": [
+              5,
+              16,
+              17,
+              18,
+              19,
+              20
+            ],
+            "Shield Strength:": [
+              5,
+              60,
+              75,
+              90,
+              105,
+              120
+            ],
+            "Increased Shield Strength:": [
+              "0 \u2212 150 "
+            ],
+            "Total Healing:": [
+              "0 \u2212 75 "
+            ],
+            "Heal per Tick:": [
+              ".63 \u2212 4.69 "
+            ],
+            "Increased Life Steal:": [
+              0,
+              32,
+              34,
+              36,
+              38,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Life Steal:": 0,
+            "Shield Strength:": 0,
+            "Increased Shield Strength:": 0,
+            "Total Healing:": 0,
+            "Heal per Tick:": 0,
+            "Increased Life Steal:": 0
+          },
+          "ratioAp": {
+            "Life Steal:": 0,
+            "Shield Strength:": [
+              40,
+              2.3,
+              2.6,
+              2.9,
+              3.2,
+              3.5
+            ],
+            "Increased Shield Strength:": [
+              "ased on level) (+ 45 ",
+              60,
+              75,
+              90,
+              105,
+              "120) (+\u00a065"
+            ],
+            "Total Healing:": [
+              "ased on level) (+ 22.5 ",
+              30,
+              37.5,
+              45,
+              52.5,
+              "60) (+\u00a032.5"
+            ],
+            "Heal per Tick:": [
+              "ased on level) (+ 1.41 ",
+              1.88,
+              2.34,
+              2.81,
+              3.28,
+              "3.75) (+\u00a02.03"
+            ],
+            "Increased Life Steal:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "UdyrE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              37,
+              44,
+              51,
+              58,
+              65
+            ],
+            "Decayed Bonus Movement Speed:": [
+              " ",
+              11.1,
+              13.2,
+              15.3,
+              17.4,
+              19.5
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Decayed Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0,
+            "Decayed Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "UdyrR",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage per Tick:": [
+              0,
+              19,
+              28,
+              37,
+              46,
+              55
+            ],
+            "Total Magic Damage:": [
+              0,
+              152,
+              224,
+              296,
+              368,
+              440
+            ],
+            "Slow:": [
+              5,
+              18,
+              21,
+              24,
+              27,
+              30
+            ],
+            "Increased Slow:": [
+              0,
+              23,
+              26,
+              29,
+              32,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage per Tick:": 0,
+            "Total Magic Damage:": 0,
+            "Slow:": 0,
+            "Increased Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage per Tick:": [
+              17.5
+            ],
+            "Total Magic Damage:": [
+              140
+            ],
+            "Slow:": 0,
+            "Increased Slow:": 0
+          }
         }
       ],
       "bonus": {}

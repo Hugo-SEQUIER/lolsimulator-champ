@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 655,
-    "hpLvl": 99,
-    "AD": 63,
-    "ADLvl": 3,
+    "Hp": 655.0,
+    "hpLvl": 99.0,
+    "AD": 63.0,
+    "ADLvl": 3.0,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 30,
+    "Armor": 30.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
-    "HpRegen": 2,
+    "HpRegen": 2.0,
     "HpRegenLvl": 0.20000000298023224,
-    "Mana": 295,
-    "ManaLvl": 65,
+    "Mana": 295.0,
+    "ManaLvl": 65.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,141 @@
   },
   "spell": {
     "Passive": {
-      "img": "ViPassive",
-      "cd": [],
+      "cd": [
+        "6 \u2212 12 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ViQ",
-      "cd": [],
+      "cd": [
+        2,
+        10.5,
+        9,
+        7.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              5,
+              70,
+              95,
+              120,
+              145
+            ],
+            "Maximum Physical Damage:": [
+              0,
+              140,
+              190,
+              240,
+              290
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              80
+            ],
+            "Maximum Physical Damage:": [
+              160
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ViW",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              " ",
+              5.5,
+              7,
+              8.5,
+              10
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              37.5,
+              45,
+              52.5,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              "\u300c\u00a01"
+            ],
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ViE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              15,
+              30,
+              45,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              120
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ViR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              50,
+              325,
+              500
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              110
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

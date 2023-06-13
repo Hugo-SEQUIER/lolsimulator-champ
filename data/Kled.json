@@ -1,29 +1,30 @@
 {
   "basicStats": {
-    "Hp": 410,
-    "hpLvl": 84,
-    "AD": 65,
+    "Hp": 410.0,
+    "hpLvl": 84.0,
+    "AD": 65.0,
     "ADLvl": 3.5,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 35,
+    "Armor": 35.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 28,
+    "MR": 28.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.15000000596046448,
+    "Mana": null,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -36,56 +37,209 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kled_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KledQ",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              110,
+              160,
+              210,
+              260
+            ],
+            "Minion and Small Monster Damage:": [
+              5,
+              82.5,
+              120,
+              157.5,
+              195
+            ],
+            "Total Physical Damage:": [
+              0,
+              165,
+              240,
+              315,
+              390
+            ],
+            "Slow:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              130
+            ],
+            "Minion and Small Monster Damage:": [
+              90
+            ],
+            "Total Physical Damage:": [
+              195
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Minion and Small Monster Damage:": 0,
+            "Total Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KledW",
-      "cd": [],
+      "cd": [
+        1,
+        9.5,
+        8,
+        6.5,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Capped Monster Damage:": [
+              20,
+              230,
+              240,
+              250,
+              260
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              4.5,
+              5,
+              5.5,
+              6,
+              6.5
+            ],
+            "Capped Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Capped Monster Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KledE",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              60,
+              85,
+              110,
+              135
+            ],
+            "Total Physical Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              65
+            ],
+            "Total Physical Damage:": [
+              130
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KledR",
-      "cd": [],
+      "cd": [
+        40,
+        125,
+        110
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Shield:": [
+              0,
+              30,
+              40
+            ],
+            "Maximum Shield:": [
+              0,
+              300,
+              400
+            ],
+            "Minimum Physical Damage:": [
+              " ",
+              5,
+              6
+            ],
+            "Maximum Physical Damage:": [
+              2,
+              15,
+              18
+            ]
+          },
+          "ratioAd": {
+            "Minimum Shield:": [
+              30
+            ],
+            "Maximum Shield:": [
+              300
+            ],
+            "Minimum Physical Damage:": [
+              4
+            ],
+            "Maximum Physical Damage:": [
+              12
+            ]
+          },
+          "ratioAp": {
+            "Minimum Shield:": 0,
+            "Maximum Shield:": 0,
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

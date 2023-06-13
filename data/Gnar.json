@@ -1,29 +1,30 @@
 {
   "basicStats": {
-    "Hp": 540,
-    "hpLvl": 79,
-    "AD": 57,
-    "ADLvl": 3,
+    "Hp": 540.0,
+    "hpLvl": 79.0,
+    "AD": 57.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 32,
+    "Armor": 32.0,
     "ArmorLvl": 3.700000047683716,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.8999999761581421,
     "HpRegenLvl": 0.25,
+    "Mana": null,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -36,56 +37,179 @@
   },
   "spell": {
     "Passive": {
-      "img": "Gnar_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "GnarQ",
-      "cd": [],
+      "cd": [
+        0,
+        17.5,
+        15,
+        12.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              45,
+              85,
+              125,
+              165
+            ],
+            "Reduced Damage:": [
+              0.5,
+              22.5,
+              42.5,
+              62.5,
+              82.5
+            ],
+            "Slow:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              115
+            ],
+            "Reduced Damage:": [
+              57.5
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Reduced Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "GnarW",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              " ",
+              10,
+              20,
+              30,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              6,
+              8,
+              10,
+              12,
+              14
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "GnarE",
-      "cd": [],
+      "cd": [
+        2,
+        19.5,
+        17,
+        14.5,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ],
+            "Physical Damage:": [
+              0,
+              85,
+              120,
+              155,
+              190
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Physical Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "GnarR",
-      "cd": [],
+      "cd": [
+        0,
+        60,
+        30
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            " Hyper Bonus Movement Speed:": [
+              0,
+              60,
+              80
+            ],
+            "Physical Damage:": [
+              0,
+              300,
+              400
+            ],
+            "Disable Duration:": [
+              0.25,
+              1.5,
+              1.75
+            ],
+            "Increased Damage:": [
+              0,
+              450,
+              600
+            ]
+          },
+          "ratioAd": {
+            " Hyper Bonus Movement Speed:": 0,
+            "Physical Damage:": [
+              50
+            ],
+            "Disable Duration:": 0,
+            "Increased Damage:": [
+              75
+            ]
+          },
+          "ratioAp": {
+            " Hyper Bonus Movement Speed:": 0,
+            "Physical Damage:": [
+              50
+            ],
+            "Disable Duration:": 0,
+            "Increased Damage:": [
+              75
+            ]
+          }
         }
       ],
       "bonus": {}

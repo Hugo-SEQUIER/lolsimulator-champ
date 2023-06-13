@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 650,
-    "hpLvl": 109,
-    "AD": 55,
-    "ADLvl": 3,
+    "Hp": 650.0,
+    "hpLvl": 109.0,
+    "AD": 55.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 30,
+    "Armor": 30.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 324,
-    "ManaLvl": 50,
+    "Mana": 324.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,112 @@
   },
   "spell": {
     "Passive": {
-      "img": "ElisePassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "EliseHumanQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              75,
+              110,
+              145,
+              180
+            ],
+            "Capped Monster Damage:": [
+              5,
+              100,
+              125,
+              150,
+              175
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Capped Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              4
+            ],
+            "Capped Monster Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "EliseHumanW",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              150,
+              195,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              95
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "EliseHumanE",
-      "cd": [],
+      "cd": [
+        2,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Stun Duration:": [
+              0.6,
+              1.7,
+              1.8,
+              1.9,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Stun Duration:": 0
+          },
+          "ratioAp": {
+            "Stun Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "EliseR",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

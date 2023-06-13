@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 643,
-    "hpLvl": 99,
-    "AD": 63,
+    "Hp": 643.0,
+    "hpLvl": 99.0,
+    "AD": 63.0,
     "ADLvl": 3.0999999046325684,
     "AS": 0.6679999828338623,
     "ASRatio": 0.6679999828338623,
-    "Armor": 36,
+    "Armor": 36.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 350,
+    "MS": 350.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.5,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 327,
-    "ManaLvl": 40,
+    "Mana": 327.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -28,7 +28,7 @@
     "ManaRegenLvl": 0.10000000149011612
   },
   "img": {
-    "centered": "KhaZix_0",
+    "centered": "Khazix_0",
     "passive": "Khazix_P",
     "QSpell": "KhazixQ",
     "WSpell": "KhazixW",
@@ -37,56 +37,129 @@
   },
   "spell": {
     "Passive": {
-      "img": "Khazix_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KhazixQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              95,
+              120,
+              145,
+              170
+            ],
+            "Increased Damage:": [
+              47,
+              199.5,
+              252,
+              304.5,
+              357
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              115
+            ],
+            "Increased Damage:": [
+              241.5
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Increased Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KhazixW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              115,
+              145,
+              175,
+              205
+            ],
+            "Heal:": [
+              5,
+              75,
+              95,
+              115,
+              135
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ],
+            "Heal:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Heal:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KhazixE",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              100,
+              135,
+              170,
+              205
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              20
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KhazixR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

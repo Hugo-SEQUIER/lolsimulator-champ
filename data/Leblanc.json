@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 598,
-    "hpLvl": 111,
-    "AD": 55,
+    "Hp": 598.0,
+    "hpLvl": 111.0,
+    "AD": 55.0,
     "ADLvl": 3.5,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 22,
+    "Armor": 22.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.5,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 400,
-    "ManaLvl": 55,
+    "Mana": 400.0,
+    "ManaLvl": 55.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,165 @@
   },
   "spell": {
     "Passive": {
-      "img": "LeBlancP",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "LeblancQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              90,
+              115,
+              140,
+              165
+            ],
+            "Total Magic Damage:": [
+              30,
+              180,
+              230,
+              280,
+              330
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Total Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "LeblancW",
-      "cd": [],
+      "cd": [
+        8,
+        16,
+        14,
+        12,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              115,
+              155,
+              195,
+              235
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "LeblancE",
-      "cd": [],
+      "cd": [
+        4,
+        13.25,
+        12.5,
+        11.75,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Total Damage:": [
+              30,
+              190,
+              250,
+              310,
+              370
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Total Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "LeblancR",
-      "cd": [],
+      "cd": [
+        0,
+        40,
+        30
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              140,
+              210
+            ],
+            "Enhanced Damage:": [
+              40,
+              280,
+              420
+            ],
+            "Total Magic Damage:": [
+              10,
+              420,
+              630
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Enhanced Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Enhanced Damage:": [
+              80
+            ],
+            "Total Magic Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 604,
-    "hpLvl": 109,
-    "AD": 51,
+    "Hp": 604.0,
+    "hpLvl": 109.0,
+    "AD": 51.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 28,
-    "ArmorLvl": 5,
-    "MR": 30,
+    "Armor": 28.0,
+    "ArmorLvl": 5.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 374,
-    "ManaLvl": 50,
+    "Mana": 374.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,244 @@
   },
   "spell": {
     "Passive": {
-      "img": "Karma_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KarmaQ",
-      "cd": [],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              35,
+              140,
+              245,
+              350
+            ],
+            "Bonus Magic Damage:": [
+              40,
+              100,
+              160,
+              220
+            ],
+            "Total Magic Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ],
+            "Total Bonus Damage:": [
+              75,
+              240,
+              405,
+              570
+            ],
+            "Total Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Magic Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Total Bonus Damage:": 0,
+            "Total Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Bonus Magic Damage:": [
+              30
+            ],
+            "Total Magic Damage:": [
+              40,
+              100,
+              160,
+              "220) (+\u00a070"
+            ],
+            "Total Bonus Damage:": [
+              90
+            ],
+            "Total Damage:": [
+              75,
+              240,
+              405,
+              "570) (+\u00a0130"
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KarmaSpiritBind",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              65,
+              90,
+              115,
+              140
+            ],
+            "Total Magic Damage:": [
+              0,
+              130,
+              180,
+              230,
+              280
+            ],
+            "Root Duration:": [
+              0.4,
+              1.55,
+              1.7,
+              1.85,
+              2
+            ],
+            "Root Duration Increase:": [
+              0.5,
+              0.75,
+              1,
+              1.25
+            ],
+            "Total Root Duration:": [
+              0.4,
+              1.55,
+              1.7,
+              1.85,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Root Duration:": 0,
+            "Root Duration Increase:": 0,
+            "Total Root Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45
+            ],
+            "Total Magic Damage:": [
+              90
+            ],
+            "Root Duration:": 0,
+            "Root Duration Increase:": 0,
+            "Total Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KarmaSolKimShield",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Bonus Shield:": [
+              25,
+              75,
+              125,
+              175
+            ],
+            "Total Shield:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Reduced Bonus Shield:": [
+              7.5,
+              24,
+              40.5,
+              57
+            ],
+            "Reduced Total Shield:": [
+              4,
+              36,
+              48,
+              60,
+              72
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Bonus Shield:": 0,
+            "Total Shield:": 0,
+            "Reduced Bonus Shield:": 0,
+            "Reduced Total Shield:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              45
+            ],
+            "Bonus Shield:": [
+              45
+            ],
+            "Total Shield:": [
+              25,
+              75,
+              125,
+              "175) (+\u00a090"
+            ],
+            "Reduced Bonus Shield:": [
+              13.5
+            ],
+            "Reduced Total Shield:": [
+              7.5,
+              22.5,
+              37.5,
+              "52.5) (+\u00a027"
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KarmaMantra",
-      "cd": [],
+      "cd": [
+        0,
+        38,
+        36,
+        34
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

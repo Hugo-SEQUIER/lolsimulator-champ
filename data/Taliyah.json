@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 550,
-    "hpLvl": 104,
-    "AD": 58,
+    "Hp": 550.0,
+    "hpLvl": 104.0,
+    "AD": 58.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 18,
+    "Armor": 18.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 470,
-    "ManaLvl": 30,
+    "Mana": 470.0,
+    "ManaLvl": 30.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,167 @@
   },
   "spell": {
     "Passive": {
-      "img": "Taliyah_Passive",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "TaliyahQ",
-      "cd": [],
+      "cd": [
+        " ",
+        6,
+        5,
+        4,
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              65,
+              85,
+              105,
+              125
+            ],
+            "Reduced Damage:": [
+              8,
+              26,
+              34,
+              42,
+              50
+            ],
+            "Total Magic Damage:": [
+              17,
+              169,
+              221,
+              273,
+              325
+            ],
+            "Empowered Damage:": [
+              5.5,
+              123.5,
+              161.5,
+              199.5,
+              237.5
+            ],
+            "Slow:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Reduced Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Empowered Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Reduced Damage:": [
+              20
+            ],
+            "Total Magic Damage:": [
+              130
+            ],
+            "Empowered Damage:": [
+              95
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "TaliyahWVC",
-      "cd": [],
+      "cd": [
+        4,
+        12.5,
+        11,
+        9.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "TaliyahE",
-      "cd": [],
+      "cd": [
+        8,
+        17,
+        16,
+        15,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              150,
+              195,
+              240
+            ],
+            "Detonation Magic Damage:": [
+              5,
+              45,
+              65,
+              85,
+              105
+            ],
+            "Total Maximum Detonation Damage:": [
+              2.5,
+              112.5,
+              162.5,
+              212.5,
+              262.5
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Detonation Magic Damage:": 0,
+            "Total Maximum Detonation Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Detonation Magic Damage:": [
+              30
+            ],
+            "Total Maximum Detonation Damage:": [
+              82.5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "TaliyahR",
-      "cd": [],
+      "cd": [
+        80,
+        150,
+        120
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

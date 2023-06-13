@@ -1,24 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 120,
-    "AD": 56,
+    "Hp": 600.0,
+    "hpLvl": 120.0,
+    "AD": 56.0,
     "ADLvl": 2.200000047683716,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 28,
-    "MR": 30,
+    "Armor": 28.0,
+    "ArmorLvl": null,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 274,
-    "ManaLvl": 44,
+    "Mana": 274.0,
+    "ManaLvl": 44.0,
     "AP": 0,
-    "Range": 450,
+    "Range": 450.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -36,56 +37,152 @@
   },
   "spell": {
     "Passive": {
-      "img": "Thresh_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ThreshQ",
-      "cd": [],
+      "cd": [
+        9,
+        16.5,
+        14,
+        11.5,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              150,
+              200,
+              250,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ThreshW",
-      "cd": [],
+      "cd": [
+        1,
+        20,
+        19,
+        18,
+        17
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              70,
+              90,
+              110,
+              130
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ThreshE",
-      "cd": [],
+      "cd": [
+        3,
+        12.25,
+        11.5,
+        10.75,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Bonus Magic Damage:": [
+              ".5 per  Soul collected "
+            ],
+            "Maximum Bonus Magic Damage:": [
+              ".5 per  Soul collected "
+            ],
+            "Magic Damage:": [
+              5,
+              115,
+              155,
+              195,
+              235
+            ],
+            "Slow:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Minimum Bonus Magic Damage:": [
+              0
+            ],
+            "Maximum Bonus Magic Damage:": [
+              80,
+              110,
+              140,
+              170,
+              200
+            ],
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Minimum Bonus Magic Damage:": 0,
+            "Maximum Bonus Magic Damage:": 0,
+            "Magic Damage:": [
+              70
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ThreshRPenta",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              400,
+              550
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}

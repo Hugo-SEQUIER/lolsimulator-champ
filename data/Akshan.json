@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 104,
-    "AD": 52,
+    "Hp": 630.0,
+    "hpLvl": 104.0,
+    "AD": 52.0,
     "ADLvl": 3.5,
     "AS": 0.6380000114440918,
     "ASRatio": 0.4000000059604645,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.75,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 350,
-    "ManaLvl": 40,
+    "Mana": 350.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,188 @@
   },
   "spell": {
     "Passive": {
-      "img": "akshan_p",
-      "cd": [],
+      "cd": [
+        6,
+        12,
+        8,
+        "4 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "AkshanQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.25,
+        6.5,
+        5.75,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              25,
+              45,
+              65,
+              85
+            ],
+            "Total Physical Damage:": [
+              0,
+              50,
+              90,
+              130,
+              170
+            ],
+            "Non-Champion Damage:": [
+              0,
+              52.5,
+              65,
+              77.5,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              80
+            ],
+            "Total Physical Damage:": [
+              160
+            ],
+            "Non-Champion Damage:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0,
+            "Non-Champion Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "AkshanW",
-      "cd": [],
+      "cd": [
+        8,
+        14,
+        10,
+        6,
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              90,
+              100,
+              110,
+              120
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AkshanE",
-      "cd": [],
+      "cd": [
+        8,
+        16.5,
+        15,
+        13.5,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage per Shot:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage per Shot:": [
+              17.5
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage per Shot:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AkshanR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Maximum Bullets Stored:": [
+              " ",
+              6,
+              7
+            ],
+            "Minimum Physical Damage per Bullet:": [
+              0,
+              25,
+              30
+            ],
+            "Maximum Physical Damage per Bullet:": [
+              0,
+              100,
+              120
+            ],
+            "Minimum Charged Physical Damage:": [
+              0,
+              150,
+              210
+            ],
+            "Damage to target with 67% missing hp:": [
+              0,
+              450,
+              630
+            ]
+          },
+          "ratioAd": {
+            "Maximum Bullets Stored:": 0,
+            "Minimum Physical Damage per Bullet:": [
+              10
+            ],
+            "Maximum Physical Damage per Bullet:": [
+              40
+            ],
+            "Minimum Charged Physical Damage:": [
+              50,
+              60,
+              70
+            ],
+            "Damage to target with 67% missing hp:": [
+              150,
+              180,
+              210
+            ]
+          },
+          "ratioAp": {
+            "Maximum Bullets Stored:": 0,
+            "Minimum Physical Damage per Bullet:": 0,
+            "Maximum Physical Damage per Bullet:": 0,
+            "Minimum Charged Physical Damage:": 0,
+            "Damage to target with 67% missing hp:": 0
+          }
         }
       ],
       "bonus": {}

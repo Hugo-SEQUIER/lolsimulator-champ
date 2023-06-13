@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 108,
-    "AD": 57,
+    "Hp": 600.0,
+    "hpLvl": 108.0,
+    "AD": 57.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.6499999761581421,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 349,
-    "ManaLvl": 38,
+    "Mana": 349.0,
+    "ManaLvl": 38.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,176 @@
   },
   "spell": {
     "Passive": {
-      "img": "SamiraP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SamiraQ",
-      "cd": [],
+      "cd": [
+        " ",
+        5,
+        4,
+        3,
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              5,
+              10,
+              15,
+              20
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              85,
+              95,
+              105,
+              115,
+              125
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SamiraW",
-      "cd": [],
+      "cd": [
+        0,
+        28,
+        26,
+        24,
+        22
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              35,
+              50,
+              65,
+              80
+            ],
+            "Total Physical Damage:": [
+              0,
+              70,
+              100,
+              130,
+              160
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              80
+            ],
+            "Total Physical Damage:": [
+              160
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SamiraE",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              60,
+              70,
+              80,
+              90
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              20
+            ],
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": 0,
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SamiraR",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Shot:": [
+              " ",
+              15,
+              25
+            ],
+            "Total Physical Damage:": [
+              0,
+              150,
+              250
+            ],
+            "Minion Damage Per Shot:": [
+              0.25,
+              3.75,
+              6.25
+            ],
+            "Total Minion Damage:": [
+              2.5,
+              37.5,
+              62.5
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Shot:": [
+              50
+            ],
+            "Total Physical Damage:": [
+              500
+            ],
+            "Minion Damage Per Shot:": [
+              12.5
+            ],
+            "Total Minion Damage:": [
+              125
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Shot:": 0,
+            "Total Physical Damage:": 0,
+            "Minion Damage Per Shot:": 0,
+            "Total Minion Damage:": 0
+          }
         }
       ],
       "bonus": {}

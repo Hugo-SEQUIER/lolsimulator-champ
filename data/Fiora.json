@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 620,
-    "hpLvl": 99,
-    "AD": 68,
+    "Hp": 620.0,
+    "hpLvl": 99.0,
+    "AD": 68.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.6899999976158142,
     "ASRatio": 0.6899999976158142,
-    "Armor": 33,
+    "Armor": 33.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 300,
-    "ManaLvl": 60,
+    "Mana": 300.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,154 @@
   },
   "spell": {
     "Passive": {
-      "img": "Fiora_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "FioraQ",
-      "cd": [],
+      "cd": [
+        3,
+        11.25,
+        9.5,
+        7.75,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              80,
+              90,
+              100,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              90,
+              95,
+              100,
+              105,
+              110
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "FioraW",
-      "cd": [],
+      "cd": [
+        4,
+        22,
+        20,
+        18,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              10,
+              150,
+              190,
+              230,
+              270
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "FioraE",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              60,
+              70,
+              80,
+              90
+            ],
+            "Critical damage:": [
+              60,
+              170,
+              180,
+              190,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Critical damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Critical damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "FioraR",
-      "cd": [],
+      "cd": [
+        10,
+        90,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Additional Bonus Movement Speed:": [
+              0,
+              20,
+              30
+            ],
+            "Heal per Tick:": [
+              5,
+              100,
+              125
+            ],
+            "Maximum Heal:": [
+              75,
+              500,
+              625
+            ]
+          },
+          "ratioAd": {
+            "Additional Bonus Movement Speed:": 0,
+            "Heal per Tick:": [
+              60
+            ],
+            "Maximum Heal:": [
+              300
+            ]
+          },
+          "ratioAp": {
+            "Additional Bonus Movement Speed:": 0,
+            "Heal per Tick:": 0,
+            "Maximum Heal:": 0
+          }
         }
       ],
       "bonus": {}

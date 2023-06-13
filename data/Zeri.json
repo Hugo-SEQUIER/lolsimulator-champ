@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 110,
-    "AD": 53,
+    "Hp": 630.0,
+    "hpLvl": 110.0,
+    "AD": 53.0,
     "ADLvl": 1.2999999523162842,
     "AS": 0.6579999923706055,
     "ASRatio": 0.625,
-    "Armor": 24,
+    "Armor": 24.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.6499999761581421,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 250,
-    "ManaLvl": 45,
+    "Mana": 250.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,166 @@
   },
   "spell": {
     "Passive": {
-      "img": "ZeriP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "ZeriQ",
-      "cd": [],
+      "cd": [
+        "\u00a0\u00f7\u00a0Zeri's attack speed"
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Physical Damage:": [
+              5,
+              17,
+              19,
+              21,
+              23
+            ],
+            "Physical Damage per Hit:": [
+              0.14,
+              2.43,
+              2.71,
+              3,
+              3.29
+            ]
+          },
+          "ratioAd": {
+            "Total Physical Damage:": [
+              104,
+              108,
+              112,
+              116,
+              120
+            ],
+            "Physical Damage per Hit:": [
+              14.86,
+              15.43,
+              16,
+              16.57,
+              17.14
+            ]
+          },
+          "ratioAp": {
+            "Total Physical Damage:": 0,
+            "Physical Damage per Hit:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ZeriW",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              60,
+              100,
+              140,
+              180
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              130
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              130
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ZeriE",
-      "cd": [],
+      "cd": [
+        2,
+        21,
+        20,
+        19,
+        18
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            " Burst Fire Bonus Magic Damage:": [
+              0,
+              22,
+              24,
+              26,
+              28
+            ],
+            " Burst Fire Modified Damage:": [
+              0,
+              85,
+              90,
+              95,
+              100
+            ]
+          },
+          "ratioAd": {
+            " Burst Fire Bonus Magic Damage:": [
+              12
+            ],
+            " Burst Fire Modified Damage:": 0
+          },
+          "ratioAp": {
+            " Burst Fire Bonus Magic Damage:": [
+              12
+            ],
+            " Burst Fire Modified Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ZeriR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              75,
+              275,
+              375
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              85
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              85
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 550,
-    "hpLvl": 103,
-    "AD": 60,
+    "Hp": 550.0,
+    "hpLvl": 103.0,
+    "AD": 60.0,
     "ADLvl": 2.3499999046325684,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 23,
+    "Armor": 23.0,
     "ArmorLvl": 4.599999904632568,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.699999988079071,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 232,
-    "ManaLvl": 35,
+    "Mana": 232.0,
+    "ManaLvl": 35.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,164 @@
   },
   "spell": {
     "Passive": {
-      "img": "Vayne_NightHunter",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "VayneTumble",
-      "cd": [],
+      "cd": [
+        " ",
+        3.5,
+        3,
+        2.5,
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              5,
+              85,
+              95,
+              105,
+              115
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "VayneSilveredBolts",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus True Damage:": [
+              " ",
+              7,
+              8,
+              9,
+              10
+            ],
+            "Minimum Bonus Damage:": [
+              0,
+              65,
+              80,
+              95,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Bonus True Damage:": 0,
+            "Minimum Bonus Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus True Damage:": 0,
+            "Minimum Bonus Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VayneCondemn",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              85,
+              120,
+              155,
+              190
+            ],
+            "Bonus Physical Damage:": [
+              5,
+              127.5,
+              180,
+              232.5,
+              285
+            ],
+            "Total Physical Damage:": [
+              25,
+              212.5,
+              300,
+              387.5,
+              475
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ],
+            "Bonus Physical Damage:": [
+              75
+            ],
+            "Total Physical Damage:": [
+              125
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Bonus Physical Damage:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "VayneInquisition",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Duration:": [
+              " ",
+              10,
+              12
+            ],
+            "Bonus Attack Damage:": [
+              5,
+              40,
+              55
+            ],
+            "Tumble Cooldown Reduction:": [
+              0,
+              40,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Duration:": 0,
+            "Bonus Attack Damage:": 0,
+            "Tumble Cooldown Reduction:": 0
+          },
+          "ratioAp": {
+            "Duration:": 0,
+            "Bonus Attack Damage:": 0,
+            "Tumble Cooldown Reduction:": 0
+          }
         }
       ],
       "bonus": {}

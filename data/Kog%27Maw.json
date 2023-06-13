@@ -1,0 +1,203 @@
+{
+  "basicStats": {
+    "Hp": 635.0,
+    "hpLvl": 99.0,
+    "AD": 61.0,
+    "ADLvl": 3.0999999046325684,
+    "AS": 0.6650000214576721,
+    "ASRatio": 0.6650000214576721,
+    "Armor": 24.0,
+    "ArmorLvl": 4.449999809265137,
+    "MR": 30.0,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.75,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 325.0,
+    "ManaLvl": 40.0,
+    "AP": 0,
+    "Range": 500.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.75,
+    "ManaRegenLvl": 0.14000000059604645
+  },
+  "img": {
+    "centered": "Kog%27Maw_0",
+    "passive": "KogMaw_IcathianSurprise",
+    "QSpell": "KogMawQ",
+    "WSpell": "KogMawBioArcaneBarrage",
+    "ESpell": "KogMawVoidOoze",
+    "RSpell": "KogMawLivingArtillery"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ],
+            "Magic Damage:": [
+              0,
+              140,
+              190,
+              240,
+              290
+            ],
+            "Resistances Reduction:": [
+              3,
+              25,
+              27,
+              29,
+              31
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Magic Damage:": 0,
+            "Resistances Reduction:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Magic Damage:": [
+              70
+            ],
+            "Resistances Reduction:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        7
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Attack Range:": [
+              30,
+              150,
+              170,
+              190,
+              210
+            ],
+            "Bonus Magic Damage:": [
+              0.5,
+              4.25,
+              5,
+              5.75,
+              6.5
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Range:": 0,
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Range:": 0,
+            "Bonus Magic Damage:": [
+              1
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        2
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage:": [
+              5,
+              120,
+              165,
+              210,
+              255
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Slow:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        " ",
+        1.5,
+        1
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Minimum Magic Damage:": [
+              0,
+              140,
+              180
+            ],
+            "Maximum Magic Damage:": [
+              0,
+              280,
+              360
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": [
+              65
+            ],
+            "Maximum Magic Damage:": [
+              130
+            ]
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              65
+            ],
+            "Maximum Magic Damage:": [
+              130
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

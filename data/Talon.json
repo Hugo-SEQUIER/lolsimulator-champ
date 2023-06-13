@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 658,
-    "hpLvl": 109,
-    "AD": 68,
+    "Hp": 658.0,
+    "hpLvl": 109.0,
+    "AD": 68.0,
     "ADLvl": 3.0999999046325684,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 30,
+    "Armor": 30.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 39,
+    "MR": 39.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 400,
-    "ManaLvl": 37,
+    "Mana": 400.0,
+    "ManaLvl": 37.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,145 @@
   },
   "spell": {
     "Passive": {
-      "img": "TalonP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "TalonQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              85,
+              105,
+              125,
+              145
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "TalonW",
-      "cd": [],
+      "cd": [
+        " ",
+        8.5,
+        8,
+        7.5,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              80,
+              110,
+              140,
+              170
+            ],
+            "Total Physical Damage:": [
+              0,
+              130,
+              170,
+              210,
+              250
+            ],
+            "Slow:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              80
+            ],
+            "Total Physical Damage:": [
+              120
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "TalonE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "TalonR",
-      "cd": [],
+      "cd": [
+        0,
+        80,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              135,
+              180
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              55,
+              70
+            ],
+            "Total Physical Damage:": [
+              80,
+              270,
+              360
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ],
+            "Bonus Movement Speed:": 0,
+            "Total Physical Damage:": [
+              200
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Bonus Movement Speed:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 640,
-    "hpLvl": 109,
-    "AD": 57,
-    "ADLvl": 3,
+    "Hp": 640.0,
+    "hpLvl": 109.0,
+    "AD": 57.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 31,
+    "Armor": 31.0,
     "ArmorLvl": 4.299999713897705,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 375,
-    "ManaLvl": 25,
+    "Mana": 375.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,185 @@
   },
   "spell": {
     "Passive": {
-      "img": "Diana_Passive_LunarBlade",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "DianaQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              95,
+              130,
+              165,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "DianaOrbs",
-      "cd": [],
+      "cd": [
+        5,
+        13.5,
+        12,
+        10.5,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              55,
+              70,
+              85,
+              100
+            ],
+            "Total Shield Strength:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ],
+            "Magic Damage per Orb:": [
+              8,
+              30,
+              42,
+              54,
+              66
+            ],
+            "Total Magic Damage:": [
+              4,
+              90,
+              126,
+              162,
+              198
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Total Shield Strength:": 0,
+            "Magic Damage per Orb:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              25
+            ],
+            "Total Shield Strength:": [
+              50
+            ],
+            "Magic Damage per Orb:": [
+              15
+            ],
+            "Total Magic Damage:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "DianaTeleport",
-      "cd": [],
+      "cd": [
+        2,
+        20,
+        18,
+        16,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              70,
+              90,
+              110,
+              130
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "DianaR",
-      "cd": [],
+      "cd": [
+        0,
+        90,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Slow:": [
+              0,
+              50,
+              60
+            ],
+            "Magic Damage:": [
+              0,
+              300,
+              400
+            ],
+            "Bonus Damage Per Champion:": [
+              5,
+              60,
+              85
+            ],
+            "Total Damage Vs. 5 Champions:": [
+              40,
+              540,
+              740
+            ]
+          },
+          "ratioAd": {
+            "Slow:": 0,
+            "Magic Damage:": 0,
+            "Bonus Damage Per Champion:": 0,
+            "Total Damage Vs. 5 Champions:": 0
+          },
+          "ratioAp": {
+            "Slow:": 0,
+            "Magic Damage:": [
+              60
+            ],
+            "Bonus Damage Per Champion:": [
+              15
+            ],
+            "Total Damage Vs. 5 Champions:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}

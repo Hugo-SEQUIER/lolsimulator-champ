@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 104,
-    "AD": 55,
-    "ADLvl": 3,
+    "Hp": 610.0,
+    "hpLvl": 104.0,
+    "AD": 55.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 39,
+    "Armor": 39.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 350,
-    "ManaLvl": 45,
+    "Mana": 350.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,219 @@
   },
   "spell": {
     "Passive": {
-      "img": "RellP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RellQ",
-      "cd": [],
+      "cd": [
+        1,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ],
+            "Monster Damage:": [
+              10,
+              330,
+              450,
+              570,
+              690
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Monster Damage:": [
+              180
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RellW_Dismount",
-      "cd": [],
+      "cd": [
+        1
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              5,
+              60,
+              85,
+              110,
+              135
+            ],
+            "Magic Damage:": [
+              0,
+              100,
+              130,
+              160,
+              190
+            ],
+            "Monster Damage:": [
+              10,
+              300,
+              390,
+              480,
+              570
+            ],
+            "Bonus Attack Speed:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Bonus Magic Damage:": [
+              0,
+              25,
+              40,
+              55,
+              70
+            ],
+            "Bonus Monster Damage:": [
+              0,
+              75,
+              120,
+              165,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0,
+            "Monster Damage:": 0,
+            "Bonus Attack Speed:": 0,
+            "Bonus Magic Damage:": 0,
+            "Bonus Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": 0,
+            "Magic Damage:": [
+              60
+            ],
+            "Monster Damage:": [
+              180
+            ],
+            "Bonus Attack Speed:": 0,
+            "Bonus Magic Damage:": [
+              40
+            ],
+            "Bonus Monster Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RellE",
-      "cd": [],
+      "cd": [
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              5,
+              17.5,
+              20,
+              22.5,
+              25
+            ],
+            "Increased Movement Speed:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Bonus Magic Damage:": [
+              5,
+              50,
+              65,
+              80,
+              95
+            ],
+            "Bonus Monster Damage:": [
+              7.5,
+              125,
+              162.5,
+              200,
+              237.5
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Increased Movement Speed:": 0,
+            "Bonus Magic Damage:": 0,
+            "Bonus Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0,
+            "Increased Movement Speed:": 0,
+            "Bonus Magic Damage:": [
+              50
+            ],
+            "Bonus Monster Damage:": [
+              125
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RellR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              5,
+              25,
+              35
+            ],
+            "Total Magic Damage:": [
+              20,
+              200,
+              280
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              13.75
+            ],
+            "Total Magic Damage:": [
+              110
+            ]
+          }
         }
       ],
       "bonus": {}

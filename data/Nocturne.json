@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 655,
-    "hpLvl": 109,
-    "AD": 62,
+    "Hp": 655.0,
+    "hpLvl": 109.0,
+    "AD": 62.0,
     "ADLvl": 2.5999999046325684,
     "AS": 0.7210000157356262,
     "ASRatio": 0.7210000157356262,
-    "Armor": 38,
+    "Armor": 38.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 1.5499999523162842,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 275,
-    "ManaLvl": 35,
+    "Mana": 275.0,
+    "ManaLvl": 35.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,170 @@
   },
   "spell": {
     "Passive": {
-      "img": "Nocturne_UmbraBlades",
-      "cd": [],
+      "cd": [
+        3
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NocturneDuskbringer",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical damage:": [
+              5,
+              110,
+              155,
+              200,
+              245
+            ],
+            "Bonus Attack Damage:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Bonus Movement Speed:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Physical damage:": [
+              85
+            ],
+            "Bonus Attack Damage:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Physical damage:": 0,
+            "Bonus Attack Damage:": 0,
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NocturneShroudofDarkness",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Enhanced Bonus Attack Speed:": [
+              0,
+              70,
+              80,
+              90,
+              100
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Enhanced Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Enhanced Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NocturneUnspeakableHorror",
-      "cd": [],
+      "cd": [
+        5,
+        14,
+        13,
+        12,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ],
+            "Magic Damage per Tick:": [
+              0,
+              31.25,
+              42.5,
+              53.75,
+              65
+            ],
+            "Disable Duration:": [
+              0.25,
+              1.5,
+              1.75,
+              2,
+              2.25
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": 0,
+            "Magic Damage per Tick:": 0,
+            "Disable Duration:": 0
+          },
+          "ratioAp": {
+            "Total Magic Damage:": [
+              100
+            ],
+            "Magic Damage per Tick:": [
+              25
+            ],
+            "Disable Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NocturneParanoia",
-      "cd": [],
+      "cd": [
+        40,
+        115,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              50,
+              275,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              120
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

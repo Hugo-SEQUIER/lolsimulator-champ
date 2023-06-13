@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 100,
-    "AD": 64,
-    "ADLvl": 3,
+    "Hp": 630.0,
+    "hpLvl": 100.0,
+    "AD": 64.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 33,
+    "Armor": 33.0,
     "ArmorLvl": 4.400000095367432,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 0,
+    "Mana": 0.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,151 @@
   },
   "spell": {
     "Passive": {
-      "img": "RivenRunicBlades",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RivenTriCleave",
-      "cd": [],
+      "cd": [
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              35,
+              55,
+              75,
+              95
+            ],
+            "Total Physical Damage:": [
+              5,
+              105,
+              165,
+              225,
+              285
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              45,
+              50,
+              55,
+              60,
+              65
+            ],
+            "Total Physical Damage:": [
+              135,
+              150,
+              165,
+              180,
+              195
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RivenMartyr",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              95,
+              125,
+              155,
+              185
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RivenFeint",
-      "cd": [],
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              105,
+              130,
+              155,
+              180
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": [
+              110
+            ]
+          },
+          "ratioAp": {
+            "Shield Strength:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RivenFengShuiEngine",
-      "cd": [],
+      "cd": [
+        20,
+        90,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              0,
+              150,
+              200
+            ],
+            "Maximum Physical Damage:": [
+              0,
+              450,
+              600
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              60
+            ],
+            "Maximum Physical Damage:": [
+              180
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

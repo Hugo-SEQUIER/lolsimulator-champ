@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 112,
-    "AD": 55,
+    "Hp": 610.0,
+    "hpLvl": 112.0,
+    "AD": 55.0,
     "ADLvl": 3.200000047683716,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 47,
+    "Armor": 47.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.20000000298023224,
-    "Mana": 311,
-    "ManaLvl": 45,
+    "Mana": 311.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,171 @@
   },
   "spell": {
     "Passive": {
-      "img": "Braum_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "BraumQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              125,
+              175,
+              225,
+              275
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "BraumW",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Ally Bonus Armor:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Ally Bonus Magic Resistance:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Self Bonus Armor:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Self Bonus Magic Resistance:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Ally Bonus Armor:": 0,
+            "Ally Bonus Magic Resistance:": 0,
+            "Self Bonus Armor:": 0,
+            "Self Bonus Magic Resistance:": 0
+          },
+          "ratioAp": {
+            "Ally Bonus Armor:": 0,
+            "Ally Bonus Magic Resistance:": 0,
+            "Self Bonus Armor:": 0,
+            "Self Bonus Magic Resistance:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "BraumE",
-      "cd": [],
+      "cd": [
+        6,
+        14,
+        12,
+        10,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Damage reduction:": [
+              5,
+              40,
+              45,
+              50,
+              55
+            ],
+            "Barrier Duration:": [
+              " ",
+              3.25,
+              3.5,
+              3.75,
+              4
+            ]
+          },
+          "ratioAd": {
+            "Damage reduction:": 0,
+            "Barrier Duration:": 0
+          },
+          "ratioAp": {
+            "Damage reduction:": 0,
+            "Barrier Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "BraumRWrapper",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              300,
+              450
+            ],
+            "Maximum Knockup Duration:": [
+              " ",
+              1.5,
+              2
+            ],
+            "Slow:": [
+              0,
+              50,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Maximum Knockup Duration:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Maximum Knockup Duration:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}

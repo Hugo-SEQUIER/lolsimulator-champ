@@ -1,0 +1,192 @@
+{
+  "basicStats": {
+    "Hp": 604.0,
+    "hpLvl": 108.0,
+    "AD": 52.0,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.6510000228881836,
+    "ASRatio": 0.6510000228881836,
+    "Armor": 21.0,
+    "ArmorLvl": 4.349999904632568,
+    "MR": 30.0,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 333.0,
+    "ManaLvl": 39.0,
+    "AP": 0,
+    "Range": 525.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Twisted_Fate_0",
+    "passive": "Cardmaster_SealFate",
+    "QSpell": "WildCards",
+    "WSpell": "PickACard",
+    "ESpell": "CardmasterStack",
+    "RSpell": "Destiny"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        " ",
+        5.75,
+        5.5,
+        5.25,
+        5
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage:": [
+              5,
+              22.5,
+              30,
+              37.5,
+              45
+            ],
+            "Mana Restored:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Stun Duration:": [
+              " ",
+              1.25,
+              1.5,
+              1.75,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              100
+            ],
+            "Mana Restored:": 0,
+            "Slow:": 0,
+            "Stun Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ],
+            "Mana Restored:": 0,
+            "Slow:": 0,
+            "Stun Duration:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": "A DEFINIR",
+      "basicStats": [
+        {
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              17.5,
+              25,
+              32.5,
+              40
+            ],
+            "Bonus Magic Damage:": [
+              5,
+              90,
+              115,
+              140,
+              165
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Magic Damage:": [
+              50
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        80,
+        150,
+        120
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Duration:": [
+              " ",
+              8,
+              10
+            ]
+          },
+          "ratioAd": {
+            "Duration:": 0
+          },
+          "ratioAp": {
+            "Duration:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 109,
-    "AD": 58,
+    "Hp": 610.0,
+    "hpLvl": 109.0,
+    "AD": 58.0,
     "ADLvl": 3.5,
     "AS": 0.6380000114440918,
     "ASRatio": 0.6380000114440918,
-    "Armor": 32,
-    "ArmorLvl": 5,
-    "MR": 30,
+    "Armor": 32.0,
+    "ArmorLvl": 5.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 295,
-    "ManaLvl": 45,
+    "Mana": 295.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,147 @@
   },
   "spell": {
     "Passive": {
-      "img": "Nidalee_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "JavelinToss",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              0,
+              90,
+              110,
+              130,
+              150
+            ],
+            "Maximum Magic Damage:": [
+              10,
+              270,
+              330,
+              390,
+              450
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              50
+            ],
+            "Maximum Magic Damage:": [
+              150
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "Bushwhack",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              0,
+              20,
+              30,
+              40,
+              50
+            ],
+            "Total Magic Damage:": [
+              0,
+              80,
+              120,
+              160,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              5
+            ],
+            "Total Magic Damage:": [
+              20
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "PrimalSurge",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Minimum Heal:": [
+              5,
+              50,
+              65,
+              80,
+              95
+            ],
+            "Maximum Heal:": [
+              0,
+              100,
+              130,
+              160,
+              190
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Minimum Heal:": 0,
+            "Maximum Heal:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Minimum Heal:": [
+              27.5
+            ],
+            "Maximum Heal:": [
+              55
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AspectOfTheCougar",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

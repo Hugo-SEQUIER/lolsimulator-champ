@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 109,
-    "AD": 57,
+    "Hp": 590.0,
+    "hpLvl": 109.0,
+    "AD": 57.0,
     "ADLvl": 4.25,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 22,
-    "ArmorLvl": 5,
-    "MR": 30,
+    "Armor": 22.0,
+    "ArmorLvl": 5.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 375,
-    "ManaLvl": 45,
+    "Mana": 375.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,156 @@
   },
   "spell": {
     "Passive": {
-      "img": "Jayce_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "JayceToTheSkies",
-      "cd": [],
+      "cd": [
+        6,
+        14,
+        12,
+        10,
+        8,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              110,
+              160,
+              210,
+              260,
+              310
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              120
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "JayceStaticField",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Mana Restored:": [
+              0,
+              12,
+              14,
+              16,
+              18,
+              20
+            ],
+            "Magic Damage Per Tick:": [
+              5,
+              50,
+              65,
+              80,
+              95,
+              110
+            ],
+            "Total Magic Damage:": [
+              40,
+              200,
+              260,
+              320,
+              380,
+              440
+            ]
+          },
+          "ratioAd": {
+            "Mana Restored:": 0,
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Mana Restored:": 0,
+            "Magic Damage Per Tick:": [
+              25
+            ],
+            "Total Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "JayceThunderingBlow",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              " ",
+              10.8,
+              13.6,
+              16.4,
+              19.2,
+              22
+            ],
+            "Maximum Monster Damage:": [
+              0,
+              300,
+              400,
+              500,
+              600,
+              700
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              100
+            ],
+            "Maximum Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": 0,
+            "Maximum Monster Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "JayceStanceHtG",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

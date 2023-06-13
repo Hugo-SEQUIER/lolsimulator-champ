@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 590,
-    "hpLvl": 104,
-    "AD": 54,
+    "Hp": 590.0,
+    "hpLvl": 104.0,
+    "AD": 54.0,
     "ADLvl": 2.75,
     "AS": 0.6690000295639038,
     "ASRatio": 0.625,
-    "Armor": 23,
+    "Armor": 23.0,
     "ArmorLvl": 4.449999809265137,
-    "MR": 28,
+    "MR": 28.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 490,
-    "ManaLvl": 32,
+    "Mana": 490.0,
+    "ManaLvl": 32.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,161 @@
   },
   "spell": {
     "Passive": {
-      "img": "Icons_Vex_Passive",
-      "cd": [],
+      "cd": [
+        5,
+        22,
+        19,
+        "16 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "VexQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7,
+        6,
+        5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              150,
+              195,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "VexW",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ],
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              75
+            ],
+            "Magic Damage:": [
+              30
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VexE",
-      "cd": [],
+      "cd": [
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              70,
+              90,
+              110,
+              130
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40,
+              45,
+              50,
+              55,
+              60
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "VexR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              250,
+              350
+            ],
+            "Total Magic Damage:": [
+              25,
+              375,
+              525
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ],
+            "Total Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}

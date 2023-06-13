@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 686,
-    "hpLvl": 110,
-    "AD": 68,
-    "ADLvl": 3,
+    "Hp": 686.0,
+    "hpLvl": 110.0,
+    "AD": 68.0,
+    "ADLvl": 3.0,
     "AS": 0.6700000166893005,
     "ASRatio": 0.6700000166893005,
-    "Armor": 37,
+    "Armor": 37.0,
     "ArmorLvl": 3.9000000953674316,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 350,
+    "MS": 350.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 340,
-    "ManaLvl": 45,
+    "Mana": 340.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,168 @@
   },
   "spell": {
     "Passive": {
-      "img": "Trundle_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "TrundleTrollSmash",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              40,
+              60,
+              80,
+              100
+            ],
+            "Bonus Attack Damage:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Attack Damage Reduction:": [
+              0,
+              12.5,
+              15,
+              17.5,
+              20
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              15,
+              25,
+              35,
+              45,
+              55
+            ],
+            "Bonus Attack Damage:": 0,
+            "Attack Damage Reduction:": 0
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Bonus Attack Damage:": 0,
+            "Attack Damage Reduction:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "trundledesecrate",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              50,
+              70,
+              90,
+              110
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              28,
+              36,
+              44,
+              52
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "TrundleCircle",
-      "cd": [],
+      "cd": [
+        4,
+        22,
+        20,
+        18,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Slow:": [
+              0,
+              34,
+              38,
+              42,
+              46
+            ]
+          },
+          "ratioAd": {
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "TrundlePain",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              0,
+              25,
+              30
+            ],
+            "Initial Magic Damage:": [
+              0,
+              12.5,
+              15
+            ],
+            "Magic Damage Per Second:": [
+              0.5,
+              3.125,
+              3.75
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": 0,
+            "Initial Magic Damage:": 0,
+            "Magic Damage Per Second:": 0
+          },
+          "ratioAp": {
+            "Total Magic Damage:": [
+              2
+            ],
+            "Initial Magic Damage:": [
+              1
+            ],
+            "Magic Damage Per Second:": [
+              0.25
+            ]
+          }
         }
       ],
       "bonus": {}

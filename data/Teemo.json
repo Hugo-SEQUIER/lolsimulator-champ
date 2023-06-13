@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 598,
-    "hpLvl": 104,
-    "AD": 54,
-    "ADLvl": 3,
+    "Hp": 598.0,
+    "hpLvl": 104.0,
+    "AD": 54.0,
+    "ADLvl": 3.0,
     "AS": 0.6899999976158142,
     "ASRatio": 0.6899999976158142,
-    "Armor": 24,
+    "Armor": 24.0,
     "ArmorLvl": 4.949999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 334,
-    "ManaLvl": 25,
+    "Mana": 334.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,212 @@
   },
   "spell": {
     "Passive": {
-      "img": "Teemo_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "BlindingDart",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ],
+            "Blind Duration:": [
+              " ",
+              2.25,
+              2.5,
+              2.75,
+              3
+            ],
+            "Increased Blind Duration:": [
+              " ",
+              4.5,
+              5,
+              5.5,
+              6
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Blind Duration:": 0,
+            "Increased Blind Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ],
+            "Blind Duration:": 0,
+            "Increased Blind Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "MoveQuick",
-      "cd": [],
+      "cd": [
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              0,
+              28,
+              36,
+              44,
+              52
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ToxicShot",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage On-Hit:": [
+              4,
+              25,
+              36,
+              47,
+              58
+            ],
+            "Magic Damage per Tick:": [
+              " ",
+              12,
+              18,
+              24,
+              30
+            ],
+            "Total Poison Damage:": [
+              4,
+              48,
+              72,
+              96,
+              120
+            ],
+            "Monster Damage On-Hit:": [
+              1,
+              37.5,
+              54,
+              70.5,
+              87
+            ],
+            "Monster Damage per Tick:": [
+              " ",
+              18,
+              27,
+              36,
+              45
+            ],
+            "Total Monster Poison Damage:": [
+              6,
+              72,
+              108,
+              144,
+              180
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage On-Hit:": 0,
+            "Magic Damage per Tick:": 0,
+            "Total Poison Damage:": 0,
+            "Monster Damage On-Hit:": 0,
+            "Monster Damage per Tick:": 0,
+            "Total Monster Poison Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage On-Hit:": [
+              30
+            ],
+            "Magic Damage per Tick:": [
+              10
+            ],
+            "Total Poison Damage:": [
+              40
+            ],
+            "Monster Damage On-Hit:": [
+              45
+            ],
+            "Monster Damage per Tick:": [
+              15
+            ],
+            "Total Monster Poison Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "TeemoRCast",
-      "cd": [],
+      "cd": [
+        0.25
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bounce Distance Cap:": [
+              50,
+              450,
+              550
+            ],
+            "Maximum Charges:": [
+              " ",
+              4,
+              5
+            ],
+            "Slow:": [
+              0,
+              40,
+              50
+            ],
+            "Magic Damage per Tick:": [
+              0,
+              81.25,
+              112.5
+            ],
+            "Total Magic Damage:": [
+              0,
+              325,
+              450
+            ]
+          },
+          "ratioAd": {
+            "Bounce Distance Cap:": 0,
+            "Maximum Charges:": 0,
+            "Slow:": 0,
+            "Magic Damage per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bounce Distance Cap:": 0,
+            "Maximum Charges:": 0,
+            "Slow:": 0,
+            "Magic Damage per Tick:": [
+              13.75
+            ],
+            "Total Magic Damage:": [
+              55
+            ]
+          }
         }
       ],
       "bonus": {}

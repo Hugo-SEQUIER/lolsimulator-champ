@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 645,
-    "hpLvl": 124,
-    "AD": 58,
-    "ADLvl": 3,
+    "Hp": 645.0,
+    "hpLvl": 124.0,
+    "AD": 58.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 22,
+    "Armor": 22.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.1599999964237213,
-    "Mana": 300,
-    "ManaLvl": 70,
+    "Mana": 300.0,
+    "ManaLvl": 70.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,130 @@
   },
   "spell": {
     "Passive": {
-      "img": "Ryze_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RyzeQWrapper",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              110,
+              130,
+              150
+            ],
+            "Bonus Movement Speed:": [
+              8,
+              32,
+              36,
+              40,
+              44
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              55
+            ],
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RyzeW",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RyzeE",
-      "cd": [],
+      "cd": [
+        0.5,
+        3.25,
+        3,
+        2.75,
+        2.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RyzeR",
-      "cd": [],
+      "cd": [
+        10,
+        180,
+        150
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Overload Damage:": [
+              0,
+              70,
+              100
+            ]
+          },
+          "ratioAd": {
+            "Bonus Overload Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Overload Damage:": 0
+          }
         }
       ],
       "bonus": {}

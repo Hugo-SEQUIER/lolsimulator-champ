@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 652,
-    "hpLvl": 114,
-    "AD": 64,
-    "ADLvl": 5,
+    "Hp": 652.0,
+    "hpLvl": 114.0,
+    "AD": 64.0,
+    "ADLvl": 5.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 39,
+    "Armor": 39.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
-    "HpRegen": 2,
+    "HpRegen": 2.0,
     "HpRegenLvl": 0.1899999976158142,
-    "Mana": 263,
-    "ManaLvl": 58,
+    "Mana": 263.0,
+    "ManaLvl": 58.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,156 @@
   },
   "spell": {
     "Passive": {
-      "img": "Darius_Icon_Hemorrhage",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "DariusCleave",
-      "cd": [],
+      "cd": [
+        " ",
+        8,
+        7,
+        6,
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              80,
+              110,
+              140,
+              170
+            ],
+            "Reduced Damage:": [
+              7.5,
+              28,
+              38.5,
+              49,
+              59.5
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100,
+              110,
+              120,
+              130,
+              140
+            ],
+            "Reduced Damage:": [
+              35,
+              38.5,
+              42,
+              45.5,
+              49
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Reduced Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "DariusNoxianTacticsONH",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              40,
+              145,
+              150,
+              155,
+              160
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "DariusAxeGrabCone",
-      "cd": [],
+      "cd": [
+        4,
+        21.5,
+        19,
+        16.5,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Armor Penetration:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Armor Penetration:": 0
+          },
+          "ratioAp": {
+            "Armor Penetration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "DariusExecute",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "True Damage:": [
+              25,
+              250,
+              375
+            ],
+            "Bonus Damage Per Stack:": [
+              5,
+              50,
+              75
+            ],
+            "Maximum True Damage:": [
+              50,
+              500,
+              750
+            ]
+          },
+          "ratioAd": {
+            "True Damage:": [
+              75
+            ],
+            "Bonus Damage Per Stack:": [
+              15
+            ],
+            "Maximum True Damage:": [
+              150
+            ]
+          },
+          "ratioAp": {
+            "True Damage:": 0,
+            "Bonus Damage Per Stack:": 0,
+            "Maximum True Damage:": 0
+          }
         }
       ],
       "bonus": {}

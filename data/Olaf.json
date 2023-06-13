@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 645,
-    "hpLvl": 119,
-    "AD": 68,
+    "Hp": 645.0,
+    "hpLvl": 119.0,
+    "AD": 68.0,
     "ADLvl": 4.699999809265137,
     "AS": 0.6940000057220459,
     "ASRatio": 0.6940000057220459,
-    "Armor": 35,
+    "Armor": 35.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 350,
+    "MS": 350.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2999999523162842,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 316,
-    "ManaLvl": 50,
+    "Mana": 316.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,153 @@
   },
   "spell": {
     "Passive": {
-      "img": "Olaf_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "OlafAxeThrowCast",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              115,
+              165,
+              215,
+              265
+            ],
+            "Slow:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "OlafFrenziedStrikes",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              50,
+              60,
+              70,
+              80
+            ],
+            "Shield Strength:": [
+              0,
+              40,
+              70,
+              100,
+              130
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Shield Strength:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "OlafRecklessStrike",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "True Damage:": [
+              0,
+              115,
+              160,
+              205,
+              250
+            ]
+          },
+          "ratioAd": {
+            "True Damage:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "True Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "OlafRagnarok",
-      "cd": [],
+      "cd": [
+        0,
+        90,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Resistances:": [
+              0,
+              20,
+              30
+            ],
+            "Bonus Attack Damage:": [
+              0,
+              20,
+              30
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              45,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Bonus Resistances:": 0,
+            "Bonus Attack Damage:": [
+              25
+            ],
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Resistances:": 0,
+            "Bonus Attack Damage:": 0,
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 560,
-    "hpLvl": 102,
-    "AD": 50,
+    "Hp": 560.0,
+    "hpLvl": 102.0,
+    "AD": 50.0,
     "ADLvl": 2.6500000953674316,
     "AS": 0.5789999961853027,
     "ASRatio": 0.5789999961853027,
-    "Armor": 19,
+    "Armor": 19.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 418,
-    "ManaLvl": 25,
+    "Mana": 418.0,
+    "ManaLvl": 25.0,
     "AP": 0,
-    "Range": 625,
+    "Range": 625.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,130 @@
   },
   "spell": {
     "Passive": {
-      "img": "Annie_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "AnnieQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              115,
+              150,
+              185,
+              220
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "AnnieW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              115,
+              160,
+              205,
+              250
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              85
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AnnieE",
-      "cd": [],
+      "cd": [
+        2,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              95,
+              130,
+              165,
+              200
+            ],
+            "Magic Damage:": [
+              5,
+              35,
+              45,
+              55,
+              65
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              40
+            ],
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "AnnieR",
-      "cd": [],
+      "cd": [
+        30,
+        115,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Initial Magic Damage:": [
+              50,
+              275,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Initial Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Initial Magic Damage:": [
+              75
+            ]
+          }
         }
       ],
       "bonus": {}

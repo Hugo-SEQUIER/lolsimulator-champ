@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 104,
-    "AD": 64,
-    "ADLvl": 4,
+    "Hp": 610.0,
+    "hpLvl": 104.0,
+    "AD": 64.0,
+    "ADLvl": 4.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 38,
+    "Armor": 38.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.1599999964237213,
-    "Mana": 280,
-    "ManaLvl": 40,
+    "Mana": 280.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,211 @@
   },
   "spell": {
     "Passive": {
-      "img": "Poppy_Passive",
-      "cd": [],
+      "cd": [
+        3,
+        10,
+        "7 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "PoppyQ",
-      "cd": [],
+      "cd": [
+        " ",
+        7,
+        6,
+        5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              60,
+              80,
+              100,
+              120
+            ],
+            "Capped Monster Health Damage:": [
+              0,
+              60,
+              90,
+              120,
+              150
+            ],
+            "Maximum Monster Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ],
+            "Slow:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Total Physical Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Total Maximum Monster Damage:": [
+              40,
+              240,
+              340,
+              440,
+              540
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              90
+            ],
+            "Capped Monster Health Damage:": 0,
+            "Maximum Monster Damage:": [
+              90
+            ],
+            "Slow:": 0,
+            "Total Physical Damage:": [
+              180
+            ],
+            "Total Maximum Monster Damage:": [
+              180
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Capped Monster Health Damage:": 0,
+            "Maximum Monster Damage:": 0,
+            "Slow:": 0,
+            "Total Physical Damage:": 0,
+            "Total Maximum Monster Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "PoppyW",
-      "cd": [],
+      "cd": [
+        0,
+        18,
+        16,
+        14,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "PoppyE",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ],
+            "Stun Duration:": [
+              0.6,
+              1.7,
+              1.8,
+              1.9,
+              2
+            ],
+            "Total Physical Damage:": [
+              20,
+              160,
+              200,
+              240,
+              280
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ],
+            "Stun Duration:": 0,
+            "Total Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Stun Duration:": 0,
+            "Total Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "PoppyR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              150,
+              200
+            ],
+            "Increased Damage:": [
+              0,
+              300,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              45
+            ],
+            "Increased Damage:": [
+              90
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Increased Damage:": 0
+          }
         }
       ],
       "bonus": {}

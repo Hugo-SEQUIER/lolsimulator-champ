@@ -1,0 +1,198 @@
+{
+  "basicStats": {
+    "Hp": 620.0,
+    "hpLvl": 90.0,
+    "AD": 55.0,
+    "ADLvl": 3.200000047683716,
+    "AS": 0.625,
+    "ASRatio": 0.625,
+    "Armor": 22.0,
+    "ArmorLvl": 4.0,
+    "MR": 30.0,
+    "MRLvl": 1.2999999523162842,
+    "MS": 335.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.10999999940395355,
+    "Mana": 530.0,
+    "ManaLvl": 40.0,
+    "AP": 0,
+    "Range": 550.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.15000000596046448
+  },
+  "img": {
+    "centered": "Aurelion_Sol_0",
+    "passive": "AurelionSolP",
+    "QSpell": "AurelionSolQ",
+    "WSpell": "AurelionSolW",
+    "ESpell": "AurelionSolE",
+    "RSpell": "AurelionSolR"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage per Tick:": [
+              ".75 \u2212 10 "
+            ],
+            "Reduced Damage per Tick:": [
+              ".88 \u2212 5 "
+            ],
+            "Bonus Magic Damage:": [
+              "0 \u2212 30 "
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage per Tick:": 0,
+            "Reduced Damage per Tick:": 0,
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage per Tick:": [
+              "ased on level) (+ 1.875 ",
+              3.125,
+              4.375,
+              5.625,
+              "6.875) (+\u00a07.5"
+            ],
+            "Reduced Damage per Tick:": [
+              "ased on level) (+ 0.9375 ",
+              1.5625,
+              2.1875,
+              2.8125,
+              "3.4375) (+\u00a03.75"
+            ],
+            "Bonus Magic Damage:": [
+              "ased on level) (+ 40 ",
+              50,
+              60,
+              70,
+              "80) (+\u00a035"
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        2,
+        20.5,
+        19,
+        17.5,
+        16
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            " Breath of Light Flat Damage Modifier:": [
+              14,
+              115.5,
+              117,
+              118.5,
+              120
+            ]
+          },
+          "ratioAd": {
+            " Breath of Light Flat Damage Modifier:": 0
+          },
+          "ratioAp": {
+            " Breath of Light Flat Damage Modifier:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        2
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage per Tick:": [
+              0.5,
+              3.75,
+              5,
+              6.25,
+              7.5
+            ],
+            "Total Magic Damage:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage per Tick:": [
+              5
+            ],
+            "Total Magic Damage:": [
+              100
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        20,
+        110,
+        100
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage:": [
+              50,
+              250,
+              350
+            ],
+            "Empowered Magic Damage:": [
+              87.5,
+              312.5,
+              437.5
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Empowered Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Empowered Magic Damage:": [
+              81.25
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

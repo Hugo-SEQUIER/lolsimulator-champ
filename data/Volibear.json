@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 650,
-    "hpLvl": 104,
-    "AD": 60,
+    "Hp": 650.0,
+    "hpLvl": 104.0,
+    "AD": 60.0,
     "ADLvl": 3.5,
     "AS": 0.625,
     "ASRatio": 0.699999988079071,
-    "Armor": 31,
+    "Armor": 31.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 350,
-    "ManaLvl": 70,
+    "Mana": 350.0,
+    "ManaLvl": 70.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,186 @@
   },
   "spell": {
     "Passive": {
-      "img": "Volibear_Icon_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "VolibearQ",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              " ",
+              12,
+              16,
+              20,
+              24
+            ],
+            "Increased Bonus Movement Speed:": [
+              6,
+              24,
+              32,
+              40,
+              48
+            ],
+            "Bonus Physical Damage:": [
+              0,
+              30,
+              50,
+              70,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Increased Bonus Movement Speed:": 0,
+            "Bonus Physical Damage:": [
+              120
+            ]
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": 0,
+            "Increased Bonus Movement Speed:": 0,
+            "Bonus Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "VolibearW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              " ",
+              30,
+              55,
+              80,
+              105
+            ],
+            "Increased Damage:": [
+              0.5,
+              45,
+              82.5,
+              120,
+              157.5
+            ],
+            "Heal:": [
+              0,
+              35,
+              50,
+              65,
+              80
+            ],
+            "Minion Heal:": [
+              0,
+              17.5,
+              25,
+              32.5,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ],
+            "Increased Damage:": [
+              150
+            ],
+            "Heal:": 0,
+            "Minion Heal:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Increased Damage:": 0,
+            "Heal:": 0,
+            "Minion Heal:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VolibearE",
-      "cd": [],
+      "cd": [
+        3
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80,
+              12,
+              13,
+              14,
+              15
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "VolibearR",
-      "cd": [],
+      "cd": [
+        60,
+        140,
+        120
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Health:": [
+              75,
+              350,
+              525
+            ],
+            "Physical Damage:": [
+              0,
+              500,
+              700
+            ],
+            "Turret Disable Duration:": [
+              " ",
+              4,
+              5
+            ]
+          },
+          "ratioAd": {
+            "Bonus Health:": 0,
+            "Physical Damage:": [
+              250
+            ],
+            "Turret Disable Duration:": 0
+          },
+          "ratioAp": {
+            "Bonus Health:": 0,
+            "Physical Damage:": [
+              250
+            ],
+            "Turret Disable Duration:": 0
+          }
         }
       ],
       "bonus": {}

@@ -1,0 +1,202 @@
+{
+  "basicStats": {
+    "Hp": 640.0,
+    "hpLvl": 103.0,
+    "AD": 52.0,
+    "ADLvl": 2.4000000953674316,
+    "AS": 0.656000018119812,
+    "ASRatio": 0.656000018119812,
+    "Armor": 28.0,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 30.0,
+    "MRLvl": 1.2999999523162842,
+    "MS": 325.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 0.75,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 300.0,
+    "ManaLvl": 40.0,
+    "AP": 0,
+    "Range": 550.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 1.600000023841858,
+    "ManaRegenLvl": 0.1599999964237213
+  },
+  "img": {
+    "centered": "Miss_Fortune_0",
+    "passive": "MissFortune_W",
+    "QSpell": "MissFortuneRicochetShot",
+    "WSpell": "MissFortuneViciousStrikes",
+    "ESpell": "MissFortuneScattershot",
+    "RSpell": "MissFortuneBulletTime"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        " ",
+        6,
+        5,
+        4,
+        3
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              0,
+              45,
+              70,
+              95,
+              120
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": [
+              100
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        2
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Increased Bonus Movement Speed:": [
+              5,
+              65,
+              75,
+              85,
+              95
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              55,
+              70,
+              85,
+              100
+            ]
+          },
+          "ratioAd": {
+            "Increased Bonus Movement Speed:": 0,
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Increased Bonus Movement Speed:": 0,
+            "Bonus Attack Speed:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        8,
+        17,
+        16,
+        15,
+        14
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage Per Tick:": [
+              0.75,
+              12.5,
+              16.25,
+              20,
+              23.75
+            ],
+            "Total Magic Damage:": [
+              0,
+              100,
+              130,
+              160,
+              190
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              15
+            ],
+            "Total Magic Damage:": [
+              120
+            ]
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        20,
+        110,
+        100
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Total Waves:": [
+              4,
+              16,
+              18
+            ],
+            "Maximum Total Physical Damage:": [
+              50,
+              1200,
+              1350
+            ],
+            "Wave Interval Time:": [
+              0.2036,
+              0.1781,
+              0.1583
+            ]
+          },
+          "ratioAd": {
+            "Total Waves:": 0,
+            "Maximum Total Physical Damage:": [
+              350,
+              400,
+              450
+            ],
+            "Wave Interval Time:": 0
+          },
+          "ratioAp": {
+            "Total Waves:": 0,
+            "Maximum Total Physical Damage:": [
+              350,
+              400,
+              450
+            ],
+            "Wave Interval Time:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

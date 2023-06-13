@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 644,
-    "hpLvl": 94,
-    "AD": 69,
+    "Hp": 644.0,
+    "hpLvl": 94.0,
+    "AD": 69.0,
     "ADLvl": 4.199999809265137,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 38,
-    "ArmorLvl": 5,
-    "MR": 32,
+    "Armor": 38.0,
+    "ArmorLvl": 5.0,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 270,
-    "ManaLvl": 60,
+    "Mana": 270.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -28,7 +28,7 @@
     "ManaRegenLvl": 0.09000000357627869
   },
   "img": {
-    "centered": "ChoGath_0",
+    "centered": "Chogath_0",
     "passive": "GreenTerror_TailSpike",
     "QSpell": "Rupture",
     "WSpell": "FeralScream",
@@ -37,56 +37,189 @@
   },
   "spell": {
     "Passive": {
-      "img": "GreenTerror_TailSpike",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "Rupture",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic damage:": [
+              0,
+              140,
+              200,
+              260,
+              320
+            ]
+          },
+          "ratioAd": {
+            "Magic damage:": 0
+          },
+          "ratioAp": {
+            "Magic damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "FeralScream",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic damage:": [
+              0,
+              135,
+              190,
+              245,
+              300
+            ],
+            "Silence Duration:": [
+              0.6,
+              1.7,
+              1.8,
+              1.9,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic damage:": 0,
+            "Silence Duration:": 0
+          },
+          "ratioAp": {
+            "Magic damage:": [
+              70
+            ],
+            "Silence Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "VorpalSpikes",
-      "cd": [],
+      "cd": [
+        " ",
+        7,
+        6,
+        5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              2,
+              34,
+              46,
+              58,
+              70
+            ],
+            "Total Magic Damage:": [
+              6,
+              102,
+              138,
+              174,
+              210
+            ],
+            "Capped Monster Percent Damage:": [
+              0,
+              80,
+              100,
+              120,
+              140
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Capped Monster Percent Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              30
+            ],
+            "Total Magic Damage:": [
+              90
+            ],
+            "Capped Monster Percent Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "Feast",
-      "cd": [],
+      "cd": [
+        0,
+        70,
+        60
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Champion True Damage:": [
+              0,
+              475,
+              650
+            ],
+            "Non-Champion True Damage:": [
+              200
+            ],
+            "Bonus Health Per Stack:": [
+              0,
+              120,
+              160
+            ],
+            "Bonus Attack Range Per Stack:": [
+              0.62,
+              6.15,
+              7.69
+            ],
+            "Bonus Size Per Stack:": [
+              " ",
+              8,
+              10
+            ]
+          },
+          "ratioAd": {
+            "Champion True Damage:": 0,
+            "Non-Champion True Damage:": 0,
+            "Bonus Health Per Stack:": 0,
+            "Bonus Attack Range Per Stack:": 0,
+            "Bonus Size Per Stack:": 0
+          },
+          "ratioAp": {
+            "Champion True Damage:": [
+              50
+            ],
+            "Non-Champion True Damage:": [
+              50
+            ],
+            "Bonus Health Per Stack:": 0,
+            "Bonus Attack Range Per Stack:": 0,
+            "Bonus Size Per Stack:": 0
+          }
         }
       ],
       "bonus": {}

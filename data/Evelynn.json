@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 642,
-    "hpLvl": 98,
-    "AD": 61,
-    "ADLvl": 3,
+    "Hp": 642.0,
+    "hpLvl": 98.0,
+    "AD": 61.0,
+    "ADLvl": 3.0,
     "AS": 0.6669999957084656,
     "ASRatio": 0.6669999957084656,
-    "Armor": 37,
+    "Armor": 37.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 315,
-    "ManaLvl": 42,
+    "Mana": 315.0,
+    "ManaLvl": 42.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,210 @@
   },
   "spell": {
     "Passive": {
-      "img": "Evelynn_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "EvelynnQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ],
+            "Bonus Magic Damage:": [
+              5,
+              25,
+              35,
+              45,
+              55
+            ],
+            "Total Bonus Damage:": [
+              5,
+              75,
+              105,
+              135,
+              165
+            ],
+            "Maximum Magic Damage:": [
+              5,
+              90,
+              105,
+              120,
+              135
+            ],
+            "Total Magic Damage:": [
+              30,
+              180,
+              230,
+              280,
+              330
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Magic Damage:": 0,
+            "Total Bonus Damage:": 0,
+            "Maximum Magic Damage:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              30
+            ],
+            "Bonus Magic Damage:": [
+              25
+            ],
+            "Total Bonus Damage:": [
+              75
+            ],
+            "Maximum Magic Damage:": [
+              90
+            ],
+            "Total Magic Damage:": [
+              195
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "EvelynnW",
-      "cd": [],
+      "cd": [
+        5,
+        14,
+        13,
+        12,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Charm Duration:": [
+              0.25,
+              1.5,
+              1.75,
+              2,
+              2.25
+            ],
+            "Monster Duration:": [
+              0.25,
+              3.5,
+              3.75,
+              4,
+              4.25
+            ],
+            "Magic Resistance Reduction:": [
+              5,
+              37.5,
+              40,
+              42.5,
+              45
+            ],
+            "Bonus Magic Damage:": [
+              50,
+              300,
+              350,
+              400,
+              450
+            ]
+          },
+          "ratioAd": {
+            "Charm Duration:": 0,
+            "Monster Duration:": 0,
+            "Magic Resistance Reduction:": 0,
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Charm Duration:": 0,
+            "Monster Duration:": 0,
+            "Magic Resistance Reduction:": 0,
+            "Bonus Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "EvelynnE",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              70,
+              85,
+              100,
+              115
+            ],
+            "Empowered Magic Damage:": [
+              5,
+              100,
+              125,
+              150,
+              175
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Empowered Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              3
+            ],
+            "Empowered Magic Damage:": [
+              4
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "EvelynnR",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              25,
+              250,
+              375
+            ],
+            "Empowered Damage:": [
+              0,
+              600,
+              900
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Empowered Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              75
+            ],
+            "Empowered Damage:": [
+              180
+            ]
+          }
         }
       ],
       "bonus": {}

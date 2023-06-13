@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 645,
-    "hpLvl": 99,
-    "AD": 55,
+    "Hp": 645.0,
+    "hpLvl": 99.0,
+    "AD": 55.0,
     "ADLvl": 3.5,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 40,
+    "Armor": 40.0,
     "ArmorLvl": 4.599999904632568,
-    "MR": 28,
+    "MR": 28.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 300,
-    "ManaLvl": 60,
+    "Mana": 300.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,112 @@
   },
   "spell": {
     "Passive": {
-      "img": "Taric_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "TaricQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Maximum Charges:": [
+              " ",
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "ratioAd": {
+            "Maximum Charges:": 0
+          },
+          "ratioAp": {
+            "Maximum Charges:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "TaricW",
-      "cd": [],
+      "cd": [
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Armor:": [
+              0,
+              11,
+              12,
+              13,
+              14
+            ],
+            "Shield Strength:": [
+              " ",
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "ratioAd": {
+            "Bonus Armor:": 0,
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Bonus Armor:": 0,
+            "Shield Strength:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "TaricE",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              130,
+              170,
+              210,
+              250
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "TaricR",
-      "cd": [],
+      "cd": [
+        80,
+        150,
+        120
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

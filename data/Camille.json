@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 646,
-    "hpLvl": 99,
-    "AD": 68,
+    "Hp": 646.0,
+    "hpLvl": 99.0,
+    "AD": 68.0,
     "ADLvl": 3.5,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 35,
-    "ArmorLvl": 5,
-    "MR": 32,
+    "Armor": 35.0,
+    "ArmorLvl": 5.0,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.1599999964237213,
-    "Mana": 339,
-    "ManaLvl": 52,
+    "Mana": 339.0,
+    "ManaLvl": 52.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,194 @@
   },
   "spell": {
     "Passive": {
-      "img": "Camille_Passive",
-      "cd": [],
+      "cd": [
+        0,
+        15,
+        "10 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "CamilleQ",
-      "cd": [],
+      "cd": [
+        " ",
+        8.25,
+        7.5,
+        6.75,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Increased Mixed Damage:": [
+              0,
+              50,
+              60,
+              70,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": 0,
+            "Bonus Movement Speed:": 0,
+            "Increased Mixed Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Bonus Movement Speed:": 0,
+            "Increased Mixed Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "CamilleW",
-      "cd": [],
+      "cd": [
+        7,
+        15.5,
+        14,
+        12.5,
+        11
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              100,
+              130,
+              160,
+              190
+            ],
+            "Outer Cone Bonus Damage:": [
+              " ",
+              5.5,
+              6,
+              6.5,
+              7
+            ],
+            "Non-Epic Monster Damage:": [
+              5,
+              50,
+              65,
+              80,
+              95
+            ],
+            "Bonus Non-Epic Monster Damage:": [
+              0.5,
+              2.75,
+              3,
+              3.25,
+              3.5
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              60
+            ],
+            "Outer Cone Bonus Damage:": [
+              2.5
+            ],
+            "Non-Epic Monster Damage:": [
+              30
+            ],
+            "Bonus Non-Epic Monster Damage:": [
+              1.25
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Outer Cone Bonus Damage:": 0,
+            "Non-Epic Monster Damage:": 0,
+            "Bonus Non-Epic Monster Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "CamilleE",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              90
+            ],
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "CamilleR",
-      "cd": [],
+      "cd": [
+        40,
+        115,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Zone Duration:": [
+              0.5,
+              3.25,
+              4
+            ],
+            "Bonus Magic Damage:": [
+              " ",
+              10,
+              15
+            ]
+          },
+          "ratioAd": {
+            "Zone Duration:": 0,
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Zone Duration:": 0,
+            "Bonus Magic Damage:": 0
+          }
         }
       ],
       "bonus": {}

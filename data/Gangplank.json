@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 600,
-    "hpLvl": 114,
-    "AD": 64,
+    "Hp": 600.0,
+    "hpLvl": 114.0,
+    "AD": 64.0,
     "ADLvl": 3.700000047683716,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6899999976158142,
-    "Armor": 31,
+    "Armor": 31.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 280,
-    "ManaLvl": 60,
+    "Mana": 280.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,209 @@
   },
   "spell": {
     "Passive": {
-      "img": "Gangplank_Passive",
-      "cd": [],
+      "cd": [
+        5
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "GangplankQWrapper",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              40,
+              70,
+              100,
+              130
+            ],
+            "Gold Plunder:": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "Silver Serpent Plunder:": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ],
+            "Gold Plunder:": 0,
+            "Silver Serpent Plunder:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Gold Plunder:": 0,
+            "Silver Serpent Plunder:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "GangplankW",
-      "cd": [],
+      "cd": [
+        2,
+        20,
+        18,
+        16,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              5,
+              70,
+              95,
+              120,
+              145
+            ]
+          },
+          "ratioAd": {
+            "Heal:": 0
+          },
+          "ratioAp": {
+            "Heal:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "GangplankE",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Maximum charges:": [
+              " ",
+              3,
+              4,
+              4,
+              5
+            ],
+            "Slow:": [
+              0,
+              37.5,
+              45,
+              52.5,
+              60
+            ],
+            "Bonus Champion Damage:": [
+              5,
+              105,
+              135,
+              165,
+              195
+            ]
+          },
+          "ratioAd": {
+            "Maximum charges:": 0,
+            "Slow:": 0,
+            "Bonus Champion Damage:": 0
+          },
+          "ratioAp": {
+            "Maximum charges:": 0,
+            "Slow:": 0,
+            "Bonus Champion Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "GangplankR",
-      "cd": [],
+      "cd": [
+        80,
+        160,
+        140
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Wave:": [
+              0,
+              70,
+              100
+            ],
+            "Magic Damage Per Cluster:": [
+              20,
+              210,
+              300
+            ],
+            "Total Magic Damage:": [
+              80,
+              840,
+              1200
+            ],
+            "True Damage with  Death's Daughter:": [
+              20,
+              210,
+              300
+            ],
+            "Total Mixed Damage with  Death's Daughter:": [
+              0,
+              1050,
+              1500
+            ],
+            "Total Magic Damage with  Fire at Will:": [
+              20,
+              1260,
+              1800
+            ],
+            "Maximum Mixed Total Damage with  Fire at Will and  Death's Daughter:": [
+              40,
+              1470,
+              2100
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Wave:": 0,
+            "Magic Damage Per Cluster:": 0,
+            "Total Magic Damage:": 0,
+            "True Damage with  Death's Daughter:": 0,
+            "Total Mixed Damage with  Death's Daughter:": 0,
+            "Total Magic Damage with  Fire at Will:": 0,
+            "Maximum Mixed Total Damage with  Fire at Will and  Death's Daughter:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Wave:": [
+              10
+            ],
+            "Magic Damage Per Cluster:": [
+              30
+            ],
+            "Total Magic Damage:": [
+              120
+            ],
+            "True Damage with  Death's Daughter:": [
+              30
+            ],
+            "Total Mixed Damage with  Death's Daughter:": [
+              150
+            ],
+            "Total Magic Damage with  Fire at Will:": [
+              180
+            ],
+            "Maximum Mixed Total Damage with  Fire at Will and  Death's Daughter:": [
+              210
+            ]
+          }
         }
       ],
       "bonus": {}

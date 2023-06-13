@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 100,
-    "AD": 59,
+    "Hp": 630.0,
+    "hpLvl": 100.0,
+    "AD": 59.0,
     "ADLvl": 3.1500000953674316,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.75,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 260,
-    "ManaLvl": 50,
+    "Mana": 260.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,192 @@
   },
   "spell": {
     "Passive": {
-      "img": "Jinx_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "JinxQ",
-      "cd": [],
+      "cd": [
+        0.9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              5,
+              27.5,
+              40,
+              52.5,
+              65
+            ],
+            "Attack Speed per Subsequent Stack:": [
+              0.5,
+              13.75,
+              20,
+              26.25,
+              32.5
+            ],
+            "Maximum Attack Speed:": [
+              0,
+              55,
+              80,
+              105,
+              130
+            ],
+            "Bonus Range:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Attack Speed per Subsequent Stack:": 0,
+            "Maximum Attack Speed:": 0,
+            "Bonus Range:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Attack Speed per Subsequent Stack:": 0,
+            "Maximum Attack Speed:": 0,
+            "Bonus Range:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "JinxW",
-      "cd": [],
+      "cd": [
+        " ",
+        7,
+        6,
+        5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              60,
+              110,
+              160,
+              210
+            ],
+            "Slow:": [
+              0,
+              50,
+              60,
+              70,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              160
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "JinxE",
-      "cd": [],
+      "cd": [
+        4,
+        20.5,
+        17,
+        13.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "JinxR",
-      "cd": [],
+      "cd": [
+        5,
+        65,
+        55
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Maximum Physical Damage:": [
+              0,
+              450,
+              600
+            ],
+            "Minimum Physical Damage:": [
+              0,
+              45,
+              60
+            ],
+            "Maximum Secondary Damage:": [
+              40,
+              360,
+              480
+            ],
+            "Minimum Secondary Damage:": [
+              4,
+              36,
+              48
+            ]
+          },
+          "ratioAd": {
+            "Maximum Physical Damage:": [
+              150,
+              30,
+              35
+            ],
+            "Minimum Physical Damage:": [
+              15,
+              30,
+              35
+            ],
+            "Maximum Secondary Damage:": [
+              120,
+              24,
+              28
+            ],
+            "Minimum Secondary Damage:": [
+              12,
+              24,
+              28
+            ]
+          },
+          "ratioAp": {
+            "Maximum Physical Damage:": 0,
+            "Minimum Physical Damage:": 0,
+            "Maximum Secondary Damage:": 0,
+            "Minimum Secondary Damage:": 0
+          }
         }
       ],
       "bonus": {}

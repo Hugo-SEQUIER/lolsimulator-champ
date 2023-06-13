@@ -1,0 +1,209 @@
+{
+  "basicStats": {
+    "Hp": 645.0,
+    "hpLvl": 105.0,
+    "AD": 66.0,
+    "ADLvl": 3.700000047683716,
+    "AS": 0.6510000228881836,
+    "ASRatio": 0.6510000228881836,
+    "Armor": 34.0,
+    "ArmorLvl": 4.900000095367432,
+    "MR": 32.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 345.0,
+    "Lifesteal": 0,
+    "Crit": 0,
+    "CritDmg": 175,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.14000000059604645,
+    "Mana": 200.0,
+    "ManaLvl": 0,
+    "AP": 0,
+    "Range": 125.0,
+    "ArmorPen": 0,
+    "ResistPen": 0,
+    "Haste": 0,
+    "SpellVamp": 0,
+    "ManaRegen": 10.0,
+    "ManaRegenLvl": 0
+  },
+  "img": {
+    "centered": "Lee_Sin_0",
+    "passive": "LeeSinPassive",
+    "QSpell": "BlindMonkQOne",
+    "WSpell": "BlindMonkWOne",
+    "ESpell": "BlindMonkEOne",
+    "RSpell": "BlindMonkRKick"
+  },
+  "spell": {
+    "Passive": {
+      "cd": "A DEFINIR",
+      "damage": 0,
+      "ratioAd": 0,
+      "ratioAp": 0
+    },
+    "Q": {
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              5,
+              80,
+              105,
+              130,
+              155
+            ],
+            "Minimum Physical Damage:": [
+              5,
+              80,
+              105,
+              130,
+              155
+            ],
+            "Maximum Physical Damage:": [
+              10,
+              160,
+              210,
+              260,
+              310
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              110
+            ],
+            "Minimum Physical Damage:": [
+              110
+            ],
+            "Maximum Physical Damage:": [
+              220
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "W": {
+      "cd": [
+        2
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Shield Strength:": [
+              0,
+              100,
+              150,
+              200,
+              250
+            ],
+            "Bonus Drain:": [
+              " ",
+              10.5,
+              16,
+              21.5,
+              27
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Bonus Drain:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              80
+            ],
+            "Bonus Drain:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "E": {
+      "cd": [
+        ""
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Magic Damage:": [
+              5,
+              65,
+              95,
+              125,
+              155
+            ],
+            "Slow:": [
+              0,
+              35,
+              50,
+              65,
+              80
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              100
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    },
+    "R": {
+      "cd": [
+        10,
+        85,
+        60
+      ],
+      "basicStats": [
+        {
+          "damage": {
+            "Physical Damage:": [
+              75,
+              400,
+              625
+            ],
+            "Collision Physical Damage:": [
+              75,
+              400,
+              625
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              200
+            ],
+            "Collision Physical Damage:": [
+              200,
+              15,
+              18
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Collision Physical Damage:": 0
+          }
+        }
+      ],
+      "bonus": {}
+    }
+  }
+}

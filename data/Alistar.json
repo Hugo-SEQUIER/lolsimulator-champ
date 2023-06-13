@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 685,
-    "hpLvl": 120,
-    "AD": 62,
+    "Hp": 685.0,
+    "hpLvl": 120.0,
+    "AD": 62.0,
     "ADLvl": 3.75,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 47,
+    "Armor": 47.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7000000476837158,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 350,
-    "ManaLvl": 40,
+    "Mana": 350.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,138 @@
   },
   "spell": {
     "Passive": {
-      "img": "Alistar_E",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "Pulverize",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "Headbutt",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              110,
+              165,
+              220,
+              275
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "AlistarE",
-      "cd": [],
+      "cd": [
+        2,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              " ",
+              11,
+              14,
+              17,
+              20
+            ],
+            "Total Magic Damage:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              7
+            ],
+            "Total Magic Damage:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "FerociousHowl",
-      "cd": [],
+      "cd": [
+        20,
+        100,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Damage Reduction:": [
+              5,
+              65,
+              75
+            ]
+          },
+          "ratioAd": {
+            "Damage Reduction:": 0
+          },
+          "ratioAp": {
+            "Damage Reduction:": 0
+          }
         }
       ],
       "bonus": {}

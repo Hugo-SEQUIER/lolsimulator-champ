@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 660,
-    "hpLvl": 102,
-    "AD": 60,
+    "Hp": 660.0,
+    "hpLvl": 102.0,
+    "AD": 60.0,
     "ADLvl": 3.5,
     "AS": 0.6579999923706055,
     "ASRatio": 0.6579999923706055,
-    "Armor": 25,
+    "Armor": 25.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.6499999761581421,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 340,
-    "ManaLvl": 40,
+    "Mana": 340.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 525,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,169 @@
   },
   "spell": {
     "Passive": {
-      "img": "XayahPassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "XayahQ",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Hit:": [
+              5,
+              60,
+              75,
+              90,
+              105
+            ],
+            "Total Physical Damage:": [
+              0,
+              120,
+              150,
+              180,
+              210
+            ],
+            "Reduced Damage per Hit:": [
+              2.5,
+              30,
+              37.5,
+              45,
+              52.5
+            ],
+            "Total Reduced Damage:": [
+              5,
+              60,
+              75,
+              90,
+              105
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Hit:": [
+              50
+            ],
+            "Total Physical Damage:": [
+              100
+            ],
+            "Reduced Damage per Hit:": [
+              25
+            ],
+            "Total Reduced Damage:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Hit:": 0,
+            "Total Physical Damage:": 0,
+            "Reduced Damage per Hit:": 0,
+            "Total Reduced Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "XayahW",
-      "cd": [],
+      "cd": [
+        0,
+        19,
+        18,
+        17,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              5,
+              40,
+              45,
+              50,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "XayahE",
-      "cd": [],
+      "cd": [
+        1,
+        10.5,
+        10,
+        9.5,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage Per Feather:": [
+              0,
+              60,
+              70,
+              80,
+              90
+            ],
+            "Minion Damage Per Feather:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage Per Feather:": [
+              60
+            ],
+            "Minion Damage Per Feather:": [
+              30
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage Per Feather:": 0,
+            "Minion Damage Per Feather:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "XayahR",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              300,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

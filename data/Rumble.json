@@ -1,29 +1,30 @@
 {
   "basicStats": {
-    "Hp": 659,
-    "hpLvl": 99,
-    "AD": 61,
+    "Hp": 659.0,
+    "hpLvl": 99.0,
+    "AD": 61.0,
     "ADLvl": 3.200000047683716,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 36,
+    "Armor": 36.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 28,
+    "MR": 28.0,
     "MRLvl": 1.5499999523162842,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.11999999731779099,
+    "Mana": null,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -36,56 +37,358 @@
   },
   "spell": {
     "Passive": {
-      "img": "Rumble_JunkyardTitan1",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RumbleFlameThrower",
-      "cd": [],
+      "cd": [
+        0,
+        9,
+        8,
+        7,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              80,
+              220,
+              260,
+              300,
+              340
+            ],
+            "Magic Damage Per Tick:": [
+              5,
+              18.333,
+              21.667,
+              25,
+              28.333
+            ],
+            "Modified Minion Damage:": [
+              0,
+              65,
+              70,
+              75,
+              80
+            ],
+            "Total Minion Damage:": [
+              8,
+              143,
+              182,
+              225,
+              272
+            ],
+            "Minion Damage Per Tick:": [
+              3.5,
+              17.875,
+              22.75,
+              28.125,
+              34
+            ],
+            "Total Enhanced Damage:": [
+              70,
+              330,
+              390,
+              450,
+              510
+            ],
+            "Enhanced Damage Per Tick:": [
+              2.5,
+              27.5,
+              32.5,
+              37.5,
+              42.5
+            ],
+            "Total Enhanced Minion Damage:": [
+              62,
+              214.5,
+              273,
+              337.5,
+              408
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": 0,
+            "Magic Damage Per Tick:": 0,
+            "Modified Minion Damage:": 0,
+            "Total Minion Damage:": 0,
+            "Minion Damage Per Tick:": 0,
+            "Total Enhanced Damage:": 0,
+            "Enhanced Damage Per Tick:": 0,
+            "Total Enhanced Minion Damage:": 0
+          },
+          "ratioAp": {
+            "Total Magic Damage:": [
+              110
+            ],
+            "Magic Damage Per Tick:": [
+              9.17
+            ],
+            "Modified Minion Damage:": 0,
+            "Total Minion Damage:": [
+              66,
+              71.5,
+              77,
+              82.5,
+              88
+            ],
+            "Minion Damage Per Tick:": [
+              8.25,
+              8.9375,
+              9.625,
+              10.3125,
+              11
+            ],
+            "Total Enhanced Damage:": [
+              165
+            ],
+            "Enhanced Damage Per Tick:": [
+              13.75
+            ],
+            "Total Enhanced Minion Damage:": [
+              99,
+              107.25,
+              115.5,
+              123.75,
+              132
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RumbleShield",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ],
+            "Enhanced Shield Strength:": [
+              0,
+              135,
+              180,
+              225,
+              270
+            ],
+            "Enhanced Bonus Movement Speed:": [
+              5,
+              22.5,
+              30,
+              37.5,
+              45
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Bonus Movement Speed:": 0,
+            "Enhanced Shield Strength:": 0,
+            "Enhanced Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              45
+            ],
+            "Bonus Movement Speed:": 0,
+            "Enhanced Shield Strength:": [
+              67.5
+            ],
+            "Enhanced Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RumbleGrenade",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              85,
+              110,
+              135,
+              160
+            ],
+            "Total Magic Damage:": [
+              20,
+              170,
+              220,
+              270,
+              320
+            ],
+            "Magic Resistance Reduction:": [
+              2,
+              14,
+              16,
+              18,
+              20
+            ],
+            "Total MR Reduction:": [
+              4,
+              28,
+              32,
+              36,
+              40
+            ],
+            "Slow:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Total Slow:": [
+              0,
+              40,
+              50,
+              60,
+              70
+            ],
+            "Enhanced Damage:": [
+              0,
+              127.5,
+              165,
+              202.5,
+              240
+            ],
+            "Total Enhanced Damage:": [
+              80,
+              255,
+              330,
+              405,
+              480
+            ],
+            "Enhanced Magic Resistance Reduction:": [
+              8,
+              21,
+              24,
+              27,
+              30
+            ],
+            "Total Enhanced MR Reduction:": [
+              6,
+              42,
+              48,
+              54,
+              60
+            ],
+            "Enhanced Slow:": [
+              2.5,
+              30,
+              37.5,
+              45,
+              52.5
+            ],
+            "Total Enhanced Slow:": [
+              5,
+              60,
+              75,
+              90,
+              105
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Magic Resistance Reduction:": 0,
+            "Total MR Reduction:": 0,
+            "Slow:": 0,
+            "Total Slow:": 0,
+            "Enhanced Damage:": 0,
+            "Total Enhanced Damage:": 0,
+            "Enhanced Magic Resistance Reduction:": 0,
+            "Total Enhanced MR Reduction:": 0,
+            "Enhanced Slow:": 0,
+            "Total Enhanced Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Total Magic Damage:": [
+              80
+            ],
+            "Magic Resistance Reduction:": 0,
+            "Total MR Reduction:": 0,
+            "Slow:": 0,
+            "Total Slow:": 0,
+            "Enhanced Damage:": [
+              60
+            ],
+            "Total Enhanced Damage:": [
+              120
+            ],
+            "Enhanced Magic Resistance Reduction:": 0,
+            "Total Enhanced MR Reduction:": 0,
+            "Enhanced Slow:": 0,
+            "Total Enhanced Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RumbleCarpetBomb",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              0,
+              105,
+              140
+            ],
+            "Minimum Magic Damage:": [
+              40,
+              210,
+              280
+            ],
+            "Maximum Magic Damage:": [
+              0,
+              1050,
+              1400
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              17.5
+            ],
+            "Minimum Magic Damage:": [
+              35
+            ],
+            "Maximum Magic Damage:": [
+              175
+            ]
+          }
         }
       ],
       "bonus": {}

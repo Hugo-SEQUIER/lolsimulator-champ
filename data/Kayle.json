@@ -1,24 +1,25 @@
 {
   "basicStats": {
-    "Hp": 670,
-    "hpLvl": 92,
-    "AD": 50,
+    "Hp": 670.0,
+    "hpLvl": 92.0,
+    "AD": 50.0,
     "ADLvl": 2.5,
     "AS": 0.625,
     "ASRatio": 0.6669999957084656,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 22,
+    "MR": 22.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
+    "HpRegen": null,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 330,
-    "ManaLvl": 50,
+    "Mana": 330.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -36,56 +37,160 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kayle_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KayleQ",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ],
+            "Slow:": [
+              6,
+              32,
+              38,
+              44,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              60
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KayleW",
-      "cd": [],
+      "cd": [
+        5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              5,
+              80,
+              105,
+              130,
+              155
+            ],
+            "Bonus Movement Speed:": [
+              4,
+              28,
+              32,
+              36,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Heal:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Heal:": [
+              25
+            ],
+            "Bonus Movement Speed:": [
+              8
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KayleE",
-      "cd": [],
+      "cd": [
+        " ",
+        7.5,
+        7,
+        6.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Passive Damage:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Bonus Magic Damage:": [
+              " ",
+              8.5,
+              9,
+              9.5,
+              10
+            ]
+          },
+          "ratioAd": {
+            "Passive Damage:": [
+              10
+            ],
+            "Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Passive Damage:": [
+              10
+            ],
+            "Bonus Magic Damage:": [
+              1.5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KayleR",
-      "cd": [],
+      "cd": [
+        60,
+        120,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              300,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}

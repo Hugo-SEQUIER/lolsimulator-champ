@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 558,
-    "hpLvl": 101,
-    "AD": 56,
+    "Hp": 558.0,
+    "hpLvl": 101.0,
+    "AD": 56.0,
     "ADLvl": 2.700000047683716,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 19,
+    "Armor": 19.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 385,
-    "ManaLvl": 20,
+    "Mana": 385.0,
+    "ManaLvl": 20.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,178 @@
   },
   "spell": {
     "Passive": {
-      "img": "Heimerdinger_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "HeimerdingerQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "HeimerdingerW",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Initial Magic Damage:": [
+              0,
+              65,
+              90,
+              115,
+              140
+            ],
+            "Additional Magic Damage:": [
+              " ",
+              13,
+              18,
+              23,
+              28
+            ],
+            "Total Magic Damage:": [
+              2,
+              117,
+              162,
+              207,
+              252
+            ],
+            "Additional Minion Damage:": [
+              4,
+              39,
+              54,
+              69,
+              84
+            ],
+            "Total Minion Damage:": [
+              700,
+              3600,
+              4500
+            ],
+            "Initial Rocket Damage:": [
+              35,
+              180,
+              225
+            ],
+            "2-5 Rocket Magic Damage:": [
+              2,
+              45,
+              58
+            ],
+            "6-20 Rocket Damage:": [
+              6,
+              22.5,
+              29
+            ],
+            "Total Damage:": [
+              3,
+              697.5,
+              892
+            ],
+            "Minion Rocket Damage:": [
+              35,
+              180,
+              225
+            ]
+          },
+          "ratioAd": {
+            "Initial Magic Damage:": 0,
+            "Additional Magic Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Additional Minion Damage:": 0,
+            "Total Minion Damage:": 0,
+            "Initial Rocket Damage:": 0,
+            "2-5 Rocket Magic Damage:": 0,
+            "6-20 Rocket Damage:": 0,
+            "Total Damage:": 0,
+            "Minion Rocket Damage:": 0
+          },
+          "ratioAp": {
+            "Initial Magic Damage:": [
+              55
+            ],
+            "Additional Magic Damage:": [
+              11
+            ],
+            "Total Magic Damage:": [
+              99
+            ],
+            "Additional Minion Damage:": [
+              33
+            ],
+            "Total Minion Damage:": [
+              900
+            ],
+            "Initial Rocket Damage:": [
+              45
+            ],
+            "2-5 Rocket Magic Damage:": [
+              12
+            ],
+            "6-20 Rocket Damage:": [
+              6
+            ],
+            "Total Damage:": [
+              183
+            ],
+            "Minion Rocket Damage:": [
+              45
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "HeimerdingerE",
-      "cd": [],
+      "cd": [
+        1
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              200,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "HeimerdingerR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

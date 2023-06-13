@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 655,
-    "hpLvl": 102,
-    "AD": 63,
-    "ADLvl": 4,
+    "Hp": 655.0,
+    "hpLvl": 102.0,
+    "AD": 63.0,
+    "ADLvl": 4.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 36,
+    "Armor": 36.0,
     "ArmorLvl": 5.449999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.5,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 340,
-    "ManaLvl": 45,
+    "Mana": 340.0,
+    "ManaLvl": 45.0,
     "AP": 0,
-    "Range": 350,
+    "Range": 350.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,147 @@
   },
   "spell": {
     "Passive": {
-      "img": "Urgot_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "UrgotQ",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              70,
+              115,
+              160,
+              205
+            ],
+            "Slow:": [
+              5,
+              50,
+              55,
+              60,
+              65
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              70
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "UrgotW",
-      "cd": [],
+      "cd": [
+        2,
+        9,
+        6,
+        3,
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Modified Physical Damage:": [
+              2
+            ]
+          },
+          "ratioAd": {
+            "Modified Physical Damage:": [
+              20,
+              23.5,
+              27,
+              30.5,
+              34
+            ]
+          },
+          "ratioAp": {
+            "Modified Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "UrgotE",
-      "cd": [],
+      "cd": [
+        6,
+        15.5,
+        15,
+        14.5,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              5,
+              75,
+              95,
+              115,
+              135
+            ],
+            "Physical Damage:": [
+              0,
+              120,
+              150,
+              180,
+              210
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": [
+              135
+            ],
+            "Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Shield Strength:": 0,
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "UrgotR",
-      "cd": [],
+      "cd": [
+        0,
+        85,
+        70
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              225,
+              350
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}

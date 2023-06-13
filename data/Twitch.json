@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 682,
-    "hpLvl": 100,
-    "AD": 59,
+    "Hp": 682.0,
+    "hpLvl": 100.0,
+    "AD": 59.0,
     "ADLvl": 3.0999999046325684,
     "AS": 0.6790000200271606,
     "ASRatio": 0.6790000200271606,
-    "Armor": 27,
+    "Armor": 27.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.75,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 300,
-    "ManaLvl": 40,
+    "Mana": 300.0,
+    "ManaLvl": 40.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,161 @@
   },
   "spell": {
     "Passive": {
-      "img": "Twitch_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "TwitchHideInShadows",
-      "cd": [],
+      "cd": [
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Stealth Duration:": [
+              0,
+              11,
+              12,
+              13,
+              14
+            ],
+            "Bonus Attack Speed:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Stealth Duration:": 0,
+            "Bonus Attack Speed:": 0
+          },
+          "ratioAp": {
+            "Stealth Duration:": 0,
+            "Bonus Attack Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "TwitchVenomCask",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Slow:": [
+              6
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "TwitchExpunge",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Base Physical Damage:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Physical Damage Per Stack:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Minimum Mixed Damage:": [
+              5,
+              50,
+              65,
+              80,
+              95
+            ],
+            "Maximum Mixed Damage:": [
+              10,
+              150,
+              190,
+              230,
+              270
+            ]
+          },
+          "ratioAd": {
+            "Base Physical Damage:": 0,
+            "Physical Damage Per Stack:": [
+              35
+            ],
+            "Minimum Mixed Damage:": [
+              35
+            ],
+            "Maximum Mixed Damage:": [
+              210
+            ]
+          },
+          "ratioAp": {
+            "Base Physical Damage:": 0,
+            "Physical Damage Per Stack:": 0,
+            "Minimum Mixed Damage:": [
+              35
+            ],
+            "Maximum Mixed Damage:": [
+              210
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "TwitchFullAutomatic",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Damage:": [
+              0,
+              55,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Damage:": 0
+          }
         }
       ],
       "bonus": {}

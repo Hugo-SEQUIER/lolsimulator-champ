@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 580,
-    "hpLvl": 102,
-    "AD": 55,
-    "ADLvl": 3,
+    "Hp": 580.0,
+    "hpLvl": 102.0,
+    "AD": 55.0,
+    "ADLvl": 3.0,
     "AS": 0.6399999856948853,
     "ASRatio": 0.6399999856948853,
-    "Armor": 26,
+    "Armor": 26.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.6499999761581421,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 348,
-    "ManaLvl": 42,
+    "Mana": 348.0,
+    "ManaLvl": 42.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,90 @@
   },
   "spell": {
     "Passive": {
-      "img": "ApheliosP",
-      "cd": [],
-      "damage": 0,
-      "ratioAd": 0,
-      "ratioAp": 0
+      "cd": "A DEFINIR",
+      "damage": {
+        "Bonus Attack Damage:": [
+          0.5,
+          9,
+          13.5,
+          18,
+          22.5,
+          27
+        ],
+        "Bonus Attack Speed:": [
+          " ",
+          18,
+          27,
+          36,
+          45,
+          54
+        ],
+        "Lethality:": [
+          0.5,
+          11,
+          16.5,
+          22,
+          27.5,
+          33
+        ]
+      },
+      "ratioAd": {
+        "Bonus Attack Damage:": 0,
+        "Bonus Attack Speed:": 0,
+        "Lethality:": 0
+      },
+      "ratioAp": {
+        "Bonus Attack Damage:": 0,
+        "Bonus Attack Speed:": 0,
+        "Lethality:": 0
+      }
     },
     "Q": {
-      "img": "ApheliosQ_ClientTooltipWrapper",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "ApheliosW",
-      "cd": [],
+      "cd": [
+        0.8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ApheliosE_ClientTooltipWrapper",
-      "cd": [],
+      "cd": "A DEFINIR",
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "ApheliosR",
-      "cd": [],
+      "cd": [
+        20,
+        110,
+        "100 (based on level)"
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

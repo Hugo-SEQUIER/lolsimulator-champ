@@ -1,30 +1,30 @@
 {
   "basicStats": {
-    "Hp": 620,
-    "hpLvl": 104,
-    "AD": 68,
-    "ADLvl": 3,
+    "Hp": 620.0,
+    "hpLvl": 104.0,
+    "AD": 68.0,
+    "ADLvl": 3.0,
     "AS": 0.6669999957084656,
     "ASRatio": 0.6669999957084656,
-    "Armor": 34,
+    "Armor": 34.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 4,
+    "Mana": 4.0,
     "ManaLvl": 0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 0,
+    "ManaRegen": 0.0,
     "ManaRegenLvl": 0
   },
   "img": {
@@ -37,56 +37,169 @@
   },
   "spell": {
     "Passive": {
-      "img": "Rengar_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RengarQ",
-      "cd": [],
+      "cd": [
+        " ",
+        5.5,
+        5,
+        4.5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              60,
+              90,
+              120,
+              150
+            ],
+            "Empowered Bonus Damage:": [
+              "0 \u2212 235 "
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              0,
+              5,
+              10,
+              15,
+              20
+            ],
+            "Empowered Bonus Damage:": [
+              "ased on level) (+\u00a040"
+            ]
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0,
+            "Empowered Bonus Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RengarW",
-      "cd": [],
+      "cd": [
+        6,
+        14.5,
+        13,
+        11.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              80,
+              110,
+              140,
+              170
+            ],
+            "Empowered Damage:": [
+              "0 \u2212 220 "
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Empowered Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ],
+            "Empowered Damage:": [
+              "ased on level) (+\u00a080"
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RengarE",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              100,
+              145,
+              190,
+              235
+            ],
+            "Slow:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ],
+            "Empowered Damage:": [
+              "0 \u2212 305 "
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              80
+            ],
+            "Slow:": 0,
+            "Empowered Damage:": [
+              "ased on level) (+\u00a080"
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Slow:": 0,
+            "Empowered Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RengarR",
-      "cd": [],
+      "cd": [
+        10,
+        100,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Duration:": [
+              2,
+              16,
+              20
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              50,
+              60
+            ],
+            "Armor Reduction:": [
+              2,
+              18,
+              24
+            ]
+          },
+          "ratioAd": {
+            "Duration:": 0,
+            "Bonus Movement Speed:": 0,
+            "Armor Reduction:": 0
+          },
+          "ratioAp": {
+            "Duration:": 0,
+            "Bonus Movement Speed:": 0,
+            "Armor Reduction:": 0
+          }
         }
       ],
       "bonus": {}

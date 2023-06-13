@@ -1,24 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 90,
-    "AD": 61,
-    "ADLvl": 3,
+    "Hp": 610.0,
+    "hpLvl": 90.0,
+    "AD": 61.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 4.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
+    "HpRegen": null,
     "HpRegenLvl": 0.1599999964237213,
-    "Mana": 280,
-    "ManaLvl": 42,
+    "Mana": 280.0,
+    "ManaLvl": 42.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -36,56 +37,262 @@
   },
   "spell": {
     "Passive": {
-      "img": "NunuPassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NunuQ",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Non-Champion True Damage:": [
+              0,
+              600,
+              800,
+              1000,
+              1200
+            ],
+            "Base Non-Champion Heal:": [
+              5,
+              95,
+              125,
+              155,
+              185
+            ],
+            "Empowered Non-Champion Heal:": [
+              7.5,
+              142.5,
+              187.5,
+              232.5,
+              277.5
+            ],
+            "Champion Magic Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ],
+            "Base Champion Heal:": [
+              9,
+              57,
+              75,
+              93,
+              111
+            ],
+            "Empowered Champion Heal:": [
+              8.5,
+              99.375,
+              140.25,
+              181.125,
+              222
+            ]
+          },
+          "ratioAd": {
+            "Non-Champion True Damage:": 0,
+            "Base Non-Champion Heal:": 0,
+            "Empowered Non-Champion Heal:": 0,
+            "Champion Magic Damage:": 0,
+            "Base Champion Heal:": 0,
+            "Empowered Champion Heal:": 0
+          },
+          "ratioAp": {
+            "Non-Champion True Damage:": 0,
+            "Base Non-Champion Heal:": [
+              90
+            ],
+            "Empowered Non-Champion Heal:": [
+              135
+            ],
+            "Champion Magic Damage:": [
+              65
+            ],
+            "Base Champion Heal:": [
+              54
+            ],
+            "Empowered Champion Heal:": [
+              81
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NunuW",
-      "cd": [],
+      "cd": [
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Magic Damage:": [
+              6,
+              45,
+              54,
+              63,
+              72
+            ],
+            "Maximum Magic Damage:": [
+              80,
+              225,
+              270,
+              315,
+              360
+            ],
+            "Minimum Reduced Damage:": [
+              1.988,
+              14.985,
+              17.982,
+              20.979,
+              23.976
+            ],
+            "Maximum Reduced Damage:": [
+              9.94,
+              74.925,
+              89.91,
+              104.895,
+              119.88
+            ]
+          },
+          "ratioAd": {
+            "Minimum Magic Damage:": 0,
+            "Maximum Magic Damage:": 0,
+            "Minimum Reduced Damage:": 0,
+            "Maximum Reduced Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Magic Damage:": [
+              30
+            ],
+            "Maximum Magic Damage:": [
+              150
+            ],
+            "Minimum Reduced Damage:": [
+              9.99
+            ],
+            "Maximum Reduced Damage:": [
+              49.95
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NunuE",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Hit:": [
+              6,
+              24,
+              32,
+              40,
+              48
+            ],
+            "Total Magic Damage:": [
+              8,
+              72,
+              96,
+              120,
+              144
+            ],
+            "Slow:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ],
+            "Maximum Total Magic Damage:": [
+              44,
+              216,
+              288,
+              360,
+              432
+            ],
+            "Magic Damage:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Hit:": 0,
+            "Total Magic Damage:": 0,
+            "Slow:": 0,
+            "Maximum Total Magic Damage:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Hit:": [
+              10
+            ],
+            "Total Magic Damage:": [
+              30
+            ],
+            "Slow:": 0,
+            "Maximum Total Magic Damage:": [
+              90
+            ],
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NunuR",
-      "cd": [],
+      "cd": [
+        10,
+        100,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              5,
+              75,
+              85
+            ],
+            "Magic Damage:": [
+              25,
+              950,
+              1275
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              150,
+              40,
+              50
+            ],
+            "Magic Damage:": [
+              300
+            ]
+          }
         }
       ],
       "bonus": {}

@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 560,
-    "hpLvl": 88,
-    "AD": 51,
+    "Hp": 560.0,
+    "hpLvl": 88.0,
+    "AD": 51.0,
     "ADLvl": 3.0999999046325684,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 365,
-    "ManaLvl": 43,
+    "Mana": 365.0,
+    "ManaLvl": 43.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,181 @@
   },
   "spell": {
     "Passive": {
-      "img": "NamiPassive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NamiQ",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              130,
+              185,
+              240,
+              295
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NamiW",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              5,
+              75,
+              95,
+              115,
+              135
+            ],
+            "Minimum Heal:": [
+              8.5,
+              52.5,
+              66.5,
+              80.5,
+              94.5
+            ],
+            "Magic Damage:": [
+              0,
+              100,
+              140,
+              180,
+              220
+            ],
+            "Minimum Damage:": [
+              2,
+              70,
+              98,
+              126,
+              154
+            ]
+          },
+          "ratioAd": {
+            "Heal:": 0,
+            "Minimum Heal:": 0,
+            "Magic Damage:": 0,
+            "Minimum Damage:": 0
+          },
+          "ratioAp": {
+            "Heal:": [
+              25
+            ],
+            "Minimum Heal:": [
+              17.5
+            ],
+            "Magic Damage:": [
+              55
+            ],
+            "Minimum Damage:": [
+              38.5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NamiE",
-      "cd": [],
+      "cd": [
+        1
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage Per Hit:": [
+              0,
+              35,
+              50,
+              65,
+              80
+            ],
+            "Total Bonus Magic Damage:": [
+              0,
+              105,
+              150,
+              195,
+              240
+            ],
+            "Slow:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage Per Hit:": 0,
+            "Total Bonus Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage Per Hit:": [
+              20
+            ],
+            "Total Bonus Magic Damage:": [
+              60
+            ],
+            "Slow:": [
+              5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NamiR",
-      "cd": [],
+      "cd": [
+        20,
+        110,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              250,
+              350
+            ],
+            "Slow:": [
+              0,
+              60,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}

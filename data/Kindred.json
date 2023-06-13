@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 104,
-    "AD": 65,
+    "Hp": 610.0,
+    "hpLvl": 104.0,
+    "AD": 65.0,
     "ADLvl": 3.25,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 325,
+    "MS": 325.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 300,
-    "ManaLvl": 35,
+    "Mana": 300.0,
+    "ManaLvl": 35.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,156 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kindred_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "KindredQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ],
+            "Static Cooldown:": [
+              " ",
+              3.5,
+              3,
+              2.5,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              75
+            ],
+            "Static Cooldown:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Static Cooldown:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "KindredW",
-      "cd": [],
+      "cd": [
+        8,
+        17,
+        16,
+        15,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ],
+            "Monster Damage:": [
+              7.5,
+              45,
+              52.5,
+              60,
+              67.5
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": [
+              20
+            ],
+            "Monster Damage:": [
+              30
+            ]
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              20
+            ],
+            "Monster Damage:": [
+              30
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "KindredEWrapper",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Additional Physical Damage:": [
+              0,
+              100,
+              120,
+              140,
+              160
+            ],
+            "Enhanced damage below threshold:": [
+              0,
+              100,
+              120,
+              140,
+              160
+            ]
+          },
+          "ratioAd": {
+            "Additional Physical Damage:": [
+              80
+            ],
+            "Enhanced damage below threshold:": [
+              80
+            ]
+          },
+          "ratioAp": {
+            "Additional Physical Damage:": 0,
+            "Enhanced damage below threshold:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "KindredR",
-      "cd": [],
+      "cd": [
+        80,
+        150,
+        120
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Heal:": [
+              25,
+              300,
+              375
+            ]
+          },
+          "ratioAd": {
+            "Heal:": 0
+          },
+          "ratioAp": {
+            "Heal:": 0
+          }
         }
       ],
       "bonus": {}

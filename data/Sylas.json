@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 575,
-    "hpLvl": 129,
-    "AD": 61,
-    "ADLvl": 3,
+    "Hp": 575.0,
+    "hpLvl": 129.0,
+    "AD": 61.0,
+    "ADLvl": 3.0,
     "AS": 0.6449999809265137,
     "ASRatio": 0.6449999809265137,
-    "Armor": 27,
+    "Armor": 27.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.549999952316284,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.7999999523162842,
     "HpRegenLvl": 0.18000000715255737,
-    "Mana": 310,
-    "ManaLvl": 70,
+    "Mana": 310.0,
+    "ManaLvl": 70.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,179 @@
   },
   "spell": {
     "Passive": {
-      "img": "SylasP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SylasQ",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              180,
+              235,
+              290
+            ],
+            "Slow:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Non-Champion Damage:": [
+              8,
+              50,
+              72,
+              94,
+              116
+            ],
+            "Total Champion Damage:": [
+              10,
+              185,
+              260,
+              335,
+              410
+            ],
+            "Total Non-Champion Damage:": [
+              8,
+              110,
+              152,
+              194,
+              236
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0,
+            "Non-Champion Damage:": 0,
+            "Total Champion Damage:": 0,
+            "Total Non-Champion Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Slow:": 0,
+            "Non-Champion Damage:": [
+              36
+            ],
+            "Total Champion Damage:": [
+              130
+            ],
+            "Total Non-Champion Damage:": [
+              76
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "SylasW",
-      "cd": [],
+      "cd": [
+        2,
+        10.5,
+        9,
+        7.5,
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              140,
+              175,
+              210
+            ],
+            "Minimum Heal:": [
+              0,
+              40,
+              60,
+              80,
+              100
+            ],
+            "Maximum Heal:": [
+              0,
+              80,
+              120,
+              160,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Minimum Heal:": 0,
+            "Maximum Heal:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Minimum Heal:": [
+              40
+            ],
+            "Maximum Heal:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "SylasE",
-      "cd": [],
+      "cd": [
+        3,
+        12,
+        11,
+        10,
+        9
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              130,
+              180,
+              230,
+              280
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "SylasR",
-      "cd": [],
+      "cd": [
+        0,
+        55,
+        30
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

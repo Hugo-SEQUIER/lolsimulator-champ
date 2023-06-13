@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 655,
-    "hpLvl": 99,
-    "AD": 50,
-    "ADLvl": 3,
+    "Hp": 655.0,
+    "hpLvl": 99.0,
+    "AD": 50.0,
+    "ADLvl": 3.0,
     "AS": 0.6439999938011169,
     "ASRatio": 0.6439999938011169,
-    "Armor": 27,
+    "Armor": 27.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.17000000178813934,
-    "Mana": 450,
-    "ManaLvl": 60,
+    "Mana": 450.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 475,
+    "Range": 475.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,151 @@
   },
   "spell": {
     "Passive": {
-      "img": "IvernP",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "IvernQ",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ],
+            "Root Duration:": [
+              0.2,
+              1.4,
+              1.6,
+              1.8,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Root Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "IvernW",
-      "cd": [],
+      "cd": [
+        0.5
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              0,
+              37.5,
+              45,
+              52.5,
+              60
+            ],
+            "Ally Bonus Magic Damage:": [
+              " ",
+              7.5,
+              10,
+              12.5,
+              15
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0,
+            "Ally Bonus Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              30
+            ],
+            "Ally Bonus Magic Damage:": [
+              10
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "IvernE",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              115,
+              150,
+              185,
+              220
+            ],
+            "Magic Damage:": [
+              0,
+              90,
+              110,
+              130,
+              150
+            ],
+            "Slow:": [
+              0,
+              55,
+              60,
+              65,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              75
+            ],
+            "Magic Damage:": [
+              80
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "IvernR",
-      "cd": [],
+      "cd": [
+        40,
+        130,
+        120
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

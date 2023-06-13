@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 605,
-    "hpLvl": 105,
-    "AD": 61,
+    "Hp": 605.0,
+    "hpLvl": 105.0,
+    "AD": 61.0,
     "ADLvl": 3.0999999046325684,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 22,
+    "Armor": 22.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 1.5499999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.5,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 410,
-    "ManaLvl": 50,
+    "Mana": 410.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 325,
+    "Range": 325.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,196 @@
   },
   "spell": {
     "Passive": {
-      "img": "Lillia_Icon_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "LilliaQ",
-      "cd": [],
+      "cd": [
+        " ",
+        5.5,
+        5,
+        4.5,
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Movement Speed:": [
+              " ",
+              4,
+              5,
+              6,
+              7
+            ],
+            "Maximum Bonus Movement Speed:": [
+              2,
+              16,
+              20,
+              24,
+              28
+            ],
+            "Magic Damage:": [
+              5,
+              45,
+              55,
+              65,
+              75
+            ],
+            "Total Mixed Damage:": [
+              0,
+              90,
+              110,
+              130,
+              150
+            ]
+          },
+          "ratioAd": {
+            "Bonus Movement Speed:": 0,
+            "Maximum Bonus Movement Speed:": 0,
+            "Magic Damage:": 0,
+            "Total Mixed Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Movement Speed:": [
+              3
+            ],
+            "Maximum Bonus Movement Speed:": [
+              12
+            ],
+            "Magic Damage:": [
+              45
+            ],
+            "Total Mixed Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "LilliaW",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              100,
+              120,
+              140,
+              160
+            ],
+            "Increased Damage:": [
+              40,
+              300,
+              360,
+              420,
+              480
+            ],
+            "Minion Damage:": [
+              0,
+              50,
+              60,
+              70,
+              80
+            ],
+            "Increased Minion Damage:": [
+              20,
+              150,
+              180,
+              210,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Increased Damage:": 0,
+            "Minion Damage:": 0,
+            "Increased Minion Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              35
+            ],
+            "Increased Damage:": [
+              105
+            ],
+            "Minion Damage:": [
+              17.5
+            ],
+            "Increased Minion Damage:": [
+              52.5
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "LilliaE",
-      "cd": [],
+      "cd": [
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              95,
+              120,
+              145,
+              170
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "LilliaR",
-      "cd": [],
+      "cd": [
+        50,
+        130,
+        110
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Sleep Duration:": [
+              " ",
+              2.25,
+              2.5
+            ],
+            "Magic Damage:": [
+              0,
+              150,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Sleep Duration:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Sleep Duration:": 0,
+            "Magic Damage:": [
+              40
+            ]
+          }
         }
       ],
       "bonus": {}

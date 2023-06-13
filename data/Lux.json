@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 560,
-    "hpLvl": 99,
-    "AD": 54,
+    "Hp": 560.0,
+    "hpLvl": 99.0,
+    "AD": 54.0,
     "ADLvl": 3.299999952316284,
     "AS": 0.6690000295639038,
     "ASRatio": 0.625,
-    "Armor": 19,
+    "Armor": 19.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 480,
+    "Mana": 480.0,
     "ManaLvl": 23.5,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,143 @@
   },
   "spell": {
     "Passive": {
-      "img": "LuxIlluminatingFraulein",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "LuxLightBinding",
-      "cd": [],
+      "cd": [
+        1
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "LuxPrismaticWave",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Shield Strength:": [
+              0,
+              55,
+              70,
+              85,
+              100
+            ],
+            "Maximum Shield:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Shield Strength:": 0,
+            "Maximum Shield:": 0
+          },
+          "ratioAp": {
+            "Shield Strength:": [
+              35
+            ],
+            "Maximum Shield:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "LuxLightStrikeKugel",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Slow:": [
+              5,
+              30,
+              35,
+              40,
+              45
+            ],
+            "Magic Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ]
+          },
+          "ratioAd": {
+            "Slow:": 0,
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Slow:": 0,
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "LuxR",
-      "cd": [],
+      "cd": [
+        0,
+        50,
+        40
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              400,
+              500
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}

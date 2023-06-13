@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 610,
-    "hpLvl": 104,
-    "AD": 48,
+    "Hp": 610.0,
+    "hpLvl": 104.0,
+    "AD": 48.0,
     "ADLvl": 2.5,
     "AS": 0.625,
     "ASRatio": 0.6700000166893005,
-    "Armor": 21,
+    "Armor": 21.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 340,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.5,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 450,
-    "ManaLvl": 30,
+    "Mana": 450.0,
+    "ManaLvl": 30.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,172 @@
   },
   "spell": {
     "Passive": {
-      "img": "Neeko_P",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NeekoQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              60,
+              85,
+              110,
+              135
+            ],
+            "Total Maximum Magic Damage:": [
+              50,
+              245,
+              340,
+              435,
+              530
+            ],
+            "Bonus Monster Damage:": [
+              5,
+              50,
+              65,
+              80,
+              95
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Maximum Magic Damage:": 0,
+            "Bonus Monster Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              25
+            ],
+            "Total Maximum Magic Damage:": [
+              100
+            ],
+            "Bonus Monster Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NeekoW",
-      "cd": [],
+      "cd": [
+        6,
+        15,
+        14,
+        13,
+        12
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Magic Damage:": [
+              0,
+              80,
+              110,
+              140,
+              170
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Bonus Magic Damage:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Magic Damage:": [
+              60
+            ],
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "NeekoE",
-      "cd": [],
+      "cd": [
+        2,
+        11.5,
+        11,
+        10.5,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              140,
+              175,
+              210
+            ],
+            "Root Duration:": [
+              0.7,
+              0.9,
+              1.1,
+              1.3,
+              1.5
+            ],
+            "Empowered Root Duration:": [
+              0.8,
+              2.1,
+              2.4,
+              2.7,
+              3
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Root Duration:": 0,
+            "Empowered Root Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              65
+            ],
+            "Root Duration:": 0,
+            "Empowered Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "NeekoR",
-      "cd": [],
+      "cd": [
+        20,
+        105,
+        90
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              350,
+              550
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              120
+            ]
+          }
         }
       ],
       "bonus": {}

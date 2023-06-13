@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 104,
-    "AD": 56,
+    "Hp": 630.0,
+    "hpLvl": 104.0,
+    "AD": 56.0,
     "ADLvl": 3.5,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 25,
-    "ArmorLvl": 5,
-    "MR": 30,
+    "Armor": 25.0,
+    "ArmorLvl": 5.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.07999999821186066,
-    "Mana": 340,
-    "ManaLvl": 60,
+    "Mana": 340.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 450,
+    "Range": 450.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,177 @@
   },
   "spell": {
     "Passive": {
-      "img": "FallenAngel_Empathize",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "MorganaQ",
-      "cd": [],
+      "cd": [
+        0
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              135,
+              190,
+              245,
+              300
+            ],
+            "Root Duration:": [
+              " ",
+              2.25,
+              2.5,
+              2.75,
+              3
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Root Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ],
+            "Root Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "MorganaW",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Damage Per Tick:": [
+              " ",
+              11,
+              16,
+              21,
+              26
+            ],
+            "Maximum Damage Per Tick:": [
+              6.2,
+              29.7,
+              43.2,
+              56.7,
+              70.2
+            ],
+            "Minimum Total Damage:": [
+              0,
+              110,
+              160,
+              210,
+              260
+            ],
+            "Maximum Total Damage:": [
+              62,
+              297,
+              432,
+              567,
+              702
+            ]
+          },
+          "ratioAd": {
+            "Minimum Damage Per Tick:": 0,
+            "Maximum Damage Per Tick:": 0,
+            "Minimum Total Damage:": 0,
+            "Maximum Total Damage:": 0
+          },
+          "ratioAp": {
+            "Minimum Damage Per Tick:": [
+              7
+            ],
+            "Maximum Damage Per Tick:": [
+              18.9
+            ],
+            "Minimum Total Damage:": [
+              70
+            ],
+            "Maximum Total Damage:": [
+              189
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "MorganaE",
-      "cd": [],
+      "cd": [
+        4,
+        22,
+        20,
+        18,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Shield Strength:": [
+              0,
+              135,
+              190,
+              245,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Magic Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Magic Shield Strength:": [
+              70
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "MorganaR",
-      "cd": [],
+      "cd": [
+        20,
+        110,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              50,
+              225,
+              300
+            ],
+            "Total Magic Damage:": [
+              0,
+              450,
+              600
+            ],
+            "Bonus Movement Speed:": [
+              " ",
+              30,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Total Magic Damage:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Total Magic Damage:": [
+              140
+            ],
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}

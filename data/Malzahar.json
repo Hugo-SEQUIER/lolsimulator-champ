@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 580,
-    "hpLvl": 101,
-    "AD": 55,
-    "ADLvl": 3,
+    "Hp": 580.0,
+    "hpLvl": 101.0,
+    "AD": 55.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 18,
+    "Armor": 18.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.11999999731779099,
-    "Mana": 375,
-    "ManaLvl": 28,
+    "Mana": 375.0,
+    "ManaLvl": 28.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,168 @@
   },
   "spell": {
     "Passive": {
-      "img": "Malzahar_Passive",
-      "cd": [],
+      "cd": [
+        0,
+        24,
+        18,
+        "12 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "MalzaharQ",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              105,
+              140,
+              175,
+              210
+            ],
+            "Silence Duration:": [
+              " ",
+              1.25,
+              1.5,
+              1.75,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Silence Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              55
+            ],
+            "Silence Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "MalzaharW",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Voidling Duration:": [
+              " ",
+              8,
+              9,
+              9,
+              10
+            ],
+            "Magic Damage:": [
+              " \u2212 64.5 "
+            ]
+          },
+          "ratioAd": {
+            "Voidling Duration:": 0,
+            "Magic Damage:": [
+              "ased on level) (+ 12 ",
+              14,
+              16,
+              18,
+              "20) (+\u00a040"
+            ]
+          },
+          "ratioAp": {
+            "Voidling Duration:": 0,
+            "Magic Damage:": [
+              "ased on level) (+ 12 ",
+              14,
+              16,
+              18,
+              "20) (+\u00a040"
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "MalzaharE",
-      "cd": [],
+      "cd": [
+        5,
+        13,
+        11,
+        9,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              0,
+              115,
+              150,
+              185,
+              220
+            ],
+            "Magic Damage Per Tick:": [
+              0,
+              14.375,
+              18.75,
+              23.125,
+              27.5
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": 0,
+            "Magic Damage Per Tick:": 0
+          },
+          "ratioAp": {
+            "Total Magic Damage:": [
+              80
+            ],
+            "Magic Damage Per Tick:": [
+              10
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "MalzaharR",
-      "cd": [],
+      "cd": [
+        40,
+        110,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Total Magic Damage:": [
+              0,
+              15,
+              20
+            ],
+            "Magic Damage Per Tick:": [
+              " ",
+              1.5,
+              2
+            ]
+          },
+          "ratioAd": {
+            "Total Magic Damage:": 0,
+            "Magic Damage Per Tick:": 0
+          },
+          "ratioAp": {
+            "Total Magic Damage:": [
+              2.5
+            ],
+            "Magic Damage Per Tick:": [
+              0.25
+            ]
+          }
         }
       ],
       "bonus": {}

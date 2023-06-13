@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 644,
-    "hpLvl": 104,
-    "AD": 62,
-    "ADLvl": 4,
+    "Hp": 644.0,
+    "hpLvl": 104.0,
+    "AD": 62.0,
+    "ADLvl": 4.0,
     "AS": 0.7360000014305115,
     "ASRatio": 0.6380000114440918,
-    "Armor": 37,
+    "Armor": 37.0,
     "ArmorLvl": 4.949999809265137,
-    "MR": 28,
+    "MR": 28.0,
     "MRLvl": 2.049999952316284,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 280,
-    "ManaLvl": 60,
+    "Mana": 280.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 125,
+    "Range": 125.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,170 @@
   },
   "spell": {
     "Passive": {
-      "img": "Malphite_GraniteShield",
-      "cd": [],
+      "cd": [
+        " ",
+        7,
+        "6 (based on level)"
+      ],
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "SeismicShard",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              120,
+              170,
+              220,
+              270
+            ],
+            "Slow:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "Obduracy",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Armor:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ],
+            "Increased Bonus Armor:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ],
+            "Bonus Physical Damage:": [
+              0,
+              40,
+              50,
+              60,
+              70
+            ],
+            "Physical Damage:": [
+              5,
+              25,
+              35,
+              45,
+              55
+            ]
+          },
+          "ratioAd": {
+            "Bonus Armor:": 0,
+            "Increased Bonus Armor:": 0,
+            "Bonus Physical Damage:": 0,
+            "Physical Damage:": 0
+          },
+          "ratioAp": {
+            "Bonus Armor:": 0,
+            "Increased Bonus Armor:": 0,
+            "Bonus Physical Damage:": [
+              20
+            ],
+            "Physical Damage:": [
+              30
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "Landslide",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              110,
+              150,
+              190,
+              230
+            ],
+            "Cripple:": [
+              0,
+              35,
+              40,
+              45,
+              50
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Cripple:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              60
+            ],
+            "Cripple:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "UFSlash",
-      "cd": [],
+      "cd": [
+        30,
+        105,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              300,
+              400
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              90
+            ]
+          }
         }
       ],
       "bonus": {}

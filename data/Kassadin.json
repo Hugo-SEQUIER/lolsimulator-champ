@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 646,
-    "hpLvl": 119,
-    "AD": 59,
+    "Hp": 646.0,
+    "hpLvl": 119.0,
+    "AD": 59.0,
     "ADLvl": 3.9000000953674316,
     "AS": 0.6399999856948853,
     "ASRatio": 0.6399999856948853,
-    "Armor": 19,
-    "ArmorLvl": 4,
-    "MR": 30,
+    "Armor": 19.0,
+    "ArmorLvl": 4.0,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 335,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.2000000476837158,
     "HpRegenLvl": 0.10000000149011612,
-    "Mana": 400,
-    "ManaLvl": 87,
+    "Mana": 400.0,
+    "ManaLvl": 87.0,
     "AP": 0,
-    "Range": 150,
+    "Range": 150.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,188 @@
   },
   "spell": {
     "Passive": {
-      "img": "Kassadin_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "NullLance",
-      "cd": [],
+      "cd": [
+        0,
+        9.5,
+        9,
+        8.5,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              95,
+              125,
+              155,
+              185
+            ],
+            "Magic Shield Strength:": [
+              0,
+              110,
+              140,
+              170,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Magic Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              70
+            ],
+            "Magic Shield Strength:": [
+              30
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "NetherBlade",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Increased Bonus Magic Damage:": [
+              0,
+              75,
+              100,
+              125,
+              150
+            ],
+            "Mana Restored:": [
+              " ",
+              4.5,
+              5,
+              5.5,
+              6
+            ],
+            "Mana Restored Against Champions:": [
+              0,
+              22.5,
+              25,
+              27.5,
+              30
+            ]
+          },
+          "ratioAd": {
+            "Increased Bonus Magic Damage:": 0,
+            "Mana Restored:": 0,
+            "Mana Restored Against Champions:": 0
+          },
+          "ratioAp": {
+            "Increased Bonus Magic Damage:": [
+              80
+            ],
+            "Mana Restored:": 0,
+            "Mana Restored Against Champions:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "ForcePulse",
-      "cd": [],
+      "cd": [
+        1,
+        20,
+        19,
+        18,
+        17
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ],
+            "Slow:": [
+              0,
+              60,
+              70,
+              80,
+              90
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              85
+            ],
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RiftWalk",
-      "cd": [],
+      "cd": [
+        " ",
+        3.5,
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              90,
+              110
+            ],
+            "Bonus Damage Per Stack:": [
+              5,
+              45,
+              55
+            ],
+            "Maximum Bonus Damage:": [
+              40,
+              180,
+              220
+            ],
+            "Maximum Magic Damage:": [
+              10,
+              270,
+              330
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Bonus Damage Per Stack:": 0,
+            "Maximum Bonus Damage:": 0,
+            "Maximum Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              40
+            ],
+            "Bonus Damage Per Stack:": [
+              10
+            ],
+            "Maximum Bonus Damage:": [
+              40
+            ],
+            "Maximum Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}

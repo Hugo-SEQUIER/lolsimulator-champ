@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 630,
-    "hpLvl": 103,
-    "AD": 52,
-    "ADLvl": 3,
+    "Hp": 630.0,
+    "hpLvl": 103.0,
+    "AD": 52.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 34,
+    "Armor": 34.0,
     "ArmorLvl": 5.199999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 350,
-    "ManaLvl": 50,
+    "Mana": 350.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 500,
+    "Range": 500.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,117 @@
   },
   "spell": {
     "Passive": {
-      "img": "Bard_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "BardQ",
-      "cd": [],
+      "cd": [
+        1,
+        10,
+        9,
+        8,
+        7
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ],
+            "Disable Duration:": [
+              " ",
+              1.2,
+              1.4,
+              1.6,
+              1.8
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Disable Duration:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              65
+            ],
+            "Disable Duration:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "BardW",
-      "cd": [],
+      "cd": [
+        4
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Heal:": [
+              5,
+              50,
+              75,
+              100,
+              125
+            ],
+            "Maximum Heal:": [
+              0,
+              87.5,
+              125,
+              162.5,
+              200
+            ]
+          },
+          "ratioAd": {
+            "Minimum Heal:": 0,
+            "Maximum Heal:": 0
+          },
+          "ratioAp": {
+            "Minimum Heal:": [
+              30
+            ],
+            "Maximum Heal:": [
+              60
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "BardE",
-      "cd": [],
+      "cd": [
+        2,
+        20.5,
+        19,
+        17.5,
+        16
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "BardR",
-      "cd": [],
+      "cd": [
+        10,
+        95,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": 0,
+          "ratioAd": 0,
+          "ratioAp": 0
         }
       ],
       "bonus": {}

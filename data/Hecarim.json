@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 625,
-    "hpLvl": 99,
-    "AD": 66,
+    "Hp": 625.0,
+    "hpLvl": 99.0,
+    "AD": 66.0,
     "ADLvl": 3.200000047683716,
     "AS": 0.6700000166893005,
     "ASRatio": 0.6700000166893005,
-    "Armor": 32,
+    "Armor": 32.0,
     "ArmorLvl": 5.449999809265137,
-    "MR": 32,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 345,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.399999976158142,
     "HpRegenLvl": 0.15000000596046448,
-    "Mana": 277,
-    "ManaLvl": 60,
+    "Mana": 277.0,
+    "ManaLvl": 60.0,
     "AP": 0,
-    "Range": 175,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,170 @@
   },
   "spell": {
     "Passive": {
-      "img": "Hecarim_Passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "HecarimRapidSlash",
-      "cd": [],
+      "cd": [
+        ""
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              0,
+              85,
+              110,
+              135,
+              160
+            ],
+            "Minion damage:": [
+              6,
+              51,
+              66,
+              81,
+              96
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              90
+            ],
+            "Minion damage:": [
+              54
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Minion damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "HecarimW",
-      "cd": [],
+      "cd": [
+        6,
+        15.5,
+        15,
+        14.5,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage Per Tick:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Total Magic Damage:": [
+              0,
+              120,
+              160,
+              200,
+              240
+            ],
+            "Bonus Resistances:": [
+              5,
+              20,
+              25,
+              30,
+              35
+            ],
+            "Capped Healing:": [
+              20,
+              150,
+              180,
+              210,
+              240
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage Per Tick:": 0,
+            "Total Magic Damage:": 0,
+            "Bonus Resistances:": 0,
+            "Capped Healing:": 0
+          },
+          "ratioAp": {
+            "Magic Damage Per Tick:": [
+              20
+            ],
+            "Total Magic Damage:": [
+              80
+            ],
+            "Bonus Resistances:": 0,
+            "Capped Healing:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "HecarimRamp",
-      "cd": [],
+      "cd": [
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Minimum Physical Damage:": [
+              0,
+              45,
+              60,
+              75,
+              90
+            ],
+            "Maximum Physical Damage:": [
+              0,
+              90,
+              120,
+              150,
+              180
+            ]
+          },
+          "ratioAd": {
+            "Minimum Physical Damage:": [
+              50
+            ],
+            "Maximum Physical Damage:": [
+              100
+            ]
+          },
+          "ratioAp": {
+            "Minimum Physical Damage:": 0,
+            "Maximum Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "HecarimUlt",
-      "cd": [],
+      "cd": [
+        40,
+        120,
+        100
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic damage:": [
+              50,
+              250,
+              350
+            ]
+          },
+          "ratioAd": {
+            "Magic damage:": 0
+          },
+          "ratioAp": {
+            "Magic damage:": [
+              100
+            ]
+          }
         }
       ],
       "bonus": {}

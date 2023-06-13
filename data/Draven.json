@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 675,
-    "hpLvl": 104,
-    "AD": 62,
+    "Hp": 675.0,
+    "hpLvl": 104.0,
+    "AD": 62.0,
     "ADLvl": 3.5999999046325684,
     "AS": 0.6790000200271606,
     "ASRatio": 0.6790000200271606,
-    "Armor": 29,
+    "Armor": 29.0,
     "ArmorLvl": 4.5,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 0.75,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 361,
-    "ManaLvl": 39,
+    "Mana": 361.0,
+    "ManaLvl": 39.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,178 @@
   },
   "spell": {
     "Passive": {
-      "img": "Draven_passive",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "DravenSpinning",
-      "cd": [],
+      "cd": [
+        2,
+        11,
+        10,
+        9,
+        8
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Physical Damage:": [
+              0,
+              45,
+              50,
+              55,
+              60
+            ]
+          },
+          "ratioAd": {
+            "Bonus Physical Damage:": [
+              75,
+              85,
+              95,
+              105,
+              115
+            ]
+          },
+          "ratioAp": {
+            "Bonus Physical Damage:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "DravenFury",
-      "cd": [],
+      "cd": [
+        2
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              55,
+              60,
+              65,
+              70
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "DravenDoubleShot",
-      "cd": [],
+      "cd": [
+        8,
+        17,
+        16,
+        15,
+        14
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              5,
+              110,
+              145,
+              180,
+              215
+            ],
+            "Slow:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              50
+            ],
+            "Slow:": 0
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Slow:": 0
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "DravenRCast",
-      "cd": [],
+      "cd": [
+        0,
+        90,
+        80
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Physical Damage:": [
+              75,
+              275,
+              375
+            ],
+            "Total Physical Damage:": [
+              50,
+              550,
+              750
+            ],
+            "Minimum Physical Damage:": [
+              0,
+              110,
+              150
+            ],
+            "Minimum Total Damage:": [
+              40,
+              220,
+              300
+            ]
+          },
+          "ratioAd": {
+            "Physical Damage:": [
+              110,
+              130,
+              150
+            ],
+            "Total Physical Damage:": [
+              220,
+              260,
+              300
+            ],
+            "Minimum Physical Damage:": [
+              44,
+              52,
+              60
+            ],
+            "Minimum Total Damage:": [
+              88,
+              104,
+              120
+            ]
+          },
+          "ratioAp": {
+            "Physical Damage:": 0,
+            "Total Physical Damage:": 0,
+            "Minimum Physical Damage:": 0,
+            "Minimum Total Damage:": 0
+          }
         }
       ],
       "bonus": {}

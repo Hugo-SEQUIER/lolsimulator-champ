@@ -1,25 +1,25 @@
 {
   "basicStats": {
-    "Hp": 545,
-    "hpLvl": 94,
-    "AD": 49,
-    "ADLvl": 3,
+    "Hp": 545.0,
+    "hpLvl": 94.0,
+    "AD": 49.0,
+    "ADLvl": 3.0,
     "AS": 0.625,
     "ASRatio": 0.625,
-    "Armor": 27,
+    "Armor": 27.0,
     "ArmorLvl": 4.699999809265137,
-    "MR": 30,
+    "MR": 30.0,
     "MRLvl": 1.2999999523162842,
-    "MS": 330,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.100000023841858,
     "HpRegenLvl": 0.10999999940395355,
-    "Mana": 350,
-    "ManaLvl": 50,
+    "Mana": 350.0,
+    "ManaLvl": 50.0,
     "AP": 0,
-    "Range": 550,
+    "Range": 550.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
@@ -37,56 +37,165 @@
   },
   "spell": {
     "Passive": {
-      "img": "Renata_P",
-      "cd": [],
+      "cd": "A DEFINIR",
       "damage": 0,
       "ratioAd": 0,
       "ratioAp": 0
     },
     "Q": {
-      "img": "RenataQ",
-      "cd": [],
+      "cd": [
+        6
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              0,
+              125,
+              170,
+              215,
+              260
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              80
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "W": {
-      "img": "RenataW",
-      "cd": [],
+      "cd": [
+        8,
+        27,
+        26,
+        25,
+        24
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Bonus Attack Speed:": [
+              0,
+              15,
+              20,
+              25,
+              30
+            ],
+            "Maximum Bonus Attack Speed:": [
+              0,
+              30,
+              40,
+              50,
+              60
+            ],
+            "Bonus Movement Speed:": [
+              0,
+              12.5,
+              15,
+              17.5,
+              20
+            ],
+            "Maximum Bonus Movement Speed:": [
+              0,
+              25,
+              30,
+              35,
+              40
+            ]
+          },
+          "ratioAd": {
+            "Bonus Attack Speed:": 0,
+            "Maximum Bonus Attack Speed:": 0,
+            "Bonus Movement Speed:": 0,
+            "Maximum Bonus Movement Speed:": 0
+          },
+          "ratioAp": {
+            "Bonus Attack Speed:": [
+              1
+            ],
+            "Maximum Bonus Attack Speed:": [
+              2
+            ],
+            "Bonus Movement Speed:": [
+              1
+            ],
+            "Maximum Bonus Movement Speed:": [
+              2
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "E": {
-      "img": "RenataE",
-      "cd": [],
+      "cd": [
+        4,
+        13,
+        12,
+        11,
+        10
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Magic Damage:": [
+              5,
+              95,
+              125,
+              155,
+              185
+            ],
+            "Shield Strength:": [
+              0,
+              65,
+              80,
+              95,
+              110
+            ]
+          },
+          "ratioAd": {
+            "Magic Damage:": 0,
+            "Shield Strength:": 0
+          },
+          "ratioAp": {
+            "Magic Damage:": [
+              55
+            ],
+            "Shield Strength:": [
+              50
+            ]
+          }
         }
       ],
       "bonus": {}
     },
     "R": {
-      "img": "RenataR",
-      "cd": [],
+      "cd": [
+        50,
+        130,
+        110
+      ],
       "basicStats": [
         {
-          "damage": [],
-          "ratioAd": [],
-          "ratioAp": []
+          "damage": {
+            "Berserk Duration:": [
+              0.25,
+              1.75,
+              2.25
+            ]
+          },
+          "ratioAd": {
+            "Berserk Duration:": 0
+          },
+          "ratioAp": {
+            "Berserk Duration:": 0
+          }
         }
       ],
       "bonus": {}
