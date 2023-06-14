@@ -41,7 +41,7 @@
         30,
         24,
         18,
-        " 12 (based on level)"
+        12
       ],
       "damage": [
         0,
@@ -263,18 +263,18 @@
             "5 \u2212 64.5 "
           ],
           "ratioAd": [
-            "based on level) (+ 12 ",
+            "based on level) ",
             14,
             16,
             18,
-            " 20) (+\u00a040"
+            " 20) "
           ],
           "ratioAp": [
-            "based on level) (+ 12 ",
+            "based on level) ",
             14,
             16,
             18,
-            " 20) (+\u00a040"
+            " 20) "
           ],
           "heal": [
             [

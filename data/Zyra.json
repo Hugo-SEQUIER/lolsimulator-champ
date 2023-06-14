@@ -42,7 +42,7 @@
         12,
         11,
         10,
-        " 9 (based on level)"
+        9
       ],
       "damage": [
         0,
@@ -259,7 +259,7 @@
       ]
     },
     "W": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "basicStats": [
         {
           "damage": [

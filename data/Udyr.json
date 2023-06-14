@@ -41,7 +41,7 @@
         50,
         40,
         30,
-        " 20 (based on level)"
+        20
       ],
       "damage": [
         0,
@@ -283,12 +283,12 @@
             0
           ],
           "ratioHealAp": [
-            "based on level) (+ 22.5 ",
+            "based on level) ",
             30,
             37.5,
             45,
             52.5,
-            " 60) (+\u00a032.5"
+            " 60) "
           ],
           "shield": [
             45,

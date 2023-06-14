@@ -15,7 +15,7 @@ def getCd_Value(section):
     if new_sec is None :
         new_sec = section.find('div', attrs={'data-source' : "static"})
         if new_sec is None :
-            return "A DEFINIR"
+            return 0
     cd = new_sec.div.get_text().split('/')
     cd = convertArrayStringToNumeric(cd)
     return cd
@@ -31,6 +31,7 @@ def convertArrayStringToNumeric(array_string):
     if (isinstance(array_string, list)):
         for i in range(0,len(array_string)):
             array_string[i] = array_string[i].split('%')[0]
+            array_string[i] = array_string[i].split('(')[0]
             try :
                 array_string[i] = int(array_string[i])
             except ValueError :

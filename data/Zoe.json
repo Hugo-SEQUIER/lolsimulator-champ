@@ -37,7 +37,7 @@
   },
   "spell": {
     "Passive": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "damage": [
         0,
         0,
@@ -162,11 +162,11 @@
             0
           ],
           "ratioAp": [
-            "based on level) (+ 125 ",
+            "based on level) ",
             200,
             275,
             350,
-            " 425) (+\u00a0150"
+            " 425) "
           ],
           "heal": [
             [

@@ -38,7 +38,7 @@
   "spell": {
     "Passive": {
       "cd": [
-        "60 \u2212 15 (based on level)"
+        "60 \u2212 15 "
       ],
       "damage": [
         0,

@@ -37,7 +37,7 @@
   },
   "spell": {
     "Passive": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "damage": {
         "Bonus Attack Damage:": [
           4.5,
@@ -188,7 +188,7 @@
       ]
     },
     "Q": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "basicStats": [
         {
           "damage": [
@@ -408,7 +408,7 @@
       ]
     },
     "E": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "basicStats": [
         {
           "damage": [
@@ -520,7 +520,7 @@
       "cd": [
         120,
         110,
-        " 100 (based on level)"
+        100
       ],
       "basicStats": [
         {

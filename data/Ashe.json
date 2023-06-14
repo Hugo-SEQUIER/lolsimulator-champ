@@ -37,7 +37,7 @@
   },
   "spell": {
     "Passive": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "damage": [
         0,
         0,
@@ -142,7 +142,7 @@
       ]
     },
     "Q": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "basicStats": [
         {
           "damage": [

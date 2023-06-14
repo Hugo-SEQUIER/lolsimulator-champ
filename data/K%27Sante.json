@@ -37,7 +37,7 @@
   },
   "spell": {
     "Passive": {
-      "cd": "A DEFINIR",
+      "cd": 0,
       "damage": [
         0,
         0,
@@ -143,7 +143,7 @@
     },
     "Q": {
       "cd": [
-        "3.5 \u2212 1.75 (based on bonus resistances)"
+        "3.5 \u2212 1.75 "
       ],
       "basicStats": [
         {
