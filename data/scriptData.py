@@ -5,9 +5,13 @@ import re
 import numpy as np
 from bs4 import BeautifulSoup
 
+""" 
+Retourne un tableau de valeurs numériques correspondant au Cooldown d'un sort
+Il est possible que le tableau retourne un string A DEFINIR si la valeur n'a pas été comprise par l'algorithme
+S'il s'agit d'un autre string cela signifie que le CD diminue en fonction du niveau du personnage ce qui est un cas particulier.
+"""
 def getCd_Value(section):
     new_sec = section.find('div', attrs={'data-source' : "cooldown"})
-    
     if new_sec is None :
         new_sec = section.find('div', attrs={'data-source' : "static"})
         if new_sec is None :
@@ -16,7 +20,13 @@ def getCd_Value(section):
     cd = convertArrayStringToNumeric(cd)
     return cd
 
-
+""" 
+Convertie le tableau de String qui vient d'être scrapper à un tableau de valeur numérique
+Il y a plusieurs cas particuliers. 
+Les ratios sont représentés comme ceci : (+45% AD)
+J'enlève alors le % puis le +. Mais avant j'essaye de convertir en entier ou float.
+Car il peut y avoir ceci : (+45 / 60 / 80% AD) et le 60 peut être directement converti.
+"""
 def convertArrayStringToNumeric(array_string):
     if (isinstance(array_string, list)):
         for i in range(0,len(array_string)):
@@ -36,6 +46,17 @@ def convertArrayStringToNumeric(array_string):
                             continue
     return array_string
 
+""" 
+Retourne 3 dictionnaires 
+dict : Contenant les valeurs numériques liés aux spells
+dictRatioAD : Contenant les ratioAD liés aux spells
+dictRatioAP : Contenant les ratioAP liés aux spells
+
+Je récupère d'abord les balises DD et DT qui sont les balises htmls qui contiennent ces données. 
+Puis je récupère le texte des valeurs.
+S'il y en a pas alors j'initialise un tableau de zéro. 
+Comme ça, côté front, toutes mes données, qu'il y en ait ou pas seront utilisables de la même manière.
+"""
 def getDamageValue(section):
     list_dd = section.find_all('dd')
     list_dt = section.find_all('dt')
@@ -81,7 +102,11 @@ def getDamageValue(section):
     
     return dict, dictRatioAD, dictRatioAP
 
-# Le principe est d'obtenir à la fin qu'un tableau
+""" 
+Retourne un tableau unique avec toutes les données additionnées.
+Un spell sur LoL peut être découpé en plusieurs parties (comme le Q d'Aatrox). J'additionne alors ces dégats afin d'obtenir un tableau avec le plus de dégats possibles.
+Le but n'est pas de prendre les dégats moyens, mais le plus de dégats possible réalisables (sans les coups critiques).
+"""
 def summurizeValue(obj):
     if isinstance(obj, dict):
         listKey = obj.keys()
@@ -103,6 +128,11 @@ def summurizeValue(obj):
         
     return obj
 
+""" 
+what = 'heal' or 'shield' or 'bonus'
+Permet de récupérer les lignes de Heal / Shield mais aussi les bonus. Comme le R d'Aatrox qui ne fait pas de dégat mais en augmente.
+J'ai ajouté le bonus sweetspot qui correspond à la zone bonus d'Aatrox si il touche dedans.
+"""
 def getHealOrShieldOrBonusValue(obj, what):
     arrayOfSum = [[0,0,0,0,0]]
     if isinstance(obj, dict):
@@ -110,10 +140,15 @@ def getHealOrShieldOrBonusValue(obj, what):
         for key in listKey :
             if what in key.lower():
                 return obj[key]
+            if what == 'bonus' and "sweetspot" in key.lower():
+                return [60]
     return arrayOfSum
        
     
-
+""" 
+Retourne un dictionnaire spell qui contient toutes les données correspondant au sort du personnage.
+Scrapping avec BeautifulSoup
+"""
 def findSpellData(linkName):
     url = "https://leagueoflegends.fandom.com/wiki/" + linkName + "/LoL"
 
@@ -129,6 +164,7 @@ def findSpellData(linkName):
 
         parsedPage = BeautifulSoup(page.content, 'lxml')
 
+        # Scrapping des sections où sont les données
         passivesection = parsedPage.find('div', {'class' : 'skill skill_innate'})
         qSection = parsedPage.find('div', {'class' : 'skill skill_q'})
         wSection = parsedPage.find('div', {'class' : 'skill skill_w'})
@@ -149,6 +185,7 @@ def findSpellData(linkName):
         e_damage, e_ratio_AD, e_ratio_AP = getDamageValue(eSection)
         r_damage, r_ratio_AD, r_ratio_AP = getDamageValue(rSection)
 
+        # Heal
         passive_heal = getHealOrShieldOrBonusValue(passive_damage, "heal")
         q_heal = getHealOrShieldOrBonusValue(q_damage, "heal")
         w_heal = getHealOrShieldOrBonusValue(w_damage, "heal")
@@ -167,6 +204,7 @@ def findSpellData(linkName):
         e_heal_ratio_AP = getHealOrShieldOrBonusValue(e_ratio_AP, "heal")
         r_heal_ratio_AP = getHealOrShieldOrBonusValue(r_ratio_AP, "heal")
         
+        # Shield
         passive_shield = getHealOrShieldOrBonusValue(passive_damage, "shield")
         q_shield = getHealOrShieldOrBonusValue(q_damage, "shield")
         w_shield = getHealOrShieldOrBonusValue(w_damage, "shield")
@@ -185,6 +223,7 @@ def findSpellData(linkName):
         e_shield_ratio_AP = getHealOrShieldOrBonusValue(e_ratio_AP, "shield")
         r_shield_ratio_AP = getHealOrShieldOrBonusValue(r_ratio_AP, "shield")
         
+        # Bonus
         passive_bonus_value = getHealOrShieldOrBonusValue(passive_damage, "bonus")
         passive_bonus_ratioAD = getHealOrShieldOrBonusValue(passive_ratio_AD, "bonus")
         passive_bonus_ratioAP = getHealOrShieldOrBonusValue(passive_ratio_AP, "bonus")
@@ -205,6 +244,7 @@ def findSpellData(linkName):
         r_bonus_ratioAD = getHealOrShieldOrBonusValue(r_ratio_AD, "bonus")
         r_bonus_ratioAP = getHealOrShieldOrBonusValue(r_ratio_AP, "bonus")
         
+        # Addition des valeurs
         q_damage = summurizeValue(q_damage)
         w_damage = summurizeValue(w_damage)
         e_damage = summurizeValue(e_damage)
@@ -220,6 +260,7 @@ def findSpellData(linkName):
         e_ratio_AP = summurizeValue(e_ratio_AP)
         r_ratio_AP = summurizeValue(r_ratio_AP)
 
+        # Création du dictionnaire
         spell = {
             'Passive' : {
                 'cd' : passive_cd,
@@ -315,7 +356,10 @@ def findSpellData(linkName):
             }
         }
         return spell
-    
+
+""" 
+Ecriture des fichiers JSON.
+"""
 def get_champion_data(linkName):
     if linkName == 'Wukong' :
         linkName = 'monkeyking'
@@ -327,6 +371,7 @@ def get_champion_data(linkName):
     linkName = linkName.replace("î","i")
     linkName = linkName[0].upper() + linkName[1:].lower()
 
+    # Lien de la communauté contenant pleins d'informations concernant les champions. Point Négatif => Trop compliqué à traiter sauf pour les données de base.
     res = requests.get(f"https://raw.communitydragon.org/13.11/game/data/characters/{linkName.lower()}/{linkName.lower()}.bin.json")
     if res.status_code == 200:
         try:
@@ -335,6 +380,8 @@ def get_champion_data(linkName):
             print(f"Response from {linkName} was not JSON. Content was:\n{res.content}")
     else:
         print(f"Request for {linkName} failed with status code {res.status_code}")
+    
+    # Cas exceptionnel de noms de champions qui ne sont pas pris en compte DANS LE JSON DE RAW .
     if linkName.lower() == 'aurelionsol' :
         linkName = 'AurelionSol'
     if linkName.lower() == 'fiddlesticks' :
@@ -365,6 +412,8 @@ def get_champion_data(linkName):
         linkName = 'MonkeyKing'
 
     root = f"Characters/{linkName}/CharacterRecords/Root"
+    
+    # Cas exceptionnel de noms de champions qui ne sont pas pris en compte DANS LE WIKI .
     if linkName.lower() == 'aurelionsol' :
         linkName = 'Aurelion_Sol'
     if linkName.lower() == 'fiddlesticks' :
@@ -402,6 +451,8 @@ def get_champion_data(linkName):
     if linkName.lower() == 'milio':
         root = '{7706d3a1}'
     data = championDetails.get(root)
+    
+    # Création des dictionnaires.
     if data is not None:
         basicStats = {
                 'Hp' : data.get('baseHP'),
@@ -449,13 +500,14 @@ def get_champion_data(linkName):
         jsp = json.dumps(champion, indent=2)
         with open(f"{linkName}.json", 'w') as f:
             f.write(jsp)
+    # Si une erreur je sais d'où ça vient
     else :
         print(linkName)
         print(root)
         print(data)
         print(res)
     
-
+# Liste de tous les personnages de League Of Legends
 character_name = [
     "Aatrox","Ahri","Akali","Akshan","Alistar","Amumu","Anivia","Annie","Aphelios","Ashe","Aurelion Sol","Azir","Bard","Bel'Veth","Blitzcrank","Brand","Braum","Caitlyn","Camille","Cassiopeia","Cho'Gath","Corki","Darius","Diana","Dr. Mundo","Draven","Ekko","Elise","Evelynn","Ezreal","Fiddlesticks","Fiora","Fizz","Galio","Gangplank","Garen","Gnar","Gragas","Graves","Gwen","Hecarim","Heimerdinger","Illaoi","Irelia","Ivern","Janna","Jarvan IV","Jax","Jayce","Jhin","Jinx","K'Santé","Kai'Sa","Kalista","Karma","Karthus","Kassadin","Katarina","Kayle","Kayn","Kennen","Kha'Zix","Kindred","Kled","Kog'Maw","Leblanc","Lee Sin","Leona","Lillia","Lissandra","Lucian","Lulu","Lux","Master Yi","Malphite","Malzahar","Maokai","Milio","Miss Fortune","Mordekaiser","Morgana","Nami","Nasus","Nautilus","Neeko","Nidalee","Nilah","Nocturne","Nunu","Olaf","Orianna","Ornn","Pantheon","Poppy","Pyke","Qiyana","Quinn","Rakan","Rammus","Rek'Sai","Rell","Renata","Renekton","Rengar","Riven","Rumble","Ryze","Samira","Sejuani","Senna","Séraphine","Sett","Shaco","Shen","Shyvana","Singed","Sion","Sivir","Skarner","Sona","Soraka","Swain","Sylas","Syndra","Tahm Kench","Taliyah","Talon","Taric","Teemo","Thresh","Tristana","Trundle","Tryndamere","Twisted Fate","Twitch","Udyr","Urgot","Varus","Vayne","Veigar","Vel'Koz","Vex","Vi","Viego","Viktor","Vladimir","Volibear","Warwick","Wukong","Xayah","Xerath","Xin Zhao","Yasuo","Yone","Yorick","Yuumi","Zac","Zed","Zeri","Ziggs","Zilean","Zoé","Zyra"
 ]
