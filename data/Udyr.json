@@ -348,20 +348,20 @@
             0
           ],
           "ratioHealAp": [
-            "based on level) ",
+            "based on level",
             30,
             37.5,
             45,
             52.5,
-            " 60) "
+            60
           ],
           "ratioHealHealth": [
-            "based on level) ",
+            "based on level",
             30,
             37.5,
             45,
             52.5,
-            " 60) "
+            60
           ],
           "shield": [
             45,

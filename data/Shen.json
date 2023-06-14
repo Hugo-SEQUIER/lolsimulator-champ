@@ -198,14 +198,14 @@
             0
           ],
           "ratioAp": [
-            "based on level) ",
+            "based on level",
             7.5,
             9,
             10.5,
             12
           ],
           "ratioHealth": [
-            "based on level) ",
+            "based on level",
             7.5,
             9,
             10.5,
@@ -294,14 +294,14 @@
             0
           ],
           "bonusRatioAP": [
-            "based on level) ",
+            "based on level",
             2.5,
             3,
             3.5,
             4
           ],
           "bonusRatioHealth": [
-            "based on level) ",
+            "based on level",
             2.5,
             3,
             3.5,

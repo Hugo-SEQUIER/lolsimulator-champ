@@ -321,11 +321,11 @@
             35
           ],
           "bonusRatioHealth": [
-            "based on level) ",
+            "based on level",
             50,
             60,
             70,
-            " 80) "
+            80
           ]
         }
       ]

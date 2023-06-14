@@ -32,6 +32,7 @@ def convertArrayStringToNumeric(array_string):
         for i in range(0,len(array_string)):
             array_string[i] = array_string[i].split('%')[0]
             array_string[i] = array_string[i].split('(')[0]
+            array_string[i] = array_string[i].split(')')[0]
             try :
                 array_string[i] = int(array_string[i])
             except ValueError :
@@ -333,15 +334,47 @@ def findSpellData(linkName):
             e_bonus_ratioAD = [60]
             e_ratio_AP = [75]
             r_ratio_AP = [90]
-        if linkName.lower() == 'Fiddlesticks' :
+        if linkName.lower() == 'fiddlesticks' :
             q_damage = [40,60,80,100,120]
             w_ratio_AP = [70]
-        if linkName.lower() == 'Galio':
+        if linkName.lower() == 'galio':
             q_damage = [70,105,140,175,210]
             q_ratio_AP = [75]
-        if linkName.lower() == 'Garen':
+        if linkName.lower() == 'garen':
             e_damage = [4,8,12,16,20]
             e_ratio_AD = [32,34,36,38,40]
+        if linkName.lower() == 'illaoi':
+            passive_cd = [20,19.25,18.5,17.75,17,16.25,15.5,14.75,14,13.25,12.5,11.75,11,10.25,9.5,8.75,8,7.25]
+        if linkName.lower() == 'ivern':
+            r_ratio_AP =  [30]
+            r_damage =  [70,100,170]
+        if linkName.lower() == 'jhin':
+            q_ratio_AP = [123]
+            r_damage = [470,1175,1880]
+            r_ratio_AD = [235]
+        if linkName.lower() == 'jinx':
+            r_ratio_AD = [150]
+        if 'kaisa' in linkName.lower():
+            q_damage = [150,206.25,262.5,318.75,365]
+            q_ratio_AD = [187.5]
+            q_ratio_AP = [112.5]
+            w_ratio_AP = [45]
+            r_shield_ratio_AP = [120]
+        if linkName.lower() == 'katarina':
+            r_damage = [375,562.5,750]
+            r_ratio_AP = [285]
+        if linkName.lower() == 'kayle':
+            e_damage = [15,20,25,30,35]
+            e_ratio_AD = [10]
+            e_ratio_AP = [20]
+        if linkName.lower() == 'kindred':
+            e_damage = [80,100,120,140,160]
+            e_ratio_AD = [80]
+        if "kog" in linkName.lower():
+            r_ratio_AP = [70]
+        if "sante" in linkName.lower():
+            q_cd = [3.5,3.33,3.33,3.15,2.98,2.8,2.8,2.63,2.45,2.45,2.28,2.28,2.1,1.93,1.93,1.75,1.75,1.75]
+            w_ratio_health[0] = 7
         # Création du dictionnaire
         spell = {
             'Passive' : {
