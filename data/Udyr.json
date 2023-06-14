@@ -64,6 +64,13 @@
         0,
         0
       ],
+      "ratioHealth": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "heal": [
         [
           0,
@@ -83,6 +90,15 @@
         ]
       ],
       "ratioHealAp": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioHealHealth": [
         [
           0,
           0,
@@ -118,6 +134,15 @@
           0
         ]
       ],
+      "ratioShieldHealth": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
       "bonusValue": [
         [
           0,
@@ -137,6 +162,15 @@
         ]
       ],
       "bonusRatioAP": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusRatioHealth": [
         [
           0,
           0,
@@ -170,6 +204,9 @@
             0,
             0
           ],
+          "ratioHealth": [
+            8
+          ],
           "heal": [
             [
               0,
@@ -189,6 +226,15 @@
             ]
           ],
           "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealHealth": [
             [
               0,
               0,
@@ -224,6 +270,15 @@
               0
             ]
           ],
+          "ratioShieldHealth": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
           "bonusValue": [
             3,
             4,
@@ -241,6 +296,9 @@
             0,
             0,
             0
+          ],
+          "bonusRatioHealth": [
+            4
           ]
         }
       ]
@@ -272,6 +330,13 @@
             0,
             0
           ],
+          "ratioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
           "heal": [
             "10 \u2212 75 "
           ],
@@ -283,6 +348,14 @@
             0
           ],
           "ratioHealAp": [
+            "based on level) ",
+            30,
+            37.5,
+            45,
+            52.5,
+            " 60) "
+          ],
+          "ratioHealHealth": [
             "based on level) ",
             30,
             37.5,
@@ -313,6 +386,14 @@
             3.2,
             3.5
           ],
+          "ratioShieldHealth": [
+            40,
+            2.3,
+            2.6,
+            2.9,
+            3.2,
+            3.5
+          ],
           "bonusValue": [
             [
               0,
@@ -332,6 +413,15 @@
             ]
           ],
           "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioHealth": [
             [
               0,
               0,
@@ -370,6 +460,13 @@
             0,
             0
           ],
+          "ratioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
           "heal": [
             [
               0,
@@ -389,6 +486,15 @@
             ]
           ],
           "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealHealth": [
             [
               0,
               0,
@@ -424,6 +530,15 @@
               0
             ]
           ],
+          "ratioShieldHealth": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
           "bonusValue": [
             30,
             37,
@@ -440,6 +555,13 @@
             0
           ],
           "bonusRatioAP": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bonusRatioHealth": [
             0,
             0,
             0,
@@ -473,6 +595,13 @@
           "ratioAp": [
             140
           ],
+          "ratioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
           "heal": [
             [
               0,
@@ -492,6 +621,15 @@
             ]
           ],
           "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealHealth": [
             [
               0,
               0,
@@ -527,6 +665,15 @@
               0
             ]
           ],
+          "ratioShieldHealth": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
           "bonusValue": [
             [
               0,
@@ -546,6 +693,15 @@
             ]
           ],
           "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioHealth": [
             [
               0,
               0,
