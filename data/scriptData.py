@@ -68,11 +68,13 @@ def getDamageValue(section):
     dict = {}
     dictRatioAD = {}
     dictRatioAP = {}
+    dictRatioHealth = {}
     for i in range(0,len(list_dd)):
         string_damage = list_dd[i].get_text()
         string_name = list_dt[i].get_text()
         value_AP = 0
         value_AD = 0
+        value_Health = 0
         if 'AP' in string_damage :
             match = re.search(r'\((.+)\)', string_damage)
             if match:
@@ -81,6 +83,10 @@ def getDamageValue(section):
             match = re.search(r'\((.+)\)', string_damage)
             if match:
                 value_AD = match.group(1).split('/')
+        if 'health' in string_damage.lower() :
+            match = re.search(r'\((.+)\)', string_damage)
+            if match:
+                value_Health = match.group(1).split('/')
         string_damage = string_damage.split('(')[0].split('/')
         string_damage = convertArrayStringToNumeric(string_damage)
        
@@ -88,20 +94,27 @@ def getDamageValue(section):
         
         value_AD = convertArrayStringToNumeric(value_AD)
         value_AP = convertArrayStringToNumeric(value_AP)
+        value_Health = convertArrayStringToNumeric(value_Health)
+
         if value_AD == 0 :
             value_AD = [0,0,0,0,0]
         if value_AP == 0 :
             value_AP = [0,0,0,0,0]
+        if value_Health == 0 :
+            value_Health = [0,0,0,0,0]
         dictRatioAP[string_name] = value_AP
         dictRatioAD[string_name] = value_AD
+        dictRatioHealth[string_name] = value_Health
     if not dict :
         dict = [0,0,0,0,0]
     if not dictRatioAD :
         dictRatioAD = [0,0,0,0,0]
     if not dictRatioAP :
-        dictRatioAP = [0,0,0,0,0]
+        dictRatioAP = [0,0,0,0,0]    
+    if not dictRatioHealth :
+        dictRatioHealth = [0,0,0,0,0]
     
-    return dict, dictRatioAD, dictRatioAP
+    return dict, dictRatioAD, dictRatioAP, dictRatioHealth
 
 """ 
 Retourne un tableau unique avec toutes les données additionnées.
@@ -112,6 +125,7 @@ def summurizeValue(obj):
     if isinstance(obj, dict):
         listKey = obj.keys()
         arrayOfSum = [[0,0,0,0,0]]
+        res = []
         for key in listKey :
             if ("total" in key.lower() and "damage" in key.lower()) or "maximum physical damage" in key.lower() or "maximum magic damage" in key.lower():
                 return obj[key]
@@ -121,7 +135,13 @@ def summurizeValue(obj):
                 arrayOfSum.append(obj[key])
             if "magic damage:" == key.lower():
                 arrayOfSum.append(obj[key])
+            if "damage per" in key.lower() and ("tick" in key.lower() or "shot" in key.lower() and "empowered" not in key.lower()):
+                res =  obj[key]
+            if 'true damage' in key.lower():
+                res = obj[key]
         try :
+            if len(res) != 0 :
+                return res 
             tabResult = [sum(values) for values in zip(*arrayOfSum)]
             return tabResult
         except TypeError:
@@ -140,6 +160,8 @@ def getHealOrShieldOrBonusValue(obj, what):
         listKey = obj.keys()
         for key in listKey :
             if what in key.lower():
+                return obj[key]
+            if what == 'bonus' and 'empowered' in key.lower():
                 return obj[key]
             if what == 'bonus' and "sweetspot" in key.lower():
                 return [60]
@@ -180,11 +202,11 @@ def findSpellData(linkName):
         r_cd = getCd_Value(rSection)
 
         # Damage
-        passive_damage, passive_ratio_AD, passive_ratio_AP = getDamageValue(passivesection)
-        q_damage, q_ratio_AD, q_ratio_AP = getDamageValue(qSection)
-        w_damage, w_ratio_AD, w_ratio_AP = getDamageValue(wSection)
-        e_damage, e_ratio_AD, e_ratio_AP = getDamageValue(eSection)
-        r_damage, r_ratio_AD, r_ratio_AP = getDamageValue(rSection)
+        passive_damage, passive_ratio_AD, passive_ratio_AP, passive_ratio_health = getDamageValue(passivesection)
+        q_damage, q_ratio_AD, q_ratio_AP, q_ratio_health = getDamageValue(qSection)
+        w_damage, w_ratio_AD, w_ratio_AP, w_ratio_health = getDamageValue(wSection)
+        e_damage, e_ratio_AD, e_ratio_AP, e_ratio_health = getDamageValue(eSection)
+        r_damage, r_ratio_AD, r_ratio_AP, r_ratio_health = getDamageValue(rSection)
 
         # Heal
         passive_heal = getHealOrShieldOrBonusValue(passive_damage, "heal")
@@ -204,6 +226,12 @@ def findSpellData(linkName):
         w_heal_ratio_AP = getHealOrShieldOrBonusValue(w_ratio_AP, "heal")
         e_heal_ratio_AP = getHealOrShieldOrBonusValue(e_ratio_AP, "heal")
         r_heal_ratio_AP = getHealOrShieldOrBonusValue(r_ratio_AP, "heal")
+
+        passive_heal_ratio_health = getHealOrShieldOrBonusValue(passive_ratio_health, "heal")
+        q_heal_ratio_health = getHealOrShieldOrBonusValue(q_ratio_health, "heal")
+        w_heal_ratio_health = getHealOrShieldOrBonusValue(w_ratio_health, "heal")
+        e_heal_ratio_health = getHealOrShieldOrBonusValue(e_ratio_health, "heal")
+        r_heal_ratio_health = getHealOrShieldOrBonusValue(r_ratio_health, "heal")
         
         # Shield
         passive_shield = getHealOrShieldOrBonusValue(passive_damage, "shield")
@@ -223,27 +251,38 @@ def findSpellData(linkName):
         w_shield_ratio_AP = getHealOrShieldOrBonusValue(w_ratio_AP, "shield")
         e_shield_ratio_AP = getHealOrShieldOrBonusValue(e_ratio_AP, "shield")
         r_shield_ratio_AP = getHealOrShieldOrBonusValue(r_ratio_AP, "shield")
+
+        passive_shield_ratio_health = getHealOrShieldOrBonusValue(passive_ratio_health, "shield")
+        q_shield_ratio_health = getHealOrShieldOrBonusValue(q_ratio_health, "shield")
+        w_shield_ratio_health = getHealOrShieldOrBonusValue(w_ratio_health, "shield")
+        e_shield_ratio_health = getHealOrShieldOrBonusValue(e_ratio_health, "shield")
+        r_shield_ratio_health = getHealOrShieldOrBonusValue(r_ratio_health, "shield")
         
         # Bonus
         passive_bonus_value = getHealOrShieldOrBonusValue(passive_damage, "bonus")
         passive_bonus_ratioAD = getHealOrShieldOrBonusValue(passive_ratio_AD, "bonus")
         passive_bonus_ratioAP = getHealOrShieldOrBonusValue(passive_ratio_AP, "bonus")
+        passive_bonus_ratio_health = getHealOrShieldOrBonusValue(passive_ratio_health, "bonus")
         
         q_bonus_value = getHealOrShieldOrBonusValue(q_damage, "bonus")
         q_bonus_ratioAD = getHealOrShieldOrBonusValue(q_ratio_AD, "bonus")
         q_bonus_ratioAP = getHealOrShieldOrBonusValue(q_ratio_AP, "bonus")
+        q_bonus_ratio_health = getHealOrShieldOrBonusValue(q_ratio_health, "bonus")
         
         w_bonus_value = getHealOrShieldOrBonusValue(w_damage, "bonus")
         w_bonus_ratioAD = getHealOrShieldOrBonusValue(w_ratio_AD, "bonus")
         w_bonus_ratioAP = getHealOrShieldOrBonusValue(w_ratio_AP, "bonus")
+        w_bonus_ratio_health = getHealOrShieldOrBonusValue(w_ratio_health, "bonus")
         
         e_bonus_value = getHealOrShieldOrBonusValue(e_damage, "bonus")
         e_bonus_ratioAD = getHealOrShieldOrBonusValue(e_ratio_AD, "bonus")
         e_bonus_ratioAP = getHealOrShieldOrBonusValue(e_ratio_AP, "bonus")
+        e_bonus_ratio_health = getHealOrShieldOrBonusValue(e_ratio_health, "bonus")
         
         r_bonus_value = getHealOrShieldOrBonusValue(r_damage, "bonus")
         r_bonus_ratioAD = getHealOrShieldOrBonusValue(r_ratio_AD, "bonus")
         r_bonus_ratioAP = getHealOrShieldOrBonusValue(r_ratio_AP, "bonus")
+        r_bonus_ratio_health = getHealOrShieldOrBonusValue(r_ratio_health, "bonus")
         
         # Addition des valeurs
         q_damage = summurizeValue(q_damage)
@@ -261,6 +300,25 @@ def findSpellData(linkName):
         e_ratio_AP = summurizeValue(e_ratio_AP)
         r_ratio_AP = summurizeValue(r_ratio_AP)
 
+        q_ratio_health = summurizeValue(q_ratio_health)
+        w_ratio_health = summurizeValue(w_ratio_health)
+        e_ratio_health = summurizeValue(e_ratio_health)
+        r_ratio_health = summurizeValue(r_ratio_health)
+
+        if linkName.lower() == "aatrox" :
+            passive_cd = [24,23.29,22.59,21.88,21.18,20.47,19.76,19.06,18.35,17.65,16.94,16.24,15.53,14.82,14.12,13.41,12.71,12]
+        if linkName.lower() == "akali" :
+            passive_damage = [35,38,41,44,47,50,53,62,71,80,89,98,107,122,137,152,167,180]
+            passive_ratio_AD = [60]
+            passive_ratio_AP = [55]
+        if linkName.lower() == "aurelion_sol":
+            q_damage = [3.75,4.12,4.49,4.85,5.22,5.59,5.96,6.32,6.69,7.06,7.43,7.79,8.16,8.53,8.9,9.26,9.63,10]
+            q_ratio_AP = [7.5]
+            q_bonus_value = [20,20.59,21.18,21.76,22.35,22.94,23.53,24.12,24.71,25.29,25.88,26.47,27.06,27.65,28.24,28.82,29.41,30]
+            q_bonus_ratioAP = [35]
+        if linkName.lower() == 'azir':
+            w_damage = [0,0,0,0,0,0,0,0,0,2,7,12,17,32,47,62,77,92]
+            w_ratio_AP = [60]
         # Création du dictionnaire
         spell = {
             'Passive' : {
@@ -268,15 +326,19 @@ def findSpellData(linkName):
                 'damage' : passive_damage,
                 'ratioAd' : passive_ratio_AD,
                 'ratioAp' : passive_ratio_AP,
+                'ratioHealth' : passive_ratio_health,
                 'heal' : passive_heal,
                 'ratioHealAd' : passive_heal_ratio_AD,
                 'ratioHealAp' : passive_heal_ratio_AP,
+                'ratioHealHealth' : passive_heal_ratio_health,
                 'shield' : passive_shield,
                 'ratioShieldlAd' : passive_shield_ratio_AD,
                 'ratioShieldAp' : passive_shield_ratio_AP,
+                'ratioShieldHealth' : passive_shield_ratio_health,
                 'bonusValue' : passive_bonus_value,
                 'bonusRatioAD' : passive_bonus_ratioAD,
                 'bonusRatioAP' : passive_bonus_ratioAP,
+                'bonusRatioHealth' : passive_bonus_ratio_health
                 
             },
             'Q' : {
@@ -286,15 +348,19 @@ def findSpellData(linkName):
                         'damage' : q_damage,
                         'ratioAd' : q_ratio_AD,
                         'ratioAp' : q_ratio_AP, 
+                        'ratioHealth' : q_ratio_health,
                         'heal' : q_heal,
                         'ratioHealAd' : q_heal_ratio_AD,
                         'ratioHealAp' : q_heal_ratio_AP,
+                        'ratioHealHealth' : q_heal_ratio_health,
                         'shield' : q_shield,
                         'ratioShieldlAd' : q_shield_ratio_AD,
                         'ratioShieldAp' : q_shield_ratio_AP,
+                        'ratioShieldHealth' : q_shield_ratio_health,
                         'bonusValue' : q_bonus_value,
                         'bonusRatioAD' : q_bonus_ratioAD,
                         'bonusRatioAP' : q_bonus_ratioAP,
+                        'bonusRatioHealth' : q_bonus_ratio_health
                     },
                 ],
             },
@@ -304,16 +370,20 @@ def findSpellData(linkName):
                     {
                         'damage' : w_damage,
                         'ratioAd' : w_ratio_AD,
-                        'ratioAp' : w_ratio_AP, 
+                        'ratioAp' : w_ratio_AP,
+                        'ratioHealth' : w_ratio_health,
                         'heal' : w_heal,
                         'ratioHealAd' : w_heal_ratio_AD,
                         'ratioHealAp' : w_heal_ratio_AP,
+                        'ratioHealHealth' : w_heal_ratio_health,
                         'shield' : w_shield,
                         'ratioShieldlAd' : w_shield_ratio_AD,
                         'ratioShieldAp' : w_shield_ratio_AP,
+                        'ratioShieldHealth' : w_shield_ratio_health,
                         'bonusValue' : w_bonus_value,
                         'bonusRatioAD' : w_bonus_ratioAD,
                         'bonusRatioAP' : w_bonus_ratioAP,
+                        'bonusRatioHealth' : w_bonus_ratio_health
                     },
                 ],
             },
@@ -324,15 +394,19 @@ def findSpellData(linkName):
                         'damage' : e_damage,
                         'ratioAd' : e_ratio_AD,
                         'ratioAp' : e_ratio_AP,
+                        'ratioHealth' : e_ratio_health,
                         'heal' : e_heal,
                         'ratioHealAd' : e_heal_ratio_AD,
                         'ratioHealAp' : e_heal_ratio_AP, 
+                        'ratioHealHealth' : e_heal_ratio_health,
                         'shield' : e_shield,
                         'ratioShieldlAd' : e_shield_ratio_AD,
                         'ratioShieldAp' : e_shield_ratio_AP,
+                        'ratioShieldHealth' : e_shield_ratio_health,
                         'bonusValue' : e_bonus_value,
                         'bonusRatioAD' : e_bonus_ratioAD,
                         'bonusRatioAP' : e_bonus_ratioAP,
+                        'bonusRatioHealth' : e_bonus_ratio_health
                     },
                 ],
             },
@@ -343,15 +417,19 @@ def findSpellData(linkName):
                         'damage' : r_damage,
                         'ratioAd' : r_ratio_AD,
                         'ratioAp' : r_ratio_AP, 
+                        'ratioHealth' : r_ratio_health,
                         'heal' : r_heal,
                         'ratioHealAd' : r_heal_ratio_AD,
                         'ratioHealAp' : r_heal_ratio_AP,
+                        'ratioHealHealth' : r_heal_ratio_health,
                         'shield' : r_shield,
                         'ratioShieldlAd' : r_shield_ratio_AD,
                         'ratioShieldAp' : r_shield_ratio_AP,
+                        'ratioShieldHealth' : r_shield_ratio_health,
                         'bonusValue' : r_bonus_value,
                         'bonusRatioAD' : r_bonus_ratioAD,
                         'bonusRatioAP' : r_bonus_ratioAP,
+                        'bonusRatioHealth' : r_bonus_ratio_health
                     },
                 ],
             }
