@@ -1,39 +1,39 @@
 {
   "basicStats": {
     "Hp": 640.0,
-    "hpLvl": 103.0,
-    "AD": 52.0,
-    "ADLvl": 2.4000000953674316,
-    "AS": 0.656000018119812,
-    "ASRatio": 0.656000018119812,
-    "Armor": 28.0,
-    "ArmorLvl": 4.199999809265137,
-    "MR": 30.0,
-    "MRLvl": 1.2999999523162842,
-    "MS": 325.0,
+    "hpLvl": 104.0,
+    "AD": 64.0,
+    "ADLvl": 3.0,
+    "AS": 0.6579999923706055,
+    "ASRatio": 0.6579999923706055,
+    "Armor": 36.0,
+    "ArmorLvl": 4.799999713897705,
+    "MR": 32.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 340.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
-    "HpRegen": 0.75,
-    "HpRegenLvl": 0.12999999523162842,
+    "HpRegen": 1.600000023841858,
+    "HpRegenLvl": 0.14000000059604645,
     "Mana": 300.0,
-    "ManaLvl": 40.0,
+    "ManaLvl": 55.0,
     "AP": 0,
-    "Range": 550.0,
+    "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 1.600000023841858,
-    "ManaRegenLvl": 0.1599999964237213
+    "ManaRegen": 1.2999999523162842,
+    "ManaRegenLvl": 0.09000000357627869
   },
   "img": {
-    "centered": "Miss_Fortune_0",
-    "passive": "MissFortune_W",
-    "QSpell": "MissFortuneRicochetShot",
-    "WSpell": "MissFortuneViciousStrikes",
-    "ESpell": "MissFortuneScattershot",
-    "RSpell": "MissFortuneBulletTime"
+    "centered": "JarvanIV_0",
+    "passive": "JarvanIV_MartialCadence",
+    "QSpell": "JarvanIVDragonStrike",
+    "WSpell": "JarvanIVGoldenAegis",
+    "ESpell": "JarvanIVDemacianStandard",
+    "RSpell": "JarvanIVCataclysm"
   },
   "spell": {
     "Passive": {
@@ -177,26 +177,30 @@
     },
     "Q": {
       "cd": [
+        10,
+        9,
+        8,
         7,
-        6,
-        5,
-        4,
-        3
+        6
       ],
       "basicStats": [
         {
           "damage": [
-            20,
-            45,
-            70,
-            95,
-            120
+            80,
+            120,
+            160,
+            200,
+            240
           ],
           "ratioAd": [
-            100
+            140
           ],
           "ratioAp": [
-            100
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioHealth": [
             0,
@@ -318,7 +322,7 @@
     },
     "W": {
       "cd": [
-        12
+        9
       ],
       "basicStats": [
         {
@@ -387,33 +391,30 @@
             ]
           ],
           "shield": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            60,
+            80,
+            100,
+            120,
+            140
           ],
           "ratioShieldlAd": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            70
           ],
           "ratioShieldAp": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioShieldHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bonusValue": [
             [
               0,
               0,
@@ -422,53 +423,52 @@
               0
             ]
           ],
-          "bonusValue": [
-            55,
-            65,
-            75,
-            85,
-            95
-          ],
           "bonusRatioAD": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusRatioAP": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusRatioHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ]
         }
       ]
     },
     "E": {
       "cd": [
-        18,
-        17,
-        16,
-        15,
-        14
+        12,
+        11.5,
+        11,
+        10.5,
+        10
       ],
       "basicStats": [
         {
           "damage": [
-            70,
-            100,
-            130,
+            80,
+            120,
             160,
-            190
+            200,
+            240
           ],
           "ratioAd": [
             0,
@@ -478,7 +478,7 @@
             0
           ],
           "ratioAp": [
-            120
+            80
           ],
           "ratioHealth": [
             0,
@@ -560,40 +560,32 @@
             ]
           ],
           "bonusValue": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            20,
+            22.5,
+            25,
+            27.5,
+            30
           ],
           "bonusRatioAD": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "bonusRatioAP": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "bonusRatioHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ]
         }
       ]
@@ -601,25 +593,25 @@
     "R": {
       "cd": [
         120,
-        110,
-        100
+        105,
+        90
       ],
       "basicStats": [
         {
           "damage": [
-            1050,
-            1200,
-            1350
+            200,
+            325,
+            450
           ],
           "ratioAd": [
-            350,
-            400,
-            450
+            180
           ],
           "ratioAp": [
-            350,
-            400,
-            450
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioHealth": [
             0,

@@ -611,7 +611,9 @@
       "basicStats": [
         {
           "damage": [
-            1200
+            300,
+            475,
+            650
           ],
           "ratioAd": [
             0,

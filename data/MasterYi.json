@@ -1,39 +1,39 @@
 {
   "basicStats": {
-    "Hp": 610.0,
-    "hpLvl": 108.0,
-    "AD": 64.0,
-    "ADLvl": 3.5,
-    "AS": 0.625,
-    "ASRatio": 0.625,
+    "Hp": 669.0,
+    "hpLvl": 100.0,
+    "AD": 65.0,
+    "ADLvl": 2.200000047683716,
+    "AS": 0.6790000200271606,
+    "ASRatio": 0.6790000200271606,
     "Armor": 33.0,
-    "ArmorLvl": 4.699999809265137,
-    "MR": 30.0,
-    "MRLvl": 2.0999999046325684,
-    "MS": 330.0,
+    "ArmorLvl": 4.199999809265137,
+    "MR": 32.0,
+    "MRLvl": 2.049999952316284,
+    "MS": 355.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
-    "HpRegen": 1.899999976158142,
-    "HpRegenLvl": 0.17000000178813934,
-    "Mana": 290.0,
-    "ManaLvl": 60.0,
+    "HpRegen": 1.5,
+    "HpRegenLvl": 0.12999999523162842,
+    "Mana": 251.0,
+    "ManaLvl": 42.0,
     "AP": 0,
     "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 1.399999976158142,
-    "ManaRegenLvl": 0.20000000298023224
+    "ManaRegen": 1.4500000476837158,
+    "ManaRegenLvl": 0.09000000357627869
   },
   "img": {
-    "centered": "K%27Sante_0",
-    "passive": "Icons_KSante_P",
-    "QSpell": "KSanteQ",
-    "WSpell": "KSanteW",
-    "ESpell": "KSanteE",
-    "RSpell": "KSanteR"
+    "centered": "MasterYi_0",
+    "passive": "MasterYi_Passive1",
+    "QSpell": "AlphaStrike",
+    "WSpell": "Meditate",
+    "ESpell": "WujuStyle",
+    "RSpell": "Highlander"
   },
   "spell": {
     "Passive": {
@@ -177,19 +177,23 @@
     },
     "Q": {
       "cd": [
-        "3.5 \u2212 1.75 "
+        20,
+        19.5,
+        19,
+        18.5,
+        18
       ],
       "basicStats": [
         {
           "damage": [
-            50,
-            75,
-            100,
-            125,
-            150
+            105,
+            160,
+            215,
+            270,
+            325
           ],
           "ratioAd": [
-            40
+            50
           ],
           "ratioAp": [
             0,
@@ -278,6 +282,131 @@
             ]
           ],
           "bonusValue": [
+            75,
+            100,
+            125,
+            150,
+            175
+          ],
+          "bonusRatioAD": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bonusRatioAP": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bonusRatioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "W": {
+      "cd": [
+        9
+      ],
+      "basicStats": [
+        {
+          "damage": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            15,
+            25,
+            35,
+            45,
+            55
+          ],
+          "ratioHealAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioHealAp": [
+            12.5
+          ],
+          "ratioHealHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldHealth": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
             [
               0,
               0,
@@ -316,29 +445,21 @@
         }
       ]
     },
-    "W": {
+    "E": {
       "cd": [
-        24,
-        22,
-        20,
-        18,
-        16
+        18
       ],
       "basicStats": [
         {
           "damage": [
-            110,
-            170,
-            230,
-            290,
-            350
+            30,
+            35,
+            40,
+            45,
+            50
           ],
           "ratioAd": [
-            50,
-            7.25,
-            7.5,
-            7.75,
-            8
+            30
           ],
           "ratioAp": [
             0,
@@ -348,11 +469,144 @@
             0
           ],
           "ratioHealth": [
-            50,
-            7.25,
-            7.5,
-            7.75,
-            8
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealHealth": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldHealth": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            30,
+            35,
+            40,
+            45,
+            50
+          ],
+          "bonusRatioAD": [
+            30
+          ],
+          "bonusRatioAP": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bonusRatioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "R": {
+      "cd": [
+        85
+      ],
+      "basicStats": [
+        {
+          "damage": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioHealth": [
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "heal": [
             [
@@ -429,12 +683,14 @@
           "bonusValue": [
             25,
             35,
-            45,
-            55,
-            65
+            45
           ],
           "bonusRatioAD": [
-            50
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "bonusRatioAP": [
             0,
@@ -449,284 +705,6 @@
             0,
             0,
             0
-          ]
-        }
-      ]
-    },
-    "E": {
-      "cd": [
-        10.5,
-        10,
-        9.5,
-        9,
-        8.5
-      ],
-      "basicStats": [
-        {
-          "damage": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "ratioAd": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "ratioAp": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "ratioHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "heal": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioHealAd": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioHealAp": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioHealHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "shield": [
-            45,
-            65,
-            85,
-            105,
-            125
-          ],
-          "ratioShieldlAd": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "ratioShieldAp": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "ratioShieldHealth": [
-            15
-          ],
-          "bonusValue": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusRatioAD": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusRatioAP": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusRatioHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ]
-        }
-      ]
-    },
-    "R": {
-      "cd": [
-        120,
-        100,
-        80
-      ],
-      "basicStats": [
-        {
-          "damage": [
-            185,
-            320,
-            455
-          ],
-          "ratioAd": [
-            40
-          ],
-          "ratioAp": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "ratioHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "heal": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioHealAd": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioHealAp": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioHealHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "shield": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioShieldlAd": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioShieldAp": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "ratioShieldHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusValue": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusRatioAD": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusRatioAP": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
-          ],
-          "bonusRatioHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
           ]
         }
       ]

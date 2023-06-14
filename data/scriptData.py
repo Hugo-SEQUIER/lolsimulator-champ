@@ -127,7 +127,7 @@ def summurizeValue(obj):
         arrayOfSum = [[0,0,0,0,0]]
         res = []
         for key in listKey :
-            if ("total" in key.lower() and "damage" in key.lower()) or "maximum physical damage" in key.lower() or "maximum magic damage" in key.lower():
+            if  "bonus" not in key.lower() and "cast" not in key.lower() and ("total" in key.lower() and "damage" in key.lower()) or "maximum physical damage" in key.lower() or "maximum magic damage" in key.lower():
                 return obj[key]
             if "first cast damage" in key.lower() or "second cast damage" in key.lower() or "third cast damage" in key.lower():
                 arrayOfSum.append(obj[key])
@@ -137,8 +137,12 @@ def summurizeValue(obj):
                 arrayOfSum.append(obj[key])
             if "damage per" in key.lower() and ("tick" in key.lower() or "shot" in key.lower() and "empowered" not in key.lower()):
                 res =  obj[key]
-            if 'true damage' in key.lower():
+            if 'true damage' in key.lower() and "non-champion" not in key.lower():
                 res = obj[key]
+            if 'gigalodon' in key.lower():
+                return obj[key]
+            if 'maximum damage:' == key.lower() or 'maximum total damage:' == key.lower():
+                res = obj[key]  
         try :
             if len(res) != 0 :
                 return res 
@@ -319,6 +323,25 @@ def findSpellData(linkName):
         if linkName.lower() == 'azir':
             w_damage = [0,0,0,0,0,0,0,0,0,2,7,12,17,32,47,62,77,92]
             w_ratio_AP = [60]
+        if linkName.lower() == 'dr._mundo':
+            passive_cd = [60,60,52.5,52.5,52.5,45,45,37.5,37.5,37.5,30,30,22.5,22.5,22.5,15,15,15]
+            q_damage = [80,130,180,230,280]
+            e_damage = [8,24,40,56,72]
+            e_ratio_health = [11,2]
+        if linkName.lower() == 'ezreal':
+            q_ratio_AP = [15]
+            e_bonus_ratioAD = [60]
+            e_ratio_AP = [75]
+            r_ratio_AP = [90]
+        if linkName.lower() == 'Fiddlesticks' :
+            q_damage = [40,60,80,100,120]
+            w_ratio_AP = [70]
+        if linkName.lower() == 'Galio':
+            q_damage = [70,105,140,175,210]
+            q_ratio_AP = [75]
+        if linkName.lower() == 'Garen':
+            e_damage = [4,8,12,16,20]
+            e_ratio_AD = [32,34,36,38,40]
         # Création du dictionnaire
         spell = {
             'Passive' : {
@@ -493,38 +516,39 @@ def get_champion_data(linkName):
     root = f"Characters/{linkName}/CharacterRecords/Root"
     
     # Cas exceptionnel de noms de champions qui ne sont pas pris en compte DANS LE WIKI .
-    if linkName.lower() == 'aurelionsol' :
-        linkName = 'Aurelion_Sol'
-    if linkName.lower() == 'fiddlesticks' :
-        linkName = 'Fiddlesticks'
-    if linkName.lower() == 'jarvaniv' :
-        linkName = 'Jarvan_IV'
-    if linkName.lower() == 'kogmaw' :
-        linkName = 'Kog%27Maw'
-    if linkName.lower() == 'ksante' :
-        linkName = 'K%27Sante'
-    if linkName.lower() == 'masteryi' :
-        linkName = 'Master_Yi'
-    if linkName.lower() == 'leesin' :
-        linkName = 'Lee_Sin'
-    if linkName.lower() == 'missfortune' :
-        linkName = 'Miss_Fortune'
-    if linkName.lower() == 'reksai' :
-        linkName = 'Rek%27Sai'
-    if linkName.lower() == 'tahmkench' :
-        linkName = 'Tahm_Kench'
-    if linkName.lower() == 'twistedfate' :
-        linkName = 'Twisted_Fate'
-    if linkName.lower() == 'xinzhao' :
-        linkName = 'Xin_Zhao'
-    if linkName.lower() == 'drmundo' :
-        linkName = 'Dr._Mundo'
-    if linkName.lower() == 'monkeyking' :
-        linkName = 'Wukong'
+    spellName = linkName
+    if spellName.lower() == 'aurelionsol' :
+        spellName = 'Aurelion_Sol'
+    if spellName.lower() == 'fiddlesticks' :
+        spellName = 'Fiddlesticks'
+    if spellName.lower() == 'jarvaniv' :
+        spellName = 'Jarvan_IV'
+    if spellName.lower() == 'kogmaw' :
+        spellName = 'Kog%27Maw'
+    if spellName.lower() == 'ksante' :
+        spellName = 'K%27Sante'
+    if spellName.lower() == 'masteryi' :
+        spellName = 'Master_Yi'
+    if spellName.lower() == 'leesin' :
+        spellName = 'Lee_Sin'
+    if spellName.lower() == 'missfortune' :
+        spellName = 'Miss_Fortune'
+    if spellName.lower() == 'reksai' :
+        spellName = 'Rek%27Sai'
+    if spellName.lower() == 'tahmkench' :
+        spellName = 'Tahm_Kench'
+    if spellName.lower() == 'twistedfate' :
+        spellName = 'Twisted_Fate'
+    if spellName.lower() == 'xinzhao' :
+        spellName = 'Xin_Zhao'
+    if spellName.lower() == 'drmundo' :
+        spellName = 'Dr._Mundo'
+    if spellName.lower() == 'monkeyking' :
+        spellName = 'Wukong'
 
-    spell = findSpellData(linkName)
+    spell = findSpellData(spellName)
     if spell is None :
-        print(linkName)
+        print(spellName)
         print('COTE SCRAPPING')
 
     if linkName.lower() == 'milio':

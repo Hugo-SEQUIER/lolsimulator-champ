@@ -196,7 +196,7 @@
             130
           ],
           "ratioAp": [
-            130
+            15
           ],
           "ratioHealth": [
             0,
@@ -474,7 +474,7 @@
             50
           ],
           "ratioAp": [
-            50
+            75
           ],
           "ratioHealth": [
             0,
@@ -565,13 +565,7 @@
             ]
           ],
           "bonusRatioAD": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            60
           ],
           "bonusRatioAP": [
             [
@@ -611,7 +605,7 @@
             100
           ],
           "ratioAp": [
-            100
+            90
           ],
           "ratioHealth": [
             0,

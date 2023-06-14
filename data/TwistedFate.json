@@ -1,39 +1,39 @@
 {
   "basicStats": {
-    "Hp": 640.0,
-    "hpLvl": 103.0,
-    "AD": 56.0,
-    "ADLvl": 3.200000047683716,
-    "AS": 0.6579999923706055,
-    "ASRatio": 0.6579999923706055,
-    "Armor": 42.0,
-    "ArmorLvl": 4.699999809265137,
-    "MR": 32.0,
-    "MRLvl": 2.049999952316284,
-    "MS": 335.0,
+    "Hp": 604.0,
+    "hpLvl": 108.0,
+    "AD": 52.0,
+    "ADLvl": 3.299999952316284,
+    "AS": 0.6510000228881836,
+    "ASRatio": 0.6510000228881836,
+    "Armor": 21.0,
+    "ArmorLvl": 4.349999904632568,
+    "MR": 30.0,
+    "MRLvl": 1.2999999523162842,
+    "MS": 330.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
-    "HpRegen": 1.2999999523162842,
-    "HpRegenLvl": 0.10999999940395355,
-    "Mana": 325.0,
-    "ManaLvl": 50.0,
+    "HpRegen": 1.100000023841858,
+    "HpRegenLvl": 0.11999999731779099,
+    "Mana": 333.0,
+    "ManaLvl": 39.0,
     "AP": 0,
-    "Range": 175.0,
+    "Range": 525.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
     "ManaRegen": 1.600000023841858,
-    "ManaRegenLvl": 0.20000000298023224
+    "ManaRegenLvl": 0.1599999964237213
   },
   "img": {
-    "centered": "Tahm_Kench_0",
-    "passive": "TahmKenchP",
-    "QSpell": "TahmKenchQ",
-    "WSpell": "TahmKenchW",
-    "ESpell": "TahmKenchE",
-    "RSpell": "TahmKenchRWrapper"
+    "centered": "TwistedFate_0",
+    "passive": "Cardmaster_SealFate",
+    "QSpell": "WildCards",
+    "WSpell": "PickACard",
+    "ESpell": "CardmasterStack",
+    "RSpell": "Destiny"
   },
   "spell": {
     "Passive": {
@@ -177,20 +177,20 @@
     },
     "Q": {
       "cd": [
-        7,
-        6.5,
         6,
+        5.75,
         5.5,
+        5.25,
         5
       ],
       "basicStats": [
         {
           "damage": [
-            80,
-            130,
+            60,
+            100,
+            140,
             180,
-            230,
-            280
+            220
           ],
           "ratioAd": [
             0,
@@ -200,38 +200,50 @@
             0
           ],
           "ratioAp": [
-            100
+            80
           ],
           "ratioHealth": [
-            100
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "heal": [
-            10,
-            15,
-            20,
-            25,
-            30
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioHealAd": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioHealAp": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioHealHealth": [
-            5,
-            5.5,
-            6,
-            6.5,
-            7
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "shield": [
             [
@@ -310,30 +322,22 @@
     },
     "W": {
       "cd": [
-        21,
-        20,
-        19,
-        18,
-        17
+        6
       ],
       "basicStats": [
         {
           "damage": [
-            100,
-            135,
-            170,
-            205,
-            240
+            15,
+            22.5,
+            30,
+            37.5,
+            45
           ],
           "ratioAd": [
-            0,
-            0,
-            0,
-            0,
-            0
+            100
           ],
           "ratioAp": [
-            150
+            100
           ],
           "ratioHealth": [
             0,
@@ -454,9 +458,7 @@
       ]
     },
     "E": {
-      "cd": [
-        3
-      ],
+      "cd": 0,
       "basicStats": [
         {
           "damage": [
@@ -488,32 +490,40 @@
             0
           ],
           "heal": [
-            13,
-            21,
-            29,
-            37,
-            45
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioHealAd": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioHealAp": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioHealHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "shield": [
             [
@@ -552,56 +562,50 @@
             ]
           ],
           "bonusValue": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            10,
+            17.5,
+            25,
+            32.5,
+            40
           ],
           "bonusRatioAD": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "bonusRatioAP": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "bonusRatioHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ]
         }
       ]
     },
     "R": {
       "cd": [
-        120,
-        100,
-        80
+        180,
+        150,
+        120
       ],
       "basicStats": [
         {
           "damage": [
-            100,
-            250,
-            400
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioAd": [
             0,
@@ -611,10 +615,18 @@
             0
           ],
           "ratioAp": [
-            15
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioHealth": [
-            15
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "heal": [
             [
@@ -653,26 +665,40 @@
             ]
           ],
           "shield": [
-            650,
-            800,
-            950
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioShieldlAd": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioShieldAp": [
-            150
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioShieldHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusValue": [
             [

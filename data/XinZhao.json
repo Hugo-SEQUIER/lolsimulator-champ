@@ -1,22 +1,22 @@
 {
   "basicStats": {
     "Hp": 640.0,
-    "hpLvl": 104.0,
-    "AD": 64.0,
+    "hpLvl": 106.0,
+    "AD": 63.0,
     "ADLvl": 3.0,
-    "AS": 0.6579999923706055,
-    "ASRatio": 0.6579999923706055,
-    "Armor": 36.0,
-    "ArmorLvl": 4.799999713897705,
+    "AS": 0.6449999809265137,
+    "ASRatio": 0.6449999809265137,
+    "Armor": 35.0,
+    "ArmorLvl": 4.699999809265137,
     "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340.0,
+    "MS": 345.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
     "HpRegen": 1.600000023841858,
     "HpRegenLvl": 0.14000000059604645,
-    "Mana": 300.0,
+    "Mana": 274.0,
     "ManaLvl": 55.0,
     "AP": 0,
     "Range": 175.0,
@@ -24,16 +24,16 @@
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 1.2999999523162842,
+    "ManaRegen": 1.4500000476837158,
     "ManaRegenLvl": 0.09000000357627869
   },
   "img": {
-    "centered": "Jarvan_IV_0",
-    "passive": "JarvanIV_MartialCadence",
-    "QSpell": "JarvanIVDragonStrike",
-    "WSpell": "JarvanIVGoldenAegis",
-    "ESpell": "JarvanIVDemacianStandard",
-    "RSpell": "JarvanIVCataclysm"
+    "centered": "XinZhao_0",
+    "passive": "XinZhaoP",
+    "QSpell": "XinZhaoQ",
+    "WSpell": "XinZhaoW",
+    "ESpell": "XinZhaoE",
+    "RSpell": "XinZhaoR"
   },
   "spell": {
     "Passive": {
@@ -177,23 +177,27 @@
     },
     "Q": {
       "cd": [
-        10,
-        9,
-        8,
         7,
-        6
+        6.5,
+        6,
+        5.5,
+        5
       ],
       "basicStats": [
         {
           "damage": [
-            80,
-            120,
-            160,
-            200,
-            240
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioAd": [
-            140
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "ratioAp": [
             0,
@@ -282,70 +286,54 @@
             ]
           ],
           "bonusValue": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            16,
+            25,
+            34,
+            43,
+            52
           ],
           "bonusRatioAD": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            40
           ],
           "bonusRatioAP": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ],
           "bonusRatioHealth": [
-            [
-              0,
-              0,
-              0,
-              0,
-              0
-            ]
+            0,
+            0,
+            0,
+            0,
+            0
           ]
         }
       ]
     },
     "W": {
       "cd": [
-        9
+        12,
+        11,
+        10,
+        9,
+        8
       ],
       "basicStats": [
         {
           "damage": [
-            0,
-            0,
-            0,
-            0,
-            0
+            80,
+            125,
+            170,
+            215,
+            260
           ],
           "ratioAd": [
-            0,
-            0,
-            0,
-            0,
-            0
+            120
           ],
           "ratioAp": [
-            0,
-            0,
-            0,
-            0,
-            0
+            120
           ],
           "ratioHealth": [
             0,
@@ -391,28 +379,40 @@
             ]
           ],
           "shield": [
-            60,
-            80,
-            100,
-            120,
-            140
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioShieldlAd": [
-            70
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioShieldAp": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "ratioShieldHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusValue": [
             [
@@ -455,20 +455,16 @@
     },
     "E": {
       "cd": [
-        12,
-        11.5,
-        11,
-        10.5,
-        10
+        11
       ],
       "basicStats": [
         {
           "damage": [
-            80,
-            120,
-            160,
-            200,
-            240
+            50,
+            75,
+            100,
+            125,
+            150
           ],
           "ratioAd": [
             0,
@@ -478,7 +474,7 @@
             0
           ],
           "ratioAp": [
-            80
+            60
           ],
           "ratioHealth": [
             0,
@@ -560,11 +556,11 @@
             ]
           ],
           "bonusValue": [
-            20,
-            22.5,
-            25,
-            27.5,
-            30
+            40,
+            45,
+            50,
+            55,
+            60
           ],
           "bonusRatioAD": [
             0,
@@ -593,32 +589,24 @@
     "R": {
       "cd": [
         120,
-        105,
-        90
+        110,
+        100
       ],
       "basicStats": [
         {
           "damage": [
-            200,
-            325,
-            450
+            75,
+            175,
+            275
           ],
           "ratioAd": [
-            180
+            100
           ],
           "ratioAp": [
-            0,
-            0,
-            0,
-            0,
-            0
+            100
           ],
           "ratioHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
+            100
           ],
           "heal": [
             [

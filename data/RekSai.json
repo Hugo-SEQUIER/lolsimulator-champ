@@ -1,39 +1,39 @@
 {
   "basicStats": {
-    "Hp": 610.0,
+    "Hp": 640.0,
     "hpLvl": 99.0,
-    "AD": 66.0,
-    "ADLvl": 3.5,
-    "AS": 0.6899999976158142,
-    "ASRatio": 0.6579999923706055,
-    "Armor": 31.0,
-    "ArmorLvl": 4.699999809265137,
-    "MR": 28.0,
+    "AD": 61.0,
+    "ADLvl": 3.0,
+    "AS": 0.6669999957084656,
+    "ASRatio": 0.6669999957084656,
+    "Armor": 36.0,
+    "ArmorLvl": 4.949999809265137,
+    "MR": 32.0,
     "MRLvl": 2.049999952316284,
-    "MS": 340.0,
+    "MS": 335.0,
     "Lifesteal": 0,
     "Crit": 0,
     "CritDmg": 175,
-    "HpRegen": 0.699999988079071,
+    "HpRegen": 1.5,
     "HpRegenLvl": 0.12999999523162842,
-    "Mana": 300.0,
-    "ManaLvl": 65.0,
+    "Mana": null,
+    "ManaLvl": 0,
     "AP": 0,
     "Range": 175.0,
     "ArmorPen": 0,
     "ResistPen": 0,
     "Haste": 0,
     "SpellVamp": 0,
-    "ManaRegen": 1.600000023841858,
-    "ManaRegenLvl": 0.12999999523162842
+    "ManaRegen": 0.0,
+    "ManaRegenLvl": 0
   },
   "img": {
-    "centered": "Wukong_0",
-    "passive": "MonkeyKingStoneSkin",
-    "QSpell": "MonkeyKingDoubleAttack",
-    "WSpell": "MonkeyKingDecoy",
-    "ESpell": "MonkeyKingNimbus",
-    "RSpell": "MonkeyKingSpinToWin"
+    "centered": "RekSai_0",
+    "passive": "RekSai_Passive",
+    "QSpell": "RekSaiQ",
+    "WSpell": "RekSaiW",
+    "ESpell": "RekSaiE",
+    "RSpell": "RekSaiRWrapper"
   },
   "spell": {
     "Passive": {
@@ -177,11 +177,11 @@
     },
     "Q": {
       "cd": [
-        8,
-        7.5,
-        7,
-        6.5,
-        6
+        4,
+        3.5,
+        3,
+        2.5,
+        2
       ],
       "basicStats": [
         {
@@ -286,18 +286,14 @@
             ]
           ],
           "bonusValue": [
-            75,
-            100,
-            125,
-            150,
-            175
+            21,
+            27,
+            33,
+            39,
+            45
           ],
           "bonusRatioAD": [
-            0,
-            0,
-            0,
-            0,
-            0
+            50
           ],
           "bonusRatioAP": [
             0,
@@ -318,11 +314,7 @@
     },
     "W": {
       "cd": [
-        22,
-        20,
-        18,
-        16,
-        14
+        4
       ],
       "basicStats": [
         {
@@ -467,30 +459,26 @@
     },
     "E": {
       "cd": [
-        10,
-        9.5,
-        9,
-        8.5,
-        8
+        12
       ],
       "basicStats": [
         {
           "damage": [
-            80,
             110,
+            120,
+            130,
             140,
-            170,
-            200
+            150
           ],
           "ratioAd": [
+            170
+          ],
+          "ratioAp": [
             0,
             0,
             0,
             0,
             0
-          ],
-          "ratioAp": [
-            100
           ],
           "ratioHealth": [
             0,
@@ -572,51 +560,61 @@
             ]
           ],
           "bonusValue": [
-            35,
-            40,
-            45,
-            50,
-            55
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusRatioAD": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusRatioAP": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ],
           "bonusRatioHealth": [
-            0,
-            0,
-            0,
-            0,
-            0
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
           ]
         }
       ]
     },
     "R": {
       "cd": [
-        130,
-        110,
-        90
+        100,
+        90,
+        80
       ],
       "basicStats": [
         {
           "damage": [
-            8,
-            12,
-            16
+            100,
+            250,
+            400
           ],
           "ratioAd": [
-            275
+            175,
+            25,
+            30
           ],
           "ratioAp": [
             0,
@@ -626,7 +624,9 @@
             0
           ],
           "ratioHealth": [
-            275
+            175,
+            25,
+            30
           ],
           "heal": [
             [
