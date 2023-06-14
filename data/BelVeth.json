@@ -38,60 +38,219 @@
   "spell": {
     "Passive": {
       "cd": "A DEFINIR",
-      "damage": 0,
-      "ratioAd": 0,
-      "ratioAp": 0
+      "damage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ratioAd": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ratioAp": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "heal": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioHealAd": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioHealAp": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "shield": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioShieldlAd": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioShieldAp": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusValue": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusRatioAD": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusRatioAP": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
     },
     "Q": {
       "cd": [
-        ""
+        1
       ],
       "basicStats": [
         {
-          "damage": {
-            "Physical Damage:": [
+          "damage": [
+            10,
+            15,
+            20,
+            25,
+            30
+          ],
+          "ratioAd": [
+            110
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            [
               0,
-              15,
-              20,
-              25,
-              30
-            ],
-            "Monster Damage:": [
-              4,
-              21,
-              28,
-              35,
-              42
-            ],
-            "Modified Minion Damage:": [
               0,
-              70,
-              80,
-              90,
-              100
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Physical Damage:": [
-              110
-            ],
-            "Monster Damage:": [
-              154
-            ],
-            "Modified Minion Damage:": 0
-          },
-          "ratioAp": {
-            "Physical Damage:": 0,
-            "Monster Damage:": 0,
-            "Modified Minion Damage:": 0
-          }
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAD": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     },
     "W": {
       "cd": [
-        2,
+        12,
         11,
         10,
         9,
@@ -99,41 +258,106 @@
       ],
       "basicStats": [
         {
-          "damage": {
-            "Magic Damage:": [
+          "damage": [
+            70,
+            110,
+            150,
+            190,
+            230
+          ],
+          "ratioAd": [
+            100
+          ],
+          "ratioAp": [
+            100
+          ],
+          "heal": [
+            [
               0,
-              110,
-              150,
-              190,
-              230
-            ],
-            "Slow Duration:": [
-              0.25,
-              1.5,
-              1.75,
-              2,
-              2.25
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Magic Damage:": [
-              100
-            ],
-            "Slow Duration:": 0
-          },
-          "ratioAp": {
-            "Magic Damage:": [
-              100
-            ],
-            "Slow Duration:": 0
-          }
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAD": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     },
     "E": {
       "cd": [
-        4,
+        24,
         22.5,
         21,
         19.5,
@@ -141,138 +365,189 @@
       ],
       "basicStats": [
         {
-          "damage": {
-            "Minimum Physical Damage per hit:": [
-              " ",
-              10,
-              12,
-              14,
-              16
-            ],
-            "Maximum Physical Damage per hit:": [
-              2,
-              40,
-              48,
-              56,
-              64
-            ],
-            "Minimum Monster Damage per hit:": [
-              2,
-              15,
-              18,
-              21,
-              24
-            ],
-            "Maximum Monster Damage per hit:": [
-              8,
-              60,
-              72,
-              84,
-              96
+          "damage": [
+            32,
+            40,
+            48,
+            56,
+            64
+          ],
+          "ratioAd": [
+            24
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Minimum Physical Damage per hit:": [
-              6
-            ],
-            "Maximum Physical Damage per hit:": [
-              24
-            ],
-            "Minimum Monster Damage per hit:": [
-              9
-            ],
-            "Maximum Monster Damage per hit:": [
-              36
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAp": {
-            "Minimum Physical Damage per hit:": 0,
-            "Maximum Physical Damage per hit:": 0,
-            "Minimum Monster Damage per hit:": 0,
-            "Maximum Monster Damage per hit:": 0
-          }
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAD": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     },
     "R": {
       "cd": [
-        ""
+        1
       ],
       "basicStats": [
         {
-          "damage": {
-            "Bonus True Damage:": [
-              " ",
-              8,
-              10
-            ],
-            "Maximum Monster Damage:": [
+          "damage": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            100,
+            150,
+            200
+          ],
+          "ratioHealAd": [
+            120
+          ],
+          "ratioHealAp": [
+            120
+          ],
+          "shield": [
+            [
               0,
-              40,
-              50
-            ],
-            "True Damage:": [
-              50,
-              200,
-              250
-            ],
-            "Bonus Health:": [
               0,
-              150,
-              200
-            ],
-            "Bonus Movement Speed:": [
-              5,
-              50,
-              75
-            ],
-            "Increased Total Attack Speed:": [
               0,
-              15,
-              20
-            ],
-            "Heal:": [
               0,
-              150,
-              200
+              0
             ]
-          },
-          "ratioAd": {
-            "Bonus True Damage:": [
-              12
-            ],
-            "Maximum Monster Damage:": [
-              60
-            ],
-            "True Damage:": 0,
-            "Bonus Health:": [
-              120
-            ],
-            "Bonus Movement Speed:": 0,
-            "Increased Total Attack Speed:": 0,
-            "Heal:": [
-              120
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAp": {
-            "Bonus True Damage:": 0,
-            "Maximum Monster Damage:": 0,
-            "True Damage:": [
-              100
-            ],
-            "Bonus Health:": [
-              120
-            ],
-            "Bonus Movement Speed:": 0,
-            "Increased Total Attack Speed:": 0,
-            "Heal:": [
-              120
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          }
+          ],
+          "bonusValue": [
+            6,
+            8,
+            10
+          ],
+          "bonusRatioAD": [
+            12
+          ],
+          "bonusRatioAP": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     }
   }
 }

@@ -2,7 +2,7 @@ import requests
 import json
 import os
 import re
-
+import numpy as np
 from bs4 import BeautifulSoup
 
 def getCd_Value(section):
@@ -21,14 +21,19 @@ def convertArrayStringToNumeric(array_string):
     if (isinstance(array_string, list)):
         for i in range(0,len(array_string)):
             array_string[i] = array_string[i].split('%')[0]
-            array_string[i] = array_string[i][1:]
             try :
                 array_string[i] = int(array_string[i])
             except ValueError :
                 try :
                     array_string[i] = float(array_string[i])
                 except ValueError:
-                    continue
+                    try : 
+                        array_string[i] = int(array_string[i][1:])
+                    except ValueError:
+                        try :
+                            array_string[i] = float(array_string[i][1:])
+                        except ValueError :
+                            continue
     return array_string
 
 def getDamageValue(section):
@@ -61,21 +66,53 @@ def getDamageValue(section):
         
         value_AD = convertArrayStringToNumeric(value_AD)
         value_AP = convertArrayStringToNumeric(value_AP)
-
+        if value_AD == 0 :
+            value_AD = [0,0,0,0,0]
+        if value_AP == 0 :
+            value_AP = [0,0,0,0,0]
         dictRatioAP[string_name] = value_AP
         dictRatioAD[string_name] = value_AD
     if not dict :
-        dict = 0
+        dict = [0,0,0,0,0]
     if not dictRatioAD :
-        dictRatioAD = 0
+        dictRatioAD = [0,0,0,0,0]
     if not dictRatioAP :
-        dictRatioAP = 0
+        dictRatioAP = [0,0,0,0,0]
+    
     return dict, dictRatioAD, dictRatioAP
 
 # Le principe est d'obtenir à la fin qu'un tableau
-def summurizeValue(damage_obj):
-    x= 5
+def summurizeValue(obj):
+    if isinstance(obj, dict):
+        listKey = obj.keys()
+        arrayOfSum = [[0,0,0,0,0]]
+        for key in listKey :
+            if ("total" in key.lower() and "damage" in key.lower()) or "maximum physical damage" in key.lower() or "maximum magic damage" in key.lower():
+                return obj[key]
+            if "first cast damage" in key.lower() or "second cast damage" in key.lower() or "third cast damage" in key.lower():
+                arrayOfSum.append(obj[key])
+            if "physical damage:" == key.lower():
+                arrayOfSum.append(obj[key])
+            if "magic damage:" == key.lower():
+                arrayOfSum.append(obj[key])
+        try :
+            tabResult = [sum(values) for values in zip(*arrayOfSum)]
+            return tabResult
+        except TypeError:
+            return arrayOfSum[1]
+        
+    return obj
 
+def getHealOrShieldOrBonusValue(obj, what):
+    arrayOfSum = [[0,0,0,0,0]]
+    if isinstance(obj, dict):
+        listKey = obj.keys()
+        for key in listKey :
+            if what in key.lower():
+                return obj[key]
+    return arrayOfSum
+       
+    
 
 def findSpellData(linkName):
     url = "https://leagueoflegends.fandom.com/wiki/" + linkName + "/LoL"
@@ -112,6 +149,76 @@ def findSpellData(linkName):
         e_damage, e_ratio_AD, e_ratio_AP = getDamageValue(eSection)
         r_damage, r_ratio_AD, r_ratio_AP = getDamageValue(rSection)
 
+        passive_heal = getHealOrShieldOrBonusValue(passive_damage, "heal")
+        q_heal = getHealOrShieldOrBonusValue(q_damage, "heal")
+        w_heal = getHealOrShieldOrBonusValue(w_damage, "heal")
+        e_heal = getHealOrShieldOrBonusValue(e_damage, "heal")
+        r_heal = getHealOrShieldOrBonusValue(r_damage, "heal")
+        
+        passive_heal_ratio_AD = getHealOrShieldOrBonusValue(passive_ratio_AD, "heal")
+        q_heal_ratio_AD = getHealOrShieldOrBonusValue(q_ratio_AD, "heal")
+        w_heal_ratio_AD = getHealOrShieldOrBonusValue(w_ratio_AD, "heal")
+        e_heal_ratio_AD = getHealOrShieldOrBonusValue(e_ratio_AD, "heal")
+        r_heal_ratio_AD = getHealOrShieldOrBonusValue(r_ratio_AD, "heal")
+        
+        passive_heal_ratio_AP = getHealOrShieldOrBonusValue(passive_ratio_AP, "heal")
+        q_heal_ratio_AP = getHealOrShieldOrBonusValue(q_ratio_AP, "heal")
+        w_heal_ratio_AP = getHealOrShieldOrBonusValue(w_ratio_AP, "heal")
+        e_heal_ratio_AP = getHealOrShieldOrBonusValue(e_ratio_AP, "heal")
+        r_heal_ratio_AP = getHealOrShieldOrBonusValue(r_ratio_AP, "heal")
+        
+        passive_shield = getHealOrShieldOrBonusValue(passive_damage, "shield")
+        q_shield = getHealOrShieldOrBonusValue(q_damage, "shield")
+        w_shield = getHealOrShieldOrBonusValue(w_damage, "shield")
+        e_shield = getHealOrShieldOrBonusValue(e_damage, "shield")
+        r_shield = getHealOrShieldOrBonusValue(r_damage, "shield")
+        
+        passive_shield_ratio_AD = getHealOrShieldOrBonusValue(passive_ratio_AD, "shield")
+        q_shield_ratio_AD = getHealOrShieldOrBonusValue(q_ratio_AD, "shield")
+        w_shield_ratio_AD = getHealOrShieldOrBonusValue(w_ratio_AD, "shield")
+        e_shield_ratio_AD = getHealOrShieldOrBonusValue(e_ratio_AD, "shield")
+        r_shield_ratio_AD = getHealOrShieldOrBonusValue(r_ratio_AD, "shield")
+        
+        passive_shield_ratio_AP = getHealOrShieldOrBonusValue(passive_ratio_AP, "shield")
+        q_shield_ratio_AP = getHealOrShieldOrBonusValue(q_ratio_AP, "shield")
+        w_shield_ratio_AP = getHealOrShieldOrBonusValue(w_ratio_AP, "shield")
+        e_shield_ratio_AP = getHealOrShieldOrBonusValue(e_ratio_AP, "shield")
+        r_shield_ratio_AP = getHealOrShieldOrBonusValue(r_ratio_AP, "shield")
+        
+        passive_bonus_value = getHealOrShieldOrBonusValue(passive_damage, "bonus")
+        passive_bonus_ratioAD = getHealOrShieldOrBonusValue(passive_ratio_AD, "bonus")
+        passive_bonus_ratioAP = getHealOrShieldOrBonusValue(passive_ratio_AP, "bonus")
+        
+        q_bonus_value = getHealOrShieldOrBonusValue(q_damage, "bonus")
+        q_bonus_ratioAD = getHealOrShieldOrBonusValue(q_ratio_AD, "bonus")
+        q_bonus_ratioAP = getHealOrShieldOrBonusValue(q_ratio_AP, "bonus")
+        
+        w_bonus_value = getHealOrShieldOrBonusValue(w_damage, "bonus")
+        w_bonus_ratioAD = getHealOrShieldOrBonusValue(w_ratio_AD, "bonus")
+        w_bonus_ratioAP = getHealOrShieldOrBonusValue(w_ratio_AP, "bonus")
+        
+        e_bonus_value = getHealOrShieldOrBonusValue(e_damage, "bonus")
+        e_bonus_ratioAD = getHealOrShieldOrBonusValue(e_ratio_AD, "bonus")
+        e_bonus_ratioAP = getHealOrShieldOrBonusValue(e_ratio_AP, "bonus")
+        
+        r_bonus_value = getHealOrShieldOrBonusValue(r_damage, "bonus")
+        r_bonus_ratioAD = getHealOrShieldOrBonusValue(r_ratio_AD, "bonus")
+        r_bonus_ratioAP = getHealOrShieldOrBonusValue(r_ratio_AP, "bonus")
+        
+        q_damage = summurizeValue(q_damage)
+        w_damage = summurizeValue(w_damage)
+        e_damage = summurizeValue(e_damage)
+        r_damage = summurizeValue(r_damage)
+        
+        q_ratio_AD = summurizeValue(q_ratio_AD)
+        w_ratio_AD = summurizeValue(w_ratio_AD)
+        e_ratio_AD = summurizeValue(e_ratio_AD)
+        r_ratio_AD = summurizeValue(r_ratio_AD)
+        
+        q_ratio_AP = summurizeValue(q_ratio_AP)
+        w_ratio_AP = summurizeValue(w_ratio_AP)
+        e_ratio_AP = summurizeValue(e_ratio_AP)
+        r_ratio_AP = summurizeValue(r_ratio_AP)
 
         spell = {
             'Passive' : {
@@ -119,6 +226,16 @@ def findSpellData(linkName):
                 'damage' : passive_damage,
                 'ratioAd' : passive_ratio_AD,
                 'ratioAp' : passive_ratio_AP,
+                'heal' : passive_heal,
+                'ratioHealAd' : passive_heal_ratio_AD,
+                'ratioHealAp' : passive_heal_ratio_AP,
+                'shield' : passive_shield,
+                'ratioShieldlAd' : passive_shield_ratio_AD,
+                'ratioShieldAp' : passive_shield_ratio_AP,
+                'bonusValue' : passive_bonus_value,
+                'bonusRatioAD' : passive_bonus_ratioAD,
+                'bonusRatioAP' : passive_bonus_ratioAP,
+                
             },
             'Q' : {
                 'cd' : q_cd,
@@ -127,11 +244,17 @@ def findSpellData(linkName):
                         'damage' : q_damage,
                         'ratioAd' : q_ratio_AD,
                         'ratioAp' : q_ratio_AP, 
+                        'heal' : q_heal,
+                        'ratioHealAd' : q_heal_ratio_AD,
+                        'ratioHealAp' : q_heal_ratio_AP,
+                        'shield' : q_shield,
+                        'ratioShieldlAd' : q_shield_ratio_AD,
+                        'ratioShieldAp' : q_shield_ratio_AP,
+                        'bonusValue' : q_bonus_value,
+                        'bonusRatioAD' : q_bonus_ratioAD,
+                        'bonusRatioAP' : q_bonus_ratioAP,
                     },
                 ],
-                'bonus' : {
-      
-                }
             },
             'W' : {
                 'cd' : w_cd,
@@ -140,11 +263,17 @@ def findSpellData(linkName):
                         'damage' : w_damage,
                         'ratioAd' : w_ratio_AD,
                         'ratioAp' : w_ratio_AP, 
+                        'heal' : w_heal,
+                        'ratioHealAd' : w_heal_ratio_AD,
+                        'ratioHealAp' : w_heal_ratio_AP,
+                        'shield' : w_shield,
+                        'ratioShieldlAd' : w_shield_ratio_AD,
+                        'ratioShieldAp' : w_shield_ratio_AP,
+                        'bonusValue' : w_bonus_value,
+                        'bonusRatioAD' : w_bonus_ratioAD,
+                        'bonusRatioAP' : w_bonus_ratioAP,
                     },
                 ],
-                'bonus' : {
-            
-                }
             },
             'E' : {
                 'cd' : e_cd,
@@ -152,12 +281,18 @@ def findSpellData(linkName):
                     {
                         'damage' : e_damage,
                         'ratioAd' : e_ratio_AD,
-                        'ratioAp' : e_ratio_AP, 
+                        'ratioAp' : e_ratio_AP,
+                        'heal' : e_heal,
+                        'ratioHealAd' : e_heal_ratio_AD,
+                        'ratioHealAp' : e_heal_ratio_AP, 
+                        'shield' : e_shield,
+                        'ratioShieldlAd' : e_shield_ratio_AD,
+                        'ratioShieldAp' : e_shield_ratio_AP,
+                        'bonusValue' : e_bonus_value,
+                        'bonusRatioAD' : e_bonus_ratioAD,
+                        'bonusRatioAP' : e_bonus_ratioAP,
                     },
                 ],
-                'bonus' : {
-                    
-                }
             },
             'R' : {
                 'cd' : r_cd,
@@ -166,11 +301,17 @@ def findSpellData(linkName):
                         'damage' : r_damage,
                         'ratioAd' : r_ratio_AD,
                         'ratioAp' : r_ratio_AP, 
+                        'heal' : r_heal,
+                        'ratioHealAd' : r_heal_ratio_AD,
+                        'ratioHealAp' : r_heal_ratio_AP,
+                        'shield' : r_shield,
+                        'ratioShieldlAd' : r_shield_ratio_AD,
+                        'ratioShieldAp' : r_shield_ratio_AP,
+                        'bonusValue' : r_bonus_value,
+                        'bonusRatioAD' : r_bonus_ratioAD,
+                        'bonusRatioAP' : r_bonus_ratioAP,
                     },
                 ],
-                'bonus' : {
-                        
-                }
             }
         }
         return spell
@@ -321,3 +462,5 @@ character_name = [
 
 for name in character_name :
     get_champion_data(name)
+
+#get_champion_data("Lulu")

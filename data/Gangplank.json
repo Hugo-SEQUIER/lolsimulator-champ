@@ -38,60 +38,221 @@
   "spell": {
     "Passive": {
       "cd": [
-        5
+        15
       ],
-      "damage": 0,
-      "ratioAd": 0,
-      "ratioAp": 0
+      "damage": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ratioAd": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ratioAp": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "heal": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioHealAd": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioHealAp": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "shield": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioShieldlAd": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "ratioShieldAp": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusValue": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusRatioAD": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "bonusRatioAP": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
     },
     "Q": {
       "cd": [
-        0.5
+        4.5
       ],
       "basicStats": [
         {
-          "damage": {
-            "Physical Damage:": [
+          "damage": [
+            10,
+            40,
+            70,
+            100,
+            130
+          ],
+          "ratioAd": [
+            100
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            [
               0,
-              40,
-              70,
-              100,
-              130
-            ],
-            "Gold Plunder:": [
-              3,
-              4,
-              5,
-              6,
-              7
-            ],
-            "Silver Serpent Plunder:": [
-              4,
-              5,
-              6,
-              7,
-              8
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Physical Damage:": [
-              100
-            ],
-            "Gold Plunder:": 0,
-            "Silver Serpent Plunder:": 0
-          },
-          "ratioAp": {
-            "Physical Damage:": 0,
-            "Gold Plunder:": 0,
-            "Silver Serpent Plunder:": 0
-          }
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAD": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     },
     "W": {
       "cd": [
-        2,
+        22,
         20,
         18,
         16,
@@ -99,26 +260,100 @@
       ],
       "basicStats": [
         {
-          "damage": {
-            "Heal:": [
-              5,
-              70,
-              95,
-              120,
-              145
+          "damage": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            45,
+            70,
+            95,
+            120,
+            145
+          ],
+          "ratioHealAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioHealAp": [
+            90
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Heal:": 0
-          },
-          "ratioAp": {
-            "Heal:": [
-              90
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          }
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAD": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     },
     "E": {
       "cd": [
@@ -126,123 +361,211 @@
       ],
       "basicStats": [
         {
-          "damage": {
-            "Maximum charges:": [
-              " ",
-              3,
-              4,
-              4,
-              5
-            ],
-            "Slow:": [
+          "damage": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAp": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "heal": [
+            [
               0,
-              37.5,
-              45,
-              52.5,
-              60
-            ],
-            "Bonus Champion Damage:": [
-              5,
-              105,
-              135,
-              165,
-              195
+              0,
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Maximum charges:": 0,
-            "Slow:": 0,
-            "Bonus Champion Damage:": 0
-          },
-          "ratioAp": {
-            "Maximum charges:": 0,
-            "Slow:": 0,
-            "Bonus Champion Damage:": 0
-          }
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            75,
+            105,
+            135,
+            165,
+            195
+          ],
+          "bonusRatioAD": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "bonusRatioAP": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     },
     "R": {
       "cd": [
-        80,
+        180,
         160,
         140
       ],
       "basicStats": [
         {
-          "damage": {
-            "Magic Damage Per Wave:": [
+          "damage": [
+            480,
+            840,
+            1200
+          ],
+          "ratioAd": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ratioAp": [
+            120
+          ],
+          "heal": [
+            [
               0,
-              70,
-              100
-            ],
-            "Magic Damage Per Cluster:": [
-              20,
-              210,
-              300
-            ],
-            "Total Magic Damage:": [
-              80,
-              840,
-              1200
-            ],
-            "True Damage with  Death's Daughter:": [
-              20,
-              210,
-              300
-            ],
-            "Total Mixed Damage with  Death's Daughter:": [
               0,
-              1050,
-              1500
-            ],
-            "Total Magic Damage with  Fire at Will:": [
-              20,
-              1260,
-              1800
-            ],
-            "Maximum Mixed Total Damage with  Fire at Will and  Death's Daughter:": [
-              40,
-              1470,
-              2100
+              0,
+              0,
+              0
             ]
-          },
-          "ratioAd": {
-            "Magic Damage Per Wave:": 0,
-            "Magic Damage Per Cluster:": 0,
-            "Total Magic Damage:": 0,
-            "True Damage with  Death's Daughter:": 0,
-            "Total Mixed Damage with  Death's Daughter:": 0,
-            "Total Magic Damage with  Fire at Will:": 0,
-            "Maximum Mixed Total Damage with  Fire at Will and  Death's Daughter:": 0
-          },
-          "ratioAp": {
-            "Magic Damage Per Wave:": [
-              10
-            ],
-            "Magic Damage Per Cluster:": [
-              30
-            ],
-            "Total Magic Damage:": [
-              120
-            ],
-            "True Damage with  Death's Daughter:": [
-              30
-            ],
-            "Total Mixed Damage with  Death's Daughter:": [
-              150
-            ],
-            "Total Magic Damage with  Fire at Will:": [
-              180
-            ],
-            "Maximum Mixed Total Damage with  Fire at Will and  Death's Daughter:": [
-              210
+          ],
+          "ratioHealAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
             ]
-          }
+          ],
+          "ratioHealAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "shield": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldlAd": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "ratioShieldAp": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusValue": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAD": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "bonusRatioAP": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
         }
-      ],
-      "bonus": {}
+      ]
     }
   }
 }
