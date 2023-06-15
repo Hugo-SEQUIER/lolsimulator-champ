@@ -611,17 +611,15 @@
       "basicStats": [
         {
           "damage": [
-            240
+            375,
+            562.5,
+            750
           ],
           "ratioAd": [
             750
           ],
           "ratioAp": [
-            0,
-            0,
-            0,
-            0,
-            0
+            285
           ],
           "ratioHealth": [
             0,

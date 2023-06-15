@@ -328,20 +328,16 @@
       "basicStats": [
         {
           "damage": [
-            "5 \u2212 64.5 "
-          ],
-          "ratioAd": [
-            "based on level",
+            12,
             14,
             16,
             18,
             20
           ],
+          "ratioAd": [
+            40
+          ],
           "ratioAp": [
-            "based on level",
-            14,
-            16,
-            18,
             20
           ],
           "ratioHealth": [
@@ -616,9 +612,9 @@
       "basicStats": [
         {
           "damage": [
-            10,
-            15,
-            20
+            12,
+            200,
+            275
           ],
           "ratioAd": [
             0,
@@ -628,7 +624,7 @@
             0
           ],
           "ratioAp": [
-            2.5
+            80
           ],
           "ratioHealth": [
             2.5
