@@ -128,7 +128,7 @@ def summurizeValue(obj):
         arrayOfSum = [[0,0,0,0,0]]
         res = []
         for key in listKey :
-            if  "bonus" not in key.lower() and "cast" not in key.lower() and ("total" in key.lower() and "damage" in key.lower()) or "maximum physical damage" in key.lower() or "maximum magic damage" in key.lower():
+            if  "monster" not in key.lower() and "bonus" not in key.lower() and "cast" not in key.lower() and ("total" in key.lower() and "damage" in key.lower()) or "maximum physical damage" in key.lower() or "maximum magic damage" in key.lower():
                 return obj[key]
             if "first cast damage" in key.lower() or "second cast damage" in key.lower() or "third cast damage" in key.lower():
                 arrayOfSum.append(obj[key])
@@ -166,7 +166,7 @@ def getHealOrShieldOrBonusValue(obj, what):
         for key in listKey :
             if what in key.lower():
                 return obj[key]
-            if what == 'bonus' and 'empowered' in key.lower():
+            if what == 'bonus' and ('empowered' in key.lower() or "increased damage:" == key.lower()):
                 return obj[key]
             if what == 'bonus' and "sweetspot" in key.lower():
                 return [60]
@@ -375,6 +375,15 @@ def findSpellData(linkName):
         if "sante" in linkName.lower():
             q_cd = [3.5,3.33,3.33,3.15,2.98,2.8,2.8,2.63,2.45,2.45,2.28,2.28,2.1,1.93,1.93,1.75,1.75,1.75]
             w_ratio_health[0] = 7
+        if "malzahar" in linkName.lower():
+            w_damage = [12,14,16,18,20]
+            w_ratio_AD = [40]
+            w_ratio_AP = [20]
+            r_ratio_AP = [80]
+            r_damage = [12,200,275]
+        if "maokai" in linkName.lower():
+            q_ratio_AP = [40]
+            e_ratio_AP = [50]
         # Création du dictionnaire
         spell = {
             'Passive' : {
