@@ -144,6 +144,8 @@ def summurizeValue(obj):
                 return obj[key]
             if 'maximum damage:' == key.lower() or 'maximum total damage:' == key.lower():
                 res = obj[key]  
+            if 'CHAMPION MAGIC DAMAGE:' == key :
+                return obj[key]
         try :
             if len(res) != 0 :
                 return res 
@@ -363,10 +365,12 @@ def findSpellData(linkName):
         if linkName.lower() == 'katarina':
             r_damage = [375,562.5,750]
             r_ratio_AP = [285]
+            e_ratio_AP = [25]
         if linkName.lower() == 'kayle':
             e_damage = [15,20,25,30,35]
             e_ratio_AD = [10]
             e_ratio_AP = [20]
+            q_ratio_AP = [50]
         if linkName.lower() == 'kindred':
             e_damage = [80,100,120,140,160]
             e_ratio_AD = [80]
@@ -384,6 +388,25 @@ def findSpellData(linkName):
         if "maokai" in linkName.lower():
             q_ratio_AP = [40]
             e_ratio_AP = [50]
+        if "fortune" in linkName.lower():
+            q_ratio_ = [35]
+            r_damage = [1,1,1]
+            r_ratio_AD = [1050,1200,1350]
+            r_ratio_AP = [350,400,450]
+        if "mordekaiser" in linkName.lower():
+            q_damage = [75,95,115,135,155]
+            q_ratio_AP = [60]
+        if "rakan" in linkName.lower():
+            passive_cd = [40,38.5,37,35.5,34,32.5,31,29.5,28,26.5,23.5,22,20.5,19,17.5,16,14.5]
+        if "shen" == linkName.lower():
+            q_damage = [30,48,66,84,102]
+            q_ratio_health = [6,7.5,9,10.5,12]
+            q_ratio_AP = [4.5]
+        if "shyvana" == linkName.lower():
+            q_damage = [25,35,50,65,80]
+            q_ratio_AD = [100]
+            q_ratio_AP = [25]
+            e_ratio_AP = [90]
         # Création du dictionnaire
         spell = {
             'Passive' : {
