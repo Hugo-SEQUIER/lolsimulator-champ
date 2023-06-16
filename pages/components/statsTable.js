@@ -1,10 +1,11 @@
 import React from "react";
 
-function StatsTable({ stats }) {
+function StatsTable({ stats, additionnalStats }) {
   const keys = Object.keys(stats);
   const half = Math.ceil(keys.length / 2);
   const firstHalf = keys.slice(0, half);
   const secondHalf = keys.slice(half);
+  console.log("StatsTable")
   console.log(stats)
   return (
     <div className="stats-table">

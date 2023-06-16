@@ -5,6 +5,10 @@ import re
 import numpy as np
 from bs4 import BeautifulSoup
 
+
+PATCH = '13.11'
+
+
 """ 
 Retourne un tableau de valeurs numériques correspondant au Cooldown d'un sort
 Il est possible que le tableau retourne un string A DEFINIR si la valeur n'a pas été comprise par l'algorithme
@@ -68,54 +72,80 @@ def getDamageValue(section):
         return "A DEFINIR"
     dict = {}
     dictRatioAD = {}
+    dictRatioBonusAD = {}
     dictRatioAP = {}
     dictRatioHealth = {}
+    dictRatioBonusHealth = {}
+    dictRatioArmor = {}
+    dictRatioBonusArmor = {}
+    dictRatioMR = {}
+    dictRatioBonusMR = {}
+    
     for i in range(0,len(list_dd)):
+        # ON RECUPERE LA ZONE DES DEGATS
         string_damage = list_dd[i].get_text()
         string_name = list_dt[i].get_text()
-        value_AP = 0
-        value_AD = 0
-        value_Health = 0
-        if 'AP' in string_damage :
-            match = re.search(r'\((.+)\)', string_damage)
-            if match:
-                value_AP = match.group(1).split('/')
-        if 'AD' in string_damage :
-            match = re.search(r'\((.+)\)', string_damage)
-            if match:
-                value_AD = match.group(1).split('/')
-        if 'health' in string_damage.lower() :
-            match = re.search(r'\((.+)\)', string_damage)
-            if match:
-                value_Health = match.group(1).split('/')
+
+        value_AP = [0,0,0,0,0]
+        value_AD = [0,0,0,0,0]
+        value_Bonus_AD = [0,0,0,0,0]
+        value_Health = [0,0,0,0,0]
+        value_Bonus_Health = [0,0,0,0,0]
+        value_Armor = [0,0,0,0,0]
+        value_Bonus_Armor = [0,0,0,0,0]
+        value_MR = [0,0,0,0,0]
+        value_Bonus_MR = [0,0,0,0,0]
+
+        # LES SPANS CONTIENNENT LES RATIOS
+        list_span_damage = list_dd[i].find_all('span')
+        for idxSpan in range(0, len(list_span_damage)):
+            string_span_damage = list_span_damage[idxSpan].get_text()
+            value_AP = getValueFromString(string_span_damage,"AP")
+            value_AD = getValueFromString(string_span_damage,"AD")
+            value_Bonus_AD = getValueFromString(string_span_damage,"bonus ad")
+            value_Health = getValueFromString(string_span_damage,"health")
+            value_Bonus_Health = getValueFromString(string_span_damage,"bonus health")
+            value_Armor = getValueFromString(string_span_damage,"armor")
+            value_Bonus_Armor = getValueFromString(string_span_damage,"bonus armor")
+            value_MR = getValueFromString(string_span_damage,"magic resistance")
+            value_Bonus_MR = getValueFromString(string_span_damage,"bonus magic resistance")
+
         string_damage = string_damage.split('(')[0].split('/')
         string_damage = convertArrayStringToNumeric(string_damage)
-       
-        dict[string_name] = string_damage
-        
-        value_AD = convertArrayStringToNumeric(value_AD)
-        value_AP = convertArrayStringToNumeric(value_AP)
-        value_Health = convertArrayStringToNumeric(value_Health)
 
-        if value_AD == 0 :
-            value_AD = [0,0,0,0,0]
-        if value_AP == 0 :
-            value_AP = [0,0,0,0,0]
-        if value_Health == 0 :
-            value_Health = [0,0,0,0,0]
-        dictRatioAP[string_name] = value_AP
+        # STOCKAGE DES VALEURS
+        dict[string_name] = string_damage
         dictRatioAD[string_name] = value_AD
+        dictRatioAP[string_name] = value_AP
+        dictRatioBonusAD[string_name] = value_Bonus_AD
         dictRatioHealth[string_name] = value_Health
-    if not dict :
-        dict = [0,0,0,0,0]
-    if not dictRatioAD :
-        dictRatioAD = [0,0,0,0,0]
-    if not dictRatioAP :
-        dictRatioAP = [0,0,0,0,0]    
-    if not dictRatioHealth :
-        dictRatioHealth = [0,0,0,0,0]
-    
-    return dict, dictRatioAD, dictRatioAP, dictRatioHealth
+        dictRatioBonusHealth[string_name] = value_Bonus_Health
+        dictRatioArmor[string_name] = value_Armor
+        dictRatioBonusArmor[string_name] = value_Bonus_Armor
+        dictRatioMR[string_name] = value_MR
+        dictRatioBonusMR[string_name] = value_Bonus_MR
+
+        if not dict :
+            dict = [0,0,0,0,0]
+
+    return dict, dictRatioAD, dictRatioAP, dictRatioHealth, dictRatioBonusAD, dictRatioBonusHealth, dictRatioArmor, dictRatioBonusArmor, dictRatioMR, dictRatioBonusMR
+
+"""
+Retourne la valeur du ratio.
+"""
+def getValueFromString(string_value, find):
+    if "bonus" not in find.lower() :
+        if find.lower() in string_value.lower() and "bonus" not in string_value.lower() :
+            match = re.search(r'\((.+)\)', string_value)
+            if match :
+                return convertArrayStringToNumeric(match.group(1).split('/'))
+    else :
+        if find.lower() in string_value.lower() :
+            match = re.search(r'\((.+)\)', string_value)
+            if match :
+                return convertArrayStringToNumeric(match.group(1).split('/'))
+    return [0,0,0,0,0]
+        
 
 """ 
 Retourne un tableau unique avec toutes les données additionnées.
@@ -209,11 +239,11 @@ def findSpellData(linkName):
         r_cd = getCd_Value(rSection)
 
         # Damage
-        passive_damage, passive_ratio_AD, passive_ratio_AP, passive_ratio_health = getDamageValue(passivesection)
-        q_damage, q_ratio_AD, q_ratio_AP, q_ratio_health = getDamageValue(qSection)
-        w_damage, w_ratio_AD, w_ratio_AP, w_ratio_health = getDamageValue(wSection)
-        e_damage, e_ratio_AD, e_ratio_AP, e_ratio_health = getDamageValue(eSection)
-        r_damage, r_ratio_AD, r_ratio_AP, r_ratio_health = getDamageValue(rSection)
+        passive_damage, passive_ratio_AD, passive_ratio_AP, passive_ratio_health, passive_ratio_bonus_ad, passive_ratio_bonus_health, passive_ratio_armor, passive_ratio_bonus_armor, passive_ratio_mr, passive_ratio_bonus_mr = getDamageValue(passivesection)
+        q_damage, q_ratio_AD, q_ratio_AP, q_ratio_health, q_ratio_bonus_ad, q_ratio_bonus_health, q_ratio_armor, q_ratio_bonus_armor, q_ratio_mr, q_ratio_bonus_mr = getDamageValue(qSection)
+        w_damage, w_ratio_AD, w_ratio_AP, w_ratio_health, w_ratio_bonus_ad, w_ratio_bonus_health, w_ratio_armor, w_ratio_bonus_armor, w_ratio_mr, w_ratio_bonus_mr = getDamageValue(wSection)
+        e_damage, e_ratio_AD, e_ratio_AP, e_ratio_health, e_ratio_bonus_ad, e_ratio_bonus_health, e_ratio_armor, e_ratio_bonus_armor, e_ratio_mr, e_ratio_bonus_mr = getDamageValue(eSection)
+        r_damage, r_ratio_AD, r_ratio_AP, r_ratio_health, r_ratio_bonus_ad, r_ratio_bonus_health, r_ratio_armor, r_ratio_bonus_armor, r_ratio_mr, r_ratio_bonus_mr = getDamageValue(rSection)
 
         # Heal
         passive_heal = getHealOrShieldOrBonusValue(passive_damage, "heal")
@@ -539,7 +569,7 @@ def get_champion_data(linkName):
     linkName = linkName[0].upper() + linkName[1:].lower()
 
     # Lien de la communauté contenant pleins d'informations concernant les champions. Point Négatif => Trop compliqué à traiter sauf pour les données de base.
-    res = requests.get(f"https://raw.communitydragon.org/13.11/game/data/characters/{linkName.lower()}/{linkName.lower()}.bin.json")
+    res = requests.get(f"https://raw.communitydragon.org/{PATCH}/game/data/characters/{linkName.lower()}/{linkName.lower()}.bin.json")
     if res.status_code == 200:
         try:
             championDetails = res.json()
@@ -623,32 +653,38 @@ def get_champion_data(linkName):
     # Création des dictionnaires.
     if data is not None:
         basicStats = {
-                'Hp' : data.get('baseHP'),
-                'hpLvl' : data.get('hpPerLevel'),
-                'AD' : data.get('baseDamage'),
-                'ADLvl' : data.get('damagePerLevel'),
-                'AS' : data.get('attackSpeed'),
-                'ASRatio' : data.get('attackSpeedRatio'), 
-                'Armor' : data.get('baseArmor'),
-                'ArmorLvl' : data.get('armorPerLevel'),
-                'MR' : data.get('baseSpellBlock'),
-                'MRLvl' : data.get('spellBlockPerLevel'),
-                'MS' : data.get('baseMoveSpeed'),
+                'Hp' : round(data.get('baseHP'),3),
+                'HpBonus' : 0,
+                'hpLvl' : round(data.get('hpPerLevel'),3),
+                'AD' : round(data.get('baseDamage'),3),
+                'ADBonus' : 0,
+                'ADLvl' : round(data.get('damagePerLevel'),3),
+                'AS' : round(data.get('attackSpeed'),3),
+                'ASRatio' : round(data.get('attackSpeedRatio'),3), 
+                'ASBonus' : 0, 
+                'Armor' : round(data.get('baseArmor'),3),
+                'ArmorBonus' : 0,
+                'ArmorLvl' : round(data.get('armorPerLevel'),3),
+                'MR' : round(data.get('baseSpellBlock'),3),
+                'MRBonus' : 0,
+                'MRLvl' : round(data.get('spellBlockPerLevel'),3),
+                'MS' : round(data.get('baseMoveSpeed'),3),
                 'Lifesteal' : 0,
                 'Crit' : 0,
                 'CritDmg' : 175,
-                'HpRegen' : data.get('baseStaticHPRegen'),
-                'HpRegenLvl' : data.get('hpRegenPerLevel'),
-                'Mana' : data.get('primaryAbilityResource').get('arBase'),
-                'ManaLvl' : data.get('primaryAbilityResource').get('arPerLevel', 0),
+                'HpRegen' : round(data.get('baseStaticHPRegen'),3),
+                'HpRegenLvl' : round(data.get('hpRegenPerLevel'),3),
+                'Mana' : round(data.get('primaryAbilityResource').get('arBase'),3),
+                'ManaBonus' : 0,
+                'ManaLvl' : round(data.get('primaryAbilityResource').get('arPerLevel', 0),3),
                 'AP' : 0,
                 'Range' : data.get('attackRange'),
                 'ArmorPen' : 0,
                 'ResistPen' : 0,
                 'Haste' : 0,
                 'SpellVamp' : 0,
-                'ManaRegen' : data.get('primaryAbilityResource').get('arBaseStaticRegen', 0),
-                'ManaRegenLvl' : data.get('primaryAbilityResource').get('arRegenPerLevel', 0),
+                'ManaRegen' : round(data.get('primaryAbilityResource').get('arBaseStaticRegen', 0),3),
+                'ManaRegenLvl' : round(data.get('primaryAbilityResource').get('arRegenPerLevel', 0),3),
             }
 
         img = {
@@ -666,7 +702,7 @@ def get_champion_data(linkName):
             'spell': spell
         }
         jsp = json.dumps(champion, indent=2)
-        with open(f"{linkName}.json", 'w') as f:
+        with open(f"./ChampionSCRIPT/{linkName}.json", 'w') as f:
             f.write(jsp)
     # Si une erreur je sais d'où ça vient
     else :

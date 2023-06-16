@@ -3,7 +3,7 @@ import StatsTable from './statsTable'
 import SkillsTable from './skillsTable'
 import Link from 'next/link'
 
-export default function CharacterDetails({mainData, data, nameChampForLink}){
+export default function CharacterDetails({data, nameChamp}){
 
     let options = [];
     for (let i = 1; i <= 18; i++) {
@@ -14,12 +14,10 @@ export default function CharacterDetails({mainData, data, nameChampForLink}){
         setLevel(parseInt(event.target.value));
     };
 
-    const [mana, setMana]= useState(0)
-    const [manaRegen, setManaRegen]= useState(0)
     const [textMana, setTextMana] = useState('Mana')
     const [level, setLevel] = useState(1)
     const [imgSplash, setImgSplash] = useState('../../images/centered/GENERIC.png')
-    const [dataChamp, setDataChamp] = useState({
+    const [basicStatsChampion, setDataChamp] = useState({
         "Hp": 0,
         "Attack Damage": 0,
         "Attack Speed %": 0,
@@ -27,7 +25,29 @@ export default function CharacterDetails({mainData, data, nameChampForLink}){
         "Magic Resist": 0,
         "Move Speed": 0,
         "Lifesteal / sec": 0,
-        "Critical %":  0, //data.stats.crit + data.stats.critperlevel * (level - 1),
+        "Critical %":  0, 
+        "Hp Regen": 0,
+
+        [textMana] : 0,
+        "Ability Power": 0,
+        "Range": 0,
+        "Armor Penetration": 0,
+        "Resist Penetration": 0,
+        "Ability Haste": 0,
+        "Spellvamp %": 0,
+        "Tenacity %": 0,
+        [textMana + " / Regen"]: 0,
+    })
+
+    const [additionnalStats, setAdditionnalStats] = useState({
+        "Hp": 0,
+        "Attack Damage": 0,
+        "Attack Speed %": 0,
+        "Armor": 0,
+        "Magic Resist": 0,
+        "Move Speed": 0,
+        "Lifesteal / sec": 0,
+        "Critical %":  0, 
         "Hp Regen": 0,
 
         [textMana] : 0,
@@ -43,47 +63,40 @@ export default function CharacterDetails({mainData, data, nameChampForLink}){
 
     useEffect(()=> {
         if (data != undefined) {
-            if (data.primaryAbilityResource.arType === 0){
-                setMana(data.primaryAbilityResource.arBase + data.primaryAbilityResource.arPerLevel * (level - 1))
-                setManaRegen((data.primaryAbilityResource.arBaseStaticRegen + data.primaryAbilityResource.arRegenPerLevel * (level - 1))*5)
-                setTextMana('Mana')
-            }
-            else if (data.primaryAbilityResource.arType === 1) {
-                setMana(data.primaryAbilityResource.arBase) 
-                setManaRegen((data.primaryAbilityResource.arBaseStaticRegen)*5)
-                setTextMana('Energy') 
+            if (data["Energy"] === "TRUE"){
+                setTextMana('Energy')
             }
             else {
-                setMana(0)
-                setManaRegen(0)
                 setTextMana('Mana') 
             }
-            setImgSplash(`../../images/centered/${data.mCharacterName}_0.jpg`)
+            setImgSplash(`../../images/centered/${nameChamp}_0.jpg`)
 
             let champ_obj = {
-                "Hp": data.baseHP + data.hpPerLevel * (level - 1),
-                "Attack Damage": data.baseDamage + data.damagePerLevel * (level - 1),
-                "Attack Speed %": Number(data.attackSpeed * (1 + (data.attackSpeedRatio* (level - 1))/100)),
-                "Armor": data.baseArmor + data.armorPerLevel * (level - 1),
-                "Magic Resist": data.baseSpellBlock + data.spellBlockPerLevel * (level - 1),
-                "Move Speed": data.baseMoveSpeed,
+                "Hp": data["HP"] + data["HP+"] * (level - 1),
+                "Attack Damage": data["AD"] + data["AD+"] * (level - 1),
+                "Attack Speed %": Number(data["AS"] * (1 + (data["Ratio"]* (level - 1))/100)),
+                "Armor": data["AR"] + data["AR+"] * (level - 1),
+                "Magic Resist": data["MR"] + data["MR+"] * (level - 1),
+                "Move Speed": data["MS"],
                 "Lifesteal / sec": 0,
-                "Critical %":  0, //data.stats.crit + data.stats.critperlevel * (level - 1),
-                "Hp Regen": (Number(data.baseStaticHPRegen + data.hpRegenPerLevel * (level - 1))*5).toFixed(3),
+                "Critical %":  0, 
+                "Hp Regen": data["HP5"] + data["HP5+"] * (level - 1),
 
-                [textMana] : mana,
+                "Mana": data["MP"] + data["MP+"] * (level - 1),
                 "Ability Power": 0,
-                "Range": data.attackRange,
+                "Range": data["Range"],
                 "Armor Penetration": 0,
                 "Resist Penetration": 0,
                 "Ability Haste": 0,
                 "Spellvamp %": 0,
                 "Tenacity %": 0,
-                [textMana + " / Regen"]: manaRegen,
+                "Mana / Regen": data["MP5"] + data["MP5+"] * (level - 1),
             }
+            console.log("CharacterDetails")
+            console.log(champ_obj)
             setDataChamp(champ_obj)
         }
-    },[data, mana])
+    },[data, level])
     
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
@@ -96,7 +109,7 @@ export default function CharacterDetails({mainData, data, nameChampForLink}){
                 </Link>
                 <p style={{width : '1px', height : '100px', backgroundColor : '#f9f8f8', borderRadius : '20px'}}></p>
                 {data != undefined && (
-                    <h1>{data.mCharacterName.toUpperCase()}</h1>
+                    <h1>{nameChamp.toUpperCase()}</h1>
                 )}
                 <p style={{width : '1px', height : '100px', backgroundColor : '#f9f8f8', borderRadius : '20px'}}></p>
                 <div>
@@ -111,36 +124,94 @@ export default function CharacterDetails({mainData, data, nameChampForLink}){
                     <>
                         <StatsTable 
                             stats={{
-                                "Hp": dataChamp["Hp"],
-                                "Attack Damage": dataChamp["Attack Damage"],
-                                "Attack Speed %": dataChamp["Attack Speed %"],
-                                "Armor": dataChamp["Armor"],
-                                "Magic Resist": dataChamp["Magic Resist"],
-                                "Move Speed": dataChamp["Move Speed"],
-                                "Lifesteal / sec": dataChamp["Lifesteal / sec"],
-                                "Critical %":  dataChamp["Critical %"], //data.stats.crit + data.stats.critperlevel * (level - 1),
-                                "Hp Regen": dataChamp["Hp Regen"],
+                                "Hp": basicStatsChampion["Hp"],
+                                "Attack Damage": basicStatsChampion["Attack Damage"],
+                                "Attack Speed %": basicStatsChampion["Attack Speed %"],
+                                "Armor": basicStatsChampion["Armor"],
+                                "Magic Resist": basicStatsChampion["Magic Resist"],
+                                "Move Speed": basicStatsChampion["Move Speed"],
+                                "Lifesteal / sec": basicStatsChampion["Lifesteal / sec"],
+                                "Critical %":  basicStatsChampion["Critical %"], 
+                                "Hp Regen": basicStatsChampion["Hp Regen"],
 
-                                [textMana] : dataChamp[textMana],
-                                "Ability Power": dataChamp["Ability Power"],
-                                "Range": dataChamp["Range"],
-                                "Armor Penetration": dataChamp["Armor Penetration"],
-                                "Resist Penetration": dataChamp["Resist Penetration"],
-                                "Ability Haste": dataChamp["Ability Haste"],
-                                "Spellvamp %": dataChamp["Spellvamp %"],
-                                "Tenacity %": dataChamp["Tenacity %"],
-                                [textMana + " / Regen"]: dataChamp[textMana + " / Regen"],
+                                [textMana] : basicStatsChampion["Mana"],
+                                "Ability Power": basicStatsChampion["Ability Power"],
+                                "Range": basicStatsChampion["Range"],
+                                "Armor Penetration": basicStatsChampion["Armor Penetration"],
+                                "Resist Penetration": basicStatsChampion["Resist Penetration"],
+                                "Ability Haste": basicStatsChampion["Ability Haste"],
+                                "Spellvamp %": basicStatsChampion["Spellvamp %"],
+                                "Tenacity %": basicStatsChampion["Tenacity %"],
+                                [textMana + " / Regen"]: basicStatsChampion["Mana / Regen"],
                             }} 
+                            additionnalStats = {{
+                                "Hp": additionnalStats["Hp"],
+                                "Attack Damage": additionnalStats["Attack Damage"],
+                                "Attack Speed %": additionnalStats["Attack Speed %"],
+                                "Armor": additionnalStats["Armor"],
+                                "Magic Resist": additionnalStats["Magic Resist"],
+                                "Move Speed": additionnalStats["Move Speed"],
+                                "Lifesteal / sec": additionnalStats["Lifesteal / sec"],
+                                "Critical %":  additionnalStats["Critical %"], 
+                                "Hp Regen": basicStatsChampion["Hp Regen"],
+
+                                [textMana] : additionnalStats["Mana"],
+                                "Ability Power": additionnalStats["Ability Power"],
+                                "Range": additionnalStats["Range"],
+                                "Armor Penetration": additionnalStats["Armor Penetration"],
+                                "Resist Penetration": additionnalStats["Resist Penetration"],
+                                "Ability Haste": additionnalStats["Ability Haste"],
+                                "Spellvamp %": additionnalStats["Spellvamp %"],
+                                "Tenacity %": additionnalStats["Tenacity %"],
+                                [textMana + " / Regen"]: additionnalStats["Mana / Regen"],
+                            }}
                         />
-                        <SkillsTable 
-                            mainData={mainData} 
-                            spellName={data.spellNames} 
-                            spellData={data.mAbilities != undefined ? data.mAbilities : data.spellNames} 
-                            passiveName={data.passive1IconName.split('/')[data.passive1IconName.split('/').length - 1].split('.')[0]}
-                            passiveData={data.mCharacterPassiveSpell}
-                            baseNameData={nameChampForLink.split('/')[0] + '/' + nameChampForLink.split('/')[1]  + '/'}
-                            actualData={dataChamp}
-                        />
+                       <SkillsTable 
+                            statsChamp={{
+                                "Hp": basicStatsChampion["Hp"],
+                                "Attack Damage": basicStatsChampion["Attack Damage"],
+                                "Attack Speed %": basicStatsChampion["Attack Speed %"],
+                                "Armor": basicStatsChampion["Armor"],
+                                "Magic Resist": basicStatsChampion["Magic Resist"],
+                                "Move Speed": basicStatsChampion["Move Speed"],
+                                "Lifesteal / sec": basicStatsChampion["Lifesteal / sec"],
+                                "Critical %":  basicStatsChampion["Critical %"], 
+                                "Hp Regen": basicStatsChampion["Hp Regen"],
+
+                                [textMana] : basicStatsChampion["Mana"],
+                                "Ability Power": basicStatsChampion["Ability Power"],
+                                "Range": basicStatsChampion["Range"],
+                                "Armor Penetration": basicStatsChampion["Armor Penetration"],
+                                "Resist Penetration": basicStatsChampion["Resist Penetration"],
+                                "Ability Haste": basicStatsChampion["Ability Haste"],
+                                "Spellvamp %": basicStatsChampion["Spellvamp %"],
+                                "Tenacity %": basicStatsChampion["Tenacity %"],
+                                [textMana + " / Regen"]: basicStatsChampion["Mana / Regen"],
+                            }}
+                            statsSpell={data}
+                            additionnalStats={{
+                                "Hp": additionnalStats["Hp"],
+                                "Attack Damage": additionnalStats["Attack Damage"],
+                                "Attack Speed %": additionnalStats["Attack Speed %"],
+                                "Armor": additionnalStats["Armor"],
+                                "Magic Resist": additionnalStats["Magic Resist"],
+                                "Move Speed": additionnalStats["Move Speed"],
+                                "Lifesteal / sec": additionnalStats["Lifesteal / sec"],
+                                "Critical %":  additionnalStats["Critical %"], 
+                                "Hp Regen": basicStatsChampion["Hp Regen"],
+
+                                [textMana] : additionnalStats["Mana"],
+                                "Ability Power": additionnalStats["Ability Power"],
+                                "Range": additionnalStats["Range"],
+                                "Armor Penetration": additionnalStats["Armor Penetration"],
+                                "Resist Penetration": additionnalStats["Resist Penetration"],
+                                "Ability Haste": additionnalStats["Ability Haste"],
+                                "Spellvamp %": additionnalStats["Spellvamp %"],
+                                "Tenacity %": additionnalStats["Tenacity %"],
+                                [textMana + " / Regen"]: additionnalStats["Mana / Regen"],
+                            }}
+                            passiveSkillPoint={level}
+                        />  
                     </>
                 )}
             </div>

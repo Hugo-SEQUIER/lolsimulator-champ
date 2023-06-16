@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
       <footer>
-        <div class="footer-container">
+        <div className="footer-container">
           <p>&copy; 2023 Placeholder</p>
         </div>
       </footer>

@@ -54,15 +54,15 @@ export default function Accueil({ character_name }) {
             linkName = linkName.replace("é","e")
             linkName = linkName.replace("î","i")
             return (
-              <Link href={linkName}>
-                <div className='card-character'> 
+              <Link href={linkName} key={index}>
+                <div className='card-character' > 
                   <img
                     alt={value}
                     src={"../images/loading/" + linkName + "_0.jpg"}
-        
+            
                   />
-                  <div className='button-character'>
-                    <p>{value.toUpperCase()}</p>
+                  <div className='button-character'  >
+                    <p  >{value.toUpperCase()}</p>
                   </div>
                 </div>
               </Link>

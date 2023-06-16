@@ -64,7 +64,7 @@ option {
 
 .stats-table {
     padding: 2%;
-    min-width: 375px;
+    min-width: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
