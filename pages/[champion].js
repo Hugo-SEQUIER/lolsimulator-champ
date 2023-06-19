@@ -25,7 +25,7 @@ export async function getServerSideProps({ params }) {
     champion = "Renata"
   }
   // Fetch the champion data
-  const res = await fetch(`http://localhost:3000/data/${champion}.json`);
+  const res = await fetch(`http://localhost:3000/data/champions/${champion}.json`);
   //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
  
   const championDetails = await res.json();

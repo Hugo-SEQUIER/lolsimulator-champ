@@ -4,7 +4,7 @@ from openpyxl import load_workbook
 import requests
 from sympy import symbols, evalf
 
-PATCH = "13.11" # PAS D'IMPORTANCE
+PATCH = "13.12" # PAS D'IMPORTANCE
 
 # Ouvrir le fichier xlsx
 wb = load_workbook('champions_data.xlsx', data_only=False)
@@ -18,7 +18,6 @@ df = pd.DataFrame(data_rows, columns=cols)
 
 # Imprimer les noms de colonnes (header)
 header = df.columns.tolist()
-dict = {}
 
 def transformData(data_brut):
     data_without_equal = checkIfNumber(data_brut)
@@ -130,7 +129,7 @@ for index, row in df.iterrows():
             name_champ = name_champ.replace("é","e")
             name_champ = name_champ.replace("î","i")
             jsp = json.dumps(dict, indent=2)
-            with open(f"../public/data/{name_champ}.json", 'w') as f:
+            with open(f"../public/data/champions/{name_champ}.json", 'w') as f:
                 f.write(jsp)    
     except TypeError:
         if row["Champions"] is not None :
