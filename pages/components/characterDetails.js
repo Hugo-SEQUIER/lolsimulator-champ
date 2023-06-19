@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import StatsTable from './statsTable'
 import SkillsTable from './skillsTable'
 import Link from 'next/link'
-
+import math from 'mathjs'
 export default function CharacterDetails({data, nameChamp}){
 
     let options = [];
@@ -50,7 +50,7 @@ export default function CharacterDetails({data, nameChamp}){
         "Critical %":  0, 
         "Hp Regen": 0,
 
-        [textMana] : 0,
+        "Mana" : 0,
         "Ability Power": 0,
         "Range": 0,
         "Armor Penetration": 0,
@@ -58,178 +58,334 @@ export default function CharacterDetails({data, nameChamp}){
         "Ability Haste": 0,
         "Spellvamp %": 0,
         "Tenacity %": 0,
-        [textMana + " / Regen"]: 0,
+        "Mana / Regen": 0,
     })
 
-    function getNumericFromString(stringDamage, passiveDmg){
+    const [bonusStats, setBonusStats] = useState({
+        "Ardent" : false,
+        "Chem" : false,
+        "Cloud" : false,
+        "Elder" : false,
+        "Hextech" : false,
+        "Infernal" : false,
+        "Mountain" : false,
+        "Ocean" : false,
+        "Recently Hit" : false
+    })
 
-        // VOIR LES PLAGES NOMMEES
-        let B_Ardent = bonusStats["Ardent"]
-        let B_Chem = bonusStats["Chem"]
-        let B_Cloud = bonusStats["Cloud"]
-        let B_Elder = bonusStats["Elder"]
-        let B_Hex = bonusStats["Hextech"]
-        let B_Infernal = bonusStats["Infernal"]
-        let B_Mountain = bonusStats["Mountain"]
-        let B_Ocean = bonusStats["Ocean"]
-        let B_RecentHit = bonusStats["Recently Hit"]
+    const [apheliosStats, setApheliosStats] = useState({
+        "Crescend Stacks" : 0,
+        "Main Weapon" : "-",
+        "Sub Weapon" : "-",
+    })
 
-        let C_Aphelios_Stacks = apheliosStats["Crescend Stacks"]
-        let C_Aphelios_W1 = apheliosStats["Main Weapon"]
-        let C_Aphelios_W2 = apheliosStats["Sub Weapon"]
-        let C_SylasUltimate = sylasUltimate
+    const [sylasUltimate, setSylasUltimate] = useState("-")
 
-        let E_AR = enemyStats["Armor"]
-        let E_BoAR = enemyStats["Armor Bonus"]
-        let E_BoHp = enemyStats["Hp Bonus"]
-        let E_CHP = enemyStats["Current Hp %"]
-        let E_CHPV = enemyStats["Current Hp"]
-        let E_IT_AR = enemyItemStats["AR"]
-        let E_IT_HP = enemyItemStats["HP"]
-        let E_IT_MR = enemyItemStats["MR"]
-        let E_Level = enemyStats["Level"]
-        let E_MHP = enemyStats["Hp"]
-        let E_MisHPV = enemyStats["Missing HP"]
-        let E_MR = enemyStats["Magic Resist"]
-        let E_Name = enemyStats["Name"]
-  
-        let Gametime = gameStats["Gametime"]
+    const [enemyStats, setEnemyStats] = useState({
+        "Armor" : 0,
+        "Armor Bonus" : 0,
+        "Hp Bonus" : 0,
+        "Current Hp %" : 100,
+        "Current Hp" : 0,
+        "Level" : 1,
+        "Hp" : 0,
+        "Missing HP" : 0,
+        "Magic Resist" : 0,
+        "Name" : "-"
+    })
 
-        let IT_AD = itemStats["AD"]
-        let IT_AH = itemStats["AH"]
-        let IT_AP = itemStats["AP"]
-        let IT_APEN = itemStats["APE%"]
-        let IT_AR = itemStats["AR"]
-        let IT_AS = itemStats["AS"]
-        let IT_CDMG = itemStats["CDMG"]
-        let IT_Cost = itemStats["Gold"]
-        let IT_Cost2 = enemyItemStats["Gold"]
-        let IT_Crit = itemStats["CC"]
-        let IT_FlatMS = itemStats["MS"]
-        let IT_HP = itemStats["HP"]
-        let IT_HPR = itemStats["HP5"]
-        let IT_Leth = itemStats["LE"]
-        let IT_LS = itemStats["LS"]
-        let IT_MOD_Heal = itemStats["HEAL"]
-        let IT_MOD_Magic = itemStats["APM"]
-        let IT_MOD_Phys = itemStats["ADM"]
-        let IT_MP = itemStats["MP"]
-        let IT_Mpen = itemStats["MPE"]
-        let IT_MPenP = itemStats["MPE%"]
-        let IT_MPR = itemStats["MP5"]
-        let IT_MR = itemStats["MR"]
-        let IT_MS = itemStats["MS%"]
-        let IT_OH_Magic = itemStats["MOH"]
-        let IT_OH_Phys = itemStats["POH"]
-        let IT_Proc_Energy = itemStats["EPD"]
-        let IT_Proc_Magic = itemStats["MPD"]
-        let IT_Proc_Phys = itemStats["PPD"]
-        let IT_Shield = itemStats["SHI"]
-        let IT_Shoe = itemStats["SHOE"]
-        let IT_SV = itemStats["SV"]
-        let IT_TC = itemStats["TC"]
-        let ItemSet = 1
+    const [enemyItemStats, setEnemyItemStats] = useState({
+        "AR" : 0,
+        "HP" : 0,
+        "MR" : 0,
+        "Gold" : 0
+    })
 
-        let N_Chem = gameStats["Chemtech"]
-        let Kills = gameStats["Kills"]
-        let Language = 0
-        let Legendary = 1
-        let Minion = gameStats["Minion"]
-        let MOD_Heal = 1 + IT_MOD_Heal + runeStats["Heal"] + N_Chem * 0.06 // Revitalize
-        let MOD_Hit = 1
-        let MOD_Magic = 1
-        let MOD_OH = 1
-        let MOD_Phys = 1
-        let MOD_SelfHeal = 1
-        let MOD_True = 1
-        let N_Cloud = gameStats["Cloud"]
-        let N_Hex = gameStats["Hextech"]
-        let N_Infernal = gameStats["Infernal"]
-        let N_Mountain = gameStats["Mountain"]
-        let N_Ocean = gameStats["Ocean"]
-        let Name = nameChamp
-        let OH_Phys = 0 // A DEFINIR
-        let OH_Magic = 0 // A DEFINIR
-        let OH_True = 0 // A DEFINIR
+    const [gameStats, setGameStats] = useState({
+        "Gametime" : 0,
+        "Chemtech" : 0,
+        "Kills" : 0,
+        "Minion" : 0,
+        "Cloud" : 0,
+        "Hextech" : 0,
+        "Infernal" : 0,
+        "Mountain" : 0,
+        "Ocean" : 0
+    })
 
-        let P_E = 0
-        let P_Q = 0
-        let P_R = 0
-        let P_W = 0
-        
-        let ForceBit = runeStats["ForceBit"]
-        let R_Adap = runeStats["Adaptative"]
-        let R_AH = runeStats["AH"]
-        let R_AR = runeStats["AR"]
-        let R_AS = runeStats["AS"]
-        let R_HP = runeStats["HP"]
-        let R_MOD = 1
-        let R_MP = runeStats["MP"]
-        let R_MR = runeStats["MR"]
-        let R_MS = runeStats["MS"]
-        let R_PTAMOD = 1
-        let R_Ultimate = runeStats["Ultimate"]
-        
-        let S_BC = stacksStats["Black Cleaver"]
-        let S_Bounty = stacksStats["Bounty"]
-        let S_Conq = stacksStats["Conqueror"]
-        let S_Harvest = stacksStats["Dark Harvest"]
-        let S_Legend = stacksStats["Legend/Collector"]
-        let S_Mejai = stacksStats["Mejai"]
+    const [itemStats, setItemStats] = useState({
+        "AD" : 0,
+        "AH" : 0,
+        "AP" : 0,
+        "APE%": 0,
+        "AR" : 0,
+        "AS" : 0,
+        "CDMG" : 0,
+        "Gold" : 0,
+        "CC" : 0,
+        "MS" : 0,
+        "HP" : 0,
+        "HP5" : 0,
+        "LE" : 0,
+        "LS" : 0,
+        "HEAL" : 0,
+        "APM" : 0,
+        "ADM" : 0,
+        "MP" : 0,
+        "MPE" : 0,
+        "MPE%" : 0,
+        "MP5" : 0,
+        "MR" : 0,
+        "MS%" : 0,
+        "MOH" : 0,
+        "POH" : 0,
+        "EPD" : 0,
+        "MPD" : 0,
+        "PPD" : 0,
+        "SHI" : 0,
+        "SHOE" : 0,
+        "SV" : 0,
+        "TC" : 0
+    })
 
-        let Sc_Lin = (level - 1)/17
+    const [runeStats, setRuneStats] = useState({
+        "FoceBit" : 1,
+        "Adaptative" : 0,
+        "AH" : 0,
+        "AS" : 0,
+        "AR" : 0,
+        "HP" : 0,
+        "MP" : 0,
+        "MR" : 0,
+        "MS" : 0,
+        "Ultimate" : 0
+    })
 
-        let Self_AD = totalStats["AD"]
-        let Self_AH = totalStats["AH"]
-        let Self_AP = totalStats["AP"]
-        let Self_APenF = totalStats["APenF"]
-        let Self_AR = totalStats["AR"]
-        let Self_AS = totalStats["AS"]
-        let Self_AvgAA = totalStats["AvgAA"]
-        let Self_BaAD = basicStatsChampion["Attack Damage"]
-        let Self_BaMS = basicStatsChampion["Move Speed"]
-        let Self_BoAD = additionnalStats["Attack Damage"]
-        let Self_BoAR = additionnalStats["Armor"]
-        let Self_BoAS = additionnalStats["Attack Speed %"]
-        let Self_BoHP = additionnalStats["Hp"]
-        let Self_BoMP = additionnalStats["Mana"]
-        let Self_BoMR = additionnalStats["Magic Resist"]
-        let Self_BoMS = additionnalStats["Move Speed"] - basicStatsChampion["Move Speed"]
-        let Self_BoMSP = additionnalStats["Move Speed"]
-        let Self_CHPP = 1
-        let Self_Crit = totalStats["Crit"]
-        let Self_CritDMG = totalStats["CritDMG"]
-        let Self_CritHit = totalStats["CritHit"]
-        let Self_DPS = totalStats["DPS"]
-        let Self_Gold = totalStats["Gold"]
-        let Self_HitDmg = totalStats["HitDmg"]
-        let Self_HPR = totalStats["HPR"]
-        let Self_Leth = totalStats["Leth"]
-        let Self_Level = level
-        let Self_LS = totalStats["LS"]
-        let Self_MaxCS = 0
-        let Self_MaxGold = 500
-        let Self_MHP = totalStats["HP"]
-        let Self_MisHPV = totalStats["MisHPV"]
-        let Self_MP = totalStats["MP"]
-        let Self_MpenF = totalStats["MpenF"]
-        let Self_MPR = totalStats["MPR"]
-        let Self_MR = totalStats["MR"]
-        let Self_MS = totalStats["MS"]
-        let Self_Proc_Item = totalStats["Proc Item"]
-        let Self_Proc_Rune = totalStats["Proc Rune"]
-        let Self_Proc_Summ = totalStats["Proc Summ"]
-        let Self_Shield = totalStats["Shield"]
-        let Self_TC = totalStats["TC"]
+    const [stacksStats, setStacksStats] = useState({
+        "Black Cleaver" : 0,
+        "Bounty" : 0,
+        "Conqueror" : 0,
+        "Dark Harvest" : 0,
+        "Legend/Collector" : 0,
+        "Mejai" : 0
+    })
 
-        let Steroid_E = steroidStats["E"]
-        let Steroid_Form = steroidStats["Form"]
-        let Steroid_Items = steroidStats["Items"]
-        let Steroid_P = steroidStats["P"]
-        let Steroid_Q = steroidStats["Q"]
-        let Steroid_R = steroidStats["R"]
-        let Steroid_Runes = steroidStats["Runes"]
-        let Steroid_W = steroidStats["W"]
+    const [totalStats, setTotalStats] = useState({
+        "AD" : 0,
+        "AH" : 0,
+        "AP" : 0,
+        "APenF" : 0,
+        "AR" : 0,
+        "AS" : 0,
+        "AvgAA" : 0,
+        "Crit" : 0,
+        "CritDMG" : 0,
+        "CritHit" : 0,
+        "DPS" : 0,
+        "Gold" : 0,
+        "HitDmg" : 0,
+        "HPR" : 0,
+        "Leth" : 0,
+        "LS" : 0,
+        "HP" : 0,
+        "MisHPV" : 0,
+        "MP" : 0,
+        "MpenF" : 0,
+        "MPR" : 0,
+        "MR" : 0,
+        "MS" : 0,
+        "Proc Item" : 0,
+        "Proc Rune" : 0,
+        "Proc Summ" : 0,
+        "Shield" : 0,
+        "TC" : 0
+    })
+
+    const [steroidStats, setSteroidStats] = useState({
+        "E" : false,
+        "Form" : false,
+        "Items" : false,
+        "P" : false,
+        "Q" : false,
+        "R" : false,
+        "Runes" : false,
+        "W" : false
+    })
+
+    function getNumericFromString(stringDamage){
+
+        let scope = {
+            // VOIR LES PLAGES NOMMEES
+            B_Ardent : bonusStats["Ardent"],
+            B_Chem : bonusStats["Chem"],
+            B_Cloud : bonusStats["Cloud"],
+            B_Elder : bonusStats["Elder"],
+            B_Hex : bonusStats["Hextech"],
+            B_Infernal : bonusStats["Infernal"],
+            B_Mountain : bonusStats["Mountain"],
+            B_Ocean : bonusStats["Ocean"],
+            B_RecentHit : bonusStats["Recently Hit"],
+
+            C_Aphelios_Stacks : apheliosStats["Crescend Stacks"],
+            C_Aphelios_W1 : apheliosStats["Main Weapon"],
+            C_Aphelios_W2 : apheliosStats["Sub Weapon"],
+            C_SylasUltimate : sylasUltimate,
+
+            E_AR : enemyStats["Armor"],
+            E_BoAR : enemyStats["Armor Bonus"],
+            E_BoHp : enemyStats["Hp Bonus"],
+            E_CHP : enemyStats["Current Hp %"],
+            E_CHPV : enemyStats["Current Hp"],
+            E_IT_AR : enemyItemStats["AR"],
+            E_IT_HP : enemyItemStats["HP"],
+            E_IT_MR : enemyItemStats["MR"],
+            E_Level : enemyStats["Level"],
+            E_MHP : enemyStats["Hp"],
+            E_MisHPV : enemyStats["Missing HP"],
+            E_MR : enemyStats["Magic Resist"],
+            E_Name : enemyStats["Name"],
+    
+            Gametime : gameStats["Gametime"],
+
+            IT_AD : itemStats["AD"],
+            IT_AH : itemStats["AH"],
+            IT_AP : itemStats["AP"],
+            IT_APEN : itemStats["APE%"],
+            IT_AR : itemStats["AR"],
+            IT_AS : itemStats["AS"],
+            IT_CDMG : itemStats["CDMG"],
+            IT_Cost : itemStats["Gold"],
+            IT_Cost2 : enemyItemStats["Gold"],
+            IT_Crit : itemStats["CC"],
+            IT_FlatMS : itemStats["MS"],
+            IT_HP : itemStats["HP"],
+            IT_HPR : itemStats["HP5"],
+            IT_Leth : itemStats["LE"],
+            IT_LS : itemStats["LS"],
+            IT_MOD_Heal : itemStats["HEAL"],
+            IT_MOD_Magic : itemStats["APM"],
+            IT_MOD_Phys : itemStats["ADM"],
+            IT_MP : itemStats["MP"],
+            IT_Mpen : itemStats["MPE"],
+            IT_MPenP : itemStats["MPE%"],
+            IT_MPR : itemStats["MP5"],
+            IT_MR : itemStats["MR"],
+            IT_MS : itemStats["MS%"],
+            IT_OH_Magic : itemStats["MOH"],
+            IT_OH_Phys : itemStats["POH"],
+            IT_Proc_Energy : itemStats["EPD"],
+            IT_Proc_Magic : itemStats["MPD"],
+            IT_Proc_Phys : itemStats["PPD"],
+            IT_Shield : itemStats["SHI"],
+            IT_Shoe : itemStats["SHOE"],
+            IT_SV : itemStats["SV"],
+            IT_TC : itemStats["TC"],
+            ItemSet : 1,
+
+            N_Chem : gameStats["Chemtech"],
+            Kills : gameStats["Kills"],
+            Language : 0,
+            Legendary : 1,
+            Minion : gameStats["Minion"],
+            MOD_Heal : 1 + IT_MOD_Heal + runeStats["Heal"] + N_Chem * 0.06, // Revitalize
+            MOD_Hit : 1,
+            MOD_Magic : 1,
+            MOD_OH : 1,
+            MOD_Phys : 1,
+            MOD_SelfHeal : 1,
+            MOD_True : 1,
+            N_Cloud : gameStats["Cloud"],
+            N_Hex : gameStats["Hextech"],
+            N_Infernal : gameStats["Infernal"],
+            N_Mountain : gameStats["Mountain"],
+            N_Ocean : gameStats["Ocean"],
+            Name : nameChamp,
+            OH_Phys : 0, // A DEFINIR
+            OH_Magic : 0, // A DEFINIR
+            OH_True : 0, // A DEFINIR
+
+            P_E : 0,
+            P_Q : 0,
+            P_R : 0,
+            P_W : 0,
+            
+            ForceBit : runeStats["ForceBit"],
+            R_Adap : runeStats["Adaptative"],
+            R_AH : runeStats["AH"],
+            R_AR : runeStats["AR"],
+            R_AS : runeStats["AS"],
+            R_HP : runeStats["HP"],
+            R_MOD : 1,
+            R_MP : runeStats["MP"],
+            R_MR : runeStats["MR"],
+            R_MS : runeStats["MS"],
+            R_PTAMOD : 1,
+            R_Ultimate : runeStats["Ultimate"],
+            
+            S_BC : stacksStats["Black Cleaver"],
+            S_Bounty : stacksStats["Bounty"],
+            S_Conq : stacksStats["Conqueror"],
+            S_Harvest : stacksStats["Dark Harvest"],
+            S_Legend : stacksStats["Legend/Collector"],
+            S_Mejai : stacksStats["Mejai"],
+
+            Sc_Lin : (level - 1)/17,
+
+            Self_AD : totalStats["AD"],
+            Self_AH : totalStats["AH"],
+            Self_AP : totalStats["AP"],
+            Self_APenF : totalStats["APenF"],
+            Self_AR : totalStats["AR"],
+            Self_AS : totalStats["AS"],
+            Self_AvgAA : totalStats["AvgAA"],
+            Self_BaAD : basicStatsChampion["Attack Damage"],
+            Self_BaMS : basicStatsChampion["Move Speed"],
+            Self_BoAD : additionnalStats["Attack Damage"],
+            Self_BoAR : additionnalStats["Armor"],
+            Self_BoAS : additionnalStats["Attack Speed %"],
+            Self_BoHP : additionnalStats["Hp"],
+            Self_BoMP : additionnalStats["Mana"],
+            Self_BoMR : additionnalStats["Magic Resist"],
+            Self_BoMS : additionnalStats["Move Speed"] - basicStatsChampion["Move Speed"],
+            Self_BoMSP : additionnalStats["Move Speed"],
+            Self_CHPP : 1,
+            Self_Crit : totalStats["Crit"],
+            Self_CritDMG : totalStats["CritDMG"],
+            Self_CritHit : totalStats["CritHit"],
+            Self_DPS : totalStats["DPS"],
+            Self_Gold : totalStats["Gold"],
+            Self_HitDmg : totalStats["HitDmg"],
+            Self_HPR : totalStats["HPR"],
+            Self_Leth : totalStats["Leth"],
+            Self_Level : level,
+            Self_LS : totalStats["LS"],
+            Self_MaxCS : 0,
+            Self_MaxGold : 500,
+            Self_MHP : totalStats["HP"],
+            Self_MisHPV : totalStats["MisHPV"],
+            Self_MP : totalStats["MP"],
+            Self_MpenF : totalStats["MpenF"],
+            Self_MPR : totalStats["MPR"],
+            Self_MR : totalStats["MR"],
+            Self_MS : totalStats["MS"],
+            Self_Proc_Item : totalStats["Proc Item"],
+            Self_Proc_Rune : totalStats["Proc Rune"],
+            Self_Proc_Summ : totalStats["Proc Summ"],
+            Self_Shield : totalStats["Shield"],
+            Self_TC : totalStats["TC"],
+
+            Steroid_E : steroidStats["E"],
+            Steroid_Form : steroidStats["Form"],
+            Steroid_Items : steroidStats["Items"],
+            Steroid_P : steroidStats["P"],
+            Steroid_Q : steroidStats["Q"],
+            Steroid_R : steroidStats["R"],
+            Steroid_Runes : steroidStats["Runes"],
+            Steroid_W : steroidStats["W"],
+        }
+
+
+        result = math.evaluate(stringDamage, scope);
     }
     useEffect(()=> {
         if (data != undefined) {
