@@ -409,43 +409,6 @@ export default function CharacterDetails({data, nameChamp}){
         result = math.evaluate(stringDamage, scope);
     }
 
-    useEffect(() => {
-        if (data != undefined) {
-            if (data["Energy"] === "TRUE"){
-                setTextMana('Energy')
-            }
-            else {
-                setTextMana('Mana') 
-            }
-            setImgSplash(`../../images/centered/${nameChamp}_0.jpg`)
-            /** BASICS STATS */
-            let champ_obj = {
-                "Hp": data["HP"] + data["HP+"] * (level - 1),
-                "Attack Damage": data["AD"] + data["AD+"] * (level - 1),
-                "Attack Speed %": Number(data["AS"] * (1 + (data["Ratio"]* (level - 1))/100)),
-                "Armor": data["AR"] + data["AR+"] * (level - 1),
-                "Magic Resist": data["MR"] + data["MR+"] * (level - 1),
-                "Move Speed": data["MS"],
-                "Lifesteal": 0,
-                "Critical %":  0, 
-                "Hp Regen": data["HP5"] + data["HP5+"] * (level - 1),
-
-                "Mana": data["MP"] + data["MP+"] * (level - 1),
-                "Ability Power": 0,
-                "Range": data["Range"],
-                "Armor Penetration": 0,
-                "Resist Penetration": 0,
-                "Ability Haste": 0,
-                "Spellvamp %": 0,
-                "Tenacity %": 0,
-                "Mana / Regen": data["MP5"] + data["MP5+"] * (level - 1),
-            }
-            setDataChamp(champ_obj)
-
-            enemyDataPrep()
-
-        }
-    },[data, level, enemyName])
     
     const enemyDataPrep = async () => {
         /** ENEMY STATS */
@@ -510,31 +473,36 @@ export default function CharacterDetails({data, nameChamp}){
     const [secondFirstRune, setSecondFirstRune] = useState('')
     const [secondSecondRune, setSecondSecondRune] = useState('')
 
+    const [listKeystone, setListKeystoneRune] = useState([])
+    const [listFirstRune, setListFirstRune] = useState([])
+    const [listSecondRune, setListSecondRune] = useState([])
+    const [listThirdRune, setListThirdRune] = useState([])
+
     const setUpMainRunes = (nameRune) => {
         let optionRune = []
         if (nameRune == 'Precision'){ 
             for (let i = 0; i < precisionMainRunes.length; i++) {
-                options.push(<option value={precisionMainRunes[i]} key={i}>{precisionMainRunes[i]}</option>);
+                optionRune.push(<option value={precisionMainRunes[i]} key={i*65}>{precisionMainRunes[i]}</option>);
             }
         }
         if (nameRune == 'Domination'){ 
             for (let i = 0; i < dominationMainRunes.length; i++) {
-                options.push(<option value={dominationMainRunes[i]} key={i}>{dominationMainRunes[i]}</option>);
+                optionRune.push(<option value={dominationMainRunes[i]} key={i*77}>{dominationMainRunes[i]}</option>);
             }
         }
         if (nameRune == 'Sorcery'){ 
             for (let i = 0; i < sorceryMainRunes.length; i++) {
-                options.push(<option value={sorceryMainRunes[i]} key={i}>{sorceryMainRunes[i]}</option>);
+                optionRune.push(<option value={sorceryMainRunes[i]} key={i*88}>{sorceryMainRunes[i]}</option>);
             }
         }
         if (nameRune == 'Resolve'){ 
             for (let i = 0; i < resolveMainRune.length; i++) {
-                options.push(<option value={resolveMainRune[i]} key={i}>{resolveMainRune[i]}</option>);
+                optionRune.push(<option value={resolveMainRune[i]} key={i*99}>{resolveMainRune[i]}</option>);
             }
         }
         if (nameRune == 'Inspiration'){ 
             for (let i = 0; i < inspirationMainRunes.length; i++) {
-                options.push(<option value={inspirationMainRunes[i]} key={i}>{inspirationMainRunes[i]}</option>);
+                optionRune.push(<option value={inspirationMainRunes[i]} key={i*80}>{inspirationMainRunes[i]}</option>);
             }
         }
         return optionRune
@@ -544,27 +512,27 @@ export default function CharacterDetails({data, nameChamp}){
         let optionRune = []
         if (nameRune == 'Precision'){ 
             for (let i = 0; i < precisionFirstRune.length; i++) {
-                options.push(<option value={precisionFirstRune[i]} key={i}>{precisionFirstRune[i]}</option>);
+                optionRune.push(<option value={precisionFirstRune[i]} key={i}>{precisionFirstRune[i]}</option>);
             }
         }
         if (nameRune == 'Domination'){ 
             for (let i = 0; i < dominationFirstRune.length; i++) {
-                options.push(<option value={dominationFirstRune[i]} key={i}>{dominationFirstRune[i]}</option>);
+                optionRune.push(<option value={dominationFirstRune[i]} key={i}>{dominationFirstRune[i]}</option>);
             }
         }
         if (nameRune == 'Sorcery'){ 
             for (let i = 0; i < sorceryFirstRune.length; i++) {
-                options.push(<option value={sorceryFirstRune[i]} key={i}>{sorceryFirstRune[i]}</option>);
+                optionRune.push(<option value={sorceryFirstRune[i]} key={i}>{sorceryFirstRune[i]}</option>);
             }
         }
         if (nameRune == 'Resolve'){ 
             for (let i = 0; i < resolveFirstRune.length; i++) {
-                options.push(<option value={resolveFirstRune[i]} key={i}>{resolveFirstRune[i]}</option>);
+                optionRune.push(<option value={resolveFirstRune[i]} key={i}>{resolveFirstRune[i]}</option>);
             }
         }
         if (nameRune == 'Inspiration'){ 
             for (let i = 0; i < inspirationFirstRune.length; i++) {
-                options.push(<option value={inspirationFirstRune[i]} key={i}>{inspirationFirstRune[i]}</option>);
+                optionRune.push(<option value={inspirationFirstRune[i]} key={i}>{inspirationFirstRune[i]}</option>);
             }
         }
         return optionRune
@@ -574,27 +542,27 @@ export default function CharacterDetails({data, nameChamp}){
         let optionRune = []
         if (nameRune == 'Precision'){ 
             for (let i = 0; i < precisionSecondRune.length; i++) {
-                options.push(<option value={precisionSecondRune[i]} key={i}>{precisionSecondRune[i]}</option>);
+                optionRune.push(<option value={precisionSecondRune[i]} key={i}>{precisionSecondRune[i]}</option>);
             }
         }
         if (nameRune == 'Domination'){ 
             for (let i = 0; i < dominationSecondRune.length; i++) {
-                options.push(<option value={dominationSecondRune[i]} key={i}>{dominationSecondRune[i]}</option>);
+                optionRune.push(<option value={dominationSecondRune[i]} key={i}>{dominationSecondRune[i]}</option>);
             }
         }
         if (nameRune == 'Sorcery'){ 
             for (let i = 0; i < sorcerySecondRune.length; i++) {
-                options.push(<option value={sorcerySecondRune[i]} key={i}>{sorcerySecondRune[i]}</option>);
+                optionRune.push(<option value={sorcerySecondRune[i]} key={i}>{sorcerySecondRune[i]}</option>);
             }
         }
         if (nameRune == 'Resolve'){ 
             for (let i = 0; i < resolveSecondRune.length; i++) {
-                options.push(<option value={resolveSecondRune[i]} key={i}>{resolveSecondRune[i]}</option>);
+                optionRune.push(<option value={resolveSecondRune[i]} key={i}>{resolveSecondRune[i]}</option>);
             }
         }
         if (nameRune == 'Inspiration'){ 
             for (let i = 0; i < inspirationSecondRune.length; i++) {
-                options.push(<option value={inspirationSecondRune[i]} key={i}>{inspirationSecondRune[i]}</option>);
+                optionRune.push(<option value={inspirationSecondRune[i]} key={i}>{inspirationSecondRune[i]}</option>);
             }
         }
         return optionRune
@@ -604,33 +572,70 @@ export default function CharacterDetails({data, nameChamp}){
         let optionRune = []
         if (nameRune == 'Precision'){ 
             for (let i = 0; i < precisionThirdRune.length; i++) {
-                options.push(<option value={precisionThirdRune[i]} key={i}>{precisionThirdRune[i]}</option>);
+                optionRune.push(<option value={precisionThirdRune[i]} key={i}>{precisionThirdRune[i]}</option>);
             }
         }
         if (nameRune == 'Domination'){ 
             for (let i = 0; i < dominationThirdRune.length; i++) {
-                options.push(<option value={dominationThirdRune[i]} key={i}>{dominationThirdRune[i]}</option>);
+                optionRune.push(<option value={dominationThirdRune[i]} key={i}>{dominationThirdRune[i]}</option>);
             }
         }
         if (nameRune == 'Sorcery'){ 
             for (let i = 0; i < sorceryThirdRune.length; i++) {
-                options.push(<option value={sorceryThirdRune[i]} key={i}>{sorceryThirdRune[i]}</option>);
+                optionRune.push(<option value={sorceryThirdRune[i]} key={i}>{sorceryThirdRune[i]}</option>);
             }
         }
         if (nameRune == 'Resolve'){ 
             for (let i = 0; i < resolveThirdRune.length; i++) {
-                options.push(<option value={resolveThirdRune[i]} key={i}>{resolveThirdRune[i]}</option>);
+                optionRune.push(<option value={resolveThirdRune[i]} key={i}>{resolveThirdRune[i]}</option>);
             }
         }
         if (nameRune == 'Inspiration'){ 
             for (let i = 0; i < inspirationThirdRune.length; i++) {
-                options.push(<option value={inspirationThirdRune[i]} key={i}>{inspirationThirdRune[i]}</option>);
+                optionRune.push(<option value={inspirationThirdRune[i]} key={i}>{inspirationThirdRune[i]}</option>);
             }
         }
         return optionRune
     }
+ 
 
+    useEffect(() => {
+        if (data != undefined) {
+            if (data["Energy"] === "TRUE"){
+                setTextMana('Energy')
+            }
+            else {
+                setTextMana('Mana') 
+            }
+            setImgSplash(`../../images/centered/${nameChamp}_0.jpg`)
+            /** BASICS STATS */
+            let champ_obj = {
+                "Hp": data["HP"] + data["HP+"] * (level - 1),
+                "Attack Damage": data["AD"] + data["AD+"] * (level - 1),
+                "Attack Speed %": Number(data["AS"] * (1 + (data["Ratio"]* (level - 1))/100)),
+                "Armor": data["AR"] + data["AR+"] * (level - 1),
+                "Magic Resist": data["MR"] + data["MR+"] * (level - 1),
+                "Move Speed": data["MS"],
+                "Lifesteal": 0,
+                "Critical %":  0, 
+                "Hp Regen": data["HP5"] + data["HP5+"] * (level - 1),
 
+                "Mana": data["MP"] + data["MP+"] * (level - 1),
+                "Ability Power": 0,
+                "Range": data["Range"],
+                "Armor Penetration": 0,
+                "Resist Penetration": 0,
+                "Ability Haste": 0,
+                "Spellvamp %": 0,
+                "Tenacity %": 0,
+                "Mana / Regen": data["MP5"] + data["MP5+"] * (level - 1),
+            }
+            setDataChamp(champ_obj)
+
+            enemyDataPrep()
+
+        }
+    },[data, level, enemyName, enemyLevel])
 
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
@@ -909,6 +914,161 @@ export default function CharacterDetails({data, nameChamp}){
                                                         setEnemyStats(obj)
                                                     }}
                                                 />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        {/** RUNES STATS */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Runes</h1>
+                            </div>
+                            <div className='stats-table-row'>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2">
+                                                Main Tree
+                                            </td>
+                                        </tr>          
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Main Rune
+                                            </td>
+                                            <td>
+                                                <select value={nameMainRune} onChange={(e) => {
+                                                    setNameMainRune(e.target.value)
+                                                }}>
+                                                    {listMainRune.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        {nameMainRune != '' && (
+                                            <>
+                                                <tr>
+                                                    <td>Keystone</td>
+                                                    <td>
+                                                        <select value={mainRune} onChange={(e) => {
+                                                            setMainRune(e.target.value)
+                                                        }}>
+                                                            {setUpMainRunes(nameMainRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>First Rune</td>
+                                                    <td>
+                                                        <select value={mainFirstRune} onChange={(e) => {
+                                                            setMainFirstRune(e.target.value)
+                                                        }}>
+                                                            {setUpFirstRunes(nameMainRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Second Rune</td>
+                                                    <td>
+                                                        <select value={mainSecondRune} onChange={(e) => {
+                                                            setMainSecondRune(e.target.value)
+                                                        }}>
+                                                            {setUpSecondRunes(nameMainRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Third Rune</td>
+                                                    <td>
+                                                        <select value={mainThirdRune} onChange={(e) => {
+                                                            setMainThirdRune(e.target.value)
+                                                        }}>
+                                                            {setUpThirdRunes(nameMainRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </>
+                                        )}
+                                    </tbody>
+                                    <thead>                                   
+                                        <tr>
+                                            <td colspan="2">
+                                                Secondary Tree
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Second Rune
+                                            </td>
+                                            <td>
+                                                <select value={secondRune} onChange={(e) => {
+                                                    setSecondRune(e.target.value)
+                                                }}>
+                                                    {listMainRune.map((value, index) => {
+                                                        if (value != nameMainRune)
+                                                            return(
+                                                                <option value={value} key={index}>{value}</option>
+                                                            )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                First Rune
+                                            </td>
+                                            <td>
+                                                <select value={secondFirstRune} onChange={(e) => {
+                                                    setSecondFirstRune(e.target.value)
+                                                }}>
+                                                    {setUpFirstRunes(secondRune).map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {setUpSecondRunes(secondRune).map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Second Rune
+                                            </td>
+                                            <td>
+                                                <select value={secondSecondRune} onChange={(e) => {
+                                                    setSecondSecondRune(e.target.value)
+                                                }}>
+                                                    {setUpSecondRunes(secondRune).map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {setUpThirdRunes(secondRune).map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
                                             </td>
                                         </tr>
                                     </tbody>
