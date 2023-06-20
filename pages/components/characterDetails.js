@@ -474,6 +474,164 @@ export default function CharacterDetails({data, nameChamp}){
         setEnemyStats(enemy_obj)
     }
 
+    const listMainRune = ["Precision", "Domination","Sorcery","Resolve","Inspiration"]
+
+    const precisionMainRunes = ["Press The Attack", "Lethal Tempo", "Fleet Foot", "Conqueror"]
+    const precisionFirstRune = ["Overheal", "Triumph", "Presence of Mind"]
+    const precisionSecondRune = ["Alacrity", "Tenacity", "Bloodline"]
+    const precisionThirdRune = ["Coup de Grace", "Cut Down", "Last Stand"]
+
+    const dominationMainRunes = ["Electrocute", "Predator", "Dark Harvest", "Hail of Blades"]
+    const dominationFirstRune = ["Cheap Shot", "Taste of Blood", "Sudden Impact"]
+    const dominationSecondRune = ["Zombie Ward", "Ghost Poro", "Eyeball Collection"]
+    const dominationThirdRune = ["Treasure Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"]
+
+    const sorceryMainRunes = ["Summon Aery", "Arcane Comet", "Phase Rush"]
+    const sorceryFirstRune = ["Nullifying Orb", "Manaflow Band", "Nimbus Cloak"]
+    const sorcerySecondRune = ["Transcendence", "Celerity", "Absolute Focus"]
+    const sorceryThirdRune = ["Scorch", "Waterwalking", "Gathering Storm"]
+
+    const resolveMainRune = ["Grasp of the Undying", "Aftershock", "Guardian"]
+    const resolveFirstRune = ["Demolish", "Font of Life", "Shield Bash"]
+    const resolveSecondRune = ["Conditioning", "Second Wind", "Bone Plating"]
+    const resolveThirdRune = ["Overgrowth", "Revitalize", "Unflinching"]
+
+    const inspirationMainRunes = ["Unsealed Spellbook", "Glacial Augment", "First Strike"]
+    const inspirationFirstRune = ["Hextech Flashtrap", "Magical Footwear", "Perfect Timing"]
+    const inspirationSecondRune = ["Futures Market", "Minion Dematerializer", "Biscuit Delivery"]
+    const inspirationThirdRune = ["Cosmic Insight", "Approach Velocity", "Time Warp Tonic"]
+    
+    const [nameMainRune, setNameMainRune] = useState('')
+    const [mainRune, setMainRune] = useState('')
+    const [mainFirstRune, setMainFirstRune] = useState('')
+    const [mainSecondRune, setMainSecondRune] = useState('')
+    const [mainThirdRune, setMainThirdRune] = useState('')
+    const [secondRune, setSecondRune] = useState('')
+    const [secondFirstRune, setSecondFirstRune] = useState('')
+    const [secondSecondRune, setSecondSecondRune] = useState('')
+
+    const setUpMainRunes = (nameRune) => {
+        let optionRune = []
+        if (nameRune == 'Precision'){ 
+            for (let i = 0; i < precisionMainRunes.length; i++) {
+                options.push(<option value={precisionMainRunes[i]} key={i}>{precisionMainRunes[i]}</option>);
+            }
+        }
+        if (nameRune == 'Domination'){ 
+            for (let i = 0; i < dominationMainRunes.length; i++) {
+                options.push(<option value={dominationMainRunes[i]} key={i}>{dominationMainRunes[i]}</option>);
+            }
+        }
+        if (nameRune == 'Sorcery'){ 
+            for (let i = 0; i < sorceryMainRunes.length; i++) {
+                options.push(<option value={sorceryMainRunes[i]} key={i}>{sorceryMainRunes[i]}</option>);
+            }
+        }
+        if (nameRune == 'Resolve'){ 
+            for (let i = 0; i < resolveMainRune.length; i++) {
+                options.push(<option value={resolveMainRune[i]} key={i}>{resolveMainRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Inspiration'){ 
+            for (let i = 0; i < inspirationMainRunes.length; i++) {
+                options.push(<option value={inspirationMainRunes[i]} key={i}>{inspirationMainRunes[i]}</option>);
+            }
+        }
+        return optionRune
+    }
+
+    const setUpFirstRunes = (nameRune) => {
+        let optionRune = []
+        if (nameRune == 'Precision'){ 
+            for (let i = 0; i < precisionFirstRune.length; i++) {
+                options.push(<option value={precisionFirstRune[i]} key={i}>{precisionFirstRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Domination'){ 
+            for (let i = 0; i < dominationFirstRune.length; i++) {
+                options.push(<option value={dominationFirstRune[i]} key={i}>{dominationFirstRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Sorcery'){ 
+            for (let i = 0; i < sorceryFirstRune.length; i++) {
+                options.push(<option value={sorceryFirstRune[i]} key={i}>{sorceryFirstRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Resolve'){ 
+            for (let i = 0; i < resolveFirstRune.length; i++) {
+                options.push(<option value={resolveFirstRune[i]} key={i}>{resolveFirstRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Inspiration'){ 
+            for (let i = 0; i < inspirationFirstRune.length; i++) {
+                options.push(<option value={inspirationFirstRune[i]} key={i}>{inspirationFirstRune[i]}</option>);
+            }
+        }
+        return optionRune
+    }
+
+    const setUpSecondRunes = (nameRune) => {
+        let optionRune = []
+        if (nameRune == 'Precision'){ 
+            for (let i = 0; i < precisionSecondRune.length; i++) {
+                options.push(<option value={precisionSecondRune[i]} key={i}>{precisionSecondRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Domination'){ 
+            for (let i = 0; i < dominationSecondRune.length; i++) {
+                options.push(<option value={dominationSecondRune[i]} key={i}>{dominationSecondRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Sorcery'){ 
+            for (let i = 0; i < sorcerySecondRune.length; i++) {
+                options.push(<option value={sorcerySecondRune[i]} key={i}>{sorcerySecondRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Resolve'){ 
+            for (let i = 0; i < resolveSecondRune.length; i++) {
+                options.push(<option value={resolveSecondRune[i]} key={i}>{resolveSecondRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Inspiration'){ 
+            for (let i = 0; i < inspirationSecondRune.length; i++) {
+                options.push(<option value={inspirationSecondRune[i]} key={i}>{inspirationSecondRune[i]}</option>);
+            }
+        }
+        return optionRune
+    }
+
+    const setUpThirdRunes = (nameRune) => {
+        let optionRune = []
+        if (nameRune == 'Precision'){ 
+            for (let i = 0; i < precisionThirdRune.length; i++) {
+                options.push(<option value={precisionThirdRune[i]} key={i}>{precisionThirdRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Domination'){ 
+            for (let i = 0; i < dominationThirdRune.length; i++) {
+                options.push(<option value={dominationThirdRune[i]} key={i}>{dominationThirdRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Sorcery'){ 
+            for (let i = 0; i < sorceryThirdRune.length; i++) {
+                options.push(<option value={sorceryThirdRune[i]} key={i}>{sorceryThirdRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Resolve'){ 
+            for (let i = 0; i < resolveThirdRune.length; i++) {
+                options.push(<option value={resolveThirdRune[i]} key={i}>{resolveThirdRune[i]}</option>);
+            }
+        }
+        if (nameRune == 'Inspiration'){ 
+            for (let i = 0; i < inspirationThirdRune.length; i++) {
+                options.push(<option value={inspirationThirdRune[i]} key={i}>{inspirationThirdRune[i]}</option>);
+            }
+        }
+        return optionRune
+    }
+
+
+
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
             <div className='character-banniere'>
