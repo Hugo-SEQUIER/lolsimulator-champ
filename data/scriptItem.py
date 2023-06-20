@@ -29,6 +29,7 @@ def checkIfNumber(data_brut):
         return 0
     if (isinstance(data_brut, (int,float))):
         return data_brut
+    print(data_brut)
     testData = data_brut.split('=')[1]
     try :
         return int(testData)
