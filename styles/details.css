@@ -9,6 +9,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
+    align-items: center;
+    justify-content: center;
 }
 
 .character-statistiques  h1 {
@@ -35,6 +37,7 @@
     gap: 5%;
     padding-left: 50px;
     border-bottom: solid 1px #f0eff4;
+    background-position: center;
 }
 
 .character-banniere  img {
@@ -49,12 +52,17 @@
     gap: 20px;
 }
 
-select {
+select, input, input:focus {
     background-color: #1A1825;
     color: #f0eff4;
     height: fit-content;
     border-radius: 20px;
     padding: 2px;
+    text-align: center;
+}
+
+.stats-table input {
+    border: 0;
 }
 
 option {

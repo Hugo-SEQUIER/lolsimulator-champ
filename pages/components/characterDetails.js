@@ -5,6 +5,10 @@ import Link from 'next/link'
 import math from 'mathjs'
 export default function CharacterDetails({data, nameChamp}){
 
+    const character_name = [
+        "-","Aatrox","Ahri","Akali","Akshan","Alistar","Amumu","Anivia","Annie","Aphelios","Ashe","AurelionSol","Azir","Bard","BelVeth","Blitzcrank","Brand","Braum","Caitlyn","Camille","Cassiopeia","ChoGath","Corki","Darius","Diana","DrMundo","Draven","Ekko","Elise","Evelynn","Ezreal","Fiddlesticks","Fiora","Fizz","Galio","Gangplank","Garen","Gnar","Gragas","Graves","Gwen","Hecarim","Heimerdinger","Illaoi","Irelia","Ivern","Janna","JarvanIV","Jax","Jayce","Jhin","Jinx","KSante","KaiSa","Kalista","Karma","Karthus","Kassadin","Katarina","Kayle","Kayn","Kennen","KhaZix","Kindred","Kled","KogMaw","LeBlanc","LeeSin","Leona","Lillia","Lissandra","Lucian","Lulu","Lux","MasterYi","Malphite","Malzahar","Maokai","Milio","MissFortune","Mordekaiser","Morgana","Nami","Nasus","Nautilus","Neeko","Nidalee","Nilah","Nocturne","Nunu & Willump","Olaf","Orianna","Ornn","Pantheon","Poppy","Pyke","Qiyana","Quinn","Rakan","Rammus","RekSai","Rell","Renata","Renekton","Rengar","Riven","Rumble","Ryze","Samira","Sejuani","Senna","Seraphine","Sett","Shaco","Shen","Shyvana","Singed","Sion","Sivir","Skarner","Sona","Soraka","Swain","Sylas","Syndra","TahmKench","Taliyah","Talon","Taric","Teemo","Thresh","Tristana","Trundle","Tryndamere","TwistedFate","Twitch","Udyr","Urgot","Varus","Vayne","Veigar","VelKoz","Vex","Vi","Viego","Viktor","Vladimir","Volibear","Warwick","Wukong","Xayah","Xerath","XinZhao","Yasuo","Yone","Yorick","Yuumi","Zac","Zed","Zeri","Ziggs","Zilean","Zoe","Zyra"
+    ]
+
     let options = [];
     for (let i = 1; i <= 18; i++) {
         options.push(<option value={i} key={i}>{i}</option>);
@@ -14,6 +18,22 @@ export default function CharacterDetails({data, nameChamp}){
         setLevel(parseInt(event.target.value));
     };
 
+    const handleChangeEnemyLevel = (event) => {
+        setEnemyLevel(parseInt(event.target.value));
+    };
+
+    let enemyNameOptions = []
+    for (let i = 0; i < character_name.length; i++){
+        let name = character_name[i]
+        enemyNameOptions.push(<option value={name} key={i}>{name}</option>)
+    }
+
+    const handleEnemyChange = (event) => {
+        setEnemyName(event.target.value)
+    }
+
+    const [enemyLevel, setEnemyLevel] = useState(1)
+    const [enemyName, setEnemyName] = useState('-')
     const [textMana, setTextMana] = useState('Mana')
     const [level, setLevel] = useState(1)
     const [imgSplash, setImgSplash] = useState('../../images/centered/GENERIC.png')
@@ -37,7 +57,7 @@ export default function CharacterDetails({data, nameChamp}){
         "Spellvamp %": 0,
         "Tenacity %": 0,
         [textMana + " / Regen"]: 0,
-    })
+    }) // OK
 
     const [additionnalStats, setAdditionnalStats] = useState({
         "Hp": 0,
@@ -91,8 +111,9 @@ export default function CharacterDetails({data, nameChamp}){
         "Hp" : 0,
         "Missing HP" : 0,
         "Magic Resist" : 0,
+        "Magic Resist Bonus" : 0,
         "Name" : "-"
-    })
+    }) // OK
 
     const [enemyItemStats, setEnemyItemStats] = useState({
         "AR" : 0,
@@ -387,7 +408,8 @@ export default function CharacterDetails({data, nameChamp}){
 
         result = math.evaluate(stringDamage, scope);
     }
-    useEffect(()=> {
+
+    useEffect(() => {
         if (data != undefined) {
             if (data["Energy"] === "TRUE"){
                 setTextMana('Energy')
@@ -396,7 +418,7 @@ export default function CharacterDetails({data, nameChamp}){
                 setTextMana('Mana') 
             }
             setImgSplash(`../../images/centered/${nameChamp}_0.jpg`)
-
+            /** BASICS STATS */
             let champ_obj = {
                 "Hp": data["HP"] + data["HP+"] * (level - 1),
                 "Attack Damage": data["AD"] + data["AD+"] * (level - 1),
@@ -418,12 +440,40 @@ export default function CharacterDetails({data, nameChamp}){
                 "Tenacity %": 0,
                 "Mana / Regen": data["MP5"] + data["MP5+"] * (level - 1),
             }
-            console.log("CharacterDetails")
-            console.log(champ_obj)
             setDataChamp(champ_obj)
+
+            enemyDataPrep()
+
         }
-    },[data, level])
+    },[data, level, enemyName])
     
+    const enemyDataPrep = async () => {
+        /** ENEMY STATS */
+        let enemy_obj = {
+            "Level" : enemyLevel,
+            "Name" : enemyName,
+            "Armor" : 0,
+            "Armor Bonus" : 0,
+            "Hp Bonus" : 0,
+            "Current Hp %" : 100,
+            "Current Hp" : 0,
+            "Hp" : 0,
+            "Missing HP" : 0,
+            "Magic Resist" : 0,
+            "Magic Resist Bonus" : 0,
+        }
+
+        if (enemy_obj["Name"] != '-'){
+            const res = await fetch(`http://localhost:3000/data/champions/${enemy_obj["Name"]}.json`);
+            const championDetails = await res.json();
+
+            enemy_obj["Armor"] = championDetails["AR"] + championDetails["AR+"] * (enemyLevel -1)
+            enemy_obj["Hp"] = championDetails["HP"] + championDetails["HP+"] * (enemyLevel - 1)
+            enemy_obj["Magic Resist"] = championDetails["MR"] + championDetails["MR+"] * (enemyLevel - 1)   
+        }
+        setEnemyStats(enemy_obj)
+    }
+
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
             <div className='character-banniere'>
@@ -470,29 +520,9 @@ export default function CharacterDetails({data, nameChamp}){
                                 "Tenacity %": basicStatsChampion["Tenacity %"],
                                 [textMana + " / Regen"]: basicStatsChampion["Mana / Regen"],
                             }} 
-                            additionnalStats = {{
-                                "Hp": additionnalStats["Hp"],
-                                "Attack Damage": additionnalStats["Attack Damage"],
-                                "Attack Speed %": additionnalStats["Attack Speed %"],
-                                "Armor": additionnalStats["Armor"],
-                                "Magic Resist": additionnalStats["Magic Resist"],
-                                "Move Speed": additionnalStats["Move Speed"],
-                                "Lifesteal": additionnalStats["Lifesteal"],
-                                "Critical %":  additionnalStats["Critical %"], 
-                                "Hp Regen": basicStatsChampion["Hp Regen"],
-
-                                [textMana] : additionnalStats["Mana"],
-                                "Ability Power": additionnalStats["Ability Power"],
-                                "Range": additionnalStats["Range"],
-                                "Armor Penetration": additionnalStats["Armor Penetration"],
-                                "Resist Penetration": additionnalStats["Resist Penetration"],
-                                "Ability Haste": additionnalStats["Ability Haste"],
-                                "Spellvamp %": additionnalStats["Spellvamp %"],
-                                "Tenacity %": additionnalStats["Tenacity %"],
-                                [textMana + " / Regen"]: additionnalStats["Mana / Regen"],
-                            }}
+                       
                         />
-                       <SkillsTable 
+                { /**       <SkillsTable 
                             statsChamp={{
                                 "Hp": basicStatsChampion["Hp"],
                                 "Attack Damage": basicStatsChampion["Attack Damage"],
@@ -537,7 +567,196 @@ export default function CharacterDetails({data, nameChamp}){
                                 [textMana + " / Regen"]: additionnalStats["Mana / Regen"],
                             }}
                             passiveSkillPoint={level}
-                        />  
+                        />  */}
+                        {/** ENEMY STATS */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Enemy Statistics</h1>
+                            </div>
+                            <div className="stats-table-row">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Champion
+                                            </td>
+                                            <td>
+                                        
+                                                <select value={enemyName} onChange={handleEnemyChange}>
+                                                    {enemyNameOptions}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Level
+                                            </td>
+                                            <td>
+                                                <select value={enemyLevel} onChange={handleChangeEnemyLevel}>
+                                                    {options}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hp
+                                            </td>
+                                            <td>
+                                                {enemyStats["Hp"] + enemyStats["Hp Bonus"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Armor
+                                            </td>
+                                            <td>
+                                                {enemyStats["Armor"] + enemyStats["Armor Bonus"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Magic Resist
+                                            </td>
+                                            <td>
+                                                {enemyStats["Magic Resist"] + enemyStats["Magic Resist Bonus"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Current Hp
+                                            </td>
+                                            <td>
+                                                {enemyStats["Current Hp"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Current Hp %
+                                            </td>
+                                            <td>
+                                                {enemyStats["Current Hp %"].toFixed(3)}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hp Bonus
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Hp Bonus"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
+                                                            "Hp Bonus" : value,
+                                                            "Current Hp %" : (enemyStats["Hp"] + value - enemyStats["Missing HP"]) / (enemyStats["Hp"] + value) * 100,
+                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : enemyStats["Missing HP"],
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>                                      
+                                        <tr>
+                                            <td>
+                                                Armor Bonus
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Armor Bonus"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : value,
+                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
+                                                            "Current Hp %" : enemyStats["Current Hp %"],
+                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : enemyStats["Missing HP"],
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Magic Resist Bonus
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Magic Resist Bonus"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
+                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
+                                                            "Current Hp %" : enemyStats["Current Hp %"],
+                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : enemyStats["Missing HP"],
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : value,
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Missing Hp
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Missing HP"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
+                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
+                                                            "Current Hp %" : (enemyStats["Hp"] + enemyStats["Hp Bonus"] - value) / (enemyStats["Hp"] + enemyStats["Hp Bonus"]) * 100 ,
+                                                            "Current Hp" : enemyStats["Hp"] + enemyStats["Hp Bonus"] - value,
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : value,
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </>
                 )}
             </div>
