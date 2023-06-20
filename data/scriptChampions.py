@@ -7,7 +7,7 @@ from sympy import symbols, evalf
 PATCH = "13.12" # PAS D'IMPORTANCE
 
 # Ouvrir le fichier xlsx
-wb = load_workbook('champions_data.xlsx', data_only=False)
+wb = load_workbook('dataLeague.xlsx', data_only=False)
 ws = wb['Champs']
 
 data = ws.values
@@ -112,7 +112,7 @@ def getImgLink(linkName):
 for index, row in df.iterrows():
     # Parcourir chaque colonne
     try :
-        if not '-' in row["Champions"] :
+        if not '-' in row["Champions"] and "minion" not in row["Champions"].lower() and 'targetd' not in row["Champions"].lower():
             dict = {}
             for col_name in df.columns:
                 if col_name == "Icon" :
