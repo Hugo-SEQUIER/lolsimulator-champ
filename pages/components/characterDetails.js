@@ -170,8 +170,8 @@ export default function CharacterDetails({data, nameChamp}){
     })
 
     const [runeStats, setRuneStats] = useState({
-        "FoceBit" : 1,
-        "Adaptative" : 0,
+        "ForceBit" : 1,
+        "Adaptive" : 0,
         "AH" : 0,
         "AS" : 0,
         "AR" : 0,
@@ -322,7 +322,7 @@ export default function CharacterDetails({data, nameChamp}){
             P_W : 0,
             
             ForceBit : runeStats["ForceBit"],
-            R_Adap : runeStats["Adaptative"],
+            R_Adap : runeStats["Adaptive"],
             R_AH : runeStats["AH"],
             R_AR : runeStats["AR"],
             R_AS : runeStats["AS"],
@@ -576,8 +576,8 @@ export default function CharacterDetails({data, nameChamp}){
         return optionRune
     }
  
-    const listOffensiveShard = ['-', "Adaptative Force", "Attack Speed", "Ability Haste"]
-    const listMixedShard = ['-', "Adaptative Force", "Armor", "MagicResist"]
+    const listOffensiveShard = ['-', "Adaptive Force", "Attack Speed", "Ability Haste"]
+    const listMixedShard = ['-', "Adaptive Force", "Armor", "MagicResist"]
     const listDefensiveShard = ['-', "Health", "Armor", "MagicResist"]
 
     const [offensiveShard, setOffensiveShard] = useState('')
@@ -588,6 +588,7 @@ export default function CharacterDetails({data, nameChamp}){
     const [stackLegendExceptBloodline, setStackLegendExceptBloodline] = useState(0)
     const [stackLegendBloodline, setStackLegendBloodline] = useState(0)
     const [stackBounty, setStackBounty] = useState(0)
+    const [stackDarkHarvest, setStackDarkHarvest] = useState(0)
 
     const listLegend = ["Alacrity", "Tenacity", "Zombie Ward", "Ghost Poro", "Eyeball Collection"]
     const listBounty = ["Treasure Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"]
@@ -630,6 +631,41 @@ export default function CharacterDetails({data, nameChamp}){
         }
     },[data, level, enemyName, enemyLevel])
 
+    const majStatsRune = () => {
+        let obj = {
+            "ForceBit" : 1,
+            "Adaptive" : 0,
+            "AH" : 0,
+            "AS" : 0,
+            "AR" : 0,
+            "HP" : 0,
+            "MP" : 0,
+            "MR" : 0,
+            "MS" : 0,
+            "Ultimate" : 0
+        }
+        if (itemStats["AD"] >= itemStats["AP"]){
+            obj["ForceBit"] = 1
+        }
+        else {
+            obj["ForceBit"] = 0
+        }
+        if (offensiveShard == 'Adaptive'){
+            obj["Adaptive"] += 9
+        }
+        if (mixedShard == 'Adaptive'){
+            obj["Adaptive"] += 9
+        }
+        if (mainSecondRune == 'Absolute Focus' || secondFirstRune == 'Absolute Focus' || secondSecondRune == 'Absolute Focus'){
+            obj["Adaptive"] += 3+27*((level - 1)/17)
+        }
+        if (mainSecondRune == 'Zombie Ward' || mainSecondRune == 'Ghost Poro' || mainSecondRune == 'Eyeball Collection' || secondFirstRune == 'Zombie Ward' || secondFirstRune == 'Ghost Poro' || secondFirstRune == 'Eyeball Collection' || secondSecondRune == 'Zombie Ward' || secondSecondRune == 'Ghost Poro' || secondSecondRune == 'Eyeball Collection' ){
+            obj["Adaptive"] += stackLegendExceptBloodline*2
+        }
+        if (mainThirdRune == 'Gathering Storm' || secondSecondRune == 'Gathering Storm'){
+            
+        }
+    }
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
             <div className='character-banniere'>
@@ -1152,6 +1188,25 @@ export default function CharacterDetails({data, nameChamp}){
                                                     </td>
                                                 </tr>
                                             )}
+                                           {mainRune == 'Dark Harvest' && (
+                                                <tr>
+                                                    <td>
+                                                        Dark Harvest
+                                                    </td>
+                                                    <td>
+                                                        <input
+                                                            type="number" 
+                                                            value={stackDarkHarvest}
+                                                            min={0}
+                                                            onChange={(e) => {
+                                                                let value = e.target.value
+                                                                value = value != "" ? parseInt(value) : 0
+                                                                setStackDarkHarvest(value)
+                                                            }}
+                                                        />
+                                                    </td>
+                                                </tr>
+                                            )}
                                             {(listLegend.includes(mainSecondRune) || listLegend.includes(secondFirstRune) || listLegend.includes(secondSecondRune)) && (
                                                 <tr>
                                                     <td>
@@ -1215,7 +1270,6 @@ export default function CharacterDetails({data, nameChamp}){
                                             </tbody>
                                         </>
                                     )}
-                                    
                                 </table>
                             </div>
                         </div>
