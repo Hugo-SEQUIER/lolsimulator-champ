@@ -182,15 +182,6 @@ export default function CharacterDetails({data, nameChamp}){
         "Ultimate" : 0
     })
 
-    const [stacksStats, setStacksStats] = useState({
-        "Black Cleaver" : 0,
-        "Bounty" : 0,
-        "Conqueror" : 0,
-        "Dark Harvest" : 0,
-        "Legend/Collector" : 0,
-        "Mejai" : 0
-    })
-
     const [totalStats, setTotalStats] = useState({
         "AD" : 0,
         "AH" : 0,
@@ -342,14 +333,7 @@ export default function CharacterDetails({data, nameChamp}){
             R_MS : runeStats["MS"],
             R_PTAMOD : 1,
             R_Ultimate : runeStats["Ultimate"],
-            
-            S_BC : stacksStats["Black Cleaver"],
-            S_Bounty : stacksStats["Bounty"],
-            S_Conq : stacksStats["Conqueror"],
-            S_Harvest : stacksStats["Dark Harvest"],
-            S_Legend : stacksStats["Legend/Collector"],
-            S_Mejai : stacksStats["Mejai"],
-
+        
             Sc_Lin : (level - 1)/17,
 
             Self_AD : totalStats["AD"],
@@ -408,7 +392,6 @@ export default function CharacterDetails({data, nameChamp}){
 
         result = math.evaluate(stringDamage, scope);
     }
-
     
     const enemyDataPrep = async () => {
         /** ENEMY STATS */
@@ -437,32 +420,32 @@ export default function CharacterDetails({data, nameChamp}){
         setEnemyStats(enemy_obj)
     }
 
-    const listMainRune = ["Precision", "Domination","Sorcery","Resolve","Inspiration"]
+    const listMainRune = ["-", "Precision", "Domination","Sorcery","Resolve","Inspiration"]
 
-    const precisionMainRunes = ["Press The Attack", "Lethal Tempo", "Fleet Foot", "Conqueror"]
-    const precisionFirstRune = ["Overheal", "Triumph", "Presence of Mind"]
-    const precisionSecondRune = ["Alacrity", "Tenacity", "Bloodline"]
-    const precisionThirdRune = ["Coup de Grace", "Cut Down", "Last Stand"]
+    const precisionMainRunes = ["-","Press The Attack", "Lethal Tempo", "Fleet Foot", "Conqueror"]
+    const precisionFirstRune = ["-","Overheal", "Triumph", "Presence of Mind"]
+    const precisionSecondRune = ["-","Alacrity", "Tenacity", "Bloodline"]
+    const precisionThirdRune = ["-","Coup de Grace", "Cut Down", "Last Stand"]
 
-    const dominationMainRunes = ["Electrocute", "Predator", "Dark Harvest", "Hail of Blades"]
-    const dominationFirstRune = ["Cheap Shot", "Taste of Blood", "Sudden Impact"]
-    const dominationSecondRune = ["Zombie Ward", "Ghost Poro", "Eyeball Collection"]
-    const dominationThirdRune = ["Treasure Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"]
+    const dominationMainRunes = ["-","Electrocute", "Predator", "Dark Harvest", "Hail of Blades"]
+    const dominationFirstRune = ["-","Cheap Shot", "Taste of Blood", "Sudden Impact"]
+    const dominationSecondRune = ["-","Zombie Ward", "Ghost Poro", "Eyeball Collection"]
+    const dominationThirdRune = ["-","Treasure Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"]
 
-    const sorceryMainRunes = ["Summon Aery", "Arcane Comet", "Phase Rush"]
-    const sorceryFirstRune = ["Nullifying Orb", "Manaflow Band", "Nimbus Cloak"]
-    const sorcerySecondRune = ["Transcendence", "Celerity", "Absolute Focus"]
-    const sorceryThirdRune = ["Scorch", "Waterwalking", "Gathering Storm"]
+    const sorceryMainRunes = ["-","Summon Aery", "Arcane Comet", "Phase Rush"]
+    const sorceryFirstRune = ["-","Nullifying Orb", "Manaflow Band", "Nimbus Cloak"]
+    const sorcerySecondRune = ["-","Transcendence", "Celerity", "Absolute Focus"]
+    const sorceryThirdRune = ["-","Scorch", "Waterwalking", "Gathering Storm"]
 
-    const resolveMainRune = ["Grasp of the Undying", "Aftershock", "Guardian"]
-    const resolveFirstRune = ["Demolish", "Font of Life", "Shield Bash"]
-    const resolveSecondRune = ["Conditioning", "Second Wind", "Bone Plating"]
-    const resolveThirdRune = ["Overgrowth", "Revitalize", "Unflinching"]
+    const resolveMainRune = ["-","Grasp of the Undying", "Aftershock", "Guardian"]
+    const resolveFirstRune = ["-","Demolish", "Font of Life", "Shield Bash"]
+    const resolveSecondRune = ["-","Conditioning", "Second Wind", "Bone Plating"]
+    const resolveThirdRune = ["-","Overgrowth", "Revitalize", "Unflinching"]
 
-    const inspirationMainRunes = ["Unsealed Spellbook", "Glacial Augment", "First Strike"]
-    const inspirationFirstRune = ["Hextech Flashtrap", "Magical Footwear", "Perfect Timing"]
-    const inspirationSecondRune = ["Futures Market", "Minion Dematerializer", "Biscuit Delivery"]
-    const inspirationThirdRune = ["Cosmic Insight", "Approach Velocity", "Time Warp Tonic"]
+    const inspirationMainRunes = ["-","Unsealed Spellbook", "Glacial Augment", "First Strike"]
+    const inspirationFirstRune = ["-","Hextech Flashtrap", "Magical Footwear", "Perfect Timing"]
+    const inspirationSecondRune = ["-","Futures Market", "Minion Dematerializer", "Biscuit Delivery"]
+    const inspirationThirdRune = ["-","Cosmic Insight", "Approach Velocity", "Time Warp Tonic"]
     
     const [nameMainRune, setNameMainRune] = useState('')
     const [mainRune, setMainRune] = useState('')
@@ -472,11 +455,6 @@ export default function CharacterDetails({data, nameChamp}){
     const [secondRune, setSecondRune] = useState('')
     const [secondFirstRune, setSecondFirstRune] = useState('')
     const [secondSecondRune, setSecondSecondRune] = useState('')
-
-    const [listKeystone, setListKeystoneRune] = useState([])
-    const [listFirstRune, setListFirstRune] = useState([])
-    const [listSecondRune, setListSecondRune] = useState([])
-    const [listThirdRune, setListThirdRune] = useState([])
 
     const setUpMainRunes = (nameRune) => {
         let optionRune = []
@@ -598,6 +576,21 @@ export default function CharacterDetails({data, nameChamp}){
         return optionRune
     }
  
+    const listOffensiveShard = ['-', "Adaptative Force", "Attack Speed", "Ability Haste"]
+    const listMixedShard = ['-', "Adaptative Force", "Armor", "MagicResist"]
+    const listDefensiveShard = ['-', "Health", "Armor", "MagicResist"]
+
+    const [offensiveShard, setOffensiveShard] = useState('')
+    const [mixedShard, setMixedShard] = useState('')
+    const [defensiveShard, setDefensiveShard] = useState('')
+
+    const [stackConqueror, setStackConqueror] = useState(0)
+    const [stackLegendExceptBloodline, setStackLegendExceptBloodline] = useState(0)
+    const [stackLegendBloodline, setStackLegendBloodline] = useState(0)
+    const [stackBounty, setStackBounty] = useState(0)
+
+    const listLegend = ["Alacrity", "Tenacity", "Zombie Ward", "Ghost Poro", "Eyeball Collection"]
+    const listBounty = ["Treasure Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"]
 
     useEffect(() => {
         if (data != undefined) {
@@ -951,7 +944,7 @@ export default function CharacterDetails({data, nameChamp}){
                                                 </select>
                                             </td>
                                         </tr>
-                                        {nameMainRune != '' && (
+                                        {nameMainRune != '' &&  nameMainRune != "-" && (
                                             <>
                                                 <tr>
                                                     <td>Keystone</td>
@@ -1021,6 +1014,10 @@ export default function CharacterDetails({data, nameChamp}){
                                                     setSecondRune(e.target.value)
                                                 }}>
                                                     {listMainRune.map((value, index) => {
+                                                        if (value == '-')
+                                                            return(
+                                                                    <option value={value} key={index}>{value}</option>
+                                                                )
                                                         if (value != nameMainRune)
                                                             return(
                                                                 <option value={value} key={index}>{value}</option>
@@ -1029,20 +1026,62 @@ export default function CharacterDetails({data, nameChamp}){
                                                 </select>
                                             </td>
                                         </tr>
+                                        {secondRune != '' && secondRune != "-" && (
+                                            <>
+                                                <tr>
+                                                    <td>
+                                                        First Rune
+                                                    </td>
+                                                    <td>
+                                                        <select value={secondFirstRune} onChange={(e) => {
+                                                            setSecondFirstRune(e.target.value)
+                                                        }}>
+                                                            {setUpFirstRunes(secondRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                            {setUpSecondRunes(secondRune).map((value) => {
+                                                               return value
+                                                            })}
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Second Rune
+                                                    </td>
+                                                    <td>
+                                                        <select value={secondSecondRune} onChange={(e) => {
+                                                            setSecondSecondRune(e.target.value)
+                                                        }}>
+                                                            {setUpSecondRunes(secondRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                            {setUpThirdRunes(secondRune).map((value) => {
+                                                                return value
+                                                            })}
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </>
+                                        )} 
+                                    </tbody>
+                                    <thead>                                   
+                                        <tr>
+                                            <td colspan="2">
+                                                Shards
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
                                             <td>
-                                                First Rune
+                                                Offensive Shard
                                             </td>
                                             <td>
-                                                <select value={secondFirstRune} onChange={(e) => {
-                                                    setSecondFirstRune(e.target.value)
+                                                <select value={offensiveShard} onChange={(e) => {
+                                                    setOffensiveShard(e.target.value)
                                                 }}>
-                                                    {setUpFirstRunes(secondRune).map((value, index) => {
-                                                        return(
-                                                            <option value={value} key={index}>{value}</option>
-                                                        )
-                                                    })}
-                                                    {setUpSecondRunes(secondRune).map((value, index) => {
+                                                    {listOffensiveShard.map((value, index) => {
                                                         return(
                                                             <option value={value} key={index}>{value}</option>
                                                         )
@@ -1052,18 +1091,29 @@ export default function CharacterDetails({data, nameChamp}){
                                         </tr>
                                         <tr>
                                             <td>
-                                                Second Rune
+                                                Mixed Shard
                                             </td>
                                             <td>
-                                                <select value={secondSecondRune} onChange={(e) => {
-                                                    setSecondSecondRune(e.target.value)
+                                                <select value={mixedShard} onChange={(e) => {
+                                                    setMixedShard(e.target.value)
                                                 }}>
-                                                    {setUpSecondRunes(secondRune).map((value, index) => {
+                                                    {listMixedShard.map((value, index) => {
                                                         return(
                                                             <option value={value} key={index}>{value}</option>
                                                         )
                                                     })}
-                                                    {setUpThirdRunes(secondRune).map((value, index) => {
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Defensive Shard
+                                            </td>
+                                            <td>
+                                                <select value={defensiveShard} onChange={(e) => {
+                                                    setDefensiveShard(e.target.value)
+                                                }}>
+                                                    {listDefensiveShard.map((value, index) => {
                                                         return(
                                                             <option value={value} key={index}>{value}</option>
                                                         )
@@ -1072,6 +1122,100 @@ export default function CharacterDetails({data, nameChamp}){
                                             </td>
                                         </tr>
                                     </tbody>
+                                    {(nameMainRune == 'Precision' || nameMainRune == 'Domination' || secondRune == 'Precision' || secondRune == 'Domination') && (
+                                        <>
+                                            <thead>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        Stacks
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {mainRune == 'Conqueror' && (
+                                                <tr>
+                                                    <td>
+                                                        Conqueror
+                                                    </td>
+                                                    <td>
+                                                        <input
+                                                            type="number" 
+                                                            value={stackConqueror}
+                                                            max={12}
+                                                            min={0}
+                                                            onChange={(e) => {
+                                                                let value = e.target.value
+                                                                value = value != "" ? parseInt(value) : 0
+                                                                setStackConqueror(value)
+                                                            }}
+                                                        />
+                                                    </td>
+                                                </tr>
+                                            )}
+                                            {(listLegend.includes(mainSecondRune) || listLegend.includes(secondFirstRune) || listLegend.includes(secondSecondRune)) && (
+                                                <tr>
+                                                    <td>
+                                                        Legend 
+                                                    </td>
+                                                    <td>
+                                                        <input
+                                                            type="number" 
+                                                            value={stackLegendExceptBloodline}
+                                                            max={10}
+                                                            min={0}
+                                                            onChange={(e) => {
+                                                                let value = e.target.value
+                                                                value = value != "" ? parseInt(value) : 0
+                                                                setStackLegendExceptBloodline(value)
+                                                            }}
+                                                        />
+                                                    </td>
+                                                </tr>
+                                            )}
+                                            {(mainSecondRune == 'Bloodline'|| secondFirstRune == 'Bloodline' || secondSecondRune == 'Bloodline' ) && (
+                                                <tr>
+                                                    <td>
+                                                        Legend : Bloodline
+                                                    </td>
+                                                    <td>
+                                                        <input
+                                                            type="number" 
+                                                            value={stackLegendBloodline}
+                                                            max={15}
+                                                            min={0}
+                                                            onChange={(e) => {
+                                                                let value = e.target.value
+                                                                value = value != "" ? parseInt(value) : 0
+                                                                setStackLegendBloodline(value)
+                                                            }}
+                                                        />
+                                                    </td>
+                                                </tr>
+                                            )}
+                                            {(listBounty.includes(mainThirdRune)  || listBounty.includes(secondSecondRune)) && (
+                                                <tr>
+                                                    <td>
+                                                        Bounty
+                                                    </td>
+                                                    <td>
+                                                        <input
+                                                            type="number" 
+                                                            value={stackBounty}
+                                                            max={5}
+                                                            min={0}
+                                                            onChange={(e) => {
+                                                                let value = e.target.value
+                                                                value = value != "" ? parseInt(value) : 0
+                                                                setStackBounty(value)
+                                                            }}
+                                                        />
+                                                    </td>
+                                                </tr>
+                                            )}
+                                            </tbody>
+                                        </>
+                                    )}
+                                    
                                 </table>
                             </div>
                         </div>
