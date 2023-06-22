@@ -593,6 +593,139 @@ export default function CharacterDetails({data, nameChamp}){
     const listLegend = ["Alacrity", "Tenacity", "Zombie Ward", "Ghost Poro", "Eyeball Collection"]
     const listBounty = ["Treasure Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"]
 
+    const majStatsRune = () => {
+        let obj = {
+            "ForceBit" : 1,
+            "Adaptive" : 0,
+            "AH" : 0,
+            "AS" : 0,
+            "AR" : 0,
+            "HP" : 0,
+            "MP" : 0,
+            "MR" : 0,
+            "MS" : 0,
+            "Ultimate" : 0
+        }
+        if (itemStats["AD"] >= itemStats["AP"]){
+            obj["ForceBit"] = 1
+        }
+        else {
+            obj["ForceBit"] = 0
+        }
+        if (offensiveShard == 'Adaptive'){
+            obj["Adaptive"] += 9
+        }
+        if (mixedShard == 'Adaptive'){
+            obj["Adaptive"] += 9
+        }
+        if (mainSecondRune == 'Absolute Focus' || secondFirstRune == 'Absolute Focus' || secondSecondRune == 'Absolute Focus'){
+            obj["Adaptive"] += 3+27*((level - 1)/17)
+        }
+        if (mainSecondRune == 'Zombie Ward' || mainSecondRune == 'Ghost Poro' || mainSecondRune == 'Eyeball Collection' || secondFirstRune == 'Zombie Ward' || secondFirstRune == 'Ghost Poro' || secondFirstRune == 'Eyeball Collection' || secondSecondRune == 'Zombie Ward' || secondSecondRune == 'Ghost Poro' || secondSecondRune == 'Eyeball Collection' ){
+            obj["Adaptive"] += stackLegendExceptBloodline*2
+        }
+        if (mainThirdRune == 'Gathering Storm' || secondSecondRune == 'Gathering Storm'){
+            obj["Adaptive"] += ((Math.floor(gameStats["Gametime"]/10))*(Math.floor(gameStats["Gametime"]/10)*8)+8*(Math.floor(gameStats["Gametime"]/10)))/2
+        }
+        if (mainThirdRune == 'Waterwalking' || secondSecondRune == 'Waterwalking'){
+            obj["Adaptive"] += (5+25*((level - 1)/17)).toFixed(0)
+        }
+        if (mainRune == 'Conqueror'){
+            obj['Adaptive'] +=(2+2.5*((level - 1)/17)).toFixed(0) * stackConqueror
+        }
+        if (offensiveShard == 'Attack Speed'){
+            obj['AS'] += 0.08
+        }
+        if (mainSecondRune == 'Alacrity' || secondFirstRune == 'Alacrity' || secondSecondRune == 'Alacrity'){
+            obj['AS'] += 0.03+0.015*stackLegendExceptBloodline
+        }
+        if (mainRune == 'Lethal Tempo' && steroidStats["Runes"]){
+            if (data["Melee?"] == "TRUE")
+                obj['AS'] += 0.6 + 0.3 * Math.min(1, (level -1) / 15)
+            else 
+                obj['AS'] += 0.24 + 0.3 * ((level - 1)/17)
+        }
+        if (mainRune == 'Hail of Blades' && steroidStats["Runes"]){
+            obj['AS'] += 1.1
+        }
+        if (mainRune == 'Grasp of the Undying'){
+            if (data["Melee?"] == "TRUE")
+                obj["HP"] += 1 * 7 * stackDarkHarvest
+            else 
+                obj["HP"] += 0.6 * 7 * stackDarkHarvest
+        }
+        if (mainThirdRune == "Overgrowth" || secondSecondRune == "Overgrowth"){
+            obj["HP"] += 3 * Math.floor(gameStats["Minion"]/8)
+        }
+        if (defensiveShard == 'Health'){
+            obj["HP"] += 15 + 125 * ((level - 1)/17)
+        }
+        if (mainSecondRune == 'Bloodline' || secondFirstRune == 'Bloodline' || secondSecondRune == 'Bloodline'){
+            if (0.0035 * stackLegendBloodline == 0.0525){
+                obj["HP"] += 85
+            }
+        }
+        if (mainSecondRune == 'Biscuit Delivery' || secondFirstRune == 'Biscuit Delivery' || secondSecondRune == 'Biscuit Delivery'){
+            if (Math.floor(gameStats["Gametime"]/2)*40 >= 120)
+                obj["MP"] += 120
+            else 
+                obj["MP"] += Math.floor(gameStats["Gametime"]/2)*40
+        }
+        if (mainFirstRune == 'Manaflow Band' || secondFirstRune == 'Manaflow Band'){
+            obj["MP"] += 250
+        }
+        if (mixedShard == "Armor"){
+            obj["AR"] += 6
+        }
+        if (defensiveShard == "Armor"){
+            obj["AR"] += 6
+        }
+        if (mainSecondRune == 'Conditioning' || secondFirstRune == 'Conditioning' || secondSecondRune == 'Conditioning'){
+            if (gameStats["Gametime"] >= 12){
+                obj["AR"] += 8
+                obj["MR"] += 8
+            }
+        }
+        if (mainFirstRune == 'Shield Bash'){
+            if (totalStats["Shield"] > 0) {
+                obj["AR"] += 19*((level -1)/17)
+                obj["MR"] += 19*((level -1)/17)
+            }
+        }
+        if (mixedShard == "Magic Resist"){
+            obj["MR"] += 8
+        }
+        if (defensiveShard == "Magic Resist"){
+            obj["MR"] += 8
+        }
+        if (offensiveShard == 'Ability Haste'){
+            obj["AH"] += 0.08
+        }
+        if (mainSecondRune == 'Transcendence' || secondFirstRune == 'Transcendence' || secondSecondRune == 'Transcendence'){
+            if (level > 7){
+                obj["AH"] += 0.1
+            }
+            else if (level > 4){
+                obj["AH"] += 0.05
+            }
+        }
+        if (mainRune == 'Phase Rush' && steroidStats["Runes"]){
+            if (data["Melee?"] == "TRUE")
+                obj["MS"] += 0.3 + 0.3 * ((level -1)/17)
+            else 
+                obj["MS"] += 0.15 + 0.25 * ((level -1)/17)
+        }
+        if (mainSecondRune == 'Celerity' || secondFirstRune == 'Celerity' || secondSecondRune == 'Celerity'){
+            obj["MS"] += 0.01
+        }
+        if ((mainFirstRune == 'Nimbus Cloak' || secondFirstRune == 'Nimbus Cloak') && steroidStats['Runes']){
+            obj["MS"] += 0.2
+        }
+        if (mainThirdRune == 'Ultimate Hunter' || secondSecondRune == 'Ultimate Hunter'){
+            obj["Ultimate"] = 0.06 + 0.05 * stackBounty
+        }
+    }
+
     useEffect(() => {
         if (data != undefined) {
             if (data["Energy"] === "TRUE"){
@@ -631,41 +764,12 @@ export default function CharacterDetails({data, nameChamp}){
         }
     },[data, level, enemyName, enemyLevel])
 
-    const majStatsRune = () => {
-        let obj = {
-            "ForceBit" : 1,
-            "Adaptive" : 0,
-            "AH" : 0,
-            "AS" : 0,
-            "AR" : 0,
-            "HP" : 0,
-            "MP" : 0,
-            "MR" : 0,
-            "MS" : 0,
-            "Ultimate" : 0
+    useEffect(() => {
+        if (data != undefined){
+            majStatsRune()
         }
-        if (itemStats["AD"] >= itemStats["AP"]){
-            obj["ForceBit"] = 1
-        }
-        else {
-            obj["ForceBit"] = 0
-        }
-        if (offensiveShard == 'Adaptive'){
-            obj["Adaptive"] += 9
-        }
-        if (mixedShard == 'Adaptive'){
-            obj["Adaptive"] += 9
-        }
-        if (mainSecondRune == 'Absolute Focus' || secondFirstRune == 'Absolute Focus' || secondSecondRune == 'Absolute Focus'){
-            obj["Adaptive"] += 3+27*((level - 1)/17)
-        }
-        if (mainSecondRune == 'Zombie Ward' || mainSecondRune == 'Ghost Poro' || mainSecondRune == 'Eyeball Collection' || secondFirstRune == 'Zombie Ward' || secondFirstRune == 'Ghost Poro' || secondFirstRune == 'Eyeball Collection' || secondSecondRune == 'Zombie Ward' || secondSecondRune == 'Ghost Poro' || secondSecondRune == 'Eyeball Collection' ){
-            obj["Adaptive"] += stackLegendExceptBloodline*2
-        }
-        if (mainThirdRune == 'Gathering Storm' || secondSecondRune == 'Gathering Storm'){
-            
-        }
-    }
+    }, [nameMainRune, mainRune, mainFirstRune, mainSecondRune, mainThirdRune, secondRune, secondFirstRune, secondSecondRune, offensiveShard, mixedShard, defensiveShard, stackBounty, stackConqueror, stackDarkHarvest, stackLegendBloodline, stackLegendExceptBloodline])
+
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
             <div className='character-banniere'>
