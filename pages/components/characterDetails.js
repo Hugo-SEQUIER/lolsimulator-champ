@@ -132,7 +132,7 @@ export default function CharacterDetails({data, nameChamp}){
         "Infernal" : 0,
         "Mountain" : 0,
         "Ocean" : 0
-    })
+    }) // OK
 
     const [itemStats, setItemStats] = useState({
         "AD" : 0,
@@ -180,7 +180,7 @@ export default function CharacterDetails({data, nameChamp}){
         "MR" : 0,
         "MS" : 0,
         "Ultimate" : 0
-    })
+    }) // ok
 
     const [totalStats, setTotalStats] = useState({
         "AD" : 0,
@@ -1647,6 +1647,7 @@ export default function CharacterDetails({data, nameChamp}){
                                 </table>                                  
                             </div>
                         </div>
+                        
                     </>
                 )}
             </div>
