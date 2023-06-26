@@ -1377,6 +1377,276 @@ export default function CharacterDetails({data, nameChamp}){
                                 </table>
                             </div>
                         </div>
+                        {/** Game Stats */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Game Stats</h1>
+                            </div>
+                            <div className='stats-table-row'>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Gametime
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Gametime"]}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : value,
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Kills
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Kills"]}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : value,
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Minion
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Minion"]}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : value,
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Chemtech
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Chemtech"]}
+                                                    min={0}
+                                                    max={4}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : value,
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Cloud
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Cloud"]}
+                                                    min={0}
+                                                    max={4}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : value,
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hextech
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Hextech"]}
+                                                    min={0}
+                                                    max={4}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : value,
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Infernal
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Infernal"]}
+                                                    min={0}
+                                                    max={4}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : value,
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Mountain
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Mountain"]}
+                                                    min={0}
+                                                    max={4}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : value,
+                                                            "Ocean" : gameStats["Ocean"]
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Ocean
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={gameStats["Ocean"]}
+                                                    min={0}
+                                                    max={4}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Gametime" : gameStats["Gametime"],
+                                                            "Chemtech" : gameStats["Chemtech"],
+                                                            "Kills" : gameStats["Kills"],
+                                                            "Minion" : gameStats["Minion"],
+                                                            "Cloud" : gameStats["Cloud"],
+                                                            "Hextech" : gameStats["Hextech"],
+                                                            "Infernal" : gameStats["Infernal"],
+                                                            "Mountain" : gameStats["Mountain"],
+                                                            "Ocean" : value
+                                                        }
+                                                        setGameStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>                                  
+                            </div>
+                        </div>
                     </>
                 )}
             </div>
