@@ -9,6 +9,13 @@ export default function CharacterDetails({data, nameChamp}){
         "-","Aatrox","Ahri","Akali","Akshan","Alistar","Amumu","Anivia","Annie","Aphelios","Ashe","AurelionSol","Azir","Bard","BelVeth","Blitzcrank","Brand","Braum","Caitlyn","Camille","Cassiopeia","ChoGath","Corki","Darius","Diana","DrMundo","Draven","Ekko","Elise","Evelynn","Ezreal","Fiddlesticks","Fiora","Fizz","Galio","Gangplank","Garen","Gnar","Gragas","Graves","Gwen","Hecarim","Heimerdinger","Illaoi","Irelia","Ivern","Janna","JarvanIV","Jax","Jayce","Jhin","Jinx","KSante","KaiSa","Kalista","Karma","Karthus","Kassadin","Katarina","Kayle","Kayn","Kennen","KhaZix","Kindred","Kled","KogMaw","LeBlanc","LeeSin","Leona","Lillia","Lissandra","Lucian","Lulu","Lux","MasterYi","Malphite","Malzahar","Maokai","Milio","MissFortune","Mordekaiser","Morgana","Nami","Nasus","Nautilus","Neeko","Nidalee","Nilah","Nocturne","Nunu & Willump","Olaf","Orianna","Ornn","Pantheon","Poppy","Pyke","Qiyana","Quinn","Rakan","Rammus","RekSai","Rell","Renata","Renekton","Rengar","Riven","Rumble","Ryze","Samira","Sejuani","Senna","Seraphine","Sett","Shaco","Shen","Shyvana","Singed","Sion","Sivir","Skarner","Sona","Soraka","Swain","Sylas","Syndra","TahmKench","Taliyah","Talon","Taric","Teemo","Thresh","Tristana","Trundle","Tryndamere","TwistedFate","Twitch","Udyr","Urgot","Varus","Vayne","Veigar","VelKoz","Vex","Vi","Viego","Viktor","Vladimir","Volibear","Warwick","Wukong","Xayah","Xerath","XinZhao","Yasuo","Yone","Yorick","Yuumi","Zac","Zed","Zeri","Ziggs","Zilean","Zoe","Zyra"
     ]
 
+    const listItems = [
+        "Abyssal Mask","Long Sword","Aegis of the Legion","Lord Dominik's Regards","Aether Wisp","Lost Chapter","Amplifying Tome","Anathema's Chains","Archangel's Staff", "Manamune","Ardent Censer","Maw of Malmortius","Axiom Arc","Mejai's Soulstealer","B. F. Sword","Mercurial Scimitar","Bami's Cinder","Mercury's Treads","Bandleglass Mirror", "Mikael's Blessing","Banshee's Veil","Mobility Boots","Berserker's Greaves" ,"Black Cleaver","Morellonomicon","Black Mist Scythe","Mortal Reminder","Blade of the Ruined King","Muramana","Blasting Wand","Nashor's Tooth","Blighting Jewel","Bloodthirster","Needlessly Large Rod","Boots of Swiftness", "Negatron Cloak","Boots","Bramble Vest","Noonquiver","Bulwark of the Mountain","Null-Magic Mantle","Catalyst of Aeons","Oblivion Orb","Caulfield's Warhammer","Pauldrons of Whiterock","Chain Vest", "Phage","Chalice of Blessing","Phantom Dancer","Chempunk Chainsword","Pickaxe","Chemtech Putrifier", "Plated Steelcaps","Cloak of Agility", "Prowler's Claw","Cloth Armor","Quicksilver Sash","Cosmic Drive", "Rabadon's Deathcap","Crystalline Bracer","Rageknife","Cull", "Randuin's Omen","Dagger","Rapid Firecannon","Dark Seal","Ravenous Hydra","Dead Man's Plate","Recurve Bow","Death's Dance","Redemption","Demonic Embrace","Rejuvenation Bead","Relic Shield","Doran's Blade" ,"Doran's Ring","Doran's Shield","Ruby Crystal","Runaan's Hurricane","Runesteel Spaulders","Rylai's Crystal Scepter","Edge of Night","Sapphire Crystal","Elixir of Iron", "Seeker's Armguard","Elixir of Sorcery","Seraph's Embrace","Elixir of Wrath","Serpent's Fang","Essence Reaver", "Serrated Dirk","Serylda's Grudge","Shadowflame","Executioner's Calling", "Shard of True Ice","Faerie Charm", "Sheen","Fiendish Codex", "Fimbulwinter", "Silvermere Dawn","Forbidden Idol", "Sorcerer's Shoes","Force of Nature","Spear of Shojin","Frostfang","Spectral Sickle","Frozen Heart", "Spectre's Cowl","Spellthief's Edge","Gargoyle Stoneplate","Spirit Visage","Giant's Belt","Staff of Flowing Water","Glacial Buckler","Statikk Shiv","Steel Shoulderguards","Guardian Angel", "Sterak's Gage","Stormrazor","Harrowing Cresent","Hearthbound Axe","Sunfire Aegis","Targon's Buckler","Hexdrinker" ,"Tear of the Goddess","Hextech Alternator", "The Collector","Thornmail","Horizon Focus", "Tiamat","Hullbreaker","Titanic Hydra","Immortal Shieldbow", "Turbo Chemtank","Imperial Mandate", "Umbral Glaive","Vampiric Scepter","Ionian Boots of Lucidity", "Verdant Barrier","Ironspike Whip","Vigilant Wardstone","Void Staff","Kindlegem","Warden's Mail","Kircheis Shard", "Warmog's Armor","Knight's Vow","Watchful Wardstone","Kraken Slayer","Winged Moonplate","Last Whisper","Winter's Approach","Leeching Leer","Wit's End","Lich Bane","Zeal","Lifewell Pendant", "Zeke's Convergence","Zhonya's Hourglass"
+    ]
+
+    const listItemsMythics = [
+        "Crown of the Shattered Queen","Divine Sunderer","Duskblade of Draktharr", "Echoes of Helia", "Eclipse", "Evenshroud","Everfrost","Galeforce","Goredrinker","Guinsoo's Rageblade","Heartsteel","Hextech Rocketbelt","Iceborn Gauntlet", "Infinity Edge","Jak'Sho The Protean","Liandry's Anguish","Locket of the Iron Solari", "Luden's Tempest","Moonstone Renewer","Navori Quickblade","Night Harvester","Radiant Virtue","Riftmaker","Rod Of Ages","Shurelya's Battlesong","Stridebreaker","Trinity Force","Youmuu's Ghostblade",
+    ]
     let options = [];
     for (let i = 1; i <= 18; i++) {
         options.push(<option value={i} key={i}>{i}</option>);
@@ -726,6 +733,9 @@ export default function CharacterDetails({data, nameChamp}){
         }
     }
 
+    const setUpMythicsItems = () => {
+
+    }
     useEffect(() => {
         if (data != undefined) {
             if (data["Energy"] === "TRUE"){
@@ -769,6 +779,7 @@ export default function CharacterDetails({data, nameChamp}){
             majStatsRune()
         }
     }, [nameMainRune, mainRune, mainFirstRune, mainSecondRune, mainThirdRune, secondRune, secondFirstRune, secondSecondRune, offensiveShard, mixedShard, defensiveShard, stackBounty, stackConqueror, stackDarkHarvest, stackLegendBloodline, stackLegendExceptBloodline])
+
 
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
@@ -1187,6 +1198,15 @@ export default function CharacterDetails({data, nameChamp}){
                                     )}
                                 </table>
                             </div>
+                        </div>
+                        {/** Items Stats */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Items</h1>
+                            </div>             
+                            <div className='stats-table-row'>
+
+                            </div>                  
                         </div>
                         {/** Bonus / Steroid Stats */}
                         <div className="stats-table">
