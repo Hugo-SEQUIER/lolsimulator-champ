@@ -91,7 +91,7 @@ export default function CharacterDetails({data, nameChamp}){
         "Mountain" : false,
         "Ocean" : false,
         "Recently Hit" : false
-    })
+    }) // OK
 
     const [apheliosStats, setApheliosStats] = useState({
         "Crescend Stacks" : 0,
@@ -222,7 +222,7 @@ export default function CharacterDetails({data, nameChamp}){
         "R" : false,
         "Runes" : false,
         "W" : false
-    })
+    }) // OK
 
     function getNumericFromString(stringDamage){
 
@@ -864,195 +864,6 @@ export default function CharacterDetails({data, nameChamp}){
                             }}
                             passiveSkillPoint={level}
                         />  */}
-                        {/** ENEMY STATS */}
-                        <div className="stats-table">
-                            <div>
-                                <h1>Enemy Statistics</h1>
-                            </div>
-                            <div className="stats-table-row">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Champion
-                                            </td>
-                                            <td>
-                                        
-                                                <select value={enemyName} onChange={handleEnemyChange}>
-                                                    {enemyNameOptions}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Level
-                                            </td>
-                                            <td>
-                                                <select value={enemyLevel} onChange={handleChangeEnemyLevel}>
-                                                    {options}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Hp
-                                            </td>
-                                            <td>
-                                                {enemyStats["Hp"] + enemyStats["Hp Bonus"]}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Armor
-                                            </td>
-                                            <td>
-                                                {enemyStats["Armor"] + enemyStats["Armor Bonus"]}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Magic Resist
-                                            </td>
-                                            <td>
-                                                {enemyStats["Magic Resist"] + enemyStats["Magic Resist Bonus"]}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Current Hp
-                                            </td>
-                                            <td>
-                                                {enemyStats["Current Hp"]}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Current Hp %
-                                            </td>
-                                            <td>
-                                                {enemyStats["Current Hp %"].toFixed(3)}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Hp Bonus
-                                            </td>
-                                            <td>
-                                                <input
-                                                    type="number" 
-                                                    value={enemyStats["Hp Bonus"]}
-                                                    onChange={(e) => {
-                                                        let value = e.target.value
-                                                        value = value != "" ? parseInt(value) : 0
-                                                        let obj = {
-                                                            "Armor" : enemyStats["Armor"],
-                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
-                                                            "Hp Bonus" : value,
-                                                            "Current Hp %" : (enemyStats["Hp"] + value - enemyStats["Missing HP"]) / (enemyStats["Hp"] + value) * 100,
-                                                            "Current Hp" : enemyStats["Current Hp"],
-                                                            "Level" : enemyStats["Level"],
-                                                            "Hp" : enemyStats["Hp"],
-                                                            "Missing HP" : enemyStats["Missing HP"],
-                                                            "Magic Resist" : enemyStats["Magic Resist"],
-                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
-                                                            "Name" : enemyStats["Name"] 
-                                                        }
-                                                        setEnemyStats(obj)
-                                                    }}
-                                                />
-                                            </td>
-                                        </tr>                                      
-                                        <tr>
-                                            <td>
-                                                Armor Bonus
-                                            </td>
-                                            <td>
-                                                <input
-                                                    type="number" 
-                                                    value={enemyStats["Armor Bonus"]}
-                                                    onChange={(e) => {
-                                                        let value = e.target.value
-                                                        value = value != "" ? parseInt(value) : 0
-                                                        let obj = {
-                                                            "Armor" : enemyStats["Armor"],
-                                                            "Armor Bonus" : value,
-                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
-                                                            "Current Hp %" : enemyStats["Current Hp %"],
-                                                            "Current Hp" : enemyStats["Current Hp"],
-                                                            "Level" : enemyStats["Level"],
-                                                            "Hp" : enemyStats["Hp"],
-                                                            "Missing HP" : enemyStats["Missing HP"],
-                                                            "Magic Resist" : enemyStats["Magic Resist"],
-                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
-                                                            "Name" : enemyStats["Name"] 
-                                                        }
-                                                        setEnemyStats(obj)
-                                                    }}
-                                                />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Magic Resist Bonus
-                                            </td>
-                                            <td>
-                                                <input
-                                                    type="number" 
-                                                    value={enemyStats["Magic Resist Bonus"]}
-                                                    onChange={(e) => {
-                                                        let value = e.target.value
-                                                        value = value != "" ? parseInt(value) : 0
-                                                        let obj = {
-                                                            "Armor" : enemyStats["Armor"],
-                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
-                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
-                                                            "Current Hp %" : enemyStats["Current Hp %"],
-                                                            "Current Hp" : enemyStats["Current Hp"],
-                                                            "Level" : enemyStats["Level"],
-                                                            "Hp" : enemyStats["Hp"],
-                                                            "Missing HP" : enemyStats["Missing HP"],
-                                                            "Magic Resist" : enemyStats["Magic Resist"],
-                                                            "Magic Resist Bonus" : value,
-                                                            "Name" : enemyStats["Name"] 
-                                                        }
-                                                        setEnemyStats(obj)
-                                                    }}
-                                                />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Missing Hp
-                                            </td>
-                                            <td>
-                                                <input
-                                                    type="number" 
-                                                    value={enemyStats["Missing HP"]}
-                                                    onChange={(e) => {
-                                                        let value = e.target.value
-                                                        value = value != "" ? parseInt(value) : 0
-                                                        let obj = {
-                                                            "Armor" : enemyStats["Armor"],
-                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
-                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
-                                                            "Current Hp %" : (enemyStats["Hp"] + enemyStats["Hp Bonus"] - value) / (enemyStats["Hp"] + enemyStats["Hp Bonus"]) * 100 ,
-                                                            "Current Hp" : enemyStats["Hp"] + enemyStats["Hp Bonus"] - value,
-                                                            "Level" : enemyStats["Level"],
-                                                            "Hp" : enemyStats["Hp"],
-                                                            "Missing HP" : value,
-                                                            "Magic Resist" : enemyStats["Magic Resist"],
-                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
-                                                            "Name" : enemyStats["Name"] 
-                                                        }
-                                                        setEnemyStats(obj)
-                                                    }}
-                                                />
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                         {/** RUNES STATS */}
                         <div className="stats-table">
                             <div>
@@ -1377,6 +1188,700 @@ export default function CharacterDetails({data, nameChamp}){
                                 </table>
                             </div>
                         </div>
+                        {/** Bonus / Steroid Stats */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Bonus Stats</h1>
+                            </div>
+                            <div className='stats-table-row'>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2">
+                                                Soul
+                                            </td>
+                                        </tr>          
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Chemtech
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    id="chemSoul"
+                                                    name="chemSoul"
+                                                    checked={bonusStats["Chem"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "Ardent" : bonusStats["Ardent"],
+                                                            "Chem" : value,
+                                                            "Cloud" : false,
+                                                            "Elder" : bonusStats["Elder"],
+                                                            "Hextech" : false,
+                                                            "Infernal" : false,
+                                                            "Mountain" : false,
+                                                            "Ocean" : false,
+                                                            "Recently Hit" : bonusStats["Recently Hit"]
+                                                        }
+                                                        setBonusStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Cloud
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    id="cloudSoul"
+                                                    name="cloudSoul"
+                                                    checked={bonusStats["Cloud"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "Ardent" : bonusStats["Ardent"],
+                                                            "Chem" :false,
+                                                            "Cloud" : value,
+                                                            "Elder" : bonusStats["Elder"],
+                                                            "Hextech" :false,
+                                                            "Infernal" : false,
+                                                            "Mountain" : false,
+                                                            "Ocean" : false,
+                                                            "Recently Hit" : bonusStats["Recently Hit"]
+                                                        }
+                                                        setBonusStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hextech
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    id="hexSoul"
+                                                    name="hexSoul"
+                                                    checked={bonusStats["Hextech"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "Ardent" : bonusStats["Ardent"],
+                                                            "Chem" :false,
+                                                            "Cloud" : false,
+                                                            "Elder" : bonusStats["Elder"],
+                                                            "Hextech" :value,
+                                                            "Infernal" : false,
+                                                            "Mountain" : false,
+                                                            "Ocean" : false,
+                                                            "Recently Hit" : bonusStats["Recently Hit"]
+                                                        }
+                                                        setBonusStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Infernal
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    id="infernalSoul"
+                                                    name="infernalSoul"
+                                                    checked={bonusStats["Infernal"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "Ardent" : bonusStats["Ardent"],
+                                                            "Chem" :false,
+                                                            "Cloud" : false,
+                                                            "Elder" : bonusStats["Elder"],
+                                                            "Hextech" :false,
+                                                            "Infernal" : value,
+                                                            "Mountain" : false,
+                                                            "Ocean" : false,
+                                                            "Recently Hit" : bonusStats["Recently Hit"]
+                                                        }
+                                                        setBonusStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Mountain
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    id="mountainSoul"
+                                                    name="mountainSoul"
+                                                    checked={bonusStats["Mountain"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "Ardent" : bonusStats["Ardent"],
+                                                            "Chem" :false,
+                                                            "Cloud" : false,
+                                                            "Elder" : bonusStats["Elder"],
+                                                            "Hextech" :false,
+                                                            "Infernal" : false,
+                                                            "Mountain" : value,
+                                                            "Ocean" : false,
+                                                            "Recently Hit" : bonusStats["Recently Hit"]
+                                                        }
+                                                        setBonusStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Ocean
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="checkbox"
+                                                    id="oceanSoul"
+                                                    name="oceanSoul"
+                                                    checked={bonusStats["Ocean"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "Ardent" : bonusStats["Ardent"],
+                                                            "Chem" :false,
+                                                            "Cloud" : false,
+                                                            "Elder" : bonusStats["Elder"],
+                                                            "Hextech" :false,
+                                                            "Infernal" : false,
+                                                            "Mountain" : false,
+                                                            "Ocean" : value,
+                                                            "Recently Hit" : bonusStats["Recently Hit"]
+                                                        }
+                                                        setBonusStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2">
+                                                Other
+                                            </td>
+                                        </tr>  
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Ardent
+                                            </td>
+                                            <td>
+                                                <input
+                                                        type="checkbox"
+                                                        id="ardent"
+                                                        name="ardent"
+                                                        checked={bonusStats["Ardent"]}
+                                                        onChange={(e) => {
+                                                            let value = e.target.checked
+                                                            let obj = {
+                                                                "Ardent" : value,
+                                                                "Chem" : bonusStats["Chem"],
+                                                                "Cloud" : bonusStats["Cloud"],
+                                                                "Elder" : bonusStats["Elder"],
+                                                                "Hextech" : bonusStats["Hextech"],
+                                                                "Infernal" : bonusStats["Infernal"],
+                                                                "Mountain" : bonusStats["Mountain"],
+                                                                "Ocean" : bonusStats["Ocean"],
+                                                                "Recently Hit" : bonusStats["Recently Hit"]
+                                                            }
+                                                            setBonusStats(obj)
+                                                        }}
+                                                    />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Elder
+                                            </td>
+                                            <td>
+                                                <input
+                                                        type="checkbox"
+                                                        id="elder"
+                                                        name="elder"
+                                                        checked={bonusStats["Elder"]}
+                                                        onChange={(e) => {
+                                                            let value = e.target.checked
+                                                            let obj = {
+                                                                "Ardent" : bonusStats["Ardent"],
+                                                                "Chem" : bonusStats["Chem"],
+                                                                "Cloud" : bonusStats["Cloud"],
+                                                                "Elder" : value,
+                                                                "Hextech" : bonusStats["Hextech"],
+                                                                "Infernal" : bonusStats["Infernal"],
+                                                                "Mountain" : bonusStats["Mountain"],
+                                                                "Ocean" : bonusStats["Ocean"],
+                                                                "Recently Hit" : bonusStats["Recently Hit"]
+                                                            }
+                                                            setBonusStats(obj)
+                                                        }}
+                                                    />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Recently Hit
+                                            </td>
+                                            <td>
+                                                <input
+                                                        type="checkbox"
+                                                        id="recent"
+                                                        name="recent"
+                                                        checked={bonusStats["Recently Hit"]}
+                                                        onChange={(e) => {
+                                                            let value = e.target.checked
+                                                            let obj = {
+                                                                "Ardent" : bonusStats["Ardent"],
+                                                                "Chem" : bonusStats["Chem"],
+                                                                "Cloud" : bonusStats["Cloud"],
+                                                                "Elder" : bonusStats["Elder"],
+                                                                "Hextech" : bonusStats["Hextech"],
+                                                                "Infernal" : bonusStats["Infernal"],
+                                                                "Mountain" : bonusStats["Mountain"],
+                                                                "Ocean" : bonusStats["Ocean"],
+                                                                "Recently Hit" : value
+                                                            }
+                                                            setBonusStats(obj)
+                                                        }}
+                                                    />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <thead>
+                                        <tr>
+                                            <td colspan="2">
+                                                Active / Passive Bonus
+                                            </td>
+                                        </tr>          
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Passive
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidPassive"
+                                                    name="steroidPassive"
+                                                    checked={steroidStats["P"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : value,
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Q
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidQ"
+                                                    name="steroidQ"
+                                                    checked={steroidStats["Q"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : value,
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                W
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidW"
+                                                    name="steroidW"
+                                                    checked={steroidStats["W"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : value
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                E
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidE"
+                                                    name="steroidE"
+                                                    checked={steroidStats["E"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : value,
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                R
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidR"
+                                                    name="steroidR"
+                                                    checked={steroidStats["R"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : value,
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Form
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidForm"
+                                                    name="steroidForm"
+                                                    checked={steroidStats["Form"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : value,
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Items
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidItems"
+                                                    name="steroidItems"
+                                                    checked={steroidStats["Items"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : value,
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : steroidStats["Runes"],
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Runes
+                                            </td>
+                                            <td>
+                                            <input
+                                                    type="checkbox"
+                                                    id="steroidRunes"
+                                                    name="steroidRunes"
+                                                    checked={steroidStats["Runes"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.checked
+                                                        let obj = {
+                                                            "E" : steroidStats["E"],
+                                                            "Form" : steroidStats["Form"],
+                                                            "Items" : steroidStats["Items"],
+                                                            "P" : steroidStats["P"],
+                                                            "Q" : steroidStats["Q"],
+                                                            "R" : steroidStats["R"],
+                                                            "Runes" : value,
+                                                            "W" : steroidStats["W"]
+                                                        }
+                                                        setSteroidStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        {/** ENEMY STATS */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Enemy Statistics</h1>
+                            </div>
+                            <div className="stats-table-row">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Champion
+                                            </td>
+                                            <td>
+                                        
+                                                <select value={enemyName} onChange={handleEnemyChange}>
+                                                    {enemyNameOptions}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Level
+                                            </td>
+                                            <td>
+                                                <select value={enemyLevel} onChange={handleChangeEnemyLevel}>
+                                                    {options}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hp
+                                            </td>
+                                            <td>
+                                                {enemyStats["Hp"] + enemyStats["Hp Bonus"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Armor
+                                            </td>
+                                            <td>
+                                                {enemyStats["Armor"] + enemyStats["Armor Bonus"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Magic Resist
+                                            </td>
+                                            <td>
+                                                {enemyStats["Magic Resist"] + enemyStats["Magic Resist Bonus"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Current Hp
+                                            </td>
+                                            <td>
+                                                {enemyStats["Current Hp"]}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Current Hp %
+                                            </td>
+                                            <td>
+                                                {enemyStats["Current Hp %"].toFixed(3)}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Hp Bonus
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Hp Bonus"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
+                                                            "Hp Bonus" : value,
+                                                            "Current Hp %" : (enemyStats["Hp"] + value - enemyStats["Missing HP"]) / (enemyStats["Hp"] + value) * 100,
+                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : enemyStats["Missing HP"],
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>                                      
+                                        <tr>
+                                            <td>
+                                                Armor Bonus
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Armor Bonus"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : value,
+                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
+                                                            "Current Hp %" : enemyStats["Current Hp %"],
+                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : enemyStats["Missing HP"],
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Magic Resist Bonus
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Magic Resist Bonus"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
+                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
+                                                            "Current Hp %" : enemyStats["Current Hp %"],
+                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : enemyStats["Missing HP"],
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : value,
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Missing Hp
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={enemyStats["Missing HP"]}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        let obj = {
+                                                            "Armor" : enemyStats["Armor"],
+                                                            "Armor Bonus" : enemyStats["Armor Bonus"],
+                                                            "Hp Bonus" : enemyStats["Hp Bonus"],
+                                                            "Current Hp %" : (enemyStats["Hp"] + enemyStats["Hp Bonus"] - value) / (enemyStats["Hp"] + enemyStats["Hp Bonus"]) * 100 ,
+                                                            "Current Hp" : enemyStats["Hp"] + enemyStats["Hp Bonus"] - value,
+                                                            "Level" : enemyStats["Level"],
+                                                            "Hp" : enemyStats["Hp"],
+                                                            "Missing HP" : value,
+                                                            "Magic Resist" : enemyStats["Magic Resist"],
+                                                            "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
+                                                            "Name" : enemyStats["Name"] 
+                                                        }
+                                                        setEnemyStats(obj)
+                                                    }}
+                                                />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                         {/** Game Stats */}
                         <div className="stats-table">
                             <div>
@@ -1647,7 +2152,6 @@ export default function CharacterDetails({data, nameChamp}){
                                 </table>                                  
                             </div>
                         </div>
-                        
                     </>
                 )}
             </div>
