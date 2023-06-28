@@ -28,7 +28,7 @@
   "E-CD": "12.5-0.5*P_E",
   "R-CD": "120-10*P_R",
   "P-CD": "20 - IF(Self_Level > 10, 10, Self_Level - 1)",
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Yuumi_0",
     "passive": "YuumiP",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U153),\"\"HMOD\"\"),NOT(P_Q>0)),0,U153)+IF(OR(REGEXMATCH(FORMULATEXT(V153),\"\"HMOD\"\"),NOT(P_W>0)),0,V153)+IF(OR(REGEXMATCH(FORMULATEXT(W153),\"\"HMOD\"\"),NOT(P_E>0)),0,W153)+IF(OR(REGEXMATCH(FORMULATEXT(X153),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"153)+IF(REGEXMATCH(FORMULATEXT(Y153),\"\"HMOD\"\"),0,Y153)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),25)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

@@ -28,7 +28,7 @@
   "E-CD": "16.5 - 0.5 * P_E",
   "R-CD": "130 - 10 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Tristana_0",
     "passive": "Tristana_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U128),\"\"HMOD\"\"),NOT(P_Q>0)),0,U128)+IF(OR(REGEXMATCH(FORMULATEXT(V128),\"\"HMOD\"\"),NOT(P_W>0)),0,V128)+IF(OR(REGEXMATCH(FORMULATEXT(W128),\"\"HMOD\"\"),NOT(P_E>0)),0,W128)+IF(OR(REGEXMATCH(FORMULATEXT(X128),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"128)+IF(REGEXMATCH(FORMULATEXT(Y128),\"\"HMOD\"\"),0,Y128)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

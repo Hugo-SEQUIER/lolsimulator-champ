@@ -28,7 +28,7 @@
   "E-CD": "25.5-1.5*P_E",
   "R-CD": "140 - 20 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Sivir_0",
     "passive": "Sivir_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U115),\"\"HMOD\"\"),NOT(P_Q>0)),0,U115)+IF(OR(REGEXMATCH(FORMULATEXT(V115),\"\"HMOD\"\"),NOT(P_W>0)),0,V115)+IF(OR(REGEXMATCH(FORMULATEXT(W115),\"\"HMOD\"\"),NOT(P_E>0)),0,W115)+IF(OR(REGEXMATCH(FORMULATEXT(X115),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"115)+IF(REGEXMATCH(FORMULATEXT(Y115),\"\"HMOD\"\"),0,Y115)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

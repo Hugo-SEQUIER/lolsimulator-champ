@@ -28,7 +28,7 @@
   "E-CD": 12,
   "R-CD": "2.5-0.5*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "KogMaw_0",
     "passive": "KogMaw_IcathianSurprise",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U65),\"\"HMOD\"\"),NOT(P_Q>0)),0,U65)+IF(OR(REGEXMATCH(FORMULATEXT(V65),\"\"HMOD\"\"),NOT(P_W>0)),0,V65)+IF(OR(REGEXMATCH(FORMULATEXT(W65),\"\"HMOD\"\"),NOT(P_E>0)),0,W65)+IF(OR(REGEXMATCH(FORMULATEXT(X65),\"\"HMOD\"\"),NOT(P_R>0)),0,X65)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y65),\"\"HMOD\"\"),0,Y65)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),140)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

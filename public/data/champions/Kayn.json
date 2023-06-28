@@ -28,7 +28,7 @@
   "E-CD": "IF(Steroid_Form,10,23-2*P_E)",
   "R-CD": "140 - 20 * P_R",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Kayn_0",
     "passive": "Kayn_Passive_Primary",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U60),\"\"HMOD\"\"),NOT(P_Q>0)),0,U60)+IF(OR(REGEXMATCH(FORMULATEXT(V60),\"\"HMOD\"\"),NOT(P_W>0)),0,V60)+IF(OR(REGEXMATCH(FORMULATEXT(W60),\"\"HMOD\"\"),NOT(P_E>0)),0,W60)+IF(OR(REGEXMATCH(FORMULATEXT(X60),\"\"HMOD\"\"),NOT(P_R>0)),0,X60)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y60),\"\"HMOD\"\"),0,Y60)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

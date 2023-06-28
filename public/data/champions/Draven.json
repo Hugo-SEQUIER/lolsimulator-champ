@@ -28,7 +28,7 @@
   "E-CD": "19-P_E",
   "R-CD": "140 - 20 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Draven_0",
     "passive": "Draven_passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U27),\"\"HMOD\"\"),NOT(P_Q>0)),0,U27)+IF(OR(REGEXMATCH(FORMULATEXT(V27),\"\"HMOD\"\"),NOT(P_W>0)),0,V27)+IF(OR(REGEXMATCH(FORMULATEXT(W27),\"\"HMOD\"\"),NOT(P_E>0)),0,W27)+IF(OR(REGEXMATCH(FORMULATEXT(X27),\"\"HMOD\"\"),NOT(P_R>0)),0,X27)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y27),\"\"HMOD\"\"),0,Y27)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

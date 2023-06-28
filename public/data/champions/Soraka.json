@@ -28,7 +28,7 @@
   "E-CD": "26-2*P_E",
   "R-CD": "175-15*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Soraka_0",
     "passive": "Soraka_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U118),\"\"HMOD\"\"),NOT(P_Q>0)),0,U118)+IF(OR(REGEXMATCH(FORMULATEXT(V118),\"\"HMOD\"\"),NOT(P_W>0)),0,V118)+IF(OR(REGEXMATCH(FORMULATEXT(W118),\"\"HMOD\"\"),NOT(P_E>0)),0,W118)+IF(OR(REGEXMATCH(FORMULATEXT(X118),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"118)+IF(REGEXMATCH(FORMULATEXT(Y118),\"\"HMOD\"\"),0,Y118)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

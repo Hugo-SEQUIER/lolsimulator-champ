@@ -28,7 +28,7 @@
   "E-CD": "12.5-0.5*P_E",
   "R-CD": "135-15*P_R",
   "P-CD": 6,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "JarvanIV_0",
     "passive": "JarvanIV_MartialCadence",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U48),\"\"HMOD\"\"),NOT(P_Q>0)),0,U48)+IF(OR(REGEXMATCH(FORMULATEXT(V48),\"\"HMOD\"\"),NOT(P_W>0)),0,V48)+IF(OR(REGEXMATCH(FORMULATEXT(W48),\"\"HMOD\"\"),NOT(P_E>0)),0,W48)+IF(OR(REGEXMATCH(FORMULATEXT(X48),\"\"HMOD\"\"),NOT(P_R>0)),0,X48)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y48),\"\"HMOD\"\"),0,Y48)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),20)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

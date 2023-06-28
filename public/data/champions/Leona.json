@@ -28,7 +28,7 @@
   "E-CD": "13.5-1.5*P_E",
   "R-CD": "105-15*P_R",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Leona_0",
     "passive": "LeonaSunlight",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U68),\"\"HMOD\"\"),NOT(P_Q>0)),0,U68)+IF(OR(REGEXMATCH(FORMULATEXT(V68),\"\"HMOD\"\"),NOT(P_W>0)),0,V68)+IF(OR(REGEXMATCH(FORMULATEXT(W68),\"\"HMOD\"\"),NOT(P_E>0)),0,W68)+IF(OR(REGEXMATCH(FORMULATEXT(X68),\"\"HMOD\"\"),NOT(P_R>0)),0,X68)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y68),\"\"HMOD\"\"),0,Y68)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),32)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

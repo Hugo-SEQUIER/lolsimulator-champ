@@ -19,16 +19,16 @@
   "MS": 340,
   "Range": 550,
   "Q-DMG": "(50+30*P_Q+0.55*Self_AP)*MOD_Magic",
-  "W-DMG": "(30+45*P_W+0.6*Self_AP)*MOD_Magic*IF(Steroid_W,1.25,1)",
+  "W-DMG": "(30+45*P_W+0.6*Self_AP)*MOD_Magic*(Steroid_W ? 1.25 : 1)",
   "E-DMG": "(45+25*P_E+0.45*Self_AP)*MOD_Magic",
   "R-DMG": "(100*P_R+0.25*Self_AP)*MOD_Magic",
-  "P-DMG": "((MIN(16, Self_Level - 1) * (0.04 / 16) + 0.09 + 0.0002 * Self_AP) * E_MHP) * MOD_Magic",
+  "P-DMG": "((Math.min(16, Self_Level - 1) * (0.04 / 16) + 0.09 + 0.0002 * Self_AP) * E_MHP) * MOD_Magic",
   "Q-CD": "8.5-0.5*P_Q",
   "W-CD": "10.5-0.5*P_W",
   "E-CD": "13-P_E",
   "R-CD": "120-15*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Brand_0",
     "passive": "BrandP",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U17),\"\"HMOD\"\"),NOT(P_Q>0)),0,U17)+IF(OR(REGEXMATCH(FORMULATEXT(V17),\"\"HMOD\"\"),NOT(P_W>0)),0,V17)+IF(OR(REGEXMATCH(FORMULATEXT(W17),\"\"HMOD\"\"),NOT(P_E>0)),0,W17)+IF(OR(REGEXMATCH(FORMULATEXT(X17),\"\"HMOD\"\"),NOT(P_R>0)),0,X17)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y17),\"\"HMOD\"\"),0,Y17)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

@@ -28,7 +28,7 @@
   "E-CD": "16.5 - 1.5 * P_E",
   "R-CD": "165-15*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Janna_0",
     "passive": "Janna_Tailwind",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U47),\"\"HMOD\"\"),NOT(P_Q>0)),0,U47)+IF(OR(REGEXMATCH(FORMULATEXT(V47),\"\"HMOD\"\"),NOT(P_W>0)),0,V47)+IF(OR(REGEXMATCH(FORMULATEXT(W47),\"\"HMOD\"\"),NOT(P_E>0)),0,W47)+IF(OR(REGEXMATCH(FORMULATEXT(X47),\"\"HMOD\"\"),NOT(P_R>0)),0,X47)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y47),\"\"HMOD\"\"),0,Y47)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

@@ -28,7 +28,7 @@
   "E-CD": "IF(Steroid_Form,6,12)",
   "R-CD": 3,
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Nidalee_0",
     "passive": "Nidalee_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U85),\"\"HMOD\"\"),NOT(P_Q>0)),0,U85)+IF(OR(REGEXMATCH(FORMULATEXT(V85),\"\"HMOD\"\"),NOT(P_W>0)),0,V85)+IF(OR(REGEXMATCH(FORMULATEXT(W85),\"\"HMOD\"\"),NOT(P_E>0)),0,W85)+IF(OR(REGEXMATCH(FORMULATEXT(X85),\"\"HMOD\"\"),NOT(P_R>0)),0,X85)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y85),\"\"HMOD\"\"),0,Y85)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

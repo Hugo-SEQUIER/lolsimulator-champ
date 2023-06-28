@@ -28,7 +28,7 @@
   "E-CD": "27.5-1.5*P_E",
   "R-CD": "160 - 20 * P_R",
   "P-CD": 4,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Senna_0",
     "passive": "Senna_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U107),\"\"HMOD\"\"),NOT(P_Q>0)),0,U107)+IF(OR(REGEXMATCH(FORMULATEXT(V107),\"\"HMOD\"\"),NOT(P_W>0)),0,V107)+IF(OR(REGEXMATCH(FORMULATEXT(W107),\"\"HMOD\"\"),NOT(P_E>0)),0,W107)+IF(OR(REGEXMATCH(FORMULATEXT(X107),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"107)+IF(REGEXMATCH(FORMULATEXT(Y107),\"\"HMOD\"\"),0,Y107)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

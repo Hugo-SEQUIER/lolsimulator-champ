@@ -28,7 +28,7 @@
   "E-CD": "26-2*P_E",
   "R-CD": "130 - 10 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Morgana_0",
     "passive": "FallenAngel_Empathize",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U80),\"\"HMOD\"\"),NOT(P_Q>0)),0,U80)+IF(OR(REGEXMATCH(FORMULATEXT(V80),\"\"HMOD\"\"),NOT(P_W>0)),0,V80)+IF(OR(REGEXMATCH(FORMULATEXT(W80),\"\"HMOD\"\"),NOT(P_E>0)),0,W80)+IF(OR(REGEXMATCH(FORMULATEXT(X80),\"\"HMOD\"\"),NOT(P_R>0)),0,X80)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y80),\"\"HMOD\"\"),0,Y80)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

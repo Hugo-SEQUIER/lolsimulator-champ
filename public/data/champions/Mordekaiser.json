@@ -28,7 +28,7 @@
   "E-CD": "20-2*P_E",
   "R-CD": "160 - 20 * P_R",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Mordekaiser_0",
     "passive": "MordekaiserPassive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U79),\"\"HMOD\"\"),NOT(P_Q>0)),0,U79)+IF(OR(REGEXMATCH(FORMULATEXT(V79),\"\"HMOD\"\"),NOT(P_W>0)),0,V79)+IF(OR(REGEXMATCH(FORMULATEXT(W79),\"\"HMOD\"\"),NOT(P_E>0)),0,W79)+IF(OR(REGEXMATCH(FORMULATEXT(X79),\"\"HMOD\"\"),NOT(P_R>0)),0,X79)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y79),\"\"HMOD\"\"),0,Y79)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),5)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "TRUE"
+  "Energy": 0,
+  "No Mana": 1
 }

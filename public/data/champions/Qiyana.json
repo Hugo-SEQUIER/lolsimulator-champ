@@ -28,7 +28,7 @@
   "E-CD": "12 - P_E",
   "R-CD": 120,
   "P-CD": 25,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Qiyana_0",
     "passive": "Qiyana_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U94),\"\"HMOD\"\"),NOT(P_Q>0)),0,U94)+IF(OR(REGEXMATCH(FORMULATEXT(V94),\"\"HMOD\"\"),NOT(P_W>0)),0,V94)+IF(OR(REGEXMATCH(FORMULATEXT(W94),\"\"HMOD\"\"),NOT(P_E>0)),0,W94)+IF(OR(REGEXMATCH(FORMULATEXT(X94),\"\"HMOD\"\"),NOT(P_R>0)),0,X94)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y94),\"\"HMOD\"\"),0,Y94)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),15)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

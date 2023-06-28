@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U29),\"\"HMOD\"\"),NOT(P_Q>0)),0,U29)+IF(OR(REGEXMATCH(FORMULATEXT(V29),\"\"HMOD\"\"),NOT(P_W>0)),0,V29)+IF(OR(REGEXMATCH(FORMULATEXT(W29),\"\"HMOD\"\"),NOT(P_E>0)),0,W29)+IF(OR(REGEXMATCH(FORMULATEXT(X29),\"\"HMOD\"\"),NOT(P_R>0)),0,X29)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y29),\"\"HMOD\"\"),0,Y29)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

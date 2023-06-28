@@ -22,13 +22,13 @@
   "W-DMG": "(5 + 15 * P_W + Self_AD) * MOD_Phys",
   "E-DMG": 0,
   "R-DMG": "(200 * P_R + 1.2 * Self_AP) * MOD_Magic",
-  "P-DMG": "Self_AD*(Calc!M10-1)*(MOD_Hit/Calc!M10)",
-  "Q-CD": "4/IF(Self_AS<",
+  "P-DMG": "Self_AD*(1-1)*(MOD_Hit/1)",
+  "Q-CD": "4/(Self_AS <= 0 ? 0.625 : Self_AS)",
   "W-CD": "21.5-3.5*P_W",
   "E-CD": "100-10*P_E",
   "R-CD": "120-20*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Ashe_0",
     "passive": "Ashe_P",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U12),\"\"HMOD\"\"),NOT(P_Q>0)),0,U12)+IF(OR(REGEXMATCH(FORMULATEXT(V12),\"\"HMOD\"\"),NOT(P_W>0)),0,V12)+IF(OR(REGEXMATCH(FORMULATEXT(W12),\"\"HMOD\"\"),NOT(P_E>0)),0,W12)+IF(OR(REGEXMATCH(FORMULATEXT(X12),\"\"HMOD\"\"),NOT(P_R>0)),0,X12)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y12),\"\"HMOD\"\"),0,Y12)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

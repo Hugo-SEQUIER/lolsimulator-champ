@@ -19,16 +19,16 @@
   "MS": 325,
   "Range": 650,
   "Q-DMG": "(10 + 40 * P_Q + (1.05 + 0.2 * P_Q) * Self_AD) * MOD_Phys",
-  "W-DMG": "(-5+45*P_W+(0.3+0.1*P_W)*Self_BoAD)*MOD_Phys+Y19",
+  "W-DMG": "(-5+45*P_W+(0.3+0.1*P_W)*Self_BoAD)*MOD_Phys+passiveDMG",
   "E-DMG": "(30+50*P_E+0.8*Self_AP)*MOD_Magic",
   "R-DMG": "(75 + 225 * P_R + 2 * Self_BoAD) * MOD_Phys * (1 + 0.25 * Self_Crit)",
-  "P-DMG": 0,
+  "P-DMG": "((0,6 + 0,3 * Math.floor((Self_Level - 1) / 6) + Self_Crit * (1,3125 + 0,75 * IT_CDMG)) * Self_AD) * MOD_Hit",
   "Q-CD": "11-P_Q",
   "W-CD": "34.5-4.5*P_W",
   "E-CD": "18-2*P_E",
   "R-CD": "105-15*P_R",
-  "P-CD": "IF(Self_AS>0,7/Self_AS,1)",
-  "Melee?": "FALSE",
+  "P-CD": "(Self_AS>0 ? 7/Self_AS: 1)",
+  "Melee?": 0,
   "img": {
     "centered": "Caitlyn_0",
     "passive": "Caitlyn_Headshot",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U19),\"\"HMOD\"\"),NOT(P_Q>0)),0,U19)+IF(OR(REGEXMATCH(FORMULATEXT(V19),\"\"HMOD\"\"),NOT(P_W>0)),0,V19)+IF(OR(REGEXMATCH(FORMULATEXT(W19),\"\"HMOD\"\"),NOT(P_E>0)),0,W19)+IF(OR(REGEXMATCH(FORMULATEXT(X19),\"\"HMOD\"\"),NOT(P_R>0)),0,X19)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y19),\"\"HMOD\"\"),0,Y19)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

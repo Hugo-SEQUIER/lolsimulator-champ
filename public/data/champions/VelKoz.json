@@ -28,7 +28,7 @@
   "E-CD": "17 - P_E",
   "R-CD": "140 - 20 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Velkoz_0",
     "passive": "VelKoz_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U138),\"\"HMOD\"\"),NOT(P_Q>0)),0,U138)+IF(OR(REGEXMATCH(FORMULATEXT(V138),\"\"HMOD\"\"),NOT(P_W>0)),0,V138)+IF(OR(REGEXMATCH(FORMULATEXT(W138),\"\"HMOD\"\"),NOT(P_E>0)),0,W138)+IF(OR(REGEXMATCH(FORMULATEXT(X138),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"138)+IF(REGEXMATCH(FORMULATEXT(Y138),\"\"HMOD\"\"),0,Y138)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),33)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

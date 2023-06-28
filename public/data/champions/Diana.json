@@ -28,7 +28,7 @@
   "E-CD": "24-2*P_E",
   "R-CD": "110-P_R*10",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Diana_0",
     "passive": "Diana_Passive_LunarBlade",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U25),\"\"HMOD\"\"),NOT(P_Q>0)),0,U25)+IF(OR(REGEXMATCH(FORMULATEXT(V25),\"\"HMOD\"\"),NOT(P_W>0)),0,V25)+IF(OR(REGEXMATCH(FORMULATEXT(W25),\"\"HMOD\"\"),NOT(P_E>0)),0,W25)+IF(OR(REGEXMATCH(FORMULATEXT(X25),\"\"HMOD\"\"),NOT(P_R>0)),0,X25)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y25),\"\"HMOD\"\"),0,Y25)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),20)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

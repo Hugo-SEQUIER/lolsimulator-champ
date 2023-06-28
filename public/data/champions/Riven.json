@@ -28,7 +28,7 @@
   "E-CD": "11-P_E",
   "R-CD": "150-30*P_R",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Riven_0",
     "passive": "RivenRunicBlades",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U102),\"\"HMOD\"\"),NOT(P_Q>0)),0,U102)+IF(OR(REGEXMATCH(FORMULATEXT(V102),\"\"HMOD\"\"),NOT(P_W>0)),0,V102)+IF(OR(REGEXMATCH(FORMULATEXT(W102),\"\"HMOD\"\"),NOT(P_E>0)),0,W102)+IF(OR(REGEXMATCH(FORMULATEXT(X102),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"102)+IF(REGEXMATCH(FORMULATEXT(Y102),\"\"HMOD\"\"),0,Y102)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "TRUE"
+  "Energy": 0,
+  "No Mana": 1
 }

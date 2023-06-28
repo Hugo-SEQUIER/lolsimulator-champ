@@ -28,7 +28,7 @@
   "E-CD": 12,
   "R-CD": 90,
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Rammus_0",
     "passive": "Armordillo_ScavengeArmor",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U97),\"\"HMOD\"\"),NOT(P_Q>0)),0,U97)+IF(OR(REGEXMATCH(FORMULATEXT(V97),\"\"HMOD\"\"),NOT(P_W>0)),0,V97)+IF(OR(REGEXMATCH(FORMULATEXT(W97),\"\"HMOD\"\"),NOT(P_E>0)),0,W97)+IF(OR(REGEXMATCH(FORMULATEXT(X97),\"\"HMOD\"\"),NOT(P_R>0)),0,X97)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y97),\"\"HMOD\"\"),0,Y97)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),10)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

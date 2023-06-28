@@ -29,7 +29,7 @@
     "E-CD": "10-1*P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": "24-((Self_Level-1)/17)*12",
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Aatrox_0",
       "passive": "Aatrox_Passive",
@@ -40,8 +40,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U3),\"\"HMOD\"\"),NOT(P_Q>0)),0,U3)+IF(OR(REGEXMATCH(FORMULATEXT(V3),\"\"HMOD\"\"),NOT(P_W>0)),0,V3)+IF(OR(REGEXMATCH(FORMULATEXT(W3),\"\"HMOD\"\"),NOT(P_E>0)),0,W3)+IF(OR(REGEXMATCH(FORMULATEXT(X3),\"\"HMOD\"\"),NOT(P_R>0)),0,X3)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y3),\"\"HMOD\"\"),0,Y3)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),442.061884057971)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Ahri": {
     "HP": 590,
@@ -73,7 +73,7 @@
     "E-CD": 14,
     "R-CD": "155-25*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Ahri_0",
       "passive": "Ahri_SoulEater2",
@@ -84,8 +84,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U4),\"\"HMOD\"\"),NOT(P_Q>0)),0,U4)+IF(OR(REGEXMATCH(FORMULATEXT(V4),\"\"HMOD\"\"),NOT(P_W>0)),0,V4)+IF(OR(REGEXMATCH(FORMULATEXT(W4),\"\"HMOD\"\"),NOT(P_E>0)),0,W4)+IF(OR(REGEXMATCH(FORMULATEXT(X4),\"\"HMOD\"\"),NOT(P_R>0)),0,X4)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y4),\"\"HMOD\"\"),0,Y4)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),490.642252964426)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Akali": {
     "HP": 570,
@@ -117,7 +117,7 @@
     "E-CD": "17.5-1.5*P_E",
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Akali_0",
       "passive": "Akali_P",
@@ -128,8 +128,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U5),\"\"HMOD\"\"),NOT(P_Q>0)),0,U5)+IF(OR(REGEXMATCH(FORMULATEXT(V5),\"\"HMOD\"\"),NOT(P_W>0)),0,V5)+IF(OR(REGEXMATCH(FORMULATEXT(W5),\"\"HMOD\"\"),NOT(P_E>0)),0,W5)+IF(OR(REGEXMATCH(FORMULATEXT(X5),\"\"HMOD\"\"),NOT(P_R>0)),0,X5)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y5),\"\"HMOD\"\"),0,Y5)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),475.642252964426)",
     "Trade Calc": 0,
-    "Energy": "TRUE",
-    "No Mana": "FALSE"
+    "Energy": 1,
+    "No Mana": 0
   },
   "Akshan": {
     "HP": 630,
@@ -161,7 +161,7 @@
     "E-CD": "19.5-1.5*P_E",
     "R-CD": "115-15*P_R",
     "P-CD": 16,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Akshan_0",
       "passive": "akshan_p",
@@ -172,8 +172,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U6),\"\"HMOD\"\"),NOT(P_Q>0)),0,U6)+IF(OR(REGEXMATCH(FORMULATEXT(V6),\"\"HMOD\"\"),NOT(P_W>0)),0,V6)+IF(OR(REGEXMATCH(FORMULATEXT(W6),\"\"HMOD\"\"),NOT(P_E>0)),0,W6)+IF(OR(REGEXMATCH(FORMULATEXT(X6),\"\"HMOD\"\"),NOT(P_R>0)),0,X6)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y6),\"\"HMOD\"\"),0,Y6)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),451.042560386473)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Alistar": {
     "HP": 685,
@@ -205,7 +205,7 @@
     "E-CD": "12.5-0.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 3,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Alistar_0",
       "passive": "Alistar_E",
@@ -216,8 +216,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U7),\"\"HMOD\"\"),NOT(P_Q>0)),0,U7)+IF(OR(REGEXMATCH(FORMULATEXT(V7),\"\"HMOD\"\"),NOT(P_W>0)),0,V7)+IF(OR(REGEXMATCH(FORMULATEXT(W7),\"\"HMOD\"\"),NOT(P_E>0)),0,W7)+IF(OR(REGEXMATCH(FORMULATEXT(X7),\"\"HMOD\"\"),NOT(P_R>0)),0,X7)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y7),\"\"HMOD\"\"),0,Y7)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),383.142252964426)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Amumu": {
     "HP": 685,
@@ -249,7 +249,7 @@
     "E-CD": "10-P_E",
     "R-CD": "175-25*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Amumu_0",
       "passive": "Amumu_Passive",
@@ -260,8 +260,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U8),\"\"HMOD\"\"),NOT(P_Q>0)),0,U8)+IF(OR(REGEXMATCH(FORMULATEXT(V8),\"\"HMOD\"\"),NOT(P_W>0)),0,V8)+IF(OR(REGEXMATCH(FORMULATEXT(W8),\"\"HMOD\"\"),NOT(P_E>0)),0,W8)+IF(OR(REGEXMATCH(FORMULATEXT(X8),\"\"HMOD\"\"),NOT(P_R>0)),0,X8)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y8),\"\"HMOD\"\"),0,Y8)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),450.263465085638)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Anivia": {
     "HP": 550,
@@ -293,7 +293,7 @@
     "E-CD": 4,
     "R-CD": "5-1*P_R",
     "P-CD": 240,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Anivia_0",
       "passive": "Anivia_P",
@@ -304,8 +304,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U9),\"\"HMOD\"\"),NOT(P_Q>0)),0,U9)+IF(OR(REGEXMATCH(FORMULATEXT(V9),\"\"HMOD\"\"),NOT(P_W>0)),0,V9)+IF(OR(REGEXMATCH(FORMULATEXT(W9),\"\"HMOD\"\"),NOT(P_E>0)),0,W9)+IF(OR(REGEXMATCH(FORMULATEXT(X9),\"\"HMOD\"\"),NOT(P_R>0)),0,X9)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y9),\"\"HMOD\"\"),0,Y9)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),271.096798418972)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Annie": {
     "HP": 560,
@@ -337,7 +337,7 @@
     "E-CD": "12.5-0.5*P_E",
     "R-CD": "145 - 15 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Annie_0",
       "passive": "Annie_Passive",
@@ -348,8 +348,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U10),\"\"HMOD\"\"),NOT(P_Q>0)),0,U10)+IF(OR(REGEXMATCH(FORMULATEXT(V10),\"\"HMOD\"\"),NOT(P_W>0)),0,V10)+IF(OR(REGEXMATCH(FORMULATEXT(W10),\"\"HMOD\"\"),NOT(P_E>0)),0,W10)+IF(OR(REGEXMATCH(FORMULATEXT(X10),\"\"HMOD\"\"),NOT(P_R>0)),0,X10)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y10),\"\"HMOD\"\"),0,Y10)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),430.187707509881)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Aphelios": {
     "HP": 580,
@@ -381,7 +381,7 @@
     "E-CD": 1,
     "R-CD": 130,
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Aphelios_0",
       "passive": "ApheliosP",
@@ -392,8 +392,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U11),\"\"HMOD\"\"),NOT(P_Q>0)),0,U11)+IF(OR(REGEXMATCH(FORMULATEXT(V11),\"\"HMOD\"\"),NOT(P_W>0)),0,V11)+IF(OR(REGEXMATCH(FORMULATEXT(W11),\"\"HMOD\"\"),NOT(P_E>0)),0,W11)+IF(OR(REGEXMATCH(FORMULATEXT(X11),\"\"HMOD\"\"),NOT(P_R>0)),0,X11)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y11),\"\"HMOD\"\"),0,Y11)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),211.808260869565)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Ashe": {
     "HP": 640,
@@ -425,7 +425,7 @@
     "E-CD": "100-10*P_E",
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Ashe_0",
       "passive": "Ashe_P",
@@ -436,8 +436,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U12),\"\"HMOD\"\"),NOT(P_Q>0)),0,U12)+IF(OR(REGEXMATCH(FORMULATEXT(V12),\"\"HMOD\"\"),NOT(P_W>0)),0,V12)+IF(OR(REGEXMATCH(FORMULATEXT(W12),\"\"HMOD\"\"),NOT(P_E>0)),0,W12)+IF(OR(REGEXMATCH(FORMULATEXT(X12),\"\"HMOD\"\"),NOT(P_R>0)),0,X12)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y12),\"\"HMOD\"\"),0,Y12)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),407.526310935441)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Aurelion Sol": {
     "HP": 620,
@@ -469,7 +469,7 @@
     "E-CD": 12,
     "R-CD": "130 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "AurelionSol_0",
       "passive": "AurelionSolP",
@@ -480,8 +480,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U13),\"\"HMOD\"\"),NOT(P_Q>0)),0,U13)+IF(OR(REGEXMATCH(FORMULATEXT(V13),\"\"HMOD\"\"),NOT(P_W>0)),0,V13)+IF(OR(REGEXMATCH(FORMULATEXT(W13),\"\"HMOD\"\"),NOT(P_E>0)),0,W13)+IF(OR(REGEXMATCH(FORMULATEXT(X13),\"\"HMOD\"\"),NOT(P_R>0)),0,X13)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y13),\"\"HMOD\"\"),0,Y13)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),373.369525691699)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Azir": {
     "HP": 550,
@@ -513,7 +513,7 @@
     "E-CD": "23.5 - 1.5 * P_E",
     "R-CD": "135-15*P_R",
     "P-CD": 180,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Azir_0",
       "passive": "Azir_Passive",
@@ -524,8 +524,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U14),\"\"HMOD\"\"),NOT(P_Q>0)),0,U14)+IF(OR(REGEXMATCH(FORMULATEXT(V14),\"\"HMOD\"\"),NOT(P_W>0)),0,V14)+IF(OR(REGEXMATCH(FORMULATEXT(W14),\"\"HMOD\"\"),NOT(P_E>0)),0,W14)+IF(OR(REGEXMATCH(FORMULATEXT(X14),\"\"HMOD\"\"),NOT(P_R>0)),0,X14)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y14),\"\"HMOD\"\"),0,Y14)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),627.157404479578)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Bard": {
     "HP": 630,
@@ -557,7 +557,7 @@
     "E-CD": "23.5 - 1.5 * P_E",
     "R-CD": "125-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Bard_0",
       "passive": "Bard_Passive",
@@ -568,8 +568,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U15),\"\"HMOD\"\"),NOT(P_Q>0)),0,U15)+IF(OR(REGEXMATCH(FORMULATEXT(V15),\"\"HMOD\"\"),NOT(P_W>0)),0,V15)+IF(OR(REGEXMATCH(FORMULATEXT(W15),\"\"HMOD\"\"),NOT(P_E>0)),0,W15)+IF(OR(REGEXMATCH(FORMULATEXT(X15),\"\"HMOD\"\"),NOT(P_R>0)),0,X15)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y15),\"\"HMOD\"\"),0,Y15)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),328.672555994729)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Blitzcrank": {
     "HP": 633,
@@ -601,7 +601,7 @@
     "E-CD": "10-P_E",
     "R-CD": "80-20*P_R",
     "P-CD": 90,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Blitzcrank_0",
       "passive": "Blitzcrank_ManaBarrier",
@@ -612,8 +612,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U16),\"\"HMOD\"\"),NOT(P_Q>0)),0,U16)+IF(OR(REGEXMATCH(FORMULATEXT(V16),\"\"HMOD\"\"),NOT(P_W>0)),0,V16)+IF(OR(REGEXMATCH(FORMULATEXT(W16),\"\"HMOD\"\"),NOT(P_E>0)),0,W16)+IF(OR(REGEXMATCH(FORMULATEXT(X16),\"\"HMOD\"\"),NOT(P_R>0)),0,X16)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y16),\"\"HMOD\"\"),0,Y16)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),559.304967061923)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Brand": {
     "HP": 590,
@@ -645,7 +645,7 @@
     "E-CD": "13-P_E",
     "R-CD": "120-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Brand_0",
       "passive": "BrandP",
@@ -656,8 +656,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U17),\"\"HMOD\"\"),NOT(P_Q>0)),0,U17)+IF(OR(REGEXMATCH(FORMULATEXT(V17),\"\"HMOD\"\"),NOT(P_W>0)),0,V17)+IF(OR(REGEXMATCH(FORMULATEXT(W17),\"\"HMOD\"\"),NOT(P_E>0)),0,W17)+IF(OR(REGEXMATCH(FORMULATEXT(X17),\"\"HMOD\"\"),NOT(P_R>0)),0,X17)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y17),\"\"HMOD\"\"),0,Y17)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),470.718010540184)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Braum": {
     "HP": 610,
@@ -689,7 +689,7 @@
     "E-CD": "18-2*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 8,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Braum_0",
       "passive": "Braum_Passive",
@@ -700,8 +700,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U18),\"\"HMOD\"\"),NOT(P_Q>0)),0,U18)+IF(OR(REGEXMATCH(FORMULATEXT(V18),\"\"HMOD\"\"),NOT(P_W>0)),0,V18)+IF(OR(REGEXMATCH(FORMULATEXT(W18),\"\"HMOD\"\"),NOT(P_E>0)),0,W18)+IF(OR(REGEXMATCH(FORMULATEXT(X18),\"\"HMOD\"\"),NOT(P_R>0)),0,X18)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y18),\"\"HMOD\"\"),0,Y18)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),394.013465085639)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Caitlyn": {
     "HP": 580,
@@ -733,7 +733,7 @@
     "E-CD": "18-2*P_E",
     "R-CD": "105-15*P_R",
     "P-CD": "IF(Self_AS>0,7/Self_AS,1)",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Caitlyn_0",
       "passive": "Caitlyn_Headshot",
@@ -744,8 +744,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U19),\"\"HMOD\"\"),NOT(P_Q>0)),0,U19)+IF(OR(REGEXMATCH(FORMULATEXT(V19),\"\"HMOD\"\"),NOT(P_W>0)),0,V19)+IF(OR(REGEXMATCH(FORMULATEXT(W19),\"\"HMOD\"\"),NOT(P_E>0)),0,W19)+IF(OR(REGEXMATCH(FORMULATEXT(X19),\"\"HMOD\"\"),NOT(P_R>0)),0,X19)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y19),\"\"HMOD\"\"),0,Y19)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),644.878089591567)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Camille": {
     "HP": 646,
@@ -777,7 +777,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "165-25*P_R",
     "P-CD": 20,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Camille_0",
       "passive": "Camille_Passive",
@@ -788,8 +788,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U20),\"\"HMOD\"\"),NOT(P_Q>0)),0,U20)+IF(OR(REGEXMATCH(FORMULATEXT(V20),\"\"HMOD\"\"),NOT(P_W>0)),0,V20)+IF(OR(REGEXMATCH(FORMULATEXT(W20),\"\"HMOD\"\"),NOT(P_E>0)),0,W20)+IF(OR(REGEXMATCH(FORMULATEXT(X20),\"\"HMOD\"\"),NOT(P_R>0)),0,X20)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y20),\"\"HMOD\"\"),0,Y20)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),500.174532279314)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Cassiopeia": {
     "HP": 630,
@@ -821,7 +821,7 @@
     "E-CD": 0.75,
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Cassiopeia_0",
       "passive": "Cassiopeia_Passive",
@@ -832,8 +832,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U21),\"\"HMOD\"\"),NOT(P_Q>0)),0,U21)+IF(OR(REGEXMATCH(FORMULATEXT(V21),\"\"HMOD\"\"),NOT(P_W>0)),0,V21)+IF(OR(REGEXMATCH(FORMULATEXT(W21),\"\"HMOD\"\"),NOT(P_E>0)),0,W21)+IF(OR(REGEXMATCH(FORMULATEXT(X21),\"\"HMOD\"\"),NOT(P_R>0)),0,X21)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y21),\"\"HMOD\"\"),0,Y21)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),469.58164690382)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Cho'Gath": {
     "HP": 644,
@@ -865,7 +865,7 @@
     "E-CD": "9-P_E",
     "R-CD": "90-10*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Chogath_0",
       "passive": "GreenTerror_TailSpike",
@@ -876,8 +876,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U22),\"\"HMOD\"\"),NOT(P_Q>0)),0,U22)+IF(OR(REGEXMATCH(FORMULATEXT(V22),\"\"HMOD\"\"),NOT(P_W>0)),0,V22)+IF(OR(REGEXMATCH(FORMULATEXT(W22),\"\"HMOD\"\"),NOT(P_E>0)),0,W22)+IF(OR(REGEXMATCH(FORMULATEXT(X22),\"\"HMOD\"\"),NOT(P_R>0)),0,X22)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y22),\"\"HMOD\"\"),0,Y22)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),736.445283267457)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Corki": {
     "HP": 588,
@@ -909,7 +909,7 @@
     "E-CD": 16,
     "R-CD": "13-P_R",
     "P-CD": 240,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Corki_0",
       "passive": "Corki_RapidReload",
@@ -920,8 +920,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U23),\"\"HMOD\"\"),NOT(P_Q>0)),0,U23)+IF(OR(REGEXMATCH(FORMULATEXT(V23),\"\"HMOD\"\"),NOT(P_W>0)),0,V23)+IF(OR(REGEXMATCH(FORMULATEXT(W23),\"\"HMOD\"\"),NOT(P_E>0)),0,W23)+IF(OR(REGEXMATCH(FORMULATEXT(X23),\"\"HMOD\"\"),NOT(P_R>0)),0,X23)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y23),\"\"HMOD\"\"),0,Y23)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),554.726574440052)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Darius": {
     "HP": 652,
@@ -953,7 +953,7 @@
     "E-CD": "26.5-2.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Darius_0",
       "passive": "Darius_Icon_Hemorrhage",
@@ -964,8 +964,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U24),\"\"HMOD\"\"),NOT(P_Q>0)),0,U24)+IF(OR(REGEXMATCH(FORMULATEXT(V24),\"\"HMOD\"\"),NOT(P_W>0)),0,V24)+IF(OR(REGEXMATCH(FORMULATEXT(W24),\"\"HMOD\"\"),NOT(P_E>0)),0,W24)+IF(OR(REGEXMATCH(FORMULATEXT(X24),\"\"HMOD\"\"),NOT(P_R>0)),0,X24)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y24),\"\"HMOD\"\"),0,Y24)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),458.547391304347)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Diana": {
     "HP": 640,
@@ -997,7 +997,7 @@
     "E-CD": "24-2*P_E",
     "R-CD": "110-P_R*10",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Diana_0",
       "passive": "Diana_Passive_LunarBlade",
@@ -1008,8 +1008,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U25),\"\"HMOD\"\"),NOT(P_Q>0)),0,U25)+IF(OR(REGEXMATCH(FORMULATEXT(V25),\"\"HMOD\"\"),NOT(P_W>0)),0,V25)+IF(OR(REGEXMATCH(FORMULATEXT(W25),\"\"HMOD\"\"),NOT(P_E>0)),0,W25)+IF(OR(REGEXMATCH(FORMULATEXT(X25),\"\"HMOD\"\"),NOT(P_R>0)),0,X25)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y25),\"\"HMOD\"\"),0,Y25)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),474.884677206851)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Dr, Mundo": {
     "HP": 613,
@@ -1041,7 +1041,7 @@
     "E-CD": "9.75-0.75*P_E",
     "R-CD": 120,
     "P-CD": 60,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "DrMundo_0",
       "passive": "DrMundo_P",
@@ -1052,8 +1052,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U26),\"\"HMOD\"\"),NOT(P_Q>0)),0,U26)+IF(OR(REGEXMATCH(FORMULATEXT(V26),\"\"HMOD\"\"),NOT(P_W>0)),0,V26)+IF(OR(REGEXMATCH(FORMULATEXT(W26),\"\"HMOD\"\"),NOT(P_E>0)),0,W26)+IF(OR(REGEXMATCH(FORMULATEXT(X26),\"\"HMOD\"\"),NOT(P_R>0)),0,X26)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y26),\"\"HMOD\"\"),0,Y26)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),503.614694773825)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Draven": {
     "HP": 675,
@@ -1085,7 +1085,7 @@
     "E-CD": "19-P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Draven_0",
       "passive": "Draven_passive",
@@ -1096,8 +1096,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U27),\"\"HMOD\"\"),NOT(P_Q>0)),0,U27)+IF(OR(REGEXMATCH(FORMULATEXT(V27),\"\"HMOD\"\"),NOT(P_W>0)),0,V27)+IF(OR(REGEXMATCH(FORMULATEXT(W27),\"\"HMOD\"\"),NOT(P_E>0)),0,W27)+IF(OR(REGEXMATCH(FORMULATEXT(X27),\"\"HMOD\"\"),NOT(P_R>0)),0,X27)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y27),\"\"HMOD\"\"),0,Y27)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),371.228550724637)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Ekko": {
     "HP": 655,
@@ -1129,7 +1129,7 @@
     "E-CD": "9.5-0.5*P_E",
     "R-CD": "140-30*P_R",
     "P-CD": 5,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Ekko_0",
       "passive": "Ekko_P",
@@ -1140,8 +1140,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U28),\"\"HMOD\"\"),NOT(P_Q>0)),0,U28)+IF(OR(REGEXMATCH(FORMULATEXT(V28),\"\"HMOD\"\"),NOT(P_W>0)),0,V28)+IF(OR(REGEXMATCH(FORMULATEXT(W28),\"\"HMOD\"\"),NOT(P_E>0)),0,W28)+IF(OR(REGEXMATCH(FORMULATEXT(X28),\"\"HMOD\"\"),NOT(P_R>0)),0,X28)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y28),\"\"HMOD\"\"),0,Y28)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),536.248313570487)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Elise": {
     "HP": 650,
@@ -1184,8 +1184,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U29),\"\"HMOD\"\"),NOT(P_Q>0)),0,U29)+IF(OR(REGEXMATCH(FORMULATEXT(V29),\"\"HMOD\"\"),NOT(P_W>0)),0,V29)+IF(OR(REGEXMATCH(FORMULATEXT(W29),\"\"HMOD\"\"),NOT(P_E>0)),0,W29)+IF(OR(REGEXMATCH(FORMULATEXT(X29),\"\"HMOD\"\"),NOT(P_R>0)),0,X29)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y29),\"\"HMOD\"\"),0,Y29)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),279.430131752305)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Evelynn": {
     "HP": 642,
@@ -1217,7 +1217,7 @@
     "E-CD": 8,
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Evelynn_0",
       "passive": "Evelynn_Passive",
@@ -1228,8 +1228,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U30),\"\"HMOD\"\"),NOT(P_Q>0)),0,U30)+IF(OR(REGEXMATCH(FORMULATEXT(V30),\"\"HMOD\"\"),NOT(P_W>0)),0,V30)+IF(OR(REGEXMATCH(FORMULATEXT(W30),\"\"HMOD\"\"),NOT(P_E>0)),0,W30)+IF(OR(REGEXMATCH(FORMULATEXT(X30),\"\"HMOD\"\"),NOT(P_R>0)),0,X30)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y30),\"\"HMOD\"\"),0,Y30)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),702.536192358366)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Ezreal": {
     "HP": 600,
@@ -1261,7 +1261,7 @@
     "E-CD": "29-3*P_E",
     "R-CD": "135-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Ezreal_0",
       "passive": "Ezreal_RisingSpellForce",
@@ -1272,8 +1272,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U31),\"\"HMOD\"\"),NOT(P_Q>0)),0,U31)+IF(OR(REGEXMATCH(FORMULATEXT(V31),\"\"HMOD\"\"),NOT(P_W>0)),0,V31)+IF(OR(REGEXMATCH(FORMULATEXT(W31),\"\"HMOD\"\"),NOT(P_E>0)),0,W31)+IF(OR(REGEXMATCH(FORMULATEXT(X31),\"\"HMOD\"\"),NOT(P_R>0)),0,X31)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y31),\"\"HMOD\"\"),0,Y31)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),632.954505928853)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Fiddlesticks": {
     "HP": 650,
@@ -1305,7 +1305,7 @@
     "E-CD": "11-P_E",
     "R-CD": "170-30*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "FiddleSticks_0",
       "passive": "FiddlesticksP",
@@ -1316,8 +1316,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U32),\"\"HMOD\"\"),NOT(P_Q>0)),0,U32)+IF(OR(REGEXMATCH(FORMULATEXT(V32),\"\"HMOD\"\"),NOT(P_W>0)),0,V32)+IF(OR(REGEXMATCH(FORMULATEXT(W32),\"\"HMOD\"\"),NOT(P_E>0)),0,W32)+IF(OR(REGEXMATCH(FORMULATEXT(X32),\"\"HMOD\"\"),NOT(P_R>0)),0,X32)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y32),\"\"HMOD\"\"),0,Y32)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),888.899828722001)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Fiora": {
     "HP": 620,
@@ -1349,7 +1349,7 @@
     "E-CD": "12 - P_E",
     "R-CD": "130-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Fiora_0",
       "passive": "Fiora_P",
@@ -1360,8 +1360,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U33),\"\"HMOD\"\"),NOT(P_Q>0)),0,U33)+IF(OR(REGEXMATCH(FORMULATEXT(V33),\"\"HMOD\"\"),NOT(P_W>0)),0,V33)+IF(OR(REGEXMATCH(FORMULATEXT(W33),\"\"HMOD\"\"),NOT(P_E>0)),0,W33)+IF(OR(REGEXMATCH(FORMULATEXT(X33),\"\"HMOD\"\"),NOT(P_R>0)),0,X33)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y33),\"\"HMOD\"\"),0,Y33)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),762.829999999999)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Fizz": {
     "HP": 640,
@@ -1393,7 +1393,7 @@
     "E-CD": "18-2*P_E",
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Fizz_0",
       "passive": "Fizz_P",
@@ -1404,8 +1404,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U34),\"\"HMOD\"\"),NOT(P_Q>0)),0,U34)+IF(OR(REGEXMATCH(FORMULATEXT(V34),\"\"HMOD\"\"),NOT(P_W>0)),0,V34)+IF(OR(REGEXMATCH(FORMULATEXT(W34),\"\"HMOD\"\"),NOT(P_E>0)),0,W34)+IF(OR(REGEXMATCH(FORMULATEXT(X34),\"\"HMOD\"\"),NOT(P_R>0)),0,X34)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y34),\"\"HMOD\"\"),0,Y34)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),453.127101449275)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Galio": {
     "HP": 632,
@@ -1437,7 +1437,7 @@
     "E-CD": "12 - P_E",
     "R-CD": "220-20*P_R",
     "P-CD": 5,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Galio_0",
       "passive": "Galio_Passive",
@@ -1448,8 +1448,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U35),\"\"HMOD\"\"),NOT(P_Q>0)),0,U35)+IF(OR(REGEXMATCH(FORMULATEXT(V35),\"\"HMOD\"\"),NOT(P_W>0)),0,V35)+IF(OR(REGEXMATCH(FORMULATEXT(W35),\"\"HMOD\"\"),NOT(P_E>0)),0,W35)+IF(OR(REGEXMATCH(FORMULATEXT(X35),\"\"HMOD\"\"),NOT(P_R>0)),0,X35)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y35),\"\"HMOD\"\"),0,Y35)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),540.036192358366)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Gangplank": {
     "HP": 600,
@@ -1481,7 +1481,7 @@
     "E-CD": 18,
     "R-CD": "200-20*P_R",
     "P-CD": 15,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Gangplank_0",
       "passive": "Gangplank_Passive",
@@ -1492,8 +1492,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U36),\"\"HMOD\"\"),NOT(P_Q>0)),0,U36)+IF(OR(REGEXMATCH(FORMULATEXT(V36),\"\"HMOD\"\"),NOT(P_W>0)),0,V36)+IF(OR(REGEXMATCH(FORMULATEXT(W36),\"\"HMOD\"\"),NOT(P_E>0)),0,W36)+IF(OR(REGEXMATCH(FORMULATEXT(X36),\"\"HMOD\"\"),NOT(P_R>0)),0,X36)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y36),\"\"HMOD\"\"),0,Y36)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),831.068709857389)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Garen": {
     "HP": 690,
@@ -1525,7 +1525,7 @@
     "E-CD": 9,
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Garen_0",
       "passive": "Garen_Passive",
@@ -1536,8 +1536,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U37),\"\"HMOD\"\"),NOT(P_Q>0)),0,U37)+IF(OR(REGEXMATCH(FORMULATEXT(V37),\"\"HMOD\"\"),NOT(P_W>0)),0,V37)+IF(OR(REGEXMATCH(FORMULATEXT(W37),\"\"HMOD\"\"),NOT(P_E>0)),0,W37)+IF(OR(REGEXMATCH(FORMULATEXT(X37),\"\"HMOD\"\"),NOT(P_R>0)),0,X37)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y37),\"\"HMOD\"\"),0,Y37)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),565.108985507246)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Gnar": {
     "HP": "IF(Steroid_Form,640,540)",
@@ -1580,8 +1580,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U38),\"\"HMOD\"\"),NOT(P_Q>0)),0,U38)+IF(OR(REGEXMATCH(FORMULATEXT(V38),\"\"HMOD\"\"),NOT(P_W>0)),0,V38)+IF(OR(REGEXMATCH(FORMULATEXT(W38),\"\"HMOD\"\"),NOT(P_E>0)),0,W38)+IF(OR(REGEXMATCH(FORMULATEXT(X38),\"\"HMOD\"\"),NOT(P_R>0)),0,X38)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y38),\"\"HMOD\"\"),0,Y38)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),334.107338603425)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Gragas": {
     "HP": 670,
@@ -1613,7 +1613,7 @@
     "E-CD": "14.5 - 0.5 * P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 8,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Gragas_0",
       "passive": "GragasPassiveHeal",
@@ -1624,8 +1624,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U39),\"\"HMOD\"\"),NOT(P_Q>0)),0,U39)+IF(OR(REGEXMATCH(FORMULATEXT(V39),\"\"HMOD\"\"),NOT(P_W>0)),0,V39)+IF(OR(REGEXMATCH(FORMULATEXT(W39),\"\"HMOD\"\"),NOT(P_E>0)),0,W39)+IF(OR(REGEXMATCH(FORMULATEXT(X39),\"\"HMOD\"\"),NOT(P_R>0)),0,X39)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y39),\"\"HMOD\"\"),0,Y39)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),552.361949934123)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Graves": {
     "HP": 625,
@@ -1657,7 +1657,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Graves_0",
       "passive": "GravesTrueGrit",
@@ -1668,8 +1668,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U40),\"\"HMOD\"\"),NOT(P_Q>0)),0,U40)+IF(OR(REGEXMATCH(FORMULATEXT(V40),\"\"HMOD\"\"),NOT(P_W>0)),0,V40)+IF(OR(REGEXMATCH(FORMULATEXT(W40),\"\"HMOD\"\"),NOT(P_E>0)),0,W40)+IF(OR(REGEXMATCH(FORMULATEXT(X40),\"\"HMOD\"\"),NOT(P_R>0)),0,X40)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y40),\"\"HMOD\"\"),0,Y40)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),592.62512516469)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Gwen": {
     "HP": 620,
@@ -1701,7 +1701,7 @@
     "E-CD": "13.5 - 0.5 * P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Gwen_0",
       "passive": "Gwen_Passive",
@@ -1712,8 +1712,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U41),\"\"HMOD\"\"),NOT(P_Q>0)),0,U41)+IF(OR(REGEXMATCH(FORMULATEXT(V41),\"\"HMOD\"\"),NOT(P_W>0)),0,V41)+IF(OR(REGEXMATCH(FORMULATEXT(W41),\"\"HMOD\"\"),NOT(P_E>0)),0,W41)+IF(OR(REGEXMATCH(FORMULATEXT(X41),\"\"HMOD\"\"),NOT(P_R>0)),0,X41)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y41),\"\"HMOD\"\"),0,Y41)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),269.58164690382)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Hecarim": {
     "HP": 625,
@@ -1745,7 +1745,7 @@
     "E-CD": 18,
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Hecarim_0",
       "passive": "Hecarim_Passive",
@@ -1756,8 +1756,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U42),\"\"HMOD\"\"),NOT(P_Q>0)),0,U42)+IF(OR(REGEXMATCH(FORMULATEXT(V42),\"\"HMOD\"\"),NOT(P_W>0)),0,V42)+IF(OR(REGEXMATCH(FORMULATEXT(W42),\"\"HMOD\"\"),NOT(P_E>0)),0,W42)+IF(OR(REGEXMATCH(FORMULATEXT(X42),\"\"HMOD\"\"),NOT(P_R>0)),0,X42)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y42),\"\"HMOD\"\"),0,Y42)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),415.186192358366)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Heimerdinger": {
     "HP": 558,
@@ -1789,7 +1789,7 @@
     "E-CD": 11,
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Heimerdinger_0",
       "passive": "Heimerdinger_Passive",
@@ -1800,8 +1800,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U43),\"\"HMOD\"\"),NOT(P_Q>0)),0,U43)+IF(OR(REGEXMATCH(FORMULATEXT(V43),\"\"HMOD\"\"),NOT(P_W>0)),0,V43)+IF(OR(REGEXMATCH(FORMULATEXT(W43),\"\"HMOD\"\"),NOT(P_E>0)),0,W43)+IF(OR(REGEXMATCH(FORMULATEXT(X43),\"\"HMOD\"\"),NOT(P_R>0)),0,X43)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y43),\"\"HMOD\"\"),0,Y43)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),265.793768115942)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Illaoi": {
     "HP": 656,
@@ -1833,7 +1833,7 @@
     "E-CD": "17-1*P_E",
     "R-CD": "145-25*P_R",
     "P-CD": "20.75-0.75*Self_Level",
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Illaoi_0",
       "passive": "Illaoi_P",
@@ -1844,8 +1844,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U44),\"\"HMOD\"\"),NOT(P_Q>0)),0,U44)+IF(OR(REGEXMATCH(FORMULATEXT(V44),\"\"HMOD\"\"),NOT(P_W>0)),0,V44)+IF(OR(REGEXMATCH(FORMULATEXT(W44),\"\"HMOD\"\"),NOT(P_E>0)),0,W44)+IF(OR(REGEXMATCH(FORMULATEXT(X44),\"\"HMOD\"\"),NOT(P_R>0)),0,X44)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y44),\"\"HMOD\"\"),0,Y44)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),419.642492753623)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Irelia": {
     "HP": 590,
@@ -1877,7 +1877,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Irelia_0",
       "passive": "Irelia_Passive",
@@ -1888,8 +1888,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U45),\"\"HMOD\"\"),NOT(P_Q>0)),0,U45)+IF(OR(REGEXMATCH(FORMULATEXT(V45),\"\"HMOD\"\"),NOT(P_W>0)),0,V45)+IF(OR(REGEXMATCH(FORMULATEXT(W45),\"\"HMOD\"\"),NOT(P_E>0)),0,W45)+IF(OR(REGEXMATCH(FORMULATEXT(X45),\"\"HMOD\"\"),NOT(P_R>0)),0,X45)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y45),\"\"HMOD\"\"),0,Y45)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),381.604044795783)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Ivern": {
     "HP": 655,
@@ -1921,7 +1921,7 @@
     "E-CD": "12 - P_E",
     "R-CD": "150-P_R*10",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Ivern_0",
       "passive": "IvernP",
@@ -1932,8 +1932,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U46),\"\"HMOD\"\"),NOT(P_Q>0)),0,U46)+IF(OR(REGEXMATCH(FORMULATEXT(V46),\"\"HMOD\"\"),NOT(P_W>0)),0,V46)+IF(OR(REGEXMATCH(FORMULATEXT(W46),\"\"HMOD\"\"),NOT(P_E>0)),0,W46)+IF(OR(REGEXMATCH(FORMULATEXT(X46),\"\"HMOD\"\"),NOT(P_R>0)),0,X46)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y46),\"\"HMOD\"\"),0,Y46)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),378.639617918313)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Janna": {
     "HP": 570,
@@ -1965,7 +1965,7 @@
     "E-CD": "16.5 - 1.5 * P_E",
     "R-CD": "165-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Janna_0",
       "passive": "Janna_Tailwind",
@@ -1976,8 +1976,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U47),\"\"HMOD\"\"),NOT(P_Q>0)),0,U47)+IF(OR(REGEXMATCH(FORMULATEXT(V47),\"\"HMOD\"\"),NOT(P_W>0)),0,V47)+IF(OR(REGEXMATCH(FORMULATEXT(W47),\"\"HMOD\"\"),NOT(P_E>0)),0,W47)+IF(OR(REGEXMATCH(FORMULATEXT(X47),\"\"HMOD\"\"),NOT(P_R>0)),0,X47)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y47),\"\"HMOD\"\"),0,Y47)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),657.460434782608)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Jarvan IV": {
     "HP": 640,
@@ -2009,7 +2009,7 @@
     "E-CD": "12.5-0.5*P_E",
     "R-CD": "135-15*P_R",
     "P-CD": 6,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "JarvanIV_0",
       "passive": "JarvanIV_MartialCadence",
@@ -2020,8 +2020,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U48),\"\"HMOD\"\"),NOT(P_Q>0)),0,U48)+IF(OR(REGEXMATCH(FORMULATEXT(V48),\"\"HMOD\"\"),NOT(P_W>0)),0,V48)+IF(OR(REGEXMATCH(FORMULATEXT(W48),\"\"HMOD\"\"),NOT(P_E>0)),0,W48)+IF(OR(REGEXMATCH(FORMULATEXT(X48),\"\"HMOD\"\"),NOT(P_R>0)),0,X48)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y48),\"\"HMOD\"\"),0,Y48)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),556.081712779973)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Jax": {
     "HP": 665,
@@ -2053,7 +2053,7 @@
     "E-CD": "15.5-1.5*P_E",
     "R-CD": "110 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Jax_0",
       "passive": "Armsmaster_MasterOfArms",
@@ -2064,8 +2064,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U49),\"\"HMOD\"\"),NOT(P_Q>0)),0,U49)+IF(OR(REGEXMATCH(FORMULATEXT(V49),\"\"HMOD\"\"),NOT(P_W>0)),0,V49)+IF(OR(REGEXMATCH(FORMULATEXT(W49),\"\"HMOD\"\"),NOT(P_E>0)),0,W49)+IF(OR(REGEXMATCH(FORMULATEXT(X49),\"\"HMOD\"\"),NOT(P_R>0)),0,X49)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y49),\"\"HMOD\"\"),0,Y49)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),446.426179183135)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Jayce": {
     "HP": 590,
@@ -2108,8 +2108,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U50),\"\"HMOD\"\"),NOT(P_Q>0)),0,U50)+IF(OR(REGEXMATCH(FORMULATEXT(V50),\"\"HMOD\"\"),NOT(P_W>0)),0,V50)+IF(OR(REGEXMATCH(FORMULATEXT(W50),\"\"HMOD\"\"),NOT(P_E>0)),0,W50)+IF(OR(REGEXMATCH(FORMULATEXT(X50),\"\"HMOD\"\"),NOT(P_R>0)),0,X50)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y50),\"\"HMOD\"\"),0,Y50)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),347.414321475625)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Jhin": {
     "HP": 655,
@@ -2141,7 +2141,7 @@
     "E-CD": "26.5-2.5*P_E",
     "R-CD": "135-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Jhin_0",
       "passive": "Jhin_P",
@@ -2152,8 +2152,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U51),\"\"HMOD\"\"),NOT(P_Q>0)),0,U51)+IF(OR(REGEXMATCH(FORMULATEXT(V51),\"\"HMOD\"\"),NOT(P_W>0)),0,V51)+IF(OR(REGEXMATCH(FORMULATEXT(W51),\"\"HMOD\"\"),NOT(P_E>0)),0,W51)+IF(OR(REGEXMATCH(FORMULATEXT(X51),\"\"HMOD\"\"),NOT(P_R>0)),0,X51)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y51),\"\"HMOD\"\"),0,Y51)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),408.679143610013)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Jinx": {
     "HP": 630,
@@ -2185,7 +2185,7 @@
     "E-CD": "27.5-3.5*P_E",
     "R-CD": "85 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Jinx_0",
       "passive": "Jinx_Passive",
@@ -2196,8 +2196,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U52),\"\"HMOD\"\"),NOT(P_Q>0)),0,U52)+IF(OR(REGEXMATCH(FORMULATEXT(V52),\"\"HMOD\"\"),NOT(P_W>0)),0,V52)+IF(OR(REGEXMATCH(FORMULATEXT(W52),\"\"HMOD\"\"),NOT(P_E>0)),0,W52)+IF(OR(REGEXMATCH(FORMULATEXT(X52),\"\"HMOD\"\"),NOT(P_R>0)),0,X52)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y52),\"\"HMOD\"\"),0,Y52)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),543.824071146245)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kai'Sa": {
     "HP": 670,
@@ -2229,7 +2229,7 @@
     "E-CD": "17.5-1.5*P_E",
     "R-CD": "160-30*P_R",
     "P-CD": "IF(Self_AS>0,IF(Calc!C49,4,5)/Self_AS,1)",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Kaisa_0",
       "passive": "Kaisa_Passive",
@@ -2240,8 +2240,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U53),\"\"HMOD\"\"),NOT(P_Q>0)),0,U53)+IF(OR(REGEXMATCH(FORMULATEXT(V53),\"\"HMOD\"\"),NOT(P_W>0)),0,V53)+IF(OR(REGEXMATCH(FORMULATEXT(W53),\"\"HMOD\"\"),NOT(P_E>0)),0,W53)+IF(OR(REGEXMATCH(FORMULATEXT(X53),\"\"HMOD\"\"),NOT(P_R>0)),0,X53)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y53),\"\"HMOD\"\"),0,Y53)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),403.133689064558)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kalista": {
     "HP": 574,
@@ -2273,7 +2273,7 @@
     "E-CD": "16.5-2.5*P_E",
     "R-CD": "180-30*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Kalista_0",
       "passive": "Kalista_Passive",
@@ -2284,8 +2284,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U54),\"\"HMOD\"\"),NOT(P_Q>0)),0,U54)+IF(OR(REGEXMATCH(FORMULATEXT(V54),\"\"HMOD\"\"),NOT(P_W>0)),0,V54)+IF(OR(REGEXMATCH(FORMULATEXT(W54),\"\"HMOD\"\"),NOT(P_E>0)),0,W54)+IF(OR(REGEXMATCH(FORMULATEXT(X54),\"\"HMOD\"\"),NOT(P_R>0)),0,X54)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y54),\"\"HMOD\"\"),0,Y54)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),415.530263504611)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Karma": {
     "HP": 604,
@@ -2317,7 +2317,7 @@
     "E-CD": "10.5-0.5*P_E",
     "R-CD": "42-2*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Karma_0",
       "passive": "Karma_Passive",
@@ -2328,8 +2328,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U55),\"\"HMOD\"\"),NOT(P_Q>0)),0,U55)+IF(OR(REGEXMATCH(FORMULATEXT(V55),\"\"HMOD\"\"),NOT(P_W>0)),0,V55)+IF(OR(REGEXMATCH(FORMULATEXT(W55),\"\"HMOD\"\"),NOT(P_E>0)),0,W55)+IF(OR(REGEXMATCH(FORMULATEXT(X55),\"\"HMOD\"\"),NOT(P_R>0)),0,X55)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y55),\"\"HMOD\"\"),0,Y55)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),381.399828722001)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Karthus": {
     "HP": 620,
@@ -2361,7 +2361,7 @@
     "E-CD": 1,
     "R-CD": "220-20*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Karthus_0",
       "passive": "Karthus_Passive",
@@ -2372,8 +2372,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U56),\"\"HMOD\"\"),NOT(P_Q>0)),0,U56)+IF(OR(REGEXMATCH(FORMULATEXT(V56),\"\"HMOD\"\"),NOT(P_W>0)),0,V56)+IF(OR(REGEXMATCH(FORMULATEXT(W56),\"\"HMOD\"\"),NOT(P_E>0)),0,W56)+IF(OR(REGEXMATCH(FORMULATEXT(X56),\"\"HMOD\"\"),NOT(P_R>0)),0,X56)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y56),\"\"HMOD\"\"),0,Y56)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),379.051343873517)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kassadin": {
     "HP": 646,
@@ -2405,7 +2405,7 @@
     "E-CD": "22 - 1 * P_E",
     "R-CD": "6.5-1.5*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Kassadin_0",
       "passive": "Kassadin_Passive",
@@ -2416,8 +2416,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U57),\"\"HMOD\"\"),NOT(P_Q>0)),0,U57)+IF(OR(REGEXMATCH(FORMULATEXT(V57),\"\"HMOD\"\"),NOT(P_W>0)),0,V57)+IF(OR(REGEXMATCH(FORMULATEXT(W57),\"\"HMOD\"\"),NOT(P_E>0)),0,W57)+IF(OR(REGEXMATCH(FORMULATEXT(X57),\"\"HMOD\"\"),NOT(P_R>0)),0,X57)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y57),\"\"HMOD\"\"),0,Y57)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),365.793768115942)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Katarina": {
     "HP": 672,
@@ -2449,7 +2449,7 @@
     "E-CD": "15.5-1.5*P_E",
     "R-CD": "IF(P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Katarina_0",
       "passive": "Katarina_Passive",
@@ -2460,8 +2460,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U58),\"\"HMOD\"\"),NOT(P_Q>0)),0,U58)+IF(OR(REGEXMATCH(FORMULATEXT(V58),\"\"HMOD\"\"),NOT(P_W>0)),0,V58)+IF(OR(REGEXMATCH(FORMULATEXT(W58),\"\"HMOD\"\"),NOT(P_E>0)),0,W58)+IF(OR(REGEXMATCH(FORMULATEXT(X58),\"\"HMOD\"\"),NOT(P_R>0)),0,X58)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y58),\"\"HMOD\"\"),0,Y58)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),609.733162055335)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Kayle": {
     "HP": 670,
@@ -2493,7 +2493,7 @@
     "E-CD": 8,
     "R-CD": "200-40*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Kayle_0",
       "passive": "Kayle_P",
@@ -2504,8 +2504,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U59),\"\"HMOD\"\"),NOT(P_Q>0)),0,U59)+IF(OR(REGEXMATCH(FORMULATEXT(V59),\"\"HMOD\"\"),NOT(P_W>0)),0,V59)+IF(OR(REGEXMATCH(FORMULATEXT(W59),\"\"HMOD\"\"),NOT(P_E>0)),0,W59)+IF(OR(REGEXMATCH(FORMULATEXT(X59),\"\"HMOD\"\"),NOT(P_R>0)),0,X59)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y59),\"\"HMOD\"\"),0,Y59)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),439.733162055335)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kayn": {
     "HP": 655,
@@ -2537,7 +2537,7 @@
     "E-CD": "IF(Steroid_Form,10,23-2*P_E)",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Kayn_0",
       "passive": "Kayn_Passive_Primary",
@@ -2548,8 +2548,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U60),\"\"HMOD\"\"),NOT(P_Q>0)),0,U60)+IF(OR(REGEXMATCH(FORMULATEXT(V60),\"\"HMOD\"\"),NOT(P_W>0)),0,V60)+IF(OR(REGEXMATCH(FORMULATEXT(W60),\"\"HMOD\"\"),NOT(P_E>0)),0,W60)+IF(OR(REGEXMATCH(FORMULATEXT(X60),\"\"HMOD\"\"),NOT(P_R>0)),0,X60)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y60),\"\"HMOD\"\"),0,Y60)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),486.953188405797)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kennen": {
     "HP": 611,
@@ -2581,7 +2581,7 @@
     "E-CD": "11-P_E",
     "R-CD": 120,
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Kennen_0",
       "passive": "Kennen_Passive",
@@ -2592,8 +2592,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U61),\"\"HMOD\"\"),NOT(P_Q>0)),0,U61)+IF(OR(REGEXMATCH(FORMULATEXT(V61),\"\"HMOD\"\"),NOT(P_W>0)),0,V61)+IF(OR(REGEXMATCH(FORMULATEXT(W61),\"\"HMOD\"\"),NOT(P_E>0)),0,W61)+IF(OR(REGEXMATCH(FORMULATEXT(X61),\"\"HMOD\"\"),NOT(P_R>0)),0,X61)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y61),\"\"HMOD\"\"),0,Y61)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),596.854374176548)",
     "Trade Calc": 0,
-    "Energy": "TRUE",
-    "No Mana": "FALSE"
+    "Energy": 1,
+    "No Mana": 0
   },
   "Kha'Zix": {
     "HP": 643,
@@ -2625,7 +2625,7 @@
     "E-CD": "22-P_E*2",
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Khazix_0",
       "passive": "Khazix_P",
@@ -2636,8 +2636,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U62),\"\"HMOD\"\"),NOT(P_Q>0)),0,U62)+IF(OR(REGEXMATCH(FORMULATEXT(V62),\"\"HMOD\"\"),NOT(P_W>0)),0,V62)+IF(OR(REGEXMATCH(FORMULATEXT(W62),\"\"HMOD\"\"),NOT(P_E>0)),0,W62)+IF(OR(REGEXMATCH(FORMULATEXT(X62),\"\"HMOD\"\"),NOT(P_R>0)),0,X62)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y62),\"\"HMOD\"\"),0,Y62)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),345.602727272727)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kindred": {
     "HP": 610,
@@ -2669,7 +2669,7 @@
     "E-CD": "15-P_E",
     "R-CD": "210-30*P_R",
     "P-CD": 40,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Kindred_0",
       "passive": "Kindred_Passive",
@@ -2680,8 +2680,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U63),\"\"HMOD\"\"),NOT(P_Q>0)),0,U63)+IF(OR(REGEXMATCH(FORMULATEXT(V63),\"\"HMOD\"\"),NOT(P_W>0)),0,V63)+IF(OR(REGEXMATCH(FORMULATEXT(W63),\"\"HMOD\"\"),NOT(P_E>0)),0,W63)+IF(OR(REGEXMATCH(FORMULATEXT(X63),\"\"HMOD\"\"),NOT(P_R>0)),0,X63)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y63),\"\"HMOD\"\"),0,Y63)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),521.105032938076)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Kled": {
     "HP": "410+IF(Steroid_Form,0,400)",
@@ -2713,7 +2713,7 @@
     "E-CD": "14-P_E",
     "R-CD": "155-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Kled_0",
       "passive": "Kled_P",
@@ -2724,8 +2724,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U64),\"\"HMOD\"\"),NOT(P_Q>0)),0,U64)+IF(OR(REGEXMATCH(FORMULATEXT(V64),\"\"HMOD\"\"),NOT(P_W>0)),0,V64)+IF(OR(REGEXMATCH(FORMULATEXT(W64),\"\"HMOD\"\"),NOT(P_E>0)),0,W64)+IF(OR(REGEXMATCH(FORMULATEXT(X64),\"\"HMOD\"\"),NOT(P_R>0)),0,X64)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y64),\"\"HMOD\"\"),0,Y64)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),499.670579710144)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Kog'Maw": {
     "HP": 635,
@@ -2757,7 +2757,7 @@
     "E-CD": 12,
     "R-CD": "2.5-0.5*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "KogMaw_0",
       "passive": "KogMaw_IcathianSurprise",
@@ -2768,8 +2768,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U65),\"\"HMOD\"\"),NOT(P_Q>0)),0,U65)+IF(OR(REGEXMATCH(FORMULATEXT(V65),\"\"HMOD\"\"),NOT(P_W>0)),0,V65)+IF(OR(REGEXMATCH(FORMULATEXT(W65),\"\"HMOD\"\"),NOT(P_E>0)),0,W65)+IF(OR(REGEXMATCH(FORMULATEXT(X65),\"\"HMOD\"\"),NOT(P_R>0)),0,X65)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y65),\"\"HMOD\"\"),0,Y65)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),553.33164690382)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "LeBlanc": {
     "HP": 598,
@@ -2801,7 +2801,7 @@
     "E-CD": "14.75-0.75*P_E",
     "R-CD": "60 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Leblanc_0",
       "passive": "LeBlancP",
@@ -2812,8 +2812,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U66),\"\"HMOD\"\"),NOT(P_Q>0)),0,U66)+IF(OR(REGEXMATCH(FORMULATEXT(V66),\"\"HMOD\"\"),NOT(P_W>0)),0,V66)+IF(OR(REGEXMATCH(FORMULATEXT(W66),\"\"HMOD\"\"),NOT(P_E>0)),0,W66)+IF(OR(REGEXMATCH(FORMULATEXT(X66),\"\"HMOD\"\"),NOT(P_R>0)),0,X66)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y66),\"\"HMOD\"\"),0,Y66)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),449.127101449275)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Lee Sin": {
     "HP": 645,
@@ -2845,7 +2845,7 @@
     "E-CD": 9,
     "R-CD": "135-25*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "LeeSin_0",
       "passive": "LeeSinPassive",
@@ -2856,8 +2856,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U67),\"\"HMOD\"\"),NOT(P_Q>0)),0,U67)+IF(OR(REGEXMATCH(FORMULATEXT(V67),\"\"HMOD\"\"),NOT(P_W>0)),0,V67)+IF(OR(REGEXMATCH(FORMULATEXT(W67),\"\"HMOD\"\"),NOT(P_E>0)),0,W67)+IF(OR(REGEXMATCH(FORMULATEXT(X67),\"\"HMOD\"\"),NOT(P_R>0)),0,X67)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y67),\"\"HMOD\"\"),0,Y67)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),522.183754940711)",
     "Trade Calc": 0,
-    "Energy": "TRUE",
-    "No Mana": "FALSE"
+    "Energy": 1,
+    "No Mana": 0
   },
   "Leona": {
     "HP": 646,
@@ -2889,7 +2889,7 @@
     "E-CD": "13.5-1.5*P_E",
     "R-CD": "105-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Leona_0",
       "passive": "LeonaSunlight",
@@ -2900,8 +2900,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U68),\"\"HMOD\"\"),NOT(P_Q>0)),0,U68)+IF(OR(REGEXMATCH(FORMULATEXT(V68),\"\"HMOD\"\"),NOT(P_W>0)),0,V68)+IF(OR(REGEXMATCH(FORMULATEXT(W68),\"\"HMOD\"\"),NOT(P_E>0)),0,W68)+IF(OR(REGEXMATCH(FORMULATEXT(X68),\"\"HMOD\"\"),NOT(P_R>0)),0,X68)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y68),\"\"HMOD\"\"),0,Y68)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),363.521040843214)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Lillia": {
     "HP": 605,
@@ -2933,7 +2933,7 @@
     "E-CD": "16.5 - 0.5 * P_E",
     "R-CD": "170-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Lillia_0",
       "passive": "Lillia_Icon_Passive",
@@ -2944,8 +2944,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U69),\"\"HMOD\"\"),NOT(P_Q>0)),0,U69)+IF(OR(REGEXMATCH(FORMULATEXT(V69),\"\"HMOD\"\"),NOT(P_W>0)),0,V69)+IF(OR(REGEXMATCH(FORMULATEXT(W69),\"\"HMOD\"\"),NOT(P_E>0)),0,W69)+IF(OR(REGEXMATCH(FORMULATEXT(X69),\"\"HMOD\"\"),NOT(P_R>0)),0,X69)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y69),\"\"HMOD\"\"),0,Y69)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),405.566495388669)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Lissandra": {
     "HP": 620,
@@ -2977,7 +2977,7 @@
     "E-CD": "27-3*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 18,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Lissandra_0",
       "passive": "Lissandra_Passive",
@@ -2988,8 +2988,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U70),\"\"HMOD\"\"),NOT(P_Q>0)),0,U70)+IF(OR(REGEXMATCH(FORMULATEXT(V70),\"\"HMOD\"\"),NOT(P_W>0)),0,V70)+IF(OR(REGEXMATCH(FORMULATEXT(W70),\"\"HMOD\"\"),NOT(P_E>0)),0,W70)+IF(OR(REGEXMATCH(FORMULATEXT(X70),\"\"HMOD\"\"),NOT(P_R>0)),0,X70)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y70),\"\"HMOD\"\"),0,Y70)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),551.399828722001)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Lucian": {
     "HP": 641,
@@ -3021,7 +3021,7 @@
     "E-CD": "24-2*P_E",
     "R-CD": "120-10*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Lucian_0",
       "passive": "Lucian_Passive",
@@ -3032,8 +3032,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U71),\"\"HMOD\"\"),NOT(P_Q>0)),0,U71)+IF(OR(REGEXMATCH(FORMULATEXT(V71),\"\"HMOD\"\"),NOT(P_W>0)),0,V71)+IF(OR(REGEXMATCH(FORMULATEXT(W71),\"\"HMOD\"\"),NOT(P_E>0)),0,W71)+IF(OR(REGEXMATCH(FORMULATEXT(X71),\"\"HMOD\"\"),NOT(P_R>0)),0,X71)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y71),\"\"HMOD\"\"),0,Y71)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),835.161357048748)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Lulu": {
     "HP": 595,
@@ -3065,7 +3065,7 @@
     "E-CD": 8,
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Lulu_0",
       "passive": "Lulu_PixFaerieCompanion",
@@ -3076,8 +3076,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U72),\"\"HMOD\"\"),NOT(P_Q>0)),0,U72)+IF(OR(REGEXMATCH(FORMULATEXT(V72),\"\"HMOD\"\"),NOT(P_W>0)),0,V72)+IF(OR(REGEXMATCH(FORMULATEXT(W72),\"\"HMOD\"\"),NOT(P_E>0)),0,W72)+IF(OR(REGEXMATCH(FORMULATEXT(X72),\"\"HMOD\"\"),NOT(P_R>0)),0,X72)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y72),\"\"HMOD\"\"),0,Y72)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),583.97558629776)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Lux": {
     "HP": 560,
@@ -3109,7 +3109,7 @@
     "E-CD": "10.5-0.5*P_E",
     "R-CD": "70 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Lux_0",
       "passive": "LuxIlluminatingFraulein",
@@ -3120,8 +3120,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U73),\"\"HMOD\"\"),NOT(P_Q>0)),0,U73)+IF(OR(REGEXMATCH(FORMULATEXT(V73),\"\"HMOD\"\"),NOT(P_W>0)),0,V73)+IF(OR(REGEXMATCH(FORMULATEXT(W73),\"\"HMOD\"\"),NOT(P_E>0)),0,W73)+IF(OR(REGEXMATCH(FORMULATEXT(X73),\"\"HMOD\"\"),NOT(P_R>0)),0,X73)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y73),\"\"HMOD\"\"),0,Y73)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),623.824071146245)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Malphite": {
     "HP": 644,
@@ -3153,7 +3153,7 @@
     "E-CD": 7,
     "R-CD": "155-25*P_R",
     "P-CD": 8,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Malphite_0",
       "passive": "Malphite_GraniteShield",
@@ -3164,8 +3164,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U74),\"\"HMOD\"\"),NOT(P_Q>0)),0,U74)+IF(OR(REGEXMATCH(FORMULATEXT(V74),\"\"HMOD\"\"),NOT(P_W>0)),0,V74)+IF(OR(REGEXMATCH(FORMULATEXT(W74),\"\"HMOD\"\"),NOT(P_E>0)),0,W74)+IF(OR(REGEXMATCH(FORMULATEXT(X74),\"\"HMOD\"\"),NOT(P_R>0)),0,X74)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y74),\"\"HMOD\"\"),0,Y74)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),548.799696969696)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Malzahar": {
     "HP": 580,
@@ -3197,7 +3197,7 @@
     "E-CD": "17-2*P_E",
     "R-CD": "170-30*P_R",
     "P-CD": 30,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Malzahar_0",
       "passive": "Malzahar_Passive",
@@ -3208,8 +3208,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U75),\"\"HMOD\"\"),NOT(P_Q>0)),0,U75)+IF(OR(REGEXMATCH(FORMULATEXT(V75),\"\"HMOD\"\"),NOT(P_W>0)),0,V75)+IF(OR(REGEXMATCH(FORMULATEXT(W75),\"\"HMOD\"\"),NOT(P_E>0)),0,W75)+IF(OR(REGEXMATCH(FORMULATEXT(X75),\"\"HMOD\"\"),NOT(P_R>0)),0,X75)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y75),\"\"HMOD\"\"),0,Y75)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),454.430131752305)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Maokai": {
     "HP": 635,
@@ -3241,7 +3241,7 @@
     "E-CD": 14,
     "R-CD": "130 - 10 * P_R",
     "P-CD": 30,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Maokai_0",
       "passive": "Maokai_Passive",
@@ -3252,8 +3252,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U76),\"\"HMOD\"\"),NOT(P_Q>0)),0,U76)+IF(OR(REGEXMATCH(FORMULATEXT(V76),\"\"HMOD\"\"),NOT(P_W>0)),0,V76)+IF(OR(REGEXMATCH(FORMULATEXT(W76),\"\"HMOD\"\"),NOT(P_E>0)),0,W76)+IF(OR(REGEXMATCH(FORMULATEXT(X76),\"\"HMOD\"\"),NOT(P_R>0)),0,X76)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y76),\"\"HMOD\"\"),0,Y76)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),487.649828722001)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Master Yi": {
     "HP": 669,
@@ -3285,7 +3285,7 @@
     "E-CD": 18,
     "R-CD": 85,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "MasterYi_0",
       "passive": "MasterYi_Passive1",
@@ -3296,8 +3296,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U77),\"\"HMOD\"\"),NOT(P_Q>0)),0,U77)+IF(OR(REGEXMATCH(FORMULATEXT(V77),\"\"HMOD\"\"),NOT(P_W>0)),0,V77)+IF(OR(REGEXMATCH(FORMULATEXT(W77),\"\"HMOD\"\"),NOT(P_E>0)),0,W77)+IF(OR(REGEXMATCH(FORMULATEXT(X77),\"\"HMOD\"\"),NOT(P_R>0)),0,X77)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y77),\"\"HMOD\"\"),0,Y77)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),394.416956521739)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Miss Fortune": {
     "HP": 640,
@@ -3329,7 +3329,7 @@
     "E-CD": "19-P_E",
     "R-CD": "130 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "MissFortune_0",
       "passive": "MissFortune_W",
@@ -3340,8 +3340,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U78),\"\"HMOD\"\"),NOT(P_Q>0)),0,U78)+IF(OR(REGEXMATCH(FORMULATEXT(V78),\"\"HMOD\"\"),NOT(P_W>0)),0,V78)+IF(OR(REGEXMATCH(FORMULATEXT(W78),\"\"HMOD\"\"),NOT(P_E>0)),0,W78)+IF(OR(REGEXMATCH(FORMULATEXT(X78),\"\"HMOD\"\"),NOT(P_R>0)),0,X78)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y78),\"\"HMOD\"\"),0,Y78)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),808.316824769433)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Mordekaiser": {
     "HP": 645,
@@ -3373,7 +3373,7 @@
     "E-CD": "20-2*P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Mordekaiser_0",
       "passive": "MordekaiserPassive",
@@ -3384,8 +3384,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U79),\"\"HMOD\"\"),NOT(P_Q>0)),0,U79)+IF(OR(REGEXMATCH(FORMULATEXT(V79),\"\"HMOD\"\"),NOT(P_W>0)),0,V79)+IF(OR(REGEXMATCH(FORMULATEXT(W79),\"\"HMOD\"\"),NOT(P_E>0)),0,W79)+IF(OR(REGEXMATCH(FORMULATEXT(X79),\"\"HMOD\"\"),NOT(P_R>0)),0,X79)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y79),\"\"HMOD\"\"),0,Y79)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),367.536192358366)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Morgana": {
     "HP": 630,
@@ -3417,7 +3417,7 @@
     "E-CD": "26-2*P_E",
     "R-CD": "130 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Morgana_0",
       "passive": "FallenAngel_Empathize",
@@ -3428,8 +3428,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U80),\"\"HMOD\"\"),NOT(P_Q>0)),0,U80)+IF(OR(REGEXMATCH(FORMULATEXT(V80),\"\"HMOD\"\"),NOT(P_W>0)),0,V80)+IF(OR(REGEXMATCH(FORMULATEXT(W80),\"\"HMOD\"\"),NOT(P_E>0)),0,W80)+IF(OR(REGEXMATCH(FORMULATEXT(X80),\"\"HMOD\"\"),NOT(P_R>0)),0,X80)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y80),\"\"HMOD\"\"),0,Y80)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),612.460434782608)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Nami": {
     "HP": 560,
@@ -3461,7 +3461,7 @@
     "E-CD": 11,
     "R-CD": "130 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Nami_0",
       "passive": "NamiPassive",
@@ -3472,8 +3472,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U81),\"\"HMOD\"\"),NOT(P_Q>0)),0,U81)+IF(OR(REGEXMATCH(FORMULATEXT(V81),\"\"HMOD\"\"),NOT(P_W>0)),0,V81)+IF(OR(REGEXMATCH(FORMULATEXT(W81),\"\"HMOD\"\"),NOT(P_E>0)),0,W81)+IF(OR(REGEXMATCH(FORMULATEXT(X81),\"\"HMOD\"\"),NOT(P_R>0)),0,X81)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y81),\"\"HMOD\"\"),0,Y81)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),505.490737812911)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Nasus": {
     "HP": 631,
@@ -3505,7 +3505,7 @@
     "E-CD": 12,
     "R-CD": 120,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Nasus_0",
       "passive": "Nasus_Passive",
@@ -3516,8 +3516,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U82),\"\"HMOD\"\"),NOT(P_Q>0)),0,U82)+IF(OR(REGEXMATCH(FORMULATEXT(V82),\"\"HMOD\"\"),NOT(P_W>0)),0,V82)+IF(OR(REGEXMATCH(FORMULATEXT(W82),\"\"HMOD\"\"),NOT(P_E>0)),0,W82)+IF(OR(REGEXMATCH(FORMULATEXT(X82),\"\"HMOD\"\"),NOT(P_R>0)),0,X82)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y82),\"\"HMOD\"\"),0,Y82)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),335.276640316205)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Nautilus": {
     "HP": 646,
@@ -3549,7 +3549,7 @@
     "E-CD": "7.5-0.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 6,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Nautilus_0",
       "passive": "Nautilus_StaggeringBlow",
@@ -3560,8 +3560,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U83),\"\"HMOD\"\"),NOT(P_Q>0)),0,U83)+IF(OR(REGEXMATCH(FORMULATEXT(V83),\"\"HMOD\"\"),NOT(P_W>0)),0,V83)+IF(OR(REGEXMATCH(FORMULATEXT(W83),\"\"HMOD\"\"),NOT(P_E>0)),0,W83)+IF(OR(REGEXMATCH(FORMULATEXT(X83),\"\"HMOD\"\"),NOT(P_R>0)),0,X83)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y83),\"\"HMOD\"\"),0,Y83)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),476.23513833992)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Neeko": {
     "HP": 610,
@@ -3593,7 +3593,7 @@
     "E-CD": "12.5-0.5*P_E",
     "R-CD": "135-15*P_R",
     "P-CD": 2,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Neeko_0",
       "passive": "Neeko_P",
@@ -3604,8 +3604,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U84),\"\"HMOD\"\"),NOT(P_Q>0)),0,U84)+IF(OR(REGEXMATCH(FORMULATEXT(V84),\"\"HMOD\"\"),NOT(P_W>0)),0,V84)+IF(OR(REGEXMATCH(FORMULATEXT(W84),\"\"HMOD\"\"),NOT(P_E>0)),0,W84)+IF(OR(REGEXMATCH(FORMULATEXT(X84),\"\"HMOD\"\"),NOT(P_R>0)),0,X84)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y84),\"\"HMOD\"\"),0,Y84)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),456.702859025032)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Nidalee": {
     "HP": 610,
@@ -3637,7 +3637,7 @@
     "E-CD": "IF(Steroid_Form,6,12)",
     "R-CD": 3,
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Nidalee_0",
       "passive": "Nidalee_Passive",
@@ -3648,8 +3648,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U85),\"\"HMOD\"\"),NOT(P_Q>0)),0,U85)+IF(OR(REGEXMATCH(FORMULATEXT(V85),\"\"HMOD\"\"),NOT(P_W>0)),0,V85)+IF(OR(REGEXMATCH(FORMULATEXT(W85),\"\"HMOD\"\"),NOT(P_E>0)),0,W85)+IF(OR(REGEXMATCH(FORMULATEXT(X85),\"\"HMOD\"\"),NOT(P_R>0)),0,X85)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y85),\"\"HMOD\"\"),0,Y85)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),290.945283267457)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Nocturne": {
     "HP": 655,
@@ -3681,7 +3681,7 @@
     "E-CD": "16-P_E",
     "R-CD": "165-25*P_R",
     "P-CD": 13,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Nocturne_0",
       "passive": "Nocturne_UmbraBlades",
@@ -3692,8 +3692,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U86),\"\"HMOD\"\"),NOT(P_Q>0)),0,U86)+IF(OR(REGEXMATCH(FORMULATEXT(V86),\"\"HMOD\"\"),NOT(P_W>0)),0,V86)+IF(OR(REGEXMATCH(FORMULATEXT(W86),\"\"HMOD\"\"),NOT(P_E>0)),0,W86)+IF(OR(REGEXMATCH(FORMULATEXT(X86),\"\"HMOD\"\"),NOT(P_R>0)),0,X86)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y86),\"\"HMOD\"\"),0,Y86)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),458.646205533596)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Nunu": {
     "HP": 610,
@@ -3725,7 +3725,7 @@
     "E-CD": "15-P_E",
     "R-CD": "120-10*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Nunu_0",
       "passive": "NunuPassive",
@@ -3736,8 +3736,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U87),\"\"HMOD\"\"),NOT(P_Q>0)),0,U87)+IF(OR(REGEXMATCH(FORMULATEXT(V87),\"\"HMOD\"\"),NOT(P_W>0)),0,V87)+IF(OR(REGEXMATCH(FORMULATEXT(W87),\"\"HMOD\"\"),NOT(P_E>0)),0,W87)+IF(OR(REGEXMATCH(FORMULATEXT(X87),\"\"HMOD\"\"),NOT(P_R>0)),0,X87)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y87),\"\"HMOD\"\"),0,Y87)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),856.702859025032)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Olaf": {
     "HP": 645,
@@ -3769,7 +3769,7 @@
     "E-CD": "12 - P_E",
     "R-CD": "110 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Olaf_0",
       "passive": "Olaf_Passive",
@@ -3780,8 +3780,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U88),\"\"HMOD\"\"),NOT(P_Q>0)),0,U88)+IF(OR(REGEXMATCH(FORMULATEXT(V88),\"\"HMOD\"\"),NOT(P_W>0)),0,V88)+IF(OR(REGEXMATCH(FORMULATEXT(W88),\"\"HMOD\"\"),NOT(P_E>0)),0,W88)+IF(OR(REGEXMATCH(FORMULATEXT(X88),\"\"HMOD\"\"),NOT(P_R>0)),0,X88)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y88),\"\"HMOD\"\"),0,Y88)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),345.793768115942)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Orianna": {
     "HP": 600,
@@ -3813,7 +3813,7 @@
     "E-CD": 9,
     "R-CD": "125-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Orianna_0",
       "passive": "OriannaPassive",
@@ -3824,8 +3824,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U89),\"\"HMOD\"\"),NOT(P_Q>0)),0,U89)+IF(OR(REGEXMATCH(FORMULATEXT(V89),\"\"HMOD\"\"),NOT(P_W>0)),0,V89)+IF(OR(REGEXMATCH(FORMULATEXT(W89),\"\"HMOD\"\"),NOT(P_E>0)),0,W89)+IF(OR(REGEXMATCH(FORMULATEXT(X89),\"\"HMOD\"\"),NOT(P_R>0)),0,X89)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y89),\"\"HMOD\"\"),0,Y89)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),513.521040843214)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Ornn": {
     "HP": 660,
@@ -3857,7 +3857,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Ornn_0",
       "passive": "OrnnP",
@@ -3868,8 +3868,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U90),\"\"HMOD\"\"),NOT(P_Q>0)),0,U90)+IF(OR(REGEXMATCH(FORMULATEXT(V90),\"\"HMOD\"\"),NOT(P_W>0)),0,V90)+IF(OR(REGEXMATCH(FORMULATEXT(W90),\"\"HMOD\"\"),NOT(P_E>0)),0,W90)+IF(OR(REGEXMATCH(FORMULATEXT(X90),\"\"HMOD\"\"),NOT(P_R>0)),0,X90)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y90),\"\"HMOD\"\"),0,Y90)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),596.228550724637)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Pantheon": {
     "HP": 650,
@@ -3901,7 +3901,7 @@
     "E-CD": "23 - P_E",
     "R-CD": "195-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Pantheon_0",
       "passive": "Pantheon_Passive",
@@ -3912,8 +3912,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U91),\"\"HMOD\"\"),NOT(P_Q>0)),0,U91)+IF(OR(REGEXMATCH(FORMULATEXT(V91),\"\"HMOD\"\"),NOT(P_W>0)),0,V91)+IF(OR(REGEXMATCH(FORMULATEXT(W91),\"\"HMOD\"\"),NOT(P_E>0)),0,W91)+IF(OR(REGEXMATCH(FORMULATEXT(X91),\"\"HMOD\"\"),NOT(P_R>0)),0,X91)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y91),\"\"HMOD\"\"),0,Y91)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),620.240408432147)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Poppy": {
     "HP": 610,
@@ -3945,7 +3945,7 @@
     "E-CD": "15-P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 13,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Poppy_0",
       "passive": "Poppy_Passive",
@@ -3956,8 +3956,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U92),\"\"HMOD\"\"),NOT(P_Q>0)),0,U92)+IF(OR(REGEXMATCH(FORMULATEXT(V92),\"\"HMOD\"\"),NOT(P_W>0)),0,V92)+IF(OR(REGEXMATCH(FORMULATEXT(W92),\"\"HMOD\"\"),NOT(P_E>0)),0,W92)+IF(OR(REGEXMATCH(FORMULATEXT(X92),\"\"HMOD\"\"),NOT(P_R>0)),0,X92)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y92),\"\"HMOD\"\"),0,Y92)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),543.395876152832)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Pyke": {
     "HP": 670,
@@ -3989,7 +3989,7 @@
     "E-CD": "16-P_E",
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Pyke_0",
       "passive": "PykePassive",
@@ -4000,8 +4000,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U93),\"\"HMOD\"\"),NOT(P_Q>0)),0,U93)+IF(OR(REGEXMATCH(FORMULATEXT(V93),\"\"HMOD\"\"),NOT(P_W>0)),0,V93)+IF(OR(REGEXMATCH(FORMULATEXT(W93),\"\"HMOD\"\"),NOT(P_E>0)),0,W93)+IF(OR(REGEXMATCH(FORMULATEXT(X93),\"\"HMOD\"\"),NOT(P_R>0)),0,X93)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y93),\"\"HMOD\"\"),0,Y93)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),342.24304347826)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Qiyana": {
     "HP": 590,
@@ -4033,7 +4033,7 @@
     "E-CD": "12 - P_E",
     "R-CD": 120,
     "P-CD": 25,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Qiyana_0",
       "passive": "Qiyana_Passive",
@@ -4044,8 +4044,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U94),\"\"HMOD\"\"),NOT(P_Q>0)),0,U94)+IF(OR(REGEXMATCH(FORMULATEXT(V94),\"\"HMOD\"\"),NOT(P_W>0)),0,V94)+IF(OR(REGEXMATCH(FORMULATEXT(W94),\"\"HMOD\"\"),NOT(P_E>0)),0,W94)+IF(OR(REGEXMATCH(FORMULATEXT(X94),\"\"HMOD\"\"),NOT(P_R>0)),0,X94)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y94),\"\"HMOD\"\"),0,Y94)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),391.781910408432)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Quinn": {
     "HP": 603,
@@ -4077,7 +4077,7 @@
     "E-CD": "13-P_E",
     "R-CD": 3,
     "P-CD": "8*(0.99^(Self_Crit*100))",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Quinn_0",
       "passive": "Quinn_Passive",
@@ -4088,8 +4088,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U95),\"\"HMOD\"\"),NOT(P_Q>0)),0,U95)+IF(OR(REGEXMATCH(FORMULATEXT(V95),\"\"HMOD\"\"),NOT(P_W>0)),0,V95)+IF(OR(REGEXMATCH(FORMULATEXT(W95),\"\"HMOD\"\"),NOT(P_E>0)),0,W95)+IF(OR(REGEXMATCH(FORMULATEXT(X95),\"\"HMOD\"\"),NOT(P_R>0)),0,X95)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y95),\"\"HMOD\"\"),0,Y95)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),302.822753623188)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Rakan": {
     "HP": 610,
@@ -4121,7 +4121,7 @@
     "E-CD": "22-2*P_E",
     "R-CD": "150-20*P_R",
     "P-CD": "41.5-1.5*Self_Level",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Rakan_0",
       "passive": "Rakan_P",
@@ -4132,8 +4132,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U96),\"\"HMOD\"\"),NOT(P_Q>0)),0,U96)+IF(OR(REGEXMATCH(FORMULATEXT(V96),\"\"HMOD\"\"),NOT(P_W>0)),0,V96)+IF(OR(REGEXMATCH(FORMULATEXT(W96),\"\"HMOD\"\"),NOT(P_E>0)),0,W96)+IF(OR(REGEXMATCH(FORMULATEXT(X96),\"\"HMOD\"\"),NOT(P_R>0)),0,X96)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y96),\"\"HMOD\"\"),0,Y96)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),453.369525691699)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Rammus": {
     "HP": 614,
@@ -4165,7 +4165,7 @@
     "E-CD": 12,
     "R-CD": 90,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Rammus_0",
       "passive": "Armordillo_ScavengeArmor",
@@ -4176,8 +4176,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U97),\"\"HMOD\"\"),NOT(P_Q>0)),0,U97)+IF(OR(REGEXMATCH(FORMULATEXT(V97),\"\"HMOD\"\"),NOT(P_W>0)),0,V97)+IF(OR(REGEXMATCH(FORMULATEXT(W97),\"\"HMOD\"\"),NOT(P_E>0)),0,W97)+IF(OR(REGEXMATCH(FORMULATEXT(X97),\"\"HMOD\"\"),NOT(P_R>0)),0,X97)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y97),\"\"HMOD\"\"),0,Y97)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),402.321040843214)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Rek'Sai": {
     "HP": 640,
@@ -4209,7 +4209,7 @@
     "E-CD": "IF(Steroid_Form,28-2*P_E,12)",
     "R-CD": "110 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "RekSai_0",
       "passive": "RekSai_Passive",
@@ -4220,8 +4220,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U98),\"\"HMOD\"\"),NOT(P_Q>0)),0,U98)+IF(OR(REGEXMATCH(FORMULATEXT(V98),\"\"HMOD\"\"),NOT(P_W>0)),0,V98)+IF(OR(REGEXMATCH(FORMULATEXT(W98),\"\"HMOD\"\"),NOT(P_E>0)),0,W98)+IF(OR(REGEXMATCH(FORMULATEXT(X98),\"\"HMOD\"\"),NOT(P_R>0)),0,X98)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y98),\"\"HMOD\"\"),0,Y98)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),330.64884057971)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Rell": {
     "HP": 610,
@@ -4253,7 +4253,7 @@
     "E-CD": 13,
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Rell_0",
       "passive": "RellP",
@@ -4264,8 +4264,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U99),\"\"HMOD\"\"),NOT(P_Q>0)),0,U99)+IF(OR(REGEXMATCH(FORMULATEXT(V99),\"\"HMOD\"\"),NOT(P_W>0)),0,V99)+IF(OR(REGEXMATCH(FORMULATEXT(W99),\"\"HMOD\"\"),NOT(P_E>0)),0,W99)+IF(OR(REGEXMATCH(FORMULATEXT(X99),\"\"HMOD\"\"),NOT(P_R>0)),0,X99)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y99),\"\"HMOD\"\"),0,Y99)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),452.914980237154)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Renekton": {
     "HP": 660,
@@ -4297,7 +4297,7 @@
     "E-CD": "19-P_E",
     "R-CD": 120,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Renekton_0",
       "passive": "Renekton_Passive",
@@ -4308,8 +4308,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U100),\"\"HMOD\"\"),NOT(P_Q>0)),0,U100)+IF(OR(REGEXMATCH(FORMULATEXT(V100),\"\"HMOD\"\"),NOT(P_W>0)),0,V100)+IF(OR(REGEXMATCH(FORMULATEXT(W100),\"\"HMOD\"\"),NOT(P_E>0)),0,W100)+IF(OR(REGEXMATCH(FORMULATEXT(X100),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"100)+IF(REGEXMATCH(FORMULATEXT(Y100),\"\"HMOD\"\"),0,Y100)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),921.29442687747)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Rengar": {
     "HP": 620,
@@ -4341,7 +4341,7 @@
     "E-CD": 10,
     "R-CD": "120-10*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Rengar_0",
       "passive": "Rengar_P",
@@ -4352,8 +4352,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U101),\"\"HMOD\"\"),NOT(P_Q>0)),0,U101)+IF(OR(REGEXMATCH(FORMULATEXT(V101),\"\"HMOD\"\"),NOT(P_W>0)),0,V101)+IF(OR(REGEXMATCH(FORMULATEXT(W101),\"\"HMOD\"\"),NOT(P_E>0)),0,W101)+IF(OR(REGEXMATCH(FORMULATEXT(X101),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"101)+IF(REGEXMATCH(FORMULATEXT(Y101),\"\"HMOD\"\"),0,Y101)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),378.672555994729)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Riven": {
     "HP": 630,
@@ -4385,7 +4385,7 @@
     "E-CD": "11-P_E",
     "R-CD": "150-30*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Riven_0",
       "passive": "RivenRunicBlades",
@@ -4396,8 +4396,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U102),\"\"HMOD\"\"),NOT(P_Q>0)),0,U102)+IF(OR(REGEXMATCH(FORMULATEXT(V102),\"\"HMOD\"\"),NOT(P_W>0)),0,V102)+IF(OR(REGEXMATCH(FORMULATEXT(W102),\"\"HMOD\"\"),NOT(P_E>0)),0,W102)+IF(OR(REGEXMATCH(FORMULATEXT(X102),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"102)+IF(REGEXMATCH(FORMULATEXT(Y102),\"\"HMOD\"\"),0,Y102)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),538.909710144927)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Rumble": {
     "HP": 659,
@@ -4429,7 +4429,7 @@
     "E-CD": 6,
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Rumble_0",
       "passive": "Rumble_JunkyardTitan1",
@@ -4440,8 +4440,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U103),\"\"HMOD\"\"),NOT(P_Q>0)),0,U103)+IF(OR(REGEXMATCH(FORMULATEXT(V103),\"\"HMOD\"\"),NOT(P_W>0)),0,V103)+IF(OR(REGEXMATCH(FORMULATEXT(W103),\"\"HMOD\"\"),NOT(P_E>0)),0,W103)+IF(OR(REGEXMATCH(FORMULATEXT(X103),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"103)+IF(REGEXMATCH(FORMULATEXT(Y103),\"\"HMOD\"\"),0,Y103)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),1005.33922266139)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Ryze": {
     "HP": 645,
@@ -4473,7 +4473,7 @@
     "E-CD": "3.75 - 0.25 * P_E",
     "R-CD": "240-30*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Ryze_0",
       "passive": "Ryze_P",
@@ -4484,8 +4484,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U104),\"\"HMOD\"\"),NOT(P_Q>0)),0,U104)+IF(OR(REGEXMATCH(FORMULATEXT(V104),\"\"HMOD\"\"),NOT(P_W>0)),0,V104)+IF(OR(REGEXMATCH(FORMULATEXT(W104),\"\"HMOD\"\"),NOT(P_E>0)),0,W104)+IF(OR(REGEXMATCH(FORMULATEXT(X104),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"104)+IF(REGEXMATCH(FORMULATEXT(Y104),\"\"HMOD\"\"),0,Y104)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),331.702859025032)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Samira": {
     "HP": 600,
@@ -4517,7 +4517,7 @@
     "E-CD": "22-2*P_E",
     "R-CD": 5,
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Samira_0",
       "passive": "SamiraP",
@@ -4528,8 +4528,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U105),\"\"HMOD\"\"),NOT(P_Q>0)),0,U105)+IF(OR(REGEXMATCH(FORMULATEXT(V105),\"\"HMOD\"\"),NOT(P_W>0)),0,V105)+IF(OR(REGEXMATCH(FORMULATEXT(W105),\"\"HMOD\"\"),NOT(P_E>0)),0,W105)+IF(OR(REGEXMATCH(FORMULATEXT(X105),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"105)+IF(REGEXMATCH(FORMULATEXT(Y105),\"\"HMOD\"\"),0,Y105)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),524.390606060606)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Sejuani": {
     "HP": 630,
@@ -4561,7 +4561,7 @@
     "E-CD": 1.5,
     "R-CD": "150-20*P_R",
     "P-CD": "12 - Sc_Lin",
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Sejuani_0",
       "passive": "Sejuani_passive",
@@ -4572,8 +4572,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U106),\"\"HMOD\"\"),NOT(P_Q>0)),0,U106)+IF(OR(REGEXMATCH(FORMULATEXT(V106),\"\"HMOD\"\"),NOT(P_W>0)),0,V106)+IF(OR(REGEXMATCH(FORMULATEXT(W106),\"\"HMOD\"\"),NOT(P_E>0)),0,W106)+IF(OR(REGEXMATCH(FORMULATEXT(X106),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"106)+IF(REGEXMATCH(FORMULATEXT(Y106),\"\"HMOD\"\"),0,Y106)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),523.040144927536)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Senna": {
     "HP": 530,
@@ -4605,7 +4605,7 @@
     "E-CD": "27.5-1.5*P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 4,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Senna_0",
       "passive": "Senna_Passive",
@@ -4616,8 +4616,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U107),\"\"HMOD\"\"),NOT(P_Q>0)),0,U107)+IF(OR(REGEXMATCH(FORMULATEXT(V107),\"\"HMOD\"\"),NOT(P_W>0)),0,V107)+IF(OR(REGEXMATCH(FORMULATEXT(W107),\"\"HMOD\"\"),NOT(P_E>0)),0,W107)+IF(OR(REGEXMATCH(FORMULATEXT(X107),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"107)+IF(REGEXMATCH(FORMULATEXT(Y107),\"\"HMOD\"\"),0,Y107)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),538.257536231884)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Seraphine": {
     "HP": 570,
@@ -4649,7 +4649,7 @@
     "E-CD": 10,
     "R-CD": "190-30*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Seraphine_0",
       "passive": "Seraphine_Passive",
@@ -4660,8 +4660,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U108),\"\"HMOD\"\"),NOT(P_Q>0)),0,U108)+IF(OR(REGEXMATCH(FORMULATEXT(V108),\"\"HMOD\"\"),NOT(P_W>0)),0,V108)+IF(OR(REGEXMATCH(FORMULATEXT(W108),\"\"HMOD\"\"),NOT(P_E>0)),0,W108)+IF(OR(REGEXMATCH(FORMULATEXT(X108),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"108)+IF(REGEXMATCH(FORMULATEXT(Y108),\"\"HMOD\"\"),0,Y108)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),422.611949934123)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Sett": {
     "HP": 670,
@@ -4693,7 +4693,7 @@
     "E-CD": "17.5-1.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Sett_0",
       "passive": "Sett_P",
@@ -4704,8 +4704,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U109),\"\"HMOD\"\"),NOT(P_Q>0)),0,U109)+IF(OR(REGEXMATCH(FORMULATEXT(V109),\"\"HMOD\"\"),NOT(P_W>0)),0,V109)+IF(OR(REGEXMATCH(FORMULATEXT(W109),\"\"HMOD\"\"),NOT(P_E>0)),0,W109)+IF(OR(REGEXMATCH(FORMULATEXT(X109),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"109)+IF(REGEXMATCH(FORMULATEXT(Y109),\"\"HMOD\"\"),0,Y109)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),582.170579710144)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Shaco": {
     "HP": 630,
@@ -4737,7 +4737,7 @@
     "E-CD": 8,
     "R-CD": "110 - 10 * P_R",
     "P-CD": 3,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Shaco_0",
       "passive": "Jester_CarefulStrikes",
@@ -4748,8 +4748,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U110),\"\"HMOD\"\"),NOT(P_Q>0)),0,U110)+IF(OR(REGEXMATCH(FORMULATEXT(V110),\"\"HMOD\"\"),NOT(P_W>0)),0,V110)+IF(OR(REGEXMATCH(FORMULATEXT(W110),\"\"HMOD\"\"),NOT(P_E>0)),0,W110)+IF(OR(REGEXMATCH(FORMULATEXT(X110),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"110)+IF(REGEXMATCH(FORMULATEXT(Y110),\"\"HMOD\"\"),0,Y110)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),382.921567852437)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Shen": {
     "HP": 610,
@@ -4781,7 +4781,7 @@
     "E-CD": "20-2*P_E",
     "R-CD": "220-20*P_R",
     "P-CD": 10,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Shen_0",
       "passive": "Shen_Passive",
@@ -4792,8 +4792,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U111),\"\"HMOD\"\"),NOT(P_Q>0)),0,U111)+IF(OR(REGEXMATCH(FORMULATEXT(V111),\"\"HMOD\"\"),NOT(P_W>0)),0,V111)+IF(OR(REGEXMATCH(FORMULATEXT(W111),\"\"HMOD\"\"),NOT(P_E>0)),0,W111)+IF(OR(REGEXMATCH(FORMULATEXT(X111),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"111)+IF(REGEXMATCH(FORMULATEXT(Y111),\"\"HMOD\"\"),0,Y111)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),571.03256916996)",
     "Trade Calc": 0,
-    "Energy": "TRUE",
-    "No Mana": "FALSE"
+    "Energy": 1,
+    "No Mana": 0
   },
   "Shyvana": {
     "HP": 665,
@@ -4825,7 +4825,7 @@
     "E-CD": "13-P_E",
     "R-CD": 1,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Shyvana_0",
       "passive": "ShyvanaReinforcedScales",
@@ -4836,8 +4836,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U112),\"\"HMOD\"\"),NOT(P_Q>0)),0,U112)+IF(OR(REGEXMATCH(FORMULATEXT(V112),\"\"HMOD\"\"),NOT(P_W>0)),0,V112)+IF(OR(REGEXMATCH(FORMULATEXT(W112),\"\"HMOD\"\"),NOT(P_E>0)),0,W112)+IF(OR(REGEXMATCH(FORMULATEXT(X112),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"112)+IF(REGEXMATCH(FORMULATEXT(Y112),\"\"HMOD\"\"),0,Y112)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),408.580329380764)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Singed": {
     "HP": 650,
@@ -4869,7 +4869,7 @@
     "E-CD": "10.5-0.5*P_E",
     "R-CD": "130 - 10 * P_R",
     "P-CD": 8,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Singed_0",
       "passive": "Singed_Passive",
@@ -4880,8 +4880,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U113),\"\"HMOD\"\"),NOT(P_Q>0)),0,U113)+IF(OR(REGEXMATCH(FORMULATEXT(V113),\"\"HMOD\"\"),NOT(P_W>0)),0,V113)+IF(OR(REGEXMATCH(FORMULATEXT(W113),\"\"HMOD\"\"),NOT(P_E>0)),0,W113)+IF(OR(REGEXMATCH(FORMULATEXT(X113),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"113)+IF(REGEXMATCH(FORMULATEXT(Y113),\"\"HMOD\"\"),0,Y113)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),270.339222661396)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Sion": {
     "HP": 655,
@@ -4913,7 +4913,7 @@
     "E-CD": "13-P_E",
     "R-CD": "180-40*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Sion_0",
       "passive": "Sion_Passive1",
@@ -4924,8 +4924,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U114),\"\"HMOD\"\"),NOT(P_Q>0)),0,U114)+IF(OR(REGEXMATCH(FORMULATEXT(V114),\"\"HMOD\"\"),NOT(P_W>0)),0,V114)+IF(OR(REGEXMATCH(FORMULATEXT(W114),\"\"HMOD\"\"),NOT(P_E>0)),0,W114)+IF(OR(REGEXMATCH(FORMULATEXT(X114),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"114)+IF(REGEXMATCH(FORMULATEXT(Y114),\"\"HMOD\"\"),0,Y114)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),508.349762845849)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Sivir": {
     "HP": 600,
@@ -4957,7 +4957,7 @@
     "E-CD": "25.5-1.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Sivir_0",
       "passive": "Sivir_Passive",
@@ -4968,8 +4968,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U115),\"\"HMOD\"\"),NOT(P_Q>0)),0,U115)+IF(OR(REGEXMATCH(FORMULATEXT(V115),\"\"HMOD\"\"),NOT(P_W>0)),0,V115)+IF(OR(REGEXMATCH(FORMULATEXT(W115),\"\"HMOD\"\"),NOT(P_E>0)),0,W115)+IF(OR(REGEXMATCH(FORMULATEXT(X115),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"115)+IF(REGEXMATCH(FORMULATEXT(Y115),\"\"HMOD\"\"),0,Y115)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),263.025652173913)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Skarner": {
     "HP": 650,
@@ -5001,7 +5001,7 @@
     "E-CD": "14.5 - 0.5 * P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Skarner_0",
       "passive": "Skarner_Passive",
@@ -5012,8 +5012,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U116),\"\"HMOD\"\"),NOT(P_Q>0)),0,U116)+IF(OR(REGEXMATCH(FORMULATEXT(V116),\"\"HMOD\"\"),NOT(P_W>0)),0,V116)+IF(OR(REGEXMATCH(FORMULATEXT(W116),\"\"HMOD\"\"),NOT(P_E>0)),0,W116)+IF(OR(REGEXMATCH(FORMULATEXT(X116),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"116)+IF(REGEXMATCH(FORMULATEXT(Y116),\"\"HMOD\"\"),0,Y116)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),323.763465085639)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Sona": {
     "HP": 550,
@@ -5045,7 +5045,7 @@
     "E-CD": 14,
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Sona_0",
       "passive": "Sona_Passive_Charged",
@@ -5056,8 +5056,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U117),\"\"HMOD\"\"),NOT(P_Q>0)),0,U117)+IF(OR(REGEXMATCH(FORMULATEXT(V117),\"\"HMOD\"\"),NOT(P_W>0)),0,V117)+IF(OR(REGEXMATCH(FORMULATEXT(W117),\"\"HMOD\"\"),NOT(P_E>0)),0,W117)+IF(OR(REGEXMATCH(FORMULATEXT(X117),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"117)+IF(REGEXMATCH(FORMULATEXT(Y117),\"\"HMOD\"\"),0,Y117)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),409.430131752305)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Soraka": {
     "HP": 605,
@@ -5089,7 +5089,7 @@
     "E-CD": "26-2*P_E",
     "R-CD": "175-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Soraka_0",
       "passive": "Soraka_Passive",
@@ -5100,8 +5100,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U118),\"\"HMOD\"\"),NOT(P_Q>0)),0,U118)+IF(OR(REGEXMATCH(FORMULATEXT(V118),\"\"HMOD\"\"),NOT(P_W>0)),0,V118)+IF(OR(REGEXMATCH(FORMULATEXT(W118),\"\"HMOD\"\"),NOT(P_E>0)),0,W118)+IF(OR(REGEXMATCH(FORMULATEXT(X118),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"118)+IF(REGEXMATCH(FORMULATEXT(Y118),\"\"HMOD\"\"),0,Y118)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),594.430131752305)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Swain": {
     "HP": 595,
@@ -5133,7 +5133,7 @@
     "E-CD": 10,
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Swain_0",
       "passive": "Swain_P",
@@ -5144,8 +5144,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U119),\"\"HMOD\"\"),NOT(P_Q>0)),0,U119)+IF(OR(REGEXMATCH(FORMULATEXT(V119),\"\"HMOD\"\"),NOT(P_W>0)),0,V119)+IF(OR(REGEXMATCH(FORMULATEXT(W119),\"\"HMOD\"\"),NOT(P_E>0)),0,W119)+IF(OR(REGEXMATCH(FORMULATEXT(X119),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"119)+IF(REGEXMATCH(FORMULATEXT(Y119),\"\"HMOD\"\"),0,Y119)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),449.127101449275)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Sylas": {
     "HP": 575,
@@ -5177,7 +5177,7 @@
     "E-CD": "14-P_E",
     "R-CD": "105-25*P_R",
     "P-CD": 16,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Sylas_0",
       "passive": "SylasP",
@@ -5188,8 +5188,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U120),\"\"HMOD\"\"),NOT(P_Q>0)),0,U120)+IF(OR(REGEXMATCH(FORMULATEXT(V120),\"\"HMOD\"\"),NOT(P_W>0)),0,V120)+IF(OR(REGEXMATCH(FORMULATEXT(W120),\"\"HMOD\"\"),NOT(P_E>0)),0,W120)+IF(OR(REGEXMATCH(FORMULATEXT(X120),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"120)+IF(REGEXMATCH(FORMULATEXT(Y120),\"\"HMOD\"\"),0,Y120)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),474.588234519104)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Syndra": {
     "HP": 563,
@@ -5221,7 +5221,7 @@
     "E-CD": 17,
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Syndra_0",
       "passive": "SyndraPassive",
@@ -5232,8 +5232,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U121),\"\"HMOD\"\"),NOT(P_Q>0)),0,U121)+IF(OR(REGEXMATCH(FORMULATEXT(V121),\"\"HMOD\"\"),NOT(P_W>0)),0,V121)+IF(OR(REGEXMATCH(FORMULATEXT(W121),\"\"HMOD\"\"),NOT(P_E>0)),0,W121)+IF(OR(REGEXMATCH(FORMULATEXT(X121),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"121)+IF(REGEXMATCH(FORMULATEXT(Y121),\"\"HMOD\"\"),0,Y121)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),551.399828722001)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Tahm Kench": {
     "HP": 640,
@@ -5265,7 +5265,7 @@
     "E-CD": 6,
     "R-CD": "150-10*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "TahmKench_0",
       "passive": "TahmKenchP",
@@ -5276,8 +5276,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U122),\"\"HMOD\"\"),NOT(P_Q>0)),0,U122)+IF(OR(REGEXMATCH(FORMULATEXT(V122),\"\"HMOD\"\"),NOT(P_W>0)),0,V122)+IF(OR(REGEXMATCH(FORMULATEXT(W122),\"\"HMOD\"\"),NOT(P_E>0)),0,W122)+IF(OR(REGEXMATCH(FORMULATEXT(X122),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"122)+IF(REGEXMATCH(FORMULATEXT(Y122),\"\"HMOD\"\"),0,Y122)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),493.536192358366)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Taliyah": {
     "HP": 550,
@@ -5309,7 +5309,7 @@
     "E-CD": "19-P_E",
     "R-CD": "210-30*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Taliyah_0",
       "passive": "Taliyah_Passive",
@@ -5320,8 +5320,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U123),\"\"HMOD\"\"),NOT(P_Q>0)),0,U123)+IF(OR(REGEXMATCH(FORMULATEXT(V123),\"\"HMOD\"\"),NOT(P_W>0)),0,V123)+IF(OR(REGEXMATCH(FORMULATEXT(W123),\"\"HMOD\"\"),NOT(P_E>0)),0,W123)+IF(OR(REGEXMATCH(FORMULATEXT(X123),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"123)+IF(REGEXMATCH(FORMULATEXT(Y123),\"\"HMOD\"\"),0,Y123)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),252.157404479578)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Talon": {
     "HP": 658,
@@ -5353,7 +5353,7 @@
     "E-CD": "185-25*P_E",
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Talon_0",
       "passive": "TalonP",
@@ -5364,8 +5364,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U124),\"\"HMOD\"\"),NOT(P_Q>0)),0,U124)+IF(OR(REGEXMATCH(FORMULATEXT(V124),\"\"HMOD\"\"),NOT(P_W>0)),0,V124)+IF(OR(REGEXMATCH(FORMULATEXT(W124),\"\"HMOD\"\"),NOT(P_E>0)),0,W124)+IF(OR(REGEXMATCH(FORMULATEXT(X124),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"124)+IF(REGEXMATCH(FORMULATEXT(Y124),\"\"HMOD\"\"),0,Y124)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),472.677826086956)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Taric": {
     "HP": 645,
@@ -5397,7 +5397,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "210-30*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Taric_0",
       "passive": "Taric_Passive",
@@ -5408,8 +5408,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U125),\"\"HMOD\"\"),NOT(P_Q>0)),0,U125)+IF(OR(REGEXMATCH(FORMULATEXT(V125),\"\"HMOD\"\"),NOT(P_W>0)),0,V125)+IF(OR(REGEXMATCH(FORMULATEXT(W125),\"\"HMOD\"\"),NOT(P_E>0)),0,W125)+IF(OR(REGEXMATCH(FORMULATEXT(X125),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"125)+IF(REGEXMATCH(FORMULATEXT(Y125),\"\"HMOD\"\"),0,Y125)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),353.08164690382)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Teemo": {
     "HP": 598,
@@ -5441,7 +5441,7 @@
     "E-CD": 1,
     "R-CD": "35-5*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Teemo_0",
       "passive": "Teemo_P",
@@ -5452,8 +5452,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U126),\"\"HMOD\"\"),NOT(P_Q>0)),0,U126)+IF(OR(REGEXMATCH(FORMULATEXT(V126),\"\"HMOD\"\"),NOT(P_W>0)),0,V126)+IF(OR(REGEXMATCH(FORMULATEXT(W126),\"\"HMOD\"\"),NOT(P_E>0)),0,W126)+IF(OR(REGEXMATCH(FORMULATEXT(X126),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"126)+IF(REGEXMATCH(FORMULATEXT(Y126),\"\"HMOD\"\"),0,Y126)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),430.187707509881)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Thresh": {
     "HP": 600,
@@ -5485,7 +5485,7 @@
     "E-CD": "13.75 - 0.75 * P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Thresh_0",
       "passive": "Thresh_Passive",
@@ -5496,8 +5496,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U127),\"\"HMOD\"\"),NOT(P_Q>0)),0,U127)+IF(OR(REGEXMATCH(FORMULATEXT(V127),\"\"HMOD\"\"),NOT(P_W>0)),0,V127)+IF(OR(REGEXMATCH(FORMULATEXT(W127),\"\"HMOD\"\"),NOT(P_E>0)),0,W127)+IF(OR(REGEXMATCH(FORMULATEXT(X127),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"127)+IF(REGEXMATCH(FORMULATEXT(Y127),\"\"HMOD\"\"),0,Y127)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),567.308919631093)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Tristana": {
     "HP": 670,
@@ -5529,7 +5529,7 @@
     "E-CD": "16.5 - 0.5 * P_E",
     "R-CD": "130 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Tristana_0",
       "passive": "Tristana_Passive",
@@ -5540,8 +5540,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U128),\"\"HMOD\"\"),NOT(P_Q>0)),0,U128)+IF(OR(REGEXMATCH(FORMULATEXT(V128),\"\"HMOD\"\"),NOT(P_W>0)),0,V128)+IF(OR(REGEXMATCH(FORMULATEXT(W128),\"\"HMOD\"\"),NOT(P_E>0)),0,W128)+IF(OR(REGEXMATCH(FORMULATEXT(X128),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"128)+IF(REGEXMATCH(FORMULATEXT(Y128),\"\"HMOD\"\"),0,Y128)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),507.427496706192)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Trundle": {
     "HP": 686,
@@ -5573,7 +5573,7 @@
     "E-CD": "26-2*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Trundle_0",
       "passive": "Trundle_Passive",
@@ -5584,8 +5584,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U129),\"\"HMOD\"\"),NOT(P_Q>0)),0,U129)+IF(OR(REGEXMATCH(FORMULATEXT(V129),\"\"HMOD\"\"),NOT(P_W>0)),0,V129)+IF(OR(REGEXMATCH(FORMULATEXT(W129),\"\"HMOD\"\"),NOT(P_E>0)),0,W129)+IF(OR(REGEXMATCH(FORMULATEXT(X129),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"129)+IF(REGEXMATCH(FORMULATEXT(Y129),\"\"HMOD\"\"),0,Y129)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),339.27861660079)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Tryndamere": {
     "HP": 696,
@@ -5617,7 +5617,7 @@
     "E-CD": "13-P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Tryndamere_0",
       "passive": "Tryndamere_Passive",
@@ -5628,8 +5628,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U130),\"\"HMOD\"\"),NOT(P_Q>0)),0,U130)+IF(OR(REGEXMATCH(FORMULATEXT(V130),\"\"HMOD\"\"),NOT(P_W>0)),0,V130)+IF(OR(REGEXMATCH(FORMULATEXT(W130),\"\"HMOD\"\"),NOT(P_E>0)),0,W130)+IF(OR(REGEXMATCH(FORMULATEXT(X130),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"130)+IF(REGEXMATCH(FORMULATEXT(Y130),\"\"HMOD\"\"),0,Y130)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),255.431449275362)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Twisted Fate": {
     "HP": 604,
@@ -5661,7 +5661,7 @@
     "E-CD": "4/IF(Self_AS<",
     "R-CD": "210-30*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "TwistedFate_0",
       "passive": "Cardmaster_SealFate",
@@ -5672,8 +5672,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U131),\"\"HMOD\"\"),NOT(P_Q>0)),0,U131)+IF(OR(REGEXMATCH(FORMULATEXT(V131),\"\"HMOD\"\"),NOT(P_W>0)),0,V131)+IF(OR(REGEXMATCH(FORMULATEXT(W131),\"\"HMOD\"\"),NOT(P_E>0)),0,W131)+IF(OR(REGEXMATCH(FORMULATEXT(X131),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"131)+IF(REGEXMATCH(FORMULATEXT(Y131),\"\"HMOD\"\"),0,Y131)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),339.27861660079)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Twitch": {
     "HP": 682,
@@ -5705,7 +5705,7 @@
     "E-CD": "13-P_E",
     "R-CD": 90,
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Twitch_0",
       "passive": "Twitch_Passive",
@@ -5716,8 +5716,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U132),\"\"HMOD\"\"),NOT(P_Q>0)),0,U132)+IF(OR(REGEXMATCH(FORMULATEXT(V132),\"\"HMOD\"\"),NOT(P_W>0)),0,V132)+IF(OR(REGEXMATCH(FORMULATEXT(W132),\"\"HMOD\"\"),NOT(P_E>0)),0,W132)+IF(OR(REGEXMATCH(FORMULATEXT(X132),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"132)+IF(REGEXMATCH(FORMULATEXT(Y132),\"\"HMOD\"\"),0,Y132)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),218.822753623188)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Udyr": {
     "HP": 664,
@@ -5749,7 +5749,7 @@
     "E-CD": 6,
     "R-CD": 6,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Udyr_0",
       "passive": "Udyr_P",
@@ -5760,8 +5760,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U133),\"\"HMOD\"\"),NOT(P_Q>0)),0,U133)+IF(OR(REGEXMATCH(FORMULATEXT(V133),\"\"HMOD\"\"),NOT(P_W>0)),0,V133)+IF(OR(REGEXMATCH(FORMULATEXT(W133),\"\"HMOD\"\"),NOT(P_E>0)),0,W133)+IF(OR(REGEXMATCH(FORMULATEXT(X133),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"133)+IF(REGEXMATCH(FORMULATEXT(Y133),\"\"HMOD\"\"),0,Y133)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),287.533689064558)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Urgot": {
     "HP": 655,
@@ -5793,7 +5793,7 @@
     "E-CD": "16.5 - 0.5 * P_E",
     "R-CD": "115-15*P_R",
     "P-CD": "IF(Self_Level>",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Urgot_0",
       "passive": "Urgot_Passive",
@@ -5804,8 +5804,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U134),\"\"HMOD\"\"),NOT(P_Q>0)),0,U134)+IF(OR(REGEXMATCH(FORMULATEXT(V134),\"\"HMOD\"\"),NOT(P_W>0)),0,V134)+IF(OR(REGEXMATCH(FORMULATEXT(W134),\"\"HMOD\"\"),NOT(P_E>0)),0,W134)+IF(OR(REGEXMATCH(FORMULATEXT(X134),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"134)+IF(REGEXMATCH(FORMULATEXT(Y134),\"\"HMOD\"\"),0,Y134)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),420.503913043478)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Varus": {
     "HP": 600,
@@ -5837,7 +5837,7 @@
     "E-CD": "20-2*P_E",
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Varus_0",
       "passive": "VarusPassive",
@@ -5848,8 +5848,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U135),\"\"HMOD\"\"),NOT(P_Q>0)),0,U135)+IF(OR(REGEXMATCH(FORMULATEXT(V135),\"\"HMOD\"\"),NOT(P_W>0)),0,V135)+IF(OR(REGEXMATCH(FORMULATEXT(W135),\"\"HMOD\"\"),NOT(P_E>0)),0,W135)+IF(OR(REGEXMATCH(FORMULATEXT(X135),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"135)+IF(REGEXMATCH(FORMULATEXT(Y135),\"\"HMOD\"\"),0,Y135)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),430.390825647782)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Vayne": {
     "HP": 550,
@@ -5881,7 +5881,7 @@
     "E-CD": "22-2*P_E",
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Vayne_0",
       "passive": "Vayne_NightHunter",
@@ -5892,8 +5892,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U136),\"\"HMOD\"\"),NOT(P_Q>0)),0,U136)+IF(OR(REGEXMATCH(FORMULATEXT(V136),\"\"HMOD\"\"),NOT(P_W>0)),0,V136)+IF(OR(REGEXMATCH(FORMULATEXT(W136),\"\"HMOD\"\"),NOT(P_E>0)),0,W136)+IF(OR(REGEXMATCH(FORMULATEXT(X136),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"136)+IF(REGEXMATCH(FORMULATEXT(Y136),\"\"HMOD\"\"),0,Y136)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),324.127101449275)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Veigar": {
     "HP": 550,
@@ -5925,7 +5925,7 @@
     "E-CD": "22-2*P_E",
     "R-CD": "120-20*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Veigar_0",
       "passive": "VeigarEntropy",
@@ -5936,8 +5936,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U137),\"\"HMOD\"\"),NOT(P_Q>0)),0,U137)+IF(OR(REGEXMATCH(FORMULATEXT(V137),\"\"HMOD\"\"),NOT(P_W>0)),0,V137)+IF(OR(REGEXMATCH(FORMULATEXT(W137),\"\"HMOD\"\"),NOT(P_E>0)),0,W137)+IF(OR(REGEXMATCH(FORMULATEXT(X137),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"137)+IF(REGEXMATCH(FORMULATEXT(Y137),\"\"HMOD\"\"),0,Y137)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),445.339222661396)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Vel'Koz": {
     "HP": 590,
@@ -5969,7 +5969,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Velkoz_0",
       "passive": "VelKoz_Passive",
@@ -5980,8 +5980,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U138),\"\"HMOD\"\"),NOT(P_Q>0)),0,U138)+IF(OR(REGEXMATCH(FORMULATEXT(V138),\"\"HMOD\"\"),NOT(P_W>0)),0,V138)+IF(OR(REGEXMATCH(FORMULATEXT(W138),\"\"HMOD\"\"),NOT(P_E>0)),0,W138)+IF(OR(REGEXMATCH(FORMULATEXT(X138),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"138)+IF(REGEXMATCH(FORMULATEXT(Y138),\"\"HMOD\"\"),0,Y138)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),732.127101449275)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Vex": {
     "HP": 590,
@@ -6013,7 +6013,7 @@
     "E-CD": 13,
     "R-CD": "160 - 20 * P_R",
     "P-CD": "25 - 9 * Sc_Lin",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Vex_0",
       "passive": "Icons_Vex_Passive",
@@ -6024,8 +6024,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U139),\"\"HMOD\"\"),NOT(P_Q>0)),0,U139)+IF(OR(REGEXMATCH(FORMULATEXT(V139),\"\"HMOD\"\"),NOT(P_W>0)),0,V139)+IF(OR(REGEXMATCH(FORMULATEXT(W139),\"\"HMOD\"\"),NOT(P_E>0)),0,W139)+IF(OR(REGEXMATCH(FORMULATEXT(X139),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"139)+IF(REGEXMATCH(FORMULATEXT(Y139),\"\"HMOD\"\"),0,Y139)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),528.672555994729)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Vi": {
     "HP": 655,
@@ -6057,7 +6057,7 @@
     "E-CD": 1,
     "R-CD": "140 - 20 * P_R",
     "P-CD": "16.5-0.5*IF(Self_Level<",
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Vi_0",
       "passive": "ViPassive",
@@ -6068,8 +6068,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U140),\"\"HMOD\"\"),NOT(P_Q>0)),0,U140)+IF(OR(REGEXMATCH(FORMULATEXT(V140),\"\"HMOD\"\"),NOT(P_W>0)),0,V140)+IF(OR(REGEXMATCH(FORMULATEXT(W140),\"\"HMOD\"\"),NOT(P_E>0)),0,W140)+IF(OR(REGEXMATCH(FORMULATEXT(X140),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"140)+IF(REGEXMATCH(FORMULATEXT(Y140),\"\"HMOD\"\"),0,Y140)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),526.018405797101)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Viego": {
     "HP": 630,
@@ -6101,7 +6101,7 @@
     "E-CD": "16-2*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Viego_0",
       "passive": "Viego_Passive",
@@ -6112,8 +6112,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U141),\"\"HMOD\"\"),NOT(P_Q>0)),0,U141)+IF(OR(REGEXMATCH(FORMULATEXT(V141),\"\"HMOD\"\"),NOT(P_W>0)),0,V141)+IF(OR(REGEXMATCH(FORMULATEXT(W141),\"\"HMOD\"\"),NOT(P_E>0)),0,W141)+IF(OR(REGEXMATCH(FORMULATEXT(X141),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"141)+IF(REGEXMATCH(FORMULATEXT(Y141),\"\"HMOD\"\"),0,Y141)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),336.389321475625)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Viktor": {
     "HP": 600,
@@ -6145,7 +6145,7 @@
     "E-CD": "13-P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Viktor_0",
       "passive": "Viktor_Passive",
@@ -6156,8 +6156,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U142),\"\"HMOD\"\"),NOT(P_Q>0)),0,U142)+IF(OR(REGEXMATCH(FORMULATEXT(V142),\"\"HMOD\"\"),NOT(P_W>0)),0,V142)+IF(OR(REGEXMATCH(FORMULATEXT(W142),\"\"HMOD\"\"),NOT(P_E>0)),0,W142)+IF(OR(REGEXMATCH(FORMULATEXT(X142),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"142)+IF(REGEXMATCH(FORMULATEXT(Y142),\"\"HMOD\"\"),0,Y142)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),718.066495388669)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Vladimir": {
     "HP": 607,
@@ -6189,7 +6189,7 @@
     "E-CD": "15-2*P_E",
     "R-CD": 150,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Vladimir_0",
       "passive": "VladimirP",
@@ -6200,8 +6200,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U143),\"\"HMOD\"\"),NOT(P_Q>0)),0,U143)+IF(OR(REGEXMATCH(FORMULATEXT(V143),\"\"HMOD\"\"),NOT(P_W>0)),0,V143)+IF(OR(REGEXMATCH(FORMULATEXT(W143),\"\"HMOD\"\"),NOT(P_E>0)),0,W143)+IF(OR(REGEXMATCH(FORMULATEXT(X143),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"143)+IF(REGEXMATCH(FORMULATEXT(Y143),\"\"HMOD\"\"),0,Y143)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),437.574071146245)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Volibear": {
     "HP": 650,
@@ -6233,7 +6233,7 @@
     "E-CD": 13,
     "R-CD": "150-P_R*10",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Volibear_0",
       "passive": "Volibear_Icon_P",
@@ -6244,8 +6244,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U144),\"\"HMOD\"\"),NOT(P_Q>0)),0,U144)+IF(OR(REGEXMATCH(FORMULATEXT(V144),\"\"HMOD\"\"),NOT(P_W>0)),0,V144)+IF(OR(REGEXMATCH(FORMULATEXT(W144),\"\"HMOD\"\"),NOT(P_E>0)),0,W144)+IF(OR(REGEXMATCH(FORMULATEXT(X144),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"144)+IF(REGEXMATCH(FORMULATEXT(Y144),\"\"HMOD\"\"),0,Y144)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),604.051343873517)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Warwick": {
     "HP": 620,
@@ -6277,7 +6277,7 @@
     "E-CD": "16-P_E",
     "R-CD": "130-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Warwick_0",
       "passive": "WarwickP",
@@ -6288,8 +6288,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U145),\"\"HMOD\"\"),NOT(P_Q>0)),0,U145)+IF(OR(REGEXMATCH(FORMULATEXT(V145),\"\"HMOD\"\"),NOT(P_W>0)),0,V145)+IF(OR(REGEXMATCH(FORMULATEXT(W145),\"\"HMOD\"\"),NOT(P_E>0)),0,W145)+IF(OR(REGEXMATCH(FORMULATEXT(X145),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"145)+IF(REGEXMATCH(FORMULATEXT(Y145),\"\"HMOD\"\"),0,Y145)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),388.142252964426)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Wukong": {
     "HP": 610,
@@ -6321,7 +6321,7 @@
     "E-CD": "10.5-0.5*P_E",
     "R-CD": "150-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "MonkeyKing_0",
       "passive": "MonkeyKingStoneSkin",
@@ -6332,8 +6332,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U146),\"\"HMOD\"\"),NOT(P_Q>0)),0,U146)+IF(OR(REGEXMATCH(FORMULATEXT(V146),\"\"HMOD\"\"),NOT(P_W>0)),0,V146)+IF(OR(REGEXMATCH(FORMULATEXT(W146),\"\"HMOD\"\"),NOT(P_E>0)),0,W146)+IF(OR(REGEXMATCH(FORMULATEXT(X146),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"146)+IF(REGEXMATCH(FORMULATEXT(Y146),\"\"HMOD\"\"),0,Y146)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),370.240408432147)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Xayah": {
     "HP": 660,
@@ -6365,7 +6365,7 @@
     "E-CD": "11.5-0.5*P_E",
     "R-CD": "160 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Xayah_0",
       "passive": "XayahPassive",
@@ -6376,8 +6376,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U147),\"\"HMOD\"\"),NOT(P_Q>0)),0,U147)+IF(OR(REGEXMATCH(FORMULATEXT(V147),\"\"HMOD\"\"),NOT(P_W>0)),0,V147)+IF(OR(REGEXMATCH(FORMULATEXT(W147),\"\"HMOD\"\"),NOT(P_E>0)),0,W147)+IF(OR(REGEXMATCH(FORMULATEXT(X147),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"147)+IF(REGEXMATCH(FORMULATEXT(Y147),\"\"HMOD\"\"),0,Y147)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),557.822753623188)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Xerath": {
     "HP": 596,
@@ -6409,7 +6409,7 @@
     "E-CD": "13.5 - 0.5 * P_E",
     "R-CD": "145 - 15 * P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Xerath_0",
       "passive": "Xerath_Passive1",
@@ -6420,8 +6420,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U148),\"\"HMOD\"\"),NOT(P_Q>0)),0,U148)+IF(OR(REGEXMATCH(FORMULATEXT(V148),\"\"HMOD\"\"),NOT(P_W>0)),0,V148)+IF(OR(REGEXMATCH(FORMULATEXT(W148),\"\"HMOD\"\"),NOT(P_E>0)),0,W148)+IF(OR(REGEXMATCH(FORMULATEXT(X148),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"148)+IF(REGEXMATCH(FORMULATEXT(Y148),\"\"HMOD\"\"),0,Y148)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),793.824071146245)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Xin Zhao": {
     "HP": 640,
@@ -6453,7 +6453,7 @@
     "E-CD": 11,
     "R-CD": "130 - 10 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "XinZhao_0",
       "passive": "XinZhaoP",
@@ -6464,8 +6464,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U149),\"\"HMOD\"\"),NOT(P_Q>0)),0,U149)+IF(OR(REGEXMATCH(FORMULATEXT(V149),\"\"HMOD\"\"),NOT(P_W>0)),0,V149)+IF(OR(REGEXMATCH(FORMULATEXT(W149),\"\"HMOD\"\"),NOT(P_E>0)),0,W149)+IF(OR(REGEXMATCH(FORMULATEXT(X149),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"149)+IF(REGEXMATCH(FORMULATEXT(Y149),\"\"HMOD\"\"),0,Y149)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),534.831976284584)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Yasuo": {
     "HP": 590,
@@ -6497,7 +6497,7 @@
     "E-CD": "0.6-0.1*P_E",
     "R-CD": "90-20*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Yasuo_0",
       "passive": "Yasuo_Passive",
@@ -6508,8 +6508,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U150),\"\"HMOD\"\"),NOT(P_Q>0)),0,U150)+IF(OR(REGEXMATCH(FORMULATEXT(V150),\"\"HMOD\"\"),NOT(P_W>0)),0,V150)+IF(OR(REGEXMATCH(FORMULATEXT(W150),\"\"HMOD\"\"),NOT(P_E>0)),0,W150)+IF(OR(REGEXMATCH(FORMULATEXT(X150),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"150)+IF(REGEXMATCH(FORMULATEXT(Y150),\"\"HMOD\"\"),0,Y150)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),426.103386034255)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Yone": {
     "HP": 620,
@@ -6541,7 +6541,7 @@
     "E-CD": "25-3*P_E",
     "R-CD": "150-30*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Yone_0",
       "passive": "YonePassive",
@@ -6552,8 +6552,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U151),\"\"HMOD\"\"),NOT(P_Q>0)),0,U151)+IF(OR(REGEXMATCH(FORMULATEXT(V151),\"\"HMOD\"\"),NOT(P_W>0)),0,V151)+IF(OR(REGEXMATCH(FORMULATEXT(W151),\"\"HMOD\"\"),NOT(P_E>0)),0,W151)+IF(OR(REGEXMATCH(FORMULATEXT(X151),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"151)+IF(REGEXMATCH(FORMULATEXT(Y151),\"\"HMOD\"\"),0,Y151)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),476.292779973649)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Yorick": {
     "HP": 650,
@@ -6585,7 +6585,7 @@
     "E-CD": "13-P_E",
     "R-CD": "190-30*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Yorick_0",
       "passive": "Yorick_P",
@@ -6596,8 +6596,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U152),\"\"HMOD\"\"),NOT(P_Q>0)),0,U152)+IF(OR(REGEXMATCH(FORMULATEXT(V152),\"\"HMOD\"\"),NOT(P_W>0)),0,V152)+IF(OR(REGEXMATCH(FORMULATEXT(W152),\"\"HMOD\"\"),NOT(P_E>0)),0,W152)+IF(OR(REGEXMATCH(FORMULATEXT(X152),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"152)+IF(REGEXMATCH(FORMULATEXT(Y152),\"\"HMOD\"\"),0,Y152)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),332.048708827404)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Yuumi": {
     "HP": 500,
@@ -6629,7 +6629,7 @@
     "E-CD": "12.5-0.5*P_E",
     "R-CD": "120-10*P_R",
     "P-CD": "20 - IF(Self_Level > 10, 10, Self_Level - 1)",
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Yuumi_0",
       "passive": "YuumiP",
@@ -6640,8 +6640,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U153),\"\"HMOD\"\"),NOT(P_Q>0)),0,U153)+IF(OR(REGEXMATCH(FORMULATEXT(V153),\"\"HMOD\"\"),NOT(P_W>0)),0,V153)+IF(OR(REGEXMATCH(FORMULATEXT(W153),\"\"HMOD\"\"),NOT(P_E>0)),0,W153)+IF(OR(REGEXMATCH(FORMULATEXT(X153),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"153)+IF(REGEXMATCH(FORMULATEXT(Y153),\"\"HMOD\"\"),0,Y153)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),397.460434782608)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Zac": {
     "HP": 685,
@@ -6673,7 +6673,7 @@
     "E-CD": "27-3*P_E",
     "R-CD": "145 - 15 * P_R",
     "P-CD": 300,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Zac_0",
       "passive": "ZacPassive",
@@ -6684,8 +6684,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U154),\"\"HMOD\"\"),NOT(P_Q>0)),0,U154)+IF(OR(REGEXMATCH(FORMULATEXT(V154),\"\"HMOD\"\"),NOT(P_W>0)),0,V154)+IF(OR(REGEXMATCH(FORMULATEXT(W154),\"\"HMOD\"\"),NOT(P_E>0)),0,W154)+IF(OR(REGEXMATCH(FORMULATEXT(X154),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"154)+IF(REGEXMATCH(FORMULATEXT(Y154),\"\"HMOD\"\"),0,Y154)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),477.914980237154)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Zed": {
     "HP": 654,
@@ -6717,7 +6717,7 @@
     "E-CD": "5.5-0.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Zed_0",
       "passive": "shadowninja_P",
@@ -6728,8 +6728,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U155),\"\"HMOD\"\"),NOT(P_Q>0)),0,U155)+IF(OR(REGEXMATCH(FORMULATEXT(V155),\"\"HMOD\"\"),NOT(P_W>0)),0,V155)+IF(OR(REGEXMATCH(FORMULATEXT(W155),\"\"HMOD\"\"),NOT(P_E>0)),0,W155)+IF(OR(REGEXMATCH(FORMULATEXT(X155),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"155)+IF(REGEXMATCH(FORMULATEXT(Y155),\"\"HMOD\"\"),0,Y155)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),394.99139657444)",
     "Trade Calc": 0,
-    "Energy": "TRUE",
-    "No Mana": "FALSE"
+    "Energy": 1,
+    "No Mana": 0
   },
   "Ziggs": {
     "HP": 606,
@@ -6761,7 +6761,7 @@
     "E-CD": 16,
     "R-CD": "155-35*P_R",
     "P-CD": 12,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Ziggs_0",
       "passive": "ZiggsPassiveReady",
@@ -6772,8 +6772,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U156),\"\"HMOD\"\"),NOT(P_Q>0)),0,U156)+IF(OR(REGEXMATCH(FORMULATEXT(V156),\"\"HMOD\"\"),NOT(P_W>0)),0,V156)+IF(OR(REGEXMATCH(FORMULATEXT(W156),\"\"HMOD\"\"),NOT(P_E>0)),0,W156)+IF(OR(REGEXMATCH(FORMULATEXT(X156),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"156)+IF(REGEXMATCH(FORMULATEXT(Y156),\"\"HMOD\"\"),0,Y156)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),585.490737812911)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Zilean": {
     "HP": 574,
@@ -6805,7 +6805,7 @@
     "E-CD": 15,
     "R-CD": "150-30*P_R",
     "P-CD": 120,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Zilean_0",
       "passive": "Zilean_Passive",
@@ -6816,8 +6816,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U157),\"\"HMOD\"\"),NOT(P_Q>0)),0,U157)+IF(OR(REGEXMATCH(FORMULATEXT(V157),\"\"HMOD\"\"),NOT(P_W>0)),0,V157)+IF(OR(REGEXMATCH(FORMULATEXT(W157),\"\"HMOD\"\"),NOT(P_E>0)),0,W157)+IF(OR(REGEXMATCH(FORMULATEXT(X157),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"157)+IF(REGEXMATCH(FORMULATEXT(Y157),\"\"HMOD\"\"),0,Y157)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),859.733162055335)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Zoe": {
     "HP": 630,
@@ -6849,7 +6849,7 @@
     "E-CD": "17 - P_E",
     "R-CD": "14-3*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Zoe_0",
       "passive": "Zoe_P",
@@ -6860,8 +6860,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U158),\"\"HMOD\"\"),NOT(P_Q>0)),0,U158)+IF(OR(REGEXMATCH(FORMULATEXT(V158),\"\"HMOD\"\"),NOT(P_W>0)),0,V158)+IF(OR(REGEXMATCH(FORMULATEXT(W158),\"\"HMOD\"\"),NOT(P_E>0)),0,W158)+IF(OR(REGEXMATCH(FORMULATEXT(X158),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"158)+IF(REGEXMATCH(FORMULATEXT(Y158),\"\"HMOD\"\"),0,Y158)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),415.339222661396)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Zyra": {
     "HP": 574,
@@ -6893,7 +6893,7 @@
     "E-CD": 12,
     "R-CD": "120-10*P_R",
     "P-CD": 8,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Zyra_0",
       "passive": "ZyraP",
@@ -6904,8 +6904,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U159),\"\"HMOD\"\"),NOT(P_Q>0)),0,U159)+IF(OR(REGEXMATCH(FORMULATEXT(V159),\"\"HMOD\"\"),NOT(P_W>0)),0,V159)+IF(OR(REGEXMATCH(FORMULATEXT(W159),\"\"HMOD\"\"),NOT(P_E>0)),0,W159)+IF(OR(REGEXMATCH(FORMULATEXT(X159),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"159)+IF(REGEXMATCH(FORMULATEXT(Y159),\"\"HMOD\"\"),0,Y159)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),426.399828722001)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Zeri": {
     "HP": 630,
@@ -6937,7 +6937,7 @@
     "E-CD": "23-1*P_E",
     "R-CD": "115-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Zeri_0",
       "passive": "ZeriP",
@@ -6948,8 +6948,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U160),\"\"HMOD\"\"),NOT(P_Q>0)),0,U160) * 3+IF(OR(REGEXMATCH(FORMULATEXT(V160),\"\"HMOD\"\"),NOT(P_W>0)),0,V160)+IF(OR(REGEXMATCH(FORMULATEXT(W160),\"\"HMOD\"\"),NOT(P_E>0)),0,W160)+IF(OR(REGEXMATCH(FORMULATEXT(X160),\"\"HMOD\"\"),NOT(P_R>0))\"&\",0,X160)+IF(REGEXMATCH(FORMULATEXT(Y160),\"\"HMOD\"\"),0,Y160)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+Self_DPS\"),522.994057971014)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Renata": {
     "HP": 555,
@@ -6981,7 +6981,7 @@
     "E-CD": "15-P_E",
     "R-CD": "170-20*P_R",
     "P-CD": 6,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Renata_0",
       "passive": "Renata_P",
@@ -6992,8 +6992,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U161),\"\"HMOD\"\"),NOT(P_Q>0)),0,U161) * 3+IF(OR(REGEXMATCH(FORMULATEXT(V161),\"\"HMOD\"\"),NOT(P_W>0)),0,V161)+IF(OR(REGEXMATCH(FORMULATEXT(W161),\"\"HMOD\"\"),NOT(P_E>0)),0,W161)+IF(OR(REGEXMATCH(FORMULATEXT(X161),\"\"HMOD\"\"),NOT(P_R>0))\"&\",0,X161)+IF(REGEXMATCH(FORMULATEXT(Y161),\"\"HMOD\"\"),0,Y161)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+Self_DPS\"),447.411054018445)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Bel'Veth": {
     "HP": 610,
@@ -7025,7 +7025,7 @@
     "E-CD": "25.5-1.5*P_E",
     "R-CD": 1,
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Belveth_0",
       "passive": "Belveth_Passive",
@@ -7036,8 +7036,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U162),\"\"HMOD\"\"),NOT(P_Q>0)),0,U162) * 3+IF(OR(REGEXMATCH(FORMULATEXT(V162),\"\"HMOD\"\"),NOT(P_W>0)),0,V162)+IF(OR(REGEXMATCH(FORMULATEXT(W162),\"\"HMOD\"\"),NOT(P_E>0)),0,W162)+IF(OR(REGEXMATCH(FORMULATEXT(X162),\"\"HMOD\"\"),NOT(P_R>0))\"&\",0,X162)+IF(REGEXMATCH(FORMULATEXT(Y162),\"\"HMOD\"\"),0,Y162)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+Self_DPS\"),528.705520421607)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "TRUE"
+    "Energy": 0,
+    "No Mana": 1
   },
   "Nilah": {
     "HP": 570,
@@ -7069,7 +7069,7 @@
     "E-CD": "29.5-3.5*P_E",
     "R-CD": "125-15*P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "Nilah_0",
       "passive": "NIlahP",
@@ -7080,8 +7080,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U163),\"\"HMOD\"\"),NOT(P_Q>0)),0,U163) * 3+IF(OR(REGEXMATCH(FORMULATEXT(V163),\"\"HMOD\"\"),NOT(P_W>0)),0,V163)+IF(OR(REGEXMATCH(FORMULATEXT(W163),\"\"HMOD\"\"),NOT(P_E>0)),0,W163)+IF(OR(REGEXMATCH(FORMULATEXT(X163),\"\"HMOD\"\"),NOT(P_R>0))\"&\",0,X163)+IF(REGEXMATCH(FORMULATEXT(Y163),\"\"HMOD\"\"),0,Y163)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+Self_DPS\"),456.037536231884)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "K'Sante": {
     "HP": 610,
@@ -7113,7 +7113,7 @@
     "E-CD": "9.5-0.5*P_E",
     "R-CD": "140 - 20 * P_R",
     "P-CD": 1,
-    "Melee?": "TRUE",
+    "Melee?": 1,
     "img": {
       "centered": "KSante_0",
       "passive": "Icons_KSante_P",
@@ -7124,8 +7124,8 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U164),\"\"HMOD\"\"),NOT(P_Q>0)),0,U164) * 3+IF(OR(REGEXMATCH(FORMULATEXT(V164),\"\"HMOD\"\"),NOT(P_W>0)),0,V164)+IF(OR(REGEXMATCH(FORMULATEXT(W164),\"\"HMOD\"\"),NOT(P_E>0)),0,W164)+IF(OR(REGEXMATCH(FORMULATEXT(X164),\"\"HMOD\"\"),NOT(P_R>0))\"&\",0,X164)+IF(REGEXMATCH(FORMULATEXT(Y164),\"\"HMOD\"\"),0,Y164)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+Self_DPS\"),508.682463768115)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   },
   "Milio": {
     "HP": 560,
@@ -7157,7 +7157,7 @@
     "E-CD": "18 - P_E",
     "R-CD": "175-15*P_R",
     "P-CD": 1,
-    "Melee?": "FALSE",
+    "Melee?": 0,
     "img": {
       "centered": "Milio_0",
       "passive": "Milio_P",
@@ -7168,7 +7168,7 @@
     },
     "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U165),\"\"HMOD\"\"),NOT(P_Q>0)),0,U165) * 3+IF(OR(REGEXMATCH(FORMULATEXT(V165),\"\"HMOD\"\"),NOT(P_W>0)),0,V165)+IF(OR(REGEXMATCH(FORMULATEXT(W165),\"\"HMOD\"\"),NOT(P_E>0)),0,W165)+IF(OR(REGEXMATCH(FORMULATEXT(X165),\"\"HMOD\"\"),NOT(P_R>0))\"&\",0,X165)+IF(REGEXMATCH(FORMULATEXT(Y165),\"\"HMOD\"\"),0,Y165)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+Self_DPS\"),721.729235836627)",
     "Trade Calc": 0,
-    "Energy": "FALSE",
-    "No Mana": "FALSE"
+    "Energy": 0,
+    "No Mana": 0
   }
 }

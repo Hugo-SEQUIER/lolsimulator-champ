@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import StatsTable from './statsTable'
 import SkillsTable from './skillsTable'
 import Link from 'next/link'
-import math from 'mathjs'
+import { evaluate } from 'mathjs'
+import { removeExcelFunctions } from './excelTraitement'
 export default function CharacterDetails({data, nameChamp}){
 
     const character_name = [
@@ -10,11 +11,11 @@ export default function CharacterDetails({data, nameChamp}){
     ]
 
     const listItems = [
-        "Abyssal Mask","Long Sword","Aegis of the Legion","Lord Dominik's Regards","Aether Wisp","Lost Chapter","Amplifying Tome","Anathema's Chains","Archangel's Staff", "Manamune","Ardent Censer","Maw of Malmortius","Axiom Arc","Mejai's Soulstealer","B. F. Sword","Mercurial Scimitar","Bami's Cinder","Mercury's Treads","Bandleglass Mirror", "Mikael's Blessing","Banshee's Veil","Mobility Boots","Berserker's Greaves" ,"Black Cleaver","Morellonomicon","Black Mist Scythe","Mortal Reminder","Blade of the Ruined King","Muramana","Blasting Wand","Nashor's Tooth","Blighting Jewel","Bloodthirster","Needlessly Large Rod","Boots of Swiftness", "Negatron Cloak","Boots","Bramble Vest","Noonquiver","Bulwark of the Mountain","Null-Magic Mantle","Catalyst of Aeons","Oblivion Orb","Caulfield's Warhammer","Pauldrons of Whiterock","Chain Vest", "Phage","Chalice of Blessing","Phantom Dancer","Chempunk Chainsword","Pickaxe","Chemtech Putrifier", "Plated Steelcaps","Cloak of Agility", "Prowler's Claw","Cloth Armor","Quicksilver Sash","Cosmic Drive", "Rabadon's Deathcap","Crystalline Bracer","Rageknife","Cull", "Randuin's Omen","Dagger","Rapid Firecannon","Dark Seal","Ravenous Hydra","Dead Man's Plate","Recurve Bow","Death's Dance","Redemption","Demonic Embrace","Rejuvenation Bead","Relic Shield","Doran's Blade" ,"Doran's Ring","Doran's Shield","Ruby Crystal","Runaan's Hurricane","Runesteel Spaulders","Rylai's Crystal Scepter","Edge of Night","Sapphire Crystal","Elixir of Iron", "Seeker's Armguard","Elixir of Sorcery","Seraph's Embrace","Elixir of Wrath","Serpent's Fang","Essence Reaver", "Serrated Dirk","Serylda's Grudge","Shadowflame","Executioner's Calling", "Shard of True Ice","Faerie Charm", "Sheen","Fiendish Codex", "Fimbulwinter", "Silvermere Dawn","Forbidden Idol", "Sorcerer's Shoes","Force of Nature","Spear of Shojin","Frostfang","Spectral Sickle","Frozen Heart", "Spectre's Cowl","Spellthief's Edge","Gargoyle Stoneplate","Spirit Visage","Giant's Belt","Staff of Flowing Water","Glacial Buckler","Statikk Shiv","Steel Shoulderguards","Guardian Angel", "Sterak's Gage","Stormrazor","Harrowing Cresent","Hearthbound Axe","Sunfire Aegis","Targon's Buckler","Hexdrinker" ,"Tear of the Goddess","Hextech Alternator", "The Collector","Thornmail","Horizon Focus", "Tiamat","Hullbreaker","Titanic Hydra","Immortal Shieldbow", "Turbo Chemtank","Imperial Mandate", "Umbral Glaive","Vampiric Scepter","Ionian Boots of Lucidity", "Verdant Barrier","Ironspike Whip","Vigilant Wardstone","Void Staff","Kindlegem","Warden's Mail","Kircheis Shard", "Warmog's Armor","Knight's Vow","Watchful Wardstone","Kraken Slayer","Winged Moonplate","Last Whisper","Winter's Approach","Leeching Leer","Wit's End","Lich Bane","Zeal","Lifewell Pendant", "Zeke's Convergence","Zhonya's Hourglass"
+        "-","Abyssal Mask","Long Sword","Aegis of the Legion","Lord Dominik's Regards","Aether Wisp","Lost Chapter","Amplifying Tome","Anathema's Chains","Archangel's Staff", "Manamune","Ardent Censer","Maw of Malmortius","Axiom Arc","Mejai's Soulstealer","B. F. Sword","Mercurial Scimitar","Bami's Cinder","Mercury's Treads","Bandleglass Mirror", "Mikael's Blessing","Banshee's Veil","Mobility Boots","Berserker's Greaves" ,"Black Cleaver","Morellonomicon","Black Mist Scythe","Mortal Reminder","Blade of the Ruined King","Muramana","Blasting Wand","Nashor's Tooth","Blighting Jewel","Bloodthirster","Needlessly Large Rod","Boots of Swiftness", "Negatron Cloak","Boots","Bramble Vest","Noonquiver","Bulwark of the Mountain","Null-Magic Mantle","Catalyst of Aeons","Oblivion Orb","Caulfield's Warhammer","Pauldrons of Whiterock","Chain Vest", "Phage","Chalice of Blessing","Phantom Dancer","Chempunk Chainsword","Pickaxe","Chemtech Putrifier", "Plated Steelcaps","Cloak of Agility", "Prowler's Claw","Cloth Armor","Quicksilver Sash","Cosmic Drive", "Rabadon's Deathcap","Crystalline Bracer","Rageknife","Cull", "Randuin's Omen","Dagger","Rapid Firecannon","Dark Seal","Ravenous Hydra","Dead Man's Plate","Recurve Bow","Death's Dance","Redemption","Demonic Embrace","Rejuvenation Bead","Relic Shield","Doran's Blade" ,"Doran's Ring","Doran's Shield","Ruby Crystal","Runaan's Hurricane","Runesteel Spaulders","Rylai's Crystal Scepter","Edge of Night","Sapphire Crystal","Elixir of Iron", "Seeker's Armguard","Elixir of Sorcery","Seraph's Embrace","Elixir of Wrath","Serpent's Fang","Essence Reaver", "Serrated Dirk","Serylda's Grudge","Shadowflame","Executioner's Calling", "Shard of True Ice","Faerie Charm", "Sheen","Fiendish Codex", "Fimbulwinter", "Silvermere Dawn","Forbidden Idol", "Sorcerer's Shoes","Force of Nature","Spear of Shojin","Frostfang","Spectral Sickle","Frozen Heart", "Spectre's Cowl","Spellthief's Edge","Gargoyle Stoneplate","Spirit Visage","Giant's Belt","Staff of Flowing Water","Glacial Buckler","Statikk Shiv","Steel Shoulderguards","Guardian Angel", "Sterak's Gage","Stormrazor","Harrowing Cresent","Hearthbound Axe","Sunfire Aegis","Targon's Buckler","Hexdrinker" ,"Tear of the Goddess","Hextech Alternator", "The Collector","Thornmail","Horizon Focus", "Tiamat","Hullbreaker","Titanic Hydra","Immortal Shieldbow", "Turbo Chemtank","Imperial Mandate", "Umbral Glaive","Vampiric Scepter","Ionian Boots of Lucidity", "Verdant Barrier","Ironspike Whip","Vigilant Wardstone","Void Staff","Kindlegem","Warden's Mail","Kircheis Shard", "Warmog's Armor","Knight's Vow","Watchful Wardstone","Kraken Slayer","Winged Moonplate","Last Whisper","Winter's Approach","Leeching Leer","Wit's End","Lich Bane","Zeal","Lifewell Pendant", "Zeke's Convergence","Zhonya's Hourglass"
     ]
 
     const listItemsMythics = [
-        "Crown of the Shattered Queen","Divine Sunderer","Duskblade of Draktharr", "Echoes of Helia", "Eclipse", "Evenshroud","Everfrost","Galeforce","Goredrinker","Guinsoo's Rageblade","Heartsteel","Hextech Rocketbelt","Iceborn Gauntlet", "Infinity Edge","Jak'Sho The Protean","Liandry's Anguish","Locket of the Iron Solari", "Luden's Tempest","Moonstone Renewer","Navori Quickblade","Night Harvester","Radiant Virtue","Riftmaker","Rod Of Ages","Shurelya's Battlesong","Stridebreaker","Trinity Force","Youmuu's Ghostblade",
+        "-","Crown of the Shattered Queen","Divine Sunderer","Duskblade of Draktharr", "Echoes of Helia", "Eclipse", "Evenshroud","Everfrost","Galeforce","Goredrinker","Guinsoo's Rageblade","Heartsteel","Hextech Rocketbelt","Iceborn Gauntlet", "Infinity Edge","Jak'Sho The Protean","Liandry's Anguish","Locket of the Iron Solari", "Luden's Tempest","Moonstone Renewer","Navori Quickblade","Night Harvester","Radiant Virtue","Riftmaker","Rod Of Ages","Shurelya's Battlesong","Stridebreaker","Trinity Force","Youmuu's Ghostblade",
     ]
     let options = [];
     for (let i = 1; i <= 18; i++) {
@@ -122,6 +123,12 @@ export default function CharacterDetails({data, nameChamp}){
         "Name" : "-"
     }) // OK
 
+    const [enemyItemSlot1, setEnemyItemSlot1] = useState('')
+    const [enemyItemSlot2, setEnemyItemSlot2] = useState('')
+    const [enemyItemSlot3, setEnemyItemSlot3] = useState('')
+    const [enemyItemSlot4, setEnemyItemSlot4] = useState('')
+    const [enemyItemSlot5, setEnemyItemSlot5] = useState('')
+    const [enemyItemSlot6, setEnemyItemSlot6] = useState('')
     const [enemyItemStats, setEnemyItemStats] = useState({
         "AR" : 0,
         "HP" : 0,
@@ -141,6 +148,12 @@ export default function CharacterDetails({data, nameChamp}){
         "Ocean" : 0
     }) // OK
 
+    const [itemSlot1, setItemSlot1] = useState('-')
+    const [itemSlot2, setItemSlot2] = useState('-')
+    const [itemSlot3, setItemSlot3] = useState('-')
+    const [itemSlot4, setItemSlot4] = useState('-')
+    const [itemSlot5, setItemSlot5] = useState('-')
+    const [itemSlot6, setItemSlot6] = useState('-')
     const [itemStats, setItemStats] = useState({
         "AD" : 0,
         "AH" : 0,
@@ -220,6 +233,7 @@ export default function CharacterDetails({data, nameChamp}){
         "TC" : 0
     })
 
+    const [nbLegendary, setNbLegendary] = useState(0)
     const [steroidStats, setSteroidStats] = useState({
         "E" : false,
         "Form" : false,
@@ -231,10 +245,21 @@ export default function CharacterDetails({data, nameChamp}){
         "W" : false
     }) // OK
 
-    function getNumericFromString(stringDamage){
+    const [qSkillPoint, setQSkillPoint] = useState(1)
+    const [wSkillPoint, setWSkillPoint] = useState(1)
+    const [eSkillPoint, setESkillPoint] = useState(1)
+    const [rSkillPoint, setRSkillPoint] = useState(1)
 
+    function getNumericFromString(stringDamage){
+        let str = removeExcelFunctions(stringDamage)
         let scope = {
             // VOIR LES PLAGES NOMMEES
+
+            Sc_Lin : (level - 1)/17,
+            data : data,
+            runeStats : runeStats,
+            basicStatsChampion : basicStatsChampion,
+            additionnalStats : additionnalStats,
             B_Ardent : bonusStats["Ardent"],
             B_Chem : bonusStats["Chem"],
             B_Cloud : bonusStats["Cloud"],
@@ -287,7 +312,7 @@ export default function CharacterDetails({data, nameChamp}){
             IT_MP : itemStats["MP"],
             IT_Mpen : itemStats["MPE"],
             IT_MPenP : itemStats["MPE%"],
-            IT_MPR : itemStats["MP5"],
+            IT_MPR : itemStats["MP5"] || 0,
             IT_MR : itemStats["MR"],
             IT_MS : itemStats["MS%"],
             IT_OH_Magic : itemStats["MOH"],
@@ -304,9 +329,9 @@ export default function CharacterDetails({data, nameChamp}){
             N_Chem : gameStats["Chemtech"],
             Kills : gameStats["Kills"],
             Language : 0,
-            Legendary : 1,
+            Legendary : nbLegendary,
             Minion : gameStats["Minion"],
-            MOD_Heal : 1 + IT_MOD_Heal + runeStats["Heal"] + N_Chem * 0.06, // Revitalize
+            MOD_Heal : 1 + itemStats["HEAL"] + runeStats["Heal"] + gameStats["Chemtech"] * 0.06, // Revitalize
             MOD_Hit : 1,
             MOD_Magic : 1,
             MOD_OH : 1,
@@ -319,14 +344,17 @@ export default function CharacterDetails({data, nameChamp}){
             N_Mountain : gameStats["Mountain"],
             N_Ocean : gameStats["Ocean"],
             Name : nameChamp,
-            OH_Phys : 0, // A DEFINIR
-            OH_Magic : 0, // A DEFINIR
-            OH_True : 0, // A DEFINIR
 
-            P_E : 0,
-            P_Q : 0,
-            P_R : 0,
-            P_W : 0,
+            Self_BoAD : additionnalStats["Attack Damage"],
+
+            OH_Phys : itemStats["POH"] * 1,  
+            OH_Magic : (itemStats["MOH"] + (bonusStats["Ardent"] ? 15 + 15 * (level - 1)/17 : 0))* 1, 
+            OH_True : (nameChamp.toLowerCase().includes("master") && eSkillPoint > 0 && steroidStats["E"] ? 25 + 5 * eSkillPoint + 0.3 * additionnalStats["Attack Damage"] : 0) + (nameChamp.toLowerCase().includes("belveth") && rSkillPoint > 0 ? (3+1.5+rSkillPoint +0.09*additionnalStats["Attack Damage"])*stackDarkHarvest / 2 : 0),
+
+            P_E : eSkillPoint,
+            P_Q : qSkillPoint,
+            P_R : rSkillPoint,
+            P_W : wSkillPoint,
             
             ForceBit : runeStats["ForceBit"],
             R_Adap : runeStats["Adaptive"],
@@ -341,7 +369,6 @@ export default function CharacterDetails({data, nameChamp}){
             R_PTAMOD : 1,
             R_Ultimate : runeStats["Ultimate"],
         
-            Sc_Lin : (level - 1)/17,
 
             Self_AD : totalStats["AD"],
             Self_AH : totalStats["AH"],
@@ -352,7 +379,7 @@ export default function CharacterDetails({data, nameChamp}){
             Self_AvgAA : totalStats["AvgAA"],
             Self_BaAD : basicStatsChampion["Attack Damage"],
             Self_BaMS : basicStatsChampion["Move Speed"],
-            Self_BoAD : additionnalStats["Attack Damage"],
+           
             Self_BoAR : additionnalStats["Armor"],
             Self_BoAS : additionnalStats["Attack Speed %"],
             Self_BoHP : additionnalStats["Hp"],
@@ -396,8 +423,13 @@ export default function CharacterDetails({data, nameChamp}){
             Steroid_W : steroidStats["W"],
         }
 
-
-        result = math.evaluate(stringDamage, scope);
+        if (typeof str === "string"){
+            console.log(str)
+            console.log(scope['IT_MPR'])
+            return evaluate(str, scope);
+        }
+            
+        return str
     }
     
     const enemyDataPrep = async () => {
@@ -647,7 +679,7 @@ export default function CharacterDetails({data, nameChamp}){
             obj['AS'] += 0.03+0.015*stackLegendExceptBloodline
         }
         if (mainRune == 'Lethal Tempo' && steroidStats["Runes"]){
-            if (data["Melee?"] == "TRUE")
+            if (data["Melee?"] == 1)
                 obj['AS'] += 0.6 + 0.3 * Math.min(1, (level -1) / 15)
             else 
                 obj['AS'] += 0.24 + 0.3 * ((level - 1)/17)
@@ -656,7 +688,7 @@ export default function CharacterDetails({data, nameChamp}){
             obj['AS'] += 1.1
         }
         if (mainRune == 'Grasp of the Undying'){
-            if (data["Melee?"] == "TRUE")
+            if (data["Melee?"] == 1)
                 obj["HP"] += 1 * 7 * stackDarkHarvest
             else 
                 obj["HP"] += 0.6 * 7 * stackDarkHarvest
@@ -717,7 +749,7 @@ export default function CharacterDetails({data, nameChamp}){
             }
         }
         if (mainRune == 'Phase Rush' && steroidStats["Runes"]){
-            if (data["Melee?"] == "TRUE")
+            if (data["Melee?"] == 1)
                 obj["MS"] += 0.3 + 0.3 * ((level -1)/17)
             else 
                 obj["MS"] += 0.15 + 0.25 * ((level -1)/17)
@@ -733,12 +765,77 @@ export default function CharacterDetails({data, nameChamp}){
         }
     }
 
-    const setUpMythicsItems = () => {
-
+    const addItemsStats = async (obj, itemName) => {
+        const res = await fetch(`http://localhost:3000/data/items/${itemName}.json`);
+        const itemDetails = await res.json()
+        for (let key in itemDetails){
+            if (key != "img" && key != "Icon"){
+                let newValue = itemDetails[key]
+                if (typeof newValue === "string"){
+                    newValue = getNumericFromString(newValue)
+                    console.log(newValue)
+                }
+                obj[key] += newValue
+            }
+        }
+        console.log(obj)
+        return obj
     }
+
+    useEffect(() => {
+        let obj = {
+            "AD" : 0,
+            "AH" : 0,
+            "AP" : 0,
+            "APE%": 0,
+            "AR" : 0,
+            "AS" : 0,
+            "CDMG" : 0,
+            "Gold" : 0,
+            "CC" : 0,
+            "MS" :0,
+            "HP" : 0,
+            "HP5" : 0,
+            "LE" : 0,
+            "LS" : 0,
+            "HEAL" : 0,
+            "APM" : 0,
+            "ADM" : 0,
+            "MP" : 0,
+            "MPE" : 0,
+            "MPE%" : 0,
+            "MP5" : 0,
+            "MR" : 0,
+            "MS%" : 0,
+            "MOH" : 0,
+            "POH" : 0,
+            "EPD" : 0,
+            "MPD" : 0,
+            "PPD" : 0,
+            "SHI" : 0,
+            "SHOE" : 0,
+            "SV" : 0,
+            "TC" : 0
+        }
+        if (itemSlot1 != '-')
+            obj = addItemsStats(obj, itemSlot1)
+        if (itemSlot2 != '-')
+            obj = addItemsStats(obj, itemSlot1)
+        if (itemSlot3 != '-')
+            obj = addItemsStats(obj, itemSlot1)
+        if (itemSlot4 != '-')
+            obj = addItemsStats(obj, itemSlot1)
+        if (itemSlot5 != '-')
+            obj = addItemsStats(obj, itemSlot1)
+        if (itemSlot6 != '-')
+            obj = addItemsStats(obj, itemSlot1)
+        console.log(obj)
+        setItemStats(obj)
+    }, [itemSlot1, itemSlot2, itemSlot3, itemSlot3, itemSlot4, itemSlot5, itemSlot6])
+
     useEffect(() => {
         if (data != undefined) {
-            if (data["Energy"] === "TRUE"){
+            if (data["Energy"] === 1){
                 setTextMana('Energy')
             }
             else {
@@ -1205,7 +1302,26 @@ export default function CharacterDetails({data, nameChamp}){
                                 <h1>Items</h1>
                             </div>             
                             <div className='stats-table-row'>
-
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Mythic
+                                            </td>
+                                            <td>
+                                                <select value={itemSlot1} onChange={(e) => {
+                                                    setItemSlot1(e.target.value)
+                                                }}>
+                                                    {listItemsMythics.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>                  
                         </div>
                         {/** Bonus / Steroid Stats */}

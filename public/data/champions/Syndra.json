@@ -28,7 +28,7 @@
   "E-CD": 17,
   "R-CD": "140 - 20 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Syndra_0",
     "passive": "SyndraPassive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U121),\"\"HMOD\"\"),NOT(P_Q>0)),0,U121)+IF(OR(REGEXMATCH(FORMULATEXT(V121),\"\"HMOD\"\"),NOT(P_W>0)),0,V121)+IF(OR(REGEXMATCH(FORMULATEXT(W121),\"\"HMOD\"\"),NOT(P_E>0)),0,W121)+IF(OR(REGEXMATCH(FORMULATEXT(X121),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"121)+IF(REGEXMATCH(FORMULATEXT(Y121),\"\"HMOD\"\"),0,Y121)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

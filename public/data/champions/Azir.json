@@ -19,7 +19,7 @@
   "MS": 335,
   "Range": 525,
   "Q-DMG": "(40 + 20 * P_Q + 0.35 * Self_AP) * MOD_Magic",
-  "W-DMG": "(33 + 17 * P_W + 2 * (Self_Level - 1) + MAX(Self_Level - 8, 0) + MAX(2 * (Self_Level - 9), 0) + MAX(5 * (Self_Level - 14), 0) + 0.6 * Self_AP) * MOD_Magic",
+  "W-DMG": "(33 + 17 * P_W + 2 * (Self_Level - 1) + Math.max(Self_Level - 8, 0) + Math.max(2 * (Self_Level - 9), 0) + Math.max(5 * (Self_Level - 14), 0) + 0.6 * Self_AP) * MOD_Magic",
   "E-DMG": "(20 + 40 * P_E + 0.4 * Self_AP) * MOD_Magic",
   "R-DMG": "(200*P_R+0.75*Self_AP)*MOD_Magic",
   "P-DMG": "(0.4 * Self_AP + 230 + 180 * Sc_Lin) * MOD_Magic",
@@ -28,7 +28,7 @@
   "E-CD": "23.5 - 1.5 * P_E",
   "R-CD": "135-15*P_R",
   "P-CD": 180,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Azir_0",
     "passive": "Azir_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U14),\"\"HMOD\"\"),NOT(P_Q>0)),0,U14)+IF(OR(REGEXMATCH(FORMULATEXT(V14),\"\"HMOD\"\"),NOT(P_W>0)),0,V14)+IF(OR(REGEXMATCH(FORMULATEXT(W14),\"\"HMOD\"\"),NOT(P_E>0)),0,W14)+IF(OR(REGEXMATCH(FORMULATEXT(X14),\"\"HMOD\"\"),NOT(P_R>0)),0,X14)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y14),\"\"HMOD\"\"),0,Y14)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),230)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

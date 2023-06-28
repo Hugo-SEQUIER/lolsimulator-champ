@@ -28,7 +28,7 @@
   "E-CD": "9-P_E",
   "R-CD": "90-10*P_R",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Chogath_0",
     "passive": "GreenTerror_TailSpike",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U22),\"\"HMOD\"\"),NOT(P_Q>0)),0,U22)+IF(OR(REGEXMATCH(FORMULATEXT(V22),\"\"HMOD\"\"),NOT(P_W>0)),0,V22)+IF(OR(REGEXMATCH(FORMULATEXT(W22),\"\"HMOD\"\"),NOT(P_E>0)),0,W22)+IF(OR(REGEXMATCH(FORMULATEXT(X22),\"\"HMOD\"\"),NOT(P_R>0)),0,X22)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y22),\"\"HMOD\"\"),0,Y22)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),18)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

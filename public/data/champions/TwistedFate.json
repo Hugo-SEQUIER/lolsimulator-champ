@@ -28,7 +28,7 @@
   "E-CD": "4/IF(Self_AS<",
   "R-CD": "210-30*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "TwistedFate_0",
     "passive": "Cardmaster_SealFate",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U131),\"\"HMOD\"\"),NOT(P_Q>0)),0,U131)+IF(OR(REGEXMATCH(FORMULATEXT(V131),\"\"HMOD\"\"),NOT(P_W>0)),0,V131)+IF(OR(REGEXMATCH(FORMULATEXT(W131),\"\"HMOD\"\"),NOT(P_E>0)),0,W131)+IF(OR(REGEXMATCH(FORMULATEXT(X131),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"131)+IF(REGEXMATCH(FORMULATEXT(Y131),\"\"HMOD\"\"),0,Y131)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

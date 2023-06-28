@@ -28,7 +28,7 @@
   "E-CD": "16-P_E",
   "R-CD": "130-20*P_R",
   "P-CD": 1,
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Warwick_0",
     "passive": "WarwickP",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U145),\"\"HMOD\"\"),NOT(P_Q>0)),0,U145)+IF(OR(REGEXMATCH(FORMULATEXT(V145),\"\"HMOD\"\"),NOT(P_W>0)),0,V145)+IF(OR(REGEXMATCH(FORMULATEXT(W145),\"\"HMOD\"\"),NOT(P_E>0)),0,W145)+IF(OR(REGEXMATCH(FORMULATEXT(X145),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"145)+IF(REGEXMATCH(FORMULATEXT(Y145),\"\"HMOD\"\"),0,Y145)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),12)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

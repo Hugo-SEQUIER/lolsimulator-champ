@@ -18,7 +18,7 @@
   "MR+": 2.05,
   "MS": 345,
   "Range": 175,
-  "Q-DMG": "((0.55+0.05*P_Q)*Self_AD+20*P_Q-10)*3.75*MOD_Phys*IF(Steroid_Q,1.6,1)",
+  "Q-DMG": "((0.55+0.05*P_Q)*Self_AD+20*P_Q-10)*3.75*MOD_Phys*(Steroid_Q ? 1.6 : 1)",
   "W-DMG": "(0.8*Self_AD+20*P_W+40)*MOD_Phys",
   "E-DMG": 0,
   "R-DMG": 0,
@@ -28,7 +28,7 @@
   "E-CD": "10-1*P_E",
   "R-CD": "160 - 20 * P_R",
   "P-CD": "24-((Self_Level-1)/17)*12",
-  "Melee?": "TRUE",
+  "Melee?": 1,
   "img": {
     "centered": "Aatrox_0",
     "passive": "Aatrox_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U3),\"\"HMOD\"\"),NOT(P_Q>0)),0,U3)+IF(OR(REGEXMATCH(FORMULATEXT(V3),\"\"HMOD\"\"),NOT(P_W>0)),0,V3)+IF(OR(REGEXMATCH(FORMULATEXT(W3),\"\"HMOD\"\"),NOT(P_E>0)),0,W3)+IF(OR(REGEXMATCH(FORMULATEXT(X3),\"\"HMOD\"\"),NOT(P_R>0)),0,X3)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y3),\"\"HMOD\"\"),0,Y3)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "TRUE"
+  "Energy": 0,
+  "No Mana": 1
 }

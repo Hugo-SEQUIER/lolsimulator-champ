@@ -28,7 +28,7 @@
   "E-CD": "27-3*P_E",
   "R-CD": "140 - 20 * P_R",
   "P-CD": 18,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Lissandra_0",
     "passive": "Lissandra_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U70),\"\"HMOD\"\"),NOT(P_Q>0)),0,U70)+IF(OR(REGEXMATCH(FORMULATEXT(V70),\"\"HMOD\"\"),NOT(P_W>0)),0,V70)+IF(OR(REGEXMATCH(FORMULATEXT(W70),\"\"HMOD\"\"),NOT(P_E>0)),0,W70)+IF(OR(REGEXMATCH(FORMULATEXT(X70),\"\"HMOD\"\"),NOT(P_R>0)),0,X70)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y70),\"\"HMOD\"\"),0,Y70)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),120)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

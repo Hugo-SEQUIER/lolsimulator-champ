@@ -18,17 +18,17 @@
   "MR+": 1.3,
   "MS": 325,
   "Range": 550,
-  "Q-DMG": "((30 + 10 * P_Q + 20 + 20 * Sc_Lin + 5 + 10 * P_Q + 30 + 60 * Sc_Lin) * IF(Steroid_W, 1.125 + 0.015, 1) + 0.6 * Self_AP + 0.35 * Self_AP + (0.00031 * Minion) * E_MHP) * MOD_Magic * IF(Steroid_Q, 3, 1)",
+  "Q-DMG": "((30 + 10 * P_Q + 20 + 20 * Sc_Lin + 5 + 10 * P_Q + 30 + 60 * Sc_Lin) * (Steroid_W ? 1.125 + 0.015 : 1) + 0.6 * Self_AP + 0.35 * Self_AP + (0.00031 * Minion) * E_MHP) * MOD_Magic * (Steroid_Q ? 3 : 1)",
   "W-DMG": 0,
   "E-DMG": "(25 + 25 * P_E + Self_AP) * MOD_Magic",
-  "R-DMG": "IF(Minion >",
+  "R-DMG": "(Minion >= 75 ? 1,25 : 1) * (50 + 100 * P_R + 0,65 * Self_AP) * MOD_Magic",
   "P-DMG": 0,
   "Q-CD": 3,
   "W-CD": "23.5-1.5*P_W",
   "E-CD": 12,
   "R-CD": "130 - 10 * P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "AurelionSol_0",
     "passive": "AurelionSolP",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U13),\"\"HMOD\"\"),NOT(P_Q>0)),0,U13)+IF(OR(REGEXMATCH(FORMULATEXT(V13),\"\"HMOD\"\"),NOT(P_W>0)),0,V13)+IF(OR(REGEXMATCH(FORMULATEXT(W13),\"\"HMOD\"\"),NOT(P_E>0)),0,W13)+IF(OR(REGEXMATCH(FORMULATEXT(X13),\"\"HMOD\"\"),NOT(P_R>0)),0,X13)+IF(\"&\"REGEXMATCH(FORMULATEXT(Y13),\"\"HMOD\"\"),0,Y13)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

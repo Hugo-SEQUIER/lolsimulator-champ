@@ -20,15 +20,15 @@
   "Range": 500,
   "Q-DMG": "(40 * P_Q + 1.6 * Self_AD -30) * MOD_Phys",
   "W-DMG": 0,
-  "E-DMG": "((15 * P_E + 15 + 0.175 * Self_BoAD) * (1 + 0.3 * Self_BoAS) * (1 + Self_Crit * Self_CritDMG * 0.9) * MOD_Phys + (OH_Magic + OH_Phys + OH_True) * 0.25) * IF(Steroid_E, 6, 3) + IF(Steroid_E, 2, 1) * Y6",
-  "R-DMG": "(15 + 5 * P_R + 0.1 * Self_AD) * (4 + P_R) * (1 + Self_Crit * (Self_CritDMG) * 0.5) * IF(Steroid_R, 4, 1) * MOD_Phys + ((4 + P_R) / 3) * (Y6 + Calc!O34)",
-  "P-DMG": "(5 + 0.6 * Self_AP + 5 * Self_Level + MAX(5 * (Self_Level - 8), 0) + MAX(5 * (Self_Level - 14), 0)) * MOD_Magic",
+  "E-DMG": "((15 * P_E + 15 + 0.175 * Self_BoAD) * (1 + 0.3 * Self_BoAS) * (1 + Self_Crit * Self_CritDMG * 0.9) * MOD_Phys + (OH_Magic + OH_Phys + OH_True) * 0.25) * (Steroid_E ? 6 : 3) + (Steroid_E ? 2 : 1) * Y6",
+  "R-DMG": "(15 + 5 * P_R + 0.1 * Self_AD) * (4 + P_R) * (1 + Self_Crit * (Self_CritDMG) * 0.5) * (Steroid_R ? 4 : 1) * MOD_Phys + ((4 + P_R) / 3) * (Y6)",
+  "P-DMG": "(5 + 0.6 * Self_AP + 5 * Self_Level + Math.max(5 * (Self_Level - 8), 0) + Math.max(5 * (Self_Level - 14), 0)) * MOD_Magic",
   "Q-CD": "8.75-0.75*P_Q",
   "W-CD": "22 - 4 * P_W",
   "E-CD": "19.5-1.5*P_E",
   "R-CD": "115-15*P_R",
   "P-CD": 16,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Akshan_0",
     "passive": "akshan_p",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U6),\"\"HMOD\"\"),NOT(P_Q>0)),0,U6)+IF(OR(REGEXMATCH(FORMULATEXT(V6),\"\"HMOD\"\"),NOT(P_W>0)),0,V6)+IF(OR(REGEXMATCH(FORMULATEXT(W6),\"\"HMOD\"\"),NOT(P_E>0)),0,W6)+IF(OR(REGEXMATCH(FORMULATEXT(X6),\"\"HMOD\"\"),NOT(P_R>0)),0,X6)+IF(REGEXMAT\"&\"CH(FORMULATEXT(Y6),\"\"HMOD\"\"),0,Y6)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),10)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }

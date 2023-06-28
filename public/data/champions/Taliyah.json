@@ -28,7 +28,7 @@
   "E-CD": "19-P_E",
   "R-CD": "210-30*P_R",
   "P-CD": 1,
-  "Melee?": "FALSE",
+  "Melee?": 0,
   "img": {
     "centered": "Taliyah_0",
     "passive": "Taliyah_Passive",
@@ -39,6 +39,6 @@
   },
   "Burst Calc": "IFERROR(__xludf.DUMMYFUNCTION(\"IF(OR(REGEXMATCH(FORMULATEXT(U123),\"\"HMOD\"\"),NOT(P_Q>0)),0,U123)+IF(OR(REGEXMATCH(FORMULATEXT(V123),\"\"HMOD\"\"),NOT(P_W>0)),0,V123)+IF(OR(REGEXMATCH(FORMULATEXT(W123),\"\"HMOD\"\"),NOT(P_E>0)),0,W123)+IF(OR(REGEXMATCH(FORMULATEXT(X123),\"\"HMOD\"\"),NOT(P_R>0)),0,X\"&\"123)+IF(REGEXMATCH(FORMULATEXT(Y123),\"\"HMOD\"\"),0,Y123)+Self_Proc_item+Self_Proc_Summ+Self_Proc_Rune+3*Self_DPS\"),0)",
   "Trade Calc": 0,
-  "Energy": "FALSE",
-  "No Mana": "FALSE"
+  "Energy": 0,
+  "No Mana": 0
 }
