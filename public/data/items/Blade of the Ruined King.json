@@ -17,7 +17,7 @@
   "SHOE": 0,
   "MS%": 0,
   "HEAL": 0,
-  "POH": "IF(Interface!$L$28,MAX(E_MHP*IF(VLOOKUP(Name,Champs!A2:AE200,31,FALSE),0.06,0.045),15),MAX(E_CHPV*IF(VLOOKUP(Name,Champs!A2:AE200,31,FALSE),0.12,0.09),15))",
+  "POH": "MAX(E_CHPV*IF(VLOOKUP(Name,Champs!A2:AE200,31,FALSE),0.12,0.09),15)",
   "MOH": 0,
   "EPD": 0,
   "MPD": "40 + IF(Self_Level > 9, 63 * (Self_Level - 9) / 9)",

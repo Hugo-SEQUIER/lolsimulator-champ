@@ -13,7 +13,7 @@
   "AH": 0,
   "LS": 0,
   "LE": 0,
-  "MPE": "10 + 10 * IF(OR(E_CHPV <",
+  "MPE": "10 + 10 * ((E_CHPV <= 1000 | Steroid_Items) ? 1 : (E_CHPV >= 2500 ? 0 : 1 - (E_CHPV - 1000) / 1500))",
   "SHOE": 0,
   "MS%": 0,
   "HEAL": 0,
