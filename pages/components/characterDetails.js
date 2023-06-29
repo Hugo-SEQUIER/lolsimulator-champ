@@ -849,6 +849,7 @@ export default function CharacterDetails({data, nameChamp}){
             "SV" : 0,
             "TC" : 0
         }
+        let triforce = false
         if (itemSlot1 != '-'){
             obj = await addItemsStats(obj, itemSlot1, setItemImg1)
             if (itemSlot1 in listItemsLegendary){
@@ -896,7 +897,12 @@ export default function CharacterDetails({data, nameChamp}){
         console.log(obj)
         setItemStats(obj)
         setNbLegendary(nb)
+        if (itemSlot1.includes("Trinity")) triforce = true
+        setHasTrinity(triforce)
     }
+
+    const [hasTrinity, setHasTrinity] = useState(false)
+
     useEffect(() => {
         majItemStats()
         
@@ -914,7 +920,7 @@ export default function CharacterDetails({data, nameChamp}){
             /** BASICS STATS */
             let champ_obj = {
                 "Hp": data["HP"] + data["HP+"] * (level - 1),
-                "Attack Damage": data["AD"] + data["AD+"] * (level - 1),
+                "Attack Damage": (data["AD"] + data["AD+"] * (level - 1)) * (1 + (steroidStats["Items"] && hasTrinity ? 0.2 : 0)),
                 "Attack Speed %": Number(data["AS"] * (1 + (data["Ratio"]* (level - 1))/100)),
                 "Armor": data["AR"] + data["AR+"] * (level - 1),
                 "Magic Resist": data["MR"] + data["MR+"] * (level - 1),
