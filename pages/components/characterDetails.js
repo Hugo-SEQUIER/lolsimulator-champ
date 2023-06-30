@@ -850,6 +850,7 @@ export default function CharacterDetails({data, nameChamp}){
             "TC" : 0
         }
         let triforce = false
+        let vigilantWardStone = false
         if (itemSlot1 != '-'){
             obj = await addItemsStats(obj, itemSlot1, setItemImg1)
             if (itemSlot1 in listItemsLegendary){
@@ -898,15 +899,19 @@ export default function CharacterDetails({data, nameChamp}){
         setItemStats(obj)
         setNbLegendary(nb)
         if (itemSlot1.includes("Trinity")) triforce = true
+        if (itemSlot2.includes("Vigilant WardStone") || itemSlot3.includes("Vigilant WardStone") || itemSlot4.includes("Vigilant WardStone") || itemSlot5.includes("Vigilant WardStone") || itemSlot6.includes("Vigilant WardStone"))
+            vigilantWardStone = true
+        setHasWardStone(vigilantWardStone)
         setHasTrinity(triforce)
     }
 
     const [hasTrinity, setHasTrinity] = useState(false)
+    const [hasWardStone, setHasWardStone] = useState(false)
 
     useEffect(() => {
         majItemStats()
         
-    }, [itemSlot1, itemSlot2, itemSlot3, itemSlot3, itemSlot4, itemSlot5, itemSlot6, elixirSlot])
+    }, [itemSlot1, itemSlot2, itemSlot3, itemSlot3, itemSlot4, itemSlot5, itemSlot6, elixirSlot, hasTrinity])
 
     useEffect(() => {
         if (data != undefined) {
@@ -951,6 +956,35 @@ export default function CharacterDetails({data, nameChamp}){
             majStatsRune()
         }
     }, [nameMainRune, mainRune, mainFirstRune, mainSecondRune, mainThirdRune, secondRune, secondFirstRune, secondSecondRune, offensiveShard, mixedShard, defensiveShard, stackBounty, stackConqueror, stackDarkHarvest, stackLegendBloodline, stackLegendExceptBloodline])
+
+    useEffect(() => {
+        let obj = {
+            "Hp": 0,
+            "Attack Damage": 0,
+            "Attack Speed %": 0,
+            "Armor": 0,
+            "Magic Resist": 0,
+            "Move Speed": 0,
+            "Lifesteal": 0,
+            "Critical %":  0, 
+            "Hp Regen": 0,
+    
+            "Mana" : 0,
+            "Ability Power": 0,
+            "Range": 0,
+            "Armor Penetration": 0,
+            "Resist Penetration": 0,
+            "Ability Haste": 0,
+            "Spellvamp %": 0,
+            "Tenacity %": 0,
+            "Mana / Regen": 0,
+        }
+        // AttackDamage
+        // SE referer au WIKI
+        let bonusAD = 
+        obj["Attack Damage"] = (itemStats["AD"] + (runeStats["ForceBit"] == 1 ? runeStats["Adaptive"] : 0)) * ((1 + (0.05 * gameStats["Infernal"]) + (hasWardStone ? 0.2 : 0)))
+
+    },[gameStats,itemStats, runeStats, enemyItemStats, enemyStats, bonusStats, steroidStats, apheliosStats])
 
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
