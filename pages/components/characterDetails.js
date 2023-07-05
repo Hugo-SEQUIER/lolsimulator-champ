@@ -130,6 +130,7 @@ export default function CharacterDetails({data, nameChamp}){
 
     const [sylasUltimate, setSylasUltimate] = useState("-")
 
+    const [sennaStacks, setSennaStacks] = useState(0)
     const [enemyStats, setEnemyStats] = useState({
         "Armor" : 0,
         "Armor Bonus" : 0,
@@ -849,8 +850,6 @@ export default function CharacterDetails({data, nameChamp}){
             "SV" : 0,
             "TC" : 0
         }
-        let triforce = false
-        let vigilantWardStone = false
         if (itemSlot1 != '-'){
             obj = await addItemsStats(obj, itemSlot1, setItemImg1)
             if (itemSlot1 in listItemsLegendary){
@@ -898,15 +897,47 @@ export default function CharacterDetails({data, nameChamp}){
         console.log(obj)
         setItemStats(obj)
         setNbLegendary(nb)
-        if (itemSlot1.includes("Trinity")) triforce = true
-        if (itemSlot2.includes("Vigilant WardStone") || itemSlot3.includes("Vigilant WardStone") || itemSlot4.includes("Vigilant WardStone") || itemSlot5.includes("Vigilant WardStone") || itemSlot6.includes("Vigilant WardStone"))
-            vigilantWardStone = true
-        setHasWardStone(vigilantWardStone)
-        setHasTrinity(triforce)
+
+        setHasWardStone(returnBoolIfHasItem("Vigilant WardStone"))
+        setHasTrinity(returnBoolIfHasItem("Trinity"))
+        setHasSterak(returnBoolIfHasItem("Sterak's"))
+        setHasGaleforce(returnBoolIfHasItem("Galeforce"))
+        setHasShojin(returnBoolIfHasItem("Shojin"))
+        setHasMuramana(returnBoolIfHasItem("Muramana"))
+        setHasRavenousHydra(returnBoolIfHasItem("Ravenous Hydra"))
+        setHasIE(returnBoolIfHasItem("Infinity Edge"))
+        setHasNavori(returnBoolIfHasItem("Navori"))
+        setHasYoumuu(returnBoolIfHasItem("Youmuu"))
+        setHasTitanicHydra(returnBoolIfHasItem("Titanic"))
+        setHasBloodthirster(returnBoolIfHasItem("Bloodthirster"))
+        setHasManamune(returnBoolIfHasItem("Manamune"))
+        setHasElixirWrath(returnBoolIfHasItem("Elixir of Wrath"))
+    }
+
+    function returnBoolIfHasItem(chaine){
+        let bool = false
+        if (itemSlot1.includes(chaine)) bool = true
+        if (itemSlot2.includes(chaine) || itemSlot3.includes(chaine) || itemSlot4.includes(chaine) || itemSlot5.includes(chaine) || itemSlot6.includes(chaine))
+            bool = true
+        if (elixirSlot.includes(chaine))
+            bool = true
+        return bool
     }
 
     const [hasTrinity, setHasTrinity] = useState(false)
     const [hasWardStone, setHasWardStone] = useState(false)
+    const [hasSterak, setHasSterak] = useState(false)
+    const [hasGaleforce, setHasGaleforce] = useState(false)
+    const [hasShojin, setHasShojin] = useState(false)
+    const [hasMuramana, setHasMuramana] = useState(false)
+    const [hasManamune, setHasManamune] = useState(false)
+    const [hasRavenousHydra, setHasRavenousHydra] = useState(false)
+    const [hasIE, setHasIE] = useState(false)
+    const [hasNavori, setHasNavori] = useState(false)
+    const [hasYoumuu, setHasYoumuu] = useState(false)
+    const [hasTitanicHydra, setHasTitanicHydra] = useState(false)
+    const [hasBloodthirster, setHasBloodthirster] = useState(false)
+    const [hasElixirWrath, setHasElixirWrath] = useState(false)
 
     useEffect(() => {
         majItemStats()
@@ -981,8 +1012,32 @@ export default function CharacterDetails({data, nameChamp}){
         }
         // AttackDamage
         // SE referer au WIKI
-        let bonusAD = 
-        obj["Attack Damage"] = (itemStats["AD"] + (runeStats["ForceBit"] == 1 ? runeStats["Adaptive"] : 0)) * ((1 + (0.05 * gameStats["Infernal"]) + (hasWardStone ? 0.2 : 0)))
+        let bonusAD = (hasElixirWrath ? 30 : 0) + (hasBloodthirster && steroidStats["Items"] ? (level < 13 ? 10 : level < 14 ? 15 : level < 15 ? 20 : level < 16 ? 25 : level < 17 ? 30 : level < 18 ? 35 : 40) : 0)(hasSterak ? basicStatsChampion["Attack Damage"] / 2 : 0) + (hasGaleforce || hasIE || hasNavori ? 5 * nbLegendary : 0) + (hasWardStone ? 0.2 : 0) + (hasMuramana || hasManamune ? totalStats["MP"] * 0.025 : 0) + (hasRavenousHydra && steroidStats["Items"] ? 20 : 0) + (hasTrinity ? 3 * nbLegendary : 0) + (hasYoumuu ? 7 * nbLegendary : 0) + (hasTitanicHydra ? 0.02 * additionnalStats["Hp"] : 0)
+        bonusAD += (steroidStats["R"] && nameChamp == 'Aatrox' ? (rSkillPoint == 1 ? totalStats["AD"] * 0.2 : rSkillPoint == 2 ? totalStats["AD"] * 0.325 : totalStats["AD"] * 0.45) : 0)
+        bonusAD += (nameChamp == 'Aphelios' ? (qSkillPoint == 0 ? 4.5 : qSkillPoint == 1 ? 9 : qSkillPoint == 2 ? 13.5 : qSkillPoint == 3 ? 18 : qSkillPoint == 4 ? 22.5 : 27) : 0)
+        bonusAD += (nameChamp == 'Darius' && steroidStats["P"] ? (level <= 10 ? 30 + 5 * (level - 1) : (level <= 13 ? 30 + 10 * (level - 1) : 30 + 25 * (level - 1))) : 0)
+        bonusAD += (nameChamp.includes("Mundo") && eSkillPoint > 0 ? 2 + 0.5 * eSkillPoint : 0)
+        bonusAD += nameChamp == 'Hecarim' ? additionnalStats["Move Speed"] * (0.12 + (level >= 3 ? 0.02 * Math.floor((level-3) / 3) : 0)) : 0 
+        bonusAD += nameChamp == 'Jhin' ? 0.03 + (level <= 9 ? 0.01 * level : level <= 11 ? 0.02 * level : 0.04 * level) + 0.003 * totalStats["Crit"] + 0.025 * additionnalStats["Attack Speed %"] : 0
+        bonusAD += nameChamp.includes("Sante") && steroidStats["R"] ? 5 + additionnalStats["Armor"] * 0.325 + additionnalStats["Magic Resist"] * 0.325 : 0
+        bonusAD += nameChamp == "Naafiri"  && steroidStats["R"] ? 10 + 10 * (rSkillPoint - 1) + (0.1 + 0.05 * rSkillPoint) * totalStats["AD"] : 0
+        bonusAD += nameChamp == 'Nocturne' && steroidStats["Q"] ? 10 + 10 * (qSkillPoint) : 0
+        bonusAD += nameChamp == "Olaf" && steroidStats["R"] ? 0 + 10 * rSkillPoint + 0.25 * totalStats["AD"] : 0
+        bonusAD += nameChamp == "Rengar" && steroidStats["P"] ? 0.25 * additionnalStats["Attack Damage"] : 0
+        bonusAD += nameChamp == "Riven" && steroidStats["R"] ? 0.20 * additionnalStats["Attack Damage"] : 0
+        bonusAD += nameChamp == "Senna" ? 0.75 * sennaStacks : 0
+        bonusAD += nameChamp == "Trundle" && steroidStats["Q"] ? 0 + 20 * qSkillPoint + (0.5 + 0.1 * qSkillPoint) * totalStats["AD"] : 0 
+        bonusAD += nameChamp == "Tryndamere" && qSkillPoint > 0 ? 10 + 5 * (qSkillPoint - 1) : 0
+        bonusAD += nameChamp == "Twitch" && steroidStats["R"] ? 40 + 15 * (rSkillPoint - 1) : 0
+        bonusAD += nameChamp == "Vayne" && steroidStats["R"] ? 25 + 15 * (rSkillPoint - 1) : 0
+        bonusAD += mainRune == "Conqueror" && runeStats["ForceBit"] == 1 ? 1.2 * stackConqueror + 1.5 / (17 * (level - 1)) : 0 
+        bonusAD += (secondFirstRune.includes("EyeBall") || secondSecondRune.includes("EyeBall") || mainSecondRune.includes("Eyeball")) && runeStats["ForceBit"] == 1 ? 1.2 * stackBounty  + (stackBounty == 10 ? 6 : 0): 0
+        bonusAD += (secondFirstRune.includes("Poro") || secondSecondRune.includes("Poro") || mainSecondRune.includes("Poro")) && runeStats["ForceBit"] == 1 ? 1.2 * stackBounty  + (stackBounty == 10 ? 6 : 0): 0
+        bonusAD += (secondFirstRune.includes("Zombie") || secondSecondRune.includes("Zombie") || mainSecondRune.includes("Zombie")) && runeStats["ForceBit"] == 1 ? 1.2 * stackBounty  + (stackBounty == 10 ? 6 : 0): 0
+        bonusAD += (secondFirstRune.includes("Absolute Focus") || secondSecondRune.includes("Absolute Focus") || mainSecondRune.includes("EyeAbsolute Focusball")) && runeStats["ForceBit"] == 1 ? 1.8 + 16.2 / (17 * (level -1)) : 0
+        bonusAD += (secondFirstRune.includes("Gathering Storm") || secondSecondRune.includes("Gathering Storm") || mainSecondRune.includes("Gathering Storm")) && runeStats["ForceBit"] == 1 ? (gameStats["Gametime"] < 10 ? 0 : gameStats["Gametime"] < 20 ? 4.8 : gameStats["Gametime"] < 30 ? 14.4 : gameStats["Gametime"] < 40 ? 28.8 : 48): 0
+        obj["Attack Damage"] = (itemStats["AD"] + (runeStats["ForceBit"] == 1 ? runeStats["Adaptive"] : 0) + bonusAD) * ((1 + (0.05 * gameStats["Infernal"])))
+        
 
     },[gameStats,itemStats, runeStats, enemyItemStats, enemyStats, bonusStats, steroidStats, apheliosStats])
 
