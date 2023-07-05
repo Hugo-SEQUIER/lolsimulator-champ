@@ -793,6 +793,7 @@ export default function CharacterDetails({data, nameChamp}){
         if (mainThirdRune == 'Ultimate Hunter' || secondSecondRune == 'Ultimate Hunter'){
             obj["Ultimate"] = 0.06 + 0.05 * stackBounty
         }
+        setRuneStats(obj)
     }
 
     const addItemsStats = async (obj, itemName, set) => {
@@ -912,6 +913,17 @@ export default function CharacterDetails({data, nameChamp}){
         setHasBloodthirster(returnBoolIfHasItem("Bloodthirster"))
         setHasManamune(returnBoolIfHasItem("Manamune"))
         setHasElixirWrath(returnBoolIfHasItem("Elixir of Wrath"))
+        setHasElixirIron(returnBoolIfHasItem("Elixir of Iron"))
+        setHasHeartsteel(returnBoolIfHasItem("Heartsteel"))
+        setHasRadiant(returnBoolIfHasItem("Radiant Virtue"))
+        setHasFimbulwinter(returnBoolIfHasItem("Fimbul"))
+        setHasGoredrinker(returnBoolIfHasItem("Goredrinker"))
+        setHasIceborn(returnBoolIfHasItem("Iceborn Gau"))
+        setHasWinterApproach(returnBoolIfHasItem("Winter's Approach"))
+        setHasRageblade(returnBoolIfHasItem("Guinsoo"))
+        setHasShieldbow(returnBoolIfHasItem("Shieldbow"))
+        setHasPhantom(returnBoolIfHasItem("Phantom"))
+        setHasRageknife(returnBoolIfHasItem("Rageknife"))
     }
 
     function returnBoolIfHasItem(chaine){
@@ -938,6 +950,17 @@ export default function CharacterDetails({data, nameChamp}){
     const [hasTitanicHydra, setHasTitanicHydra] = useState(false)
     const [hasBloodthirster, setHasBloodthirster] = useState(false)
     const [hasElixirWrath, setHasElixirWrath] = useState(false)
+    const [hasHeartsteel, setHasHeartsteel] = useState(false)
+    const [hasRadiant, setHasRadiant] = useState(false)
+    const [hasFimbulwinter, setHasFimbulwinter] = useState(false)
+    const [hasGoredrinker, setHasGoredrinker] = useState(false)
+    const [hasIceborn, setHasIceborn] = useState(false)
+    const [hasWinterApproach, setHasWinterApproach] = useState(false)
+    const [hasElixirIron, setHasElixirIron] = useState(false)
+    const [hasRageblade, setHasRageblade] = useState(false)
+    const [hasShieldbow, setHasShieldbow] = useState(false)
+    const [hasPhantom, setHasPhantom] = useState(false)
+    const [hasRageknife, setHasRageknife] = useState(false)
 
     useEffect(() => {
         majItemStats()
@@ -954,12 +977,18 @@ export default function CharacterDetails({data, nameChamp}){
             }
             setImgSplash(`../../images/centered/${nameChamp}_0.jpg`)
             /** BASICS STATS */
+            for (let key in data){
+                if (key == 'img') break
+                if (typeof data[key] === 'string'){
+                    data[key] = getNumericFromString(data[key])
+                }
+            }
             let champ_obj = {
-                "Hp": data["HP"] + data["HP+"] * (level - 1),
-                "Attack Damage": (data["AD"] + data["AD+"] * (level - 1)) * (1 + (steroidStats["Items"] && hasTrinity ? 0.2 : 0)),
+                "Hp": data["HP"] + data["HP+"] * (level - 1) + (steroidStats["Form"] && nameChamp=='Gnar' ? 100 + 43 * (level - 1) : 0) + (steroidStats["Form"] && nameChamp == "Kled" ? 810 + 144 * (level -1) * (0.7025 + 0.0175 * (level - 1)) : 0),
+                "Attack Damage": (data["AD"] + data["AD+"] * (level - 1)) * (1 + (steroidStats["Items"] && hasTrinity ? 0.2 : 0) + (steroidStats["Form"] && nameChamp=='Gnar' ? 8 +2.5 *(level - 1) : 0)),
                 "Attack Speed %": Number(data["AS"] * (1 + (data["Ratio"]* (level - 1))/100)),
-                "Armor": data["AR"] + data["AR+"] * (level - 1),
-                "Magic Resist": data["MR"] + data["MR+"] * (level - 1),
+                "Armor": data["AR"] + data["AR+"] * (level - 1) + (steroidStats["Form"] && nameChamp=='Gnar' ? 3.5 + 3 * (level - 1) : 0),
+                "Magic Resist": data["MR"] + data["MR+"] * (level - 1) + (steroidStats["Form"] && nameChamp=='Gnar' ? 3.5 + 3.5 * (level - 1) : 0),
                 "Move Speed": data["MS"],
                 "Lifesteal": 0,
                 "Critical %":  0, 
@@ -980,7 +1009,7 @@ export default function CharacterDetails({data, nameChamp}){
             enemyDataPrep()
 
         }
-    },[data, level, enemyName, enemyLevel])
+    },[data, level, enemyName, enemyLevel, steroidStats])
 
     useEffect(() => {
         if (data != undefined){
@@ -1012,7 +1041,7 @@ export default function CharacterDetails({data, nameChamp}){
         }
         // AttackDamage
         // SE referer au WIKI
-        let bonusAD = (hasElixirWrath ? 30 : 0) + (hasBloodthirster && steroidStats["Items"] ? (level < 13 ? 10 : level < 14 ? 15 : level < 15 ? 20 : level < 16 ? 25 : level < 17 ? 30 : level < 18 ? 35 : 40) : 0)(hasSterak ? basicStatsChampion["Attack Damage"] / 2 : 0) + (hasGaleforce || hasIE || hasNavori ? 5 * nbLegendary : 0) + (hasWardStone ? 0.2 : 0) + (hasMuramana || hasManamune ? totalStats["MP"] * 0.025 : 0) + (hasRavenousHydra && steroidStats["Items"] ? 20 : 0) + (hasTrinity ? 3 * nbLegendary : 0) + (hasYoumuu ? 7 * nbLegendary : 0) + (hasTitanicHydra ? 0.02 * additionnalStats["Hp"] : 0)
+        let bonusAD = (hasElixirWrath ? 30 : 0) + (hasBloodthirster && steroidStats["Items"] ? (level < 13 ? 10 : level < 14 ? 15 : level < 15 ? 20 : level < 16 ? 25 : level < 17 ? 30 : level < 18 ? 35 : 40) : 0)+(hasSterak ? basicStatsChampion["Attack Damage"] / 2 : 0) + (hasGaleforce || hasIE || hasNavori ? 5 * nbLegendary : 0) + (hasMuramana || hasManamune ? totalStats["MP"] * 0.025 : 0) + (hasRavenousHydra && steroidStats["Items"] ? 20 : 0) + (hasTrinity ? 3 * nbLegendary : 0) + (hasYoumuu ? 7 * nbLegendary : 0) + (hasTitanicHydra ? 0.02 * additionnalStats["Hp"] : 0)
         bonusAD += (steroidStats["R"] && nameChamp == 'Aatrox' ? (rSkillPoint == 1 ? totalStats["AD"] * 0.2 : rSkillPoint == 2 ? totalStats["AD"] * 0.325 : totalStats["AD"] * 0.45) : 0)
         bonusAD += (nameChamp == 'Aphelios' ? (qSkillPoint == 0 ? 4.5 : qSkillPoint == 1 ? 9 : qSkillPoint == 2 ? 13.5 : qSkillPoint == 3 ? 18 : qSkillPoint == 4 ? 22.5 : 27) : 0)
         bonusAD += (nameChamp == 'Darius' && steroidStats["P"] ? (level <= 10 ? 30 + 5 * (level - 1) : (level <= 13 ? 30 + 10 * (level - 1) : 30 + 25 * (level - 1))) : 0)
@@ -1023,22 +1052,74 @@ export default function CharacterDetails({data, nameChamp}){
         bonusAD += nameChamp == "Naafiri"  && steroidStats["R"] ? 10 + 10 * (rSkillPoint - 1) + (0.1 + 0.05 * rSkillPoint) * totalStats["AD"] : 0
         bonusAD += nameChamp == 'Nocturne' && steroidStats["Q"] ? 10 + 10 * (qSkillPoint) : 0
         bonusAD += nameChamp == "Olaf" && steroidStats["R"] ? 0 + 10 * rSkillPoint + 0.25 * totalStats["AD"] : 0
-        bonusAD += nameChamp == "Rengar" && steroidStats["P"] ? 0.25 * additionnalStats["Attack Damage"] : 0
-        bonusAD += nameChamp == "Riven" && steroidStats["R"] ? 0.20 * additionnalStats["Attack Damage"] : 0
         bonusAD += nameChamp == "Senna" ? 0.75 * sennaStacks : 0
         bonusAD += nameChamp == "Trundle" && steroidStats["Q"] ? 0 + 20 * qSkillPoint + (0.5 + 0.1 * qSkillPoint) * totalStats["AD"] : 0 
         bonusAD += nameChamp == "Tryndamere" && qSkillPoint > 0 ? 10 + 5 * (qSkillPoint - 1) : 0
         bonusAD += nameChamp == "Twitch" && steroidStats["R"] ? 40 + 15 * (rSkillPoint - 1) : 0
         bonusAD += nameChamp == "Vayne" && steroidStats["R"] ? 25 + 15 * (rSkillPoint - 1) : 0
+        bonusAD += nameChamp == "Pyke" ? 0.07143 * additionnalStats["Hp"] : 0
         bonusAD += mainRune == "Conqueror" && runeStats["ForceBit"] == 1 ? 1.2 * stackConqueror + 1.5 / (17 * (level - 1)) : 0 
         bonusAD += (secondFirstRune.includes("EyeBall") || secondSecondRune.includes("EyeBall") || mainSecondRune.includes("Eyeball")) && runeStats["ForceBit"] == 1 ? 1.2 * stackBounty  + (stackBounty == 10 ? 6 : 0): 0
         bonusAD += (secondFirstRune.includes("Poro") || secondSecondRune.includes("Poro") || mainSecondRune.includes("Poro")) && runeStats["ForceBit"] == 1 ? 1.2 * stackBounty  + (stackBounty == 10 ? 6 : 0): 0
         bonusAD += (secondFirstRune.includes("Zombie") || secondSecondRune.includes("Zombie") || mainSecondRune.includes("Zombie")) && runeStats["ForceBit"] == 1 ? 1.2 * stackBounty  + (stackBounty == 10 ? 6 : 0): 0
         bonusAD += (secondFirstRune.includes("Absolute Focus") || secondSecondRune.includes("Absolute Focus") || mainSecondRune.includes("EyeAbsolute Focusball")) && runeStats["ForceBit"] == 1 ? 1.8 + 16.2 / (17 * (level -1)) : 0
         bonusAD += (secondFirstRune.includes("Gathering Storm") || secondSecondRune.includes("Gathering Storm") || mainSecondRune.includes("Gathering Storm")) && runeStats["ForceBit"] == 1 ? (gameStats["Gametime"] < 10 ? 0 : gameStats["Gametime"] < 20 ? 4.8 : gameStats["Gametime"] < 30 ? 14.4 : gameStats["Gametime"] < 40 ? 28.8 : 48): 0
-        obj["Attack Damage"] = (itemStats["AD"] + (runeStats["ForceBit"] == 1 ? runeStats["Adaptive"] : 0) + bonusAD) * ((1 + (0.05 * gameStats["Infernal"])))
         
+        obj["Attack Damage"] = (itemStats["AD"] + (runeStats["ForceBit"] == 1 ? runeStats["Adaptive"] : 0) + bonusAD) * ((1 + (0.05 * gameStats["Infernal"])) + (hasWardStone ? 0.2 : 0) + (nameChamp == "Riven" && steroidStats["R"] ? 0.20 : 0) + (nameChamp == "Rengar" && steroidStats["P"] ? 0.25 : 0))
 
+        // HP
+        let bonusHP = (hasFimbulwinter || hasWinterApproach ? 0.08 * totalStats["MP"] : 0)
+        bonusHP += (hasGoredrinker || hasRadiant ? 75 * nbLegendary : 0)
+        bonusHP += (hasHeartsteel ? 0.01 * nbLegendary * totalStats["HP"] : 0)
+        bonusHP += (hasIceborn ? 50 * nbLegendary : 0)
+        bonusHP += (hasRadiant && steroidStats["R"] ? 0.125 * totalStats["HP"] : 0)
+        bonusHP += (hasElixirIron ? 300 : 0)
+        bonusHP += (nameChamp.includes("Veth") && nameChamp.includes("Bel") && steroidStats["Form"] ? 50 + 50 * rSkillPoint + (1.2 * obj["Attack Damage"]) + 0.9 * totalStats["AP"] : 0)
+        bonusHP += (nameChamp.includes("Gath") ? 40 + 40 *rSkillPoint * gameStats["Kills"] : 0)
+        bonusHP += (nameChamp == 'Nasus' && steroidStats["R"] ? 150 + 150 * rSkillPoint : 0)
+        bonusHP += (nameChamp == 'Renekton' && steroidStats["R"] ? 100 + 150 * rSkillPoint : 0)
+        bonusHP += (nameChamp == 'Shyvana' && steroidStats["R"] ? 50 + 100 * rSkillPoint : 0)
+        bonusHP += (nameChamp == "Sion" && wSkillPoint > 0 ? 4 * gameStats["Minion"] + 15 * gameStats["Kills"] : 0) 
+        bonusHP += (nameChamp == "Swain" ? 12 * gameStats["Minion"] : 0)
+        bonusHP += (nameChamp == "Vladimir" ? 1.6 * totalStats["AP"] : 0)
+        bonusHP += (nameChamp == 'Volibear' && steroidStats["R"] ? 0 + 175 * rSkillPoint : 0)
+        bonusHP += (stackLegendBloodline == 15 ? 85 : 0)
+        bonusHP += (mainThirdRune == 'Overgrowth' || secondSecondRune == 'Overgrowth' ? (3* Math.floor(gameStats["Minion"] / 8)) >= 45 ? 0.035 * basicStatsChampion["Hp"] : 0 : 0) 
+        bonusHP += (mainThirdRune == 'Overgrowth' || secondSecondRune == 'Overgrowth' ? (3* Math.floor(gameStats["Minion"] / 8)) : 0)
+        let multiBonusHp = (mainThirdRune == 'Overgrowth' || secondSecondRune == 'Overgrowth' ? (3* Math.floor(gameStats["Minion"] / 8)) >= 45 ? 1.035 : 1 : 1) 
+        multiBonusHp *= (hasWardStone ? 1.2 : 1)
+        multiBonusHp *= (nameChamp == 'Ornn' ? Math.min(1.3, 1.1 + (level > 12 ? (level - 12) *0.04 : 0)) : 1)
+
+        obj["Hp"] = (itemStats["HP"] + runeStats["HP"] + bonusHP) * multiBonusHp
+
+        // Attack Speed
+        let bonusAS = (bonusStats["Ardent"] ? 0.2 : 0) + (hasRageblade && steroidStats["Items"] ? 0.32 : 0) + (hasShieldbow && steroidStats["Items"] ? 0.3 : 0) + (hasPhantom && steroidStats["Items"] ? 0.3 : 0) + (hasRageknife && steroidStats["Items"] ? 0.15 : 0)
+        bonusAS += (nameChamp.includes("Jarvan") && steroidStats["Q"] && qSkillPoint > 0 ? 0.175 + 0.025 * qSkillPoint : 0)
+        bonusAS += (nameChamp == "Lulu" && steroidStats["W"] && wSkillPoint > 0 ? 0.225 + 0.025 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Nidalee" && steroidStats["E"] && eSkillPoint > 0 ? 0.1 + 0.1 * eSkillPoint : 0)
+        bonusAS += (nameChamp.includes("Nunu") && steroidStats["P"] ? 0.2 : 0)
+        bonusAS += (nameChamp.includes("Renata") && steroidStats["W"] && wSkillPoint ? (0.1 + 0.1 * wSkillPoint) + 0.02 * (Math.floor(totalStats["AP"]/100)) : 0)
+        bonusAS += (nameChamp.includes("Yuumi") && steroidStats["E"] && eSkillPoint ? (0.225 + 0.025 * eSkillPoint) + 0.08 * (Math.floor(totalStats["AP"]/100)) : 0)
+        bonusAS += (nameChamp == 'Aphelios' ? (wSkillPoint == 0 ? 9 : wSkillPoint == 1 ? 18 : wSkillPoint == 2 ? 27 : wSkillPoint == 3 ? 36 : wSkillPoint == 4 ? 45 : 54) : 0)
+        bonusAS += (nameChamp == "Ashe" && steroidStats["Q"] && qSkillPoint > 0 ? 0.175 + 0.075 * qSkillPoint : 0)
+        bonusAS += (nameChamp.includes("Veth") ? gameStats["Minion"] + 2 * gameStats["Kills"] * 0.0022 + 0.0006 * (level) + (steroidStats["P"] ? 0.25 + 0.25 / (17 * level - 1) : 0) : 0)
+        bonusAS += (nameChamp.includes("Blitz") && steroidStats["W"] && wSkillPoint > 0 ? 0.17 + 0.13 * wSkillPoint : 0) 
+        bonusAS += (nameChamp == "Camille" && steroidStats["E"] && eSkillPoint > 0 ? 0.35 + 0.05 * eSkillPoint : 0)
+        bonusAS += (nameChamp == "Diana" && steroidStats["P"] ? level < 3 ? 0.15 : level < 6 ? 0.1917 : level < 9 ? 0.2333 : level < 12 ? 0.275 : level < 15 ? 0.3167 : 0.4 : 0)
+        bonusAS += (nameChamp == "Draven" && steroidStats["W"] && wSkillPoint > 0 ? 0.15 + 0.05 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Elise" && steroidStats["W"] && steroidStats["Form"] && wSkillPoint > 0 ? 0.5 + 0.1 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Ezreal" && steroidStats["P"] ? 0.5 : 0)
+        bonusAS += (nameChamp == "Fiora" && steroidStats["E"] && eSkillPoint > 0 ? 0.4 + 0.1 * eSkillPoint : 0)
+        bonusAS += (nameChamp == "Gnar" && !steroidStats["Form"] ? 0.055 + eSkillPoint > 0 ? 0.35 + 0.05 * eSkillPoint : 0 : 0)
+        bonusAS += (nameChamp == "Gwen" && steroidStats["E"] && eSkillPoint > 0 ? 0.05 + 0.15 * eSkillPoint : 0)
+        bonusAS += (nameChamp == 'Irelia' && steroidStats["P"] ? level < 7 ? 0.3 : level < 14 ? 0.55 : 0.8 : 0)
+        bonusAS += (nameChamp == "Jax" && steroidStats["P"] ? 0.28 + 0.12 * Math.floor(level / 3) : 0)
+        bonusAS += (nameChamp == 'Jinx' && !steroidStats["Q"] && qSkillPoint > 0 ? 0.05 + 0.25 * qSkillPoint : 0)
+        bonusAS += (nameChamp.includes("Kai") && nameChamp.includes("Sa") && steroidStats["E"] && eSkillPoint > 0 ? 0.3 + 0.1 * eSkillPoint : 0)
+        // A KAYLE
+        let multiBonusAS = (nameChamp == 'Jinx' && steroidStats["Q"] && qSkillPoint > 0 ? 0.9 : 1) * (nameChamp.includes("Veth") && steroidStats["Form"] && rSkillPoint > 0 ? 1.05 + 0.05 * rSkillPoint : 1)
+        obj["Attack Speed %"] = (itemStats["AS"] + runeStats["AS"] + bonusAS + (nameChamp == 'Jhin' ? 0 : data["AS+"] * (level-1)*(0.685+0.0175*level))) * multiBonusAS + (nameChamp == 'Varus' && steroidStats["P"] ? 0.4 + 0.4 * (runeStats["AS"] + itemStats["AS"] + bonusAS + data["AS+"] * (level-1)*(0.685+0.0175*level)):0)
+        obj["Attack Speed %"] *= (nameChamp == "Jayce" && steroidStats["Form"] && steroidStats["W"] ? 3 : 1)
     },[gameStats,itemStats, runeStats, enemyItemStats, enemyStats, bonusStats, steroidStats, apheliosStats])
 
     return (

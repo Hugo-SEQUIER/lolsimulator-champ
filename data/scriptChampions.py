@@ -29,7 +29,7 @@ def transformData(data_brut):
 def checkIfNumber(data_brut):
     if (isinstance(data_brut, (int,float))):
         return data_brut
-    testData = data_brut.split('=')[1]
+    testData = data_brut.split('=',1)[1]
     try :
         return int(testData)
     except ValueError :

@@ -22,6 +22,8 @@ export function removeExcelFunctions(expression) {
     expression = expression.replace(/Calc!O31\d+/g,"IT_Proc_Phys");
     expression = expression.replace(/Y\d+/g, "passiveDamage");
     expression = expression.replace(/VLOOKUP\(Name,Champs!A2:AE200,31,FALSE\)/g, 'data["Melee?"] == 1');
+    expression = expression.replace(/TRUE/g, "1");
+    expression = expression.replace(/FALSE/g, "0");
     expression = expression.replace(/OR\(([^;]*),([^;]*)\)/g, function(match, p1, p2) {
         // p1 et p2 correspondent respectivement aux deux arguments de OR.
         return `(${p1} | ${p2})`;
