@@ -984,7 +984,7 @@ export default function CharacterDetails({data, nameChamp}){
                 }
             }
             let champ_obj = {
-                "Hp": data["HP"] + data["HP+"] * (level - 1) + (steroidStats["Form"] && nameChamp=='Gnar' ? 100 + 43 * (level - 1) : 0) + (steroidStats["Form"] && nameChamp == "Kled" ? 810 + 144 * (level -1) * (0.7025 + 0.0175 * (level - 1)) : 0),
+                "Hp": data["HP"] + data["HP+"] * (level - 1) + (steroidStats["Form"] && nameChamp=='Gnar' ? 100 + 43 * (level - 1) : 0) + (steroidStats["Form"] && nameChamp == "Kled" ? 810 + 144 * (level -1) * (0.007025 + 0.000175 * (level - 1)) : 0),
                 "Attack Damage": (data["AD"] + data["AD+"] * (level - 1)) * (1 + (steroidStats["Items"] && hasTrinity ? 0.2 : 0) + (steroidStats["Form"] && nameChamp=='Gnar' ? 8 +2.5 *(level - 1) : 0)),
                 "Attack Speed %": Number(data["AS"] * (1 + (data["Ratio"]* (level - 1))/100)),
                 "Armor": data["AR"] + data["AR+"] * (level - 1) + (steroidStats["Form"] && nameChamp=='Gnar' ? 3.5 + 3 * (level - 1) : 0),
@@ -1092,7 +1092,7 @@ export default function CharacterDetails({data, nameChamp}){
 
         obj["Hp"] = (itemStats["HP"] + runeStats["HP"] + bonusHP) * multiBonusHp
 
-        // Attack Speed
+        // Attack Speed https://leagueoflegends.fandom.com/wiki/Attack_speed
         let bonusAS = (bonusStats["Ardent"] ? 0.2 : 0) + (hasRageblade && steroidStats["Items"] ? 0.32 : 0) + (hasShieldbow && steroidStats["Items"] ? 0.3 : 0) + (hasPhantom && steroidStats["Items"] ? 0.3 : 0) + (hasRageknife && steroidStats["Items"] ? 0.15 : 0)
         bonusAS += (nameChamp.includes("Jarvan") && steroidStats["Q"] && qSkillPoint > 0 ? 0.175 + 0.025 * qSkillPoint : 0)
         bonusAS += (nameChamp == "Lulu" && steroidStats["W"] && wSkillPoint > 0 ? 0.225 + 0.025 * wSkillPoint : 0)
@@ -1116,7 +1116,23 @@ export default function CharacterDetails({data, nameChamp}){
         bonusAS += (nameChamp == "Jax" && steroidStats["P"] ? 0.28 + 0.12 * Math.floor(level / 3) : 0)
         bonusAS += (nameChamp == 'Jinx' && !steroidStats["Q"] && qSkillPoint > 0 ? 0.05 + 0.25 * qSkillPoint : 0)
         bonusAS += (nameChamp.includes("Kai") && nameChamp.includes("Sa") && steroidStats["E"] && eSkillPoint > 0 ? 0.3 + 0.1 * eSkillPoint : 0)
-        // A KAYLE
+        bonusAS += (nameChamp == "Kayle" && (steroidStats["P"] || level >= 16) ? 0.3 + 0.05 * Math.floor(totalStats["AP"]/100) : 0)
+        bonusAS += (nameChamp == "Kennen" && steroidStats["E"] && eSkillPoint > 0 ? 0.3 + 0.1 * eSkillPoint : 0)
+        bonusAS += (nameChamp == "Kindred" && steroidStats["Q"] ? 0.35 + 0.05 * gameStats["Kills"] : 0)
+        bonusAS += (nameChamp == "Kled" && steroidStats["W"] ? 1.5 : 0)
+        bonusAS += (nameChamp.includes("Kog") && nameChamp.includes("Maw") && qSkillPoint > 0 ? 0.05 + 0.05 * qSkillPoint : 0)
+        bonusAS += (nameChamp.includes("Lee") && nameChamp.includes("Sin") && steroidStats["P"] ? 0.4 : 0)
+        bonusAS += (nameChamp.includes("Master") && steroidStats["R"] && rSkillPoint > 0 ? 0.15 + 0.1 * rSkillPoint : 0) 
+        bonusAS += (nameChamp.includes("Fortune") && steroidStats["W"] && wSkillPoint > 0 ? 0.25 + 0.15 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Nilah" && steroidStats["Q"] && qSkillPoint > 0 ? 0.1 + 0.5 / (17 * (level -1)) : 0)
+        bonusAS += (nameChamp == "Nocturne" && steroidStats["W"] && wSkillPoint > 0 ? 0.25 + 0.05 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Olaf" && steroidStats["P"] ? 0.5 + (50 / 17* (level - 1)) * (0.007025 + 0.000175 * (level - 1)) : 0)
+        bonusAS += (nameChamp == "Olaf" && steroidStats["W"] && wSkillPoint > 0 ? 0.3 + 0.1 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Qiyana" && steroidStats["W"] ? 0.05 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Quinn" && steroidStats["W"] && wSkillPoint > 0 ? 0.2 + 0.08 * wSkillPoint : 0)
+        bonusAS += (nameChamp == "Rammus" && steroidStats["E"] && eSkillPoint > 0 ? 0.15 + 0.05 * eSkillPoint : 0)
+        bonusAS += (nameChamp == "Rell" && steroidStats["W"] ? 0.3 : 0)
+        // RENGAR https://leagueoflegends.fandom.com/wiki/Attack_speed
         let multiBonusAS = (nameChamp == 'Jinx' && steroidStats["Q"] && qSkillPoint > 0 ? 0.9 : 1) * (nameChamp.includes("Veth") && steroidStats["Form"] && rSkillPoint > 0 ? 1.05 + 0.05 * rSkillPoint : 1)
         obj["Attack Speed %"] = (itemStats["AS"] + runeStats["AS"] + bonusAS + (nameChamp == 'Jhin' ? 0 : data["AS+"] * (level-1)*(0.685+0.0175*level))) * multiBonusAS + (nameChamp == 'Varus' && steroidStats["P"] ? 0.4 + 0.4 * (runeStats["AS"] + itemStats["AS"] + bonusAS + data["AS+"] * (level-1)*(0.685+0.0175*level)):0)
         obj["Attack Speed %"] *= (nameChamp == "Jayce" && steroidStats["Form"] && steroidStats["W"] ? 3 : 1)
