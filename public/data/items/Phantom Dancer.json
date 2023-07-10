@@ -15,7 +15,7 @@
   "LE": 0,
   "MPE": 0,
   "SHOE": 0,
-  "MS%": "IF(Steroid_Items, 14, 7)",
+  "MS%": 7,
   "HEAL": 0,
   "POH": 0,
   "MOH": 0,
