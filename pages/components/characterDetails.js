@@ -420,7 +420,7 @@ export default function CharacterDetails({data, nameChamp}){
             Self_BoMR : additionnalStats["Magic Resist"],
             Self_BoMS : additionnalStats["Move Speed"] - basicStatsChampion["Move Speed"],
             Self_BoMSP : additionnalStats["Move Speed"],
-            Self_CHPP : 1,
+            Self_CHPP : 100,
             Self_Crit : totalStats["Crit"],
             Self_CritDMG : totalStats["CritDMG"],
             Self_CritHit : totalStats["CritHit"],
@@ -688,17 +688,10 @@ export default function CharacterDetails({data, nameChamp}){
         if (mixedShard == 'Adaptive'){
             obj["Adaptive"] += 9
         }
-        if (mainSecondRune == 'Absolute Focus' || secondFirstRune == 'Absolute Focus' || secondSecondRune == 'Absolute Focus'){
-            obj["Adaptive"] += 3+27*((level - 1)/17)
-        }
-        if (mainSecondRune == 'Zombie Ward' || mainSecondRune == 'Ghost Poro' || mainSecondRune == 'Eyeball Collection' || secondFirstRune == 'Zombie Ward' || secondFirstRune == 'Ghost Poro' || secondFirstRune == 'Eyeball Collection' || secondSecondRune == 'Zombie Ward' || secondSecondRune == 'Ghost Poro' || secondSecondRune == 'Eyeball Collection' ){
-            obj["Adaptive"] += stackLegendExceptBloodline*2
-        }
-        if (mainThirdRune == 'Gathering Storm' || secondSecondRune == 'Gathering Storm'){
-            obj["Adaptive"] += ((Math.floor(gameStats["Gametime"]/10))*(Math.floor(gameStats["Gametime"]/10)*8)+8*(Math.floor(gameStats["Gametime"]/10)))/2
-        }
         if (mainThirdRune == 'Waterwalking' || secondSecondRune == 'Waterwalking'){
-            obj["Adaptive"] += (5+25*((level - 1)/17)).toFixed(0)
+            obj["ForceBit"] == 1 ?
+                obj["Adaptive"] += (3+15*((level - 1)/17)).toFixed(0) :
+                obj["Adaptive"] += (5+25*((level - 1)/17)).toFixed(0)
         }
         if (mainRune == 'Conqueror'){
             obj['Adaptive'] +=(2+2.5*((level - 1)/17)).toFixed(0) * stackConqueror
@@ -706,34 +699,8 @@ export default function CharacterDetails({data, nameChamp}){
         if (offensiveShard == 'Attack Speed'){
             obj['AS'] += 0.08
         }
-        if (mainSecondRune == 'Alacrity' || secondFirstRune == 'Alacrity' || secondSecondRune == 'Alacrity'){
-            obj['AS'] += 0.03+0.015*stackLegendExceptBloodline
-        }
-        if (mainRune == 'Lethal Tempo' && steroidStats["Runes"]){
-            if (data["Melee?"] == 1)
-                obj['AS'] += 0.6 + 0.3 * Math.min(1, (level -1) / 15)
-            else 
-                obj['AS'] += 0.24 + 0.3 * ((level - 1)/17)
-        }
-        if (mainRune == 'Hail of Blades' && steroidStats["Runes"]){
-            obj['AS'] += 1.1
-        }
-        if (mainRune == 'Grasp of the Undying'){
-            if (data["Melee?"] == 1)
-                obj["HP"] += 1 * 7 * stackDarkHarvest
-            else 
-                obj["HP"] += 0.6 * 7 * stackDarkHarvest
-        }
-        if (mainThirdRune == "Overgrowth" || secondSecondRune == "Overgrowth"){
-            obj["HP"] += 3 * Math.floor(gameStats["Minion"]/8)
-        }
         if (defensiveShard == 'Health'){
             obj["HP"] += 15 + 125 * ((level - 1)/17)
-        }
-        if (mainSecondRune == 'Bloodline' || secondFirstRune == 'Bloodline' || secondSecondRune == 'Bloodline'){
-            if (0.0035 * stackLegendBloodline == 0.0525){
-                obj["HP"] += 85
-            }
         }
         if (mainSecondRune == 'Biscuit Delivery' || secondFirstRune == 'Biscuit Delivery' || secondSecondRune == 'Biscuit Delivery'){
             if (Math.floor(gameStats["Gametime"]/2)*40 >= 120)
@@ -756,12 +723,6 @@ export default function CharacterDetails({data, nameChamp}){
                 obj["MR"] += 8
             }
         }
-        if (mainFirstRune == 'Shield Bash'){
-            if (totalStats["Shield"] > 0) {
-                obj["AR"] += 19*((level -1)/17)
-                obj["MR"] += 19*((level -1)/17)
-            }
-        }
         if (mixedShard == "Magic Resist"){
             obj["MR"] += 8
         }
@@ -778,18 +739,6 @@ export default function CharacterDetails({data, nameChamp}){
             else if (level > 4){
                 obj["AH"] += 0.05
             }
-        }
-        if (mainRune == 'Phase Rush' && steroidStats["Runes"]){
-            if (data["Melee?"] == 1)
-                obj["MS"] += 0.3 + 0.3 * ((level -1)/17)
-            else 
-                obj["MS"] += 0.15 + 0.25 * ((level -1)/17)
-        }
-        if (mainSecondRune == 'Celerity' || secondFirstRune == 'Celerity' || secondSecondRune == 'Celerity'){
-            obj["MS"] += 0.01
-        }
-        if ((mainFirstRune == 'Nimbus Cloak' || secondFirstRune == 'Nimbus Cloak') && steroidStats['Runes']){
-            obj["MS"] += 0.2
         }
         if (mainThirdRune == 'Ultimate Hunter' || secondSecondRune == 'Ultimate Hunter'){
             obj["Ultimate"] = 0.06 + 0.05 * stackBounty
@@ -952,6 +901,8 @@ export default function CharacterDetails({data, nameChamp}){
         setHasShurelya(returnBoolIfHasItem("Shurelya"))
         setHasStormrazor(returnBoolIfHasItem("Stormrazor"))
         setHasChemtank(returnBoolIfHasItem("Chemtank"))
+        setHasMalmortius(returnBoolIfHasItem("Maw of Malmortius"))
+        setHasSpiritVisage(returnBoolIfHasItem("Spirit Visage"))
     }
 
     function returnBoolIfHasItem(chaine){
@@ -1016,6 +967,8 @@ export default function CharacterDetails({data, nameChamp}){
     const [hasShurelya, setHasShurelya] = useState(false)
     const [hasStormrazor, setHasStormrazor] = useState(false)
     const [hasChemtank, setHasChemtank] = useState(false)
+    const [hasMalmortius, setHasMalmortius] = useState(false)
+    const [hasSpiritVisage, setHasSpiritVisage] = useState(false)
 
     useEffect(() => {
         majItemStats()
@@ -1242,7 +1195,6 @@ export default function CharacterDetails({data, nameChamp}){
         bonusArmor += (nameChamp == "Thresh" ? 1 * gameStats["Minion"] : 0)
         bonusArmor += (nameChamp == "Trundle" && steroidStats["R"] ? 0.4 * enemyStats["Armor"] : 0)
         bonusArmor += (nameChamp == "Wukong" && steroidStats["P"] ? 30 + 24 / 17 * (level - 1) : 0)
-        bonusArmor += ((mainSecondRune == "Conditioning" || secondFirstRune == "Conditioning" || secondSecondRune == "Conditioning") && gameStats["Gametime"] > 12 ? 8 : 0)
         bonusArmor += ((mainFirstRune == "Shield Bash" || secondFirstRune == "Shield Bash") && steroidStats["Runes"] ? 1 + 9 / 17 * (level - 1) : 0)
         
         let multiBonusArmor = (nameChamp == 'Ornn' ? Math.min(1.3, 1.1 + (level > 12 ? (level - 12) *0.04 : 0)) : 1)
@@ -1291,8 +1243,6 @@ export default function CharacterDetails({data, nameChamp}){
         obj["Magic Resist"] += (nameChamp == "Rell" && wSkillPoint > 0 ? 0.12 * obj["Magic Resist"] : 0)
         obj["Magic Resist"] += (nameChamp == "Sejuani" && steroidStats["P"] ? 10 + obj["Magic Resist"]/2 : 0)
         obj["Magic Resist"] += (mainRune == "Aftershock" && steroidStats["Runes"] ? 35 + 0.8 * obj["Magic Resist"] : 0) 
-        obj["Magic Resist"] *= ((mainSecondRune == "Conditioning" || secondFirstRune == "Conditioning" || secondSecondRune == "Conditioning") && gameStats["Gametime"] >= 12 ? 1.03 : 1)
-    
         // Move Speed
         let bonusMS = (hasBlackCleaver && steroidStats["Items"] ? 18 : 0)
         bonusMS += (hasDeadMan ? 40 : 0)
@@ -1326,7 +1276,7 @@ export default function CharacterDetails({data, nameChamp}){
         bonusMS += ((mainFirstRune == "Magical Footwear" || secondFirstRune == "Magical Footwear") ? 10 : 0)
         bonusMS += ((mainThirdRune == "Waterwalking" || secondSecondRune == "Waterwalking") && steroidStats["Runes"] ? 25 : 0)
         // https://leagueoflegends.fandom.com/wiki/Movement_speed
-        obj["Move Speed"] = 
+        obj["Move Speed"] = itemStats["SHOE"] + runeStats["MS"] + bonusMS
         obj["Move Speed"] *= (hasStridebreaker ? (1 + 0.02 * nbLegendary): 1)
         obj["Move Speed"] *= (nameChamp == "Aatrox" && steroidStats["R"] && rSkillPoint > 0 ? (1.4 + 0.2 * rSkillPoint): 1)
         obj["Move Speed"] *= (nameChamp == "Ahri" && steroidStats["W"] && wSkillPoint > 0 ? 1.4: 1)
@@ -1453,6 +1403,34 @@ export default function CharacterDetails({data, nameChamp}){
         obj["Move Speed"] *= (1 + 0.07 * gameStats["Cloud"])
         obj["Move Speed"] *= (bonusStats["Cloud"] && steroidStats["R"] ? 1.6 : 1)
 
+        // Critical % 
+        let bonusCrit = (nameChamp == "Senna" ? Math.round(sennaStacks/20) * 0.1 : 0)
+        bonusCrit += (nameChamp == "Tryndamere" && steroidStats["P"] ? 0.4 : 0)
+
+        obj["Critical %"] = (itemStats["CC"] + bonusCrit) * ((nameChamp == "Yasuo" || nameChamp == "Yone") && steroidStats["P"] ? 2.5 : 1)
+
+        // Life Steal
+        let bonusLifeSteal = (hasMalmortius && steroidStats["Items"] ? 0.12 : 0)
+        bonusLifeSteal += (nameChamp.includes("Bel") && nameChamp.includes("Veth") && steroidStats["E"] ? 0.2 + 1 : 0)
+        bonusLifeSteal += (nameChamp.includes("Lee") && nameChamp.includes("Sin") && steroidStats["E"] && eSkillPoint > 0 ? (-0.5 + 5.5 * eSkillPoint)/100 : 0 )
+        bonusLifeSteal += (nameChamp == "Nasus" ? level < 7 ? 0.11 : level < 113 ? 0.16 : 0.21 : 0)
+        bonusLifeSteal += (nameChamp == "Olaf" ? (8 * (level - 1)*(0.7025 + 0.0175 * (level - 1)))/100: 0)
+        bonusLifeSteal += (nameChamp == "Sion" && steroidStats["P"] ? 1: 0)
+        bonusLifeSteal += (nameChamp == "Udyr"  && steroidStats["W"] ? 0.14 + 0.01 * wSkillPoint : 0)
+        bonusLifeSteal += (nameChamp == "Senna" && obj["Critical %"] > 1 ? 0.35 * (totalStats["Crit"] - 100): 0)
+        bonusLifeSteal += 0.0035 * stackLegendBloodline
+
+        let selfHealing = (hasSpiritVisage ? 1.25 : 1)
+        selfHealing *= ((mainThirdRune == "Revitalize" || secondSecondRune == "Revitalize") && steroidStats["Runes"] ? 1.4 : 1)
+        selfHealing *= 1 + (0.06 * gameStats["Chemtech"])
+        selfHealing *= (nameChamp == "Aatrox" && steroidStats["R"] && rSkillPoint > 0 ? 1.15 + 0.1 * rSkillPoint : 1)
+        selfHealing *= (nameChamp == "Trundle" && steroidStats["W"] ? 1.25 : 1)
+        obj["Lifesteal"] = (itemStats["LS"] + bonusLifeSteal) * selfHealing
+
+        // Hp Regen
+        let bonusRegen = 
+        obj["Hp Regen"]
+     
     },[gameStats,itemStats, runeStats, enemyItemStats, enemyStats, bonusStats, steroidStats, apheliosStats])
 
     return (
