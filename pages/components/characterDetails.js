@@ -283,6 +283,18 @@ export default function CharacterDetails({data, nameChamp}){
     const [eSkillPoint, setESkillPoint] = useState(1)
     const [rSkillPoint, setRSkillPoint] = useState(1)
 
+    const [pDMG, setPDMG] = useState(0)
+    const [qDMG, setQDMG] = useState(0)
+    const [wDMG, setWDMG] = useState(0)
+    const [eDMG, setEDMG] = useState(0)
+    const [rDMG, setRDMG] = useState(0)
+
+    const [pCD, setPCD] = useState(0)
+    const [qCD, setQCD] = useState(0)
+    const [wCD, setWCD] = useState(0)
+    const [eCD, setEDCD] = useState(0)
+    const [rCD, setRCD] = useState(0)
+
     function getNumericFromString(stringDamage){
         let str = removeExcelFunctions(stringDamage)
         let scope = {
@@ -1673,7 +1685,7 @@ export default function CharacterDetails({data, nameChamp}){
     function convertLethIntoArmorPen(leth){
         return leth * (0.6 + 0.4 * level / 18)
     }
-    
+
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
             <div className='character-banniere'>
