@@ -278,10 +278,10 @@ export default function CharacterDetails({data, nameChamp}){
         "W" : false
     }) // OK
 
-    const [qSkillPoint, setQSkillPoint] = useState(1)
-    const [wSkillPoint, setWSkillPoint] = useState(1)
-    const [eSkillPoint, setESkillPoint] = useState(1)
-    const [rSkillPoint, setRSkillPoint] = useState(1)
+    const [qSkillPoint, setQSkillPoint] = useState(0)
+    const [wSkillPoint, setWSkillPoint] = useState(0)
+    const [eSkillPoint, setESkillPoint] = useState(0)
+    const [rSkillPoint, setRSkillPoint] = useState(0)
 
     const [pDMG, setPDMG] = useState(0)
     const [qDMG, setQDMG] = useState(0)
@@ -292,8 +292,14 @@ export default function CharacterDetails({data, nameChamp}){
     const [pCD, setPCD] = useState(0)
     const [qCD, setQCD] = useState(0)
     const [wCD, setWCD] = useState(0)
-    const [eCD, setEDCD] = useState(0)
+    const [eCD, setECD] = useState(0)
     const [rCD, setRCD] = useState(0)
+
+    const [pImg, setPImg] = useState(0)
+    const [qImg, setQImg] = useState(0)
+    const [wImg, setWImg] = useState(0)
+    const [eImg, setEImg] = useState(0)
+    const [rImg, setRImg] = useState(0)
 
     function getNumericFromString(stringDamage){
         let str = removeExcelFunctions(stringDamage)
@@ -1019,8 +1025,9 @@ export default function CharacterDetails({data, nameChamp}){
             setImgSplash(`../../images/centered/${nameChamp}_0.jpg`)
             /** BASICS STATS */
             for (let key in data){
-                if (key == 'img') break
+                if (key == 'img' || key.includes("DMG") || key.includes("CD")) break
                 if (typeof data[key] === 'string'){
+                    console.log(key)
                     data[key] = getNumericFromString(data[key])
                 }
             }
@@ -1287,7 +1294,8 @@ export default function CharacterDetails({data, nameChamp}){
         bonusMS += ((mainFirstRune == "Magical Footwear" || secondFirstRune == "Magical Footwear") ? 10 : 0)
         bonusMS += ((mainThirdRune == "Waterwalking" || secondSecondRune == "Waterwalking") && steroidStats["Runes"] ? 25 : 0)
         // https://leagueoflegends.fandom.com/wiki/Movement_speed
-        obj["Move Speed"] = itemStats["SHOE"] + runeStats["MS"] + bonusMS
+        obj["Move Speed"] = itemStats["SHOE"] + runeStats["MS"] + bonusMS + basicStatsChampion["Move Speed"]
+        console.log(obj["Move Speed"])
         obj["Move Speed"] *= (hasStridebreaker ? (1 + 0.02 * nbLegendary): 1)
         obj["Move Speed"] *= (nameChamp == "Aatrox" && steroidStats["R"] && rSkillPoint > 0 ? (1.4 + 0.2 * rSkillPoint): 1)
         obj["Move Speed"] *= (nameChamp == "Ahri" && steroidStats["W"] && wSkillPoint > 0 ? 1.4: 1)
@@ -1399,8 +1407,10 @@ export default function CharacterDetails({data, nameChamp}){
         obj["Move Speed"] *= ((mainFirstRune == "Nimbus Cloak" || secondFirstRune == "Nimbus Cloak") && steroidStats["Runes"] ? 1.25 : 1)
         obj["Move Speed"] *= ((mainThirdRune == "Celerity" || secondSecondRune == "Celerity") ? 1.1 : 1)
         obj["Move Speed"] *= (1 + 0.07 * gameStats["Cloud"])
-        obj["Move Speed"] *= (bonusStats["Cloud"] && steroidStats["R"] ? 1.6 : 1)
-
+        console.log(obj["Move Speed"])
+        obj["Move Speed"] *= (bonusStats["Cloud"] ? 1.15 + (steroidStats["R"] ? 0.45 : 0): 1)
+        obj["Move Speed"] =  obj["Move Speed"] - basicStatsChampion["Move Speed"]
+        console.log(obj["Move Speed"])
         // Critical % 
         let bonusCrit = (nameChamp == "Senna" ? Math.round(sennaStacks/20) * 0.1 : 0)
         bonusCrit += (nameChamp == "Tryndamere" && steroidStats["P"] ? 0.4 : 0)
@@ -1694,6 +1704,29 @@ export default function CharacterDetails({data, nameChamp}){
     function convertLethIntoArmorPen(leth){
         return leth * (0.6 + 0.4 * level / 18)
     }
+    
+    useEffect(() => {
+        if (data != undefined){
+            console.log(data)
+            setPImg('../../images/passive/' + data["img"]["passive"] + '.png')
+            setQImg('../../images/passive/' + data["img"]["QSpell"] + '.png')
+            setWImg('../../images/passive/' + data["img"]["WSpell"] + '.png')
+            setEImg('../../images/passive/' + data["img"]["ESpell"] + '.png')
+            setRImg('../../images/passive/' + data["img"]["RSpell"] + '.png')
+
+            setPDMG(typeof data["P-DMG"] === 'string' ? getNumericFromString(data["P-DMG"]) : data["P-DMG"])
+            setQDMG(typeof data["Q-DMG"] === 'string' ? getNumericFromString(data["Q-DMG"]) : data["Q-DMG"])
+            setWDMG(typeof data["W-DMG"] === 'string' ? getNumericFromString(data["W-DMG"]) : data["W-DMG"])
+            setEDMG(typeof data["E-DMG"] === 'string' ? getNumericFromString(data["E-DMG"]) : data["E-DMG"])
+            setRDMG(typeof data["R-DMG"] === 'string' ? getNumericFromString(data["R-DMG"]) : data["R-DMG"])
+
+            setPCD(typeof data["P-CD"] === 'string' ? getNumericFromString(data["P-CD"]) : data["P-CD"])
+            setQCD(typeof data["Q-CD"] === 'string' ? getNumericFromString(data["Q-CD"]) : data["Q-CD"])
+            setWCD(typeof data["W-CD"] === 'string' ? getNumericFromString(data["W-CD"]) : data["W-CD"])
+            setECD(typeof data["E-CD"] === 'string' ? getNumericFromString(data["E-CD"]) : data["E-CD"])
+            setRCD(typeof data["R-CD"] === 'string' ? getNumericFromString(data["R-CD"]) : data["R-CD"])
+        }
+    },[data, totalStats, qSkillPoint, eSkillPoint, wSkillPoint, rSkillPoint])
 
     return (
         <div className="character-details" style={{backgroundImage: `url(${imgSplash})`}}>
@@ -1726,14 +1759,14 @@ export default function CharacterDetails({data, nameChamp}){
                                 "Attack Speed %": totalStats["AS"],
                                 "Armor": totalStats["AR"],
                                 "Magic Resist": totalStats["MR"],
-                                "Move Speed": totalStats["MS"],
+                                "Move Speed": Math.floor(totalStats["MS"]),
                                 "Lifesteal": totalStats["LS"],
                                 "Critical %":  totalStats["Crit"], 
                                 "Hp Regen": totalStats["HPR"],
 
                                 [textMana] : totalStats["MP"],
                                 "Ability Power": totalStats["AP"],
-                                "Range": (basicStatsChampion["Range"] + additionnalStats["Range"]) * (hasRapidFireCanon ? 1.35 : 1),
+                                "Range": Math.floor((basicStatsChampion["Range"] + additionnalStats["Range"]) * (hasRapidFireCanon ? 1.35 : 1)),
                                 "Armor Penetration": totalStats["APenF"],
                                 "Resist Penetration": totalStats["MpenF"],
                                 "Ability Haste": totalStats["AH"],
