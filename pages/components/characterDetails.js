@@ -1705,26 +1705,92 @@ export default function CharacterDetails({data, nameChamp}){
         return leth * (0.6 + 0.4 * level / 18)
     }
     
+    function setUpDmg(dt, key){
+        return (typeof dt[key] === 'string' ? getNumericFromString(dt[key]).toFixed(2) : dt[key].toFixed(2))
+    }
+
+    const staticCD = {
+        Aatrox : ["P","Q"],
+        Ahri : ["R"],
+        Akali : ["R"],
+        Akshan : ["P"],
+        Alistar  : ["P"],
+        Amumu : ["Q","W"],
+        Anivia : ["P"],
+        Aphelios : ["W"],
+        Azir : ["P"],
+        Blitzcrank : ["P"],
+        Caitlyn : ["W"],
+        Camille : ["P"],
+        Corki : ["P","R"],
+        Mundo : ["P"],
+        Evelynn : ["P"],
+        Gangplank : ["P","E"],
+        Gragas : ["P"],
+        Illaoi : ["P"],
+        Ivern : ["W"],
+        Jhin : ["R"],
+        Jinx : ["Q"],
+        Karthus : ["W"],
+        Kindred : ["P","Q"],
+        Kled : ["P"],
+        LeBlanc : ["P"],
+        Malphite : ["P"],
+        Malzahar : ["P"],
+        Maokai : ["P"],
+        Neeko : ["P"],
+        Poppy : ["P"],
+        Quinn : ["P"],
+        Samira : ["R"],
+        Shen : ["P"],
+        Singed : ["Q"],
+        Urgot : ["P"],
+        Koz : ["W"],
+        Vex : ["P"],
+        Vi : ["P","E"],
+        Xerath : ["P","R"],
+        Yasuo : ["Q","E"],
+        Yone : ["Q","W"],
+        Yuumi : ["P,W"],
+        Zac : ["P"],
+        Ziggs : ["P"],
+        Zilean : ["P"],
+        Zyra : ["P"]
+    }
+
+    function setUpCD(dt, key){
+        let dataCD = typeof dt[key] === 'string' ? getNumericFromString(dt[key]) : dt[key]
+        for (let staKey in staticCD){
+            if (nameChamp.includes(staKey)){
+                console.log(key[0])
+                if (staticCD[staKey].includes(key[0])){
+                    return dataCD
+                }
+            }
+        }
+        return Math.floor(dataCD * (100/(100+totalStats["AH"])))
+    }
+
     useEffect(() => {
         if (data != undefined){
             console.log(data)
             setPImg('../../images/passive/' + data["img"]["passive"] + '.png')
-            setQImg('../../images/passive/' + data["img"]["QSpell"] + '.png')
-            setWImg('../../images/passive/' + data["img"]["WSpell"] + '.png')
-            setEImg('../../images/passive/' + data["img"]["ESpell"] + '.png')
-            setRImg('../../images/passive/' + data["img"]["RSpell"] + '.png')
+            setQImg('../../images/spell/' + data["img"]["QSpell"] + '.png')
+            setWImg('../../images/spell/' + data["img"]["WSpell"] + '.png')
+            setEImg('../../images/spell/' + data["img"]["ESpell"] + '.png')
+            setRImg('../../images/spell/' + data["img"]["RSpell"] + '.png')
 
-            setPDMG(typeof data["P-DMG"] === 'string' ? getNumericFromString(data["P-DMG"]) : data["P-DMG"])
-            setQDMG(typeof data["Q-DMG"] === 'string' ? getNumericFromString(data["Q-DMG"]) : data["Q-DMG"])
-            setWDMG(typeof data["W-DMG"] === 'string' ? getNumericFromString(data["W-DMG"]) : data["W-DMG"])
-            setEDMG(typeof data["E-DMG"] === 'string' ? getNumericFromString(data["E-DMG"]) : data["E-DMG"])
-            setRDMG(typeof data["R-DMG"] === 'string' ? getNumericFromString(data["R-DMG"]) : data["R-DMG"])
+            setPDMG(setUpDmg(data, "P-DMG"))
+            setQDMG(setUpDmg(data, "Q-DMG"))
+            setWDMG(setUpDmg(data, "W-DMG"))
+            setEDMG(setUpDmg(data, "E-DMG"))
+            setRDMG(setUpDmg(data, "R-DMG"))
 
-            setPCD(typeof data["P-CD"] === 'string' ? getNumericFromString(data["P-CD"]) : data["P-CD"])
-            setQCD(typeof data["Q-CD"] === 'string' ? getNumericFromString(data["Q-CD"]) : data["Q-CD"])
-            setWCD(typeof data["W-CD"] === 'string' ? getNumericFromString(data["W-CD"]) : data["W-CD"])
-            setECD(typeof data["E-CD"] === 'string' ? getNumericFromString(data["E-CD"]) : data["E-CD"])
-            setRCD(typeof data["R-CD"] === 'string' ? getNumericFromString(data["R-CD"]) : data["R-CD"])
+            setPCD(setUpCD(data, "P-CD"))
+            setQCD(setUpCD(data, "Q-CD"))
+            setWCD(setUpCD(data, "W-CD"))
+            setECD(setUpCD(data, "E-CD"))
+            setRCD(setUpCD(data, "R-CD"))
         }
     },[data, totalStats, qSkillPoint, eSkillPoint, wSkillPoint, rSkillPoint])
 
@@ -1776,52 +1842,139 @@ export default function CharacterDetails({data, nameChamp}){
                             }} 
                        
                         />
-                { /**       <SkillsTable 
-                            statsChamp={{
-                                "Hp": basicStatsChampion["Hp"],
-                                "Attack Damage": basicStatsChampion["Attack Damage"],
-                                "Attack Speed %": basicStatsChampion["Attack Speed %"],
-                                "Armor": basicStatsChampion["Armor"],
-                                "Magic Resist": basicStatsChampion["Magic Resist"],
-                                "Move Speed": basicStatsChampion["Move Speed"],
-                                "Lifesteal": basicStatsChampion["Lifesteal"],
-                                "Critical %":  basicStatsChampion["Critical %"], 
-                                "Hp Regen": basicStatsChampion["Hp Regen"],
-
-                                [textMana] : basicStatsChampion["Mana"],
-                                "Ability Power": basicStatsChampion["Ability Power"],
-                                "Range": basicStatsChampion["Range"],
-                                "Armor Penetration": basicStatsChampion["Armor Penetration"],
-                                "Resist Penetration": basicStatsChampion["Resist Penetration"],
-                                "Ability Haste": basicStatsChampion["Ability Haste"],
-                                "Spellvamp %": basicStatsChampion["Spellvamp %"],
-                                "Tenacity %": basicStatsChampion["Tenacity %"],
-                                [textMana + " / Regen"]: basicStatsChampion["Mana / Regen"],
-                            }}
-                            statsSpell={data}
-                            additionnalStats={{
-                                "Hp": additionnalStats["Hp"],
-                                "Attack Damage": additionnalStats["Attack Damage"],
-                                "Attack Speed %": additionnalStats["Attack Speed %"],
-                                "Armor": additionnalStats["Armor"],
-                                "Magic Resist": additionnalStats["Magic Resist"],
-                                "Move Speed": additionnalStats["Move Speed"],
-                                "Lifesteal": additionnalStats["Lifesteal"],
-                                "Critical %":  additionnalStats["Critical %"], 
-                                "Hp Regen": basicStatsChampion["Hp Regen"],
-
-                                [textMana] : additionnalStats["Mana"],
-                                "Ability Power": additionnalStats["Ability Power"],
-                                "Range": additionnalStats["Range"],
-                                "Armor Penetration": additionnalStats["Armor Penetration"],
-                                "Resist Penetration": additionnalStats["Resist Penetration"],
-                                "Ability Haste": additionnalStats["Ability Haste"],
-                                "Spellvamp %": additionnalStats["Spellvamp %"],
-                                "Tenacity %": additionnalStats["Tenacity %"],
-                                [textMana + " / Regen"]: additionnalStats["Mana / Regen"],
-                            }}
-                            passiveSkillPoint={level}
-                        />  */}
+                        {/** SKILLS STATS */}
+                        <div className="stats-table skills-table">
+                            <div>
+                                <h1>Skills</h1>
+                            </div>
+                            <div className="stats-table-row skills-table-row">  
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>/</td>
+                                            <td>Spell</td>
+                                            <td>Points</td>
+                                            <td>Damage</td>
+                                            <td>CD</td>
+                                            <td>Damage / CD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    alt={'Passive img'}
+                                                    src={pImg} 
+                                                />
+                                            </td>
+                                            <td>Passive</td>
+                                            <td>0</td>
+                                            <td>{pDMG}</td>
+                                            <td>{pCD}</td>
+                                            <td>{Math.floor(pDMG/pCD)}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    alt={'Q img'}
+                                                    src={qImg} 
+                                                />
+                                            </td>
+                                            <td>Q</td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={qSkillPoint}
+                                                    max={5}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        setQSkillPoint(value)
+                                                    }}
+                                                />
+                                            </td>
+                                            <td>{qDMG}</td>
+                                            <td>{qCD}</td>
+                                            <td>{Math.floor(qDMG/qCD)}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    alt={'W img'}
+                                                    src={wImg} 
+                                                />
+                                            </td>
+                                            <td>W</td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={wSkillPoint}
+                                                    max={5}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        setWSkillPoint(value)
+                                                    }}
+                                                />
+                                            </td>
+                                            <td>{wDMG}</td>
+                                            <td>{wCD}</td>
+                                            <td>{Math.floor(wDMG/wCD)}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    alt={'E img'}
+                                                    src={eImg} 
+                                                />
+                                            </td>
+                                            <td>E</td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={eSkillPoint}
+                                                    max={5}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        setESkillPoint(value)
+                                                    }}
+                                                />
+                                            </td>
+                                            <td>{eDMG}</td>
+                                            <td>{eCD}</td>
+                                            <td>{Math.floor(eDMG/eCD)}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    alt={'R img'}
+                                                    src={rImg} 
+                                                />
+                                            </td>
+                                            <td>R</td>
+                                            <td>
+                                                <input
+                                                    type="number" 
+                                                    value={rSkillPoint}
+                                                    max={3}
+                                                    min={0}
+                                                    onChange={(e) => {
+                                                        let value = e.target.value
+                                                        value = value != "" ? parseInt(value) : 0
+                                                        setRSkillPoint(value)
+                                                    }}
+                                                />
+                                            </td>
+                                            <td>{rDMG}</td>
+                                            <td>{rCD}</td>
+                                            <td>{Math.floor(rDMG/rCD)}</td>
+                                        </tr>  
+                                    </tbody>            
+                                </table>
+                            </div>
+                        </div>
                         {/** RUNES STATS */}
                         <div className="stats-table">
                             <div>
@@ -1831,7 +1984,7 @@ export default function CharacterDetails({data, nameChamp}){
                                 <table>
                                     <thead>
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 Main Tree
                                             </td>
                                         </tr>          
@@ -1908,7 +2061,7 @@ export default function CharacterDetails({data, nameChamp}){
                                     </tbody>
                                     <thead>                                   
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 Secondary Tree
                                             </td>
                                         </tr>
@@ -1976,7 +2129,7 @@ export default function CharacterDetails({data, nameChamp}){
                                     </tbody>
                                     <thead>                                   
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 Shards
                                             </td>
                                         </tr>
@@ -2035,7 +2188,7 @@ export default function CharacterDetails({data, nameChamp}){
                                         <>
                                             <thead>
                                                 <tr>
-                                                    <td colspan="2">
+                                                    <td colSpan="2">
                                                         Stacks
                                                     </td>
                                                 </tr>
@@ -2422,7 +2575,7 @@ export default function CharacterDetails({data, nameChamp}){
                                 <table>
                                     <thead>
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 Soul
                                             </td>
                                         </tr>          
@@ -2599,7 +2752,7 @@ export default function CharacterDetails({data, nameChamp}){
                                     </tbody>
                                     <thead>
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 Other
                                             </td>
                                         </tr>  
@@ -2692,7 +2845,7 @@ export default function CharacterDetails({data, nameChamp}){
                                     </tbody>
                                     <thead>
                                         <tr>
-                                            <td colspan="2">
+                                            <td colSpan="2">
                                                 Active / Passive Bonus
                                             </td>
                                         </tr>          
