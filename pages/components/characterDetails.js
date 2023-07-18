@@ -539,10 +539,16 @@ export default function CharacterDetails({data, nameChamp}){
             const res = await fetch(`http://localhost:3000/data/champions/${enemy_obj["Name"]}.json`);
             const championDetails = await res.json();
 
-            enemy_obj["Armor"] = championDetails["AR"] + championDetails["AR+"] * (enemyLevel -1)
-            enemy_obj["Hp"] = championDetails["HP"] + championDetails["HP+"] * (enemyLevel - 1)
-            enemy_obj["Magic Resist"] = championDetails["MR"] + championDetails["MR+"] * (enemyLevel - 1)   
+            enemy_obj["Armor"] = (championDetails["AR"] + championDetails["AR+"] * (enemyLevel -1))
+            enemy_obj["Hp"] = (championDetails["HP"] + championDetails["HP+"] * (enemyLevel - 1))
+            enemy_obj["Magic Resist"] = (championDetails["MR"] + championDetails["MR+"] * (enemyLevel - 1))
+            
         }
+        enemy_obj["Armor"] +=  enemyItemStats["AR"]
+        enemy_obj["Hp"] +=  enemyItemStats["HP"]
+        enemy_obj["Magic Resist"] += enemyItemStats["MR"]
+        enemy_obj["Current Hp"] = enemy_obj["Hp"] 
+        enemy_obj["Current Hp %"] = (enemy_obj["Current Hp"] / enemy_obj["Hp"])*100
         setEnemyStats(enemy_obj)
     }
 
@@ -1181,10 +1187,12 @@ export default function CharacterDetails({data, nameChamp}){
             }
             setDataChamp(champ_obj)
 
-            enemyDataPrep()
-
         }
-    },[data, level, enemyName, enemyLevel, steroidStats])
+    },[data, level, steroidStats])
+    
+    useEffect(() => {
+        enemyDataPrep()
+    }, [enemyName, enemyLevel, enemyElixirSlot, enemyItemSlot1, enemyItemSlot2, enemyItemSlot3, enemyItemSlot4, enemyItemSlot5, enemyItemSlot6, enemyItemStats])
 
     useEffect(() => {
         if (data != undefined){
@@ -3240,7 +3248,7 @@ export default function CharacterDetails({data, nameChamp}){
                                                 Armor
                                             </td>
                                             <td>
-                                                {enemyStats["Armor"] + enemyStats["Armor Bonus"]}
+                                                {enemyStats["Armor"]+ enemyStats["Armor Bonus"]}
                                             </td>
                                         </tr>
                                         <tr>
@@ -3275,6 +3283,7 @@ export default function CharacterDetails({data, nameChamp}){
                                                 <input
                                                     type="number" 
                                                     value={enemyStats["Hp Bonus"]}
+                                                    min={0}
                                                     onChange={(e) => {
                                                         let value = e.target.value
                                                         value = value != "" ? parseInt(value) : 0
@@ -3283,7 +3292,7 @@ export default function CharacterDetails({data, nameChamp}){
                                                             "Armor Bonus" : enemyStats["Armor Bonus"],
                                                             "Hp Bonus" : value,
                                                             "Current Hp %" : (enemyStats["Hp"] + value - enemyStats["Missing HP"]) / (enemyStats["Hp"] + value) * 100,
-                                                            "Current Hp" : enemyStats["Current Hp"],
+                                                            "Current Hp" : enemyStats["Hp"] + value - enemyStats["Missing HP"],
                                                             "Level" : enemyStats["Level"],
                                                             "Hp" : enemyStats["Hp"],
                                                             "Missing HP" : enemyStats["Missing HP"],
@@ -3303,6 +3312,7 @@ export default function CharacterDetails({data, nameChamp}){
                                             <td>
                                                 <input
                                                     type="number" 
+                                                    min={0}
                                                     value={enemyStats["Armor Bonus"]}
                                                     onChange={(e) => {
                                                         let value = e.target.value
@@ -3332,6 +3342,7 @@ export default function CharacterDetails({data, nameChamp}){
                                             <td>
                                                 <input
                                                     type="number" 
+                                                    min={0}
                                                     value={enemyStats["Magic Resist Bonus"]}
                                                     onChange={(e) => {
                                                         let value = e.target.value
@@ -3361,6 +3372,7 @@ export default function CharacterDetails({data, nameChamp}){
                                             <td>
                                                 <input
                                                     type="number" 
+                                                    min={0}
                                                     value={enemyStats["Missing HP"]}
                                                     onChange={(e) => {
                                                         let value = e.target.value
@@ -3372,7 +3384,7 @@ export default function CharacterDetails({data, nameChamp}){
                                                             "Current Hp %" : (enemyStats["Hp"] + enemyStats["Hp Bonus"] - value) / (enemyStats["Hp"] + enemyStats["Hp Bonus"]) * 100 ,
                                                             "Current Hp" : enemyStats["Hp"] + enemyStats["Hp Bonus"] - value,
                                                             "Level" : enemyStats["Level"],
-                                                            "Hp" : enemyStats["Hp"],
+                                                            "Hp" : enemyStats["Hp"] ,
                                                             "Missing HP" : value,
                                                             "Magic Resist" : enemyStats["Magic Resist"],
                                                             "Magic Resist Bonus" : enemyStats["Magic Resist Bonus"],
