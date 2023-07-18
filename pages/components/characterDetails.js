@@ -146,17 +146,55 @@ export default function CharacterDetails({data, nameChamp}){
         "Name" : "-"
     }) // OK
 
-    const [enemyItemSlot1, setEnemyItemSlot1] = useState('')
-    const [enemyItemSlot2, setEnemyItemSlot2] = useState('')
-    const [enemyItemSlot3, setEnemyItemSlot3] = useState('')
-    const [enemyItemSlot4, setEnemyItemSlot4] = useState('')
-    const [enemyItemSlot5, setEnemyItemSlot5] = useState('')
-    const [enemyItemSlot6, setEnemyItemSlot6] = useState('')
+    const [enemyItemSlot1, setEnemyItemSlot1] = useState('-')
+    const [enemyItemSlot2, setEnemyItemSlot2] = useState('-')
+    const [enemyItemSlot3, setEnemyItemSlot3] = useState('-')
+    const [enemyItemSlot4, setEnemyItemSlot4] = useState('-')
+    const [enemyItemSlot5, setEnemyItemSlot5] = useState('-')
+    const [enemyItemSlot6, setEnemyItemSlot6] = useState('-')
+    const [enemyElixirSlot, setEnemyElixirSlot] = useState('-')
+
+    const [itemEnemyImg1, setItemEnemyImg1] = useState('')
+    const [itemEnemyImg2, setItemEnemyImg2] = useState('')
+    const [itemEnemyImg3, setItemEnemyImg3] = useState('')
+    const [itemEnemyImg4, setItemEnemyImg4] = useState('')
+    const [itemEnemyImg5, setItemEnemyImg5] = useState('')
+    const [itemEnemyImg6, setItemEnemyImg6] = useState('')
+    const [itemEnemyImg7, setItemEnemyImg7] = useState('')
+
     const [enemyItemStats, setEnemyItemStats] = useState({
+        "AD" : 0,
+        "AH" : 0,
+        "AP" : 0,
+        "APE%": 0,
         "AR" : 0,
+        "AS" : 0,
+        "CDMG" : 0,
+        "Gold" : 0,
+        "CC" : 0,
+        "MS" : 0,
         "HP" : 0,
+        "HP5" : 0,
+        "LE" : 0,
+        "LS" : 0,
+        "HEAL" : 0,
+        "APM" : 0,
+        "ADM" : 0,
+        "MP" : 0,
+        "MPE" : 0,
+        "MPE%" : 0,
+        "MP5" : 0,
         "MR" : 0,
-        "Gold" : 0
+        "MS%" : 0,
+        "MOH" : 0,
+        "POH" : 0,
+        "EPD" : 0,
+        "MPD" : 0,
+        "PPD" : 0,
+        "SHI" : 0,
+        "SHOE" : 0,
+        "SV" : 0,
+        "TC" : 0
     })
 
     const [gameStats, setGameStats] = useState({
@@ -772,6 +810,95 @@ export default function CharacterDetails({data, nameChamp}){
         return obj
     }
 
+    const majItemEnemyStats = async () => {
+        let nb = 0
+        let obj = {
+            "AD" : 0,
+            "AH" : 0,
+            "AP" : 0,
+            "APE%": 0,
+            "AR" : 0,
+            "AS" : 0,
+            "CDMG" : 0,
+            "Gold" : 0,
+            "CC" : 0,
+            "MS" : 0,
+            "HP" : 0,
+            "HP5" : 0,
+            "LE" : 0,
+            "LS" : 0,
+            "HEAL" : 0,
+            "APM" : 0,
+            "ADM" : 0,
+            "MP" : 0,
+            "MPE" : 0,
+            "MPE%" : 0,
+            "MP5" : 0,
+            "MR" : 0,
+            "MS%" : 0,
+            "MOH" : 0,
+            "POH" : 0,
+            "EPD" : 0,
+            "MPD" : 0,
+            "PPD" : 0,
+            "SHI" : 0,
+            "SHOE" : 0,
+            "SV" : 0,
+            "TC" : 0
+        }
+        if (enemyItemSlot1 != '-'){
+            obj = await addItemsStats(obj, enemyItemSlot1, setItemEnemyImg1)
+            if (enemyItemSlot1 in listItemsLegendary){
+                nb += 1
+            }
+        }
+        if (enemyItemSlot2 != '-'){
+            obj = await addItemsStats(obj, enemyItemSlot2, setItemEnemyImg2)
+            if (enemyItemSlot2 in listItemsLegendary){
+                nb += 1
+            }
+        }
+            
+        if (enemyItemSlot3 != '-'){
+            obj = await addItemsStats(obj, enemyItemSlot3, setItemEnemyImg3)
+            if (enemyItemSlot3 in listItemsLegendary){
+                nb += 1
+            }
+        }
+            
+        if (enemyItemSlot4 != '-'){
+            obj = await addItemsStats(obj, enemyItemSlot4, setItemEnemyImg4)
+            if (enemyItemSlot4 in listItemsLegendary){
+                nb += 1
+            }
+        }
+            
+        if (enemyItemSlot5 != '-'){
+            obj = await addItemsStats(obj, enemyItemSlot5, setItemEnemyImg5)
+            if (enemyItemSlot5 in listItemsLegendary){
+                nb += 1
+            }
+        }
+            
+        if (enemyItemSlot6 != '-'){
+            obj = await addItemsStats(obj, enemyItemSlot6, setItemEnemyImg6)
+            if (enemyItemSlot6 in listItemsLegendary){
+                nb += 1
+            }
+        }
+
+        if (enemyElixirSlot != '-'){
+            obj = await addItemsStats(obj, enemyElixirSlot, setItemEnemyImg7)
+        }
+
+        setEnemyItemStats(obj)
+    }
+
+    useEffect(() => {
+        majItemEnemyStats()
+        
+    }, [enemyItemSlot1, enemyItemSlot2, enemyItemSlot3, enemyItemSlot4, enemyItemSlot5, enemyItemSlot6, enemyElixirSlot])
+    
     const majItemStats = async () => {
         let nb = 0
         let obj = {
@@ -1012,7 +1139,7 @@ export default function CharacterDetails({data, nameChamp}){
     useEffect(() => {
         majItemStats()
         
-    }, [itemSlot1, itemSlot2, itemSlot3, itemSlot3, itemSlot4, itemSlot5, itemSlot6, elixirSlot, hasTrinity])
+    }, [itemSlot1, itemSlot2, itemSlot3, itemSlot4, itemSlot5, itemSlot6, elixirSlot])
 
     useEffect(() => {
         if (data != undefined) {
@@ -3259,6 +3386,273 @@ export default function CharacterDetails({data, nameChamp}){
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+                        {/** ENEMY Items Stats */}
+                        <div className="stats-table">
+                            <div>
+                                <h1>Enemy Items</h1>
+                            </div>             
+                            <div className='stats-table-row'>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                {enemyItemSlot1 != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg1}`}
+                                                        alt="Item Mythic" 
+                                                    />
+                                                )}
+                                                {enemyItemSlot1 == '-' && "Mythic"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyItemSlot1} onChange={(e) => {
+                                                    setEnemyItemSlot1(e.target.value)
+                                                }}>
+                                                    {listItemsMythics.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {enemyItemSlot2 != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg2}`}
+                                                        alt="Item 2" 
+                                                    />
+                                                )}
+                                                {enemyItemSlot2 == '-' && "Item 2"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyItemSlot2} onChange={(e) => {
+                                                    setEnemyItemSlot2(e.target.value)
+                                                }}>
+                                                    {listStarterItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBoots.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    
+                                                    {listBasicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listEpicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listItemsLegendary.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {enemyItemSlot3 != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg3}`}
+                                                        alt="Item 3" 
+                                                    />
+                                                )}
+                                                {enemyItemSlot3 == '-' && "Item 3"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyItemSlot3} onChange={(e) => {
+                                                    setEnemyItemSlot3(e.target.value)
+                                                }}>
+                                                    {listStarterItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBoots.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBasicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listEpicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listItemsLegendary.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {enemyItemSlot4 != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg4}`}
+                                                        alt="Item 4" 
+                                                    />
+                                                )}
+                                                {enemyItemSlot4 == '-' && "Item 4"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyItemSlot4} onChange={(e) => {
+                                                    setEnemyItemSlot4(e.target.value)
+                                                }}>
+                                                    {listStarterItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBoots.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBasicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listEpicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listItemsLegendary.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            {enemyItemSlot5 != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg5}`}
+                                                        alt="Item 5" 
+                                                    />
+                                                )}
+                                                {enemyItemSlot5 == '-' && "Item 5"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyItemSlot5} onChange={(e) => {
+                                                    setEnemyItemSlot5(e.target.value)
+                                                }}>
+                                                    {listStarterItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBoots.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBasicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listEpicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listItemsLegendary.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {enemyItemSlot6 != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg6}`}
+                                                        alt="Item 6" 
+                                                    />
+                                                )}
+                                                {enemyItemSlot6 == '-' && "Item 6"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyItemSlot6} onChange={(e) => {
+                                                    setEnemyItemSlot6(e.target.value)
+                                                }}>
+                                                    {listStarterItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBoots.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listBasicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listEpicItem.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                    {listItemsLegendary.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                {enemyElixirSlot != '-' && (
+                                                    <img
+                                                        src={`../../images/item/${itemEnemyImg7}`}
+                                                        alt="Elixir" 
+                                                    />
+                                                )}
+                                                {enemyElixirSlot == '-' && "Elixir"}
+                                            </td>
+                                            <td>
+                                                <select value={enemyElixirSlot} onChange={(e) => {
+                                                    setEnemyElixirSlot(e.target.value)
+                                                }}>
+                                                    {listElixir.map((value, index) => {
+                                                        return(
+                                                            <option value={value} key={index}>{value}</option>
+                                                        )
+                                                    })}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>                  
                         </div>
                         {/** Game Stats */}
                         <div className="stats-table">
