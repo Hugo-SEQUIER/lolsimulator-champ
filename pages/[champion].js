@@ -1,16 +1,23 @@
 import { useRouter } from 'next/router';
 import CharacterDetails from './components/characterDetails';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useReducer } from 'react';
+import { initialState, reducer } from '../reducer/reducer';
+import { DataContext } from '../context/context';
 
 export default function ChampionPage({championDetails, champion}){
   console.log(champion)
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <>
       {championDetails != undefined && (
-        <CharacterDetails
-          data={championDetails}
-          nameChamp={champion}
-        />
+        <DataContext.Provider value={{ state, dispatch }}>
+          <CharacterDetails
+            data={championDetails}
+            nameChamp={champion}
+          />
+        </DataContext.Provider>
       )}
     </>
   );

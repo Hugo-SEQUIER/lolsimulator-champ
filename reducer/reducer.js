@@ -156,7 +156,7 @@ import {
     SET_HAS_SILVERMERE 
 } from "../action/action";
 // Initial state
-const initialState = {
+export const initialState = {
     enemyLevel : 1,
     enemyName : '-',
     textMana : 'Mana',
