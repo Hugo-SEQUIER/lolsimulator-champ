@@ -4,63 +4,44 @@ import { DataContext } from "../../context/context";
 
 function StatsTable() {
 
-    const {totalStats, additionnalStats, hasRapidFireCanon, textMana} = useContext(DataContext);
-    const [stats, setStats] = useState({
-        "Hp": 0,
-        "Attack Damage": 0,
-        "Attack Speed %": 0,
-        "Armor": 0,
-        "Magic Resist": 0,
-        "Move Speed": 0,
-        "Lifesteal": 0,
-        "Critical %":  0,
-        "Hp Regen": 0,
-        "Mana" : 0,
-        "Ability Power": 0,
-        "Range": 0,
-        "Armor Penetration": 0,
-        "Resist Penetration": 0,
-        "Ability Haste": 0,
-        "Spellvamp %": 0,
-        "Tenacity %": 0,
-        "Mana / Regen": 0,
-    })
+    const { state, dispatch } = useContext(DataContext);
 
     const [firstHalf, setFirstHalf] = useState([])
     const [secondHalf, setSecondHalf] = useState([])
-
+    const [stats, setStats] = useState({})
     useEffect(() => {
-        if (totalStats != undefined && additionnalStats != undefined && hasRapidFireCanon != undefined && textMana != undefined){
+        if (state != undefined){
             let obj = {
-                "Hp": totalStats["HP"],
-                "Attack Damage": totalStats["AD"],
-                "Attack Speed %": totalStats["AS"],
-                "Armor": totalStats["AR"],
-                "Magic Resist": totalStats["MR"],
-                "Move Speed": Math.floor(totalStats["MS"]),
-                "Lifesteal": totalStats["LS"],
-                "Critical %":  totalStats["Crit"], 
-                "Hp Regen": totalStats["HPR"],
+                "Hp": state.totalStats["HP"],
+                "Attack Damage": state.totalStats["AD"],
+                "Attack Speed %": state.totalStats["AS"],
+                "Armor": state.totalStats["AR"],
+                "Magic Resist": state.totalStats["MR"],
+                "Move Speed": Math.floor(state.totalStats["MS"]),
+                "Lifesteal": state.totalStats["LS"],
+                "Critical %":  state.totalStats["Crit"], 
+                "Hp Regen": state.totalStats["HPR"],
 
-                [textMana] : totalStats["MP"],
-                "Ability Power": totalStats["AP"],
-                "Range": Math.floor((basicStatsChampion["Range"] + additionnalStats["Range"]) * (hasRapidFireCanon ? 1.35 : 1)),
-                "Armor Penetration": totalStats["APenF"],
-                "Resist Penetration": totalStats["MpenF"],
-                "Ability Haste": totalStats["AH"],
-                "Spellvamp %": additionnalStats["Spellvamp %"],
-                "Tenacity %": totalStats["TC"],
-                [textMana + " / Regen"]: totalStats["MPR"],
+                [state.textMana] : state.totalStats["MP"],
+                "Ability Power": state.totalStats["AP"],
+                "Range": Math.floor((state.basicStatsChampion["Range"] + state.additionnalStats["Range"]) * (state.hasRapidFireCanon ? 1.35 : 1)),
+                "Armor Penetration": state.totalStats["APenF"],
+                "Resist Penetration": state.totalStats["MpenF"],
+                "Ability Haste": state.totalStats["AH"],
+                "Spellvamp %": state.additionnalStats["Spellvamp %"],
+                "Tenacity %": state.totalStats["TC"],
+                [state.textMana + " / Regen"]: state.totalStats["MPR"],
             }
-            setStats(obj)
-            
             const keys = Object.keys(obj);
-            const half = Math.ceil(keys.length / 2); 
-            setFirstHalf(keys.slice(0, half))
-            setSecondHalf(keys.slice(half))
-        }
-    },[totalStats, additionnalStats, hasRapidFireCanon, textMana])
+            const half = Math.ceil(keys.length / 2);
+            const firstHalf = keys.slice(0, half);
+            const secondHalf = keys.slice(half);
 
+            setStats(obj)
+            setFirstHalf(firstHalf)
+            setSecondHalf(secondHalf)
+        }
+    })
     return (
         <div className="stats-table">
             <div>
