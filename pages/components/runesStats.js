@@ -6,10 +6,6 @@ export default function RunesTables(){
 
     const { state, dispatch } = useContext(DataContext);
 
-    const handleRunes = (typeRune, value) => {
-        dispatch({ type: typeRune, payload: value });
-
-    }
     const listMainRune = ["-", "Precision", "Domination","Sorcery","Resolve","Inspiration"]
 
     const precisionMainRunes = ["-","Press The Attack", "Lethal Tempo", "Fleet Foot", "Conqueror"]
@@ -164,329 +160,333 @@ export default function RunesTables(){
         return optionRune
     }
 
+    const handleRunes = (typeRune, value) => {
+        dispatch({ type: typeRune, payload: value });
+    }
+
     return (
         <div className="stats-table">
-                            <div>
-                                <h1>Runes</h1>
-                            </div>
-                            <div className='stats-table-row'>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td colSpan="2">
-                                                Main Tree
-                                            </td>
-                                        </tr>          
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Main Rune
-                                            </td>
-                                            <td>
-                                                <select value={nameMainRune} onChange={(e) => {
-                                                    setNameMainRune(e.target.value)
-                                                }}>
-                                                    {listMainRune.map((value, index) => {
-                                                        return(
-                                                            <option value={value} key={index}>{value}</option>
-                                                        )
-                                                    })}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        {nameMainRune != '' &&  nameMainRune != "-" && (
-                                            <>
-                                                <tr>
-                                                    <td>Keystone</td>
-                                                    <td>
-                                                        <select value={mainRune} onChange={(e) => {
-                                                            setMainRune(e.target.value)
-                                                        }}>
-                                                            {setUpMainRunes(nameMainRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>First Rune</td>
-                                                    <td>
-                                                        <select value={mainFirstRune} onChange={(e) => {
-                                                            setMainFirstRune(e.target.value)
-                                                        }}>
-                                                            {setUpFirstRunes(nameMainRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Second Rune</td>
-                                                    <td>
-                                                        <select value={mainSecondRune} onChange={(e) => {
-                                                            setMainSecondRune(e.target.value)
-                                                        }}>
-                                                            {setUpSecondRunes(nameMainRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Third Rune</td>
-                                                    <td>
-                                                        <select value={mainThirdRune} onChange={(e) => {
-                                                            setMainThirdRune(e.target.value)
-                                                        }}>
-                                                            {setUpThirdRunes(nameMainRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                            </>
-                                        )}
-                                    </tbody>
-                                    <thead>                                   
-                                        <tr>
-                                            <td colSpan="2">
-                                                Secondary Tree
-                                            </td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Second Rune
-                                            </td>
-                                            <td>
-                                                <select value={secondRune} onChange={(e) => {
-                                                    setSecondRune(e.target.value)
-                                                }}>
-                                                    {listMainRune.map((value, index) => {
-                                                        if (value == '-')
-                                                            return(
-                                                                    <option value={value} key={index}>{value}</option>
-                                                                )
-                                                        if (value != nameMainRune)
-                                                            return(
-                                                                <option value={value} key={index}>{value}</option>
-                                                            )
-                                                    })}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        {secondRune != '' && secondRune != "-" && (
-                                            <>
-                                                <tr>
-                                                    <td>
-                                                        First Rune
-                                                    </td>
-                                                    <td>
-                                                        <select value={secondFirstRune} onChange={(e) => {
-                                                            setSecondFirstRune(e.target.value)
-                                                        }}>
-                                                            {setUpFirstRunes(secondRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                            {setUpSecondRunes(secondRune).map((value) => {
-                                                               return value
-                                                            })}
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        Second Rune
-                                                    </td>
-                                                    <td>
-                                                        <select value={secondSecondRune} onChange={(e) => {
-                                                            setSecondSecondRune(e.target.value)
-                                                        }}>
-                                                            {setUpSecondRunes(secondRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                            {setUpThirdRunes(secondRune).map((value) => {
-                                                                return value
-                                                            })}
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                            </>
-                                        )} 
-                                    </tbody>
-                                    <thead>                                   
-                                        <tr>
-                                            <td colSpan="2">
-                                                Shards
-                                            </td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                Offensive Shard
-                                            </td>
-                                            <td>
-                                                <select value={offensiveShard} onChange={(e) => {
-                                                    setOffensiveShard(e.target.value)
-                                                }}>
-                                                    {listOffensiveShard.map((value, index) => {
-                                                        return(
-                                                            <option value={value} key={index}>{value}</option>
-                                                        )
-                                                    })}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Mixed Shard
-                                            </td>
-                                            <td>
-                                                <select value={mixedShard} onChange={(e) => {
-                                                    setMixedShard(e.target.value)
-                                                }}>
-                                                    {listMixedShard.map((value, index) => {
-                                                        return(
-                                                            <option value={value} key={index}>{value}</option>
-                                                        )
-                                                    })}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Defensive Shard
-                                            </td>
-                                            <td>
-                                                <select value={defensiveShard} onChange={(e) => {
-                                                    setDefensiveShard(e.target.value)
-                                                }}>
-                                                    {listDefensiveShard.map((value, index) => {
-                                                        return(
-                                                            <option value={value} key={index}>{value}</option>
-                                                        )
-                                                    })}
-                                                </select>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    {(nameMainRune == 'Precision' || nameMainRune == 'Domination' || secondRune == 'Precision' || secondRune == 'Domination') && (
-                                        <>
-                                            <thead>
-                                                <tr>
-                                                    <td colSpan="2">
-                                                        Stacks
-                                                    </td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            {mainRune == 'Conqueror' && (
-                                                <tr>
-                                                    <td>
-                                                        Conqueror
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="number" 
-                                                            value={stackConqueror}
-                                                            max={12}
-                                                            min={0}
-                                                            onChange={(e) => {
-                                                                let value = e.target.value
-                                                                value = value != "" ? parseInt(value) : 0
-                                                                setStackConqueror(value)
-                                                            }}
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            )}
-                                           {mainRune == 'Dark Harvest' && (
-                                                <tr>
-                                                    <td>
-                                                        Dark Harvest
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="number" 
-                                                            value={stackDarkHarvest}
-                                                            min={0}
-                                                            onChange={(e) => {
-                                                                let value = e.target.value
-                                                                value = value != "" ? parseInt(value) : 0
-                                                                setStackDarkHarvest(value)
-                                                            }}
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            )}
-                                            {(listLegend.includes(mainSecondRune) || listLegend.includes(secondFirstRune) || listLegend.includes(secondSecondRune)) && (
-                                                <tr>
-                                                    <td>
-                                                        Legend 
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="number" 
-                                                            value={stackLegendExceptBloodline}
-                                                            max={10}
-                                                            min={0}
-                                                            onChange={(e) => {
-                                                                let value = e.target.value
-                                                                value = value != "" ? parseInt(value) : 0
-                                                                setStackLegendExceptBloodline(value)
-                                                            }}
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            )}
-                                            {(mainSecondRune == 'Bloodline'|| secondFirstRune == 'Bloodline' || secondSecondRune == 'Bloodline' ) && (
-                                                <tr>
-                                                    <td>
-                                                        Legend : Bloodline
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="number" 
-                                                            value={stackLegendBloodline}
-                                                            max={15}
-                                                            min={0}
-                                                            onChange={(e) => {
-                                                                let value = e.target.value
-                                                                value = value != "" ? parseInt(value) : 0
-                                                                setStackLegendBloodline(value)
-                                                            }}
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            )}
-                                            {(listBounty.includes(mainThirdRune)  || listBounty.includes(secondSecondRune)) && (
-                                                <tr>
-                                                    <td>
-                                                        Bounty
-                                                    </td>
-                                                    <td>
-                                                        <input
-                                                            type="number" 
-                                                            value={stackBounty}
-                                                            max={5}
-                                                            min={0}
-                                                            onChange={(e) => {
-                                                                let value = e.target.value
-                                                                value = value != "" ? parseInt(value) : 0
-                                                                setStackBounty(value)
-                                                            }}
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            )}
-                                            </tbody>
-                                        </>
-                                    )}
-                                </table>
-                            </div>
-                        </div>
+            <div>
+                <h1>Runes</h1>
+            </div>
+            <div className='stats-table-row'>
+                <table>
+                    <thead>
+                    <tr>
+                        <td colSpan="2">
+                            Main Tree
+                        </td>
+                    </tr>          
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Main Rune
+                        </td>
+                        <td>
+                            <select value={state.nameMainRune} onChange={(e) => {
+                                handleRunes("SET_NAMEMAINRUNE", e.target.value)
+                            }}>
+                                {listMainRune.map((value, index) => {
+                                    return(
+                                        <option value={value} key={index}>{value}</option>
+                                    )
+                                })}
+                            </select>
+                        </td>
+                    </tr>
+                    {state.nameMainRune != '' &&  state.nameMainRune != "-" && (
+                        <>
+                        <tr>
+                            <td>Keystone</td>
+                            <td>
+                                <select value={state.mainRune} onChange={(e) => {
+                                    handleRunes("SET_MAINRUNE", e.target.value)
+                                }}>
+                                    {setUpMainRunes(state.nameMainRune).map((value) => {
+                                        return value
+                                    })}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>First Rune</td>
+                            <td>
+                                <select value={state.mainFirstRune} onChange={(e) => {
+                                    handleRunes("SET_MAINFIRSTRUNE", e.target.value)
+                                }}>
+                                    {setUpFirstRunes(state.nameMainRune).map((value) => {
+                                        return value
+                                    })}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Second Rune</td>
+                            <td>
+                                <select value={state.mainSecondRune} onChange={(e) => {
+                                    handleRunes("SET_MAINSECONDRUNE", e.target.value)
+                                }}>
+                                    {setUpSecondRunes(state.nameMainRune).map((value) => {
+                                        return value
+                                    })}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Third Rune</td>
+                            <td>
+                                <select value={state.mainThirdRune} onChange={(e) => {
+                                    handleRunes("SET_MAINTHIRDRUNE", e.target.value)
+                                }}>
+                                    {setUpThirdRunes(state.nameMainRune).map((value) => {
+                                        return value
+                                    })}
+                                </select>
+                            </td>
+                        </tr>
+                        </>
+                    )}
+                </tbody>
+                <thead>          
+                    <tr>
+                        <td colSpan="2">
+                            Secondary Tree
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Second Rune
+                        </td>
+                        <td>
+                            <select value={state.secondRune} onChange={(e) => {
+                                    handleRunes("SET_SECONDRUNE", e.target.value)
+                            }}>
+                                {listMainRune.map((value, index) => {
+                                    if (value == '-')
+                                        return(
+                                            <option value={value} key={index}>{value}</option>
+                                        )
+                                    if (value != state.nameMainRune)
+                                        return(
+                                            <option value={value} key={index}>{value}</option>
+                                        )
+                                })}
+                            </select>
+                        </td>
+                    </tr>
+                    {state.secondRune != '' && state.secondRune != "-" && (
+                        <>
+                        <tr>
+                            <td>
+                                First Rune
+                            </td>
+                            <td>
+                                <select value={state.secondFirstRune} onChange={(e) => {
+                                    handleRunes("SET_SECONDFIRSTRUNE", e.target.value)
+                                }}>
+                                    {setUpFirstRunes(state.secondRune).map((value) => {
+                                        return value
+                                    })}
+                                    {setUpSecondRunes(state.secondRune).map((value) => {
+                                        return value
+                                    })}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Second Rune
+                            </td>
+                            <td>
+                                <select value={state.secondSecondRune} onChange={(e) => {
+                                    handleRunes("SET_SECONDSECONDRUNE", e.target.value)
+                                }}>
+                                    {setUpSecondRunes(state.secondRune).map((value) => {
+                                        return value
+                                    })}
+                                    {setUpThirdRunes(state.secondRune).map((value) => {
+                                        return value
+                                    })}
+                                </select>
+                            </td>
+                        </tr>
+                        </>
+                    )} 
+                </tbody>
+                <thead>          
+                    <tr>
+                        <td colSpan="2">
+                            Shards
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Offensive Shard
+                        </td>
+                        <td>
+                            <select value={state.offensiveShard} onChange={(e) => {
+                                handleRunes("SET_OFFENSIVESHARD", e.target.value)
+                            }}>
+                                {listOffensiveShard.map((value, index) => {
+                                    return(
+                                        <option value={value} key={index}>{value}</option>
+                                    )
+                                })}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mixed Shard
+                        </td>
+                        <td>
+                            <select value={state.mixedShard} onChange={(e) => {
+                                handleRunes("SET_MIXEDSHARD", e.target.value)
+                            }}>
+                                {listMixedShard.map((value, index) => {
+                                    return(
+                                        <option value={value} key={index}>{value}</option>
+                                    )
+                                })}
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Defensive Shard
+                        </td>
+                        <td>
+                            <select value={state.defensiveShard} onChange={(e) => {
+                                handleRunes("SET_DEFENSIVESHARD", e.target.value)
+                            }}>
+                                {listDefensiveShard.map((value, index) => {
+                                    return(
+                                        <option value={value} key={index}>{value}</option>
+                                    )
+                                })}
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+                {(state.nameMainRune == 'Precision' || state.nameMainRune == 'Domination' || state.secondRune == 'Precision' || state.secondRune == 'Domination') && (
+                    <>
+                    <thead>
+                        <tr>
+                            <td colSpan="2">
+                                Stacks
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {state.mainRune == 'Conqueror' && (
+                            <tr>
+                                <td>
+                                    Conqueror
+                                </td>
+                                <td>
+                                    <input
+                                        type="number" 
+                                        value={state.stackConqueror}
+                                        max={12}
+                                        min={0}
+                                        onChange={(e) => {
+                                            let value = e.target.value
+                                            value = value != "" ? parseInt(value) : 0
+                                            handleRunes("SET_STACKCONQUEROR", value)
+                                        }}
+                                    />
+                                </td>
+                            </tr>
+                        )}
+                        {state.mainRune == 'Dark Harvest' && (
+                            <tr>
+                                <td>
+                                    Dark Harvest
+                                </td>
+                                <td>
+                                    <input
+                                        type="number" 
+                                        value={state.stackDarkHarvest}
+                                        min={0}
+                                        onChange={(e) => {
+                                            let value = e.target.value
+                                            value = value != "" ? parseInt(value) : 0
+                                            handleRunes("SET_STACKDARKHARVEST", value)
+                                        }}
+                                    />
+                                </td>
+                            </tr>
+                        )}
+                        {(listLegend.includes(state.mainSecondRune) || listLegend.includes(state.secondFirstRune) || listLegend.includes(state.secondSecondRune)) && (
+                            <tr>
+                                <td>
+                                    Legend 
+                                </td>
+                                <td>
+                                    <input
+                                        type="number" 
+                                        value={state.stackLegendExceptBloodline}
+                                        max={10}
+                                        min={0}
+                                        onChange={(e) => {
+                                            let value = e.target.value
+                                            value = value != "" ? parseInt(value) : 0
+                                            handleRunes("SET_STACKLEGENDEXCEPTBLOODLINE", value)
+                                        }}
+                                    />
+                                </td>
+                            </tr>
+                        )}
+                        {(state.mainSecondRune == 'Bloodline'|| state.secondFirstRune == 'Bloodline' || state.secondSecondRune == 'Bloodline' ) && (
+                            <tr>
+                                <td>
+                                    Legend : Bloodline
+                                </td>
+                                <td>
+                                    <input
+                                        type="number" 
+                                        value={state.stackLegendBloodline}
+                                        max={15}
+                                        min={0}
+                                        onChange={(e) => {
+                                            let value = e.target.value
+                                            value = value != "" ? parseInt(value) : 0
+                                            handleRunes("SET_STACKLEGENDBLOODLINE", value)
+                                        }}
+                                    />
+                                </td>
+                            </tr>
+                        )}
+                        {(listBounty.includes(state.mainThirdRune)  || listBounty.includes(state.secondSecondRune)) && (
+                            <tr>
+                                <td>
+                                    Bounty
+                                </td>
+                                <td>
+                                    <input
+                                        type="number" 
+                                        value={state.stackBounty}
+                                        max={5}
+                                        min={0}
+                                        onChange={(e) => {
+                                            let value = e.target.value
+                                            value = value != "" ? parseInt(value) : 0
+                                            handleRunes("SET_STACKBOUNTY", value)
+                                        }}
+                                    />
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
+                    </>
+                )}
+                </table>
+            </div>
+        </div>
     )
 }
