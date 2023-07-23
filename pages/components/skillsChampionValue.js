@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../../context/context";
 
-export default function SkillsTable() {
+export default function SkillsTable({ championDetails }) {
   const { state, dispatch } = useContext(DataContext);
 
   const handleLevelSpell = (typeSpell, value) => {
@@ -128,4 +128,27 @@ export default function SkillsTable() {
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps({ params }) {
+  let { champion } = params;
+  if (champion.includes("Nunu")) {
+    champion = "Nunu";
+  }
+  if (champion.includes("Renata")) {
+    champion = "Renata";
+  }
+  // Fetch the champion data
+  const res = await fetch(
+    `http://localhost:3000/data/champions/${champion}.json`
+  );
+  //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
+
+  const championDetails = await res.json();
+
+  return {
+    props: {
+      championDetails,
+    },
+  };
 }
