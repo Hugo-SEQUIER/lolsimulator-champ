@@ -21,7 +21,7 @@
   "Q-DMG": "(-20 + 30 * P_Q + Self_AD) * IF(Steroid_Q, Self_CritDMG, 1) * MOD_Phys + IT_Proc_Phys",
   "W-DMG": "(20 + 25*P_W + 0.9 * Self_AP + Self_MisHPV * 0.13) * MOD_SelfHeal",
   "E-DMG": "(45 + 30 * P_E + (-20 + 30 * P_Q + Self_AD) * IF(Steroid_E, Self_CritDMG * 1.05, 1) + IT_Proc_Phys) * Calc!I32",
-  "R-DMG": "(120 + 360 * P_R + 1.2 * Self_AP) * MOD_Magic * IF(Steroid_R, 1.5, 1) + IF(Steroid_R, 120 + 0.3 * Self_AP)",
+  "R-DMG": "(120 + 360 * P_R + 1.2 * Self_AP) * MOD_Magic * IF(Steroid_R, 1.5, 1) + (Steroid_R ? 120 + 0.3 * Self_AP : 0)",
   "P-DMG": "(50 + 200 * Sc_Lin + Self_BoAD + 2 * Self_Crit) * Calc!O10",
   "Q-CD": 4.5,
   "W-CD": "24-2*P_W",

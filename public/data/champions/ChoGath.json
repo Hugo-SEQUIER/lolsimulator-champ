@@ -17,7 +17,7 @@
   "MR": 32,
   "MR+": 2.05,
   "MS": 345,
-  "Range": "125+IF(P_R>0,3+1.5*P_R,0)*IF(Kills>10,10,Kills)",
+  "Range": "125+ (P_R > 0 ? 3+1.5*P_R : 0) * (Kills>10 ? 10 : Kills)",
   "Q-DMG": "(20+60*P_Q+Self_AP)*MOD_Magic",
   "W-DMG": "(25 + 55 * P_W + 0.7 * Self_AP) * MOD_Magic",
   "E-DMG": "(10+12*P_E+0.3*Self_AP+0.03*E_MHP)*MOD_Magic*3",

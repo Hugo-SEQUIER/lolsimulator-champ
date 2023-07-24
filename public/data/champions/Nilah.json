@@ -17,7 +17,7 @@
   "MR": 32,
   "MR+": 2.05,
   "MS": 340,
-  "Range": "225 + IF(AND(Steroid_Q, P_Q > 0), 125, 0)",
+  "Range": "225 + (Steroid_Q & P_Q > 0) ? 125 : 0",
   "Q-DMG": "(5 * P_Q + (0.825 + 0.075 * P_Q) * Self_AD) * MOD_Phys * (1 + Self_Crit * 1.2)",
   "W-DMG": 0,
   "E-DMG": "(40 + 25 * P_Q + 0.2 * Self_AD) * MOD_Phys",

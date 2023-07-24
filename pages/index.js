@@ -55,7 +55,7 @@ export default function Accueil({ character_name }) {
             linkName = linkName.replace("î","i")
             return (
               <Link href={linkName} key={index}>
-                <div className='card-character' > 
+                <div id={linkName} className='card-character' > 
                   <img
                     alt={value}
                     src={"../images/loading/" + linkName + "_0.jpg"}

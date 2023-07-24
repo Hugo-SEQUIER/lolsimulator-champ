@@ -21,7 +21,7 @@
   "Q-DMG": "(Self_AD+15*P_Q-5+0.55*Self_AP)*MOD_Magic",
   "W-DMG": "(40 + 30 * P_W + 0.9 * Self_AP) * MOD_Magic",
   "E-DMG": "(30 + 50 * P_E + 0.9 * Self_AP) * MOD_Magic",
-  "R-DMG": "(50 + 100 * P_R + 0.8 * Self_AP + IF(Steroid_R, 150 + 0.4 * Self_AP)) * MOD_Magic",
+  "R-DMG": "(50 + 100 * P_R + 0.8 * Self_AP + IF(Steroid_R, 150 + 0.4 * Self_AP, 0)) * MOD_Magic",
   "P-DMG": "4 + 0.01 * Self_AP",
   "Q-CD": "8.5-0.5*P_Q",
   "W-CD": "7.5-0.5*P_W",

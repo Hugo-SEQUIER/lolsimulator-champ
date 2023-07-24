@@ -22,7 +22,7 @@
   "W-DMG": 0,
   "E-DMG": "(40 + 30 * P_E + 1.2 * Self_AP) * MOD_Magic",
   "R-DMG": "(((0.75 * Self_AD + 0.25 * Self_AP) * (1 + 0.2 * Self_Crit * (Self_CritDMG - 1))) * (12 + 2 * P_R)) * MOD_Phys",
-  "P-DMG": "IF(Self_Level>",
+  "P-DMG": "(Self_Level>= 13 ? 2*Self_AD : Self_Level >= 11 ? 1.9 * Self_AD : Self_Level >= 9 ? 1.8 * Self_AD : Self_Level >= 7 ? 1.7 * Self_AD : Self_Level >= 4 ? 1.6 * Self_AD : 1.5 * Self_AD) * MOD_Phys",
   "Q-CD": "8-P_Q",
   "W-CD": 12,
   "E-CD": "19-P_E",

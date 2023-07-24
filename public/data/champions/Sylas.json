@@ -21,7 +21,7 @@
   "Q-DMG": "(35 + 75 * P_Q + 1.3 * Self_AP) * MOD_Magic",
   "W-DMG": "(35 + 35 * P_W + 0.9 * Self_AP) * MOD_Magic",
   "E-DMG": "(30+50*P_E+Self_AP)*MOD_Magic",
-  "R-DMG": "IF(C_SylasUltimate",
+  "R-DMG": 0,
   "P-DMG": "Self_AD*1.3*MOD_Phys+(0.25*Self_AP+6+3*Self_Level)*MOD_Magic",
   "Q-CD": "12-P_Q",
   "W-CD": "14.75-1.75*P_W",

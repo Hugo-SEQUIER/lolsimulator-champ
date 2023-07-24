@@ -17,7 +17,7 @@
   "MR": 32,
   "MR+": 2.05,
   "MS": 350,
-  "Range": "IF(Self_Level>",
+  "Range": "IF(Self_Level>=11,175,125)",
   "Q-DMG": "IF(Steroid_Q, 2.1, 1) * (45 + 25 * P_Q + 1.15 * Self_BoAD) * MOD_Phys",
   "W-DMG": "(55+30+Self_BoAD)*MOD_Phys",
   "E-DMG": "(30+35*P_E+0.2*Self_BoAD)*MOD_Phys",

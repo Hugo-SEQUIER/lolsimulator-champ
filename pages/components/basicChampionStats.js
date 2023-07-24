@@ -39,7 +39,7 @@ function StatsTable() {
       const half = Math.ceil(keys.length / 2);
       const firstHalf = keys.slice(0, half);
       const secondHalf = keys.slice(half);
-
+      console.log(state.totalStats["AS"])
       setStats(obj);
       setFirstHalf(firstHalf);
       setSecondHalf(secondHalf);

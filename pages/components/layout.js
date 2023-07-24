@@ -12,10 +12,13 @@ import GameStats from "./gameStats";
 import RunesTables from "./runesStats";
 import { evaluate } from "mathjs";
 import { removeExcelFunctions } from "./excelTraitement";
-
+import { useRouter } from 'next/router'
 const Layout = ({ data, nameChamp }) => {
   const { state, dispatch } = useContext(DataContext);
 
+  const router = useRouter()
+  const { champion } = router.query
+  console.log(router)
   let options = [];
   for (let i = 1; i <= 18; i++) {
     options.push(
@@ -24,6 +27,7 @@ const Layout = ({ data, nameChamp }) => {
       </option>
     );
   }
+
   const listItemsLegendary = [
     "-",
     "Abyssal Mask",
@@ -131,7 +135,7 @@ const Layout = ({ data, nameChamp }) => {
     state.itemSlot6,
     state.elixirSlot,
   ]);
-
+  console.log(data)
   useEffect(() => {
     if (data != undefined) {
       if (data["Energy"] === 1) {
@@ -141,17 +145,55 @@ const Layout = ({ data, nameChamp }) => {
       }
       handleChange("SET_IMGSPLASH", `../../images/centered/${nameChamp}_0.jpg`);
       /** BASICS STATS */
+      let sampleData = {
+          "HP": 0,
+          "HP+": 0,
+          "HP5": 0,
+          "HP5+": 0,
+          "MP": 0,
+          "MP+": 0,
+          "MP5": 0,
+          "MP5+": 0,
+          "AD": 0,
+          "AD+": 0,
+          "AS": 0,
+          "Ratio": 0,
+          "AS+": 0,
+          "AR": 0,
+          "AR+": 0,
+          "MR": 0,
+          "MR+": 0,
+          "MS": 0,
+          "Range": 0,
+          "Q-DMG": 0,
+          "W-DMG": 0,
+          "E-DMG": 0,
+          "R-DMG": 0,
+          "P-DMG": 0,
+          "Q-CD": 0.9,
+          "W-CD": 0,
+          "E-CD": 0,
+          "R-CD": 0,
+          "P-CD": 0,
+          "Melee?": 0,
+          "img": data["img"],
+          "Burst Calc": 0,
+          "Trade Calc": 0,
+          "Energy": 0,
+          "No Mana": 0
+      }
       for (let key in data) {
+        sampleData[key] = data[key]
         if (key == "img" || key.includes("DMG") || key.includes("CD")) break;
         if (typeof data[key] === "string") {
           console.log(key);
-          data[key] = getNumericFromString(data[key]);
+          sampleData[key] = getNumericFromString(data[key]);
         }
       }
       let champ_obj = {
         Hp:
-          data["HP"] +
-          data["HP+"] * (state.level - 1) +
+        sampleData["HP"] +
+        sampleData["HP+"] * (state.level - 1) +
           (state.steroidStats["Form"] && nameChamp == "Gnar"
             ? 100 + 43 * (state.level - 1)
             : 0) +
@@ -162,45 +204,47 @@ const Layout = ({ data, nameChamp }) => {
                 (0.007025 + 0.000175 * (state.level - 1))
             : 0),
         "Attack Damage":
-          (data["AD"] + data["AD+"] * (state.level - 1)) *
+          (sampleData["AD"] + sampleData["AD+"] * (state.level - 1)) *
           (1 +
             (state.steroidStats["Items"] && state.hasTrinity ? 0.2 : 0) +
             (state.steroidStats["Form"] && nameChamp == "Gnar"
               ? 8 + 2.5 * (state.level - 1)
               : 0)),
         "Attack Speed %": Number(
-          data["AS"] * (1 + (data["Ratio"] * (state.level - 1)) / 100)
+          sampleData["AS"] * (1 + (sampleData["Ratio"] * (state.level - 1)) / 100)
         ),
         Armor:
-          data["AR"] +
-          data["AR+"] * (state.level - 1) +
+        sampleData["AR"] +
+        sampleData["AR+"] * (state.level - 1) +
           (state.steroidStats["Form"] && nameChamp == "Gnar"
             ? 3.5 + 3 * (state.level - 1)
             : 0),
         "Magic Resist":
-          data["MR"] +
-          data["MR+"] * (state.level - 1) +
+        sampleData["MR"] +
+        sampleData["MR+"] * (state.level - 1) +
           (state.steroidStats["Form"] && nameChamp == "Gnar"
             ? 3.5 + 3.5 * (state.level - 1)
             : 0),
-        "Move Speed": data["MS"],
+        "Move Speed": sampleData["MS"],
         Lifesteal: 0,
         "Critical %": 0,
-        "Hp Regen": data["HP5"] + data["HP5+"] * (state.level - 1),
+        "Hp Regen": sampleData["HP5"] + sampleData["HP5+"] * (state.level - 1),
 
-        Mana: data["MP"] + data["MP+"] * (state.level - 1),
+        Mana: sampleData["MP"] + sampleData["MP+"] * (state.level - 1),
         "Ability Power": 0,
-        Range: data["Range"],
+        Range: sampleData["Range"],
         "Armor Penetration": 0,
         "Resist Penetration": 0,
         "Ability Haste": 0,
         "Spellvamp %": 0,
         "Tenacity %": 0,
-        "Mana / Regen": data["MP5"] + data["MP5+"] * (state.level - 1),
+        "Mana / Regen": sampleData["MP5"] + sampleData["MP5+"] * (state.level - 1),
       };
+      console.log(sampleData["AS"])
+      console.log(sampleData["Ratio"])
       handleChange("SET_DATACHAMP", champ_obj);
     }
-  }, [data, state.level, state.steroidStats]);
+  }, [data, state.level, state.steroidStats, state.qSkillPoint, state.wSkillPoint, state.eSkillPoint, state.rSkillPoint]);
 
   useEffect(() => {
     enemyDataPrep();
@@ -766,13 +810,19 @@ const Layout = ({ data, nameChamp }) => {
       state.rSkillPoint > 0
         ? 1.05 + 0.05 * state.rSkillPoint
         : 1);
+
+        console.log("ICI")
+        console.log(bonusAS)
+        console.log(multiBonusAS)
+        console.log(obj["Attack Speed %"])
+  
     obj["Attack Speed %"] =
       (state.itemStats["AS"] / 100 +
         state.runeStats["AS"] +
         bonusAS +
         (nameChamp == "Jhin"
           ? 0
-          : data["AS+"] * (state.level - 1) * (0.685 + 0.0175 * state.level))) *
+          : 0.03 * (state.level - 1) * (0.685 + 0.0175 * state.level))) *
         multiBonusAS +
       (nameChamp == "Varus" && state.steroidStats["P"]
         ? 0.4 +
@@ -780,15 +830,19 @@ const Layout = ({ data, nameChamp }) => {
             (state.runeStats["AS"] +
               state.itemStats["AS"] +
               bonusAS +
-              data["AS+"] * (state.level - 1) * (0.685 + 0.0175 * state.level))
+              0.04 * (state.level - 1) * (0.685 + 0.0175 * state.level))
         : 0);
+
     obj["Attack Speed %"] *=
       nameChamp == "Jayce" &&
       state.steroidStats["Form"] &&
       state.steroidStats["W"]
         ? 3
         : 1;
-
+        console.log("ICI")
+        console.log(bonusAS)
+        console.log(multiBonusAS)
+        console.log(obj["Attack Speed %"])
     // ARMOR
     let bonusArmor =
       state.itemSlot1 == "Evenshroud" ? 5 * state.nbLegendary : 0;
@@ -2714,10 +2768,11 @@ const Layout = ({ data, nameChamp }) => {
     enemy_obj["Hp"] += state.enemyItemStats["HP"];
     enemy_obj["Magic Resist"] += state.enemyItemStats["MR"];
     enemy_obj["Current Hp"] = enemy_obj["Hp"];
-    enemy_obj["Current Hp %"] =
-      (enemy_obj["Current Hp"] / enemy_obj["Hp"]) * 100;
+    enemy_obj["Current Hp %"] = (enemy_obj["Hp"] != 0 ?
+      (enemy_obj["Current Hp"] / enemy_obj["Hp"]) : 0 )* 100;
     handleChange("SET_ENEMY_STATS", enemy_obj);
   };
+
   const staticCD = {
     Aatrox: ["P", "Q"],
     Ahri: ["R"],
@@ -2766,6 +2821,7 @@ const Layout = ({ data, nameChamp }) => {
     Zilean: ["P"],
     Zyra: ["P"],
   };
+
   function modifyCD(dt, key) {
     let dataCD =
       typeof dt[key] === "string" ? getNumericFromString(dt[key]) : dt[key];
@@ -3289,8 +3345,8 @@ const Layout = ({ data, nameChamp }) => {
       MOD_Heal:
         1 +
         state.itemStats["HEAL"] +
-        state.runeStats["Heal"] +
-        state.gameStats["Chemtech"] * 0.06, // Revitalize
+        ((state.mainThirdRune == "Revitalize" || state.secondSecondRune == "Revitalize") ? 0.05 + (100 <= 40 ? 0.1 : 0) : 0)  +
+        state.gameStats["Chemtech"] * 0.06, // Revitalize CHPP (100)
       MOD_Hit: 1,
       MOD_Magic: 1,
       MOD_OH: 1,
@@ -3334,6 +3390,8 @@ const Layout = ({ data, nameChamp }) => {
       P_Q: state.qSkillPoint,
       P_R: state.rSkillPoint,
       P_W: state.wSkillPoint,
+
+      P_DMG : data["P-DMG"],
 
       ForceBit: state.runeStats["ForceBit"],
       R_Adap: state.runeStats["Adaptive"],
@@ -3404,11 +3462,13 @@ const Layout = ({ data, nameChamp }) => {
     };
 
     if (typeof str === "string") {
+      console.log(str)
       return evaluate(str, scope);
     }
-
+    
     return str;
   }
+
   return (
     <>
       <div
@@ -3416,7 +3476,7 @@ const Layout = ({ data, nameChamp }) => {
         style={{ backgroundImage: `url(${state.imgSplash})` }}
       >
         <div className="character-banniere">
-          <Link href={"/"}>
+          <Link href={`/#${champion}`}>
             <img src="../../images/logo.PNG" alt="logo S.GG" />
           </Link>
           <p

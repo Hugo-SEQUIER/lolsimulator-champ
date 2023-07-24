@@ -18,7 +18,7 @@
   "MR+": 2.05,
   "MS": 345,
   "Range": 125,
-  "Q-DMG": "IF(Steroid_Q,(1.4*Self_AD+15+15*Self_Level-IF(Self_Level>9,5*(Self_Level-9),0))*MOD_Phys,(15+15*P_Q+(0.95+0.05*P_Q)*Self_AD)*MOD_Phys) * (1 + IF(IT_CDMG > 0, 0.99, 0.66) * Self_Crit)",
+  "Q-DMG": "(Steroid_Q ? (1.4*Self_AD+15+15*Self_Level-(Self_Level>9 ? 5*(Self_Level-9) : 0))*MOD_Phys : (15+15*P_Q+(0.95+0.05*P_Q)*Self_AD)*MOD_Phys) * (1 + (IT_CDMG > 0 ? 0.99 : 0.66) * Self_Crit)",
   "W-DMG": "IF(Steroid_W,(40+10*Self_Level+0.8*Self_AP)*MOD_Magic,(30*P_W+20+0.8*Self_AP)*MOD_Magic)",
   "E-DMG": "IF(Steroid_E,(35+15*Self_Level+0.8*Self_BoAD)*MOD_Phys,(10+45*P_E+0.8*Self_BoAD)*MOD_Phys)",
   "R-DMG": "(1.5*Self_AD)*MOD_Phys",
