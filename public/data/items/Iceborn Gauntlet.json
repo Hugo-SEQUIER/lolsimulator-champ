@@ -1,6 +1,6 @@
 {
   "Gold": 3000,
-  "HP": "400 + 50 * Legendary",
+  "HP": 400,
   "HP5": 0,
   "MP": 0,
   "MP5": 0,
@@ -28,7 +28,7 @@
   "SV": 0,
   "APM": 0,
   "ADM": 0,
-  "TC": "5 * Legendary",
+  "TC": 0,
   "MS": 0,
   "SHI": 0,
   "img": "6662.png",

@@ -22,11 +22,11 @@
   "W-DMG": "((0.015*P_W+0.025+(0.01/35)*Self_BoAD)*E_MHP)*MOD_Phys",
   "E-DMG": "(1.1*Self_AD+0.9*Self_AP+20*P_E-10)*MOD_Phys*(1+Self_Crit*(Self_CritDMG-1))",
   "R-DMG": "(175*P_R-25+1.1*Self_BoAD)*MOD_Phys",
-  "P-DMG": "0.13 * Self_MHP * MOD_Heal",
+  "P-DMG": "0.10 * Self_MHP * MOD_Heal",
   "Q-CD": "13.5-1.5*P_Q",
   "W-CD": "3/IF(Self_AS>0,Self_AS,1)",
   "E-CD": 1,
-  "R-CD": "140 - 20 * P_R",
+  "R-CD": "165 - 25 * P_R",
   "P-CD": "16.5-0.5*(Self_Level<= 9 ? Self_Level : 9)",
   "Melee?": 1,
   "img": {

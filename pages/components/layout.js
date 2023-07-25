@@ -206,7 +206,7 @@ const Layout = ({ data, nameChamp }) => {
         "Attack Damage":
           (sampleData["AD"] + sampleData["AD+"] * (state.level - 1)) *
           (1 +
-            (state.steroidStats["Items"] && state.hasTrinity ? 0.2 : 0) +
+            (state.steroidStats["Items"] && state.hasTrinity ? 0.18 : 0) +
             (state.steroidStats["Form"] && nameChamp == "Gnar"
               ? 8 + 2.5 * (state.level - 1)
               : 0)),
@@ -801,6 +801,8 @@ const Layout = ({ data, nameChamp }) => {
         ? 0.03 + 0.15 * state.stackLegendExceptBloodline
         : 0;
     bonusAS += 0.075 * state.gameStats["Hextech"];
+    bonusAS += (nameChamp == "Shyvana" && steroidStats["Q"] && qSkillPoint > 0 ? 0.35 + 0.05 * qSkillPoint : 0)
+
     let multiBonusAS =
       (nameChamp == "Jinx" && state.steroidStats["Q"] && state.qSkillPoint > 0
         ? 0.9
@@ -810,12 +812,8 @@ const Layout = ({ data, nameChamp }) => {
       state.rSkillPoint > 0
         ? 1.05 + 0.05 * state.rSkillPoint
         : 1);
+    
 
-        console.log("ICI")
-        console.log(bonusAS)
-        console.log(multiBonusAS)
-        console.log(obj["Attack Speed %"])
-  
     obj["Attack Speed %"] =
       (state.itemStats["AS"] / 100 +
         state.runeStats["AS"] +
@@ -896,7 +894,7 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
     bonusArmor +=
       nameChamp == "Hecarim" && state.steroidStats["W"] && state.wSkillPoint > 0
-        ? 10 + 5 * state.wSkillPoint
+        ? 5 * state.wSkillPoint
         : 0;
     bonusArmor +=
       nameChamp == "Jax" && state.steroidStats["R"] && state.rSkillPoint > 0
@@ -1055,7 +1053,7 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
     bonusMR +=
       nameChamp == "Hecarim" && state.steroidStats["W"] && state.wSkillPoint > 0
-        ? 10 + 5 * state.wSkillPoint
+        ? 5 * state.wSkillPoint
         : 0;
     bonusMR +=
       nameChamp == "Jax" && state.steroidStats["R"] && state.rSkillPoint > 0
@@ -1318,7 +1316,7 @@ const Layout = ({ data, nameChamp }) => {
       nameChamp == "Karma" && state.steroidStats["E"] ? 1.4 : 1;
     obj["Move Speed"] *=
       nameChamp == "Milio" && state.steroidStats["E"] && state.eSkillPoint > 0
-        ? 1.125 + 0.025 * state.eSkillPoint
+        ? 1.1 + 0.02 * state.eSkillPoint
         : 1;
     obj["Move Speed"] *=
       nameChamp == "Naafiri" && state.steroidStats["R"] && state.rSkillPoint > 0
@@ -2102,7 +2100,7 @@ const Layout = ({ data, nameChamp }) => {
             ? 0.1
             : 0.15)
         : 0;
-    bonusMP += nameChamp == "Karthus" && state.steroidStats["W"] ? 0.15 : 0;
+    bonusMP += nameChamp == "Karthus" && state.steroidStats["W"] ? 0.1 * wSkillPoint : 0;
     bonusMP += nameChamp == "Kayle" && state.steroidStats["Q"] ? 0.15 : 0;
     bonusMP +=
       nameChamp.includes("Kog") &&

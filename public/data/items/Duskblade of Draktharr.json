@@ -10,7 +10,7 @@
   "MR": 0,
   "AS": 0,
   "CC": 0,
-  "AH": "20 + 5 * Legendary",
+  "AH": 20,
   "LS": 0,
   "LE": 18,
   "MPE": 0,
@@ -29,7 +29,7 @@
   "APM": 0,
   "ADM": 0,
   "TC": 0,
-  "MS": "5 * Legendary",
+  "MS": 0,
   "SHI": 0,
   "img": "6691.png",
   "Icon": "_xludf.Image(\"https://ddragon.leagueoflegends.com/cdn/12.22.1/img/item/6691.png\")"

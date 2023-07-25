@@ -16,7 +16,7 @@
   "AR+": 5,
   "MR": 30,
   "MR+": 1.3,
-  "MS": 335,
+  "MS": 340,
   "Range": 525,
   "Q-DMG": "(Steroid_Form ? (Steroid_Q ? 1.4 : 1)*((25*(P_R+1)-20+0.75*Self_AD+0.4*Self_AP)*(1+(1+0.25*P_R)*(1-(E_CHP/100))))*MOD_Magic : (Steroid_Q ? 3 :1)*(50+20*P_Q+0.5*Self_AP)*MOD_Magic)",
   "W-DMG": "(Steroid_Form ? (0.3*Self_AP+50*(P_R+1)+10)*MOD_Magic : (40*P_W+0.2*Self_AP)*MOD_Magic)",

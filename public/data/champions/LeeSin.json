@@ -18,7 +18,7 @@
   "MR+": 2.05,
   "MS": 345,
   "Range": 125,
-  "Q-DMG": "(60 + 50 * P_Q + 2.2 * Self_BoAD) * MOD_Phys * (1 + 0.5 * (1 - E_CHP / 100))",
+  "Q-DMG": "(60 + 50 * P_Q + 2.3 * Self_BoAD) * MOD_Phys * (1 + 0.5 * (1 - E_CHP / 100))",
   "W-DMG": "(50 * P_W + 0.8 * Self_AP)",
   "E-DMG": "(5 + 30 * P_E + Self_AD) * MOD_Magic",
   "R-DMG": "(225*P_R+2*Self_BoAD-50)*MOD_Phys",
