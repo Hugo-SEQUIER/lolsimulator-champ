@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../../context/context";
 
-export default function BonusStats() {
+export default function BonusStats({nameChamp}) {
   const { state, dispatch } = useContext(DataContext);
 
   const handleBonus = (typeBonus, value) => {
@@ -15,7 +15,30 @@ export default function BonusStats() {
         <h1>Bonus Stats</h1>
       </div>
       <div className="stats-table-row">
+        
         <table>
+        {nameChamp == "Senna" && (
+          <><thead>
+
+            </thead><tbody>
+                <tr>
+                  <td>
+                    Senna Stacks
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      value={state.sennaStacks}
+                      min={0}
+                      onChange={(e) => {
+                        let value = e.target.value;
+                        value = value != "" ? parseInt(value) : 0;
+                        handleBonus("SET_SENNASTACKS", value);
+                      } } />
+                  </td>
+                </tr>
+              </tbody></>
+          )}
           <thead>
             <tr>
               <td colSpan="2">Soul</td>

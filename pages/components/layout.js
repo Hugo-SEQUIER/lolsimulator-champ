@@ -3516,7 +3516,7 @@ const Layout = ({ data, nameChamp }) => {
               <SkillsTable></SkillsTable>
               <RunesTables />
               <ItemsStats></ItemsStats>
-              <BonusStats></BonusStats>
+              <BonusStats nameChamp={nameChamp}></BonusStats>
               <EnemyStats></EnemyStats>
               <ItemsEnemyStats></ItemsEnemyStats>
               <GameStats></GameStats>
