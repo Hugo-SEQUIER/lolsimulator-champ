@@ -25,7 +25,7 @@
   "P-DMG": 0,
   "Q-CD": "6.25 - 0.25 * P_Q",
   "W-CD": 6,
-  "E-CD": "4/IF(Self_AS<",
+  "E-CD": "4/(Self_AS<=0 ? 1 : Self_AS)",
   "R-CD": "210-30*P_R",
   "P-CD": 1,
   "Melee?": 0,

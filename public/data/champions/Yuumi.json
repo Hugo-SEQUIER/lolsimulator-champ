@@ -24,7 +24,7 @@
   "R-DMG": "IF(Steroid_R, 5, 1) * (50 + 25 * P_R + 0.2 * Self_AP) * MOD_Magic",
   "P-DMG": "(25 + 85 * Sc_Lin + 0.15 * Self_AP) * MOD_Heal",
   "Q-CD": 6.5,
-  "W-CD": "10-IF(Self_Level>",
+  "W-CD": "10-(Self_Level>=11 ? 10 : Self_Level >= 6 ? 5 : 0)",
   "E-CD": "12.5-0.5*P_E",
   "R-CD": "120-10*P_R",
   "P-CD": "20 - IF(Self_Level > 10, 10, Self_Level - 1)",

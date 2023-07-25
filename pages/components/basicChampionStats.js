@@ -18,7 +18,7 @@ function StatsTable() {
         "Magic Resist": state.totalStats["MR"],
         "Move Speed": Math.floor(state.totalStats["MS"]),
         Lifesteal: state.totalStats["LS"],
-        "Critical %": state.totalStats["Crit"],
+        "Critical %": state.totalStats["Crit"] * 100,
         "Hp Regen": state.totalStats["HPR"],
 
         [state.textMana]: state.totalStats["MP"],

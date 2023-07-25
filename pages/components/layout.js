@@ -1792,8 +1792,8 @@ const Layout = ({ data, nameChamp }) => {
     bonusCrit += nameChamp == "Tryndamere" && state.steroidStats["P"] ? 0.4 : 0;
 
     obj["Critical %"] =
-      (state.itemStats["CC"] + bonusCrit) *
-      ((nameChamp == "Yasuo" || nameChamp == "Yone") && state.steroidStats["P"]
+      ((state.itemStats["CC"]/100) + bonusCrit) *
+      ((nameChamp == "Yasuo" || nameChamp == "Yone") 
         ? 2.5
         : 1);
 
@@ -2246,7 +2246,7 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
 
     obj["Mana / Regen"] = state.itemStats["MP5"] + bonusMP5;
-
+    
     handleChange("SET_ADDITIONNALSTATS", obj);
   }, [
     state.hasSilvermere,
@@ -2485,7 +2485,7 @@ const Layout = ({ data, nameChamp }) => {
 
     objTotal["AvgAA"] = 1;
 
-    objTotal["CritDMG"] = 1.75 + state.itemStats["CDMG"];
+    objTotal["CritDMG"] = 1.75 + state.itemStats["CDMG"]/100;
     objTotal["CritDMG"] *= nameChamp == "Jhin" ? 0.86 : 1;
     objTotal["CritDMG"] = nameChamp == "Ashe" ? 1 : objTotal["CritDMG"];
     objTotal["CritDMG"] =
@@ -2536,7 +2536,7 @@ const Layout = ({ data, nameChamp }) => {
       state.additionnalStats["Lifesteal"];
     objTotal["LS"] +=
       nameChamp == "Senna" && state.additionnalStats["Critical %"] > 1
-        ? 0.35 * (objTotal["Crit"] - 100)
+        ? 0.35 * ((objTotal["Crit"]*100) - 100)
         : 0;
 
     objTotal["HP"] =
@@ -3460,7 +3460,9 @@ const Layout = ({ data, nameChamp }) => {
       Steroid_Runes: state.steroidStats["Runes"],
       Steroid_W: state.steroidStats["W"],
     };
-
+    console.log(scope["OH_Magic"])
+    console.log(scope["OH_Phys"])
+    console.log(scope["OH_True"])
     if (typeof str === "string") {
       console.log(str)
       return evaluate(str, scope);

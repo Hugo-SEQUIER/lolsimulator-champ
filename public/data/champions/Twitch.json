@@ -20,7 +20,7 @@
   "Range": 550,
   "Q-DMG": 0,
   "W-DMG": 0,
-  "E-DMG": "IF(Steroid_E,2.1 * Self_BoAD + 70 + 40 * P_E, 15 * P_E + 20 + 0.35 * Self_BoAD) * MOD_Phys + IF(Steroid_E, 6, 1) * (0.3 * Self_AP) * MOD_Magic",
+  "E-DMG": "(Steroid_E ? 2.1 * Self_BoAD + 70 + 40 * P_E : 15 * P_E + 20 + 0.35 * Self_BoAD) * MOD_Phys + (Steroid_E ? 6 : 1) * (0.3 * Self_AP) * MOD_Magic",
   "R-DMG": 0,
   "P-DMG": 36,
   "Q-CD": 16,

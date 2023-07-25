@@ -22,7 +22,7 @@
   "W-DMG": "(0.5*Self_AP+35*P_W+35)*MOD_Magic",
   "E-DMG": "(0.3 * Self_AP + 40 * P_E - 10) * MOD_Magic * IF(Steroid_E, 5, 1)",
   "R-DMG": "(1.1*Self_AP+150*P_R+150)*MOD_Magic",
-  "P-DMG": "(0.5*Self_AP+16+4*Self_Level+IF(Self_Level>6,2*(Self_Level-6),0)+IF(Self_Level>12,4*(Self_Level-12),0))*MOD_Magic",
+  "P-DMG": "(0.5*Self_AP+16+4*Self_Level+(Self_Level>6 ? 2*(Self_Level-6) : 0)+(Self_Level>12 ? 4*(Self_Level-12) : 0))*MOD_Magic",
   "Q-CD": "6.5 - 0.5 * P_Q",
   "W-CD": "22 - 2 * P_W",
   "E-CD": 16,

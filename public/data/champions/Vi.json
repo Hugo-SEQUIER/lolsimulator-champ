@@ -27,7 +27,7 @@
   "W-CD": "3/IF(Self_AS>0,Self_AS,1)",
   "E-CD": 1,
   "R-CD": "140 - 20 * P_R",
-  "P-CD": "16.5-0.5*IF(Self_Level<",
+  "P-CD": "16.5-0.5*(Self_Level<= 9 ? Self_Level : 9)",
   "Melee?": 1,
   "img": {
     "centered": "Vi_0",
