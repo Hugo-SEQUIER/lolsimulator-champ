@@ -101,6 +101,7 @@ export default function EnemyStats() {
     "MissFortune",
     "Mordekaiser",
     "Morgana",
+    "Naafiri",
     "Nami",
     "Nasus",
     "Nautilus",

@@ -1959,7 +1959,7 @@ const Layout = ({ data, nameChamp }) => {
     // Range
     obj["Range"] =
       state.mainRune == "Lethal Tempo" && state.steroidStats["Runes"] ? 50 : 0;
-
+    obj["Range"] += (nameChamp == "Naafiri" && state.steroidStats["R"] ? 80 * state.rSkillPoint : 0)
     // Armor Penetration
     let armorFlat =
       nameChamp == "Aphelios"
@@ -2399,9 +2399,9 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
     objTotal["AD"] +=
       nameChamp == "Naafiri" && state.steroidStats["R"]
-        ? 10 +
+        ? 5 +
           10 * (state.rSkillPoint - 1) +
-          (0.1 + 0.05 * state.rSkillPoint) * objTotal["AD"]
+          (0.08* state.rSkillPoint) * objTotal["AD"]
         : 0;
     objTotal["AD"] +=
       nameChamp == "Trundle" && state.steroidStats["Q"]
@@ -2800,6 +2800,7 @@ const Layout = ({ data, nameChamp }) => {
     Malphite: ["P"],
     Malzahar: ["P"],
     Maokai: ["P"],
+    Naafiri: ["P"],
     Neeko: ["P"],
     Poppy: ["P"],
     Quinn: ["P"],
