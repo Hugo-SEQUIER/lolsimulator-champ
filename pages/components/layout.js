@@ -334,15 +334,15 @@ const Layout = ({ data, nameChamp }) => {
       (state.hasTitanicHydra ? 0.02 * state.additionnalStats["Hp"] : 0);
     bonusAD +=
       nameChamp == "Aphelios"
-        ? state.qSkillPoint == 0
+        ? state.qSkillPoint == 0 ? 0 : state.qSkillPoint == 1
           ? 4.5
-          : state.qSkillPoint == 1
-          ? 9
           : state.qSkillPoint == 2
-          ? 13.5
+          ? 9
           : state.qSkillPoint == 3
-          ? 18
+          ? 13.5
           : state.qSkillPoint == 4
+          ? 18
+          : state.qSkillPoint == 5
           ? 22.5
           : 27
         : 0;
@@ -530,17 +530,18 @@ const Layout = ({ data, nameChamp }) => {
     bonusAS += nameChamp.includes("Nunu") && state.steroidStats["P"] ? 0.2 : 0;
     bonusAS +=
       nameChamp == "Aphelios"
-        ? state.wSkillPoint == 0
-          ? 9
-          : state.wSkillPoint == 1
-          ? 18
+        ? state.wSkillPoint == 0 ? 0 :
+        state.wSkillPoint == 1
+          ? 0.09
           : state.wSkillPoint == 2
-          ? 27
+          ? 0.18
           : state.wSkillPoint == 3
-          ? 36
+          ? 0.27
           : state.wSkillPoint == 4
-          ? 45
-          : 54
+          ? 0.36
+          : state.wSkillPoint == 5
+          ? 0.45
+          : 0.54
         : 0;
     bonusAS +=
       nameChamp == "Ashe" && state.steroidStats["Q"] && state.qSkillPoint > 0

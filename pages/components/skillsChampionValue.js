@@ -9,6 +9,16 @@ export default function SkillsTable({ nameChamp }) {
     dispatch({ type: typeSpell, payload: value });
   };
 
+  const handleAphelios = (key, value) => {
+    let obj = {
+      "Crescend Stacks": state.apheliosStats["Crescend Stacks"],
+      "Main Weapon": state.apheliosStats["Main Weapon"],
+      "Sub Weapon": state.apheliosStats["Sub Weapon"],
+    }
+    obj[key] = value
+    dispatch({ type: "SET_APHELIOSSTATS", payload: obj });
+  };
+
   const character_name = [
     "-",
     "Aatrox",
@@ -175,6 +185,16 @@ export default function SkillsTable({ nameChamp }) {
     "Zyra",
   ];
 
+  const apheliosWeapon = [
+    "-",
+    "Calibrum, the Sniper Rifle",
+    "Severum, the Scythe Pistol",
+    "Gravitum, the Gravity Cannon",
+    "Infernum, the Flamethrower",
+    "Crescendum, the Chakram",
+
+  ]
+
   const [qBonusPoint, setQBonusPoint] = useState(0)
   const [wBonusPoint, setWBonusPoint] = useState(0)
   const [eBonusPoint, setEBonusPoint] = useState(0)
@@ -197,6 +217,7 @@ export default function SkillsTable({ nameChamp }) {
       setRBonusPoint(0)
     }
   },[])
+
   let options = [];
   for (let charac of character_name) {
     options.push(
@@ -205,6 +226,41 @@ export default function SkillsTable({ nameChamp }) {
       </option>
     );
   }
+
+  useEffect(() => {
+    let mainWeapon = state.apheliosStats["Main Weapon"]
+    if (mainWeapon != "-"){
+      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
+        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
+        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      }
+      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
+        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
+        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      }
+      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
+        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
+        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      }
+      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
+        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
+        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      }
+      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
+        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
+        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      }
+    }
+  },[state.apheliosStats])
+  let optionsAphelios = [];
+  for (let weapon of apheliosWeapon) {
+    optionsAphelios.push(
+      <option value={weapon} key={weapon}>
+        {weapon}
+      </option>
+    );
+  }
+
   return (
     <div className="stats-table skills-table">
       <div>
@@ -334,7 +390,38 @@ export default function SkillsTable({ nameChamp }) {
               </tr>
             </tbody>
           )}
-          
+          {nameChamp == "Aphelios" && (
+            <tbody>
+              <tr>
+                <td>
+                  Aphelios Weapon
+                </td>
+                <td colSpan={5}>
+                  <select value={state.apheliosStats["Main Weapon"]} onChange={(e) => handleAphelios("Main Weapon" ,e.target.value)}>
+                    {optionsAphelios}
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                Crescend Stacks
+                </td>
+                <td colSpan={5}>
+                  <input
+                    type="number"
+                    value={state.apheliosStats["Crescend Stacks"]}
+                    max={20}
+                    min={0}
+                    onChange={(e) => {
+                      let value = e.target.value;
+                      value = value != "" ? parseInt(value) : 0;
+                      handleAphelios("Crescend Stacks" ,value)
+                    }}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          )}
         </table>
       </div>
     </div>
