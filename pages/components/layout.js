@@ -18,7 +18,6 @@ const Layout = ({ data, nameChamp }) => {
   const [dataChamp, setDataChamp] = useState(data)
   const router = useRouter()
   const { champion } = router.query
-  console.log(router)
   let options = [];
   for (let i = 1; i <= 18; i++) {
     options.push(
@@ -135,7 +134,6 @@ const Layout = ({ data, nameChamp }) => {
     state.itemSlot6,
     state.elixirSlot,
   ]);
-  console.log(dataChamp)
   useEffect(() => {
     if (dataChamp != undefined) {
       if (dataChamp["Energy"] === 1) {
@@ -186,7 +184,6 @@ const Layout = ({ data, nameChamp }) => {
         sampleData[key] = dataChamp[key]
         if (key == "img" || key.includes("DMG") || key.includes("CD")) break;
         if (typeof dataChamp[key] === "string") {
-          console.log(key);
           sampleData[key] = getNumericFromString(dataChamp[key]);
         }
       }
@@ -240,8 +237,6 @@ const Layout = ({ data, nameChamp }) => {
         "Tenacity %": 0,
         "Mana / Regen": sampleData["MP5"] + sampleData["MP5+"] * (state.level - 1),
       };
-      console.log(sampleData["AS"])
-      console.log(sampleData["Ratio"])
       handleChange("SET_DATACHAMP", champ_obj);
     }
   }, [dataChamp, state.level, state.steroidStats, state.qSkillPoint, state.wSkillPoint, state.eSkillPoint, state.rSkillPoint]);
@@ -365,7 +360,7 @@ const Layout = ({ data, nameChamp }) => {
             (state.level >= 3 ? 0.02 * Math.floor((state.level - 3) / 3) : 0))
         : 0;
     bonusAD +=
-      nameChamp.includes("Sante") && state.steroidStats["R"]
+      (nameChamp.includes("Sante") || (nameChamp == "Sylas" && state.sylasUltimate.includes("Sante"))) && state.steroidStats["R"]
         ? 5 +
           state.additionnalStats["Armor"] * 0.325 +
           state.additionnalStats["Magic Resist"] * 0.325
@@ -380,11 +375,11 @@ const Layout = ({ data, nameChamp }) => {
         ? 10 + 5 * (state.qSkillPoint - 1)
         : 0;
     bonusAD +=
-      nameChamp == "Twitch" && state.steroidStats["R"]
+      (nameChamp == "Twitch" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Twitch"))) && state.steroidStats["R"]
         ? 40 + 15 * (state.rSkillPoint - 1)
         : 0;
     bonusAD +=
-      nameChamp == "Vayne" && state.steroidStats["R"]
+      (nameChamp == "Vayne"|| (nameChamp == "Sylas" && state.sylasUltimate.includes("Vayne"))) && state.steroidStats["R"]
         ? 25 + 15 * (state.rSkillPoint - 1)
         : 0;
     bonusAD += nameChamp == "Pyke" ? 0.07143 * state.additionnalStats["Hp"] : 0;
@@ -443,7 +438,7 @@ const Layout = ({ data, nameChamp }) => {
       (1 +
         0.05 * state.gameStats["Infernal"] +
         (state.hasWardStone ? 0.2 : 0) +
-        (nameChamp == "Riven" && state.steroidStats["R"] ? 0.2 : 0) +
+        ((nameChamp == "Riven" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Riven"))) && state.steroidStats["R"] ? 0.2 : 0) +
         (nameChamp == "Rengar" && state.steroidStats["P"] ? 0.25 : 0));
 
     // HP
@@ -454,15 +449,15 @@ const Layout = ({ data, nameChamp }) => {
       ? 40 + 40 * state.rSkillPoint * state.gameStats["Kills"]
       : 0;
     bonusHP +=
-      nameChamp == "Nasus" && state.steroidStats["R"]
+      (nameChamp == "Nasus"|| (nameChamp == "Sylas" && state.sylasUltimate.includes("Nasus"))) && state.steroidStats["R"]
         ? 150 + 150 * state.rSkillPoint
         : 0;
     bonusHP +=
-      nameChamp == "Renekton" && state.steroidStats["R"]
+      (nameChamp == "Renekton" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Renekton"))) && state.steroidStats["R"]
         ? 100 + 150 * state.rSkillPoint
         : 0;
     bonusHP +=
-      nameChamp == "Shyvana" && state.steroidStats["R"]
+      (nameChamp == "Shyvana" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Shyvana"))) && state.steroidStats["R"]
         ? 50 + 100 * state.rSkillPoint
         : 0;
     bonusHP +=
@@ -471,7 +466,7 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
     bonusHP += nameChamp == "Swain" ? 12 * state.gameStats["Minion"] : 0;
     bonusHP +=
-      nameChamp == "Volibear" && state.steroidStats["R"]
+      (nameChamp == "Volibear" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Volibear"))) && state.steroidStats["R"]
         ? 0 + 175 * state.rSkillPoint
         : 0;
     bonusHP += state.stackLegendBloodline == 15 ? 85 : 0;
@@ -647,7 +642,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 0.4
         : 0;
     bonusAS +=
-      nameChamp.includes("Master") &&
+      (nameChamp.includes("Master") || (nameChamp == "Sylas" && state.sylasUltimate.includes("Master"))) &&
       state.steroidStats["R"] &&
       state.rSkillPoint > 0
         ? 0.15 + 0.1 * state.rSkillPoint
@@ -781,7 +776,7 @@ const Layout = ({ data, nameChamp }) => {
       state.eSkillPoint > 0
         ? 0.35 + 0.05 * state.eSkillPoint
         : 0;
-    bonusAS += nameChamp == "Zeri" && state.steroidStats["R"] ? 0.3 : 0;
+    bonusAS += (nameChamp == "Zeri" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Zeri"))) && state.steroidStats["R"] ? 0.3 : 0;
     bonusAS +=
       state.mainRune == "Hail of Blades" && state.steroidStats["Runes"]
         ? 1.1
@@ -837,10 +832,6 @@ const Layout = ({ data, nameChamp }) => {
       state.steroidStats["W"]
         ? 3
         : 1;
-        console.log("ICI")
-        console.log(bonusAS)
-        console.log(multiBonusAS)
-        console.log(obj["Attack Speed %"])
     // ARMOR
     let bonusArmor =
       state.itemSlot1 == "Evenshroud" ? 5 * state.nbLegendary : 0;
@@ -897,12 +888,12 @@ const Layout = ({ data, nameChamp }) => {
         ? 5 * state.wSkillPoint
         : 0;
     bonusArmor +=
-      nameChamp == "Jax" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Jax" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Jax"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -10 + 25 * state.rSkillPoint + 0.4 * obj["Attack Damage"]
         : 0;
     bonusArmor +=
-      nameChamp == "Jayce" &&
-      state.steroidStats["Form"] &&
+      ( nameChamp == "Jayce" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Jayce"))) &&
+      state.steroidStats["Form"]  &&
       state.steroidStats["R"]
         ? (state.level < 6
             ? 5
@@ -914,15 +905,15 @@ const Layout = ({ data, nameChamp }) => {
           0.075 * obj["Attack Damage"]
         : 0;
     bonusArmor +=
-      nameChamp == "Kennen" && state.steroidStats["R"]
+      (nameChamp == "Kennen" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Kennen"))) && state.steroidStats["R"]
         ? 20 * state.rSkillPoint
         : 0;
     bonusArmor +=
-      nameChamp == "Nasus" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Nasus" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Nasus"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 25 + 15 * state.rSkillPoint
         : 0;
     bonusArmor +=
-      nameChamp == "Olaf" && state.steroidStats["R"]
+      (nameChamp == "Olaf" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Olaf"))) && state.steroidStats["R"]
         ? state.rSkillPoint * 10
         : 0;
     bonusArmor +=
@@ -940,12 +931,12 @@ const Layout = ({ data, nameChamp }) => {
             state.gameStats["Mountain"])
         : 0;
     bonusArmor +=
-      nameChamp == "Singed" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Singed" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Singed"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -5 + 35 * state.rSkillPoint
         : 0;
     bonusArmor += nameChamp == "Thresh" ? 1 * state.gameStats["Minion"] : 0;
     bonusArmor +=
-      nameChamp == "Trundle" && state.steroidStats["R"]
+      (nameChamp == "Trundle" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Trundle")))&& state.steroidStats["R"]
         ? 0.4 * state.enemyStats["Armor"]
         : 0;
     bonusArmor +=
@@ -1056,11 +1047,12 @@ const Layout = ({ data, nameChamp }) => {
         ? 5 * state.wSkillPoint
         : 0;
     bonusMR +=
-      nameChamp == "Jax" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Jax" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Jax"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -6 + 25 * state.rSkillPoint + 0.24 * obj["Attack Damage"]
         : 0;
     bonusMR +=
-      nameChamp == "Jayce" &&
+      (nameChamp == "Jayce"  
+      || (nameChamp == "Sylas" && state.sylasUltimate.includes("Jayce"))) && 
       state.steroidStats["Form"] &&
       state.steroidStats["R"]
         ? (state.level < 6
@@ -1073,15 +1065,15 @@ const Layout = ({ data, nameChamp }) => {
           0.075 * obj["Attack Damage"]
         : 0;
     bonusMR +=
-      nameChamp == "Kennen" && state.steroidStats["R"]
+      (nameChamp == "Kennen" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Kennen"))) && state.steroidStats["R"]
         ? 20 * state.rSkillPoint
         : 0;
     bonusMR +=
-      nameChamp == "Nasus" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Nasus" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Nasus"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 25 + 15 * state.rSkillPoint
         : 0;
     bonusMR +=
-      nameChamp == "Olaf" && state.steroidStats["R"]
+      (nameChamp == "Olaf" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Olaf"))) && state.steroidStats["R"]
         ? state.rSkillPoint * 10
         : 0;
     bonusMR +=
@@ -1099,11 +1091,11 @@ const Layout = ({ data, nameChamp }) => {
             state.gameStats["Mountain"])
         : 0;
     bonusMR +=
-      nameChamp == "Singed" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Singed" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Singed"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -5 + 35 * state.rSkillPoint
         : 0;
     bonusMR +=
-      nameChamp == "Trundle" && state.steroidStats["R"]
+      (nameChamp == "Trundle" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Trundle"))) && state.steroidStats["R"]
         ? 0.4 * state.enemyStats["Magic Resist"]
         : 0;
 
@@ -1167,7 +1159,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 70 + 10 * state.wSkillPoint
         : 0;
     bonusMS +=
-      nameChamp.includes("Veth") && state.steroidStats["R"]
+      (nameChamp.includes("Veth") || (nameChamp == "Sylas" && state.sylasUltimate.includes("Veth"))) && state.steroidStats["R"]
         ? 25 * state.rSkillPoint
         : 0;
     bonusMS += nameChamp == "Cassiopeia" ? 4 * state.level : 0;
@@ -1207,7 +1199,7 @@ const Layout = ({ data, nameChamp }) => {
             : 15)
         : 0;
     bonusMS +=
-      nameChamp == "Singed" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Singed" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Singed"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -5 + 35 * state.rSkillPoint
         : 0;
     bonusMS +=
@@ -1233,10 +1225,10 @@ const Layout = ({ data, nameChamp }) => {
             : 2 * 7 + 3 * 6 + 4 * (state.level - 13))
         : 0;
     bonusMS +=
-      nameChamp == "Vayne" && state.steroidStats["P"]
+      (nameChamp == "Vayne" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Vayne"))) && state.steroidStats["P"]
         ? 45 * (state.steroidStats["R"] ? 2 : 1)
         : 0;
-    bonusMS += nameChamp == "Kled" && state.steroidStats["R"] ? 650 : 0;
+    bonusMS += (nameChamp == "Kled" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Kled"))) && state.steroidStats["R"] ? 650 : 0;
     bonusMS +=
       nameChamp == "Rell" && state.eSkillPoint > 0
         ? state.level <= 6
@@ -1269,12 +1261,11 @@ const Layout = ({ data, nameChamp }) => {
       state.runeStats["MS"] +
       bonusMS +
       state.basicStatsChampion["Move Speed"];
-    console.log(obj["Move Speed"]);
     obj["Move Speed"] *= state.hasStridebreaker
       ? 1 + 0.02 * state.nbLegendary
       : 1;
     obj["Move Speed"] *=
-      nameChamp == "Aatrox" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Aatrox" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Aatrox"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 1.4 + 0.2 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1319,7 +1310,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.1 + 0.02 * state.eSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Naafiri" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Naafiri" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Naafiri"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 1.275 + 0.075 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1333,7 +1324,7 @@ const Layout = ({ data, nameChamp }) => {
     obj["Move Speed"] *=
       nameChamp.includes("Nunu") && state.steroidStats["P"] ? 1.1 : 1;
     obj["Move Speed"] *=
-      nameChamp == "Sivir" && state.steroidStats["R"] && state.rSkillPoint
+      (nameChamp == "Sivir" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Sivir"))) && state.steroidStats["R"] && state.rSkillPoint
         ? 1.15 + 0.05 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1361,7 +1352,7 @@ const Layout = ({ data, nameChamp }) => {
     obj["Move Speed"] *=
       nameChamp == "Corki" && state.steroidStats["P"] ? 1.4 : 1;
     obj["Move Speed"] *=
-      nameChamp.includes("Mundo") &&
+      (nameChamp.includes("Mundo") || (nameChamp == "Sylas" && state.sylasUltimate.includes("Mundo"))) &&
       state.steroidStats["R"] &&
       state.rSkillPoint > 0
         ? 1.05 + 0.1 * state.rSkillPoint
@@ -1389,7 +1380,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.2 + 0.1 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Fiora" && state.steroidStats["R"]
+      (nameChamp == "Fiora" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Fiora"))) && state.steroidStats["R"]
         ? 1 + 0.1 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1429,8 +1420,8 @@ const Layout = ({ data, nameChamp }) => {
     obj["Move Speed"] *=
       nameChamp == "Kennen" && state.steroidStats["E"] ? 2 : 1;
     obj["Move Speed"] *=
-      nameChamp.includes("Kha") &&
-      nameChamp.includes("Zix") &&
+      ((nameChamp.includes("Kha") &&
+      nameChamp.includes("Zix")) || (nameChamp == "Sylas" && state.sylasUltimate.includes("Kha"))) &&
       state.steroidStats["R"]
         ? 1.4
         : 1;
@@ -1449,11 +1440,11 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.15 + 0.05 * state.qSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Maokai" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Maokai" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Maokair"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 1.3 + 0.1 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp.includes("Master") &&
+      (nameChamp.includes("Master") || (nameChamp == "Sylas" && state.sylasUltimate.includes("Master"))) &&
       state.steroidStats["R"] &&
       state.rSkillPoint > 0
         ? 1.25 + 0.1 * state.rSkillPoint
@@ -1467,7 +1458,7 @@ const Layout = ({ data, nameChamp }) => {
           : 1.09
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Morgana" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Morgana" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Morgana"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 0.8 + 0.25 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1485,7 +1476,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.1 + 0.05 * state.qSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Olaf" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Olaf" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Olaf"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 0.95 + 0.25 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1501,7 +1492,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.15 + 0.05 * state.wSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Rakan" && state.steroidStats["R"] ? 1.75 : 1;
+      (nameChamp == "Rakan" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Rakan"))) && state.steroidStats["R"] ? 1.75 : 1;
     obj["Move Speed"] *=
       nameChamp == "Rell" &&
       state.steroidStats["Form"] &&
@@ -1521,7 +1512,7 @@ const Layout = ({ data, nameChamp }) => {
           : 1.5
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Rengar" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Rengar" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Rengar"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 1.3 + 0.1 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1561,13 +1552,13 @@ const Layout = ({ data, nameChamp }) => {
     obj["Move Speed"] *=
       nameChamp == "Soraka" && state.steroidStats["P"] ? 1.7 : 1;
     obj["Move Speed"] *=
-      nameChamp.includes("Tahm") &&
-      nameChamp.includes("Kench") &&
+      ((nameChamp.includes("Tahm") &&
+      nameChamp.includes("Kench")) || (nameChamp == "Sylas" && state.sylasUltimate.includes("Tahm"))) &&
       state.steroidStats["R"]
         ? 1.4
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Talon" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Talon" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Talon"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 1.25 + 0.15 * state.rSkillPoint
         : 1;
     obj["Move Speed"] *=
@@ -1628,15 +1619,15 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.75 + 0.125 * state.wSkillPoint
         : 1;
     obj["Move Speed"] *=
-      nameChamp == "Wukong" && state.steroidStats["R"] ? 1.2 : 1;
+      (nameChamp == "Wukong" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Wukong"))) && state.steroidStats["R"] ? 1.2 : 1;
     obj["Move Speed"] *=
       nameChamp == "Xayah" && state.steroidStats["W"] ? 1.3 : 1;
     obj["Move Speed"] *=
       nameChamp == "Yone" && state.steroidStats["E"] ? 1.15 : 1;
     obj["Move Speed"] *=
-      nameChamp == "Zac" && state.steroidStats["R"] ? 1.5 : 1;
+      (nameChamp == "Zac" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Zac"))) && state.steroidStats["R"] ? 1.5 : 1;
     obj["Move Speed"] *=
-      nameChamp == "Zeri" && state.steroidStats["R"] ? 1.4 : 1;
+      (nameChamp == "Zeri" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Zeri"))) && state.steroidStats["R"] ? 1.4 : 1;
     obj["Move Speed"] *=
       nameChamp == "Zoe" && state.steroidStats["W"] && state.wSkillPoint > 0
         ? 1.2 + 0.1 * state.wSkillPoint
@@ -1777,13 +1768,11 @@ const Layout = ({ data, nameChamp }) => {
         ? 1.1
         : 1;
     obj["Move Speed"] *= 1 + 0.07 * state.gameStats["Cloud"];
-    console.log(obj["Move Speed"]);
     obj["Move Speed"] *= state.bonusStats["Cloud"]
       ? 1.15 + (state.steroidStats["R"] ? 0.45 : 0)
       : 1;
     obj["Move Speed"] =
       obj["Move Speed"] - state.basicStatsChampion["Move Speed"];
-    console.log(obj["Move Speed"]);
     // Critical %
     let bonusCrit =
       nameChamp == "Senna" ? Math.round(state.sennaStacks / 20) * 0.1 : 0;
@@ -1839,7 +1828,7 @@ const Layout = ({ data, nameChamp }) => {
         : 1;
     selfHealing *= 1 + 0.06 * state.gameStats["Chemtech"];
     selfHealing *=
-      nameChamp == "Aatrox" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Aatrox" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Aatrox"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? 1.15 + 0.1 * state.rSkillPoint
         : 1;
     selfHealing *= nameChamp == "Trundle" && state.steroidStats["W"] ? 1.25 : 1;
@@ -1848,7 +1837,7 @@ const Layout = ({ data, nameChamp }) => {
     // Hp Regen
     let bonusRegen = state.hasSpectre ? 1.5 : 0;
     bonusRegen +=
-      nameChamp == "Singed" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Singed" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Singed"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -0.01 + 0.07 * state.rSkillPoint
         : 0;
     bonusRegen +=
@@ -1891,7 +1880,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 3 + (15 / 17) * (state.level - 1)
         : 0;
     bonusAP +=
-      nameChamp == "Singed" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Singed" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Singed"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -5 + 35 * state.rSkillPoint
         : 0;
     bonusAP +=
@@ -1951,15 +1940,19 @@ const Layout = ({ data, nameChamp }) => {
     multiBonusAP *= state.hasWardStone ? 1.2 : 1;
     multiBonusAP *= nameChamp == "Syndra" && state.steroidStats["P"] ? 1.15 : 1;
     multiBonusAP *= 1 + 0.05 * state.gameStats["Infernal"];
+    console.log("nbLegendary", state.nbLegendary)
+    console.log("BonusAP" , bonusAP)
+    console.log("itemStats" , state.itemStats)
+    console.log("multiBonusAP" , multiBonusAP)
     obj["Ability Power"] =
-      (bonusAP + state.itemStats["AP"] + state.runeStats["ForceBit"] == 0
+      (bonusAP + state.itemStats["AP"] + (state.runeStats["ForceBit"] == 0
         ? state.runeStats["Adaptive"]
-        : 0) * multiBonusAP;
-
+        : 0)) * multiBonusAP;
+    console.log("objAP", obj["Ability Power"])
     // Range
     obj["Range"] =
       state.mainRune == "Lethal Tempo" && state.steroidStats["Runes"] ? 50 : 0;
-    obj["Range"] += (nameChamp == "Naafiri" && state.steroidStats["R"] ? 80 * state.rSkillPoint : 0)
+    obj["Range"] += ((nameChamp == "Naafiri" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Naafiri"))) && state.steroidStats["R"] ? 80 * state.rSkillPoint : 0)
     // Armor Penetration
     let armorFlat =
       nameChamp == "Aphelios"
@@ -1994,7 +1987,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 0.0033 * Math.floor(obj["Critical %"] * 100)
         : 0;
     bonusArmorPen += nameChamp == "Pantheon" ? 0.1 * state.rSkillPoint : 0;
-    bonusArmorPen += nameChamp == "Yasuo" && state.steroidStats["R"] ? 0.5 : 0;
+    bonusArmorPen += (nameChamp == "Yasuo" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Yasuo"))) && state.steroidStats["R"] ? 0.5 : 0;
     bonusArmorPen += state.hasDivine ? 0.03 * state.nbLegendary : 0;
     bonusArmorPen += state.hasEclipse ? 0.04 * state.nbLegendary : 0;
     bonusArmorPen += state.hasRageblade ? 0.05 * state.nbLegendary : 0;
@@ -2008,7 +2001,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 0.06 + 0.04 * state.qSkillPoint
         : 0;
     bonusArmorPen +=
-      nameChamp == "Jayce" && state.steroidStats["R"] && state.rSkillPoint
+      (nameChamp == "Jayce" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Jayce"))) && state.steroidStats["R"] && state.rSkillPoint
         ? 0.1 +
           (state.level < 6
             ? 0
@@ -2040,7 +2033,7 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
     bonusArmorPen += nameChamp == "Sion" && state.steroidStats["E"] ? 0.2 : 0;
     bonusArmorPen +=
-      nameChamp == "Trundle" && state.steroidStats["R"] ? 0.4 : 0;
+      (nameChamp == "Trundle" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Trundle"))) && state.steroidStats["R"] ? 0.4 : 0;
     bonusArmorPen +=
       nameChamp == "Vi" && state.wSkillPoint > 0 && state.steroidStats["W"]
         ? 0.2
@@ -2054,7 +2047,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 0.05 + 0.03 * state.eSkillPoint
         : 0;
     bonusArmorPen +=
-      nameChamp == "Rengar" && state.rSkillPoint > 0 && state.steroidStats["R"]
+      (nameChamp == "Rengar" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Rengar"))) && state.rSkillPoint > 0 && state.steroidStats["R"]
         ? 0.06 + 0.06 * state.rSkillPoint
         : 0;
 
@@ -2090,7 +2083,7 @@ const Layout = ({ data, nameChamp }) => {
         ? 0.325 + 0.025 * state.eSkillPoint
         : 0;
     bonusMP +=
-      nameChamp == "Jayce" && state.steroidStats["R"] && state.rSkillPoint
+      (nameChamp == "Jayce" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Jayce"))) && state.steroidStats["R"] && state.rSkillPoint
         ? 0.1 +
           (state.level < 6
             ? 0
@@ -2113,7 +2106,7 @@ const Layout = ({ data, nameChamp }) => {
       nameChamp == "Rumble" && state.steroidStats["E"] && state.eSkillPoint > 0
         ? 0.1 + 0.02 * state.eSkillPoint
         : 0;
-    bonusMP += nameChamp == "Trundle" && state.steroidStats["R"] ? 0.4 : 0;
+    bonusMP += (nameChamp == "Trundle" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Trundle"))) && state.steroidStats["R"] ? 0.4 : 0;
     bonusMP +=
       nameChamp == "Zoe" && state.steroidStats["E"] && state.eSkillPoint > 0
         ? 0.175 + 0.025 * state.eSkillPoint
@@ -2212,7 +2205,7 @@ const Layout = ({ data, nameChamp }) => {
       nameChamp == "Warwick" && state.steroidStats["Q"] && state.qSkillPoint > 0
         ? 0.125 + 0.125 * state.qSkillPoint
         : 0;
-    bonusSV += nameChamp == "Warwick" && state.steroidStats["R"] ? 1 : 0;
+    bonusSV += (nameChamp == "Warwick" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Warwick"))) && state.steroidStats["R"] ? 1 : 0;
 
     obj["Spellvamp %"] = (state.itemStats["SV"] + bonusSV) * selfHealing;
 
@@ -2221,7 +2214,7 @@ const Layout = ({ data, nameChamp }) => {
     bonusTenacity += state.hasSilvermere ? 0.5 : 0;
     bonusTenacity += state.hasSterak ? 0.3 : 0;
     bonusTenacity += nameChamp == "Garen" && state.steroidStats["W"] ? 0.6 : 0;
-    bonusTenacity += nameChamp == "Milio" && state.steroidStats["R"] ? 0.65 : 0;
+    bonusTenacity += (nameChamp == "Milio" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Milio"))) && state.steroidStats["R"] ? 0.65 : 0;
     bonusTenacity +=
       state.mainSecondRune == "Tenacity" ||
       state.secondFirstRune == "Tenacity" ||
@@ -2239,7 +2232,7 @@ const Layout = ({ data, nameChamp }) => {
 
     // Mana Regen
     let bonusMP5 =
-      nameChamp == "Singed" && state.steroidStats["R"] && state.rSkillPoint > 0
+      (nameChamp == "Singed" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Singed"))) && state.steroidStats["R"] && state.rSkillPoint > 0
         ? -0.01 + 0.07 * state.rSkillPoint
         : 0;
 
@@ -2386,7 +2379,7 @@ const Layout = ({ data, nameChamp }) => {
       state.basicStatsChampion["Attack Damage"] +
       state.additionnalStats["Attack Damage"];
     objTotal["AD"] +=
-      state.steroidStats["R"] && nameChamp == "Aatrox"
+      state.steroidStats["R"]  && (nameChamp == "Aatrox" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Aatrox")))
         ? state.rSkillPoint == 1
           ? objTotal["AD"] * 0.2
           : state.rSkillPoint == 2
@@ -2394,11 +2387,11 @@ const Layout = ({ data, nameChamp }) => {
           : objTotal["AD"] * 0.45
         : 0;
     objTotal["AD"] +=
-      nameChamp == "Olaf" && state.steroidStats["R"]
+      (nameChamp == "Olaf" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Olaf"))) && state.steroidStats["R"]
         ? 0 + 10 * state.rSkillPoint + 0.25 * objTotal["AD"]
         : 0;
     objTotal["AD"] +=
-      nameChamp == "Naafiri" && state.steroidStats["R"]
+      (nameChamp == "Naafiri" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Naafiri"))) && state.steroidStats["R"]
         ? 5 +
           10 * (state.rSkillPoint - 1) +
           (0.08* state.rSkillPoint) * objTotal["AD"]
@@ -2511,7 +2504,7 @@ const Layout = ({ data, nameChamp }) => {
       ? 0.004 + 0.019 * (state.level - 1) * objTotal["HP"]
       : 0;
     objTotal["HPR"] +=
-      nameChamp.includes("Mundo") &&
+      (nameChamp.includes("Mundo") || (nameChamp == "Sylas" && state.sylasUltimate.includes("Mundo"))) &&
       state.steroidStats["R"] &&
       state.rSkillPoint > 0
         ? 0.02 * state.rSkillPoint * objTotal["HP"]
@@ -2547,7 +2540,7 @@ const Layout = ({ data, nameChamp }) => {
       ? 0.01 * state.nbLegendary * objTotal["HP"]
       : 0;
     objTotal["HP"] +=
-      state.hasRadiant && state.steroidStats["R"] ? 0.125 * objTotal["HP"] : 0;
+      state.hasRadiant  && state.steroidStats["R"] ? 0.125 * objTotal["HP"] : 0;
     objTotal["HP"] += nameChamp == "Vladimir" ? 1.6 * objTotal["AP"] : 0;
     objTotal["HP"] +=
       nameChamp.includes("Veth") &&
@@ -2582,7 +2575,7 @@ const Layout = ({ data, nameChamp }) => {
       state.basicStatsChampion["Move Speed"] +
       state.additionnalStats["Move Speed"];
     objTotal["MS"] +=
-      nameChamp == "Sion" && state.steroidStats["R"] ? 950 - objTotal["MS"] : 0;
+      (nameChamp == "Sion" || (nameChamp == "Sylas" && state.sylasUltimate.includes("Sion"))) && state.steroidStats["R"] ? 950 - objTotal["MS"] : 0;
     objTotal["MS"] *=
       nameChamp == "Akshan" && state.steroidStats["Q"]
         ? 1.4 + 0.05 * Math.floor(objTotal["AP"] / 100)
@@ -2690,7 +2683,6 @@ const Layout = ({ data, nameChamp }) => {
 
   useEffect(() => {
     if (dataChamp != undefined) {
-      console.log(dataChamp);
       handleChange(
         "SET_PIMG",
         "../../images/passive/" + dataChamp["img"]["passive"] + ".png"
@@ -2736,7 +2728,6 @@ const Layout = ({ data, nameChamp }) => {
 
   useEffect(() => {
     if (state.sylasUltimate != "-"){
-      console.log("HERRRE")
       setRDmgSylas(state.sylasUltimate)
     }
     else {
@@ -2837,7 +2828,6 @@ const Layout = ({ data, nameChamp }) => {
         "No Mana": dataChamp["No Mana"]
     }
     setDataChamp(objData)
-    console.log("../../images/spell/" + result["img"]["RSpell"] + ".png")
     handleChange(
       "SET_RIMG",
       "../../images/spell/" + result["img"]["RSpell"] + ".png"
@@ -2936,7 +2926,6 @@ const Layout = ({ data, nameChamp }) => {
       typeof dt[key] === "string" ? getNumericFromString(dt[key]) : dt[key];
     for (let staKey in staticCD) {
       if (nameChamp.includes(staKey)) {
-        console.log(key[0]);
         if (staticCD[staKey].includes(key[0])) {
           return dataCD;
         }
@@ -3008,41 +2997,41 @@ const Layout = ({ data, nameChamp }) => {
     };
     if (state.itemSlot1 != "-") {
       obj = await addItemsStats(obj, state.itemSlot1, "SET_ITEM_IMG1");
-      if (state.itemSlot1 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.itemSlot1)) {
         nb += 1;
       }
     }
     if (state.itemSlot2 != "-") {
       obj = await addItemsStats(obj, state.itemSlot2, "SET_ITEM_IMG2");
-      if (state.itemSlot2 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.itemSlot2)) {
         nb += 1;
       }
     }
 
     if (state.itemSlot3 != "-") {
       obj = await addItemsStats(obj, state.itemSlot3, "SET_ITEM_IMG3");
-      if (state.itemSlot3 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.itemSlot3)) {
         nb += 1;
       }
     }
 
     if (state.itemSlot4 != "-") {
       obj = await addItemsStats(obj, state.itemSlot4, "SET_ITEM_IMG4");
-      if (state.itemSlot4 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.itemSlot4)) {
         nb += 1;
       }
     }
 
     if (state.itemSlot5 != "-") {
       obj = await addItemsStats(obj, state.itemSlot5, "SET_ITEM_IMG5");
-      if (state.itemSlot5 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.itemSlot5)) {
         nb += 1;
       }
     }
 
     if (state.itemSlot6 != "-") {
       obj = await addItemsStats(obj, state.itemSlot6, "SET_ITEM_IMG6");
-      if (state.itemSlot6 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.itemSlot6)) {
         nb += 1;
       }
     }
@@ -3050,7 +3039,7 @@ const Layout = ({ data, nameChamp }) => {
     if (state.elixirSlot != "-") {
       obj = await addItemsStats(obj, state.elixirSlot, "SET_ITEM_IMG7");
     }
-    console.log(obj);
+    console.log("NBLEGENDARY",nb)
     handleChange("SET_ITEM_STATS", obj);
     handleChange("SET_NBLEGENDARY", nb);
 
@@ -3192,7 +3181,7 @@ const Layout = ({ data, nameChamp }) => {
         state.enemyItemSlot1,
         "SET_ITEM_ENEMY_IMG1"
       );
-      if (state.enemyItemSlot1 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.enemyItemSlot1)) {
         nb += 1;
       }
     }
@@ -3202,7 +3191,7 @@ const Layout = ({ data, nameChamp }) => {
         state.enemyItemSlot2,
         "SET_ITEM_ENEMY_IMG2"
       );
-      if (state.enemyItemSlot2 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.enemyItemSlot2)) {
         nb += 1;
       }
     }
@@ -3213,7 +3202,7 @@ const Layout = ({ data, nameChamp }) => {
         state.enemyItemSlot3,
         "SET_ITEM_ENEMY_IMG3"
       );
-      if (state.enemyItemSlot3 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.enemyItemSlot3)) {
         nb += 1;
       }
     }
@@ -3224,7 +3213,7 @@ const Layout = ({ data, nameChamp }) => {
         state.enemyItemSlot4,
         "SET_ITEM_ENEMY_IMG4"
       );
-      if (state.enemyItemSlot4 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.enemyItemSlot4)) {
         nb += 1;
       }
     }
@@ -3235,7 +3224,7 @@ const Layout = ({ data, nameChamp }) => {
         state.enemyItemSlot5,
         "SET_ITEM_ENEMY_IMG5"
       );
-      if (state.enemyItemSlot5 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.enemyItemSlot5)) {
         nb += 1;
       }
     }
@@ -3246,7 +3235,7 @@ const Layout = ({ data, nameChamp }) => {
         state.enemyItemSlot6,
         "SET_ITEM_ENEMY_IMG6"
       );
-      if (state.enemyItemSlot6 in listItemsLegendary) {
+      if (listItemsLegendary.includes(state.enemyItemSlot6)) {
         nb += 1;
       }
     }
@@ -3376,7 +3365,7 @@ const Layout = ({ data, nameChamp }) => {
       // VOIR LES PLAGES NOMMEES
 
       Sc_Lin: (state.level - 1) / 17,
-      dataChamp: dataChamp,
+      data: dataChamp,
       runeStats: state.runeStats,
       basicStatsChampion: state.basicStatsChampion,
       additionnalStats: state.additionnalStats,
@@ -3569,11 +3558,7 @@ const Layout = ({ data, nameChamp }) => {
       Steroid_Runes: state.steroidStats["Runes"],
       Steroid_W: state.steroidStats["W"],
     };
-    console.log(scope["OH_Magic"])
-    console.log(scope["OH_Phys"])
-    console.log(scope["OH_True"])
     if (typeof str === "string") {
-      console.log(str)
       return evaluate(str, scope);
     }
     

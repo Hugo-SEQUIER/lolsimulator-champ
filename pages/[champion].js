@@ -4,8 +4,7 @@ import { initialState, reducer } from "../reducer/reducer";
 import { DataContext } from "../context/context";
 import Layout from "./components/layout";
 export default function ChampionPage({ championDetails, champion }) {
-  console.log(champion);
-
+  
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
