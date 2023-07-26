@@ -181,6 +181,11 @@ const Layout = ({ data, nameChamp }) => {
           "No Mana": 0
       }
       for (let key in dataChamp) {
+        console.log(key)
+        if (key == "R-DMG"){
+          console.log("R-DMG", dataChamp[key])
+          console.log("R-type", typeof dataChamp[key])
+        }
         sampleData[key] = dataChamp[key]
         if (key == "img" || key.includes("DMG") || key.includes("CD")) break;
         if (typeof dataChamp[key] === "string") {
@@ -2704,6 +2709,12 @@ const Layout = ({ data, nameChamp }) => {
           "SET_RIMG",
           "../../images/spell/" + dataChamp["img"]["RSpell"] + ".png"
         );
+      if (nameChamp != "Sylas"){
+        handleChange(
+          "SET_RIMG",
+          "../../images/spell/" + dataChamp["img"]["RSpell"] + ".png"
+        );
+      }
 
       handleChange("SET_PDMG", modifyDMG(dataChamp, "P-DMG"));
       handleChange("SET_QDMG", modifyDMG(dataChamp, "Q-DMG"));
@@ -2727,52 +2738,54 @@ const Layout = ({ data, nameChamp }) => {
   ]);
 
   useEffect(() => {
-    if (state.sylasUltimate != "-"){
-      setRDmgSylas(state.sylasUltimate)
-    }
-    else {
-      let objData = {
-        "HP": dataChamp["HP"],
-        "HP+": dataChamp["HP+"],
-        "HP5": dataChamp["HP5"],
-        "HP5+": dataChamp["HP5+"],
-        "MP": dataChamp["MP"],
-        "MP+": dataChamp["MP+"],
-        "MP5": dataChamp["MP5"],
-        "MP5+": dataChamp["MP5+"],
-        "AD": dataChamp["AD"],
-        "AD+": dataChamp["AD+"],
-        "AS": dataChamp["AS"],
-        "Ratio": dataChamp["Ratio"],
-        "AS+": dataChamp["AS+"],
-        "AR": dataChamp["AR"],
-        "AR+":dataChamp["AR+"],
-        "MR": dataChamp["MR"],
-        "MR+": dataChamp["MR+"],
-        "MS": dataChamp["MS"],
-        "Range": dataChamp["Range"],
-        "Q-DMG": dataChamp["Q-DMG"],
-        "W-DMG": dataChamp["W-DMG"],
-        "E-DMG": dataChamp["E-DMG"],
-        "R-DMG": 0,
-        "P-DMG": dataChamp["P-DMG"],
-        "Q-CD": dataChamp["Q-CD"],
-        "W-CD": dataChamp["W-CD"],
-        "E-CD": dataChamp["E-CD"],
-        "R-CD": dataChamp["R-CD"],
-        "P-CD": dataChamp["P-CD"],
-        "Melee?": dataChamp["Melee?"],
-        "img": dataChamp["img"],
-        "Burst Calc": dataChamp["Burst Calc"],
-        "Trade Calc": dataChamp["Trade Calc"],
-        "Energy": dataChamp["Energy"],
-        "No Mana": dataChamp["No Mana"]
-    }
-    setDataChamp(objData)
-    handleChange(
-      "SET_RIMG",
-      "../../images/spell/" + dataChamp["img"]["RSpell"] + ".png"
-    );
+    if (nameChamp == "Sylas") {
+      if (state.sylasUltimate != "-"){
+        setRDmgSylas(state.sylasUltimate)
+      }
+      else {
+        let objData = {
+          "HP": dataChamp["HP"],
+          "HP+": dataChamp["HP+"],
+          "HP5": dataChamp["HP5"],
+          "HP5+": dataChamp["HP5+"],
+          "MP": dataChamp["MP"],
+          "MP+": dataChamp["MP+"],
+          "MP5": dataChamp["MP5"],
+          "MP5+": dataChamp["MP5+"],
+          "AD": dataChamp["AD"],
+          "AD+": dataChamp["AD+"],
+          "AS": dataChamp["AS"],
+          "Ratio": dataChamp["Ratio"],
+          "AS+": dataChamp["AS+"],
+          "AR": dataChamp["AR"],
+          "AR+":dataChamp["AR+"],
+          "MR": dataChamp["MR"],
+          "MR+": dataChamp["MR+"],
+          "MS": dataChamp["MS"],
+          "Range": dataChamp["Range"],
+          "Q-DMG": dataChamp["Q-DMG"],
+          "W-DMG": dataChamp["W-DMG"],
+          "E-DMG": dataChamp["E-DMG"],
+          "R-DMG": 0,
+          "P-DMG": dataChamp["P-DMG"],
+          "Q-CD": dataChamp["Q-CD"],
+          "W-CD": dataChamp["W-CD"],
+          "E-CD": dataChamp["E-CD"],
+          "R-CD": dataChamp["R-CD"],
+          "P-CD": dataChamp["P-CD"],
+          "Melee?": dataChamp["Melee?"],
+          "img": dataChamp["img"],
+          "Burst Calc": dataChamp["Burst Calc"],
+          "Trade Calc": dataChamp["Trade Calc"],
+          "Energy": dataChamp["Energy"],
+          "No Mana": dataChamp["No Mana"]
+      }
+      setDataChamp(objData)
+      handleChange(
+        "SET_RIMG",
+        "../../images/spell/" + dataChamp["img"]["RSpell"] + ".png"
+      );
+      }
     }
   }, [state.sylasUltimate])
 
@@ -2833,6 +2846,7 @@ const Layout = ({ data, nameChamp }) => {
       "../../images/spell/" + result["img"]["RSpell"] + ".png"
     );
   }
+  
   const enemyDataPrep = async () => {
     /** ENEMY STATS */
     let enemy_obj = {
@@ -2935,6 +2949,7 @@ const Layout = ({ data, nameChamp }) => {
   }
 
   function modifyDMG(dt, key) {
+
     return typeof dt[key] === "string"
       ? getNumericFromString(dt[key]).toFixed(2)
       : dt[key].toFixed(2);
@@ -3360,6 +3375,7 @@ const Layout = ({ data, nameChamp }) => {
   };
 
   function getNumericFromString(stringDamage) {
+    console.log("Avatn", stringDamage)
     let str = removeExcelFunctions(stringDamage);
     let scope = {
       // VOIR LES PLAGES NOMMEES
@@ -3558,6 +3574,7 @@ const Layout = ({ data, nameChamp }) => {
       Steroid_Runes: state.steroidStats["Runes"],
       Steroid_W: state.steroidStats["W"],
     };
+    console.log("Result", str)
     if (typeof str === "string") {
       return evaluate(str, scope);
     }

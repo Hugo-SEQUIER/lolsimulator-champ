@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { DataContext } from "../../context/context";
 
@@ -174,6 +174,29 @@ export default function SkillsTable({ nameChamp }) {
     "Zoe",
     "Zyra",
   ];
+
+  const [qBonusPoint, setQBonusPoint] = useState(0)
+  const [wBonusPoint, setWBonusPoint] = useState(0)
+  const [eBonusPoint, setEBonusPoint] = useState(0)
+  const [rBonusPoint, setRBonusPoint] = useState(0)
+
+  useEffect(()=> {
+    if (nameChamp == "Aphelios" || nameChamp == "Jayce" || nameChamp == "Udyr"){
+      setQBonusPoint(1)
+      setWBonusPoint(1)
+      setEBonusPoint(1)
+      setRBonusPoint(-3)
+    }
+    if (nameChamp == "Udyr"){
+      setRBonusPoint(3)
+    }
+    if (nameChamp == "Yuumi"){
+      setQBonusPoint(1)
+      setWBonusPoint(-1)
+      setEBonusPoint(0)
+      setRBonusPoint(0)
+    }
+  },[])
   let options = [];
   for (let charac of character_name) {
     options.push(
@@ -217,7 +240,7 @@ export default function SkillsTable({ nameChamp }) {
                 <input
                   type="number"
                   value={state.qSkillPoint}
-                  max={5}
+                  max={5 + qBonusPoint}
                   min={0}
                   onChange={(e) => {
                     let value = e.target.value;
@@ -239,7 +262,7 @@ export default function SkillsTable({ nameChamp }) {
                 <input
                   type="number"
                   value={state.wSkillPoint}
-                  max={5}
+                  max={5 + wBonusPoint}
                   min={0}
                   onChange={(e) => {
                     let value = e.target.value;
@@ -261,7 +284,7 @@ export default function SkillsTable({ nameChamp }) {
                 <input
                   type="number"
                   value={state.eSkillPoint}
-                  max={5}
+                  max={5 + eBonusPoint}
                   min={0}
                   onChange={(e) => {
                     let value = e.target.value;
@@ -283,7 +306,7 @@ export default function SkillsTable({ nameChamp }) {
                 <input
                   type="number"
                   value={state.rSkillPoint}
-                  max={3}
+                  max={3 + rBonusPoint}
                   min={0}
                   onChange={(e) => {
                     let value = e.target.value;
