@@ -15,7 +15,7 @@ import { removeExcelFunctions } from "./excelTraitement";
 import { useRouter } from 'next/router'
 const Layout = ({ data, nameChamp }) => {
   const { state, dispatch } = useContext(DataContext);
-
+  const [dataChamp, setDataChamp] = useState(data)
   const router = useRouter()
   const { champion } = router.query
   console.log(router)
@@ -135,10 +135,10 @@ const Layout = ({ data, nameChamp }) => {
     state.itemSlot6,
     state.elixirSlot,
   ]);
-  console.log(data)
+  console.log(dataChamp)
   useEffect(() => {
-    if (data != undefined) {
-      if (data["Energy"] === 1) {
+    if (dataChamp != undefined) {
+      if (dataChamp["Energy"] === 1) {
         handleChange("SET_TEXTMANA", "Energy");
       } else {
         handleChange("SET_TEXTMANA", "Mana");
@@ -176,18 +176,18 @@ const Layout = ({ data, nameChamp }) => {
           "R-CD": 0,
           "P-CD": 0,
           "Melee?": 0,
-          "img": data["img"],
+          "img": dataChamp["img"],
           "Burst Calc": 0,
           "Trade Calc": 0,
           "Energy": 0,
           "No Mana": 0
       }
-      for (let key in data) {
-        sampleData[key] = data[key]
+      for (let key in dataChamp) {
+        sampleData[key] = dataChamp[key]
         if (key == "img" || key.includes("DMG") || key.includes("CD")) break;
-        if (typeof data[key] === "string") {
+        if (typeof dataChamp[key] === "string") {
           console.log(key);
-          sampleData[key] = getNumericFromString(data[key]);
+          sampleData[key] = getNumericFromString(dataChamp[key]);
         }
       }
       let champ_obj = {
@@ -244,7 +244,7 @@ const Layout = ({ data, nameChamp }) => {
       console.log(sampleData["Ratio"])
       handleChange("SET_DATACHAMP", champ_obj);
     }
-  }, [data, state.level, state.steroidStats, state.qSkillPoint, state.wSkillPoint, state.eSkillPoint, state.rSkillPoint]);
+  }, [dataChamp, state.level, state.steroidStats, state.qSkillPoint, state.wSkillPoint, state.eSkillPoint, state.rSkillPoint]);
 
   useEffect(() => {
     enemyDataPrep();
@@ -262,7 +262,7 @@ const Layout = ({ data, nameChamp }) => {
   ]);
 
   useEffect(() => {
-    if (data != undefined) {
+    if (dataChamp != undefined) {
       majStatsRune();
     }
   }, [
@@ -788,7 +788,7 @@ const Layout = ({ data, nameChamp }) => {
         : 0;
     bonusAS +=
       state.mainRune == "Lethal Tempo" && state.steroidStats["Runes"]
-        ? data["Melee?"] == 1
+        ? dataChamp["Melee?"] == 1
           ? state.level >= 15
             ? 0.9
             : 0.57 + 0.03 * state.level
@@ -845,7 +845,7 @@ const Layout = ({ data, nameChamp }) => {
     let bonusArmor =
       state.itemSlot1 == "Evenshroud" ? 5 * state.nbLegendary : 0;
     bonusArmor += state.hasHullbreaker
-      ? data["Melee?"] == 1
+      ? dataChamp["Melee?"] == 1
         ? state.level < 12
           ? 30
           : state.level < 13
@@ -1008,7 +1008,7 @@ const Layout = ({ data, nameChamp }) => {
     bonusMR += state.itemSlot1 == "Evenshroud" ? 5 * state.nbLegendary : 0;
     bonusMR += state.hasForceNature && state.steroidStats["Items"] ? 30 : 0;
     bonusMR += state.hasHullbreaker
-      ? data["Melee?"] == 1
+      ? dataChamp["Melee?"] == 1
         ? state.level < 12
           ? 30
           : state.level < 13
@@ -1152,7 +1152,7 @@ const Layout = ({ data, nameChamp }) => {
     bonusMS += state.hasEclipse ? 5 * state.nbLegendary : 0;
     bonusMS +=
       state.hasHearthbound && state.steroidStats["Items"]
-        ? data["Melee?"] == 1
+        ? dataChamp["Melee?"] == 1
           ? 20
           : 10
         : 0;
@@ -1667,7 +1667,7 @@ const Layout = ({ data, nameChamp }) => {
       state.hasChemtank && state.steroidStats["Items"] ? 1.4 : 1;
     obj["Move Speed"] *=
       state.hasShojin && state.steroidStats["Items"]
-        ? data["Melee?"] == 1
+        ? dataChamp["Melee?"] == 1
           ? 1.15
           : 1.1
         : 1;
@@ -1694,7 +1694,7 @@ const Layout = ({ data, nameChamp }) => {
         : 1;
     obj["Move Speed"] *=
       state.mainRune == "Pstate.hase Rush" && state.steroidStats["Runes"]
-        ? data["Melee?"] == 1
+        ? dataChamp["Melee?"] == 1
           ? state.level == 1
             ? 1.3
             : state.level == 2
@@ -2156,7 +2156,7 @@ const Layout = ({ data, nameChamp }) => {
     bonusAH += 7.5 * state.gameStats["Hextech"];
     bonusAH +=
       state.hasShojin && state.steroidStats["Items"]
-        ? data["Melee?"] == 1
+        ? dataChamp["Melee?"] == 1
           ? 8 + 0.08 * obj["Attack Damage"]
           : 6 + 0.06 * obj["Attack Damage"]
         : 0;
@@ -2175,7 +2175,7 @@ const Layout = ({ data, nameChamp }) => {
 
     // SpellVamp
     let bonusSV =
-      state.stackConqueror == 12 ? (data["Melee?"] == 1 ? 0.08 : 0.05) : 0;
+      state.stackConqueror == 12 ? (dataChamp["Melee?"] == 1 ? 0.08 : 0.05) : 0;
     bonusSV +=
       nameChamp.includes("Lee") &&
       nameChamp.includes("Sin") &&
@@ -2689,43 +2689,44 @@ const Layout = ({ data, nameChamp }) => {
   ]);
 
   useEffect(() => {
-    if (data != undefined) {
-      console.log(data);
+    if (dataChamp != undefined) {
+      console.log(dataChamp);
       handleChange(
         "SET_PIMG",
-        "../../images/passive/" + data["img"]["passive"] + ".png"
+        "../../images/passive/" + dataChamp["img"]["passive"] + ".png"
       );
       handleChange(
         "SET_QIMG",
-        "../../images/spell/" + data["img"]["QSpell"] + ".png"
+        "../../images/spell/" + dataChamp["img"]["QSpell"] + ".png"
       );
       handleChange(
         "SET_WIMG",
-        "../../images/spell/" + data["img"]["WSpell"] + ".png"
+        "../../images/spell/" + dataChamp["img"]["WSpell"] + ".png"
       );
       handleChange(
         "SET_EIMG",
-        "../../images/spell/" + data["img"]["ESpell"] + ".png"
+        "../../images/spell/" + dataChamp["img"]["ESpell"] + ".png"
       );
-      handleChange(
-        "SET_RIMG",
-        "../../images/spell/" + data["img"]["RSpell"] + ".png"
-      );
+      if (nameChamp == "Sylas" && state.sylasUltimate == "-")
+        handleChange(
+          "SET_RIMG",
+          "../../images/spell/" + dataChamp["img"]["RSpell"] + ".png"
+        );
 
-      handleChange("SET_PDMG", modifyDMG(data, "P-DMG"));
-      handleChange("SET_QDMG", modifyDMG(data, "Q-DMG"));
-      handleChange("SET_WDMG", modifyDMG(data, "W-DMG"));
-      handleChange("SET_EDMG", modifyDMG(data, "E-DMG"));
-      handleChange("SET_RDMG", modifyDMG(data, "R-DMG"));
+      handleChange("SET_PDMG", modifyDMG(dataChamp, "P-DMG"));
+      handleChange("SET_QDMG", modifyDMG(dataChamp, "Q-DMG"));
+      handleChange("SET_WDMG", modifyDMG(dataChamp, "W-DMG"));
+      handleChange("SET_EDMG", modifyDMG(dataChamp, "E-DMG"));
+      handleChange("SET_RDMG", modifyDMG(dataChamp, "R-DMG"));
 
-      handleChange("SET_PCD", modifyCD(data, "P-CD"));
-      handleChange("SET_QCD", modifyCD(data, "Q-CD"));
-      handleChange("SET_WCD", modifyCD(data, "W-CD"));
-      handleChange("SET_ECD", modifyCD(data, "E-CD"));
-      handleChange("SET_RCD", modifyCD(data, "R-CD"));
+      handleChange("SET_PCD", modifyCD(dataChamp, "P-CD"));
+      handleChange("SET_QCD", modifyCD(dataChamp, "Q-CD"));
+      handleChange("SET_WCD", modifyCD(dataChamp, "W-CD"));
+      handleChange("SET_ECD", modifyCD(dataChamp, "E-CD"));
+      handleChange("SET_RCD", modifyCD(dataChamp, "R-CD"));
     }
   }, [
-    data,
+    dataChamp,
     state.totalStats,
     state.qSkillPoint,
     state.eSkillPoint,
@@ -2733,6 +2734,115 @@ const Layout = ({ data, nameChamp }) => {
     state.rSkillPoint,
   ]);
 
+  useEffect(() => {
+    if (state.sylasUltimate != "-"){
+      console.log("HERRRE")
+      setRDmgSylas(state.sylasUltimate)
+    }
+    else {
+      let objData = {
+        "HP": dataChamp["HP"],
+        "HP+": dataChamp["HP+"],
+        "HP5": dataChamp["HP5"],
+        "HP5+": dataChamp["HP5+"],
+        "MP": dataChamp["MP"],
+        "MP+": dataChamp["MP+"],
+        "MP5": dataChamp["MP5"],
+        "MP5+": dataChamp["MP5+"],
+        "AD": dataChamp["AD"],
+        "AD+": dataChamp["AD+"],
+        "AS": dataChamp["AS"],
+        "Ratio": dataChamp["Ratio"],
+        "AS+": dataChamp["AS+"],
+        "AR": dataChamp["AR"],
+        "AR+":dataChamp["AR+"],
+        "MR": dataChamp["MR"],
+        "MR+": dataChamp["MR+"],
+        "MS": dataChamp["MS"],
+        "Range": dataChamp["Range"],
+        "Q-DMG": dataChamp["Q-DMG"],
+        "W-DMG": dataChamp["W-DMG"],
+        "E-DMG": dataChamp["E-DMG"],
+        "R-DMG": 0,
+        "P-DMG": dataChamp["P-DMG"],
+        "Q-CD": dataChamp["Q-CD"],
+        "W-CD": dataChamp["W-CD"],
+        "E-CD": dataChamp["E-CD"],
+        "R-CD": dataChamp["R-CD"],
+        "P-CD": dataChamp["P-CD"],
+        "Melee?": dataChamp["Melee?"],
+        "img": dataChamp["img"],
+        "Burst Calc": dataChamp["Burst Calc"],
+        "Trade Calc": dataChamp["Trade Calc"],
+        "Energy": dataChamp["Energy"],
+        "No Mana": dataChamp["No Mana"]
+    }
+    setDataChamp(objData)
+    handleChange(
+      "SET_RIMG",
+      "../../images/spell/" + dataChamp["img"]["RSpell"] + ".png"
+    );
+    }
+  }, [state.sylasUltimate])
+
+  const setRDmgSylas = async (nameUlt) => {
+    if (nameUlt.includes("Nunu")) {
+      nameUlt = "Nunu";
+    }
+    if (nameUlt.includes("Renata")) {
+      nameUlt = "Renata";
+    }
+    // Fetch the champion dataChamp
+    const res = await fetch(
+      `http://localhost:3000/data/champions/${nameUlt}.json`
+    );
+
+    const result = await res.json();
+
+    let objData = {
+        "HP": dataChamp["HP"],
+        "HP+": dataChamp["HP+"],
+        "HP5": dataChamp["HP5"],
+        "HP5+": dataChamp["HP5+"],
+        "MP": dataChamp["MP"],
+        "MP+": dataChamp["MP+"],
+        "MP5": dataChamp["MP5"],
+        "MP5+": dataChamp["MP5+"],
+        "AD": dataChamp["AD"],
+        "AD+": dataChamp["AD+"],
+        "AS": dataChamp["AS"],
+        "Ratio": dataChamp["Ratio"],
+        "AS+": dataChamp["AS+"],
+        "AR": dataChamp["AR"],
+        "AR+":dataChamp["AR+"],
+        "MR": dataChamp["MR"],
+        "MR+": dataChamp["MR+"],
+        "MS": dataChamp["MS"],
+        "Range": dataChamp["Range"],
+        "Q-DMG": dataChamp["Q-DMG"],
+        "W-DMG": dataChamp["W-DMG"],
+        "E-DMG": dataChamp["E-DMG"],
+        "R-DMG": result["R-DMG"],
+        "P-DMG": dataChamp["P-DMG"],
+        "Q-CD": dataChamp["Q-CD"],
+        "W-CD": dataChamp["W-CD"],
+        "E-CD": dataChamp["E-CD"],
+        "R-CD": dataChamp["R-CD"],
+        "P-CD": dataChamp["P-CD"],
+        "Melee?": dataChamp["Melee?"],
+        "img": dataChamp["img"],
+        "Burst Calc": dataChamp["Burst Calc"],
+        "Trade Calc": dataChamp["Trade Calc"],
+        "Energy": dataChamp["Energy"],
+        "No Mana": dataChamp["No Mana"]
+    }
+    setDataChamp(objData)
+    console.log("../../images/spell/" + result["img"]["RSpell"] + ".png")
+    handleChange(
+      "SET_RIMG",
+      "../../images/spell/" + result["img"]["RSpell"] + ".png"
+    );
+  }
   const enemyDataPrep = async () => {
     /** ENEMY STATS */
     let enemy_obj = {
@@ -3266,7 +3376,7 @@ const Layout = ({ data, nameChamp }) => {
       // VOIR LES PLAGES NOMMEES
 
       Sc_Lin: (state.level - 1) / 17,
-      data: data,
+      dataChamp: dataChamp,
       runeStats: state.runeStats,
       basicStatsChampion: state.basicStatsChampion,
       additionnalStats: state.additionnalStats,
@@ -3390,7 +3500,7 @@ const Layout = ({ data, nameChamp }) => {
       P_R: state.rSkillPoint,
       P_W: state.wSkillPoint,
 
-      P_DMG : data["P-DMG"],
+      P_DMG : dataChamp["P-DMG"],
 
       ForceBit: state.runeStats["ForceBit"],
       R_Adap: state.runeStats["Adaptive"],
@@ -3488,7 +3598,7 @@ const Layout = ({ data, nameChamp }) => {
               borderRadius: "20px",
             }}
           ></p>
-          {data != undefined && <h1>{nameChamp.toUpperCase()}</h1>}
+          {dataChamp != undefined && <h1>{nameChamp.toUpperCase()}</h1>}
           <p
             style={{
               width: "1px",
@@ -3510,10 +3620,10 @@ const Layout = ({ data, nameChamp }) => {
           </div>
         </div>
         <div className="character-statistiques">
-          {data != undefined && (
+          {dataChamp != undefined && (
             <>
               <StatsTable></StatsTable>
-              <SkillsTable></SkillsTable>
+              <SkillsTable nameChamp={nameChamp}></SkillsTable>
               <RunesTables />
               <ItemsStats></ItemsStats>
               <BonusStats nameChamp={nameChamp}></BonusStats>
