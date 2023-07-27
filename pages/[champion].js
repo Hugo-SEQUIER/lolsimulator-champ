@@ -26,12 +26,19 @@ export async function getServerSideProps({ params }) {
   if (champion.includes("Renata")) {
     champion = "Renata";
   }
+  let res
   // Fetch the champion data
-  const res = await fetch(
-    `http://localhost:3000/data/champions/${champion}.json`
-  );
+  if (champion != NaN) {
+    res = await fetch(
+      `http://localhost:3000/data/champions/${champion}.json`
+    );
+  }
+    
   //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
-
+  if (!res.ok) {
+    console.error(`Failed to fetch data: ${res.status} ${res.statusText}`);
+    return { props: { data: null } };
+  }
   const championDetails = await res.json();
 
   return {

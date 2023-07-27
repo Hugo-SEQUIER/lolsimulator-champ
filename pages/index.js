@@ -26,6 +26,7 @@ export default function Accueil({ character_name }) {
               <img
                 src="../images/logo.PNG"
                 alt="logo S.GG" 
+                width={320}
               />
               <p style={{width : '1px', height : '100%', backgroundColor : '#f9f8f8', borderRadius : '20px'}}></p>
               <div>
@@ -37,6 +38,11 @@ export default function Accueil({ character_name }) {
           <div>
             <img src="/images/loupe.png" alt="search" />
             <input
+            style={{
+              color: "inherit !important",
+              height: "unset !important"
+            }}
+              className='inputSearch'
               type="text"
               placeholder="Search a champion"
               spellCheck="false"

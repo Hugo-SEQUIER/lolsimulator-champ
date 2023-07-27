@@ -226,37 +226,38 @@ export default function SkillsTable({ nameChamp }) {
       </option>
     );
   }
-
+ 
   useEffect(() => {
     let mainWeapon = state.apheliosStats["Main Weapon"]
     if (mainWeapon != "-"){
       if (mainWeapon == 'Calibrum, the Sniper Rifle'){
-        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
-        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Cali.jpg")
+        handleLevelSpell("SET_EIMG", "../../images/spell/Calibrum.jpg")
       }
-      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
-        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
-        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      if (mainWeapon == 'Severum, the Scythe Pistol'){
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Sever.jpg")
+        handleLevelSpell("SET_EIMG", "../../images/spell/Severum.jpg")
       }
-      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
-        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
-        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      if (mainWeapon == 'Gravitum, the Gravity Cannon'){
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Grav.jpg")
+        handleLevelSpell("SET_EIMG", "../../images/spell/Gravitum.jpg")
       }
-      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
-        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
-        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      if (mainWeapon == 'Infernum, the Flamethrower'){
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Infer.jpg")
+        handleLevelSpell("SET_EIMG", "../../images/spell/Infernum.jpg")
       }
-      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
-        handleLevelSpell("SET_QIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/a/a2/Aphelios_Moonshot.png/revision/latest?cb=20191213190044")
-        handleLevelSpell("SET_EIMG", "https://static.wikia.nocookie.net/leagueoflegends/images/0/00/Aphelios_Calibrum.png/revision/latest/scale-to-width-down/64?cb=20191213185839")
+      if (mainWeapon == 'Crescendum, the Chakram'){
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Cres.jpg")
+        handleLevelSpell("SET_EIMG", "../../images/spell/Crescendum.jpg")
       }
     }
   },[state.apheliosStats])
   let optionsAphelios = [];
+
   for (let weapon of apheliosWeapon) {
     optionsAphelios.push(
       <option value={weapon} key={weapon}>
-        {weapon}
+        {weapon.split(",")[0]}
       </option>
     );
   }
@@ -289,7 +290,7 @@ export default function SkillsTable({ nameChamp }) {
             </tr>
             <tr>
               <td>
-                <img alt={"Q img"} src={state.qImg} />
+                <img alt={"Q img"} src={state.qImg} width={64} height={64} />
               </td>
               <td>Q</td>
               <td>
@@ -331,28 +332,51 @@ export default function SkillsTable({ nameChamp }) {
               <td>{state.wCD}</td>
               <td>{Math.floor(state.wDMG / state.wCD)}</td>
             </tr>
-            <tr>
+            {nameChamp == "Aphelios" && (
+              <>
+              <tr>
               <td>
-                <img alt={"E img"} src={state.eImg} />
+                <img alt={"E img"} src={state.eImg} width={64} height={64}/>
               </td>
-              <td>E</td>
-              <td>
-                <input
-                  type="number"
-                  value={state.eSkillPoint}
-                  max={5 + eBonusPoint}
-                  min={0}
-                  onChange={(e) => {
-                    let value = e.target.value;
-                    value = value != "" ? parseInt(value) : 0;
-                    handleLevelSpell("SET_ESKILLPOINT", value);
-                  }}
-                />
-              </td>
+              <td>Weapon</td>
+              <td >
+                  <select value={state.apheliosStats["Main Weapon"]} onChange={(e) => handleAphelios("Main Weapon" ,e.target.value)}>
+                    {optionsAphelios}
+                  </select>
+                </td>
               <td>{state.eDMG}</td>
               <td>{state.eCD}</td>
               <td>{Math.floor(state.eDMG / state.eCD)}</td>
             </tr>
+              </>
+            )}
+            {nameChamp != "Aphelios" && (
+              <>
+                <tr>
+                <td>
+                  <img alt={"E img"} src={state.eImg} />
+                </td>
+                <td>E</td>
+                <td>
+                  <input
+                    type="number"
+                    value={state.eSkillPoint}
+                    max={5 + eBonusPoint}
+                    min={0}
+                    onChange={(e) => {
+                      let value = e.target.value;
+                      value = value != "" ? parseInt(value) : 0;
+                      handleLevelSpell("SET_ESKILLPOINT", value);
+                    }}
+                  />
+                </td>
+                <td>{state.eDMG}</td>
+                <td>{state.eCD}</td>
+                <td>{Math.floor(state.eDMG / state.eCD)}</td>
+              </tr>
+              </>
+            )}
+            
             <tr>
               <td>
                 <img alt={"R img"} src={state.rImg} />
@@ -390,18 +414,8 @@ export default function SkillsTable({ nameChamp }) {
               </tr>
             </tbody>
           )}
-          {nameChamp == "Aphelios" && (
+          { /**nameChamp == "Aphelios" && (
             <tbody>
-              <tr>
-                <td>
-                  Aphelios Weapon
-                </td>
-                <td colSpan={5}>
-                  <select value={state.apheliosStats["Main Weapon"]} onChange={(e) => handleAphelios("Main Weapon" ,e.target.value)}>
-                    {optionsAphelios}
-                  </select>
-                </td>
-              </tr>
               <tr>
                 <td>
                 Crescend Stacks
@@ -421,7 +435,7 @@ export default function SkillsTable({ nameChamp }) {
                 </td>
               </tr>
             </tbody>
-          )}
+                  ) **/}
         </table>
       </div>
     </div>

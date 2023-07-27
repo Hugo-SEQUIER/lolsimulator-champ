@@ -8,10 +8,14 @@ body {
     font-family: "Beaufort for LOL", serif;
 }
 
+.inputSearch {
+    color: inherit !important;
+    height: unset !important;
+}
+
 h1,
 h2,
 h3 {
-    font-family: "Beaufort for LOL",serif;
     font-weight: 700;
     color: #f0eff4;
 }
@@ -36,13 +40,29 @@ button:hover {
 }
 /* Footer */
 footer {
-    background-color: #ad9e9d;
-    color: #f0eff4;
+    color: #f0eff4 !important;
     padding: 20px 0;
+    border-top: solid 1px #f0eff4;
+    font-family: 'Montserrat', sans-serif
 }
-
+footer, a {
+    text-decoration: none;
+}
 footer button {
     color: black !important;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link a {
+    color: #f0eff4 !important;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
 }
 
 .footer-container {
@@ -51,9 +71,22 @@ footer button {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 5%;
 }
 
 .footer-container p {
     font-size: 14px;
     margin: 0;
 }
+
+.about {
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about a {
+    text-decoration: underline;
+    color: #f0eff4;
+}
+
+.about a {}

@@ -181,11 +181,6 @@ const Layout = ({ data, nameChamp }) => {
           "No Mana": 0
       }
       for (let key in dataChamp) {
-        console.log(key)
-        if (key == "R-DMG"){
-          console.log("R-DMG", dataChamp[key])
-          console.log("R-type", typeof dataChamp[key])
-        }
         sampleData[key] = dataChamp[key]
         if (key == "img" || key.includes("DMG") || key.includes("CD")) break;
         if (typeof dataChamp[key] === "string") {
@@ -1946,15 +1941,10 @@ const Layout = ({ data, nameChamp }) => {
     multiBonusAP *= state.hasWardStone ? 1.2 : 1;
     multiBonusAP *= nameChamp == "Syndra" && state.steroidStats["P"] ? 1.15 : 1;
     multiBonusAP *= 1 + 0.05 * state.gameStats["Infernal"];
-    console.log("nbLegendary", state.nbLegendary)
-    console.log("BonusAP" , bonusAP)
-    console.log("itemStats" , state.itemStats)
-    console.log("multiBonusAP" , multiBonusAP)
     obj["Ability Power"] =
       (bonusAP + state.itemStats["AP"] + (state.runeStats["ForceBit"] == 0
         ? state.runeStats["Adaptive"]
         : 0)) * multiBonusAP;
-    console.log("objAP", obj["Ability Power"])
     // Range
     obj["Range"] =
       state.mainRune == "Lethal Tempo" && state.steroidStats["Runes"] ? 50 : 0;
@@ -2693,6 +2683,12 @@ const Layout = ({ data, nameChamp }) => {
         "SET_PIMG",
         "../../images/passive/" + dataChamp["img"]["passive"] + ".png"
       );
+      if (nameChamp == "Aphelios" && state.apheliosStats["Main Weapon"] == "-")
+      handleChange(
+        "SET_QIMG",
+        "../../images/spell/" + dataChamp["img"]["QSpell"] + ".png"
+      );
+      if (nameChamp != "Aphelios")
       handleChange(
         "SET_QIMG",
         "../../images/spell/" + dataChamp["img"]["QSpell"] + ".png"
@@ -2701,10 +2697,16 @@ const Layout = ({ data, nameChamp }) => {
         "SET_WIMG",
         "../../images/spell/" + dataChamp["img"]["WSpell"] + ".png"
       );
-      handleChange(
-        "SET_EIMG",
-        "../../images/spell/" + dataChamp["img"]["ESpell"] + ".png"
-      );
+      if (nameChamp == "Aphelios" && state.apheliosStats["Main Weapon"] == "-")
+        handleChange(
+          "SET_EIMG",
+          "../../images/spell/" + dataChamp["img"]["QSpell"] + ".png"
+        );
+      if (nameChamp != "Aphelios")
+        handleChange(
+          "SET_EIMG",
+          "../../images/spell/" + dataChamp["img"]["ESpell"] + ".png"
+        );
       if (nameChamp == "Sylas" && state.sylasUltimate == "-")
         handleChange(
           "SET_RIMG",
@@ -2718,19 +2720,49 @@ const Layout = ({ data, nameChamp }) => {
       }
 
       handleChange("SET_PDMG", modifyDMG(dataChamp, "P-DMG"));
-      handleChange("SET_QDMG", modifyDMG(dataChamp, "Q-DMG"));
+      if (nameChamp != "Aphelios")
+        handleChange("SET_QDMG", modifyDMG(dataChamp, "Q-DMG"));
       handleChange("SET_WDMG", modifyDMG(dataChamp, "W-DMG"));
       handleChange("SET_EDMG", modifyDMG(dataChamp, "E-DMG"));
       handleChange("SET_RDMG", modifyDMG(dataChamp, "R-DMG"));
 
       handleChange("SET_PCD", modifyCD(dataChamp, "P-CD"));
-      handleChange("SET_QCD", modifyCD(dataChamp, "Q-CD"));
+      if (nameChamp != "Aphelios")
+       handleChange("SET_QCD", modifyCD(dataChamp, "Q-CD"));
       handleChange("SET_WCD", modifyCD(dataChamp, "W-CD"));
       handleChange("SET_ECD", modifyCD(dataChamp, "E-CD"));
       handleChange("SET_RCD", modifyCD(dataChamp, "R-CD"));
+
+      if (nameChamp == "Aphelios") {
+        if (state.apheliosStats["Main Weapon"] == "-"){
+          handleChange("SET_QDMG", 0);
+          handleChange("SET_QCD", 0);
+        }
+        else if (state.apheliosStats["Main Weapon"].includes("Cali")){
+          handleChange("SET_QDMG", modifyDMG(dataChamp, "Cali-DMG"));
+          handleChange("SET_QCD", modifyCD(dataChamp, "Cali-CD"));
+        }
+        else if (state.apheliosStats["Main Weapon"].includes("Seve")){
+          handleChange("SET_QDMG", modifyDMG(dataChamp, "Seve-DMG"));
+          handleChange("SET_QCD", modifyCD(dataChamp, "Seve-CD"));
+        }
+        else if (state.apheliosStats["Main Weapon"].includes("Grav")){
+          handleChange("SET_QDMG", modifyDMG(dataChamp, "Grav-DMG"));
+          handleChange("SET_QCD", modifyCD(dataChamp, "Grav-CD"));
+        }
+        else if (state.apheliosStats["Main Weapon"].includes("Infe")){
+          handleChange("SET_QDMG", modifyDMG(dataChamp, "Infe-DMG"));
+          handleChange("SET_QCD", modifyCD(dataChamp, "Infe-CD"));
+        }
+        else if (state.apheliosStats["Main Weapon"].includes("Cres")){
+          handleChange("SET_QDMG", modifyDMG(dataChamp, "Cres-DMG"));
+          handleChange("SET_QCD", modifyCD(dataChamp, "Cres-CD"));
+        }
+      }
     }
   }, [
     dataChamp,
+    state.apheliosStats,
     state.totalStats,
     state.qSkillPoint,
     state.eSkillPoint,
@@ -3055,7 +3087,6 @@ const Layout = ({ data, nameChamp }) => {
     if (state.elixirSlot != "-") {
       obj = await addItemsStats(obj, state.elixirSlot, "SET_ITEM_IMG7");
     }
-    console.log("NBLEGENDARY",nb)
     handleChange("SET_ITEM_STATS", obj);
     handleChange("SET_NBLEGENDARY", nb);
 
@@ -3376,7 +3407,6 @@ const Layout = ({ data, nameChamp }) => {
   };
 
   function getNumericFromString(stringDamage) {
-    console.log("Avatn", stringDamage)
     let str = removeExcelFunctions(stringDamage);
     let scope = {
       // VOIR LES PLAGES NOMMEES
@@ -3575,7 +3605,6 @@ const Layout = ({ data, nameChamp }) => {
       Steroid_Runes: state.steroidStats["Runes"],
       Steroid_W: state.steroidStats["W"],
     };
-    console.log("Result", str)
     if (typeof str === "string") {
       return evaluate(str, scope);
     }
@@ -3611,7 +3640,7 @@ const Layout = ({ data, nameChamp }) => {
             }}
           ></p>
           <div>
-            <p>Level</p>
+            <p style={{fontSize : "x-large"}} >Level</p>
             <select
               value={state.level}
               onChange={(e) =>

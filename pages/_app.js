@@ -5,6 +5,7 @@ import '../styles/details.css'
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -25,7 +26,11 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <footer>
         <div className="footer-container">
-          <p>&copy; 2023 Placeholder</p>
+          <p>&copy; 2023 Hugo SEQUIER. All rights reserved.</p>
+          <div className="footer-link">
+            <Link href={"about"}>About</Link>
+            <Link href={"privacy"}>Privacy Policy</Link>
+          </div>
         </div>
       </footer>
     </>
