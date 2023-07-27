@@ -12,6 +12,21 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+@media (max-width: 600px) {
+    .banniere {
+        flex-direction: column !important;
+    }
+    .banniere>div {
+        width: 100%;
+    }
+    .character-banniere {
+        flex-direction: column !important;
+    }
+    .character-banniere > p {
+        display: none;
+    }
+}
+
 .banniere > div > h3 {
     text-align: justify;
 }
