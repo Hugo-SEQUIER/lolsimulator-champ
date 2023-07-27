@@ -17,7 +17,7 @@
         flex-direction: column !important;
     }
     .banniere>div {
-        width: 100%;
+        width: 100% !important;
     }
     .character-banniere {
         flex-direction: column !important;
