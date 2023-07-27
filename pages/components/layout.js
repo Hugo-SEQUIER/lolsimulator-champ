@@ -11,7 +11,7 @@ import EnemyStats from "./enemyStats";
 import GameStats from "./gameStats";
 import RunesTables from "./runesStats";
 import { evaluate } from "mathjs";
-import { removeExcelFunctions } from "./excelTraitement";
+import { removeExcelFunctions } from "../../utils/excelTraitement";
 import { useRouter } from "next/router";
 const Layout = ({ data, nameChamp }) => {
   const { state, dispatch } = useContext(DataContext);
