@@ -3019,7 +3019,7 @@ const Layout = ({ data, nameChamp }) => {
     }
     // Fetch the champion dataChamp
     const res = await fetch(
-      `http://localhost:3000/data/champions/${nameUlt}.json`
+      `https://lolsimulator-champ.vercel.app/data/champions/${nameUlt}.json`
     );
 
     const result = await res.json();
@@ -3086,7 +3086,7 @@ const Layout = ({ data, nameChamp }) => {
 
     if (enemy_obj["Name"] != "-") {
       const res = await fetch(
-        `http://localhost:3000/data/champions/${enemy_obj["Name"]}.json`
+        `https://lolsimulator-champ.vercel.app/data/champions/${enemy_obj["Name"]}.json`
       );
       const championDetails = await res.json();
 
@@ -3488,7 +3488,7 @@ const Layout = ({ data, nameChamp }) => {
 
   const addItemsStats = async (obj, itemName, modify) => {
     const res = await fetch(
-      `http://localhost:3000/data/items/${itemName}.json`
+      `https://lolsimulator-champ.vercel.app/data/items/${itemName}.json`
     );
     const itemDetails = await res.json();
     for (let key in itemDetails) {

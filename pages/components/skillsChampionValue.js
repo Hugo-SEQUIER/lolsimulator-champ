@@ -476,7 +476,9 @@ export async function getServerSideProps({ params }) {
   let res;
   // Fetch the champion data
   if (champion != NaN) {
-    res = await fetch(`http://localhost:3000/data/champions/${champion}.json`);
+    res = await fetch(
+      `https://lolsimulator-champ.vercel.app/data/champions/${champion}.json`
+    );
   }
 
   //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
