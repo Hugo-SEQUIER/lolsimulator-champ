@@ -4,7 +4,6 @@ import { initialState, reducer } from "../reducer/reducer";
 import { DataContext } from "../context/context";
 import Layout from "./components/layout";
 export default function ChampionPage({ championDetails, champion }) {
-  
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
@@ -26,14 +25,12 @@ export async function getServerSideProps({ params }) {
   if (champion.includes("Renata")) {
     champion = "Renata";
   }
-  let res
+  let res;
   // Fetch the champion data
   if (champion != NaN) {
-    res = await fetch(
-      `http://localhost:3000/data/champions/${champion}.json`
-    );
+    res = await fetch(`http://localhost:3000/data/champions/${champion}.json`);
   }
-    
+
   //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
   if (!res.ok) {
     console.error(`Failed to fetch data: ${res.status} ${res.statusText}`);

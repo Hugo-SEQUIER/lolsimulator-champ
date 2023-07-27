@@ -14,8 +14,8 @@ export default function SkillsTable({ nameChamp }) {
       "Crescend Stacks": state.apheliosStats["Crescend Stacks"],
       "Main Weapon": state.apheliosStats["Main Weapon"],
       "Sub Weapon": state.apheliosStats["Sub Weapon"],
-    }
-    obj[key] = value
+    };
+    obj[key] = value;
     dispatch({ type: "SET_APHELIOSSTATS", payload: obj });
   };
 
@@ -192,31 +192,34 @@ export default function SkillsTable({ nameChamp }) {
     "Gravitum, the Gravity Cannon",
     "Infernum, the Flamethrower",
     "Crescendum, the Chakram",
+  ];
 
-  ]
+  const [qBonusPoint, setQBonusPoint] = useState(0);
+  const [wBonusPoint, setWBonusPoint] = useState(0);
+  const [eBonusPoint, setEBonusPoint] = useState(0);
+  const [rBonusPoint, setRBonusPoint] = useState(0);
 
-  const [qBonusPoint, setQBonusPoint] = useState(0)
-  const [wBonusPoint, setWBonusPoint] = useState(0)
-  const [eBonusPoint, setEBonusPoint] = useState(0)
-  const [rBonusPoint, setRBonusPoint] = useState(0)
-
-  useEffect(()=> {
-    if (nameChamp == "Aphelios" || nameChamp == "Jayce" || nameChamp == "Udyr"){
-      setQBonusPoint(1)
-      setWBonusPoint(1)
-      setEBonusPoint(1)
-      setRBonusPoint(-3)
+  useEffect(() => {
+    if (
+      nameChamp == "Aphelios" ||
+      nameChamp == "Jayce" ||
+      nameChamp == "Udyr"
+    ) {
+      setQBonusPoint(1);
+      setWBonusPoint(1);
+      setEBonusPoint(1);
+      setRBonusPoint(-3);
     }
-    if (nameChamp == "Udyr"){
-      setRBonusPoint(3)
+    if (nameChamp == "Udyr") {
+      setRBonusPoint(3);
     }
-    if (nameChamp == "Yuumi"){
-      setQBonusPoint(1)
-      setWBonusPoint(-1)
-      setEBonusPoint(0)
-      setRBonusPoint(0)
+    if (nameChamp == "Yuumi") {
+      setQBonusPoint(1);
+      setWBonusPoint(-1);
+      setEBonusPoint(0);
+      setRBonusPoint(0);
     }
-  },[])
+  }, []);
 
   let options = [];
   for (let charac of character_name) {
@@ -226,32 +229,32 @@ export default function SkillsTable({ nameChamp }) {
       </option>
     );
   }
- 
+
   useEffect(() => {
-    let mainWeapon = state.apheliosStats["Main Weapon"]
-    if (mainWeapon != "-"){
-      if (mainWeapon == 'Calibrum, the Sniper Rifle'){
-        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Cali.jpg")
-        handleLevelSpell("SET_EIMG", "../../images/spell/Calibrum.jpg")
+    let mainWeapon = state.apheliosStats["Main Weapon"];
+    if (mainWeapon != "-") {
+      if (mainWeapon == "Calibrum, the Sniper Rifle") {
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Cali.jpg");
+        handleLevelSpell("SET_EIMG", "../../images/spell/Calibrum.jpg");
       }
-      if (mainWeapon == 'Severum, the Scythe Pistol'){
-        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Sever.jpg")
-        handleLevelSpell("SET_EIMG", "../../images/spell/Severum.jpg")
+      if (mainWeapon == "Severum, the Scythe Pistol") {
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Sever.jpg");
+        handleLevelSpell("SET_EIMG", "../../images/spell/Severum.jpg");
       }
-      if (mainWeapon == 'Gravitum, the Gravity Cannon'){
-        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Grav.jpg")
-        handleLevelSpell("SET_EIMG", "../../images/spell/Gravitum.jpg")
+      if (mainWeapon == "Gravitum, the Gravity Cannon") {
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Grav.jpg");
+        handleLevelSpell("SET_EIMG", "../../images/spell/Gravitum.jpg");
       }
-      if (mainWeapon == 'Infernum, the Flamethrower'){
-        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Infer.jpg")
-        handleLevelSpell("SET_EIMG", "../../images/spell/Infernum.jpg")
+      if (mainWeapon == "Infernum, the Flamethrower") {
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Infer.jpg");
+        handleLevelSpell("SET_EIMG", "../../images/spell/Infernum.jpg");
       }
-      if (mainWeapon == 'Crescendum, the Chakram'){
-        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Cres.jpg")
-        handleLevelSpell("SET_EIMG", "../../images/spell/Crescendum.jpg")
+      if (mainWeapon == "Crescendum, the Chakram") {
+        handleLevelSpell("SET_QIMG", "../../images/spell/Aphelios_Cres.jpg");
+        handleLevelSpell("SET_EIMG", "../../images/spell/Crescendum.jpg");
       }
     }
-  },[state.apheliosStats])
+  }, [state.apheliosStats]);
   let optionsAphelios = [];
 
   for (let weapon of apheliosWeapon) {
@@ -334,49 +337,59 @@ export default function SkillsTable({ nameChamp }) {
             </tr>
             {nameChamp == "Aphelios" && (
               <>
-              <tr>
-              <td>
-                <img alt={"E img"} src={state.eImg} width={64} height={64}/>
-              </td>
-              <td>Weapon</td>
-              <td >
-                  <select value={state.apheliosStats["Main Weapon"]} onChange={(e) => handleAphelios("Main Weapon" ,e.target.value)}>
-                    {optionsAphelios}
-                  </select>
-                </td>
-              <td>{state.eDMG}</td>
-              <td>{state.eCD}</td>
-              <td>{Math.floor(state.eDMG / state.eCD)}</td>
-            </tr>
+                <tr>
+                  <td>
+                    <img
+                      alt={"E img"}
+                      src={state.eImg}
+                      width={64}
+                      height={64}
+                    />
+                  </td>
+                  <td>Weapon</td>
+                  <td>
+                    <select
+                      value={state.apheliosStats["Main Weapon"]}
+                      onChange={(e) =>
+                        handleAphelios("Main Weapon", e.target.value)
+                      }
+                    >
+                      {optionsAphelios}
+                    </select>
+                  </td>
+                  <td>{state.eDMG}</td>
+                  <td>{state.eCD}</td>
+                  <td>{Math.floor(state.eDMG / state.eCD)}</td>
+                </tr>
               </>
             )}
             {nameChamp != "Aphelios" && (
               <>
                 <tr>
-                <td>
-                  <img alt={"E img"} src={state.eImg} />
-                </td>
-                <td>E</td>
-                <td>
-                  <input
-                    type="number"
-                    value={state.eSkillPoint}
-                    max={5 + eBonusPoint}
-                    min={0}
-                    onChange={(e) => {
-                      let value = e.target.value;
-                      value = value != "" ? parseInt(value) : 0;
-                      handleLevelSpell("SET_ESKILLPOINT", value);
-                    }}
-                  />
-                </td>
-                <td>{state.eDMG}</td>
-                <td>{state.eCD}</td>
-                <td>{Math.floor(state.eDMG / state.eCD)}</td>
-              </tr>
+                  <td>
+                    <img alt={"E img"} src={state.eImg} />
+                  </td>
+                  <td>E</td>
+                  <td>
+                    <input
+                      type="number"
+                      value={state.eSkillPoint}
+                      max={5 + eBonusPoint}
+                      min={0}
+                      onChange={(e) => {
+                        let value = e.target.value;
+                        value = value != "" ? parseInt(value) : 0;
+                        handleLevelSpell("SET_ESKILLPOINT", value);
+                      }}
+                    />
+                  </td>
+                  <td>{state.eDMG}</td>
+                  <td>{state.eCD}</td>
+                  <td>{Math.floor(state.eDMG / state.eCD)}</td>
+                </tr>
               </>
             )}
-            
+
             <tr>
               <td>
                 <img alt={"R img"} src={state.rImg} />
@@ -403,18 +416,21 @@ export default function SkillsTable({ nameChamp }) {
           {nameChamp == "Sylas" && (
             <tbody>
               <tr>
-                <td>
-                  Sylas Ultimate
-                </td>
+                <td>Sylas Ultimate</td>
                 <td colSpan={5}>
-                  <select value={state.sylasUltimate} onChange={(e) => handleLevelSpell("SET_SYLASULTIMATE", e.target.value)}>
+                  <select
+                    value={state.sylasUltimate}
+                    onChange={(e) =>
+                      handleLevelSpell("SET_SYLASULTIMATE", e.target.value)
+                    }
+                  >
                     {options}
                   </select>
                 </td>
               </tr>
             </tbody>
           )}
-          { /**nameChamp == "Aphelios" && (
+          {/**nameChamp == "Aphelios" && (
             <tbody>
               <tr>
                 <td>
@@ -450,12 +466,17 @@ export async function getServerSideProps({ params }) {
   if (champion.includes("Renata")) {
     champion = "Renata";
   }
+  let res;
   // Fetch the champion data
-  const res = await fetch(
-    `http://localhost:3000/data/champions/${champion}.json`
-  );
-  //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
+  if (champion != NaN) {
+    res = await fetch(`http://localhost:3000/data/champions/${champion}.json`);
+  }
 
+  //const res = await fetch(`https://raw.communitydragon.org/13.11/game/data/characters/${champion.toLowerCase()}/${champion.toLowerCase()}.bin.json`);
+  if (!res.ok) {
+    console.error(`Failed to fetch data: ${res.status} ${res.statusText}`);
+    return { props: { data: null } };
+  }
   const championDetails = await res.json();
 
   return {
