@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-
+import { Analytics } from "@vercel/analytics/react";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
       <footer>
         <div className="footer-container">
           <p>&copy; 2023 Hugo SEQUIER. All rights reserved.</p>

@@ -3,6 +3,7 @@ import React, { useEffect, useState, useReducer } from "react";
 import { initialState, reducer } from "../reducer/reducer";
 import { DataContext } from "../context/context";
 import Layout from "./components/layout";
+import { Analytics } from "@vercel/analytics/react";
 export default function ChampionPage({ championDetails, champion }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -11,6 +12,7 @@ export default function ChampionPage({ championDetails, champion }) {
       {championDetails != undefined && (
         <DataContext.Provider value={{ state, dispatch }}>
           <Layout data={championDetails} nameChamp={champion} />
+          <Analytics />
         </DataContext.Provider>
       )}
     </>
