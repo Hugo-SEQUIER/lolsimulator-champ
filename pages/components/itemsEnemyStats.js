@@ -3,7 +3,14 @@ import { useContext } from "react";
 import { DataContext } from "../../context/context";
 
 export default function ItemsEnemyStats() {
-  const { state, dispatch } = useContext(DataContext);
+  const context = useContext(DataContext);
+
+  if (!context) {
+    // Afficher un spinner de chargement ou autre élément de transition ici
+    return <div>Loading...</div>;
+  }
+
+  const { state, dispatch } = context;
 
   const handleItems = (typeItems, value) => {
     dispatch({ type: typeItems, payload: value });

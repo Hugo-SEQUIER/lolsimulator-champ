@@ -14,7 +14,14 @@ import { evaluate } from "mathjs";
 import { removeExcelFunctions } from "../../utils/excelTraitement";
 import { useRouter } from "next/router";
 const Layout = ({ data, nameChamp }) => {
-  const { state, dispatch } = useContext(DataContext);
+  const context = useContext(DataContext);
+
+  if (!context) {
+    // Afficher un spinner de chargement ou autre élément de transition ici
+    return <div>Loading...</div>;
+  }
+
+  const { state, dispatch } = context;
   const [dataChamp, setDataChamp] = useState(data);
   const router = useRouter();
   const { champion } = router.query;

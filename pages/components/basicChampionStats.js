@@ -3,7 +3,14 @@ import { useContext } from "react";
 import { DataContext } from "../../context/context";
 
 function StatsTable() {
-  const { state, dispatch } = useContext(DataContext);
+  const context = useContext(DataContext);
+
+  if (!context) {
+    // Afficher un spinner de chargement ou autre élément de transition ici
+    return <div>Loading...</div>;
+  }
+
+  const { state, dispatch } = context;
 
   const [firstHalf, setFirstHalf] = useState([]);
   const [secondHalf, setSecondHalf] = useState([]);
