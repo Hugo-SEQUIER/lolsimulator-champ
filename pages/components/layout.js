@@ -3811,7 +3811,7 @@ const Layout = ({ data, nameChamp }) => {
       >
         <div className="character-banniere">
           <Link href={`/#${champion}`}>
-            <img src="../../images/logo.PNG" alt="logo S.GG" />
+            <img src="../../images/logo.PNG" alt="logo LoL Simulator" />
           </Link>
           <p
             style={{

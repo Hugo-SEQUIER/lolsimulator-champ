@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (router.pathname === "/") {
       document.title =
-        "S GG : Unleash Your Strategy: The Ultimate League of Legends Stuff and Damage Simulator ";
+        "LoL Simulator : Unleash Your Strategy: The Ultimate League of Legends Stuff and Damage Simulator ";
     }
     // Ajoutez d'autres conditions pour d'autres pages si nécessaire
   }, [router.pathname]);

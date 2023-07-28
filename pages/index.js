@@ -23,7 +23,7 @@ export default function Accueil({ character_name }) {
     <>
       <div className="accueil">
         <div className="banniere">
-          <img src="../images/logo.PNG" alt="logo S.GG" width={320} />
+          <img src="../images/logo.PNG" alt="logo LoL Simulator" width={320} />
           <p
             style={{
               width: "1px",

@@ -5,7 +5,7 @@ export default function Privacy() {
     <div>
       <div className="character-banniere">
         <Link href={`/`}>
-          <img src="../../images/logo.PNG" alt="logo S.GG" />
+          <img src="../../images/logo.PNG" alt="logo LoL Simulator" />
         </Link>
         <p
           style={{
@@ -39,8 +39,9 @@ export default function Privacy() {
           This Privacy Policy governs your access to and use of this website,
           including any content, functionality and services offered on or
           through this website.
-          <br /> <br />S GG is not endorsed by Riot Games and does not reflect
-          the views or opinions of Riot Games or anyone officially involved in
+          <br /> <br />
+          LoL Simulator is not endorsed by Riot Games and does not reflect the
+          views or opinions of Riot Games or anyone officially involved in
           producing or managing Riot Games properties. Riot Games and all
           associated properties are trademarks or registered trademarks of Riot
           Games, Inc.
