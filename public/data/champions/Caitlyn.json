@@ -21,7 +21,7 @@
   "Q-DMG": "(10 + 40 * P_Q + (1.05 + 0.2 * P_Q) * Self_AD) * MOD_Phys",
   "W-DMG": "(-5+45*P_W+(0.3+0.1*P_W)*Self_BoAD)*MOD_Phys+ (((0,6 + 0,3 * Math.floor((Self_Level - 1) / 6) + Self_Crit * (1,3125 + 0,75 * IT_CDMG)) * Self_AD) * MOD_Hit)",
   "E-DMG": "(30+50*P_E+0.8*Self_AP)*MOD_Magic",
-  "R-DMG": "(75 + 225 * P_R + 2 * Self_BoAD) * MOD_Phys * (1 + 0.25 * Self_Crit)",
+  "R-DMG": "(75 + 225 * P_R + 2 * Self_BoAD) * MOD_Phys * (1 + 0.35 * Self_Crit)",
   "P-DMG": "((0,6 + 0,3 * Math.floor((Self_Level - 1) / 6) + Self_Crit * (1,3125 + 0,75 * IT_CDMG)) * Self_AD) * MOD_Hit",
   "Q-CD": "11-P_Q",
   "W-CD": "34.5-4.5*P_W",

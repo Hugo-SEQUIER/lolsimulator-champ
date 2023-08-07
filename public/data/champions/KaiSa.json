@@ -1,5 +1,5 @@
 {
-  "HP": 670,
+  "HP": 640,
   "HP+": 102,
   "HP5": 3.5,
   "HP5+": 0.55,
@@ -18,7 +18,7 @@
   "MR+": 1.3,
   "MS": 335,
   "Range": 525,
-  "Q-DMG": "((Steroid_Q & (Self_BoAD - Calc!C4 + Self_BaAD - Calc!C5) >= 100) ? 3.75 : (Steroid_Q ? 2,25 : 1)) * (15 * P_Q +  25 + 0.5 * Self_BoAD + 0.3 * Self_AP) * MOD_Phys",
+  "Q-DMG": "((Steroid_Q & (Self_BoAD - Calc!C4 + Self_BaAD - Calc!C5) >= 100) ? 3.75 : (Steroid_Q ? 2,25 : 1)) * (15 * P_Q +  25 + 0.5 * Self_BoAD + 0.2 * Self_AP) * MOD_Phys",
   "W-DMG": "(25*P_W+5+1.3*Self_AD+0.45*Self_AP)*MOD_Magic",
   "E-DMG": 0,
   "R-DMG": "(50 + 20 * P_R + (0.5 + 0.4 * P_R) * Self_AD + 1.2 * Self_AP) * MOD_SelfHeal",

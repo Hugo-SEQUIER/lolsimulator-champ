@@ -18,7 +18,7 @@
   "MR+": 2.05,
   "MS": 345,
   "Range": 175,
-  "Q-DMG": "((0.5+0.1*P_Q)*Self_AD+(-5+15*P_Q))*3.75*MOD_Phys*(Steroid_Q ? 1.6 : 1)",
+  "Q-DMG": "((0.525+0.075*P_Q)*Self_AD+(-5+15*P_Q))*3.75*MOD_Phys*(Steroid_Q ? 1.6 : 1)",
   "W-DMG": "(0.8*Self_AD+20*P_W+40)*MOD_Phys",
   "E-DMG": 0,
   "R-DMG": 0,

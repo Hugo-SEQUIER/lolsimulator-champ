@@ -2614,7 +2614,7 @@ const Layout = ({ data, nameChamp }) => {
       state.basicStatsChampion["Armor"] + state.additionnalStats["Armor"];
     objTotal["AR"] +=
       nameChamp == "Gwen" && state.steroidStats["W"] && state.eSkillPoint > 0
-        ? 15 + 2 * state.eSkillPoint + 0.07 * objTotal["AP"]
+        ? 20 + 2 * state.eSkillPoint + 0.07 * objTotal["AP"]
         : 0;
     objTotal["AR"] +=
       nameChamp == "Rammus" && state.wSkillPoint > 0
@@ -2750,7 +2750,7 @@ const Layout = ({ data, nameChamp }) => {
       state.additionnalStats["Magic Resist"];
     objTotal["MR"] +=
       nameChamp == "Gwen" && state.steroidStats["W"] && state.eSkillPoint > 0
-        ? 15 + 2 * state.eSkillPoint + 0.07 * objTotal["AP"]
+        ? 20 + 2 * state.eSkillPoint + 0.07 * objTotal["AP"]
         : 0;
     objTotal["MR"] +=
       nameChamp == "Rammus" && state.wSkillPoint > 0
@@ -3849,7 +3849,7 @@ const Layout = ({ data, nameChamp }) => {
               borderRadius: "20px",
             }}
           ></p>
-          <p style={{ fontSize: "x-large" }}>Patch : 13.14</p>
+          <p style={{ fontSize: "x-large" }}>Patch : 13.15</p>
         </div>
         <div className="character-statistiques">
           {dataChamp != undefined && (
